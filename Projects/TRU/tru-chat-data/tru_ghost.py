@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""TRU ghost builder. Reads JSON on stdin, writes JSON on stdout."""
-import json, sys, html, os
+"""TRU ghost builder. Reads JSON on stdin, writes JSON on stdout.
+CLI: python3 tru_ghost.py [--nt-only] [--cap N] [--ts NAME] [--out-dir DIR] [--lookup Q]"""
+import json, sys, html, os, argparse
 from pathlib import Path
 BRAIN = Path("/home/workspace/Projects/TRU/current/brain.json")
 KJV = Path("/home/workspace/Projects/TRU/data/kjv_full.json")
@@ -147,7 +148,36 @@ f'document.getElementById("q").value={json.dumps(last_q)};'
 '</script></body></html>'
     )
 
+def parse_args():
+    p = argparse.ArgumentParser(description="TRU Ghost offline scripture engine builder")
+    p.add_argument("--nt-only", action="store_true", help="New Testament only (~1.4mb vs ~5.7mb full)")
+    p.add_argument("--cap", type=int, default=999999, help="Brain node cap (default: unlimited)")
+    p.add_argument("--ts", default=None, help="Timestamp string for output filename")
+    p.add_argument("--out-dir", default=None, help="Output dir (default: /home/workspace/Projects/TRU/ghost)")
+    p.add_argument("--lookup", default=None, help="Run a single lookup, print result, exit")
+    return p.parse_args()
+
 def main():
+    # CLI mode if any arg was passed
+    if len(sys.argv) > 1 and sys.argv[1] != "build":
+        args = parse_args()
+        brain = load_brain(cap=args.cap)
+        kjv = load_kjv(lite=True, nt_only=args.nt_only)
+        if args.lookup:
+            result = lookup(args.lookup, brain, kjv, load_session())
+            print(json.dumps({"ok": True, "result": result}))
+            return
+        session = load_session()
+        from datetime import datetime
+        ts = args.ts or datetime.utcnow().isoformat().replace(":", "-").replace(".", "-")
+        html = build_html(brain, kjv, session, ts)
+        out = Path(args.out_dir) if args.out_dir else GHOST_DIR
+        out.mkdir(parents=True, exist_ok=True)
+        fp = out / f"tru-ghost-{ts}.html"
+        fp.write_text(html, encoding="utf-8")
+        print(json.dumps({"ok": True, "path": str(fp), "bytes": len(html)}))
+        return
+    # legacy JSON-on-stdin mode
     try:
         req = json.loads(sys.stdin.read() or "{}")
     except:
@@ -163,7 +193,7 @@ def main():
     brain = load_brain(cap=brain_cap)
     kjv = load_kjv(lite=True, nt_only=nt_only)
     session = load_session()
-    ts = req.get("ts") or __import__("datetime").datetime.utcnow().isoformat().replace(":","-").replace(".","-")
+    ts = req.get("ts") or __import__("datetime").datetime.utcnow().isoformat().replace(":", "-").replace(".", "-")
     html = build_html(brain, kjv, session, ts)
     GHOST_DIR.mkdir(parents=True, exist_ok=True)
     fp = GHOST_DIR / f"tru-ghost-{ts}.html"
