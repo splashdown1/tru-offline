@@ -49,3 +49,6 @@
 {"ts":"2026-06-12T00:47:20.959Z","history":[],"reason":"message"}
 {"ts":"2026-06-12T00:47:23.899Z","history":[{"role":"user","text":"hi"},{"role":"tru","text":"hello. i'm tru — sovereign offline engine. ask a real question and i'll ground it.","verdict":"REASON","ms":568}],"reason":"pagehide"}
 {"ts":"2026-06-12T00:47:24.089Z","history":[{"role":"user","text":"hi"},{"role":"tru","text":"hello. i'm tru — sovereign offline engine. ask a real question and i'll ground it.","verdict":"REASON","ms":568}],"reason":"download"}
+{"ts":"2026-06-12T01:33:31.875Z","history":[{"role":"user","text":"hi"},{"role":"tru","text":"hello. i'm tru — sovereign offline engine. ask a real question and i'll ground it.","verdict":"REASON","ms":568}],"reason":"pagehide"}
+{"ts":"2026-06-12T01:33:32.338Z","history":[{"role":"user","text":"hi"},{"role":"tru","text":"hello. i'm tru — sovereign offline engine. ask a real question and i'll ground it.","verdict":"REASON","ms":568}],"reason":"pagehide"}
+{"ts":"2026-06-12T01:33:52.940Z","history":[],"reason":"message"}

@@ -773,8 +773,28 @@
       "text": "hello. i'm tru — sovereign offline engine. ask a real question and i'll ground it.",
       "verdict": "REASON",
       "ms": 568
+    },
+    {
+      "role": "user",
+      "text": "hi"
+    },
+    {
+      "role": "tru",
+      "text": "hello. i'm tru — sovereign offline engine. ask a real question and i'll ground it.",
+      "verdict": "REASON",
+      "ms": 568
+    },
+    {
+      "role": "user",
+      "text": "hi"
+    },
+    {
+      "role": "tru",
+      "text": "hello. i'm tru — sovereign offline engine. ask a real question and i'll ground it.",
+      "verdict": "REASON",
+      "ms": 568
     }
   ],
-  "reason": "download",
-  "_lastWrite": "2026-06-12T00:47:24.089Z"
+  "reason": "message",
+  "_lastWrite": "2026-06-12T01:33:52.940Z"
 }
