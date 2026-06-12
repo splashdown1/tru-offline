@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05219",
+  "title": "Gradient Descent with Large Step Size Restores Symmetry in Deep Linear Networks with Multi-Pathway",
+  "abstract": "Recent analyses of multi-pathway Deep Linear Networks use Gradient Flow to predict a \"winner-takes-all\" specialization in which path symmetry breaks and each feature concentrates in a single pathway. In this work, we show that discrete Gradient Descent (GD) with a large step size tells a different story. We prove that single-path solutions are sharp minima, whereas distributing signals across pathways reduces sharpness by a factor that decreases with both the number of pathways and depth. Consequently, while early training reproduces the depth-driven symmetry breaking predicted by GF, oscillations at the Edge of Stability subsequently override this tendency and drive the network into a re-balancing phase, where signals redistribute across pathways. Together, these results clarify how depth shapes pathway competition and explain why large-step GD favors shared representations rather than persistent single-pathway dominance.",
+  "link": "https://arxiv.org/abs/2606.05219",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881850+00:00"
+}

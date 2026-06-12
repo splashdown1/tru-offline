@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30622",
+  "title": "Jamming-Resilient PRB Reservation for Latency-Critical O-RAN Network Slicing",
+  "abstract": "Open radio access network (O-RAN) architectures enable near real-time, software-driven control of network slicing through programmable xApps deployed on the near-real-time RAN Intelligent Controller (near-RT RIC). In industrial 5G downlink systems, adversarial jamming can abruptly reduce the effective physical resource block (PRB) capacity, triggering queue buildup and persistent latency violations, particularly in the presence of low spectral efficiency cell edge user equipments. This paper proposes a reserve-based resilience framework for PRB allocation in sliced O-RAN deployments. A finite pool of reserved PRBs is controlled by a near-RT RIC xApp that provides hybrid mitigation by proactively clearing backlog to build latency margin and reactively allocating reserve capacity during jammer active intervals. We formulate reserve activation as a constrained sequential decision problem and design a masked Deep Q-Network to learn effective control policies under non-stationary jamming. Simulation results show substantial reductions in URLLC latency violations and improved reserve efficiency compared to reactive baselines.",
+  "link": "https://arxiv.org/abs/2605.30622",
+  "category": "cs.LG",
+  "categories": [
+    "cs.NI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307289Z"
+}

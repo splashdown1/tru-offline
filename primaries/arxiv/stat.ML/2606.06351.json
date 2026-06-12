@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06351",
+  "title": "Function-Space Priors for Bayesian Neural ODEs with Application to Vessel Trajectory Prediction",
+  "abstract": "Vessel trajectory prediction from Automatic Identification System (AIS) data is essential for maritime situational awareness, yet it remains challenging due to irregular sampling, missing reports, and complex dynamics. Beyond accurate point forecasts, maritime applications also demand well-calibrated uncertainty estimates for reliable decision-making. Bayesian Neural Ordinary Differential Equations (ODEs) offer a principled framework for continuous-time trajectory modeling with uncertainty quantification by placing a prior over the neural vector field parameters. However, the commonly used isotropic Gaussian weight prior fails to encode informative structural properties of vessel dynamics, such as smoothness and locality. Existing function-space Bayesian neural network methods address this limitation for static mappings, but do not transfer directly to Neural ODEs, where the primary quantity of interest is the trajectory rather than the vector field itself. In principle, one could place a Gaussian process (GP) prior directly over ODE solutions, but this requires propagating distributions through a nonlinear ODE solver, which is analytically intractable. To address this challenge, we adopt a practical approach that imposes a GP-kernel-based prior directly on the vector field evaluated at a finite set of measurement points. Specifically, we augment the standard weight-space variational objective with a kernel-based regularizer that penalizes deviations of the vector field from the structure implied by a GP prior. To handle long and irregular AIS trajectories, we further combine this function-space regularization with probabilistic multiple shooting, which decouples inference across temporal segments while maintaining global consistency.",
+  "link": "https://arxiv.org/abs/2606.06351",
+  "category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728638+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30415",
+  "title": "Domain Adaptation and Reasoning Frameworks in Language Models: A Controlled Experiment with Historical Cosmology",
+  "abstract": "We investigate how domain adaptation reshapes explanatory behavior in language models using historical cosmology as a controlled setting. In Phase 1, we train a small language model from scratch on a pre-Copernican corpus from which explicit heliocentric references were removed, and evaluate whether Earth-motion or heliocentric continuations nevertheless emerge. In Phase 2, we fine-tune a larger pretrained model using QLoRA on the same corpus in order to study how adaptation modifies explanatory framing and cosmological stance. Model outputs are evaluated using an LLM-as-judge framework that labels both cosmological stance (geocentric, heliocentric, or ambiguous) and explanatory frame (premodern versus modern). In the constrained setting of Phase 1, the smaller models occasionally generate local Earth-motion continuations, but these remain globally unstable and insufficient to support coherent cosmological reasoning. In Phase 2, fine-tuning induces a large and statistically significant shift toward premodern explanatory framing, while the conditional cosmological stance distributions remain comparatively stable within those frames. As a result, increases in geocentric outputs arise primarily from redistribution over explanatory regimes rather than from direct modification of stance. These results suggest that domain adaptation may primarily reshape the linguistic frameworks from which continuations are generated, with changes in stance emerging secondarily from those shifts.",
+  "link": "https://arxiv.org/abs/2605.30415",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.357968Z"
+}

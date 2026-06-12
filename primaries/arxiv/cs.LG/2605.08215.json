@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.08215",
+  "title": "Test-Time Training for Visual Foresight Vision-Language-Action Models",
+  "abstract": "Visual Foresight VLA (VF-VLA) has become a prominent architectural choice in the recent VLA due to its impressive performance. Nevertheless, the inherent design of VF-VLA makes it particularly vulnerable to out-of-distribution (OOD) shifts. Because the quality of action directly depends on the accuracy of the predicted future visual information, OOD conditions affect both stages at once. To address this vulnerability, we propose Test-Time Training Visual Foresight VLA ($T^3$VF), a test-time training approach motivated by the observation that the predicted future image and its subsequent observation form a natural supervision pair. To further address the practical challenges that arise from indiscriminate test-time updates, we introduce an adaptive update filtering mechanism. Empirically, $T^3$VF mitigates the OOD vulnerability of VF-VLA at a modest additional inference cost, without requiring any architectural modification or auxiliary modules.",
+  "link": "https://arxiv.org/abs/2605.08215",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.LG",
+    "cs.RO"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884724+00:00"
+}

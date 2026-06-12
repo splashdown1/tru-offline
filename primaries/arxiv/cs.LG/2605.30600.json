@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30600",
+  "title": "The Fast Mixing Mechanism for Differential Privacy",
+  "abstract": "Randomized sketching is a central tool for compressing large-scale optimization problems while preserving accuracy. In particular, sketches that are based on structured matrices, such as the Hadamard matrix, can be applied efficiently and often yield solutions that approximate those of the original problem at much lower computational cost. In differential privacy (DP), Gaussian sketching has been used to solve DP linear regression, beginning with \\citet{sheffet2017differentially, sheffet2019old} and later refined by \\citet{lev2025gaussianmix, lev2026near}. However, although these methods achieve strong utility guarantees, they usually do not improve runtime over classical DP approaches. In this work, we introduce a new DP sketching mechanism based on fast transforms, which, in certain cases, matches the runtime of classical fast sketching methods. We prove state-of-the-art privacy guarantees for this mechanism and show that, in favorable regimes, they match those of the Gaussian sketch up to a constant factor. As an application, we combine this mechanism with recent sketch-based methods for DP linear regression to obtain a new algorithm with strong utility and improved runtime. We establish privacy and accuracy guarantees for this algorithm, yielding, to the best of our knowledge, the first fast method for DP ordinary least squares.",
+  "link": "https://arxiv.org/abs/2605.30600",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.IT",
+    "math.IT"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306701Z"
+}

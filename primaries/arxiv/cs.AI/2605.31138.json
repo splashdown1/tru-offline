@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31138",
+  "title": "Developing an AI-Powered UX Research Point of View for Digital Health in A Regulatory Context: An Exemplar Case from MSM and Transgender HIV Care in Nigeria",
+  "abstract": "User Experience Research (UXR) in a legal and regulatory contexts presents unique challenges that require specialised approaches to protect vulnerable populations whilst generating actionable insights. Digital consultation, appointment booking, and medication delivery platforms show promise for extending care access; however, their real-world effectiveness is curtailed by an absence of theoretically grounded user experience research (UXR) methodologies that adequately account for the psychosocial conditions of these populations. This paper introduces a Generative AI-augmented UXR methodology, grounded in the UXR Point of View (PoV) Playbook, to guide the design of psychologically safe, low-cognitive-load digital health interventions for MSM and transgender individuals living with HIV/AIDS in Nigeria. Drawing from empirical research involving co-design workshops, thematic analysis, and requirements engineering, the methodology is operationalised through a four-stage UXR process encompassing AI-supported hypothesis generation, foundational planning, insight generation via Building Blocks, and the construction of stakeholder-specific PoV narratives. This process results in ten theory-informed UXR Play Cards that translate psychological mechanisms and empirical findings into actionable design guidance. Each play contains actionable tasks, AI-augmented approaches, and ethical guardrails tailored for research with marginalised populations. The output is a set of ten theory-informed UXR Play Cards translating psychological insight and empirical evidence into actionable design guidance. The core contribution is a replicable, stigma-aware, and privacy-centred framework for responsible GenAI use in UXR practice, advancing human-centred digital health design for marginalised communities.",
+  "link": "https://arxiv.org/abs/2605.31138",
+  "category": "cs.AI",
+  "categories": [
+    "cs.HC",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358273Z"
+}

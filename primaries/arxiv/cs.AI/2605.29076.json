@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.29076",
+  "title": "Structured Prompt Optimization Meets Reinforcement Learning for Global and Local Interpretability over Complex Text",
+  "abstract": "LLMs have advanced text classification, yet existing paradigms face a trade-off: supervised (label only) fine-tuning is scalable but offers limited reasoning on complex text and lacks broader model transparency, while discrete prompt optimization offers human-readable instructions but struggles with performance and scalability. We introduce eXTC (eXplainable Text Classifier) with three progressive stages: (1) learning a Standard Operating Procedure (SOP, or rulebook) in natural language via a new Structured Prompt Optimization algorithm; (2) SOP-grounded reasoning distillation from a large teacher LLM into a compact LM; and (3) expanding reasoning capabilities beyond the initial SOP via reinforcement learning. This design enables eXTC to provide (i) fast inference via a compact LM, with (ii) inference-time local reasoning traces, alongside a global, modular explanation of its learned domain rules, while (iii) significantly outperforming existing paradigms across diverse benchmarks in both classification performance and explanation quality, with stage-by-stage gains.",
+  "link": "https://arxiv.org/abs/2605.29076",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099349+00:00"
+}

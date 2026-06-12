@@ -1,0 +1,16 @@
+{
+  "arxiv_id": "2606.04205",
+  "title": "DetectZoo: A Unified Toolkit for AI-Generated Content Detection Across Text, Audio, and Image Modalities",
+  "abstract": "The growing popularity and capacity of generative models have eroded the distinction between human and machine-generated content, motivating a growing body of work on detection across text, images, and audio. Most available detectors are either commercial software or, if open-source, come with incompatible codebases with bespoke preprocessing, evaluation protocols, and evaluation metrics, which make their adoption, fair comparison, and reproduction quite difficult. To address this critical gap, we introduce DetectZoo, a first-of-its-kind, extensible toolkit designed to provide a unified interface for AI-generated content detection across text, audio, and image modalities. DetectZoo standardizes the complete empirical pipeline, from data ingestion and preprocessing to model assessment, offering researchers a cohesive framework to benchmark state-of-the-art detectors systematically. By integrating diverse public datasets and baseline detection algorithms under a single, unified API, our toolkit facilitates rigorous and reproducible evaluation. DetectZoo provides reference implementations of 61 detectors, native loaders for 22 benchmark datasets, and a standardized evaluation pipeline that reports multiple metrics through a common interface. Each detector is self-contained yet accessible through the same interface, automatically caches pretrained weights, and reproduces the original published results. DetectZoo lowers the barrier to entry for multi-modal AI forensics, enabling researchers to identify performance gaps across domains and accelerating the development of robust, generalizable detection techniques. The open-source repository and comprehensive documentation are publicly available at https://github.com/sadjadeb/DetectZoo, and the package can be installed via pip install detectzoo.",
+  "link": "https://arxiv.org/abs/2606.04205",
+  "category": "cs.AI",
+  "categories": [
+    "cs.MM",
+    "cs.AI",
+    "cs.CL",
+    "cs.CV",
+    "cs.LG",
+    "cs.SD"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098029+00:00"
+}

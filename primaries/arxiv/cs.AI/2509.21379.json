@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2509.21379",
+  "title": "SAEmnesia: Erasing Concepts in Diffusion Models with Supervised Sparse Autoencoders",
+  "abstract": "Concept unlearning in diffusion models is hampered by feature splitting, where concepts are distributed across many latent features, making their removal challenging and computationally expensive. We introduce SAEmnesia, a supervised sparse autoencoder framework that overcomes this by enforcing one-to-one concept-neuron mappings. By systematically labeling concepts during training, our method achieves feature centralization, binding each concept to a single, interpretable neuron. This enables highly targeted and efficient concept erasure. Compared to the state-of-the-art sparse autoencoder-based unlearning approach, SAEmnesia reduces hyperparameter search by 96.67% and achieves a 9.22% improvement on the UnlearnCanvas benchmark for objects. Our method also shows superior scalability in sequential unlearning, improving accuracy by 28.4% when removing nine objects, establishing a step forward for precise and controllable concept erasure. Moreover, SAEmnesia effectively suppresses nudity on the I2P benchmark and remains robust to adversarial attacks. Source code available at https://github.com/EIDOSLAB/SAEmnesia.",
+  "link": "https://arxiv.org/abs/2509.21379",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358708Z"
+}

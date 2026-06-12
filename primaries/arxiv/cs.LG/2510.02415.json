@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2510.02415",
+  "title": "The Equilibrium Response of Atmospheric Machine-Learning Models to Uniform Sea Surface Temperature Warming",
+  "abstract": "Machine learning models for the global atmosphere that are capable of producing stable, multi-year simulations of Earth's climate have recently been developed. However, the ability of these ML models to generalize beyond the training distribution remains an open question. In this study, we evaluate the climate response of several state-of-the-art ML models (ACE2-ERA5, NeuralGCM, and cBottle) to a uniform sea surface temperature warming, a widely used benchmark for evaluating climate change. We assess each ML model's performance relative to a physics-based general circulation model (NOAA's Geophysical Fluid Dynamics Laboratory AM4) across key diagnostics, including surface air temperature, precipitation, temperature and wind profiles, and top-of-atmosphere radiation. While the ML models reproduce key aspects of the physical model response, particularly the response of precipitation, some exhibit notable departures from robust physical responses, including radiative responses and land region warming. Our results highlight the promise and current limitations of ML models for climate change applications and suggest that further improvements are needed for robust out-of-sample generalization.",
+  "link": "https://arxiv.org/abs/2510.02415",
+  "category": "cs.LG",
+  "categories": [
+    "physics.ao-ph",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884521+00:00"
+}

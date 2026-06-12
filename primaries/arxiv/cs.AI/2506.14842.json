@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2506.14842",
+  "title": "PictSure: Pretraining Embeddings Matters for In-Context Learning Image Classifiers",
+  "abstract": "Building image classification models remains cumbersome in data-scarce domains, where collecting large labeled datasets is impractical. In-context learning (ICL) is a promising paradigm for few-shot image classification (FSIC), but prior work has underexplored the relative importance of encoder pretraining versus fusion-layer training data. We present PictSure, a vision-only ICL family of models that demonstrates the potential of easy-to-use fusion transformer architectures, as well as the need for better embedding representations across a wider range of image domains. In both in-domain and out-of-domain evaluations, we find that representation quality induced by pretraining strongly correlates with downstream ICL performance. Crucially, varying the training dataset for the fusion transformer, from ImageNet alone to diverse multi-domain mixtures, provides limited additional performance gains under the evaluated settings, demonstrating that the fusion layer appears capable of adapting effectively once embeddings are sufficiently structured. These results show that the bottleneck in visual ICL is representation quality, not fusion-module training diversity. To facilitate adoption and reproducibility, we release all model weights as open-source artifacts and provide an MCP server that exposes PictSure as a callable tool for LLM-based agentic systems, enabling few-shot image classification to be invoked directly within AI pipelines without integration overhead. Code can be found at https://github.com/PictSure and models at https://huggingface.co/pictsure.",
+  "link": "https://arxiv.org/abs/2506.14842",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358679Z"
+}

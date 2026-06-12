@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2603.18382",
+  "title": "From Weak Cues to Real Identities: Evaluating Inference-Driven De-Anonymization in LLM Agents",
+  "abstract": "Anonymization is often assumed to protect privacy once explicit identifiers are removed, because re-identification has historically required specialized expertise, tailored algorithms, and manual corroboration. We show that LLM-based agents weaken this barrier: by combining scattered, individually non-identifying cues with public evidence, they reconstruct real-world identities, sometimes even during benign tasks. We evaluate this risk across three settings -- classical linkage incidents, a controlled benchmark (\\emph{InferLink}) that varies fingerprint type, task framing, and attacker knowledge, and open-ended human--AI interaction traces. In the sparsest regime of the Netflix Prize deanonymization setting, agents reconstruct 79.2\\% of identities, against 56.0\\% for a classical matching baseline; on \\emph{InferLink}, they link individuals even without an explicit re-identification request, and more often once one is given. In redacted human--AI interaction traces, agents further resolve anonymized profiles to specific individuals by corroborating contextual cues with public evidence. These findings suggest that privacy evaluations for agentic systems should measure not only what information is accessed or disclosed, but also what identities can be inferred.",
+  "link": "https://arxiv.org/abs/2603.18382",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358559Z"
+}

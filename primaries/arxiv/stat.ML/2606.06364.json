@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06364",
+  "title": "End-to-End Subgraph Detection with GraphDETR",
+  "abstract": "Subgraph detection seeks to identify whether and where instances of query patterns occur within a larger graph. This problem is fundamental across scientific domains and is closely related to subgraph isomorphism, which is NP-complete, limiting combinatorial approaches to small patterns or moderately sized graphs. We introduce GraphDETR, a deep learning framework that formulates subgraph detection as a set prediction problem, analogous to DETR in object detection. GraphDETR encodes the target graph with a graph neural network, and employs a fixed set of learnable query vectors, decoded via a transformer decoder, to predict all pattern occurrences jointly in a single forward pass. This is enabled by training the model end-to-end with bipartite matching. Unlike traditional combinatorial methods that only solve exact structural matching, GraphDETR naturally extends to approximate matching, enabling detection beyond exact pattern correspondence. Empirically, we show that GraphDETR can detect diverse patterns, such as molecular structures, cycles, cliques, and fuzzy patterns of up to 50 nodes, in target graphs with up to 1000 nodes. We further evaluate on molecular functional group detection over the ChEMBL dataset, where GraphDETR predicts the complete set of functional groups per molecule, achieving a strong performance of $\\text{AP}_{100} = 91.2$.",
+  "link": "https://arxiv.org/abs/2606.06364",
+  "category": "stat.ML",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728746+00:00"
+}

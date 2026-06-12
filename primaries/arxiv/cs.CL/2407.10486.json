@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2407.10486",
+  "title": "IDEAL: Leveraging Infinite and Dynamic Characterizations of Large Language Models for Query-focused Summarization",
+  "abstract": "Query-focused summarization (QFS) aims to produce summaries that answer particular questions of interest, enabling greater user control and personalization. The advent of large language models (LLMs), shows their impressive capability of textual understanding through large-scale pretraining, which implies the great potential of extractive snippet generation. In this paper, we systematically investigated two indispensable characteristics that the LLMs-based QFS models should be harnessed, \\emph{Efficiently Fine-grained Query-LLM Alignment} and \\emph{Lengthy Document Summarization}, respectively. Correspondingly, we propose two modules called Query-aware HyperExpert and Query-focused Infini-attention to access the aforementioned characteristics. These innovations pave the way for broader application and accessibility in the field of QFS technology. Extensive experiments conducted on existing QFS benchmarks indicate the effectiveness and generalizability of the proposed approach.",
+  "link": "https://arxiv.org/abs/2407.10486",
+  "category": "cs.CL",
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498560+00:00"
+}

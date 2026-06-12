@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.06458",
+  "title": "In-Context Multiple Instance Learning",
+  "abstract": "Multiple Instance Learning (MIL) addresses problems where supervision is available at the level of bags of instances and has been successfully applied in fields ranging from computational pathology to satellite imagery. Nevertheless, existing algorithms struggle in the low-label regime that characterizes many real-world applications. Flexible models overfit and rigid ones fail to adapt to the task at hand. We show that pretraining an in-context learner with a Perceiver-style architecture on synthetic data yields a model that can solve new tasks from a handful of labeled bags. At inference time, classification happens in a single forward pass and requires no gradient updates. We propose and investigate different synthetic data generators for bag-structured data and find that they capture complementary inductive biases. A model pretrained on a mixture of these generators inherits their per-task strengths and achieves the best average performance across twelve MIL benchmarks, outperforming supervised baselines that require task-specific training.",
+  "link": "https://arxiv.org/abs/2606.06458",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882742+00:00"
+}

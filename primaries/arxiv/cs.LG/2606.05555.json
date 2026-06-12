@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05555",
+  "title": "Representation Learning Enables Scalable Multitask Deep Reinforcement Learning",
+  "abstract": "Scaling reinforcement learning (RL) to diverse multitask settings remains a central challenge. While recent advances in model-based RL achieve strong performance, they rely on planning and complex training pipelines, making it unclear which components are essential for scalability. We revisit this question and argue that the primary driver of scalable multitask RL is not model-based control, but \\emph{representation learning}. In particular, we show that combining predictive, model-based representations with high-capacity value function approximation is sufficient to achieve strong performance, even without planning. We evaluate a simple model-free algorithm, MR.Q, coupled with auxiliary predictive objectives into a scalable actor-critic architecture. This approach outperforms a recent world-model-based method and a range of deep RL baselines across a diverse suite of multitask continuous control tasks, while significantly reducing computational overhead and improving wall-clock efficiency. We observe consistent improvements with increased model capacity and show through ablations that predictive representation learning is critical for performance.",
+  "link": "https://arxiv.org/abs/2606.05555",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882100+00:00"
+}

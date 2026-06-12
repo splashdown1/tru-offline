@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2601.01456",
+  "title": "Rethinking Multimodal Few-Shot 3D Point Cloud Segmentation: From Fused Refinement to Decoupled Arbitration",
+  "abstract": "In this paper, we revisit multimodal few-shot 3D point cloud semantic segmentation (FS-PCS), identifying a conflict in \"Fuse-then-Refine\" paradigms: the \"Plasticity-Stability Dilemma.\" In addition, CLIP's inter-class confusion can result in semantic blindness. To address these issues, we present the Decoupled-experts Arbitration Few-Shot SegNet (DA-FSS), a model that effectively distinguishes between semantic and geometric paths and mutually regularizes their gradients to achieve better generalization. DA-FSS employs the same backbone and pre-trained text encoder as MM-FSS to generate text embeddings, which can increase free modalities' utilization rate and better leverage each modality's information space. To achieve this, we propose a Parallel Expert Refinement module to generate each modal correlation. We also propose a Stacked Arbitration Module (SAM) to perform convolutional fusion and arbitrate correlations for each modality pathway. The Parallel Experts decouple two paths: a Geometric Expert maintains plasticity, and a Semantic Expert ensures stability. They are coordinated via a Decoupled Alignment Module (DAM) that transfers knowledge without propagating confusion. Experiments on popular datasets (S3DIS, ScanNet) demonstrate the superiority of DA-FSS over MM-FSS. Meanwhile, geometric boundaries, completeness, and texture differentiation are all superior to the baseline. The code is available at: https://github.com/MoWenQAQ/DA-FSS/.",
+  "link": "https://arxiv.org/abs/2601.01456",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308335Z"
+}

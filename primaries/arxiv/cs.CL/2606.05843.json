@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05843",
+  "title": "Mechanistic Insights into Functional Sparsity in Multimodal LLMs via CoRe Heads",
+  "abstract": "While Multimodal Large Language Models (MLLMs) demonstrate remarkable proficiency on complex vision-language tasks, the mechanisms by which they extract query-relevant visual features from complex, noisy contexts remain opaque. In this paper, we present an in-depth interpretability study that uncovers a profound structural property within MLLMs: functional sparsity in cross-modal retrieval. Leveraging a token-level metric termed Retrieval Attention Mass (RAM), we identify and characterize a highly specialized subset of attention heads, referred to as Context-aware Retrieval (CoRe) heads. Across diverse visual domains and model scales, we observe a clear functional division: CoRe heads act as dedicated information extractors, while most other heads distribute attention over broader contextual regions. Causal interventions further demonstrate the necessity of these specialized heads. Ablating only the top 5% of CoRe heads causes significant degradation in multimodal reasoning performance, whereas ablating lower-ranked heads has minimal effect. Moreover, acceleration experiments validate the utility of CoRe heads, showing that leveraging this localized sparsity significantly accelerates inference while maintaining robust task performance. Our findings reveal a structural principle of functional sparsity within MLLMs, refining the current understanding of mechanistic interpretability and laying a theoretical foundation that can inspire future architecture design and model optimization.",
+  "link": "https://arxiv.org/abs/2606.05843",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497855+00:00"
+}

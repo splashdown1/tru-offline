@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30580",
+  "title": "Speculative Decoding Across Languages",
+  "abstract": "Speculative decoding has become a crucial component of large language model (LLM) inference, enabling faster generation by drafting multiple tokens and verifying them in parallel. However, small draft models tend to suffer from disproportionately poor multilingual capabilities. Thus, when generating text in a non-English language, speculative decoding is far less effective.\n  We compare three strategies to improve speculative decoding efficiency for eleven languages: finetuning the draft model on task-specific data (translation); finetuning the draft model on unlabeled monolingual corpora; and training simple n-gram draft models on the same monolingual corpora. We evaluate efficiency on translation (from English into the target language) and the held-out task of story generation. We find that while task-specific distillation can significantly improve efficiency, distilled models generalize poorly to a new task. Meanwhile, n-gram draft models, despite lower acceptance rates, consistently provide large speed-ups due to much faster draft generation.",
+  "link": "https://arxiv.org/abs/2605.30580",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CL",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307272Z"
+}

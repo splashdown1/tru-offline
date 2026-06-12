@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04656",
+  "title": "Instance-Level Post Hoc Uncertainty Quantification in Object Detection",
+  "abstract": "Object detection is a safety-critical component of autonomous driving. It is essential to quantify the uncertainty in bounding-box predictions for safety assurance. Post hoc uncertainty quantification without retraining aligns with real-world deployment requirements; therefore, we employ the Laplace approximation. Because instance-level uncertainty is needed, linearized inference methods that require multiple backpropagations are not time-efficient, and sampling-based methods are not fully post hoc. We propose Monte-Carlo generalized linearized model (MC-GLM), which provides instance-level and approximately post hoc uncertainty quantification. The number of samples required in the Monte Carlo step is constant and independent of the number of output instances, so it can be parallelized. Experiments on the nuScenes dataset with the CenterPoint detector validate the effectiveness of our method, and the resulting uncertainties exhibit good quality.",
+  "link": "https://arxiv.org/abs/2606.04656",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098340+00:00"
+}

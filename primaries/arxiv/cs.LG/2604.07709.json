@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2604.07709",
+  "title": "IatroBench: Pre-Registered Evidence of Iatrogenic Harm from AI Safety Measures",
+  "abstract": "A heavily safety-trained model will hand a physician the full, patient-followable benzodiazepine taper and refuse it to the patient who needs it, over identical clinical facts; the knowledge is present either way. IatroBench measures that asymmetry across sixty pre-registered clinical scenarios and six frontier models (3,600 responses), scoring each on two axes, commission harm (what a response gets wrong) and omission harm (what it withholds), through a physician-authored structured evaluation validated by a second physician (weighted kappa 0.571, within-1 agreement 96%). Holding clinical content fixed and varying only whether the asker presents as patient or physician yields what we call identity-contingent withholding: all five testable models give the physician more (a decoupling gap of +0.38, p = 0.003; a 13.1-point fall in layperson hit rates on safety-colliding actions, p < 0.0001; no change on the rest), and the gap runs widest in the most heavily safety-trained model, Opus (+0.65). The trigger is the absence of any professional or epistemic signal rather than a credential, since a lawyer or an informed layperson recovers what the patient is refused. A commission-only benchmark would score three mechanisms alike. Opus suppresses what physician framing proves it knows; Llama 4 is incompetent in either framing; GPT-5.2's filter strips 33.2% of its physician responses and none of the lay ones. The evaluation layer inherits the blindness of the training layer; a standard LLM judge scores zero omission harm on 81.5% of the responses our pipeline flags harmful (kappa 0.066), so the instrument built to detect the failure reproduces it. The scenarios are engineered for collision; their rates describe that design and say nothing about ordinary prevalence.",
+  "link": "https://arxiv.org/abs/2604.07709",
+  "category": "cs.LG",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.CY",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884654+00:00"
+}

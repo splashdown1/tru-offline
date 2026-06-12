@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30811",
+  "title": "Non-destructive Identification of Oyster Species is possible from Hyperspectral Images with Machine Learning",
+  "abstract": "Differentiating between oyster species is important for developing new commercial oyster species suited to production systems and is critical for traceability in seafood supply chains. Common methods, such as DNA profiling, are destructive and time consuming. The possibility of using hyperspectral imaging (HSI) for discriminating between Black-Lip rock (BL) and Sydney rock (SR) oysters was investigated. Live BL and SR samples (N = 156) were scanned with a HSI camera (950-2515nm). Partial Least Square Discriminant Analysis and Convolutional Neural Networks were trained with Monte Carlo Cross Validation to distinguish BL and SR oysters from the spectral reflectance of their left and rights valves. The PLS-DA model successfully distinguished between the species from both the left and right valves with a median test set classification accuracy of 100%, out performing the CNN with 83% and 96% respectively. Elemental and mineralogical composition in the surface and cross-section of oyster valves were measured with electron microscopy. Analysis of the right valve revealed a greater number of layers in BL compared to SR (4 vs 2). The concentrations of carbon and oxygen varied in the outer layer of the right valves, with BL being rich in carbon and SR being rich in oxygen. The variation in carbon and oxygen concentrations observed between BL and SR right valves may reflect differences in the relative abundance or composition of chitin and glycoproteins. This is supported by model-derived wavelength importance corresponding to vibrational modes of functional groups characteristic of these compounds. Transmittance analysis revealed that light was transmitted through the valves, around the valve edges, indicating that the spectral signatures may have been influenced by the other valve or the meat. Ultimately, the findings highlight an effective rapid, non-destructive methodology for oyster species.",
+  "link": "https://arxiv.org/abs/2605.30811",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306814Z"
+}

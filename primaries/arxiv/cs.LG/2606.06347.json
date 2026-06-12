@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.06347",
+  "title": "Attack Detection using Time Series Foundation Models",
+  "abstract": "This paper addresses the problem of attack detection in cyber-physical systems without any knowledge of the plant model or its structure. A remotely located plant transmits sensor measurements to an operator over a network that is assumed to be under attack. We consider two classes of attacks: model-free replay attacks and model-based stealthy attacks. For the latter, we derive closed-form expressions for the optimal stealthy attack policy against a $\\chi^2$ detector, for both linear and nonlinear systems. We then propose a model-structure-free detector based on TimesFM, a time-series foundation model developed by Google Research, which serves as a surrogate residual generator operating in a zero-shot fashion. We show empirically that the TimesFM-based detector achieves a comparable or superior attack detection performance. The efficacy of the proposed approach is demonstrated numerically on the IEEE 14-bus power system. We also demonstrate that TimesFM predictions can serve as a substitute for corrupted measurements, a practical mitigation technique when classical redundancy assumptions fail.",
+  "link": "https://arxiv.org/abs/2606.06347",
+  "category": "cs.LG",
+  "categories": [
+    "eess.SY",
+    "cs.LG",
+    "cs.SY"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883673+00:00"
+}

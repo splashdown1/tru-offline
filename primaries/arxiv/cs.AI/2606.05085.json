@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05085",
+  "title": "Automatic Generation of Titles for Research Papers Using Language Models",
+  "abstract": "The title of a research paper conveys its primary idea and, occasionally, its conclusions in a clear and concise manner. Choosing an appropriate title is often challenging, and automated title generation can assist authors in this task. In this work, we propose a technique to generate paper titles from abstracts using open-weight pre-trained and large language models. We use the CSPubSum and LREC-COLING-2024 datasets and introduce a new dataset, SpringerSSAT, curated from four Springer journals in the social sciences. Additionally, we use GPT-3.5-turbo in a zero-shot setting to generate titles. Model performance is evaluated with ROUGE, METEOR, MoverScore, BERTScore, and SciBERTScore metrics. Our experiments show that fine-tuned PEGASUS-large outperforms other models, including fine-tuned LLaMA-3-8B and zero-shot GPT-3.5-turbo, across most metrics. We further demonstrate that ChatGPT can generate creative paper titles. Overall, AI-generated titles are generally appropriate and reliable.",
+  "link": "https://arxiv.org/abs/2606.05085",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098551+00:00"
+}

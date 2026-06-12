@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30656",
+  "title": "Learning to Perceive the World Through Control: Empowerment-Based Representation Learning",
+  "abstract": "In many practical reinforcement learning environments, observations are far higher-dimensional than the variables that matter for control. In this work, we ask: can we learn representations that capture only control-relevant features of the environment? We study this question through the empowerment objective, which maximizes an agent's influence over the environment and is widely used for unsupervised skill learning. We show that empowerment agents induce two distinct representations -- forward and backward -- that capture complementary aspects of the state, and both of which are invariant to control-irrelevant features. Thus, empowerment maximization leads agents to learn an implicit, control-centric model of the world. Our analysis highlights the importance of learning representations through interaction rather than from passive datasets: interaction aimed at maximizing control is essential for learning useful invariance properties, a perspective that aligns closely with the causal learning literature.",
+  "link": "https://arxiv.org/abs/2605.30656",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306745Z"
+}

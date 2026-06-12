@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31056",
+  "title": "How Much Do LLMs Know About Chinese Zero Pronouns?",
+  "abstract": "Zero Pronouns (ZPs) are a pervasive linguistic phenomenon in pro-drop languages such as Chinese and have long posed a challenge for natural language processing systems. Although Large Language Models (LLMs) perform well on many Chinese language tasks, their ability to process ZPs remains poorly understood. We conduct a systematic investigation of LLMs' handling of Chinese ZPs through a sequence of linguistically motivated tasks, including identification, referentiality classification, referential type classification, resolution, and translation. A diverse set of LLMs is evaluated across all tasks. Our results show that Chinese ZPs remain highly challenging for current LLMs, particularly for upstream tasks such as identification and referentiality classification. Performance on downstream tasks, such as ZP translation, is also consistently low: even state-of-the-art reasoning-oriented LLMs correctly translate fewer than half of Chinese ZPs into English.",
+  "link": "https://arxiv.org/abs/2605.31056",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405786Z"
+}

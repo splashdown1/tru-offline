@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31014",
+  "title": "SDM-Q: Cost-Aware Staged Decision-Making for Multi-Omics Classification with Deep Q-Learning",
+  "abstract": "Multi-omics data provide complementary molecular characterizations of disease phenotypes and play an important role in disease diagnosis and subtype classification in precision medicine. However, acquiring complete multi-omics profiles is expensive and time-consuming, while most existing deep learning methods assume full modality availability during inference, resulting in substantial redundancy and limited practicality in clinical settings. To address this issue, we propose SDM-Q, a reinforcement learning framework for adaptive and cost-aware multi-omics classification. Specifically, multi-omics diagnosis is reformulated as a finite-horizon sequential decision problem, where the currently acquired omics modalities define the diagnostic state at each stage. An action--value function determines whether to acquire an additional modality or terminate the decision process and output the final prediction. To balance diagnostic utility and acquisition cost, the reward is defined only at the terminal stage and jointly determined by classification correctness and cumulative modality acquisition cost. A backward stage-wise optimization strategy is introduced to improve policy consistency and training stability. Experiments on four public multi-omics datasets, including ROSMAP, LGG, BRCA, and KIPAN, demonstrate that SDM-Q effectively reduces redundant modality acquisition while maintaining competitive classification performance compared with methods using complete multi-omics inputs. In the BRCA and KIPAN datasets, more than 99\\% and 95\\% of subjects, respectively, achieve accurate classification using only a single omics modality, while the average number of acquired modalities remains below two for ROSMAP and LGG. These results suggest that cost-aware sequential decision-making provides an effective paradigm for improving the efficiency of precision medicine workflows.",
+  "link": "https://arxiv.org/abs/2605.31014",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306905Z"
+}

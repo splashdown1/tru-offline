@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05232",
+  "title": "Differentiable Efficient Operator Search",
+  "abstract": "Efficient multimodal foundation models often rely on manually designed token-reduction operators, such as pruning, merging, pooling, and adaptive reweighting. Although these operators appear different, we show that they can be interpreted as distinct regimes of a shared operator space. Based on this view, we introduce Efficient Operator Search, a differentiable framework that jointly searches where to reduce tokens, how many tokens to retain, and how reduced token information should be processed. The proposed search space parameterizes layer activation, retention budget, and operator behavior, while the search policy optimizes task performance under one-sided budget and cost constraints. This formulation recovers representative hand-designed baselines as special cases and further discovers hybrid operators beyond isolated manual designs. Experiments on multimodal benchmarks show that the searched operators achieve competitive accuracy-efficiency trade-offs, especially under aggressive visual-token reduction. These results suggest that efficient multimodal inference can be reframed from manual operator design to differentiable operator search.",
+  "link": "https://arxiv.org/abs/2606.05232",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881855+00:00"
+}

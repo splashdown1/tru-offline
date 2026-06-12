@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04298",
+  "title": "Anycast Performance in Context",
+  "abstract": "IP anycast lets a service advertise one address from many physical sites, leaving BGP to map each client to a site. It is central to the DNS root server system, public resolvers, and some content delivery networks, yet the same routing mechanism has very different consequences across applications. This paper compares anycast latency in two settings: root DNS, where recursive caching amortizes root-server delay over many users and long time-to-live values, and CDNs, where each additional round trip can directly affect page-load, video-start, or API latency. The synthesis finds that root DNS anycast can exhibit substantial path inflation while still producing limited user-visible delay, whereas CDN anycast requires active engineering of peering, route policy, catchment scope, and measurement feedback to keep inflation small. The paper contributes a comparative latency model, a reproducible measurement design, and an optimization framework that separates resilience-driven anycast objectives from latency-driven objectives. The central conclusion is practical: operators should not optimize root DNS and CDN anycast with the same objective function. For root DNS, robustness, reachability, and cache behavior dominate; for CDN services, tail latency, catchment correctness, and policy control dominate.",
+  "link": "https://arxiv.org/abs/2606.04298",
+  "category": "cs.AI",
+  "categories": [
+    "cs.NI",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098098+00:00"
+}

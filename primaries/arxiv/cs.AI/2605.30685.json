@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2605.30685",
+  "title": "How Early Adopters Used Generative AI Worldwide: Variation by Country Income and Language",
+  "abstract": "AI is being used by people globally, but not everyone is using it in the same ways. Using a large-scale dataset of anonymized, de-identified, and privacy-scrubbed interactions with a widely available and free AI chatbot, we empirically characterize differences in early adopters' usage across countries. Schooling is the most common domain of use in most countries, particularly low-income countries, with a strong inverse association evident between schooling and country-level GDP. Leisure-related use, by contrast, is positively associated with country-level income. Language, we find, also shapes use: English-language interactions are overrepresented in places where the predominant languages were not well-served by existing models during the period of the study. Improving performance across languages may be a key factor, our work suggests, in whether this technology expands digital divides or enables leapfrogging.",
+  "link": "https://arxiv.org/abs/2605.30685",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CY",
+    "cs.AI",
+    "cs.CL",
+    "cs.HC"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358083Z"
+}

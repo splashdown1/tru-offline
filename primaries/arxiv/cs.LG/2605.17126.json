@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.17126",
+  "title": "Multi-task Linear Regression without Eigenvalue Lower Bounds: Adaptivity, Robustness, and Safety",
+  "abstract": "We study the multi-task linear regression problem in the presence of contaminated tasks. We address the setting where the unknown parameters of a majority of tasks are close in the $\\ell_2$-norm, while a fraction of tasks are arbitrary outliers. Existing theoretical frameworks for this problem rely heavily on the assumption that the empirical second moment of each task has a minimum eigenvalue bounded away from zero (order $\\Omega(1)$). Crucially, this assumption fails in many high-dimensional scenarios, rendering prior guarantees vacuous. To overcome this limitation, we propose an estimator based on matrix-weighted norm regularization. We also introduce a relative balancedness condition, quantified by a balancedness constant, that compares each task's second moment with the average inlier geometry and relaxes the need for taskwise second-moment lower bounds. In favorable regimes with moderate balancedness, our prediction MSE bounds match the rate of Duan and Wang (2023) under substantially weaker spectral assumptions; the resulting task-overall MSE is minimax optimal up to logarithmic factors. Furthermore, we demonstrate that our estimator enjoys a safety guarantee: when the relevant balancedness constant is large or infinite, or when tasks are unrelated, the method performs no worse than independent task learning.",
+  "link": "https://arxiv.org/abs/2605.17126",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "stat.ME"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308499Z"
+}

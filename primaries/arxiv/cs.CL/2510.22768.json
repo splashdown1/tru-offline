@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2510.22768",
+  "title": "Seeing is Believing? Evaluating Vision-Language Model Susceptibility in Agent-to-Agent Multimodal Persuasion",
+  "abstract": "As autonomous agents increasingly interact, they inevitably attempt to influence one another. While prior work in text-only settings has explored the dynamics of Agent-to-Agent (A2A) persuasion, the rise of Vision-Language Models (VLMs) introduces a more complex challenge: multimodal content conveys richer information while integrating subtle, hard-to-detect persuasive cues. To study this vulnerability, we present MMPersuade, a unified framework and dataset for A2A multimodal persuasion. We model interactions between a persuader agent, which leverages images and psychological strategies, and a persuadee VLM. Our benchmark spans commercial, subjective and behavioral, and adversarial contexts, and evaluates persuasion via function-calling that capture behavioral shifts beyond verbal responses. Experiments on six VLMs reveal three findings: (1) multimodal inputs consistently outperform text-only persuasion, with raw visual signals uniquely increasing susceptibility in adversarial settings by bypassing text-activated safety defenses; (2) persuadee vulnerability is highly domain- and format-dependent, with realistic and community-style formats driving susceptibility in commercial settings while different formats dominate in adversarial ones; and (3) psychological strategy efficacy varies with context and model architecture, as more capable models resist benign persuasion yet become more susceptible under adversarial multimodal inputs. Our framework provides a foundation for building more robust and aligned VLMs in multi-agent environments.",
+  "link": "https://arxiv.org/abs/2510.22768",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498397+00:00"
+}

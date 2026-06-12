@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05556",
+  "title": "Field Validation of a Multi-Resolution ConvLSTM Framework for Retaining Wall Deformation Prediction",
+  "abstract": "This study presents a comprehensive field validation of a multi-resolution Convolutional Long Short-Term Memory (ConvLSTM) framework for predicting retaining wall deformation during staged excavation. The framework is trained on Gaussian noise-augmented numerical simulations and integrates ConvLSTM models operating at different temporal resolutions through a stacking ensemble strategy. The proposed framework is validated using field monitoring data from 34 inclinometers across 11 excavation sites in South Korea. Site-wise prediction performance is systematically evaluated using multiple evaluation metrics, with analyses of the influence of temporal deformation irregularity and spatiotemporal prediction characteristics on model performance. The results demonstrate that the framework predicts retaining wall deformation associated with up to 5.0 m of additional excavation with an average mean absolute error of 1.4 mm and a coefficient of determination of 0.93 across the excavation sites. These results indicate that the framework, although trained exclusively on numerically simulated and augmented database, can be effectively applied to diverse field excavation conditions and achieve a reliable level of prediction accuracy in practical retaining wall deformation prediction.",
+  "link": "https://arxiv.org/abs/2606.05556",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882104+00:00"
+}

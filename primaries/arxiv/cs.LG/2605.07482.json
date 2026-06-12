@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.07482",
+  "title": "SHRED: Retain-Set-Free Unlearning via Self-Distillation with Logit Demotion",
+  "abstract": "Machine unlearning for large language models (LLMs) aims to selectively remove memorized content such as private data, copyrighted text, or hazardous knowledge, without costly full retraining. Most existing methods require a retain set of curated examples to prevent catastrophic degradation of general model utility, creating an extra data dependency that complicates deployment. We propose SHRED (Self-distillation via High-surprisal-only Retain-set-free Entropy Demotion), a retain-set-free unlearning method built on a key insight: not all tokens within a forget set instance carry memorized information equally. High-information tokens concentrate the model's memorized knowledge, while low-information tokens reflect general language competence. SHRED operates in two stages. (1) Selection: We perform a forward pass on a forget set instance, collect per-token autoregressive probabilities, and select the bottom (lowest probability, highest Shannon information) as forget positions; the remaining positions are retained as benign anchors. (2) Training: We construct modified KL targets that demote the memorized token's logit at forget positions while preserving the original distribution at benign positions. The model is then trained via a single top KL self-distillation objective that simultaneously drives forgetting and utility preservation. We evaluate SHRED across four standard unlearning benchmarks and demonstrate that it establishes a new Pareto-optimal trade-off between forget efficacy and model utility, outperforming retain-set-dependent methods. Our analysis shows that SHRED is robust against relearning attacks and membership-inference attacks, and it maintains stable utility even after many sequential unlearning runs.",
+  "link": "https://arxiv.org/abs/2605.07482",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884227+00:00"
+}

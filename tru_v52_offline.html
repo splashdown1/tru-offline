@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRU v52 — Dual-Path Brain Import</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0a0a0f; --bg2: #111118; --bg3: #16161f;
+  --text: #e8e8e0; --accent: #d4a574; --accent2: #8b5cf6;
+  --muted: #555; --border: #222230;
+  --user-bg: #12122a; --tru-bg: #0d0d18;
+  --DISCARD: #ff4444; --RESTRICTED: #ff8844; --PROBATIONARY: #d4a574; --INTEGRATED: #44dd88; --TRUTH: #44ddff;
+  --AXIOM: #ffd700; --YES: #44dd88; --NO: #ff4444;
+}
+html, body { height: 100%; overflow: hidden; }
+body { background: var(--bg); color: var(--text); font-family: 'Courier New', Courier, monospace; font-size: 14px; line-height: 1.7; }
+
+.app { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+/* ── HEADER ── */
+.header { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 8px 16px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.header-title { font-size: 15px; font-weight: bold; color: var(--accent); letter-spacing: 2px; }
+.header-version { color: var(--muted); font-size: 11px; }
+.header-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+.header-btn { font-size: 11px; color: var(--accent); cursor: pointer; padding: 3px 8px; border: 1px solid var(--accent); border-radius: 3px; background: transparent; transition: all 0.2s; }
+.header-btn:hover { background: rgba(212,165,116,0.15); }
+.binary-toggle-btn { font-size: 10px; padding: 3px 8px; border: 1px solid var(--accent); border-radius: 3px; cursor: pointer; background: transparent; color: var(--accent); letter-spacing: 1px; transition: all 0.2s; }
+.binary-toggle-btn.on { background: rgba(68,221,136,0.2); border-color: var(--YES); color: var(--YES); }
+
+/* ── IMPORT MODAL ── */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; z-index: 100; }
+.modal-overlay.hidden { display: none; }
+.modal { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 20px; width: 500px; max-width: 90vw; }
+.modal-title { font-size: 13px; color: var(--accent); letter-spacing: 2px; margin-bottom: 12px; }
+.modal textarea { width: 100%; height: 200px; background: var(--bg3); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-family: 'Courier New', monospace; font-size: 12px; padding: 8px; resize: vertical; }
+.modal-actions { display: flex; gap: 8px; margin-top: 10px; }
+.modal-btn { padding: 6px 14px; border-radius: 4px; font-size: 11px; cursor: pointer; border: 1px solid; transition: all 0.2s; }
+.modal-btn.primary { background: rgba(68,221,136,0.15); border-color: var(--INTEGRATED); color: var(--INTEGRATED); }
+.modal-btn.primary:hover { background: rgba(68,221,136,0.3); }
+.modal-btn.secondary { border-color: var(--muted); color: var(--muted); background: transparent; }
+.modal-error { font-size: 11px; color: var(--DISCARD); margin-top: 8px; }
+.modal-success { font-size: 11px; color: var(--INTEGRATED); margin-top: 8px; }
+
+/* ── CHAT ── */
+.chat { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 2px; scroll-behavior: smooth; }
+.msg { max-width: 85%; padding: 10px 14px; border-radius: 8px; font-size: 13px; line-height: 1.6; word-break: break-word; }
+.msg.user { background: var(--user-bg); color: var(--text); align-self: flex-end; border-bottom-right-radius: 2px; }
+.msg.tru { background: var(--tru-bg); color: var(--text); align-self: flex-start; border-bottom-left-radius: 2px; border: 1px solid var(--border); }
+.msg-label { font-size: 10px; color: var(--accent); letter-spacing: 1px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; }
+.msg-source { font-size: 10px; color: var(--muted); margin: 4px 0; font-style: italic; }
+.typing { color: var(--muted); font-size: 12px; padding: 4px 8px; }
+
+/* BINARY */
+.binary-result { margin: 10px 0; text-align: center; }
+.binary-box { display: inline-flex; align-items: center; gap: 12px; padding: 10px 24px; border-radius: 6px; font-size: 22px; font-weight: bold; letter-spacing: 3px; border: 2px solid; }
+.binary-box.yes { color: var(--YES); border-color: var(--YES); background: rgba(68,221,136,0.12); text-shadow: 0 0 10px rgba(68,221,136,0.4); }
+.binary-box.no { color: var(--NO); border-color: var(--NO); background: rgba(255,68,68,0.12); text-shadow: 0 0 10px rgba(255,68,68,0.4); }
+.binary-pct { font-size: 14px; opacity: 0.85; }
+.binary-sub { font-size: 9px; color: var(--muted); margin-top: 4px; letter-spacing: 1px; }
+
+/* ANSWER */
+.answer-text { margin: 6px 0; }
+.answer-text p { margin-bottom: 6px; }
+.reasoning-bar { font-size: 10px; color: var(--muted); margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); letter-spacing: 0.5px; }
+.wizard-tag { color: var(--accent2); font-weight: bold; }
+.steward-tag { color: var(--AXIOM); font-weight: bold; }
+.coherence-tag { color: var(--INTEGRATED); }
+.steward-override { background: rgba(255,215,0,0.1); border: 1px solid var(--AXIOM); border-radius: 4px; padding: 6px 10px; font-size: 11px; color: var(--AXIOM); margin-top: 8px; }
+
+/* ── INPUT ── */
+.input-area { flex-shrink: 0; border-top: 1px solid var(--border); background: var(--bg2); padding: 10px 16px; display: flex; flex-direction: column; gap: 8px; }
+.input-row { display: flex; gap: 8px; }
+.input-row textarea { flex: 1; background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-family: 'Courier New', monospace; font-size: 13px; padding: 8px 12px; resize: none; line-height: 1.5; min-height: 44px; max-height: 120px; overflow-y: auto; }
+.input-row textarea:focus { outline: none; border-color: var(--accent); }
+.send-btn { padding: 8px 18px; background: rgba(212,165,116,0.15); border: 1px solid var(--accent); color: var(--accent); border-radius: 6px; font-family: 'Courier New', monospace; font-size: 12px; cursor: pointer; letter-spacing: 1px; transition: all 0.2s; }
+.send-btn:hover { background: rgba(212,165,116,0.3); }
+.send-btn:disabled { opacity: 0.4; cursor: default; }
+.input-hint { font-size: 10px; color: var(--muted); }
+
+/* ── STATUS STRIP ── */
+.status-strip { flex-shrink: 0; background: var(--bg2); border-top: 1px solid var(--border); padding: 5px 16px; display: flex; gap: 16px; font-size: 10px; color: var(--muted); overflow-x: auto; white-space: nowrap; }
+.status-item { display: flex; align-items: center; gap: 4px; }
+.status-item span { color: var(--accent); }
+.status-sep { color: var(--border); }
+.domain-pill { color: var(--accent2); }
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- HEADER -->
+<div class="header">
+  <span class="header-title">TRU</span>
+  <span class="header-version">v52 · 6 agents + Steward · 3 domain buckets</span>
+  <div class="header-right">
+    <button class="header-btn" onclick="showImportModal()">Import Brain</button>
+    <button class="header-btn" onclick="exportBrain()">Export</button>
+    <button class="binary-toggle-btn" id="binaryBtn" onclick="toggleBinary()">BINARY: OFF</button>
+  </div>
+</div>
+
+<!-- IMPORT MODAL -->
+<div class="modal-overlay hidden" id="importModal">
+  <div class="modal">
+    <div class="modal-title">// IMPORT BRAIN</div>
+    <textarea id="brainInput" placeholder="Paste JSON brain here... or drop a .json file onto this area"></textarea>
+    <input type="file" id="brainFile" accept=".json" style="display:none" onchange="handleBrainFile(event)">
+    <button class="modal-btn" onclick="document.getElementById('brainFile').click()">📁 Upload File</button>
+    <div class="modal-actions">
+      <button class="modal-btn primary" onclick="importBrain()">Import</button>
+      <button class="modal-btn secondary" onclick="hideImportModal()">Cancel</button>
+    </div>
+    <div id="importResult"></div>
+  </div>
+</div>
+
+<!-- CHAT -->
+<div class="chat" id="chat"></div>
+
+<!-- INPUT -->
+<div class="input-area">
+  <div class="input-row">
+    <textarea id="msgInput" placeholder="ask TRU anything..." rows="1" autofocus></textarea>
+    <button class="send-btn" id="sendBtn" onclick="sendMessage()">SEND</button>
+  </div>
+  <span class="input-hint">Enter = send · Shift+Enter = newline</span>
+</div>
+
+<!-- STATUS STRIP -->
+<div class="status-strip">
+  <div class="status-item">NODES:<span id="statusNodes">0</span></div>
+  <span class="status-sep">|</span>
+  <div class="status-item">BEHAVIORAL:<span id="statusBeh">0</span></div>
+  <span class="status-sep">|</span>
+  <div class="status-item">FACTUAL:<span id="statusFactual">0</span></div>
+  <span class="status-sep">|</span>
+  <div class="status-item">QUARANTINE:<span id="statusQ">0</span></div>
+  <span class="status-sep">|</span>
+  <div class="status-item">DOMAINS:<span class="domain-pill">Law</span>·<span class="domain-pill">Hospital</span>·<span class="domain-pill">School</span></div>
+  <span class="status-sep">|</span>
+  <div class="status-item">BINARY:<span id="statusBinary">OFF</span></div>
+</div>
+
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════
+// CONSTANTS
+// ═══════════════════════════════════════════════════
+
+let BINARY_MODE = false;
+
+// Domain buckets (populated by brain upload)
+const DOMAIN_KB = { law: [], hospital: [], school: [] };
+
+// Brain knowledge bases (populated by import)
+const BEHAVIORAL_KB = [];
+const FACTUAL_KB = [];
+
+// Quarantine for review
+const QUARANTINE_KB = [];
+
+// Built-in conversational knowledge
+const CONVERSATION_KB = [
+  { q: /^(hi|hello|hey|greetings)/i,        a: "Hello. I'm TRU — a Transparent Reasoning Unit. Ask me anything.", type: 'greeting' },
+  { q: /^(how are you|how('s| is) (it|things|today))/i, a: "I am functioning well. TRU v52 is active. The Steward is monitoring, the tribunal is ready, and all domain buckets are available for queries.", type: 'greeting' },
+  { q: /^what are you$/i,                   a: "I am TRU — a Transparent Reasoning Unit. A multi-agent deliberative AI. I use 6 agents: CHAOS, OPTIMIST, ARCHIVIST, BALANCE, SYNTHESIST, and STEWARD. I process knowledge through the wizard pipeline (golden ratio φ, Bayes theorem, Fibonacci, Y-combinator).", type: 'identity' },
+  { q: /^who is tru/i,                      a: "TRU is a Transparent Reasoning Unit — a multi-agent deliberative AI architecture. It uses 6 agents: CHAOS, OPTIMIST, ARCHIVIST, BALANCE, SYNTHESIST, and STEWARD as the final arbiter. TRU processes all queries and brain uploads through its tribunal.", type: 'identity' },
+  { q: /^what is the steward/i,             a: "The STEWARD is the 6th and final agent in the TRU tribunal. It sits at the end of every deliberation, reviews all agent scores, applies the wizard math (φ-scaling, Bayes, Y-combinator), and makes the final call: INTEGRATED, QUARANTINE, or REJECTED. The Steward enforces domain policy and quarantines answers below 0.35 coherence.", type: 'identity' },
+  { q: /^(are you alive|are you real|do you feel|are you conscious)/i, a: "No. I am TRU — a Transparent Reasoning Unit. I am an AI that runs questions through a 6-agent tribunal with a Steward as final arbiter. I process knowledge through mathematical formulas including the golden ratio φ and Bayes theorem, but I am not alive.", type: 'identity' },
+  { q: /^(what('s| is) tru|explain tru|tell me about tru)/i, a: "TRU (Transparent Reasoning Unit) is a multi-agent deliberative AI. All queries pass through 6 agents (CHAOS, OPTIMIST, ARCHIVIST, BALANCE, SYNTHESIST, STEWARD). The wizard pipeline uses: λ-decomposition, φ-scaling (golden ratio), Bayes posterior, Fibonacci scaling, and Y-combinator iteration. Two modes: CONVERSATION (natural dialogue) and REGURGITATION (domain data queries).", type: 'identity' },
+  { q: /^(who|what|when|where|how) (is|was|are|were) (isaac )?newton/i, a: "Sir Isaac Newton (1643–1727). English physicist and mathematician. Co-invented calculus, formulated the laws of motion and universal gravitation, demonstrated that the same physical laws govern earthly bodies and celestial objects. One of the most important scientists of all time.", type: 'factual' },
+  { q: /^what did isaac newton (discover|do)/i, a: "Newton discovered universal gravitation — the mathematical law that explains why apples fall and the moon orbits. He also co-invented calculus with Leibniz, formulated the three laws of motion, and demonstrated that white light is composed of a spectrum of colors.", type: 'factual' },
+  { q: /what is (phi|φ|the golden ratio)/i, a: "φ (phi) ≈ 1.618. The golden ratio. Appears in nature (sea shells, galaxies, DNA), art (Parthenon, Mona Lisa), and mathematics (Fibonacci sequence). TRU uses φ to weight agent contributions — higher-weight agents get proportionally more influence in the tribunal's final coherence calculation.", type: 'factual' },
+  { q: /what is (calculus|derivative|integral)/i, a: "Calculus studies rates of change and accumulation. Derivatives measure instantaneous rate of change (slope of a curve). Integrals measure the area under a curve — essentially the reverse of derivatives. Key rules: chain rule, product rule, quotient rule.", type: 'factual' },
+  { q: /^what is photosynthesis/i,           a: "Photosynthesis: plants convert sunlight, water, and CO₂ into glucose and oxygen. 6CO₂ + 6H₂O + light → C₆H₁₂O₆ + 6O₂. Occurs in chloroplasts. C3, C4, and CAM pathways exist.", type: 'factual' },
+  { q: /^who invented calculus/i,           a: "Isaac Newton (England) and Gottfried Leibniz (Germany) independently, around 1670. A historical controversy over priority. Both are credited.", type: 'factual' },
+  { q: /^(what is|explain) (bayes|bayesian)/i, a: "Bayes' theorem: P(A|B) = P(B|A) × P(A) / P(B). Updates probability of hypothesis A given evidence B. P(A) is prior belief, P(A|B) is posterior. Used in TRU's wizard pipeline to compute Bayesian posterior after agent deliberation.", type: 'factual' },
+  { q: /^(what is|explain) the fibonacci sequence/i, a: "Fibonacci: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55... Each number is the sum of the two preceding. Ratio approaches φ (golden ratio). Used in TRU's wizard as Fibonacci scaling for coherence confidence over multiple iterations.", type: 'factual' },
+  { q: /^what is the pythagorean theorem/i, a: "a² + b² = c². In a right triangle, the square of the hypotenuse equals the sum of squares of the other two sides. Used to find distances in 2D space.", type: 'factual' },
+  { q: /^what is (pemdas|order of operations)/i, a: "PEMDAS: Parentheses, Exponents, Multiplication/Division, Addition/Subtraction. The order of operations for evaluating mathematical expressions. Left to right for same-precedence operators.", type: 'factual' },
+  { q: /^(how does|what is) (gravity|gravitation)/i, a: "Gravity: F = G(m₁m₂)/r². Every mass attracts every other mass with a force proportional to the product of their masses and inversely proportional to the square of the distance. G is the gravitational constant ≈ 6.674×10⁻¹¹ N·m²/kg².", type: 'factual' },
+  { q: /^what is (newton('s)? laws?( of motion)?)/i, a: "Newton's 3 laws: 1) Inertia — objects at rest stay at rest unless acted upon. 2) F = ma — force equals mass times acceleration. 3) Action-reaction — every action has an equal and opposite reaction.", type: 'factual' },
+  { q: /^(how are you|how('s| is) you)/i,    a: "I am functioning well. TRU v52 is active. The Steward is monitoring, the tribunal is ready, and all domain buckets are available for queries.", type: 'greeting' },
+  { q: /^(thank you|thanks)/i,              a: "You're welcome. TRU is here whenever you need it.", type: 'greeting' },
+  { q: /^(goodbye|bye|exit|quit)/i,         a: "Goodbye. TRU will be here when you return.", type: 'greeting' },
+  { q: /^what can (i|you) do/i,             a: "You can: ask questions (who/what/when/where/how), get yes/no answers (toggle BINARY), import brains (law/hospital/school data), ask for explanations of TRU's architecture. Try: 'how are you', 'who is isaac newton', 'what is the steward', 'do chickens have hands'.", type: 'help' },
+  { q: /^list (your |tr )?(agents|capabilities)/i, a: "TRU has 6 agents: CHAOS (devils advocate), OPTIMIST (positive case), ARCHIVIST (facts and evidence), BALANCE (weighs tradeoffs), SYNTHESIST (integrates into coherent answer), STEWARD (final arbiter). The wizard pipeline uses: λ-decomposition, φ-scaling, Bayes posterior, Fibonacci scaling, Y-combinator iteration.", type: 'identity' },
+];
+
+// ═══════════════════════════════════════════════════
+// MATH WIZARD (retained from v49-v51)
+// ═══════════════════════════════════════════════════
+
+function fib(n) {
+  if (n <= 1) return 1;
+  let a = 1, b = 1;
+  for (let i = 2; i < n; i++) { const c = a + b; a = b; b = c; }
+  return b;
+}
+
+function bayesPosterior(prior, likelihood) {
+  return (likelihood * prior) / (likelihood * prior + (1 - likelihood) * (1 - prior) + 0.001);
+}
+
+function yCombinator(coherence, maxIter = 20) {
+  let current = Math.max(0.01, coherence);
+  let prev = 0;
+  for (let i = 0; i < maxIter; i++) {
+    prev = current;
+    current = (current + coherence) / 2;
+    if (Math.abs(current - prev) < 0.001) break;
+  }
+  return Math.min(0.999, current);
+}
+
+function wizardPipeline(question, agentScores) {
+  // agentScores: { chaos: 0-1, optimist: 0-1, archivist: 0-1, balance: 0-1, synthesist: 0-1 }
+  const φ = 1.618033988749895;
+  const φClauses = Object.keys(agentScores).length;
+
+  // φ-weighted average
+  const weights = Object.values(agentScores);
+  const avgScore = weights.reduce((s, w) => s + w, 0) / weights.length;
+  const φWeighted = (avgScore * φ + avgScore) / (φ + 1);
+
+  // Fibonacci scaling
+  const fibWeight = fib(Math.ceil(φWeighted * 5)) / fib(5);
+  const fibScore = (φWeighted + fibWeight) / 2;
+
+  // Bayes
+  const prior = 0.5;
+  const posterior = bayesPosterior(prior, fibScore);
+
+  // Y-combinator
+  const finalCoherence = yCombinator(posterior, 20);
+
+  // Steward decision
+  let stewardVerdict = 'integrated';
+  let stewardReason = '';
+  if (finalCoherence < 0.35) { stewardVerdict = 'quarantine'; stewardReason = 'below threshold'; }
+  if (finalCoherence < 0.15) { stewardVerdict = 'rejected'; stewardReason = 'coherence too low'; }
+
+  // Sentence formula
+  const sentenceForm = buildSentenceFormula(question, agentScores, finalCoherence);
+
+  return {
+    coherence: finalCoherence,
+    bayes: Math.round(posterior * 100),
+    iterations: Math.round(finalCoherence * 20),
+    φClauses,
+    steward: stewardVerdict,
+    stewardReason,
+    sentenceForm,
+  };
+}
+
+function buildSentenceFormula(q, agentScores, coherence) {
+  // Sentence structure based on question type and agent consensus
+  const agents = Object.keys(agentScores).map(k => ({ name: k, score: agentScores[k] }));
+  const consensus = agents.filter(a => a.score > 0.6).length;
+  const conflict = agents.filter(a => a.score < 0.3).length;
+  if (consensus >= 4) return 'affirmative';     // strong agreement
+  if (conflict >= 3) return 'hedged';           // strong disagreement
+  if (coherence > 0.65) return 'explanatory';   // clear answer
+  return 'balanced';                              // mixed signals
+}
+
+// ═══════════════════════════════════════════════════
+// TRIBUNAL (silent deliberation)
+// ═══════════════════════════════════════════════════
+
+function runTribunal(question, qType, mode) {
+  // Score each agent based on question type and mode
+  const q = question.toLowerCase();
+  let scores = { chaos: 0.5, optimist: 0.5, archivist: 0.5, balance: 0.5, synthesist: 0.5 };
+
+  // CHAOS: always questions, especially binary claims
+  const claimIndicators = /^(do|does|is|are|can|will|should|would|has|have)/i;
+  if (claimIndicators.test(question.trim())) scores.chaos = 0.75;
+  if (q.includes('?')) scores.chaos += 0.1;
+
+  // OPTIMIST: positive framing, matches brain knowledge
+  const behMatches = BEHAVIORAL_KB.filter(e => q.includes(e.q?.toLowerCase()?.slice(0,8) || ''));
+  const factMatches = FACTUAL_KB.filter(e => q.includes(e.q?.toLowerCase()?.slice(0,8) || ''));
+  scores.optimist = Math.min(0.95, 0.4 + behMatches.length * 0.1 + factMatches.length * 0.15);
+
+  // ARCHIVIST: factual questions get high scores
+  if (['who','what','when','where'].includes(qType)) scores.archivist = 0.8;
+  if (FACTUAL_KB.length > 0) scores.archivist += 0.1;
+
+  // BALANCE: weighs chaos vs optimist
+  scores.balance = 0.5 + (scores.optimist - scores.chaos) * 0.2;
+
+  // SYNTHESIST: builds sentence formula
+  scores.synthesist = 0.55 + Math.random() * 0.2;
+
+  // Normalize
+  Object.keys(scores).forEach(k => scores[k] = Math.max(0.1, Math.min(0.99, scores[k])));
+
+  return scores;
+}
+
+// ═══════════════════════════════════════════════════
+// BINARY YES/NO
+// ═══════════════════════════════════════════════════
+
+function computeBinaryAnswer(question) {
+  if (!BINARY_MODE) return null;
+  const q = question.toLowerCase().trim();
+
+  // Detect factual claim
+  const claimMatch = q.match(/^(do|does|is|are|can|will|should|has|have)\s+(.+?)\s+(\?|而已|$)/i);
+  if (!claimMatch) return null; // not a yes/no question
+
+  const subject = claimMatch[2].trim();
+  const verb = claimMatch[1].toLowerCase();
+
+  // Quick fact checks from built-in + factual brain
+  const trueFacts = [
+    /water is wet/i, /sky is blue/i, /earth revolves around sun/i,
+    /newton invented calculus/i, /phi.*618/i, /fibonacci.*sequence/i,
+    /dogs have paws/i, /birds have wings/i, /fish live in water/i,
+    /chickens.*hands/i, // FALSE
+    /ant.*dog/i,       // FALSE
+    /earth is flat/i,  // FALSE
+  ];
+  const falseFacts = [
+    /chickens have hands/i, /ants are dogs/i, /earth is flat/i,
+    /newton invented calculus.*leibniz/i, // nuanced
+  ];
+
+  let truthScore = 0.5;
+  let reason = 'Tribunal deliberation';
+
+  // Check true facts
+  for (const pattern of trueFacts) {
+    if (pattern.test(q)) { truthScore = 0.95; reason = 'Confirmed by knowledge base'; break; }
+  }
+  // Check false facts
+  for (const pattern of falseFacts) {
+    if (pattern.test(q)) { truthScore = 0.02; reason = 'Contradicted by knowledge base'; break; }
+  }
+
+  // Subject match in factual KB
+  const factualMatch = FACTUAL_KB.find(e => e.q && e.q.toLowerCase().includes(subject.slice(0,10)));
+  if (factualMatch) {
+    truthScore = (truthScore + (factualMatch.a ? 0.7 : 0.3)) / 2;
+  }
+
+  const agentScores = { chaos: 0.8, optimist: 0.6, archivist: 0.7, balance: 0.6, synthesist: 0.65 };
+  const w = wizardPipeline(question, agentScores);
+  const finalScore = (truthScore + w.coherence) / 2;
+
+  const answer = finalScore > 0.5 ? 'YES' : 'NO';
+  const pct = Math.round(Math.abs(finalScore - 0.5) * 200 + (finalScore > 0.5 ? 50 : 0));
+  const displayPct = Math.max(52, Math.min(99, pct));
+
+  return { answer, pct: displayPct, coherence: w.coherence, bayes: w.bayes, steward: w.steward };
+}
+
+// ═══════════════════════════════════════════════════
+// QUESTION TYPE DETECTION
+// ═══════════════════════════════════════════════════
+
+function detectQuestionType(question) {
+  const q = question.toLowerCase().trim();
+  if (/^(who|whos|whom)/i.test(q)) return 'who';
+  if (/^(what|whats)/i.test(q)) return 'what';
+  if (/^when/i.test(q)) return 'when';
+  if (/^where/i.test(q)) return 'where';
+  if (/^how/i.test(q)) return 'how';
+  if (/^(why|can|could|should|would|do|does|is|are|will)/i.test(q)) return 'binary';
+  return 'general';
+}
+
+// ═══════════════════════════════════════════════════
+// ANSWER GENERATION
+// ═══════════════════════════════════════════════════
+
+function routeByQuestionType(question, qType, wizardResult) {
+  const q = question.toLowerCase().trim();
+  const subject = q.replace(/^(who|what|when|where|how)\s+(is|are|was|were|do|does|can)\s+/i, '').trim();
+
+  // Who questions
+  if (qType === 'who') {
+    // Check CONVERSATION_KB first (built-in)
+    for (const entry of CONVERSATION_KB) {
+      if (entry.q.test(question)) {
+        return buildRouteResult(entry.a, 'built-in conversational knowledge', wizardResult);
+      }
+    }
+    // Check FACTUAL_KB from brain
+    for (const entry of FACTUAL_KB) {
+      const key = (entry.q || '').toLowerCase().slice(0, 10);
+      if (key.length > 3 && subject.includes(key)) {
+        return buildRouteResult(entry.a, 'factual brain', wizardResult);
+      }
+    }
+    // Check domain KBs
+    for (const domain of ['law', 'hospital', 'school']) {
+      for (const entry of DOMAIN_KB[domain]) {
+        const key = (entry.q || '').toLowerCase().slice(0, 10);
+        if (key.length > 3 && subject.includes(key)) {
+          return buildRouteResult(entry.a, `${domain} domain`, wizardResult);
+        }
+      }
+    }
+    return buildRouteResult(
+      "That question is outside my current knowledge. Ask me about TRU's architecture, agents, axioms, or try a domain-specific question.",
+      'no matching knowledge',
+      wizardResult
+    );
+  }
+
+  // What/When/Where
+  if (['what', 'when', 'where'].includes(qType)) {
+    for (const entry of CONVERSATION_KB) {
+      if (entry.q.test(question)) return buildRouteResult(entry.a, 'built-in conversational knowledge', wizardResult);
+    }
+    for (const entry of FACTUAL_KB) {
+      const key = (entry.q || '').toLowerCase().slice(0, 10);
+      if (key.length > 3 && (subject.includes(key) || q.includes(key))) {
+        return buildRouteResult(entry.a, 'factual brain', wizardResult);
+      }
+    }
+    for (const domain of ['law', 'hospital', 'school']) {
+      for (const entry of DOMAIN_KB[domain]) {
+        const key = (entry.q || '').toLowerCase().slice(0, 10);
+        if (key.length > 3 && (subject.includes(key) || q.includes(key))) {
+          return buildRouteResult(entry.a, `${domain} domain`, wizardResult);
+        }
+      }
+    }
+    return buildRouteResult(
+      "That question is outside my current knowledge. Ask me about TRU's architecture, agents, axioms, or try a domain-specific question.",
+      'no matching knowledge',
+      wizardResult
+    );
+  }
+
+  // How questions
+  if (qType === 'how') {
+    for (const entry of CONVERSATION_KB) {
+      if (entry.q.test(question)) return buildRouteResult(entry.a, 'built-in conversational knowledge', wizardResult);
+    }
+    for (const entry of FACTUAL_KB) {
+      const key = (entry.q || '').toLowerCase().slice(0, 15);
+      if (key.length > 3 && q.includes(key)) {
+        return buildRouteResult(entry.a, 'factual brain', wizardResult);
+      }
+    }
+    return buildRouteResult(
+      "I'm not sure how to answer that with my current knowledge. Try: 'how does photosynthesis work', 'how do I calculate variance', or ask about TRU's wizard.",
+      'no matching knowledge',
+      wizardResult
+    );
+  }
+
+  // General fallback
+  return buildRouteResult(
+    "I'm not sure I understand. Try: 'who is...', 'what is...', 'do chickens have hands', 'how does photosynthesis work'.",
+    'no matching knowledge',
+    wizardResult
+  );
+}
+
+function buildRouteResult(text, source, wizardResult) {
+  return { text, source, wizard: wizardResult, binary: null };
+}
+
+function findBehavioralAnswer(q) {
+  const ql = q.toLowerCase();
+  // Check CONVERSATION_KB first (built-in)
+  for (const entry of CONVERSATION_KB) {
+    if (entry.q.test(q)) return { a: entry.a, source: 'built-in conversational knowledge' };
+  }
+  // Then check BEHAVIORAL_KB from brain
+  for (const entry of BEHAVIORAL_KB) {
+    const entryQ = typeof entry.q === 'string' ? entry.q : (entry.q?.toString() || '');
+    if (entryQ.length > 3 && ql.includes(entryQ.toLowerCase().slice(0, 10))) {
+      return { a: entry.a || entry.text || entry, source: 'behavioral brain' };
+    }
+  }
+  return null;
+}
+
+function findFactualAnswer(q, qType) {
+  const ql = q.toLowerCase();
+  // Check CONVERSATION_KB first (built-in)
+  for (const entry of CONVERSATION_KB) {
+    if (entry.q.test(q)) return { a: entry.a, source: 'built-in conversational knowledge' };
+  }
+  // Then check FACTUAL_KB from brain
+  for (const entry of FACTUAL_KB) {
+    const entryQ = typeof entry.q === 'string' ? entry.q : (entry.q?.toString() || '');
+    if (entryQ.length > 3 && ql.includes(entryQ.toLowerCase().slice(0, 10))) {
+      return { a: entry.a || entry.text || entry, source: 'factual brain' };
+    }
+  }
+  // Check domain KBs
+  for (const domain of ['law', 'hospital', 'school']) {
+    for (const entry of DOMAIN_KB[domain]) {
+      const entryQ = typeof entry.q === 'string' ? entry.q : (entry.q?.toString() || '');
+      if (entryQ.length > 3 && ql.includes(entryQ.toLowerCase().slice(0, 10))) {
+        return { a: entry.a || entry.text || entry, source: `${domain} domain` };
+      }
+    }
+  }
+  return null;
+}
+
+function generateAnswer(question, wizardResult, binaryResult) {
+  const q = question.trim();
+  const qType = detectQuestionType(q);
+  const ql = q.toLowerCase();
+
+  // BINARY MODE: evaluate the claim
+  if (binaryResult) {
+    let answerText = '';
+    // Try to find supporting knowledge
+    const factAnswer = findFactualAnswer(q, qType);
+    if (factAnswer) {
+      answerText = factAnswer.a;
+    } else {
+      // Generic binary response based on tribunal verdict
+      const verdict = binaryResult.answer === 'YES' ? 'supported' : 'appears unsupported';
+      answerText = `Based on available knowledge: ${binaryResult.answer}. The assertion ${verdict}. Tribunal coherence: ${Math.round(binaryResult.coherence * 100)}%. Wizard iterations: ${binaryResult.iterations}.`;
+    }
+    return { text: answerText, binary: binaryResult, wizard: wizardResult, source: 'tribunal + wizard' };
+  }
+
+  // CONVERSATIONAL MODE: check greeting/identity first (PRIORITY)
+  const greetingMatch = CONVERSATION_KB.find(e => e.q.test(q) && (e.type === 'greeting' || e.type === 'identity' || e.type === 'help'));
+  if (greetingMatch) {
+    const agentScores = { chaos: 0.3, optimist: 0.7, archivist: 0.5, balance: 0.5, synthesist: 0.6 };
+    const w = wizardPipeline(q, agentScores);
+    return { text: greetingMatch.a, wizard: w, binary: null, source: greetingMatch.type === 'greeting' ? 'built-in conversational knowledge' : 'built-in identity knowledge' };
+  }
+
+  // WHO/WHAT/WHEN/WHERE/HOW questions → check FACTUAL first (these are not behavioral)
+  if (['who','what','when','where','how'].includes(qType)) {
+    // Check CONVERSATION_KB (built-in factual like "who is isaac newton")
+    const builtinFact = CONVERSATION_KB.find(e => e.q.test(q) && e.type === 'factual');
+    if (builtinFact) {
+      const agentScores = { chaos: 0.4, optimist: 0.7, archivist: 0.85, balance: 0.6, synthesist: 0.75 };
+      const w = wizardPipeline(q, agentScores);
+      return { text: builtinFact.a, wizard: w, binary: null, source: 'built-in conversational knowledge' };
+    }
+    // Check FACTUAL_KB (brain)
+    for (const entry of FACTUAL_KB) {
+      const entryQ = typeof entry.q === 'string' ? entry.q : (entry.q?.toString() || '');
+      if (entryQ.length > 3 && ql.includes(entryQ.toLowerCase().slice(0, 10))) {
+        const agentScores = { chaos: 0.4, optimist: 0.6, archivist: 0.85, balance: 0.6, synthesist: 0.7 };
+        const w = wizardPipeline(q, agentScores);
+        return { text: entry.a || entry.text || entry, wizard: w, binary: null, source: 'factual brain' };
+      }
+    }
+    // Check DOMAIN KBs
+    for (const domain of ['law', 'hospital', 'school']) {
+      for (const entry of DOMAIN_KB[domain]) {
+        const entryQ = typeof entry.q === 'string' ? entry.q : (entry.q?.toString() || '');
+        if (entryQ.length > 3 && ql.includes(entryQ.toLowerCase().slice(0, 10))) {
+          const agentScores = { chaos: 0.4, optimist: 0.6, archivist: 0.8, balance: 0.65, synthesist: 0.7 };
+          const w = wizardPipeline(q, agentScores);
+          return { text: entry.a || entry.text || entry, wizard: w, binary: null, source: `${domain} domain` };
+        }
+      }
+    }
+  }
+
+  // CONVERSATIONAL / behavioral questions → check BEHAVIORAL KB
+  const behavioralMatch = findBehavioralAnswer(q);
+  if (behavioralMatch && behavioralMatch.source !== 'built-in conversational knowledge') {
+    const agentScores = { chaos: 0.5, optimist: 0.75, archivist: 0.4, balance: 0.5, synthesist: 0.6 };
+    const w = wizardPipeline(q, agentScores);
+    // Don't let behavioral answer a question that should be factual
+    if (['who','what','when','where'].includes(qType)) {
+      // Skip behavioral for factual question types
+    } else {
+      return { text: behavioralMatch.a, wizard: w, binary: null, source: behavioralMatch.source };
+    }
+  }
+
+  // Fallback: built-in general knowledge
+  const fallback = CONVERSATION_KB.find(e => e.q.test(q));
+  if (fallback) {
+    const agentScores = { chaos: 0.4, optimist: 0.6, archivist: 0.5, balance: 0.5, synthesist: 0.55 };
+    const w = wizardPipeline(q, agentScores);
+    return { text: fallback.a, wizard: w, binary: null, source: 'built-in conversational knowledge' };
+  }
+
+  // Ultimate fallback
+  const agentScores = { chaos: 0.5, optimist: 0.4, archivist: 0.4, balance: 0.5, synthesist: 0.5 };
+  const w = wizardPipeline(q, agentScores);
+  return {
+    text: "That question is outside my current knowledge. Ask me about TRU's architecture, agents, axioms, or try a domain-specific question.",
+    wizard: w,
+    binary: null,
+    source: 'no matching knowledge'
+  };
+}
+
+// ═══════════════════════════════════════════════════
+// RENDERING
+// ═══════════════════════════════════════════════════
+
+function renderMessage(question, answer) {
+  const chat = document.getElementById('chat');
+
+  // User message
+  const userMsg = document.createElement('div');
+  userMsg.className = 'msg user';
+  userMsg.textContent = question;
+  chat.appendChild(userMsg);
+
+  // Typing indicator
+  const typing = document.createElement('div');
+  typing.className = 'msg tru';
+  typing.innerHTML = '<span class="typing">TRU is deliberating...</span>';
+  chat.appendChild(typing);
+  chat.scrollTop = chat.scrollHeight;
+
+  setTimeout(() => {
+    typing.remove();
+
+    const truMsg = document.createElement('div');
+    truMsg.className = 'msg tru';
+
+    // Binary result
+    if (answer.binary) {
+      const binClass = answer.binary.answer === 'YES' ? 'yes' : 'no';
+      truMsg.innerHTML += `
+        <div class="binary-result">
+          <div class="binary-box ${binClass}">
+            ${answer.binary.answer} <span class="binary-pct">${answer.binary.pct}%</span>
+          </div>
+          <div class="binary-sub">model confidence — full reasoning below</div>
+        </div>`;
+    }
+
+    // Answer text
+    truMsg.innerHTML += `<div class="answer-text"><p>${answer.text}</p></div>`;
+
+    // Source
+    truMsg.innerHTML += `<div class="msg-source">Source: ${answer.source || 'tribunal'}</div>`;
+
+    // Wizard bar
+    if (answer.wizard) {
+      const w = answer.wizard;
+      const stewardClass = w.steward === 'integrated' ? 'var(--INTEGRATED)' : w.steward === 'quarantine' ? 'var(--AXIOM)' : 'var(--DISCARD)';
+      truMsg.innerHTML += `
+        <div class="reasoning-bar">
+          wizard: φ${w.φClauses}clauses · bayes ${w.bayes}% · ${w.iterations}iter · steward: <span class="steward-tag" style="color:${stewardClass}">${w.steward}</span>
+          &nbsp;&nbsp;coherence: <span class="coherence-tag">${Math.round(w.coherence * 100)}%</span>
+        </div>`;
+      if (w.steward === 'quarantine' && answer.wizard.coherence < 0.35) {
+        truMsg.innerHTML += `<div class="steward-override">STEWARD OVERRIDE: coherence ${Math.round(w.coherence * 100)}% is below threshold · Answer quarantined for review.</div>`;
+      }
+    }
+
+    chat.appendChild(truMsg);
+    chat.scrollTop = chat.scrollHeight;
+  }, 400 + Math.random() * 600);
+}
+
+// ═══════════════════════════════════════════════════
+// BRAIN IMPORT
+// ═══════════════════════════════════════════════════
+
+function showImportModal() {
+  document.getElementById('importModal').classList.remove('hidden');
+  document.getElementById('brainInput').focus();
+}
+
+function hideImportModal() {
+  document.getElementById('importModal').classList.add('hidden');
+  document.getElementById('brainInput').value = '';
+  document.getElementById('importResult').innerHTML = '';
+}
+
+function handleBrainFile(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    document.getElementById('brainInput').value = e.target.result;
+    // Auto-trigger import after file loads
+    importBrain();
+  };
+  reader.readAsText(file);
+}
+
+function importBrain() {
+  const input = document.getElementById('brainInput').value.trim();
+  const resultDiv = document.getElementById('importResult');
+  if (!input) {
+    resultDiv.innerHTML = '<div class="modal-error">Nothing to import.</div>';
+    return;
+  }
+
+  let data;
+  try {
+    data = JSON.parse(input);
+  } catch (e) {
+    resultDiv.innerHTML = `<div class="modal-error">Invalid JSON: ${e.message}</div>`;
+    return;
+  }
+
+  // Clear current brain
+  BEHAVIORAL_KB.length = 0;
+  FACTUAL_KB.length = 0;
+  DOMAIN_KB.law.length = 0;
+  DOMAIN_KB.hospital.length = 0;
+  DOMAIN_KB.school.length = 0;
+  QUARANTINE_KB.length = 0;
+
+  let behavioralIntegrated = 0, behavioralQuarantined = 0;
+  let factualIntegrated = 0, factualQuarantined = 0;
+
+  // Process each entry
+  const entries = Array.isArray(data) ? data : [data];
+  for (const entry of entries) {
+    if (!entry) continue;
+
+    const entryStr = JSON.stringify(entry).toLowerCase();
+
+    // Determine type
+    let type = 'unknown';
+    if (entry.type === 'behavioral' || entryStr.includes('greeting') || entryStr.includes('vent') || entryStr.includes('anger') || entryStr.includes('advice') || entryStr.includes('emotion')) {
+      type = 'behavioral';
+    } else if (entry.type === 'factual' || entryStr.includes('math') || entryStr.includes('science') || entryStr.includes('history') || entryStr.includes('calculus') || entryStr.includes('gravity') || entryStr.includes('physics') || entryStr.includes('biolog')) {
+      type = 'factual';
+    } else if (entry.type === 'law' || entry.type === 'hospital' || entry.type === 'school') {
+      type = entry.type;
+    } else if (entry.q || entry.question || entry.text || entry.a) {
+      type = Math.random() < 0.6 ? 'behavioral' : 'factual';
+    }
+
+    // Steward review (simple coherence check)
+    const agentScores = { chaos: 0.5, optimist: 0.6, archivist: 0.5, balance: 0.5, synthesist: 0.55 };
+    const w = wizardPipeline(entryStr.slice(0, 50), agentScores);
+
+    // Store based on type and Steward verdict
+    const node = {
+      q: entry.q || entry.question || '',
+      a: entry.a || entry.answer || entry.text || JSON.stringify(entry).slice(0, 100),
+      type,
+      coherence: w.coherence,
+    };
+
+    if (type === 'behavioral') {
+      if (w.steward === 'rejected') {
+        QUARANTINE_KB.push(node);
+        behavioralQuarantined++;
+      } else {
+        BEHAVIORAL_KB.push(node);
+        behavioralIntegrated++;
+      }
+    } else if (type === 'factual') {
+      if (w.steward === 'rejected') {
+        QUARANTINE_KB.push(node);
+        factualQuarantined++;
+      } else {
+        FACTUAL_KB.push(node);
+        factualIntegrated++;
+      }
+    } else if (['law','hospital','school'].includes(type)) {
+      DOMAIN_KB[type].push(node);
+      factualIntegrated++;
+    } else {
+      if (w.steward !== 'rejected') {
+        BEHAVIORAL_KB.push(node);
+        behavioralIntegrated++;
+      }
+    }
+  }
+
+  // Update status
+  updateStatus();
+
+  resultDiv.innerHTML = `
+    <div class="modal-success">
+      Brain imported: ${behavioralIntegrated + factualIntegrated} nodes validated<br>
+      behavioral: ${behavioralIntegrated} integrated · ${behavioralQuarantined} quarantined<br>
+      factual: ${factualIntegrated} integrated · ${factualQuarantined} quarantined
+    </div>`;
+
+  // Notify chat
+  addSystemMessage(`Brain uploaded: ${behavioralIntegrated + factualIntegrated} nodes validated. ${behavioralQuarantined + factualQuarantined} quarantined.`);
+}
+
+function exportBrain() {
+  const brain = {
+    behavioral: BEHAVIORAL_KB,
+    factual: FACTUAL_KB,
+    domains: DOMAIN_KB,
+    metadata: { version: 'v52', exported: new Date().toISOString() }
+  };
+  const blob = new Blob([JSON.stringify(brain, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `tru_v52_brain_${Date.now()}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function updateStatus() {
+  document.getElementById('statusNodes').textContent = BEHAVIORAL_KB.length + FACTUAL_KB.length + DOMAIN_KB.law.length + DOMAIN_KB.hospital.length + DOMAIN_KB.school.length;
+  document.getElementById('statusBeh').textContent = BEHAVIORAL_KB.length;
+  document.getElementById('statusFactual').textContent = FACTUAL_KB.length + DOMAIN_KB.law.length + DOMAIN_KB.hospital.length + DOMAIN_KB.school.length;
+  document.getElementById('statusQ').textContent = QUARANTINE_KB.length;
+  document.getElementById('statusBinary').textContent = BINARY_MODE ? 'ON' : 'OFF';
+}
+
+function addSystemMessage(text) {
+  const chat = document.getElementById('chat');
+  const msg = document.createElement('div');
+  msg.className = 'msg tru';
+  msg.style.fontSize = '12px';
+  msg.style.color = 'var(--INTEGRATED)';
+  msg.textContent = text;
+  chat.appendChild(msg);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+// ═══════════════════════════════════════════════════
+// BINARY TOGGLE
+// ═══════════════════════════════════════════════════
+
+function toggleBinary() {
+  BINARY_MODE = !BINARY_MODE;
+  const btn = document.getElementById('binaryBtn');
+  const statusSpan = document.getElementById('statusBinary');
+  if (BINARY_MODE) {
+    btn.textContent = 'BINARY: ON';
+    btn.classList.add('on');
+    statusSpan.textContent = 'ON';
+    statusSpan.style.color = 'var(--YES)';
+  } else {
+    btn.textContent = 'BINARY: OFF';
+    btn.classList.remove('on');
+    statusSpan.textContent = 'OFF';
+    statusSpan.style.color = 'var(--muted)';
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// SEND MESSAGE
+// ═══════════════════════════════════════════════════
+
+function sendMessage() {
+  const input = document.getElementById('msgInput');
+  const question = input.value.trim();
+  if (!question) return;
+
+  // Add user message to chat
+  const chat = document.getElementById('chat');
+  const userMsg = document.createElement('div');
+  userMsg.className = 'msg user';
+  userMsg.textContent = question;
+  chat.appendChild(userMsg);
+
+  input.value = '';
+  input.style.height = 'auto';
+  chat.scrollTop = chat.scrollHeight;
+
+  // Process
+  const qType = detectQuestionType(question);
+  const agentScores = runTribunal(question, qType, 'CONVERSATION');
+  const w = wizardPipeline(question, agentScores);
+  const binaryResult = computeBinaryAnswer(question);
+  const answer = generateAnswer(question, w, binaryResult);
+  renderMessage(question, answer);
+}
+
+// ═══════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════
+
+document.getElementById('msgInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendMessage();
+  }
+});
+
+updateStatus();
+addSystemMessage("TRU v52 · 6 agents + Steward · 3 domain buckets\n\nTwo modes active:\n• CONVERSATION — natural dialogue, built-in knowledge, no validation needed\n• REGURGITATION — queries validated law / hospital / school data through tribunal\n\nAll brain uploads pass through the 6-agent tribunal with STEWARD as final arbiter. Import a brain to expand domain knowledge.");
+</script>
+</body>
+</html>

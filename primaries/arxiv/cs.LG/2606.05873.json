@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.05873",
+  "title": "LadderMan: Learning Humanoid Perceptive Ladder Climbing",
+  "abstract": "Humanoid robots hold great promise for operating in human-centered environments, yet ladder climbing remains one of the most challenging tasks due to sparse footholds and handholds, complex whole-body coordination, and sensitivity to perception and control errors. We present \\textbf{LadderMan}, a unified system that enables humanoid robots to robustly climb diverse ladders and perform manipulation under such constrained conditions. Our climbing policy is built on a scalable two-stage learning pipeline, where we use hybrid motion tracking to learn multiple climbing experts from a single reference motion, and distill these experts into a unified depth-based visuomotor climbing policy via hybrid imitation and reinforcement learning. To enable real-world deployment, we leverage vision foundation models to bridge the sim-to-real gap in depth perception. Building on the learned climbing policy, we further train a separate manipulation policy using a dual-agent formulation, allowing stable on-ladder manipulation via teleoperation. Experiments demonstrate that LadderMan achieves robust ladder climbing across a wide range of geometries, successfully transfers to real-world hardware in a zero-shot manner, and supports various manipulation tasks under challenging ladder constraints. Video results are available at https://ladderman-robot.github.io .",
+  "link": "https://arxiv.org/abs/2606.05873",
+  "category": "cs.LG",
+  "categories": [
+    "cs.RO",
+    "cs.AI",
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883314+00:00"
+}

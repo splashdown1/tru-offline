@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31111",
+  "title": "Subspace-Decomposed JEPAs: Disentangling Progression and Content in Latent World Models",
+  "abstract": "Joint-Embedding Predictive Architectures (JEPAs) learn compact latent world models by predicting future embeddings, but no single coordinate of the latent is designated to encode task progression. We carve the JEPA latent into two orthogonal subspaces with disjoint roles: a low-dimensional progression subspace shaped by a cosine-margin triplet loss, and a high-dimensional content subspace regularised by the existing SIGReg objective of LeWM. We prove that the two anti-collapse forces act on disjoint coordinates, so they compose additively rather than competing on the same dimensions. Our method, SD-JEPA improves over the LeWM baseline on the majority of its control benchmarks at matched compute, and outperforms the strongest non-LeWM JEPA baseline on Push-T; a subspace-ablation falsifier confirms the split is the load-bearing ingredient. Beyond planning, the resulting 1-D angular progression coordinate functions as a scene-aware compass on the latent. It advances with task progress, regresses when the agent backtracks, and under controlled perturbations both spikes and relocalises to a semantically appropriate new task-phase sector, separating the moment of surprise from its meaning in a way that prediction-error scalars cannot. Three quantitative tests back this up: $|\\Delta\\theta_t|$ outperforms the standard latent-prediction-error surprise at localising semantic events on 40 held-out cube episodes by up to +0.18 pooled AUROC (97.5% per-episode win rate at $\\pm 1$-step tolerance); a within-episode linear probe across all four environments (40 episodes per env) shows the 8-dimensional progression subspace (4.2% of the latent) explains 72-95% of task-progress variance..",
+  "link": "https://arxiv.org/abs/2605.31111",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306969Z"
+}

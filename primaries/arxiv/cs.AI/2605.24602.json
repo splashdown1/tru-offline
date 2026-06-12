@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.24602",
+  "title": "Correcting Visual Blur Induced by Attention Distraction to Reduce Hallucinations: Algorithm and Theory",
+  "abstract": "Multimodal large language models (MLLMs) frequently suffer from object hallucinations, yet the visual perceptual mechanism underlying this failure remains poorly understood. In this work, we reveal that hallucinations are strongly associated with a human-like attention distraction phenomenon, where humans under divided focus experience degraded visual clarity and produce inaccurate descriptions, while in models the same mechanism manifests as spatial inconsistency in multi-head attention and temporal fading of attention to image tokens during decoding. We further provide theoretical insights that attention dispersion increases model complexity and degrades classification generalization. Motivated by these findings, we propose an Attention-Focused Approach for Improved Image Perception (AFIP), which corrects attention distraction via cross-head attention enrichment and reinforces visual grounding through dynamic historical attention enhancement. Extensive experiments on multiple benchmarks and models validate the effectiveness of AFIP without additional training.",
+  "link": "https://arxiv.org/abs/2605.24602",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099330+00:00"
+}

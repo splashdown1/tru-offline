@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05202",
+  "title": "Multi-Fidelity Learning with Shallow Recurrent Decoders for Reactor Physics",
+  "abstract": "In reactor physics, neutronics can be treated with different fidelity levels, according to the needs of the user. On one hand, the precise modeling of neutrons' behaviour in reactor physics is often expensive and time-consuming due to the high computational costs to numerically solve the Boltzmann transport equation. Conversely, by adopting suitable assumptions, such as the SP$_N$, diffusion theory, and point kinetics, it is possible to generate efficiently low-fidelity data. From the perspective of surrogate models, this computational limitation translates into a scarcity of high-fidelity data and a significant amount of low-fidelity data. Given this difference in fidelity levels, it would be interesting to develop a suitable procedure to map low-fidelity models towards higher fidelity models; for instance, one could obtain the solution to a multi-group diffusion equation starting from time-series data obtained from a point kinetics model. Indeed, this work investigates this possibility by leveraging multi-fidelity information with Shallow Recurrent Decoders, a novel machine learning architecture able to map time-series observations to the full state of the reactor. This technique has been designed to use local or global measurements as input and map their temporal trajectories to the high-dimensional state; by the same logic, in principle, this architecture can also be used when the input is formed by the solution of a lumped model. This work applies this idea to a benchmark reactor geometry, mapping the point kinetics model to the diffusion solution under various input conditions, with much less computational costs.",
+  "link": "https://arxiv.org/abs/2606.05202",
+  "category": "cs.LG",
+  "categories": [
+    "physics.comp-ph",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882824+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2601.01754",
+  "title": "Context-Free Recognition with Transformers",
+  "abstract": "Transformers excel empirically on tasks that process well-formed inputs according to some grammar, such as natural language and code. However, it remains unclear how they can process grammatical syntax. In fact, under standard complexity conjectures, standard transformers cannot recognize context-free languages (CFLs), a canonical formalism to describe syntax, or even regular languages, a subclass of CFLs. Past work has shown that $\\mathcal{O}(\\log(N))$ looping layers (w.r.t. input length $N$) allow transformers to recognize regular languages, but the question of context-free recognition with looped transformers remained open. In this work, we show that looped transformers with $\\mathcal{O}(\\log(N))$ looping layers and $\\mathcal{O}(N^6)$ padding symbols can recognize all CFLs. However, training and inference with $\\mathcal{O}(N^6)$ padding symbols is potentially impractical. Fortunately, we show that, for natural subclasses such as unambiguous CFLs, the recognition problem on transformers becomes more tractable, requiring $\\mathcal{O}(N^3)$ padding. Empirically, looped and padded transformers perform better than fixed-depth transformers in recognizing CFLs. Overall, our results shed light on the intricacy of CFL recognition by transformers: while general recognition may require an intractable amount of padding, natural constraints such as unambiguity yield efficient recognition algorithms.",
+  "link": "https://arxiv.org/abs/2601.01754",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CC",
+    "cs.CL",
+    "cs.FL"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307766Z"
+}

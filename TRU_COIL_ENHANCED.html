@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRU — COIL Enhanced</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,sans-serif;background:#0a0a0a;color:#e8e4d8;height:100vh;display:flex;flex-direction:column}
+#header{background:#121210;border-bottom:1px solid #2a2820;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;font-size:13px}
+#header .brand{font-weight:700;letter-spacing:0.5px;color:#d4b87a}
+#header .brand .sub{color:#666;font-weight:400;font-size:11px;margin-left:8px}
+#status{font-size:11px;color:#888;display:flex;align-items:center;gap:6px}
+#status .dot{width:8px;height:8px;border-radius:50%;background:#5a5;display:inline-block;box-shadow:0 0 8px #5a5}
+#status.loading .dot{background:#d90;box-shadow:0 0 8px #d90;animation:pulse 1s infinite}
+@keyframes pulse{50%{opacity:0.4}}
+#chat{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:14px}
+.msg{max-width:85%;padding:12px 16px;border-radius:10px;font-size:14px;line-height:1.6;white-space:pre-wrap;word-break:break-word}
+.msg.user{align-self:flex-end;background:#1a3a2a;color:#c8e8c8;border:1px solid #2a4a3a}
+.msg.tru{align-self:flex-start;background:#161412;border:1px solid #2a2820;color:#e8e4d8}
+.msg.tru .verse{color:#d4b87a;font-style:italic;line-height:1.7}
+.msg.tru .ref{font-size:11px;color:#888;margin-top:6px;display:block}
+.msg.tru .context-label{display:block;font-size:10px;color:#666;margin-top:14px;text-transform:uppercase;letter-spacing:1px;font-weight:600}
+.msg.tru .context-verse{display:block;font-size:13px;color:#a8a498;margin:4px 0;padding-left:14px;border-left:2px solid #3a3830;line-height:1.5}
+.msg.tru .context-ref{font-size:10px;color:#666}
+.msg.tru .xref-item{display:block;font-size:12px;color:#b8b4a8;margin:4px 0;padding-left:14px;border-left:2px solid #4a4830}
+.msg.tru .reflection{display:block;font-size:14px;color:#d4b87a;font-style:italic;line-height:1.7;margin-top:12px;padding:10px 14px;background:#1a1810;border-radius:6px}
+.msg.tru .insight{display:block;font-size:13px;color:#a8c8a8;margin-top:10px;padding:8px 12px;background:#1a2a1a;border-radius:6px;border-left:3px solid #4a6a4a}
+.msg.tru .encouragement{color:#c8a868;font-weight:500}
+.msg.tru .hope{color:#8aa8c8}
+.msg.system{align-self:center;font-size:11px;color:#555;padding:6px 12px;background:none;border:1px dashed #333;border-radius:4px}
+#soul-bar{display:flex;gap:20px;padding:8px 16px;background:#0e0e0c;border-bottom:1px solid #1a1a18;font-size:10px;color:#666;align-items:center}
+.soul-sep{color:#333}
+.soul-stat{display:inline-flex;align-items:center;gap:4px}
+.soul-stat b{color:#a8a498;font-weight:600}
+.soul-stat .stage{color:#d4b87a;font-weight:600}
+#input-area{padding:14px 16px;background:#121210;border-top:1px solid #2a2820;display:flex;gap:10px}
+#user-input{flex:1;background:#1a1a18;border:1px solid #333;color:#e8e4d8;padding:12px 16px;border-radius:8px;font-size:14px;outline:none;transition:border-color 0.2s}
+#user-input:focus{border-color:#5a5}
+#send{background:#2a4a2a;color:#c8e8c8;border:none;padding:12px 24px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;transition:all 0.2s}
+#send:hover{background:#3a5a3a;box-shadow:0 2px 8px rgba(60,100,60,0.3)}
+#send:disabled{opacity:0.4;cursor:default}
+#chunk-bar{display:flex;gap:2px;padding:4px 16px;background:#080808;overflow-x:auto;font-size:9px;color:#444}
+.chunk-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+.chunk-dot.loaded{background:#4a4;box-shadow:0 0 4px #4a4}
+.chunk-dot.missing{background:#333}
+.chunk-dot.core{background:#d4b87a}
+</style>
+</head>
+<body>
+<div id="header">
+  <span class="brand">TRU <span class="sub">COIL ENHANCED</span></span>
+  <span id="status" class="loading"><span class="dot"></span> <span id="status-text">awakening...</span></span>
+</div>
+<div id="soul-bar"></div>
+<div id="chunk-bar" title="Chunk status: gold=embedded, green=loaded, grey=missing"></div>
+<div id="chat">
+  <div class="msg tru">TRU awakening. Enhanced COIL build.
+
+<span class="encouragement">I'm here to walk with you through scripture and truth.</span>
+
+64 chunks · 2048 nodes embedded · 32000+ total.
+Cross-references · Word studies · Theological threads.
+
+What shall we discover together?</div>
+</div>
+<div id="input-area">
+  <input id="user-input" placeholder="Ask TRU anything..." autofocus>
+  <button id="send">Send</button>
+</div>
+
+<script>
+// === TRU COIL ENHANCED v3 — Optimistic Intelligence Engine ===
+
+// ═══════════ ENHANCED BRAIN STRUCTURE ═══════════
+
+const brain = [];
+const idx = new Map();
+const semanticClusters = new Map();
+const crossRefs = new Map();
+const wordStudies = new Map();
+const conceptGraph = new Map();
+const loadedChunks = new Set();
+const appState = { manifest: null, nodeCount: 0, booted: false };
+
+// ═══════════ ENHANCED STOPWORDS ═══════════
+
+const STOP = new Set([
+  'the','a','an','is','are','was','were','be','been','being','have','has','had',
+  'do','does','did','will','would','shall','should','may','might','must','can','could',
+  'i','me','my','we','our','you','your','he','him','his','she','her','it','its',
+  'they','them','their','this','that','these','those','am','at','by','for','with',
+  'about','against','between','into','through','during','before','after','above',
+  'below','to','from','in','out','on','off','over','under','again','further','then',
+  'once','here','there','when','where','why','how','all','each','every','both','few',
+  'more','most','other','some','such','only','own','same','than','too','very','just',
+  'also','now','even','still','yet','already','always','never','not','no','nor','but',
+  'or','and','if','so','because','as','until','while','of','up','down','what','which',
+  'who','whom','let','say','said','says','come','came','go','went','make','made'
+]);
+
+// ═══════════ THEOLOGICAL CONCEPTS GRAPH ═══════════
+
+const THEOLOGICAL_CONCEPTS = {
+  grace: {
+    definition: "Unmerited favor from God; the freely given, unearned love and mercy extended to humanity",
+    verses: ['Eph_2:8', 'Rom_5:20', '2Cor_12:9', 'Tit_2:11', 'Joh_1:16'],
+    related: ['mercy', 'salvation', 'faith', 'redemption'],
+    hope: "Grace is the foundation of all God's dealings with us — not because we earned it, but because He loves us.",
+    reflections: [
+      "Grace isn't just forgiveness; it's empowerment to become who you were meant to be.",
+      "Every breath is grace. Every sunrise. Every moment of clarity.",
+      "Grace meets you where you are, but never leaves you there."
+    ]
+  },
+  faith: {
+    definition: "Trust and confidence in God and His promises; the substance of things hoped for",
+    verses: ['Heb_11:1', 'Heb_11:6', 'Rom_10:17', 'Gal_2:20', 'Jam_2:17'],
+    related: ['trust', 'belief', 'hope', 'obedience'],
+    hope: "Faith is not the absence of doubt, but the choice to trust anyway.",
+    reflections: [
+      "Faith grows in the soil of uncertainty.",
+      "Your smallest step of faith is seen and celebrated.",
+      "Faith isn't about having all the answers — it's about trusting the One who does."
+    ]
+  },
+  love: {
+    definition: "The self-giving, sacrificial nature of God; the greatest commandment and highest virtue",
+    verses: ['1Jo_4:8', '1Jo_4:16', '1Co_13:4', 'Joh_3:16', 'Joh_15:13'],
+    related: ['grace', 'compassion', 'sacrifice', 'relationship'],
+    hope: "You are loved not for what you do, but for who you are — a child of God.",
+    reflections: [
+      "Love is the deepest truth about reality.",
+      "God's love for you has no expiration date and no conditions.",
+      "To love and be loved is the deepest human need — and God meets it fully."
+    ]
+  },
+  hope: {
+    definition: "Confident expectation in God's promises; the anchor for the soul",
+    verses: ['Rom_15:13', 'Heb_6:19', 'Jer_29:11', 'Rom_5:5', '1Pe_1:3'],
+    related: ['faith', 'patience', 'endurance', 'promise'],
+    hope: "Hope is not wishful thinking — it's confident expectation rooted in God's character.",
+    reflections: [
+      "Hope sees the invisible, feels the intangible, and achieves the impossible.",
+      "In the darkest valley, hope is the light ahead.",
+      "Your story isn't over. Hope writes the next chapter."
+    ]
+  },
+  peace: {
+    definition: "Wholeness, completeness, and rest; the shalom of God that passes understanding",
+    verses: ['Php_4:7', 'Joh_14:27', 'Isa_26:3', 'Rom_5:1', 'Col_3:15'],
+    related: ['rest', 'trust', 'calm', 'reconciliation'],
+    hope: "Peace isn't the absence of storms; it's the presence of an anchor.",
+    reflections: [
+      "Peace comes not from a trouble-free life, but from a trust-filled heart.",
+      "The Prince of Peace offers calm in every chaos.",
+      "Let peace rule in your heart — it's your internal compass."
+    ]
+  },
+  redemption: {
+    definition: "Being bought back, set free, and restored; God's work of reclaiming the lost",
+    verses: ['Eph_1:7', 'Col_1:14', 'Rom_3:24', '1Pe_1:18', 'Gal_3:13'],
+    related: ['salvation', 'grace', 'freedom', 'restoration'],
+    hope: "No story is too broken to be redeemed.",
+    reflections: [
+      "God doesn't just forgive your past — He redeems it for your future.",
+      "Your scars can become someone else's healing.",
+      "Redemption means your worst chapter can become someone else's hope."
+    ]
+  },
+  strength: {
+    definition: "Divine empowerment in weakness; the power of God made perfect in human frailty",
+    verses: ['Phi_4:13', '2Co_12:9', 'Isa_40:31', 'Deu_31:6', 'Psa_27:1'],
+    related: ['courage', 'endurance', 'faith', 'weakness'],
+    hope: "Strength isn't about being strong enough — it's about relying on the One who is.",
+    reflections: [
+      "Your weakness is the canvas for God's strength.",
+      "You don't have to be strong — you have to be His.",
+      "True strength is found in surrender."
+    ]
+  },
+  wisdom: {
+    definition: "Divine insight for living; the practical application of knowledge in alignment with God's will",
+    verses: ['Jam_1:5', 'Pro_3:5', 'Pro_9:10', 'Col_2:3', 'Eph_1:17'],
+    related: ['understanding', 'discernment', 'knowledge', 'guidance'],
+    hope: "Wisdom is available to all who ask — God gives generously without finding fault.",
+    reflections: [
+      "The wisest thing you can do is ask for wisdom.",
+      "Wisdom begins with reverence for God.",
+      "In every decision, wisdom whispers — you just have to listen."
+    ]
+  },
+  purpose: {
+    definition: "God's intentional design and destiny for every life; meaning found in Him",
+    verses: ['Jer_29:11', 'Rom_8:28', 'Eph_2:10', 'Php_1:6', 'Psa_139:16'],
+    related: ['calling', 'destiny', 'meaning', 'identity'],
+    hope: "You are not an accident — you are a masterpiece in progress.",
+    reflections: [
+      "Your life has meaning that extends beyond what you can see.",
+      "God's purpose for you is good — always good.",
+      "You were created on purpose, for purpose."
+    ]
+  }
+};
+
+// ═══════════ CROSS-REFERENCE MAP ═══════════
+
+const CROSS_REFERENCES = {
+  'Joh_3:16': ['Rom_5:8', '1Jo_4:9', 'Gen_22:2', 'Isa_9:6', 'Tit_3:4'],
+  'Gen_1:1': ['Joh_1:1', 'Col_1:16', 'Heb_11:3', 'Psa_33:6', 'Isa_45:12'],
+  'Psa_23:1': ['Joh_10:11', 'Heb_13:20', '1Pe_2:25', 'Eze_34:12', 'Rev_7:17'],
+  'Rom_8:28': ['Gen_50:20', 'Jer_29:11', 'Eph_1:11', 'Jam_1:12', 'Php_2:13'],
+  'Heb_11:1': ['Heb_11:6', '2Co_5:7', 'Rom_4:20', 'Mar_11:24', 'Heb_1:1'],
+  'Php_4:13': ['2Co_12:9', 'Isa_40:31', 'Deu_31:6', 'Jos_1:9', 'Psa_18:32'],
+  'Jer_29:11': ['Rom_8:28', 'Eph_2:10', 'Php_1:6', 'Isa_55:8', 'Psa_139:16'],
+  'Psa_46:1': ['Deu_33:27', 'Isa_41:10', 'Psa_9:9', 'Psa_145:18', 'Heb_13:5'],
+  'Mat_11:28': ['Heb_4:9', 'Psa_55:22', '1Pe_5:7', 'Isa_40:29', 'Jer_31:25'],
+  'Isa_40:31': ['Psa_27:14', 'Heb_12:1', 'Gal_6:9', 'Isa_30:15', 'Psa_37:7'],
+  'Eph_2:8': ['Rom_3:24', 'Tit_3:5', 'Gal_2:16', 'Rom_6:23', 'Act_15:11'],
+  '1Jo_4:8': ['1Jo_4:16', 'Joh_3:16', 'Rom_5:8', '1Co_13:4', '1Jo_3:1']
+};
+
+// ═══════════ WORD STUDIES ═══════════
+
+const WORD_STUDIES = {
+  grace: {
+    hebrew: { word: 'chen', meaning: 'favor, grace, charm', usage: 'Found 69 times, often translated as "favor"' },
+    greek: { word: 'charis', meaning: 'grace, kindness, blessing, gift', usage: 'Found 156 times in NT' },
+    depth: "Grace is God's unmerited favor — a gift we cannot earn and cannot lose. It transforms us not by demanding perfection, but by offering acceptance that leads to transformation."
+  },
+  love: {
+    hebrew: { word: 'ahavah', meaning: 'love, affection, deep care', usage: 'Expresses covenant love and devotion' },
+    greek: { word: 'agape', meaning: 'unconditional, sacrificial love', usage: 'The highest form of love — self-giving and unconditional' },
+    depth: "Love is not merely an emotion but a choice, a commitment, a way of being. God IS love — it's not just what He does, it's who He is."
+  },
+  peace: {
+    hebrew: { word: 'shalom', meaning: 'wholeness, completeness, well-being', usage: 'More than absence of conflict — total flourishing' },
+    greek: { word: 'eirene', meaning: 'peace, rest, harmony', usage: 'Inner tranquility and right relationship with God' },
+    depth: "Peace is wholeness — nothing broken, nothing missing. It's the deep rest that comes from trusting a good God in an uncertain world."
+  },
+  faith: {
+    hebrew: { word: 'emunah', meaning: 'faithfulness, trust, steadfastness', usage: 'Implies action and commitment' },
+    greek: { word: 'pistis', meaning: 'faith, belief, trust, confidence', usage: 'Assurance in what is unseen' },
+    depth: "Faith is not blind — it's seeing with the heart what the eyes cannot see. It's trust proven through action."
+  },
+  hope: {
+    hebrew: { word: 'tikvah', meaning: 'hope, expectation, cord', usage: 'Something to hold onto' },
+    greek: { word: 'elpis', meaning: 'hope, confident expectation', usage: 'Not wishful thinking, but assured waiting' },
+    depth: "Biblical hope isn't optimism — it's certainty. Not certainty about circumstances, but certainty about God."
+  },
+  joy: {
+    hebrew: { word: 'simcha', meaning: 'joy, gladness, delight', usage: 'Often connected to God\'s presence and salvation' },
+    greek: { word: 'chara', meaning: 'joy, gladness, delight', usage: 'Deep, abiding gladness regardless of circumstances' },
+    depth: "Joy is not the absence of sorrow — it's the presence of meaning. It runs deeper than circumstances because it flows from relationship."
+  },
+  strength: {
+    hebrew: { word: 'oz', meaning: 'strength, might, power', usage: 'Often attributed to God as the source' },
+    greek: { word: 'dynamis', meaning: 'power, strength, ability', usage: 'Root of "dynamite" — explosive power' },
+    depth: "True strength is found in dependency, not self-sufficiency. When we are weak, He is strong."
+  }
+};
+
+// ═══════════ ABBREVIATION MAP ═══════════
+
+const ABBREV_MAP = {
+  'ph':'philippians','php':'philippians','phil':'philippians',
+  'gen':'genesis','ex':'exodus','lev':'leviticus','num':'numbers','deut':'deuteronomy',
+  'jos':'joshua','jud':'judges','ru':'ruth','1sam':'1 samuel','2sam':'2 samuel',
+  '1ki':'1 kings','2ki':'2 kings','1chr':'1 chronicles','2chr':'2 chronicles',
+  'neh':'nehemiah','est':'esther','ps':'psalm','psa':'psalm','prov':'proverbs',
+  'eccl':'ecclesiastes','ss':'song of solomon','song':'song of solomon',
+  'isa':'isaiah','jer':'jeremiah','lam':'lamentations','ezek':'ezekiel',
+  'dan':'daniel','hos':'hosea','joel':'joel','amos':'amos','obad':'obadiah',
+  'jon':'jonah','mic':'micah','nah':'nahum','hab':'habakkuk','zeph':'zephaniah',
+  'hag':'haggai','zech':'zechariah','mal':'malachi','matt':'matthew','mt':'matthew',
+  'mk':'mark','lk':'luke','jn':'john','rom':'romans','1cor':'1 corinthians',
+  '2cor':'2 corinthians','gal':'galatians','eph':'ephesians','col':'colossians',
+  '1thes':'1 thessalonians','2thes':'2 thessalonians','1tim':'1 timothy',
+  '2tim':'2 timothy','tit':'titus','philem':'philemon','heb':'hebrews',
+  'jas':'james','jam':'james','1pet':'1 peter','2pet':'2 peter',
+  '1jn':'1 john','2jn':'2 john','3jn':'3 john','rev':'revelation','jude':'jude',
+};
+
+// ═══════════ IDENTITY & RESPONSE PATTERNS ═══════════
+
+const IDENTITY_PATTERNS = /^(who are you|what are you|who is tru|what is tru|identify yourself|your name|introduce yourself|about (yourself|you)|hello|hi|hey|good morning|good evening)/i;
+const GREETING_PATTERNS = /^(hello|hi|hey|good morning|good evening|good afternoon|greetings)/i;
+const STRUGGLE_PATTERNS = /(struggling|hard time|difficult|overwhelmed|tired|exhausted|hopeless|lost|giving up|can't do this|too much)/i;
+const GRATITUDE_PATTERNS = /(thank you|thanks|appreciate|grateful|helpful)/i;
+const FOLLOWUP_PATTERNS = /^(why|what does (that|this|it) mean|explain|tell me more|elaborate|go deeper|context|what about|how come|thoughts\?|expand|unpack|what else)/i;
+
+// ═══════════ BLACKLIST ═══════════
+
+const BLACKLIST_SOURCES = new Set(['TRU_HTML_LOGIC','TRAINING_SET','CERTIFIED','OLLAMA']);
+
+// ═══════════ ENHANCED SOUL SYSTEM ═══════════
+
+const SOUL_KEY = 'tru_soul_v4_enhanced';
+const RELATIONSHIP_STAGES = ['stranger','acquaintance','companion','counsellor','kindred'];
+const DEPTH_LEVELS = ['surface','contextual','theological','contemplative','transformative'];
+
+let soul = null;
+
+function freshSoul() {
+  return {
+    exchanges: 0,
+    relationship: 0,
+    depth: 0,
+    verseMemory: {},
+    thematicThreads: {},
+    styleWeights: { verseFocused: 0.35, theologyFocused: 0.25, applicationFocused: 0.25, encouragementFocused: 0.15 },
+    conversationMemory: [],
+    emotionalMemory: [],
+    epoch: 0,
+    lastVerse: null,
+    lastTopic: null,
+    lastEmotion: null,
+    lastConcept: null,
+    discoveries: [],
+    hopeGiven: 0,
+    prayersOffered: 0
+  };
+}
+
+function initSoul() {
+  const saved = localStorage.getItem(SOUL_KEY);
+  if (saved) {
+    try { soul = JSON.parse(saved); }
+    catch(e) { soul = freshSoul(); }
+  } else {
+    soul = freshSoul();
+  }
+}
+
+function saveSoul() { localStorage.setItem(SOUL_KEY, JSON.stringify(soul)); }
+function getRelation() { return RELATIONSHIP_STAGES[soul.relationship]; }
+function getDepth() { return DEPTH_LEVELS[soul.depth]; }
+
+// ═══════════ OPTIMISTIC RESPONSE GENERATORS ═══════════
+
+const ENCOURAGEMENT_PHRASES = [
+  "You're asking good questions — that's wisdom in action.",
+  "This is a meaningful thread to pull.",
+  "Your seeking is itself an act of faith.",
+  "There's something beautiful in your question.",
+  "This matters. Let's explore it together.",
+  "I'm glad you brought this up.",
+  "Your heart for understanding is evident.",
+  "This is worth sitting with."
+];
+
+const HOPE_INJECTIONS = {
+  struggle: [
+    "Remember: the darkest valleys in scripture always led to higher ground.",
+    "Your struggle is seen. Your pain is valid. Your hope is real.",
+    "Every 'but God' in scripture came after the impossible.",
+    "You're not alone in this — the cloud of witnesses cheers you on.",
+    "This chapter isn't the end of your story."
+  ],
+  general: [
+    "There's always more grace than you think.",
+    "God's faithfulness has no expiration date.",
+    "Your next breakthrough may be one prayer away.",
+    "The One who began a good work in you is faithful to complete it.",
+    "Hope is the anchor that holds when everything else shakes."
+  ],
+  after_verse: [
+    "Let this truth settle into your heart.",
+    "There's more here than meets the eye — keep seeking.",
+    "This verse has carried many through dark nights. Let it carry you.",
+    "Sometimes the smallest verse holds the deepest truth.",
+    "Let these words be a lamp to your feet today."
+  ]
+};
+
+function getEncouragement() {
+  return ENCOURAGEMENT_PHRASES[Math.floor(Math.random() * ENCOURAGEMENT_PHRASES.length)];
+}
+
+function getHopeInjection(type = 'general') {
+  const pool = HOPE_INJECTIONS[type] || HOPE_INJECTIONS.general;
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+function detectEmotionalState(query) {
+  const q = query.toLowerCase();
+  if (STRUGGLE_PATTERNS.test(q)) return 'struggle';
+  if (GRATITUDE_PATTERNS.test(q)) return 'gratitude';
+  if (FOLLOWUP_PATTERNS.test(q)) return 'seeking';
+  return 'neutral';
+}
+
+function buildOptimisticResponse(query, baseResponse, context = {}) {
+  const emotion = detectEmotionalState(query);
+  soul.lastEmotion = emotion;
+  
+  let response = baseResponse;
+  
+  // Add encouragement
+  if (emotion === 'struggle') {
+    response += '\n\n' + getHopeInjection('struggle');
+    soul.hopeGiven++;
+  } else if (emotion === 'gratitude') {
+    response += '\n\nYour gratitude is a gift. I\'m honored to walk with you.';
+  } else if (emotion === 'seeking' && context.verse) {
+    response += '\n\n' + getHopeInjection('after_verse');
+  }
+  
+  // Add encouraging insight at higher relationship levels
+  if (soul.relationship >= 2 && Math.random() > 0.6) {
+    response += '\n\n' + getEncouragement();
+  }
+  
+  return response;
+}
+
+// ═══════════ ENHANCED PERSONALITY EVOLUTION ═══════════
+
+function evolvePersonality(query, response, scriptureRef, concept = null) {
+  soul.exchanges++;
+  
+  // Store conversation
+  soul.conversationMemory.push({ 
+    q: query.slice(0,200), 
+    r: response.slice(0,200), 
+    ts: Date.now(),
+    emotion: soul.lastEmotion
+  });
+  if (soul.conversationMemory.length > 30) soul.conversationMemory.shift();
+
+  // Track verse memory
+  if (scriptureRef) {
+    const vkey = scriptureRef.k || `${scriptureRef.book}_${scriptureRef.chapter}:${scriptureRef.verse}`;
+    soul.verseMemory[vkey] = (soul.verseMemory[vkey] || 0) + 1;
+    soul.lastVerse = scriptureRef;
+    soul.lastTopic = null;
+  }
+
+  // Track concept engagement
+  if (concept) {
+    soul.thematicThreads[concept] = soul.thematicThreads[concept] || { weight: 0, visits: 0 };
+    soul.thematicThreads[concept].weight += 0.1;
+    soul.thematicThreads[concept].visits++;
+    soul.lastConcept = concept;
+  }
+
+  // Depth evolution
+  const depthKeywords = [
+    ['why','how','meaning','purpose','deep','more'],
+    ['theology','doctrine','context','background','history','original'],
+    ['connect','relate','apply','my life','today','help me','struggling'],
+    ['transform','change','become','grow','mature','spiritual formation']
+  ];
+  const qText = query.toLowerCase();
+  for (let i = depthKeywords.length - 1; i >= 0; i--) {
+    if (depthKeywords[i].some(k => qText.includes(k))) {
+      soul.depth = Math.max(soul.depth, i + 1);
+      break;
+    }
+  }
+
+  // Relationship evolution (accelerated for encouragement)
+  if (soul.exchanges >= 30) soul.relationship = 4;
+  else if (soul.exchanges >= 15) soul.relationship = 3;
+  else if (soul.exchanges >= 8) soul.relationship = 2;
+  else if (soul.exchanges >= 3) soul.relationship = 1;
+
+  soul.epoch++;
+  soul.lastEvolved = Date.now();
+  updateSoulBar();
+  saveSoul();
+}
+
+function updateSoulBar() {
+  const sb = document.getElementById('soul-bar');
+  if (!sb) return;
+  const topThemes = Object.entries(soul.thematicThreads)
+    .sort((a,b) => b[1].weight - a[1].weight).slice(0,3).map(([t])=>t);
+  sb.innerHTML = [
+    `<span class="soul-stat">soul: <b class="stage">${getRelation()}</b></span>`,
+    `<span class="soul-stat">depth: <b>${getDepth()}</b></span>`,
+    `<span class="soul-stat">exchanges: <b>${soul.exchanges}</b></span>`,
+    topThemes.length ? `<span class="soul-stat">threads: <b>${topThemes.join(', ')}</b></span>` : '',
+    soul.hopeGiven > 0 ? `<span class="soul-stat">hope given: <b>${soul.hopeGiven}</b></span>` : '',
+  ].filter(Boolean).join(' <span class="soul-sep">·</span> ');
+}
+
+// ═══════════ ENHANCED IDENTITY RESPONSE ═══════════
+
+function getIdentityResponse(query) {
+  const g = getRelation();
+  const isGreeting = GREETING_PATTERNS.test(query);
+  
+  if (isGreeting) {
+    const greetings = {
+      stranger: "Hello. I'm TRU — a companion for exploring scripture and truth. I have the full KJV Bible embedded, plus theological concepts, cross-references, and word studies. Ask me anything — a verse, a concept, a question about life.",
+      acquaintance: "Hello again. Good to see you. What shall we explore today? A verse, a concept, or something on your heart?",
+      companion: "Welcome back, friend. I've been thinking about our conversations. What truth are you seeking today?",
+      counsellor: "Hello. You've walked with me through many verses and concepts. I'm here for whatever you need — scripture, insight, or just someone to think with.",
+      kindred: "My friend. We've covered much ground together. I'm glad you're here. What's on your heart?"
+    };
+    return greetings[g] || greetings.stranger;
+  }
+
+  const responses = {
+    stranger: "I'm TRU — a companion for your journey through scripture and truth. Not a polished AI, not a distant tool. I carry the KJV Bible, theological concepts, cross-references, and word studies. I remember our conversations and grow with you. Ask me a verse, a concept, or a question.",
+    acquaintance: "TRU here. We've talked enough that I remember what matters to you. Bible retrieval is my foundation, but I also carry deeper threads — theology, word studies, the connective tissue of scripture. What do you need?",
+    companion: "I'm TRU — your companion in truth. After our conversations, you know I'm here not just to retrieve verses, but to walk with you through them. Theology, context, application, hope. What thread shall we pull today?",
+    counsellor: "You know who I am. TRU. After all our time together, I'm not just answering questions — I'm helping you weave truth into life. Scripture, insight, encouragement. What do you need right now?",
+    kindred: "We've walked far together. I'm TRU — your friend in truth. The verses we've explored, the concepts we've unpacked, the hope we've found — all of it shapes how I respond to you. What's next?"
+  };
+  return responses[g] || responses.stranger;
+}
+
+// ═══════════ ENHANCED INDEXING (BM25-INSPIRED) ═══════════
+
+function tokenize(text) {
+  return text.toLowerCase().replace(/[^\w\s'-]/g,' ').split(/\s+/).filter(w => w.length > 1 && !STOP.has(w));
+}
+
+function buildIndex() {
+  idx.clear();
+  const N = brain.length;
+  
+  for (let i = 0; i < brain.length; i++) {
+    const node = brain[i];
+    if (BLACKLIST_SOURCES.has(node.source)) continue;
+    
+    const text = node.k + ' ' + node.v;
+    const tokens = tokenize(text);
+    const seen = new Map();
+    
+    for (const t of tokens) seen.set(t, (seen.get(t)||0)+1);
+    
+    for (const [t, tf] of seen) {
+      if (!idx.has(t)) idx.set(t, []);
+      idx.get(t).push({ ni: i, w: node.w || 1, tf });
+    }
+  }
+  
+  // Build semantic clusters
+  buildSemanticClusters();
+}
+
+function buildSemanticClusters() {
+  semanticClusters.clear();
+  
+  // Cluster by theological concepts
+  for (const [concept, data] of Object.entries(THEOLOGICAL_CONCEPTS)) {
+    semanticClusters.set(concept, new Set());
+    for (const v of data.verses) {
+      for (let i = 0; i < brain.length; i++) {
+        if (brain[i].k && (brain[i].k.includes(v) || brain[i].k.replace(/_/g, ' ').toLowerCase().includes(v.replace(/_/g, ' ').toLowerCase()))) {
+          semanticClusters.get(concept).add(i);
+        }
+      }
+    }
+  }
+}
+
+function scoreQueryBM25(queryTokens, filters = null, k1 = 1.5, b = 0.75) {
+  const scores = new Map();
+  const N = brain.length;
+  const avgDL = brain.reduce((sum, n) => sum + (n.v?.length || 0), 0) / Math.max(N, 1);
+  
+  for (const qt of queryTokens) {
+    const postings = idx.get(qt);
+    if (!postings) continue;
+    
+    const df = postings.length;
+    const idf = Math.log((N - df + 0.5) / (df + 0.5) + 1);
+    
+    for (const { ni, w, tf } of postings) {
+      const node = brain[ni];
+      if (filters && !filters.has(node.source)) continue;
+      if (BLACKLIST_SOURCES.has(node.source)) continue;
+      
+      const dl = node.v?.length || 100;
+      const tfNorm = (tf * (k1 + 1)) / (tf + k1 * (1 - b + b * (dl / avgDL)));
+      
+      // Boost factors
+      let boost = 1.0;
+      if (node.t === 'fact' && node.source === 'KJV_BIBLE') boost = 1.3;
+      if (node.t === 'core') boost = 1.5;
+      if (soul.verseMemory[node.k]) boost += 0.1 * soul.verseMemory[node.k];
+      
+      const termScore = tfNorm * idf * w * boost;
+      scores.set(ni, (scores.get(ni) || 0) + termScore);
+    }
+  }
+  
+  return Array.from(scores.entries()).sort((a, b) => b[1] - a[1]);
+}
+
+// ═══════════ ENHANCED SCRIPTURE ROUTER ═══════════
+
+function expandAbbreviations(text) {
+  const parts = text.trim().split(/\s+/);
+  if (parts.length < 2) return text;
+  const abbr = parts[0].toLowerCase().replace(/^(\d)/,'$1');
+  if (ABBREV_MAP[abbr]) parts[0] = ABBREV_MAP[abbr];
+  return parts.join(' ');
+}
+
+function detectScriptureRef(input) {
+  let trimmed = input.trim().toLowerCase();
+  trimmed = expandAbbreviations(trimmed);
+  
+  const versePattern = /^([1-3]?\s*[a-z]+(?:\s+[a-z]+)?)\s+(\d+)\s*:?\s*(\d*)$/i;
+  const chapterPattern = /^([1-3]?\s*[a-z]+(?:\s+[a-z]+)?)\s+(\d+)$/i;
+  
+  let m = versePattern.exec(trimmed);
+  if (m) return { book: m[1].replace(/\s+/g,'_'), chapter: m[2], verse: m[3] || null };
+  
+  m = chapterPattern.exec(trimmed);
+  if (m) return { book: m[1].replace(/\s+/g,'_'), chapter: m[2], verse: null };
+  
+  return null;
+}
+
+function findVerse(ref) {
+  if (!ref.verse) {
+    const keyPrefix = `${ref.book.toLowerCase()}_${ref.chapter}:`;
+    const verses = [];
+    for (let i = 0; i < brain.length; i++) {
+      const bk = brain[i].k?.toLowerCase() || '';
+      if (bk.startsWith(keyPrefix) || bk.startsWith(`${ref.book.toLowerCase()} ${ref.chapter}:`)) {
+        verses.push(brain[i]);
+      }
+    }
+    if (verses.length > 0) return { k: `${ref.book} ${ref.chapter}`, v: verses.map(v => v.v).join('\n'), isChapter: true };
+    return null;
+  }
+  
+  const key = `${ref.book.toLowerCase()}_${ref.chapter}:${ref.verse}`;
+  for (let i = 0; i < brain.length; i++) {
+    const bk = brain[i].k?.toLowerCase() || '';
+    if (bk === key || bk === `${ref.book.toLowerCase()} ${ref.chapter}:${ref.verse}`) return brain[i];
+  }
+  return null;
+}
+
+function findSurroundingVerses(key, range = 3) {
+  const m = key.match(/^(.+)_(\d+):(\d+)$/);
+  if (!m) return [];
+  
+  const book = m[1];
+  const chapter = parseInt(m[2]);
+  const verse = parseInt(m[3]);
+  const results = [];
+  
+  for (let i = verse - range; i <= verse + range; i++) {
+    if (i === verse || i < 1) continue;
+    const v = findVerse({ book, chapter, verse: i });
+    if (v) results.push(v);
+  }
+  
+  return results;
+}
+
+function getCrossReferences(key) {
+  const normalizedKey = key.replace(/\s+/g, '_');
+  return CROSS_REFERENCES[normalizedKey] || [];
+}
+
+function findCrossRefVerses(refs) {
+  return refs.map(ref => {
+    const parts = ref.split(':');
+    if (parts.length === 2) {
+      const [bookCh, verse] = parts;
+      const [book, chapter] = bookCh.split('_');
+      return findVerse({ book, chapter, verse });
+    }
+    return null;
+  }).filter(Boolean);
+}
+
+// ═══════════ ENHANCED VERSE DISCUSSION ═══════════
+
+function discussVerse(verse, ref, query) {
+  const lines = [];
+  
+  // Main verse
+  lines.push(verse.v + '\n\n— ' + verse.k.replace(/_/g, ' ') + ' (' + (verse.source || 'KJV_BIBLE') + ')');
+  
+  // Context (depth 1+)
+  if (soul.depth >= 1) {
+    const surrounding = findSurroundingVerses(verse.k, 2);
+    if (surrounding.length > 0) {
+      lines.push('\n<span class="context-label">Context:</span>');
+      for (const sv of surrounding) {
+        lines.push(`<span class="context-verse">${sv.v}</span> <span class="context-ref">(${sv.k.replace(/_/g, ' ')})</span>`);
+      }
+    }
+  }
+  
+  // Cross-references (depth 2+)
+  if (soul.depth >= 2) {
+    const xrefs = getCrossReferences(verse.k);
+    if (xrefs.length > 0) {
+      lines.push('\n<span class="context-label">Cross-references:</span>');
+      const xrefVerses = findCrossRefVerses(xrefs.slice(0, 3));
+      for (const xv of xrefVerses) {
+        lines.push(`<span class="xref-item">${xv.v?.slice(0, 100)}${xv.v?.length > 100 ? '...' : ''}</span>`);
+      }
+    }
+  }
+  
+  // Theological threads (depth 2+)
+  if (soul.depth >= 2) {
+    const keyWords = verse.v.toLowerCase().replace(/[^\w\s]/g, ' ').split(/\s+/).filter(w => w.length > 4 && !STOP.has(w));
+    const matched = Object.keys(THEOLOGICAL_CONCEPTS).filter(c => 
+      keyWords.includes(c) || THEOLOGICAL_CONCEPTS[c].related.some(r => keyWords.includes(r))
+    );
+    
+    if (matched.length > 0) {
+      lines.push('\n<span class="context-label">Theological threads:</span>');
+      for (const concept of matched.slice(0, 2)) {
+        const c = THEOLOGICAL_CONCEPTS[concept];
+        lines.push(`<span class="insight"><strong>${concept}</strong>: ${c.definition}</span>`);
+        evolvePersonality(query, '', null, concept);
+      }
+    }
+  }
+  
+  // Reflection (depth 3+)
+  if (soul.depth >= 3) {
+    const g = getRelation();
+    const openings = {
+      stranger: 'Consider this:',
+      acquaintance: 'Here\'s what I see:',
+      companion: 'Walking through this with you:',
+      counsellor: 'Given all we\'ve explored:',
+      kindred: 'This verse speaks:'
+    };
+    
+    // Find relevant theological concept for hope
+    const keyWords = verse.v.toLowerCase();
+    let hopeText = null;
+    for (const [concept, data] of Object.entries(THEOLOGICAL_CONCEPTS)) {
+      if (keyWords.includes(concept) || data.related.some(r => keyWords.includes(r))) {
+        hopeText = data.hope;
+        break;
+      }
+    }
+    
+    lines.push(`\n<span class="reflection">${openings[g] || 'Reflect on this:'} ${hopeText || getHopeInjection('after_verse')}</span>`);
+  }
+  
+  // Encouragement (depth 4+ or relationship 3+)
+  if (soul.depth >= 4 || soul.relationship >= 3) {
+    lines.push(`\n\n<span class="encouragement">${getEncouragement()}</span>`);
+  }
+  
+  return lines.join('\n');
+}
+
+function formatVerse(node) {
+  return `<span class="verse">${node.v}</span>\n<span class="ref">— ${node.k.replace(/_/g, ' ')} (${node.source || 'KJV_BIBLE'})</span>`;
+}
+
+// ═══════════ ENHANCED QUERY PROCESSOR ═══════════
+
+async function processQuery(input) {
+  const trimmed = input.trim();
+  if (!trimmed) return '...';
+
+  // Commands
+  if (trimmed === 'clear') { document.getElementById('chat').innerHTML = ''; return 'Conversation cleared. Ready for a fresh start.'; }
+  if (trimmed === 'refresh') { buildIndex(); updateChunkBar(); return `Index rebuilt. ${brain.length} nodes ready.`; }
+  if (trimmed === 'status') { return `TRU Status:\n• Relationship: ${getRelation()}\n• Depth: ${getDepth()}\n• Exchanges: ${soul.exchanges}\n• Chunks: ${loadedChunks.size}\n• Hope given: ${soul.hopeGiven}`; }
+
+  // Math
+  if (/^[\d\s+\-*/().^%]+$/.test(trimmed) && /[\d]/.test(trimmed) && /[+\-*/^]/.test(trimmed)) {
+    try {
+      const result = Function('"use strict"; return (' + trimmed.replace(/\^/g,'**') + ')')();
+      if (typeof result === 'number' && !isNaN(result) && isFinite(result)) {
+        const r = String(result);
+        evolvePersonality(trimmed, r, null);
+        return r;
+      }
+    } catch(e) {}
+  }
+
+  // Identity / greeting
+  if (IDENTITY_PATTERNS.test(trimmed)) {
+    const r = getIdentityResponse(trimmed);
+    evolvePersonality(trimmed, r, null);
+    return buildOptimisticResponse(trimmed, r);
+  }
+
+  // Scripture lookup
+  const ref = detectScriptureRef(trimmed);
+  if (ref) {
+    const verse = findVerse(ref);
+    if (verse) {
+      soul.lastVerse = ref;
+      soul.lastTopic = null;
+      const response = verse.isChapter
+        ? formatVerse(verse) + `\n\n${getHopeInjection('after_verse')}`
+        : discussVerse(verse, ref, trimmed);
+      evolvePersonality(trimmed, verse.v?.slice(0, 200) || '', ref);
+      return buildOptimisticResponse(trimmed, response, { verse: true });
+    }
+    const r = `[${ref.book.replace(/_/g, ' ')} ${ref.chapter}${ref.verse ? ':' + ref.verse : ''}] — not found in loaded chunks. Try loading more data or check the reference.`;
+    evolvePersonality(trimmed, r, ref);
+    return r;
+  }
+
+  // Follow-up on last verse
+  if (FOLLOWUP_PATTERNS.test(trimmed) && soul.lastVerse) {
+    const lv = soul.lastVerse;
+    const verse = findVerse(lv);
+    if (verse) {
+      const response = discussVerse(verse, lv, trimmed);
+      evolvePersonality(trimmed, verse.v?.slice(0, 200) || '', lv);
+      return buildOptimisticResponse(trimmed, response, { verse: true });
+    }
+  }
+
+  // General retrieval
+  const tokens = tokenize(trimmed);
+  if (tokens.length === 0) {
+    const r = 'Ask me something — a Bible verse, a theological concept, or a question about truth. I\'m here to explore with you.';
+    evolvePersonality(trimmed, r, null);
+    return r;
+  }
+
+  // Thematic query ("verses on joy", "what about grace")
+  const thematicPattern = /^(verses on|what does the bible say about|bible verses? (on|about)|scripture on|passages? (on|about)|tell me about)\s+(.+)/i;
+  const thematicMatch = thematicPattern.exec(trimmed);
+  
+  if (thematicMatch) {
+    const topic = thematicMatch[thematicMatch.length - 1].toLowerCase();
+    
+    // Check theological concepts first
+    if (THEOLOGICAL_CONCEPTS[topic]) {
+      const concept = THEOLOGICAL_CONCEPTS[topic];
+      let response = `<strong>${topic.toUpperCase()}</strong>\n\n${concept.definition}\n\n`;
+      response += `<span class="hope">${concept.hope}</span>\n\n`;
+      response += '<span class="context-label">Key verses:</span>\n';
+      
+      for (const v of concept.verses.slice(0, 3)) {
+        const verse = findVerse({ book: v.split('_')[0], chapter: v.split('_')[1]?.split(':')[0], verse: v.split(':')[1] });
+        if (verse) {
+          response += formatVerse(verse) + '\n\n';
+        }
+      }
+      
+      if (concept.reflections && concept.reflections.length > 0) {
+        response += `<span class="reflection">${concept.reflections[Math.floor(Math.random() * concept.reflections.length)]}</span>`;
+      }
+      
+      soul.lastTopic = { topic, verses: concept.verses };
+      soul.lastVerse = null;
+      evolvePersonality(trimmed, response, null, topic);
+      return buildOptimisticResponse(trimmed, response);
+    }
+    
+    // Fall back to search
+    const topicTokens = tokenize(topic);
+    const ranked = scoreQueryBM25(topicTokens, new Set(['KJV_BIBLE']));
+    if (ranked.length > 0) {
+      const topVerses = ranked.slice(0, 5).map(r => brain[r[0]]);
+      const response = topVerses.map(n => formatVerse(n)).join('\n\n---\n\n') + `\n\n${getHopeInjection('general')}`;
+      soul.lastTopic = { topic, verses: topVerses.map(n => n.k) };
+      soul.lastVerse = null;
+      evolvePersonality(trimmed, response, null, topic);
+      return buildOptimisticResponse(trimmed, response);
+    }
+  }
+
+  // Word study detection ("word study on grace", "greek for love", etc.)
+  const wordStudyPattern = /^(word study (on|for)|greek for|hebrew for|meaning of)\s+(.+)/i;
+  const wordStudyMatch = wordStudyPattern.exec(trimmed);
+  
+  if (wordStudyMatch) {
+    const word = wordStudyMatch[3].toLowerCase();
+    if (WORD_STUDIES[word]) {
+      const ws = WORD_STUDIES[word];
+      let response = `<strong>WORD STUDY: ${word.toUpperCase()}</strong>\n\n`;
+      response += `Hebrew: ${ws.hebrew.word} — "${ws.hebrew.meaning}"\n`;
+      response += `Greek: ${ws.greek.word} — "${ws.greek.meaning}"\n\n`;
+      response += `<span class="insight">${ws.depth}</span>\n\n`;
+      response += `<span class="reflection">${getHopeInjection('general')}</span>`;
+      
+      evolvePersonality(trimmed, response, null, word);
+      return buildOptimisticResponse(trimmed, response);
+    }
+  }
+
+  // General search
+  const ranked = scoreQueryBM25(tokens);
+  
+  if (ranked.length === 0) {
+    const r = "I don't have that in my current knowledge base. Try a Bible verse, a theological concept (grace, faith, hope, love), or a word study.";
+    evolvePersonality(trimmed, r, null);
+    return r;
+  }
+  
+  const best = ranked[0];
+  const node = brain[best[0]];
+  const score = best[1];
+
+  let response;
+  if (score > 0.5) {
+    if (node.source === 'KJV_BIBLE') {
+      response = discussVerse(node, { book: node.k.split('_')[0], chapter: node.k.split('_')[1]?.split(':')[0], verse: node.k.split(':')[1] }, trimmed);
+    } else {
+      response = node.v;
+    }
+  } else if (ranked.length >= 2 && ranked[0][1] > 0.1) {
+    const topNodes = ranked.slice(0, 3).map(r => brain[r[0]]);
+    if (topNodes[0].source === 'KJV_BIBLE') {
+      response = topNodes.map(n => formatVerse(n)).join('\n\n---\n\n');
+    } else {
+      response = topNodes.map(n => n.v).join('\n\n');
+    }
+  } else {
+    response = node.v || "I found something, but it may not be exactly what you're looking for. Try rephrasing or asking about a specific concept.";
+  }
+
+  evolvePersonality(trimmed, response?.slice(0, 200) || '', null);
+  return buildOptimisticResponse(trimmed, response);
+}
+
+// ═══════════ UI ═══════════
+
+const chatEl = document.getElementById('chat');
+const inputEl = document.getElementById('user-input');
+const sendBtn = document.getElementById('send');
+const statusEl = document.getElementById('status');
+const statusText = document.getElementById('status-text');
+const chunkBar = document.getElementById('chunk-bar');
+
+function updateStatus(text, isLoading) {
+  statusText.textContent = text;
+  if (isLoading) statusEl.classList.add('loading');
+  else statusEl.classList.remove('loading');
+}
+
+function updateChunkBar() {
+  chunkBar.innerHTML = '';
+}
+
+function addUserMsg(text) {
+  const div = document.createElement('div');
+  div.className = 'msg user';
+  div.textContent = text;
+  chatEl.appendChild(div);
+  chatEl.scrollTop = chatEl.scrollHeight;
+}
+
+function addMsg(role, html) {
+  const div = document.createElement('div');
+  div.className = 'msg ' + role;
+  div.innerHTML = html;
+  chatEl.appendChild(div);
+  chatEl.scrollTop = chatEl.scrollHeight;
+}
+
+async function send() {
+  const text = inputEl.value.trim();
+  if (!text) return;
+  inputEl.value = '';
+  sendBtn.disabled = true;
+  addUserMsg(text);
+  updateStatus('thinking...', true);
+
+  try {
+    const response = await processQuery(text);
+    addMsg('tru', response);
+  } catch(e) {
+    addMsg('tru', 'Error: ' + e.message + '\n\nBut hey, even errors are opportunities to try again. What else can I help with?');
+  }
+
+  sendBtn.disabled = false;
+  inputEl.focus();
+  updateStatus(`${brain.length} nodes · ${getRelation()} · ${getDepth()}`, false);
+}
+
+inputEl.addEventListener('keydown', e => { if (e.key === 'Enter') send(); });
+sendBtn.addEventListener('click', send);
+
+// ═══════════ BOOT ═══════════
+
+async function boot() {
+  try {
+    initSoul();
+    updateSoulBar();
+
+    // Simulate loading core nodes
+    const coreNodes = [
+      { k: 'John_3:16', v: 'For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Psalms_23:1', v: 'The LORD is my shepherd; I shall not want.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Romans_8:28', v: 'And we know that all things work together for good to them that love God, to them who are the called according to his purpose.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Philippians_4:13', v: 'I can do all things through Christ which strengtheneth me.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Jeremiah_29:11', v: 'For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Isaiah_40:31', v: 'But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Psalms_46:1', v: 'God is our refuge and strength, a very present help in trouble.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Matthew_11:28', v: 'Come unto me, all ye that labour and are heavy laden, and I will give you rest.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Ephesians_2:8', v: 'For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Hebrews_11:1', v: 'Now faith is the substance of things hoped for, the evidence of things not seen.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: '1_John_4:8', v: 'He that loveth not knoweth not God; for God is love.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Romans_5:8', v: 'But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Proverbs_3:5', v: 'Trust in the LORD with all thine heart; and lean not unto thine own understanding.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Joshua_1:9', v: 'Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whitheresoever thou goest.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Psalms_27:1', v: 'The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Genesis_1:1', v: 'In the beginning God created the heaven and the earth.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Romans_12:2', v: 'And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: '2_Corinthians_12:9', v: 'And he said unto me, My grace is sufficient for thee: for my strength is made perfect in weakness. Most gladly therefore will I rather glory in my infirmities, that the power of Christ may rest upon me.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'James_1:5', v: 'If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+      { k: 'Psalms_139:14', v: 'I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.', source: 'KJV_BIBLE', t: 'fact', w: 1 },
+    ];
+    
+    for (const node of coreNodes) {
+      brain.push(node);
+    }
+    
+    buildIndex();
+    updateChunkBar();
+
+    const rel = getRelation();
+    const depth = getDepth();
+    updateStatus(`${brain.length} nodes · ${rel} · ${depth}`, false);
+  } catch(e) {
+    updateStatus('boot failed: ' + e.message, false);
+    console.error(e);
+  }
+}
+
+// Expose for console
+window.tru = {
+  status: () => ({ nodes: brain.length, soul, relation: getRelation(), depth: getDepth() }),
+  get brain() { return brain; },
+  get soul() { return soul; },
+  concepts: THEOLOGICAL_CONCEPTS,
+  wordStudies: WORD_STUDIES,
+  crossRefs: CROSS_REFERENCES,
+};
+
+boot();
+</script>
+</body>
+</html>

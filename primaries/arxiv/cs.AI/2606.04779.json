@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04779",
+  "title": "Tree-Based Formalization of Multi-Agent Complementarity in Human-AI Interactions",
+  "abstract": "Complementarity is the case in which a human--AI interaction (HAI) outperforms the best prediction benchmark available among its members. Although this idea is central in HAI research, formal work on complementarity remains limited. Existing frameworks do not model how agents' predictions compose into workflow-sensitive multi-agent protocols. We close this gap by introducing a tree-based formalization of complementarity in multi-agent HAI. An HAI protocol is represented by an ordered agent-role configuration together with a rooted planar binary tree whose leaves are decorated by prediction vectors. A local binary composition rule is evaluated recursively along the tree, yielding a tree-relative complementarity functional relative to a pointwise-min oracle benchmark. We prove four results. First, selector-based HAIs, including self- or AI-reliance, cannot achieve complementarity regardless of task, loss, or prediction quality. Second, in regression under squared loss, complementarity is equivalent to Euclidean distance minimization from the ground-truth vector; for $N=2$, the optimal linear-pooling weight has a closed form and a residual-correction interpretation. Third, under linear local composition, every protocol tree defines a barycentric coordinate chart on the simplex of leaf weights; Tamari-cover reparameterizations of protocol trees preserve complementarity, and for $N=4$, they satisfy the pentagon identity. Fourth, in binary classification, no internal local composition can achieve complementarity under endpoint-monotone losses, including standard Bregman and many finite Bernoulli $f$-divergence losses; an analogous obstruction holds for multiclass aggregation under cross-entropy. In summary, our framework shows that complementarity is attainable in multi-agent regression, but obstructed in classification under natural conditions on local aggregation and loss functions.",
+  "link": "https://arxiv.org/abs/2606.04779",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "math.CO"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097682+00:00"
+}

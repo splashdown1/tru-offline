@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05899",
+  "title": "High-Dimensional Theory of LoRA Fine-Tuning in a Solvable Attention Model",
+  "abstract": "We develop a high-dimensional statistical theory of low-rank adaptation (LoRA) in attention models, capturing the interplay between pre-training and fine-tuning. We introduce a solvable framework in which a single-head attention layer is first pre-trained on a data-abundant task and subsequently adapted via a rank-one LoRA update on limited data. In the high-dimensional limit, both stages admit a sharp asymptotic characterization in terms of a finite set of order parameters, yielding explicit predictions for test errors and representation alignment. Our analysis shows that the impact of pre-training on LoRA is summarized by an effective noise term, from which we derive prescriptions for the optimal pre-training procedure. We also demonstrate a regime with a mismatch between the value of the test error and representation quality, and propose an application of our theory to active fine-tuning.",
+  "link": "https://arxiv.org/abs/2606.05899",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cond-mat.dis-nn"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882402+00:00"
+}

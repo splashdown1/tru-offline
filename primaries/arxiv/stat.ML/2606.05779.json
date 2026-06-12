@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05779",
+  "title": "TinyML-Driven Cybersecurity for Autonomous Spacecraft: Latency-Accuracy Analysis for SPARTA RF and Cyber Threat Detection",
+  "abstract": "Autonomous spacecraft require rapid, lightweight, and reliable onboard detection of cyber-RF threats. Using the SPARTA attack model, we analyze the latency-accuracy trade-offs of TinyML-compatible classical models -- Random Forest, Logistic Regression, SVM, and MLP -- for detecting uplink jamming, Fake-NR spoofing, payload manipulation, ground-segment compromise, and unauthorized command injection. We present a physics-informed theoretical analysis of each model's computational complexity, VC dimension, Lipschitz continuity, and latency scaling, supported by empirical measurements on adversarial RF spectrograms generated via BandErasure, FakeNR, and NoiseBurst corruption modes. Results show that Logistic Regression achieves microsecond-level inference with only a 1\\% accuracy drop relative to Random Forest, making it an effective TinyML baseline for onboard autonomy. The study also identifies opportunities for advancing spacecraft cybersecurity through richer feature encoders and multi-timescale learning architectures, building on recent progress in edge intelligence and trustworthy AI.",
+  "link": "https://arxiv.org/abs/2606.05779",
+  "category": "stat.ML",
+  "categories": [
+    "cs.CR",
+    "cs.AI",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728689+00:00"
+}

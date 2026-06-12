@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.04536",
+  "title": "Scaling Self-Evolving Agents via Parametric Memory",
+  "abstract": "Existing memory-augmented LLM agents store past experience exclusively in prompt space, as textual summaries or retrieved passages, while keeping model parameters frozen throughout a rollout. Such agents can \\emph{look up} what they have seen but cannot \\emph{learn from} it: their policy is unchanged by experience, and any information dropped from the context is permanently lost. We introduce \\texttt{TMEM}, a self-evolving parametric memory framework in which the agent not only compresses history into explicit memory but also absorbs distilled supervision into fast LoRA weights $\\Delta_t$ via lightweight online updates, genuinely altering its future behavior within a single episode. We formalize this as an agentic decision process with fast-weight rollout dynamics: actions are sampled from $\\pi_{\\theta_0+\\Delta_t}$, while extraction actions produce supervision that updates $\\Delta_t$ for subsequent decisions. This view makes the extraction policy directly optimizable by RL: training $\\theta_0$ improves not only task actions but also the quality of the data used for online LoRA adaptation. We further propose SVD-based initialization of the LoRA subspace to accelerate online convergence. Experiments on LoCoMo, LongMemEval-S, multi-objective search, and CL-Bench show that \\texttt{TMEM} consistently outperforms summary-based and retrieval-based baselines across different model scales.",
+  "link": "https://arxiv.org/abs/2606.04536",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097493+00:00"
+}

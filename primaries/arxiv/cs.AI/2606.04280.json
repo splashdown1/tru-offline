@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04280",
+  "title": "The Loss Is Not Enough: Sampling Conditions and Inductive Bias in Contrastive Representation Learning",
+  "abstract": "Contrastive learning has become a leading paradigm for self-supervised representation learning, yet the conditions under which it recovers meaningful latent geometry remain incompletely understood. We develop a measure-theoretic framework formalizing the diversity condition, a support requirement on positive-pair sampling that is necessary for isometric latent recovery. We show that the standard full-support von Mises-Fisher setting implies the satisfaction of the diversity condition and as a consequence global contrastive loss minimizers recover latent geometry up to orthogonal transformation, while restricted conditionals can make non-orthogonal maps attain strictly lower asymptotic contrastive loss. We introduce a support-corrected Information Noise Contrastive Estimation (InfoNCE) variant as a theoretical fix: this correction makes orthogonal latent space recovery achievable but does not uniquely select it. Experiments on synthetic benchmarks validate the identifiability predictions, and CIFAR-10 experiments are consistent with the qualitative prediction that architectural inductive bias becomes more important when sampling diversity is limited. Together, our results clarify how sampling mechanisms and encoder inductive bias interact in contrastive representation learning.",
+  "link": "https://arxiv.org/abs/2606.04280",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.IR"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098083+00:00"
+}

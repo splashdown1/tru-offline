@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30717",
+  "title": "Neuron-Level Interventions for Gendered and Gender-Neutral Generation in Language Models",
+  "abstract": "Language models (LMs) can produce gendered language and stereotypes even when given neutral prompts. Most prior work on gender bias in LMs primarily examines gender through a binary lens (feminine vs. masculine), with limited attention to gender-neutral forms, such as they/them pronouns or neutrally phrased job titles. How gender-related signals are encoded in the internal representations of LMs remains an open question. In this work, we study gender-specific neurons in LMs across three categories: feminine, masculine, and gender-neutral. We propose a neuron-level intervention method to identify neurons that are strongly tied to each gender category. We then test these neurons through controlled generation, showing that activating or masking gender-related neurons can steer a sentence toward a target gender form while preserving its original meaning. To evaluate the effectiveness of our gender-intervention approach, we curate two datasets with controlled sentences labeled across all three gender categories and validate the data quality through human evaluation. Experiments on two open-source LMs show that gender-specific neurons are not evenly distributed across model layers; instead, they concentrate heavily in the earliest layers with smaller contributions from later layers. Compared to existing methods, our method achieves more precise gender control, with less leakage into non-target gender categories and stable output quality through two evaluation criteria. Overall, our work examines how gender is encoded in LMs and provides a simple yet effective approach toward controlled gender intervention for both neuron intervention evaluation and gender bias mitigation. Code and datasets are available at: https://github.com/zhiwenyou103/Gender-Neuron-Intervention",
+  "link": "https://arxiv.org/abs/2605.30717",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405707Z"
+}

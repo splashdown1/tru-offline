@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30383",
+  "title": "Structured interactions improve distributed coordination beyond model scaling in a real-world multi-robot system",
+  "abstract": "Scaling individual robot capabilities is common but costly. Here we investigate a system-level design question in real-world multi-robot coordination: given matched hardware budgets, does restructuring communication among robots yield larger gains than increasing onboard model size? Using a representative transport-and-mapping task with 10 physical robots (5 runs per condition, 60 runs total), we find that switching from fully connected to modular hierarchical interactions improves normalised performance by 47 points (0--100), whereas doubling neural network hidden size yields at most 9 points. Nested mixed-effects model comparisons show a substantially larger improvement in model fit for topology than for scale. The pattern is confirmed in independent SMAC replications; heterogeneous benchmark reanalyses provide secondary supporting consistency checks rather than primary evidence. Performance saturation beyond 1024 hidden units is observed in simulation-calibrated extrapolation, not directly on hardware. These results indicate that interaction structure can play a dominant role within the tested system and task setting, while broader quantitative generalisation remains to be established.",
+  "link": "https://arxiv.org/abs/2605.30383",
+  "category": "cs.AI",
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.357937Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05253",
+  "title": "Alpha-RTL: Test-Time Training for RTL Hardware Optimization",
+  "abstract": "Large language models (LLMs) have shown increasing promise in generating\n  functionally correct register-transfer-level (RTL) hardware designs.\n  Recent systems improve further through EDA-integrated reinforcement\n  learning with syntax, simulation, and PPA rewards, but train a general\n  RTL generator before deployment while test-time approaches search with\n  a frozen policy. We instead perform reinforcement learning at test time,\n  allowing the LLM policy to adapt to executable EDA feedback for the\n  specific RTL problem at hand. We propose TTT-RTL, to our knowledge the\n  first per-design test-time training framework that closes the loop\n  between an LLM policy and an EDA pipeline for RTL optimization. TTT-RTL\n  samples candidate implementations, verifies them through syntax checking\n  and simulation, scores valid designs using synthesis-derived PPA product,\n  reuses high-reward variants through a PUCT-indexed design-state pool,\n  and updates the policy with an entropic policy-gradient objective. To\n  stabilize policy updates under sparse or plateaued rewards, we introduce\n  an adaptive KL-budget controller that adjusts the entropy constraint\n  using reference KL, effective sample size, and reward saturation signals.\n  On RTLLM v2.0 under Nangate 45nm, TTT-RTL reduces the geometric-mean\n  PPA product by 65.1% over the reference, outperforming the strongest\n  published frozen-policy agent baseline at 26.1%. On an industrial\n  XuanTie C910 FPU leading-zero-anticipation unit under Sky130, TTT-RTL\n  achieves a 59.4% ADP reduction, and ablations confirm that policy\n  adaptation, state reuse, and KL-budget control each contribute. These\n  results suggest that test-time training with executable EDA feedback can\n  move LLM-based RTL generation beyond functional correctness toward\n  physically optimized hardware.",
+  "link": "https://arxiv.org/abs/2606.05253",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881868+00:00"
+}

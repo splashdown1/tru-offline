@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31100",
+  "title": "Vector Linking via Cross-Model Local Isometric Consistency",
+  "abstract": "We study Vector Linking: given two embedding clouds produced by different black-box encoders over partially overlapping datasets, recover cross-model object correspondences using only vectors. Empirically and theoretically, we show that independently trained contrastive encoders exhibit local geometric consistency: short-range distances are approximately preserved up to a scale factor, while long-range distances are not due to model-specific distortion. Building on this, we propose an iterative, reference-based geometric embedding hashing that recovers vector links from a tiny seed set of paired anchors. It represents each vector by distances to sampled paired anchors, proposes candidate links via hash-space matching, and aggregates evidence across views in a Beta-Bernoulli posterior to bootstrap high-confidence links as new anchors. Experiments across multiple benchmarks and embedding model pairs demonstrate accurate and robust linking under varying overlap, seed budgets, and out-of-domain anchors, with applications to vector database integration and cross-model clustering. Code is available at https://github.com/DBgroup-Edinburgh/VecLinking.",
+  "link": "https://arxiv.org/abs/2605.31100",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.DB",
+    "cs.IR"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.357853Z"
+}

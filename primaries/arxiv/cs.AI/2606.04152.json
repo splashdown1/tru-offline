@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04152",
+  "title": "Thinking Through Signs: PEEL as a Semiotic Scaffolding for Epistemically Accountable AI-Enabled Research",
+  "abstract": "Large language models are reshaping research practice while quietly eroding researchers epistemic accountability. This commentary introduces PEEL - Protocols for Epistemically Engaged Literacy in AI, a working scaffolding that combines deterministic distant reading via Voyant Tools with LLM interpretation via Claude, grounded in Peircean semiotics and abductive reasoning. Applied to AI-generated condensations of three source texts, PEEL reveals systematic distortions in quantity, term frequency, and epistemic voice that are invisible without non-AI measurement -- and yields three design implications: deterministic instruments must accompany AI tools; fluency is not fidelity; epistemic authority must be designed in, not assumed.",
+  "link": "https://arxiv.org/abs/2606.04152",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.CY"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097382+00:00"
+}

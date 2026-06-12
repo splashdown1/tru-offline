@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2508.18730",
+  "title": "Beyond Tokens: Enhancing RTL Quality Estimation via Structural Graph Learning",
+  "abstract": "Estimating the quality of register transfer level (RTL) designs is crucial in the electronic design automation (EDA) workflow, as it enables instant feedback on key performance metrics like area and delay without the need for time-consuming logic synthesis. While recent approaches have leveraged large language models (LLMs) to derive embeddings from RTL code and achieved promising results, they overlook the structural semantics essential for accurate quality estimation. In contrast, the control data flow graph (CDFG) view exposes the design's structural characteristics more explicitly, offering richer cues for representation learning. In this work, we introduce StructRTL, a novel structure-aware graph self-supervised learning framework for improved RTL design quality estimation. By learning structure-informed representations from CDFGs, StructRTL significantly outperforms prior art on various quality estimation tasks. To further boost performance, we incorporate a knowledge distillation strategy that transfers low-level insights from post-mapping netlists into the CDFG-based predictor. Experimental results demonstrate that StructRTL establishes new state-of-the-art results, highlighting the effectiveness of combining structural learning with cross-stage supervision.",
+  "link": "https://arxiv.org/abs/2508.18730",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AR"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307634Z"
+}

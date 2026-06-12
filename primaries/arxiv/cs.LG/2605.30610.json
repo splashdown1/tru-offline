@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30610",
+  "title": "Constrained Flow Optimization via Sequential Fine Tuning for Molecular Design",
+  "abstract": "Adapting generative foundation models, in particular diffusion and flow models, to optimize given reward functions (e.g., binding affinity) while satisfying constraints (e.g., molecular synthesizability) is fundamental for their adoption in real-world scientific discovery applications such as molecular design or protein engineering. While recent works have introduced scalable methods for reward-guided fine-tuning of such models via reinforcement learning and control schemes, it remains an open problem how to algorithmically trade-off reward maximization and constraint satisfaction in a reliable and predictable manner. Motivated by this challenge, we first present a rigorous framework for Constrained Generative Optimization, which brings an optimization viewpoint to the introduced adaptation problem and retrieves the relevant task of constrained generation as a sub-case. Then, we introduce Constrained Flow Optimization (CFO), an algorithm that automatically and provably balances reward maximization and constraint satisfaction by reducing the original problem to sequential fine-tuning via established, scalable methods. We provide convergence guarantees for constrained generative optimization and constrained generation via CFO. Ultimately, we present an experimental evaluation of CFO on both synthetic, yet illustrative, settings, and a molecular design task. Across these evaluations, CFO achieves consistent increases in reward while ensuring high constraint satisfaction, showcasing its practical utility for constrained generative optimization.",
+  "link": "https://arxiv.org/abs/2605.30610",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306710Z"
+}

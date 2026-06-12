@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05037",
+  "title": "Self-Reflective APIs: Structure Beats Verbosity for AI Agent Recovery",
+  "abstract": "When an AI agent calls an API and hits a validation error, it needs more than what went wrong -- it needs what to do next. A self-reflective API returns, on validation failure, a machine-readable recovery\\_feedback.suggestions[] payload sufficient for the agent to repair the request and retry without external reasoning. On a leak-audited pilot ($N{=}30$ per cell, 3 LLMs, 10 adversarial tasks), structured suggestions lift task-completion rate by $+36.7$--$40.0$pp over plain-English diagnoses on Anthropic models (Fisher's exact $p \\le 0.0022$), at $1.8$--$2.2\\times$ better per-success token efficiency. The lift is not significant on gpt-4o-mini ($p{=}0.435$); a second-domain replication on a billing API confirms the pattern. The comparison only holds after auditing two undocumented classes of answer leakage in LLM benchmarks. We shipaudit\\_prompt\\_leakage.py as reusable CI infrastructure. Code and data: https://github.com/arquicanedo/self-reflective-apis.",
+  "link": "https://arxiv.org/abs/2606.05037",
+  "category": "cs.AI",
+  "categories": [
+    "cs.SE",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098542+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2503.08679",
+  "title": "Chain-of-Thought Reasoning In The Wild Is Not Always Faithful",
+  "abstract": "Recent studies indicate that when faced with explicit biases in prompts, models often omit mentioning these biases in their Chain-of-Thought (CoT) output, revealing that verbalized reasoning can give an incorrect picture of how models arrive at conclusions (unfaithfulness). In this work, we show that unfaithful CoT also occurs on naturally worded, non-adversarial prompts without adding artificial biases or editing model outputs. We find that when separately presented with the questions \"Is X bigger than Y?\" and \"Is Y bigger than X?\", models sometimes produce superficially coherent arguments to justify systematically answering Yes to both or No to both, despite the contradiction. We present preliminary evidence that this is due to models' implicit biases towards Yes or No, labeling this Implicit Post-Hoc Rationalization. Our results reveal rates up to 13% for production models, and while frontier models are more faithful, none are entirely so, including thinking models like DeepSeek R1 (0.37%) and Sonnet 3.7 with thinking (0.04%). We also investigate Unfaithful Illogical Shortcuts, where models use subtly illogical reasoning to make speculative answers to hard math problems seem rigorously proven. Our findings indicate that while CoT can be useful for assessing outputs, it is not a complete account of the internal process that produced the model's answer and should be used with caution in agentic or safety-critical settings.",
+  "link": "https://arxiv.org/abs/2503.08679",
+  "category": "cs.CL",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406274Z"
+}

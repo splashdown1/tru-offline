@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2509.25906",
+  "title": "Federated Learning with Enhanced Privacy via Model Splitting and Random Client Participation",
+  "abstract": "Federated Learning (FL) often adopts differential privacy (DP) to protect client data, but the added noise required for privacy guarantees can substantially degrade model accuracy. To resolve this challenge, we propose model-splitting privacy-amplified federated learning (MS-PAFL), a novel framework that combines structural model splitting with statistical privacy amplification. In this framework, each client's model is partitioned into a private submodel, retained locally, and a public submodel, shared for global aggregation. The calibrated Gaussian noise is injected only into the public submodel, thereby confining its adverse impact while preserving the utility of the local model. We further present a rigorous theoretical analysis that characterizes the joint privacy amplification achieved through random client participation and local data subsampling under this architecture. The analysis provides tight bounds on both single-round and total privacy loss, demonstrating that MS-PAFL significantly reduces the noise necessary to satisfy a target privacy protection level. Extensive experiments validate our theoretical findings, showing that MS-PAFL consistently attains a superior privacy-utility trade-off and enables the training of highly accurate models under strong privacy guarantees.",
+  "link": "https://arxiv.org/abs/2509.25906",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307688Z"
+}

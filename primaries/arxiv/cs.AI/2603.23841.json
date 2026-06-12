@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.23841",
+  "title": "PoliticsBench: Benchmarking Political Values in Large Language Models with Multi-Turn Roleplay",
+  "abstract": "While Large Language Models (LLMs) are increasingly used as primary sources of information, their potential for political bias may impact their objectivity. Existing benchmarks of LLM social bias primarily evaluate demographic stereotypes, and when political bias is measured, it is done so at a coarse level, overlooking the values that shape sociopolitical reasoning. We introduce PoliticsBench, a multi-stage roleplay benchmark for evaluating fine-grained value expression in LLMs. Across twenty evolving scenarios, models articulate tradeoffs, take positions, and make decisions under competing pressures. Across eight prominent LLMs, we show that scenario-based prompting elicits broader and more strongly expressed value profiles than direct political questions, with peak interaction stages increasing the number of strongly activated value dimensions by approximately $0.75$ (out of 10 total dimensions), a statistically significant increase relative to baseline prompting ($p < 0.05$). In addition, commitment to a stance increases over the course of interaction, rising by approximately $1.4$ points on a $[0,5]$ scale from initial to decision stages. While responses become less robust to scenario paraphrasing in later interaction stages, inter-judge agreement remains relatively stable. Our results suggest that evaluating LLM political behavior requires moving beyond static prompts toward longer interactive settings that capture how values are applied in context.",
+  "link": "https://arxiv.org/abs/2603.23841",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099182+00:00"
+}

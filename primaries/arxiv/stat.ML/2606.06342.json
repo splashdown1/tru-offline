@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06342",
+  "title": "Symmetric Divergence and Normalized Similarity: A Unified Topological Framework for Representation Analysis",
+  "abstract": "Topological Data Analysis (TDA) offers a principled, intrinsic lens for comparing neural representations. However, existing paired topological divergences (e.g., RTD) are limited by heuristic asymmetry and, more critically, unbounded scores that depend on sample size, hindering reliable cross-scenario benchmarking. To address these challenges, we develop a unified topological toolkit serving two complementary needs: fine-grained structural diagnosis and robust, standardized evaluation. First, we complete the RTD framework by introducing Symmetric Representation Topology Divergence (SRTD) and its efficient variant SRTD-lite. Beyond resolving the theoretical asymmetry of prior variants, SRTD consolidates diagnostic information into a single, comprehensive cross-barcode signature. This allows for precise localization of structural discrepancies and serves as an effective optimization objective without the overhead of dual directional computations. Second, to enable reliable benchmarking across heterogeneous settings, we propose Normalized Topological Similarity (NTS). By measuring the rank correlation of hierarchical merge orders, NTS yields a scale-invariant metric bounded between -1 and 1, effectively overcoming the scale and sample-dependence of unnormalized divergences. Experiments across synthetic and real-world deep learning settings demonstrate that our toolkit captures functional shifts in CNNs missed by geometric measures and robustly maps LLM genealogy even under distance saturation, offering a rigorous, topology-aware perspective that complements measures like CKA.",
+  "link": "https://arxiv.org/abs/2606.06342",
+  "category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728633+00:00"
+}

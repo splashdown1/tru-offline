@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05179",
+  "title": "Efficient Punctuation Restoration via Weighted Lookahead Scoring Method for Streaming ASR Systems",
+  "abstract": "Punctuation restoration improves ASR (Automatic Speech Recognition) readability. However streaming ASR requires online decisions with limited future context. In streaming ASR, the system predicts punctuation incrementally, which makes generation-based approaches prone to latency and alignment failures under boundary-wise evaluation. This paper proposes a non-autoregressive scoring method (no free-form generation) that preserves the input transcript and makes a decision at each word boundary. Our method compares punctuation insertion hypotheses against a no-insertion baseline under a bounded K-subword-token lookahead, and calibrates decisions using a weight {\\alpha} and a validation-calibrated threshold {\\tau} (no parameter updates during inference). On IWSLT 2017, our scoring method achieves a 4-class macro F1 of 0.893 in the no fine-tuning setting (validation-calibrated, K=2) and 0.937 after fine-tuning (K=2), outperforming the prompt-based baseline (0.566) and a fine-tuned ELECTRA baseline (0.913) under the same lookahead budget. We analyze the impact of the lookahead budget through ablation studies on K.",
+  "link": "https://arxiv.org/abs/2606.05179",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497662+00:00"
+}

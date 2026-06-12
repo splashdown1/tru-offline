@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2605.30612",
+  "title": "ZAPS-DA: Zero-Phase Action Policy Smoothing with Decoupled Actor for Continuous Control in Reinforcement Learning",
+  "abstract": "Continuous control policies trained with off-policy reinforcement learning frequently exhibit high-frequency action jitter, rendering direct deployment on physical actuators impractical. Post-hoc filtering attenuates jitter but introduces phase lag; embedding smoothness penalties in the actor's loss couples them with the RL gradient and conflates reward regression with over-aggressive smoothing. We present ZAPS-DA, a framework that reduces action jitter at deployment with negligible phase lag and no post-processing. ZAPS-DA pairs an unmodified main actor (trained by the base RL loss) with a separate decoupled actor trained via supervised imitation of zero-phase filtered targets stored in the replay buffer. The deployed policy is the decoupled actor: a feed-forward map from the current observation to a smooth action, with no inference-time filter and no action-history input -- a mechanism we term causal distillation of a non-causal filter. A magnitude-matched MSE loss provides zero-hyperparameter portability across optimizer classes. Validated with Soft Actor-Critic and a Savitzky--Golay filter in two driving simulators using paired n=150 evaluation protocols: on MetaDrive, ZAPS-DA reduces steering jitter by 14--21x and throttle jitter by 3--5x (all $p < 10^{-4}$, Bonferroni-corrected) while matching task-completion (p=0.28 success, p=0.31 crash) at a 6.3% reward cost; on a custom Webots adaptive cruise control environment, the same SG configuration produces a Pareto improvement -- reward parity (p=0.121), 8--45x steering jitter reduction, and total task-failure rate reduced from 2.0% to 0.7%.",
+  "link": "https://arxiv.org/abs/2605.30612",
+  "category": "cs.LG",
+  "categories": [
+    "cs.RO",
+    "cs.LG",
+    "cs.SY",
+    "eess.SY"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307281Z"
+}

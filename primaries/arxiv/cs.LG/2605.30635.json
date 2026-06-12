@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30635",
+  "title": "CellBRIDGE: Learning Cellular Trajectories via Interaction-Aware Alignment",
+  "abstract": "Inferring dynamics from population snapshots is a fundamental challenge in machine learning and biology. In scRNA-sequencing (scRNA-seq), destructive measurements preclude direct tracking of individual cells across time, making trajectory inference underdetermined. Optimal Transport (OT) provides a principled framework for snapshot alignment, but a long-standing modeling question is which cost functions yield biologically meaningful couplings. Standard OT approaches rely on gene-expression distances, implicitly treating cells as independent points and neglecting structured cell-cell communication mediated by ligand-receptor signaling. We introduce CellBRIDGE (Cell-Based Regularized Interaction-Driven Gene Expression), which augments feature-based OT with a directed, typed interaction cost derived from ligand-receptor activity. By explicitly modeling cell-cell communication, CellBRIDGE improves cross-snapshot couplings and downstream trajectory estimates across synthetic and real scRNA-seq datasets relative to feature-only baselines. Notably, CellBRIDGE enables mechanistically interpretable in silico perturbations: on lung cancer data, silencing specific ligand-receptor pairs induces trajectory shifts that recapitulate expected effects of targeted pathway inhibition.",
+  "link": "https://arxiv.org/abs/2605.30635",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "q-bio.GN"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306720Z"
+}

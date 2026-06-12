@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06010",
+  "title": "Adaptive Oscillatory-State Alignment for Time Series Forecasting",
+  "abstract": "Long-term time series forecasting benefits from inductive biases that expose recurring temporal structure. Existing periodic forecasting methods typically model recurrence through predefined periods, global spectral components, or fixed learnable templates. However, real-world temporal dynamics are rarely rigidly periodic: oscillatory behavior often evolves through amplitude modulation, phase drift, and local frequency variation. Under these conditions, fixed-template periodic modeling can become fundamentally mismatched to the underlying temporal states. We propose AOSNET, a Hilbert-guided forecasting framework that reformulates periodic forecasting from fixed template matching to adaptive oscillatory-state alignment. AOSNET extracts analytic-signal descriptors from both the observed sequence and a learnable global oscillatory prior, then adaptively aligns local states through a descriptor-conditioned gate that selectively preserves reliable observations while softly correcting mismatched regions. The learned prior serves not as a rigid repeated template but as a flexible oscillatory reference interpreted through local state dynamics. Experiments on eight benchmarks demonstrate state-of-the-art or highly competitive accuracy with fast inference speed. Controlled synthetic studies isolating amplitude modulation, phase drift, and local frequency variation confirm that the advantage of oscillatory-state alignment consistently increases as non-stationarity intensifies.",
+  "link": "https://arxiv.org/abs/2606.06010",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.DB"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882455+00:00"
+}

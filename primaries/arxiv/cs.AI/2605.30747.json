@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30747",
+  "title": "Generating Graph-like Rules for Knowledge Graph Reasoning via Diffusion Models",
+  "abstract": "Logical rules constitute a cornerstone of knowledge graph (KG) reasoning, valued for their interpretability and ability to model relational patterns. However, existing rule mining methods predominantly focus on simple chain-like rules and therefore neglect the richer relational information encoded in graph-like structures, such as cycles and branches. This limitation is further exacerbated by computational bottlenecks caused by the combinatorial explosion of the search space, which is especially challenging for graph-like rules. Meanwhile, generative approaches such as diffusion models, despite their success in other domains, can not be directly applied to rule mining because their training objectives are not aligned with the goal of learning high-quality rules, and non-differentiable KG rule quality metrics cannot directly guide model optimization. To address these limitations, we propose GRiD, a framework that reformulates graph-like rule discovery as a discrete generative process conditioned on the target relation. GRiD employs a two-phase training strategy. First, supervised pre-training enables GRiD to capture structural priors from subgraphs sampled from the KG meta-graph. Subsequently, reinforcement learning is applied to fine-tune GRiD through policy gradient optimization guided directly by non-differentiable rule-quality metrics. Experiments on six benchmark datasets show that GRiD achieves competitive performance on KG completion tasks. Ablation studies confirm the efficiency and robustness of GRiD and further show that graph-like rules complement chain-like rules in KG completion. Our codes and datasets are available in https://github.com/Haoxiang-Cheng/GRiD",
+  "link": "https://arxiv.org/abs/2605.30747",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.357816Z"
+}

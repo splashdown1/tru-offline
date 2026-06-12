@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05239",
+  "title": "HyFAD: Hybrid Time-Frequency Diffusion with Frequency-Aware Embedding for Time Series Imputation",
+  "abstract": "Diffusion models have demonstrated strong performance in time series modeling due to their ability to progressively capture complex data distributions through iterative denoising. However, existing approaches struggle with frequency-sensitive denoising, high-frequency reconstruction and balancing global trends with local dynamics. To address these limitations, we propose \\textbf{HyFAD}, a \\textbf{Hy}brid time-frequency \\textbf{D}iffusion model with \\textbf{F}requency-\\textbf{A}ware embedding for time series imputation. Built upon the DDPM paradigm, HyFAD adopts a coupled time-frequency diffusion framework, in which the reverse denoising proceeds sequentially from the time domain to the frequency domain, enabling coarse-to-fine generation. Specifically, the time-domain diffusion process captures low-frequency global trends, while the frequency-domain diffusion process refines high-frequency spectral components. We further introduce a frequency-aware step embedding that exploits the relationship between diffusion steps and spectral components, providing step-dependent spectral guidance and facilitates more accurate band-wise reconstruction. Extensive experiments on multiple benchmark datasets demonstrate that HyFAD achieves state-of-the-art performance. Our source code is available at https://github.com/hongfangao/HyFAD.",
+  "link": "https://arxiv.org/abs/2606.05239",
+  "category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728557+00:00"
+}

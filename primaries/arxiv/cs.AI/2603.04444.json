@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.04444",
+  "title": "vLLM Semantic Router: Signal Driven Decision Routing for Mixture-of-Modality Models",
+  "abstract": "As large language models (LLMs) diversify across modalities, capabilities, and cost profiles, the problem of intelligent request routing: selecting the right model for each query at inference time, has become a critical systems challenge. We present vLLM Semantic Router, a signal-driven decision routing framework for Mixture-of-Modality (MoM) model deployments. The architecture follows two complementary Shannon-inspired views. In the information-theoretic regime, signal extraction reduces the entropy of \"which model?\" by distilling routing-relevant information from raw queries. In the Boolean-algebraic regime, the decision engine composes functionally complete routing policies from signal conditions. The central innovation is composable signal orchestration: thirteen heterogeneous signal types, spanning sub-millisecond heuristics and neural classifiers for semantics, safety, and modality, are composed through configurable Boolean decision rules into deployment-specific routing policies, so that fundamentally different scenarios (multi-cloud enterprise, privacy-regulated, cost-optimized) are expressed as different configurations over the same architecture. Matched decisions drive semantic model routing via thirteen selection algorithms, while per-decision plugin chains enforce safety constraints including a three-stage HaluGate hallucination detection pipeline and a lightweight episodic memory system with ReflectionGate for personalized multi-turn context. A typed neural-symbolic DSL specifies these routing policies and compiles them to multiple deployment targets, enabling configuration-first adaptation without code changes. Together, these components show that composable signal orchestration enables a single framework to serve diverse deployment scenarios with differentiated cost, privacy, and safety policies.",
+  "link": "https://arxiv.org/abs/2603.04444",
+  "category": "cs.AI",
+  "categories": [
+    "cs.NI",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099119+00:00"
+}

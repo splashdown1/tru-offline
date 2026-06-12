@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31293",
+  "title": "Divergence Decoding: Inference-Time Unlearning via Auxiliary Models",
+  "abstract": "Large Language Models (LLMs) frequently memorize sensitive training data thereby creating significant privacy and copyright risks. Addressing these risks, i.e., removing such knowledge from an existing model checkpoint, has proven challenging as many unlearning methods lead to catastrophic utility loss or are ineffective for complex queries. We introduce Divergence Decoding (DD), a mechanism that uses small auxiliary models to steer the logits of the LLM away from specific data during inference. Training these models is straight forward, i.e., we use standard pre-training and fine-tuning setups. We find the method decisively outperforms state-of-the-art (SOTA) baselines on unlearning benchmarks across a variety of model and training dataset scales consistent with DD being an effective and inexpensive solution to unlearning. We then demonstrate that this steered distribution can be trivially distilled back into the base model. Since the method is generally applicable to any probabilistic model, we explore its efficacy outside of text generation and find evidence of generalization to the domain of images.",
+  "link": "https://arxiv.org/abs/2605.31293",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405846Z"
+}

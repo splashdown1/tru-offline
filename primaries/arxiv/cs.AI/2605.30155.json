@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30155",
+  "title": "Neural Network Verification using Partial Multi-Neuron Relaxation",
+  "abstract": "The increasing integration of deep neural networks in critical systems has spawned a theoretical and practical interest in formally guaranteeing safety properties about their behavior. To achieve this, contemporary verification algorithms rely on computing linear relaxations for a network's non-linear activation functions. Existing approaches for linear relaxations typically fall into one of two categories: single-neuron relaxation, in which each activation neuron is bounded in terms of its sources; and multi-neuron relaxation, in which linear bounds involving multiple activation neurons and their sources are calculated. However, existing methods might fail to balance tightness and scalability, as single-neuron bounds might not derive sufficiently tight bounds necessary for verification to complete, whereas generating multi-neuron relaxation for all activation neurons is computationally expensive. In this paper, we present a middle-ground approach featuring partial multi-neuron relaxation, in which we generate multi-neuron bounds for only a small, heuristically selected subset of neurons. To achieve this, we build upon existing branching heuristics for selecting neurons and for optimizing bounding hyper-planes for multi-neuron bounds. We integrated our proposed method within the Marabou verifier, and obtained favorable results in comparison to existing bound tightening methods. Our experiments showcase the potential of our technique for neural network verification.",
+  "link": "https://arxiv.org/abs/2605.30155",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LO",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.359016Z"
+}

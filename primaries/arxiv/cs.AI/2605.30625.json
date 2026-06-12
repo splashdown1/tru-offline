@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30625",
+  "title": "Active Timepoint Selection for Learning Measure-Valued Trajectories",
+  "abstract": "Inferring continuous probability paths from sparse snapshots is a fundamental challenge in domains like single-cell biology, where high-fidelity data acquisition is often destructive and constrained by prohibitive sequencing costs. This motivates the need for active learning strategies to strategically select optimal measurement times. However, designing active learning policies for this setting remains an open problem: the target objects reside on the infinite dimensional Wasserstein space where standard Euclidean metrics are ill-defined, and current interpolation methods lack epistemic uncertainty quantification. We introduce a framework which extends active experimentation to the space of measures. By leveraging Linearized Optimal Transport (LOT), we map distributional snapshots into a tangent space amenable to Gaussian Process modeling, allowing us to construct a tractable probabilistic surrogate for the underlying probability path. This yields an acquisition policy that iteratively selects measurement times to minimize uncertainty. Empirical results demonstrate that our strategy outperforms uncertainty-agnostic baselines on both synthetic and real-world datasets.",
+  "link": "https://arxiv.org/abs/2605.30625",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358041Z"
+}

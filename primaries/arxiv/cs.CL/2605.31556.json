@@ -1,0 +1,15 @@
+{
+  "arxiv_id": "2605.31556",
+  "title": "Vision-Language Models Suppress Female Representations Under Ambiguous Input",
+  "abstract": "Alignment teaches vision-language models (VLMs) to avoid expressing demographic biases, and when gender is clearly visible they largely succeed. Far less is known about ambiguous inputs (a worker in full gear, a figure seen from behind) cases common in practice yet rarely studied. We find that minimal prompting pressure exposes occupation-gender defaults when prompting ambiguous input images, with models collapsing to male even for strongly female-stereotyped occupations. But do these outputs reflect what models actually encode internally? We introduce LALS (Latent Association Leaning Score), a zero-shot metric that projects visual-token activations into the model's text-embedding space to measure concept associations per token and layer. Across 15 occupations, over 800 gender-ambiguous images, and four VLMs, internal representations and outputs are systematically decoupled: models often encode a female association internally yet output male. Layer-wise analysis reveals an asymmetric filter -- male signal amplifies end-to-end while female signal peaks mid-network and is suppressed before generation -- and a color ablation shows that culturally loaded visual cues such as clothing color further modulate these internal associations.",
+  "link": "https://arxiv.org/abs/2605.31556",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.CL",
+    "cs.CY",
+    "cs.HC"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406086Z"
+}

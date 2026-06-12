@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06038",
+  "title": "English-to-Prakrit Machine Translation via Multilingual Transfer Learning",
+  "abstract": "We study English-to-Prakrit machine translation in a low-resource setting where the target language is unsupported by IndicTrans2. We adapt the multilingual model by mapping Prakrit to the Hindi language tag (hin_Deva) without modifying the tokenizer, vocabulary, or architecture. Using a 1,474-pair Maharashtri Prakrit parallel corpus and evaluation on a 20-sample Ardhamagadhi test set, we report corpus BLEU improvements over an untuned baseline. The results indicate that script-compatible language routing can enable feasible transfer to unsupported classical languages, while highlighting limitations due to data scarcity and dialect mismatch. Our code and trained models are released to the public for further exploration https://github.com/D3v1s0m/indictrans2-prakrit-mt.",
+  "link": "https://arxiv.org/abs/2606.06038",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497972+00:00"
+}

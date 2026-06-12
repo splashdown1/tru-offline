@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2605.11336",
+  "title": "Much of Geospatial Web Search Is Beyond Traditional GIS",
+  "abstract": "Web search queries concern place far more often than existing labelling schemes suggest, yet the landscape of geospatial web search queries - what people ask of place, and how often - remains poorly characterised at scale. We apply dense sentence embeddings, a lightweight SetFit classifier, and density-based clustering to the full MS MARCO corpus of 1.01 million real Bing queries without prior filtering for toponyms or spatial keywords, identifying 181,827 geospatial queries (18.0%), nearly threefold the 6.17% labelled as Location in the original annotations. The resulting taxonomy of 88 query categories reveals that geospatial web search is dominated by transactional and practical lookups: costs and prices alone account for 15.3% of geospatial queries, nearly twice the size of the entire physical geography theme. Much of this activity - costs, opening hours, contact details, weather, travel recommendations - falls outside the scope of what traditional GIS and knowledge graphs are built to serve. The categories vary substantially in the kind of answer they admit, from deterministic lookups answerable from spatial databases or knowledge graphs to evaluative or temporally volatile queries that require generative or real-time systems. We discuss implications for hybrid retrieval architectures and for benchmarks of geographic reasoning in large language models. We openly release the labelled dataset, classifier, and taxonomy.",
+  "link": "https://arxiv.org/abs/2605.11336",
+  "category": "cs.AI",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.CL",
+    "cs.HC"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358946Z"
+}

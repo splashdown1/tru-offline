@@ -1,0 +1,17 @@
+{
+  "arxiv_id": "2606.05266",
+  "title": "Sharp Low-Degree Thresholds for Planted-vs-Planted Testing",
+  "abstract": "We establish the first sharp thresholds for low-degree polynomial tests in planted-vs-planted settings, where the goal is to determine with vanishing error which of two structured planted mechanisms generated the observed data. We prove matching low-degree upper and lower bounds for counting communities in the planted submatrix and planted dense subgraph models. The resulting testing threshold coincides, down to the sharp constant, with the known low-degree recovery threshold. In contrast, the task of weak testing, where the goal is to outperform random guessing, does not have a sharp threshold but rather a smooth transition, which we identify. To prove our results, we develop a framework for planted-vs-planted testing that builds on a latent-variable expansion originating in low-degree recovery and employs new methods to identify and prune non-signal contributions.",
+  "link": "https://arxiv.org/abs/2606.05266",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CC",
+    "cs.DS",
+    "math.CO",
+    "math.PR",
+    "math.ST",
+    "stat.TH"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881936+00:00"
+}

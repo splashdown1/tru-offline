@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2512.11561",
+  "title": "View Space: Learning Representation across Arbitrary Graphs",
+  "abstract": "Generalizing pretrained models to unseen datasets without retraining is a central challenge toward foundation models. Achieving fully inductive inference on numerical data is particularly difficult due to large variations in feature dimensionality and semantics across datasets. We observe that, in the presence of graph structure, numerical data admits a distinct structure-induced representational axis beyond the feature space, which we formalize as the view space. This view space enables a unified representation of graphs with heterogeneous features and motivates Graph View Transformation (GVT), a class of parametric mappings that can be shared across arbitrary graphs. We instantiate this framework with Recurrent GVT, an architecture for fully inductive node representation learning in node classification. Pretrained on OGBN-Arxiv and evaluated on 27 benchmarks, Recurrent GVT outperforms GraphAny, the prior fully inductive graph model, by +8.93%, and surpasses 12 individually tuned GNNs by at least +3.30%. These results establish the view space as a principled and practical foundation for learning across graphs with heterogeneous feature spaces. Code and checkpoints are available in https://github.com/dooho00/graph-view-space.",
+  "link": "https://arxiv.org/abs/2512.11561",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307750Z"
+}

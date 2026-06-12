@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05860",
+  "title": "GenAutoML: An Agentic Framework for Dynamic Architecture Generation and Optimization in Time-Series Analysis",
+  "abstract": "Designing neural architectures for time-series forecasting and anomaly detection remains a resource-intensive task that often requires substantial domain expertise. Traditional Automated Machine Learning (AutoML) systems typically rely on static, predefined search spaces, limiting their ability to adapt to diverse data characteristics. We present GenAutoML, an agentic framework that leverages Large Language Models (LLMs) as neural architects to bridge natural-language requirements and executable PyTorch implementations. The framework incorporates a Sandboxed Reflection Loop for autonomous code refinement and a Signature-Aware Runtime that enforces architectural consistency and execution safety. To improve robustness under non-stationary conditions, we further introduce a Dynamic Reversible Instance Normalization (Dyn-RevIN) wrapper. Experiments on the ETTh1, ETTm1, and Weather benchmarks demonstrate that GenAutoML can dynamically generate task-specific neural architectures tailored to dataset characteristics. Among the generated models, WaveInterferenceNet achieves inference latency below 0.01 ms per sample while maintaining competitive predictive performance. By emphasizing computational efficiency, architectural adaptability, and stable optimization behavior, GenAutoML enables the creation of ultra-lightweight neural networks suitable for resource-constrained and latency-sensitive Edge AI deployments.",
+  "link": "https://arxiv.org/abs/2606.05860",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882379+00:00"
+}

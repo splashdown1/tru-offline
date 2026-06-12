@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2508.10555",
+  "title": "A Differentiable Framework for Full and Phaseless Data Inversion Using Neural Implicit Contrast-Source Representation",
+  "abstract": "In this study, we extend the contrast source inversion to a fully differentiable, unsupervised framework based on a neural implicit representation of the contrast source. Specifically, instead of a pixel-wise discrete representation, the contrast source is parameterized by a lightweight residual multilayer perceptron (ResMLP) as a continuous neural field conditioned on spatial coordinates and transmitter settings. This continuous parameterization provides a more flexible representation of the contrast source and improves reconstruction accuracy and robustness under noisy measurements. Building on this representation, the state equation and data equation are combined with total-variation regularization to form a differentiable objective function. By reformulating the VIE-constrained inversion as an end-to-end differentiable optimization problem, the network parameters and the medium contrast are jointly optimized via automatic differentiation. Within the same framework, both full and phaseless data inversion are accommodated by only modifying the data misfit function. Numerical experiments demonstrate that this scheme yields higher reconstruction accuracy and robustness than conventional CSI across a range of noise levels and measurement settings. The continuous neural field further enables super-resolution inference at resolutions finer than the training grid, decoupling inversion cost from reconstruction fidelity. Ablation studies and comparisons with alternative neural architectures further confirm that the contrast source parameterization and VIE-based formulation are both essential to the observed improvements.",
+  "link": "https://arxiv.org/abs/2508.10555",
+  "category": "cs.LG",
+  "categories": [
+    "physics.comp-ph",
+    "cs.CE",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884487+00:00"
+}

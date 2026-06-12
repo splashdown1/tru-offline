@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2601.16366",
+  "title": "Post-Training Neural Network Pruning using Graph Curvature",
+  "abstract": "This paper provides a fresh view of the neural network (NN) pruning problem through the lens of graph theory. To achieve effective pruning, we aim to identify the main NN data flows and the corresponding NN connections that are most and least important for the performance of the full model. Unlike the standard approach to NN data flow analysis, which is based on information theory, we employ the notion of graph curvature, specifically Ollivier-Ricci curvature (ORC). ORC has been successfully used to identify important graph edges in various domains such as road traffic analysis, biological networks, and social networks. In particular, edges with negative ORC are considered bottlenecks and are therefore critical to the graph's overall connectivity, whereas positive-ORC edges are less essential. We use this intuition for NNs to (1) construct a graph induced by the NN structure and introduce the notion of neural curvature (NC) based on ORC; (2) calculate curvatures based on activation patterns for a set of input examples; and (3) demonstrate that NC can be used to rank edges according to their importance for overall NN functionality. We evaluate our method through pruning experiments on a variety of small and medium size models trained on three image datasets: MNIST, CIFAR-10, and CIFAR-100. The results indicate that our method can identify a larger number of unimportant edges compared to existing pruning methods.",
+  "link": "https://arxiv.org/abs/2601.16366",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.SC"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307775Z"
+}

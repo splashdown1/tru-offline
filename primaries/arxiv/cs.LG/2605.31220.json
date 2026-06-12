@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31220",
+  "title": "Shared Doubt: Zero-shot Cross-Lingual Confidence Estimation for Language Models",
+  "abstract": "Confidence estimation (CE), i.e. quantifying the reliability of a model's prediction, has attracted great interest in the context of large language models (LLMs). However, most studies focus on English, ignoring the multilingual reality of LLM usage, while many CE methods degrade or require retraining across languages. To address this gap, we investigate whether multilingual LLMs encode shared, language-transferable confidence features. We use a lightweight linear probe that predicts answer correctness directly from intermediate representations. Trained monolingually, the probe generalizes zero-shot to unseen, typologically diverse languages without target-language supervision. Learned layer weights and multiple ablations reveal that confidence features concentrate in middle layers across languages, suggesting a shared confidence subspace. While zero-shot cross-lingual performance depends on similarity to the source language, the probe provides a strong baseline without any retraining and compares favorably to other popular confidence estimation methods.",
+  "link": "https://arxiv.org/abs/2605.31220",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307462Z"
+}

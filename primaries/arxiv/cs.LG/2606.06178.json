@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.06178",
+  "title": "Learning to Route LLMs from Implicit Cost-Performance Preferences via Meta-Learning",
+  "abstract": "Large language models (LLMs) present a trade-off between performance and cost, where more powerful models incur greater expense. LLM routing aims to mitigate expenses while maintaining performance by sending queries to the most suitable model. However, existing methods cannot perform well for different user cost-performance preferences. To address this gap, we introduce a novel perceptive LLM routing paradigm for personalized and user-centric cost-performance optimization, which efficiently learns users' implicit preferences through little interaction. To handle the challenge of heterogeneous user needs, we formulate preference profiles as a set of distinct tasks in contextual bandit and propose MetaRouter, a meta-learning framework designed for preference-aware LLM routing. Experimental results show that MetaRouter outperforms strong baselines on both in-distribution and out-of-distribution tasks. Furthermore, it exhibits high efficiency in learning user preferences, robustness to changes in the routable LLMs, and scalability to multi-model routing.",
+  "link": "https://arxiv.org/abs/2606.06178",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882585+00:00"
+}

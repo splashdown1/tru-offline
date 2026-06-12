@@ -1,0 +1,15 @@
+{
+  "arxiv_id": "2601.18175",
+  "title": "Success Conditioning as Policy Improvement: The Optimization Problem Solved by Imitating Success",
+  "abstract": "A widely used technique for improving policies is success conditioning, in which one collects trajectories, identifies those that achieve a desired outcome, and updates the policy to imitate the actions taken along successful trajectories. This principle appears under many names -- rejection sampling with SFT, goal-conditioned RL, Decision Transformers -- yet what optimization problem it solves, if any, has remained unclear. We prove that success conditioning exactly solves a trust-region optimization problem, maximizing policy improvement subject to a $\\chi^2$ divergence constraint whose radius is determined automatically by the data. This yields an identity: relative policy improvement, the magnitude of policy change, and a quantity we call action-influence -- measuring how random variation in action choices affects success rates -- are exactly equal at every state. Success conditioning thus emerges as a conservative improvement operator. Exact success conditioning cannot degrade performance or induce dangerous distribution shift, but when it fails, it does so observably, by hardly changing the policy at all. We apply our theory to the common practice of return thresholding, showing this can amplify improvement, but at the cost of potential misalignment with the true objective.",
+  "link": "https://arxiv.org/abs/2601.18175",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.SY",
+    "eess.SY",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098652+00:00"
+}

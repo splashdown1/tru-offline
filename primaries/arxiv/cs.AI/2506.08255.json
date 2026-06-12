@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2506.08255",
+  "title": "SHIELD: Secure Hypernetworks for Incremental Expansion Learning Defense",
+  "abstract": "Continual learning under adversarial conditions remains an open problem, as existing methods often compromise either robustness, scalability, or both. We propose a novel framework that integrates Interval Bound Propagation (IBP) with a hypernetwork-based architecture to enable certifiably robust continual learning across sequential tasks. Our method, SHIELD, generates task-specific model parameters via a shared hypernetwork conditioned solely on compact task embeddings, eliminating the need for replay buffers or full model copies and enabling efficient over time. To further enhance robustness, we introduce Interval MixUp, a novel training strategy that blends virtual examples represented as $\\ell_{\\infty}$ balls centered around MixUp points. Leveraging interval arithmetic, this technique guarantees certified robustness while mitigating the wrapping effect, resulting in smoother decision boundaries. We evaluate SHIELD under strong white-box adversarial attacks, including PGD and AutoAttack, across multiple benchmarks. It consistently outperforms existing robust continual learning methods, achieving state-of-the-art average accuracy while maintaining both scalability and certification. These results represent a significant step toward practical and theoretically grounded continual learning in adversarial settings.",
+  "link": "https://arxiv.org/abs/2506.08255",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CR"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358669Z"
+}

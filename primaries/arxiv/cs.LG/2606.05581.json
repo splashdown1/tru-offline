@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05581",
+  "title": "Monte Carlo Steklov Operators for Large-Scale Geometry Processing in the Wild",
+  "abstract": "Intrinsic methods fill the default toolbox for geometry processing on meshes. Intrinsic operators, in particular the Laplacian, underlie methods that require invariance to isometry and have hence been employed in many algorithms for shape analysis, learning, and editing. However, intrinsic methods are predicated on assumptions that quickly become brittle when working with in-the-wild geometry, where (i) mesh quality is not guaranteed, and (ii) many meshes are modeled with multiple connected components. In such settings, volumetric constructions are better-defined, since restrictions on surface topology can be relaxed. This paper presents a Monte Carlo method for estimating the Dirichlet-to-Neumann (DtN) operator -- a boundary-to-boundary volumetric operator -- and its associated Steklov eigenmodes. We build on recent developments in Monte Carlo geometry processing by casting this boundary operator itself as the subject of estimation. The DtN operator, defined through a volumetric stochastic process, is then generalized to the exterior domain, where it couples disconnected components through the surrounding ambient space. We show that our method is orders of magnitude faster than existing boundary-element approaches for computing Steklov spectra while remaining robust to poor triangulations, high-resolution meshes, and multi-component geometry. To demonstrate this scalability, we compute interior and exterior Steklov eigenspectra for approximately 450,000 shapes from the uncurated Objaverse dataset. We incorporate these operators into Steklov-CLIP, a mesh-based neural network that uses volumetric spectral operators for large-scale contrastive 3D representation learning. The resulting network learns semantically meaningful global and dense shape representations, illustrating that geometrically-principled volumetric operators can be made practical at the scale of modern 3D datasets.",
+  "link": "https://arxiv.org/abs/2606.05581",
+  "category": "cs.LG",
+  "categories": [
+    "cs.GR",
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883100+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06156",
+  "title": "Trust-Aware Predictive Emissions Monitoring for Gas Turbine Fleets with Limited Labelled Data",
+  "abstract": "Machine learning-based predictive emissions monitoring systems offer a practical alternative to direct emissions measurement, but their deployment across gas turbine fleets is challenging when emissions labels are available for only a small subset of assets. In this work, a trust-aware probabilistic framework is proposed for fleet-level gas turbine NOx prediction under limited labelled supervision. The framework combines a multi-head recurrent prediction model with learned confidence estimation, ensemble-based uncertainty quantification, auxiliary feature prediction, feature-space distance analysis, and operating-range diagnostics. These signals are calibrated on labelled data to produce interpretable per-sample trust scores, providing indicators of prediction reliability on unlabelled turbines, supporting the identification of predictions that should be treated with greater caution during fleet-level deployment. Confidence-based filtering reduces MAE from 0.202 at full coverage to 0.070 for the highest-confidence 10\\% of predictions, demonstrating that confidence estimates are meaningfully related to prediction error. Unlabelled and out-of-distribution samples exhibit increased uncertainty and reduced confidence, indicating that the framework responds appropriately to distributional shift. The results show that the proposed trust framework provides actionable reliability information for emissions prediction on unlabelled turbines, supporting more transparent and trustworthy deployment of PEMS across industrial fleets.",
+  "link": "https://arxiv.org/abs/2606.06156",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882518+00:00"
+}

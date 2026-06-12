@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05559",
+  "title": "CLaaS: Continual learning as a service for sample efficient online learning",
+  "abstract": "Deployed large language model agents must adapt to distribution shift in dynamic environments. Ideally, adaptation can be performed from accumulated agent experiences and retain prior capabilities while transferring to future tasks. However, agent actions and environmental transitions can only be sampled once per scenario, as real-world environments cannot be trivially reset. To this end, we investigate an experiential and online continual learning setting in which agents learn from a stream of scenarios. We propose continual learning as-a-service (CLaaS), a system which enables agents to improve during deployment, abstracted behind a chat API. To increase sample efficiency, CLaaS stores rollouts in an experience replay buffer for gradient reuse during asynchronous training. We evaluate CLaaS on an adversarial task, demonstrating that parametric updates lead to superior forward transfer and less forgetting than in-context learning, with replay being a critical choice for sample efficiency.",
+  "link": "https://arxiv.org/abs/2606.05559",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882116+00:00"
+}

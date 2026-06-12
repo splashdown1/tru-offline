@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2601.20789",
+  "title": "SERA: Soft-Verified Efficient Repository Agents",
+  "abstract": "Open-weight coding agents should hold a fundamental advantage over closed-source systems because they can specialize to private codebases, encoding repository-specific information directly in their weights. Yet the cost and complexity of training has kept this advantage theoretical until now. We present Soft-Verified Efficient Repository Agents (SERA), an efficient method for training coding agents that enables the rapid and cheap creation of agents specialized to private codebases. Using Soft Verified Generation (SVG), we generate thousands of trajectories from any code repository, without requiring unit tests. Beyond repository specialization, we apply SVG to a larger corpus of codebases, generating 200,000+ synthetic trajectories. Using only supervised finetuning (SFT), SERA achieves leading results among fully open-source (open data, method, code) models while matching the performance of open-weight models like Devstral-Small-2. Creating SERA models is 26x cheaper than reinforcement learning and 57x cheaper than previous synthetic data methods to reach equivalent performance. We use our dataset to provide detailed analysis of scaling laws, ablations, and confounding factors for training coding agents. Overall, we believe our work will greatly accelerate research on open coding agents and showcase the advantage of open-source models that can adapt to private codebases. We release SERA as the first model in Ai2's Open Coding Agents series, along with all our code, data, and Claude Code integration to support the research community.",
+  "link": "https://arxiv.org/abs/2601.20789",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.LG",
+    "cs.SE"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406151Z"
+}

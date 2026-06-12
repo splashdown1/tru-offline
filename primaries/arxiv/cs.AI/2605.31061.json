@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31061",
+  "title": "STEP: Learning STructured Embeddings for Progressive Time Series",
+  "abstract": "We present a novel method for learning interpretable representations of progressive time series, that is, data capturing irreversible state transitions such as degradation or task completion. Our approach uses a self-supervised contrastive objective to learn a low-dimensional latent space whose geometry is itself the interpretation: each observation becomes a point on a manifold anchored between two fixed orthogonal prototype vectors, and a trajectory becomes a path across that manifold. From this structure we read a latent compass, the polar coordinates ({\\theta}, r) of the latent vector, in which {\\theta} tracks the progression of the underlying state (e.g., from healthy to failed) and r identifies the active mode (e.g., the operating condition), without any proxy labels. We evaluate the approach against the state of the art on diverse domains, including industrial degradation, robotic tasks, and neural activity, validating three key capabilities: (1) end-state prediction, (2) multi-step forecasting, and (3) interpretable phase separation. Our method matches or improves over black-box counterparts on all of these while providing transparency about the underlying mechanisms. A simple linear regressor on top of the latent compass coordinates is competitive with deep architectures, direct quantitative evidence that the underlying state is encoded in a geometrically accessible form.",
+  "link": "https://arxiv.org/abs/2605.31061",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358235Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30482",
+  "title": "Discovering a Zeta Map Algorithm on Dyck Paths via Mechanistic Interpretability",
+  "abstract": "Machine learning is increasingly used in mathematical discovery, but in mathematics the desired output is often not a prediction itself, but an explicit construction that can be checked independently. We study this setting through the zeta map on Dyck paths, a classical bijection in the combinatorics of the q,t-Catalan numbers. We train a deliberately small one-layer, one-head encoder-decoder transformer on this map and analyze its learned computation using mechanistic interpretability tools, including decoder cross-attention analysis, linear probing, and causal intervention. The analysis reveals a level-based mechanism: encoder representations make path levels linearly accessible, while the decoder selects and traverses input positions in a structured way. Translating these signals into combinatorics leads to the scaffolding map, an explicit peak-centered traversal algorithm for Dyck paths. We prove that this algorithm agrees with the zeta map, modulo a reversal convention in the labeling. This gives a controlled example of AI-assisted mathematical discovery in which mechanistic interpretability turns model behavior into a precise, human-verifiable combinatorial algorithm.",
+  "link": "https://arxiv.org/abs/2605.30482",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306604Z"
+}

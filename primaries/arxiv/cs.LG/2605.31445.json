@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2605.31445",
+  "title": "Used Car Salesbots? Honesty and Credulity of LLMs as Bargaining Agents under Partial Information",
+  "abstract": "In this work we study agents in simulated bargaining scenarios, where a buyer and a seller communicate through a text channel and attempt to negotiate mutually beneficial trades, under different information regimes (complete information, information asymmetry or mutual uncertainty). We evaluate their performance w.r.t. game-theoretical solutions and further investigate their honesty (their tendency to disclose or withhold information or to mislead and deceive) as well as their credulity (their tendency to trust or distrust information provided by the other agent). We study zero-shot LLM agents with simple prompting scaffolding as well as fine-tuned agents, in order to investigate whether optimising the agents to maximise financial profits makes them stronger negotiators but also more dishonest and less trusting.\n  We find that off-the-shelf LLMs all substantially deviate from game-theoretical equilibria, they attempt to lie about their private information but cannot efficiently exploit information asymmetries. Fine-tuning on financial utility makes the agents stronger at achieving better deals but also more dishonest, highlighting the risks that optimising agents for a task can have on their safety. We release our code and a dataset of bargaining scenarios.",
+  "link": "https://arxiv.org/abs/2605.31445",
+  "category": "cs.LG",
+  "categories": [
+    "cs.GT",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307533Z"
+}

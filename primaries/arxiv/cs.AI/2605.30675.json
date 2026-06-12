@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30675",
+  "title": "Human-Alignment, Calibration, and Activation Patterns in Large Language Model Uncertainty",
+  "abstract": "Uncertainty Quantification is a large and growing subfield of large language model behavioral analysis. Primarily to recognize and combat hallucination, the field has largely focused on measuring and improving calibration, the accuracy of uncertainty judgments to task efficacy. In this work, we investigate the relatively underexplored question of how similar large language model uncertainty is to human uncertainty. We investigate the presence and strength of human-similar uncertainty signals, deemed uncertainty alignment, in large language model overt behavior and internal activation patterns. We identify whether the models show evidence of simultaneous alignment and calibration on a variety of datasets covering both multiple choice and open ended factual recall. And we characterize the effect of instruct fine-tuning on each of these facets.",
+  "link": "https://arxiv.org/abs/2605.30675",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358077Z"
+}

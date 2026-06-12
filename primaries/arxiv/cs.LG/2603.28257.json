@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.28257",
+  "title": "Nonlinear Factor Decomposition via Kolmogorov-Arnold Networks: A Spectral Approach to Asset Return Analysis",
+  "abstract": "KAN-PCA is an autoencoder that uses a KAN as encoder and a linear map as decoder. It generalizes classical PCA by replacing linear projections with learned B-spline functions on each edge. The motivation is to capture more variance than classical PCA, which becomes inefficient during market crises when the linear assumption breaks down and correlations between assets change dramatically.\n  We prove that if the spline activations are forced to be linear, KAN-PCA yields exactly the same results as classical PCA, establishing PCA as a special case. Experiments on 20 S&P 500 stocks (2015-2024) show that KAN-PCA achieves a reconstruction R^2 of 66.57%, compared to 62.99% for classical PCA with the same 3 factors, while matching PCA out-of-sample after correcting for data leakage in the training procedure.",
+  "link": "https://arxiv.org/abs/2603.28257",
+  "category": "cs.LG",
+  "categories": [
+    "q-fin.ST",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884644+00:00"
+}

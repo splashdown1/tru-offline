@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31312",
+  "title": "Learning from Fine-Grained Visual Discrepancies: Mitigating Multimodal Hallucinations via In-Context Visual Contrastive Optimization",
+  "abstract": "Multimodal hallucination remains a persistent challenge for Vision-Language Models (VLMs). Standard textual Direct Preference Optimization (DPO) often fails to mitigate it due to a lack of explicit visual supervision. While existing works introduce visual preference DPO by contrasting original images against negative ones, they suffer from a theoretically inconsistent objective caused by partition function mismatches and rely on coarse-grained negatives that could enable shortcut learning. In this work, we propose In-Context Visual Contrastive Optimization (IC-VCO). By placing contrastive images within a shared multi-image context, IC-VCO ensures a mathematically rigorous objective. We further introduce Visual Contrast Distillation (VCDist), an auxiliary reliability-gated regularizer that encourages consistency between multi-image contrastive training and single-image inference. Finally, we propose a contrastive sample editing strategy that generates hard negatives via precise semantic perturbations. Experiments on five benchmarks demonstrate IC-VCO's best overall performance and the effectiveness of our sample editing strategy. Code and data are available at https://github.com/OPPO-Mente-Lab/IC-VCO.",
+  "link": "https://arxiv.org/abs/2605.31312",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CV",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406063Z"
+}

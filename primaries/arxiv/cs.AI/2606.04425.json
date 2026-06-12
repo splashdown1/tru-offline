@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04425",
+  "title": "What If Prompt Injection Never Left? Exploring Cross-Session Stored Prompt Injection in Agentic Systems",
+  "abstract": "Modern agentic systems transform LLMs from session-bounded assistants into stateful systems that persist and evolve shared world state across sessions through memories, filesystems, tools, and other long-lived contextual artifacts. This shift fundamentally expands the attack surface of prompt injection. However, prior works on prompt injection have largely focused on model-level threats within a single session, overlooking how cross-session persistent system state fundamentally changes the system-level risk of agentic systems. Inspired by stored cross-site scripting in web systems, we introduce cross-session stored prompt injection, where a successful injection can persist within agentic system state and silently influence future executions long after the original attacker interaction has ended. To systematically study this threat, we formalize stored prompt injection and develop a taxonomy of how adversarial content persists and affects agentic systems across sessions. We further develop a benchmark and sandbox toolkit to evaluate the risks of stored prompt injection, enabling quantitative analysis of attack success across different models, attack goals, and persistence channels. Our findings highlight that persistence transforms prompt injection from an ephemeral model-level threat into a long-lived system-level vulnerability embedded within agent execution state. We hope this work draws broader attention to this emerging threat and motivates the community to systematically study and mitigate system risks arising from persistence in agentic systems.",
+  "link": "https://arxiv.org/abs/2606.04425",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CR",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098211+00:00"
+}

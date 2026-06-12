@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.21340",
+  "title": "HiPPO Zoo: Explicit Memory Mechanisms for Interpretable State Space Models",
+  "abstract": "Representing the past in a compressed, efficient, and informative manner is a central problem for systems trained on sequential data. The HiPPO framework, originally proposed by Gu & Dao et al., provides a principled approach to sequential compression by projecting signals onto orthogonal polynomial (OP) bases via structured linear ordinary differential equations. Subsequent works have embedded these dynamics in state space models (SSMs), where HiPPO structure serves as an initialization. Nonlinear successors of these SSM methods such as Mamba are state-of-the-art for many tasks with long-range dependencies, but the mechanisms by which they represent and prioritize history remain largely implicit. In this work, we revisit the HiPPO framework with the goal of making these mechanisms explicit. We show how polynomial representations of history can be extended to support capabilities of modern SSMs such as adaptive memory allocation and associative memory, while retaining direct interpretability in the OP basis. We introduce a unified framework comprising five such extensions, which we collectively refer to as a \"HiPPO zoo.\" Each extension exposes a specific modeling capability through an explicit, interpretable modification of the HiPPO framework. The resulting models adapt their memory online and train in streaming settings with efficient updates. We illustrate the behaviors and modeling advantages of these extensions through a range of synthetic sequence modeling tasks, demonstrating that capabilities typically associated with modern SSMs can be realized through explicit, interpretable polynomial memory structures.",
+  "link": "https://arxiv.org/abs/2602.21340",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307951Z"
+}

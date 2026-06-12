@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06236",
+  "title": "Tracing the Oracle: Improving Diffusion Timestep Scheduling for 3D CT Reconstruction",
+  "abstract": "Pretrained diffusion models demonstrate impressive potential in solving highly ill-posed 3D computed tomography (CT) inverse problems, while the inference process suffers from significant computational overhead. Furthermore, existing uniform timestep schedules fail to capture the non-uniform evolution of the reverse conditional diffusion stochastic differential equation, thereby introducing substantial truncation errors. To overcome this limitation, we propose Tracing the Oracle (TrO), a plug-and-play framework for improved timestep scheduling. Specifically, we treat densely sampled numerical integration trajectories on a few samples as the reference oracle. The optimized schedule is extracted by leveraging dynamic programming to globally minimize the cumulative error between the few-step approximation and the oracle. This mechanism precisely allocates the limited sampling steps to critical evolution stages that are highly susceptible to truncation errors. Our extensive experiments on the AAPM dataset across multiple 3D CT reconstruction tasks demonstrate that, when combined with the state-of-the-art 3D CT reconstruction method DDS, our optimized timesteps significantly improve reconstruction fidelity and computational efficiency compared to existing heuristic schedules, especially under a strict budget of no more than 10 sampling steps.",
+  "link": "https://arxiv.org/abs/2606.06236",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882617+00:00"
+}

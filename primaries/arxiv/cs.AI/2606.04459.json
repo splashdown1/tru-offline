@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.04459",
+  "title": "Token Rankings are Unforgeable Language Model Signatures",
+  "abstract": "Language model parameters are known to impose unique (to each model) geometric constraints on their logit outputs, which serves as a signature that identifies the model, but also leaks the model's final layer parameters when an API distributes logits. We investigate more restrictive APIs that expose token rankings (i.e., their ordering by probability, but not the probability values) and find that rankings also constitute a signature: every model has a unique set of feasible top-$k$ rankings for sufficiently large $k$. Furthermore, the ranking signature is the first known (polynomially) unforgeable signature, since finding a model with the same set of feasible rankings is NP-hard. On the security front, we find that token rankings are already sufficient to approximately steal the final layer of the model, similar to logits, though the approximation is too coarse to forge the signature, and can be effectively countered by restricting the API to top-$k$ tokens with sufficiently small $k$. Since the top-$k$ required to present the model signature is generally smaller than the $k$ required to prevent stealing, it is possible for an API to present an unforgeable signature without leaking model parameters.",
+  "link": "https://arxiv.org/abs/2606.04459",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CR",
+    "cs.AI",
+    "cs.CC",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098231+00:00"
+}

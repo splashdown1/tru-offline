@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2604.21928",
+  "title": "Evaluation of Automatic Speech Recognition Using Generative Large Language Models",
+  "abstract": "Automatic Speech Recognition (ASR) is traditionally evaluated using Word Error Rate (WER), a metric that is insensitive to meaning. Embedding-based semantic metrics are better correlated with human perception, but decoder-based Large Language Models (LLMs) remain underexplored for this task. This paper evaluates their relevance through three approaches: (1) selecting the best hypothesis between two candidates, (2) computing semantic distance using generative embeddings, and (3) qualitative classification of errors. On the HATS dataset, the best LLMs achieve 92--94\\% agreement with human annotators for hypothesis selection, compared to 63\\% for WER, also outperforming semantic metrics. Embeddings from decoder-based LLMs show performance comparable to encoder models. Finally, LLMs offer a promising direction for interpretable and semantic ASR evaluation.",
+  "link": "https://arxiv.org/abs/2604.21928",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406215Z"
+}

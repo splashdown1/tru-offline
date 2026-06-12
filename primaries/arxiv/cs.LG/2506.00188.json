@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2506.00188",
+  "title": "Cluster-Aware Causal Mixer for Online Anomaly Detection in Multivariate Time Series",
+  "abstract": "Early and accurate detection of anomalies in time-series data is critical due to the substantial risks associated with false or missed detections. While MLP-based mixer models have shown promise in time-series analysis, they do not maintain temporal causality during data processing. Moreover, real-world multivariate time series often contain numerous channels with diverse inter-channel correlations. Spurious correlations in the reconstructed time series lead to noisy representations, resulting in inaccurate anomaly detection. In addition, anomaly scoring methods that ignore temporal continuity can mislead sequential detection. To address these challenges, we propose a cluster-aware causal mixer for multivariate time-series anomaly detection. Channels are grouped into clusters based on their correlations, and each cluster is embedded through a dedicated embedding layer. A causal mixer is introduced to integrate information while maintaining temporal causality. We further develop a sequential anomaly-scoring method that accumulates evidence over time and refines anomaly boundaries. Our proposed model operates in an online fashion, making it suitable for real-time time-series anomaly detection. Experimental evaluations across six public benchmark datasets demonstrate that the proposed approach consistently achieves superior performance.",
+  "link": "https://arxiv.org/abs/2506.00188",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883882+00:00"
+}

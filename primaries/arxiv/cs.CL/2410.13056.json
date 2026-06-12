@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2410.13056",
+  "title": "Channel-Wise Mixed-Precision Quantization for Large Language Models",
+  "abstract": "Large Language Models (LLMs) have demonstrated remarkable success across a wide range of language tasks, but their deployment on edge devices remains challenging due to the substantial memory requirements imposed by their large parameter sizes. Weight-only quantization presents a promising solution to reduce the memory footprint of LLMs. However, existing approaches primarily focus on integer-bit quantization, limiting their adaptability to fractional-bit quantization tasks and preventing the full utilization of available storage space on devices. In this paper, we introduce Channel-Wise Mixed-Precision Quantization (CMPQ), a novel mixed-precision quantization method that allocates quantization precision in a channel-wise pattern based on activation distributions. By assigning different precision levels to different weight channels, CMPQ supports arbitrary average bit-widths in the low-bit regime (e.g., between 2 and 4 bits). CMPQ employs a non-uniform quantization strategy and incorporates two outlier extraction techniques that collaboratively preserve the critical information, thereby minimizing the quantization loss. Experiments on nine different LLMs demonstrate that CMPQ not only enhances performance in integer-bit quantization tasks but also achieves significant performance gains with a modest increase in memory usage by performing in a mixed-precision way. CMPQ represents an adaptive and effective approach to LLM quantization, offering substantial benefits across diverse device capabilities.",
+  "link": "https://arxiv.org/abs/2410.13056",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498345+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31308",
+  "title": "TraceGraph: Shared Decision Landscapes for Diagnosing and Improving Agent Trajectories",
+  "abstract": "Agent benchmarks increasingly record rich interaction trajectories, yet evaluation often reduces each rollout to a pass rate or reward score. We introduce TraceGraph, a graph-based framework that turns released multi-model agent trajectories into shared decision landscapes. For each task, TraceGraph builds a graph over observable action-observation states from pooled rollouts before model identity is introduced. It then overlays outcome-informed productive cores and trap regions, and summarizes each rollout with three events: Access, Trap exposure, and Repair. Across trajectories spanning five benchmark splits, TraceGraph profiles reveal navigation differences hidden by aggregate scores and show that splits differ in whether they reward avoiding traps or recovering from them. The same TraceGraph landscape also motivates a trap-aware recovery pipeline for SWE-bench: aruntime detector fires on states matching historical trap regions, then lightweight continuation policies are evaluated from the same prefix. On fired states, the best pooled single-factor policy raises official resolved rate from 40.4% to 43.5% on the per-provider fired subset and from 41.0% to 44.8% on common-fired instances, with provider-specific active components. Overall, TraceGraph provides a process vocabulary for asking what agent benchmarks test, where models diverge on a shared landscape, and how failure regions can guide downstream improvement.",
+  "link": "https://arxiv.org/abs/2605.31308",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.357868Z"
+}

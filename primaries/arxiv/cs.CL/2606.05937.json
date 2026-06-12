@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05937",
+  "title": "Large Language Models are Perplexed by some Political Parties",
+  "abstract": "Large Language Models (LLMs) are increasingly used, including in political applications, but their political fairness has been little studied. We assess it using perplexity, posing that a fair model should give equal probability to all political groups. However, we find, across ten LLMs and three datasets covering 37 languages, that LLMs are more perplexed by the texts of far right and nationalist parties than of social-democratic parties. We find this to be consistent with previous work on translation fairness, to the point that perplexity correlates with downstream translation metrics. Our method is applicable to both base LLMs as well as their instruction-tuned counterpart, and we find that both are highly correlated, suggesting that the political fairness of LLMs stems from their pretraining, and is hardly affected by instruction-tuning.",
+  "link": "https://arxiv.org/abs/2606.05937",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497941+00:00"
+}

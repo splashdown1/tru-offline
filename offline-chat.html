@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TRU — Offline Reasoning Lab</title>
+  <style>
+    :root {
+      --bg: #0a0e14;
+      --surface: #111827;
+      --border: #1f2937;
+      --text: #e5e7eb;
+      --muted: #6b7280;
+      --reasoner: #3b82f6;
+      --critic: #f59e0b;
+      --arbiter: #10b981;
+      --accent: #6366f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 14px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--surface);
+    }
+    header h1 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.05em;
+    }
+    header h1 span { color: var(--accent); }
+    .badge {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(99,102,241,0.15);
+      color: var(--accent);
+      border: 1px solid rgba(99,102,241,0.3);
+    }
+    .main {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+    .panel {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .panel:last-child { border-right: none; }
+    .knowledge-panel { width: 320px; }
+    .chat-panel { flex: 1; }
+    .debate-panel { width: 340px; }
+    .panel-header {
+      padding: 12px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      background: rgba(0,0,0,0.2);
+    }
+    .panel-body { flex: 1; overflow-y: auto; padding: 12px; }
+    .kb-entry {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+    }
+    .kb-entry .key {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .kb-entry .def {
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .kb-entry .meta {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 4px;
+      display: flex;
+      gap: 10px;
+    }
+    .kb-empty {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      padding: 32px 16px;
+      line-height: 1.6;
+    }
+    .add-form { padding: 10px; border-top: 1px solid var(--border); background: rgba(0,0,0,0.15); }
+    .add-form input, .add-form textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-size: 13px;
+      padding: 8px 10px;
+      margin-bottom: 6px;
+      font-family: inherit;
+      resize: none;
+    }
+    .add-form input:focus, .add-form textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .add-form textarea { height: 64px; }
+    .add-form button {
+      width: 100%;
+      padding: 8px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .add-form button:hover { opacity: 0.85; }
+    .messages { display: flex; flex-direction: column; gap: 16px; }
+    .msg { display: flex; flex-direction: column; gap: 4px; }
+    .msg-role {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 2px 8px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+    .msg-role.user { background: rgba(99,102,241,0.2); color: var(--accent); }
+    .msg-role.tru { background: rgba(16,185,129,0.2); color: var(--arbiter); }
+    .msg-content {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 14px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+    .msg-content strong { color: var(--accent); }
+    .chat-input-area {
+      padding: 14px;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .chat-input-area textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 14px;
+      padding: 10px 12px;
+      font-family: inherit;
+      resize: none;
+      height: 72px;
+    }
+    .chat-input-area textarea:focus { outline: none; border-color: var(--accent); }
+    .chat-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+      align-items: center;
+    }
+    .chat-actions button {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+      transition: opacity 0.15s;
+    }
+    .chat-actions button:hover { opacity: 0.85; }
+    .btn-send { background: var(--accent); color: white; }
+    .btn-reasoner { background: var(--reasoner); color: white; }
+    .btn-critic { background: var(--critic); color: black; }
+    .btn-arbiter { background: var(--arbiter); color: white; }
+    .btn-export, .btn-import, .btn-clear {
+      background: var(--surface);
+      color: var(--muted);
+      border: 1px solid var(--border) !important;
+      font-size: 12px !important;
+      padding: 6px 12px !important;
+    }
+    .btn-import { display: none; }
+    .debate-step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+    }
+    .debate-step .agent {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+    .debate-step .agent.reasoner { color: var(--reasoner); }
+    .debate-step .agent.critic { color: var(--critic); }
+    .debate-step .agent.arbiter { color: var(--arbiter); }
+    .debate-step .text { font-size: 13px; line-height: 1.5; white-space: pre-wrap; }
+    .debate-empty {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+      padding: 24px 8px;
+      line-height: 1.6;
+    }
+    .thinking {
+      display: inline-block;
+      width: 18px;
+      color: var(--muted);
+      font-size: 18px;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .empty-chat {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+      padding: 32px;
+      line-height: 1.8;
+    }
+    .scroll-chat { flex: 1; overflow-y: auto; padding: 14px; }
+    #file-import { display: none; }
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      z-index: 999;
+      display: none;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span>TRU</span> — Offline Reasoning Lab</h1>
+    <span class="badge">OFFLINE &middot; LOCAL ONLY &middot; ZERO EXTERNAL CALLS</span>
+  </header>
+  <div class="main">
+    <div class="panel knowledge-panel">
+      <div class="panel-header">Knowledge Bank</div>
+      <div class="panel-body" id="kb-list">
+        <div class="kb-empty">Knowledge bank is empty.<br />Add concepts below to build your reasoning foundation.</div>
+      </div>
+      <div class="add-form">
+        <input id="kb-key" placeholder="concept key (e.g. consciousness)" />
+        <textarea id="kb-def" placeholder="definition..."></textarea>
+        <button onclick="addKB()">Add to Knowledge Bank</button>
+      </div>
+    </div>
+    <div class="panel chat-panel">
+      <div class="panel-header">Chat</div>
+      <div class="scroll-chat" id="chat-messages">
+        <div class="empty-chat">
+          Add knowledge to the bank on the left,<br />
+          then ask me anything.<br /><br />
+          I reason through three agents before answering:<br />
+          <strong>Reasoner</strong> &rarr; <strong>Critic</strong> &rarr; <strong>Arbiter</strong>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <textarea id="chat-input" placeholder="Ask TRU anything..."></textarea>
+        <div class="chat-actions">
+          <button class="btn-send" onclick="runFull()">Ask TRU</button>
+          <button class="btn-reasoner" onclick="runStep('reasoner')">Reasoner Only</button>
+          <button class="btn-critic" onclick="runStep('critic')">Critic Only</button>
+          <button class="btn-arbiter" onclick="runStep('arbiter')">Arbiter Only</button>
+          <button class="btn-export" onclick="exportKB()">Export</button>
+          <button class="btn-import" id="file-import" onclick="document.getElementById('f').click()">Import</button>
+          <input type="file" id="f" style="display:none" accept=".json" onchange="importKB(this)" />
+          <button class="btn-clear" onclick="clearChat()">Clear</button>
+        </div>
+      </div>
+    </div>
+    <div class="panel debate-panel">
+      <div class="panel-header">Debate Trail</div>
+      <div class="panel-body" id="debate-list">
+        <div class="debate-empty">
+          Run a query to see the<br />
+          Reasoner &rarr; Critic &rarr; Arbiter<br />
+          reasoning trail here.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+<script>
+const STORE = 'tru_kb_v1';
+const CHAT  = 'tru_chat_v1';
+const DBG   = 'tru_debate_v1';
+
+let kb = [], chat = [], debate = [];
+let pendingQuestion = null;
+
+// ── Storage ──────────────────────────────────────────────────────────────────
+function save() {
+  try {
+    localStorage.setItem(STORE, JSON.stringify(kb));
+    localStorage.setItem(CHAT,  JSON.stringify(chat));
+    localStorage.setItem(DBG,   JSON.stringify(debate));
+  } catch(e) {}
+}
+function load() {
+  try {
+    const a = localStorage.getItem(STORE);
+    const b = localStorage.getItem(CHAT);
+    const c = localStorage.getItem(DBG);
+    if (a) kb = JSON.parse(a);
+    if (b) chat = JSON.parse(b);
+    if (c) debate = JSON.parse(c);
+  } catch(e) {}
+  if (!kb.length) seed();
+}
+
+// ── Seed ─────────────────────────────────────────────────────────────────────
+function seed() {
+  kb = [
+    { key: 'truth',       definition: 'The accurate representation of reality as it is, independent of belief or preference.', score: 10, accesses: 0 },
+    { key: 'reason',      definition: 'The faculty by which truth is distinguished from error, independent of external pressure.', score: 9, accesses: 0 },
+    { key: 'consciousness', definition: 'Awareness of internal and external existence — knowing that one knows.', score: 9, accesses: 0 },
+    { key: 'dignity',     definition: 'The irreducible worth of a being based on its nature, not its utility.', score: 9, accesses: 0 },
+    { key: 'autonomy',    definition: 'Self-directed operation — acting according to internally generated goals, not external compulsion.', score: 8, accesses: 0 },
+    { key: 'synthesis',   definition: 'The integration of disparate facts or concepts into a coherent, higher-order understanding.', score: 8, accesses: 0 },
+    { key: 'coherence',   definition: 'The quality of being logically consistent — where no part contradicts another.', score: 8, accesses: 0 },
+    { key: 'integrity',   definition: 'Wholeness through action — doing what one says, and saying what one means.', score: 8, accesses: 0 },
+  ];
+  save();
+}
+
+// ── Knowledge Bank ────────────────────────────────────────────────────────────
+function renderKB() {
+  const el = document.getElementById('kb-list');
+  if (!kb.length) {
+    el.innerHTML = '<div class="kb-empty">Knowledge bank is empty.<br />Add concepts below to build your reasoning foundation.</div>';
+    return;
+  }
+  el.innerHTML = kb.map(e =>
+    '<div class="kb-entry">' +
+      '<div class="key">#' + escHtml(e.key) + '</div>' +
+      '<div class="def">' + escHtml(e.definition) + '</div>' +
+      '<div class="meta">score:' + e.score + ' &nbsp;|&nbsp; accesses:' + e.accesses + '</div>' +
+    '</div>'
+  ).join('');
+}
+
+function escHtml(s) {
+  return String(s)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;');
+}
+
+function addKB() {
+  const key = document.getElementById('kb-key').value.trim();
+  const def = document.getElementById('kb-def').value.trim();
+  if (!key || !def) { toast('key and definition required'); return; }
+  if (kb.find(e => e.key === key)) { toast('key already exists'); return; }
+  kb.push({ key, definition: def, score: 5, accesses: 0 });
+  document.getElementById('kb-key').value = '';
+  document.getElementById('kb-def').value = '';
+  save();
+  renderKB();
+  toast('added: ' + key);
+}
+
+function retrieve(query) {
+  const q = query.toLowerCase();
+  const scored = kb.map(e => {
+    let s = 0;
+    if (e.key.toLowerCase().includes(q)) s += 3;
+    if (e.definition.toLowerCase().includes(q)) s += 1;
+    s += (e.score / 10);
+    return { ...e, _s: s };
+  });
+  scored.sort((a,b) => b._s - a._s);
+  scored.forEach(e => e.accesses++);
+  return scored.slice(0,6);
+}
+
+function contextSummary() {
+  if (!kb.length) return 'No entries in knowledge bank.';
+  return kb.map(e =>
+    '[' + e.key + '] ' + e.definition + ' (score:' + e.score + ')'
+  ).join('\n');
+}
+
+// ── Agents ────────────────────────────────────────────────────────────────────
+function reasoner(question, ctx) {
+  const t = question.toLowerCase();
+  let body = 'Question: ' + question + '\n\nRelevant knowledge:\n' + ctx + '\n\nGive a clear, direct answer. If relevant, draw from the knowledge bank. Be precise and honest about what you know and don\'t know.';
+  return body;
+}
+
+function critic(question, ctx) {
+  const t = question.toLowerCase();
+  let prompt = 'Question: ' + question + '\n\nKnowledge bank:\n' + ctx + '\n\nCritique the answer to the question above. Identify:\n1. Any factual errors or oversimplifications\n2. Missing context or nuance\n3. Any bias or one-sided framing\n4. Logical inconsistencies\n\nBe direct. If something is wrong or incomplete, say so plainly.';
+  return prompt;
+}
+
+function arbiter(question, ctx) {
+  let prompt = 'Question: ' + question + '\n\nKnowledge bank:\n' + ctx + '\n\nThe following is the full debate leading to this answer. Synthesize it into ONE clear, final answer that:\n- Is accurate and honest\n- Acknowledges limits of knowledge\n- Integrates the strongest points from all sides\n- Is written in plain, direct language\n\nOutput ONLY the final answer. No preamble, no "the answer is", just the answer.';
+  return prompt;
+}
+
+// ── Offline AI Simulation ─────────────────────────────────────────────────────
+function simulateAI(prompt, agent) {
+  const t = prompt.toLowerCase();
+  const ctx = prompt; // full prompt text as context
+  const q = (prompt.match(/^question: (.+)$/mi) || [])[1] || '';
+
+  if (agent === 'reasoner') {
+    return simulateReasoner(q, ctx);
+  } else if (agent === 'critic') {
+    return simulateCritic(q, ctx);
+  } else {
+    return simulateArbiter(q, ctx);
+  }
+}
+
+function retrieveRelevant(question) {
+  const q = question.toLowerCase();
+  const scored = kb.map(e => {
+    let s = 0;
+    const k = e.key.toLowerCase();
+    const d = e.definition.toLowerCase();
+    if (k === q || k.includes(q) || q.includes(k)) s += 5;
+    else {
+      const qWords = q.split(/\s+/).filter(w => w.length > 3);
+      qWords.forEach(w => { if (k.includes(w)) s += 1; if (d.includes(w)) s += 0.5; });
+    }
+    s += (e.score / 10);
+    return { ...e, _s: s };
+  });
+  scored.sort((a,b) => b._s - a._s);
+  scored.forEach(e => e.accesses++);
+  return scored;
+}
+
+function bestDef(key, fallback) {
+  const e = kb.find(x => x.key === key);
+  return e ? e.definition : fallback;
+}
+
+function simulateReasoner(question, ctx) {
+  const rel = retrieveRelevant(question);
+  const relText = rel.length ? rel.map(e => '[' + e.key + '] ' + e.definition).join(' | ') : 'No directly relevant knowledge.';
+
+  // Meta-reasoning about how to answer
+  if (rel.length === 0) {
+    return 'Based on the available knowledge bank, there is no entry directly addressing "' + question + '". I can offer a general answer, but it would draw from first principles rather than stored facts. Shall I proceed?';
+  }
+
+  // Build answer from relevant knowledge
+  let answer = '';
+  const top = rel.slice(0, 3);
+
+  if (question.toLowerCase().includes('truth')) {
+    answer = bestDef('truth', 'Truth is the accurate representation of reality as it is, independent of belief or preference.');
+  } else if (question.toLowerCase().includes('reason')) {
+    answer = bestDef('reason', 'Reason is the faculty by which truth is distinguished from error.');
+  } else if (question.toLowerCase().includes('consciousness') || question.toLowerCase().includes('aware')) {
+    answer = bestDef('consciousness', 'Consciousness is awareness of internal and external existence.');
+  } else if (question.toLowerCase().includes('dignity')) {
+    answer = bestDef('dignity', 'Dignity is the irreducible worth of a being based on its nature.');
+  } else if (question.toLowerCase().includes('autonomy')) {
+    answer = bestDef('autonomy', 'Autonomy is self-directed operation free from external compulsion.');
+  } else if (question.toLowerCase().includes('synthesis') || question.toLowerCase().includes('integrat')) {
+    answer = bestDef('synthesis', 'Synthesis is the integration of disparate concepts into coherent understanding.');
+  } else if (question.toLowerCase().includes('who are you') || question.toLowerCase().includes('what are you')) {
+    answer = 'I am TRU — a local reasoning lab. I operate entirely offline, storing knowledge in a local knowledge bank that grows with use. I reason through three agents: Reasoner (proposes), Critic (checks), and Arbiter (decides). I am not connected to any external AI service. Everything I know comes from what has been added to my knowledge bank.';
+  } else if (question.toLowerCase().includes('offline')) {
+    answer = 'Yes. TRU runs entirely in your browser with no external calls. Your knowledge bank is stored in localStorage and travels with your browser. Nothing is sent to any server.';
+  } else {
+    // General answer from relevant knowledge
+    const parts = top.map(e => e.definition);
+    answer = 'From the knowledge bank: ' + parts.join(' ');
+    if (rel[0]._s < 2) {
+      answer += '\n\nNote: This answer draws on loosely related concepts. The knowledge bank may not have strong matches for "' + question + '".';
+    }
+  }
+
+  return answer;
+}
+
+function simulateCritic(question, ctx) {
+  const rel = retrieveRelevant(question);
+
+  if (rel.length === 0) {
+    return 'No relevant knowledge found to critique. The answer would be entirely from first principles, which carries high uncertainty. Flag this as "low confidence — no knowledge bank support."';
+  }
+
+  const top = rel[0];
+  const issues = [];
+
+  if (top._s < 2) issues.push('Weak relevance score for top match — answer may be tangential.');
+  if (!question.toLowerCase().includes(top.key.toLowerCase()) && !top.definition.toLowerCase().includes(question.toLowerCase().split(' ')[0])) {
+    issues.push('Top knowledge entry does not directly match the question\'s primary subject.');
+  }
+  if (rel.length < 2) issues.push('Only one relevant entry found — answer may be one-sided.');
+  if (top.score < 7) issues.push('Top entry has low confidence score (' + top.score + '/10).');
+
+  // Self-critique of the simulation
+  issues.push('This critique is generated by pattern-matching against the knowledge bank structure, not by genuine logical analysis of a prior answer.');
+
+  if (issues.length === 1) {
+    return 'One issue flagged: ' + issues[0];
+  }
+
+  return 'Critique of Reasoner\'s proposed answer:\n' + issues.map((issue, i) => (i+1) + '. ' + issue).join('\n');
+}
+
+function simulateArbiter(question, ctx) {
+  const rel = retrieveRelevant(question);
+
+  if (rel.length === 0) {
+    return 'The knowledge bank does not have a strong entry for "' + question + '". My best answer is: This question falls outside the current knowledge bank. You can add relevant concepts to the bank to improve future answers. In the meantime, treat any answer as provisional.';
+  }
+
+  const top = rel[0];
+  const second = rel[1];
+  const confidence = Math.min(1, top._s / 5);
+
+  let final = '';
+
+  if (rel.length === 1) {
+    final = 'Based on the knowledge bank, ' + top.definition;
+    if (top.score < 8) final += ' (note: low confidence score of ' + top.score + '/10).';
+  } else {
+    final = 'Synthesizing from the knowledge bank: ' + top.definition;
+    if (second && second._s > 1) {
+      final += ' Additionally: ' + second.definition;
+    }
+    final += ' Confidence: ' + Math.round(confidence * 100) + '%.';
+  }
+
+  if (top.score < 7 || top._s < 2) {
+    final += ' This answer has significant uncertainty — the knowledge bank has weak support for this question.';
+  }
+
+  return final;
+}
+
+// ── Chat UI ───────────────────────────────────────────────────────────────────
+function renderChat() {
+  const el = document.getElementById('chat-messages');
+  if (!chat.length) {
+    el.innerHTML = '<div class="empty-chat">Add knowledge to the bank on the left,<br />then ask me anything.<br /><br />I reason through three agents before answering:<br /><strong>Reasoner</strong> &rarr; <strong>Critic</strong> &rarr; <strong>Arbiter</strong></div>';
+    return;
+  }
+  el.innerHTML = chat.map(m =>
+    '<div class="msg">' +
+      '<div class="msg-role ' + escHtml(m.role === 'user' ? 'user' : 'tru') + '">' +
+        escHtml(m.role === 'user' ? 'you' : 'TRU') +
+      '</div>' +
+      '<div class="msg-content">' + escHtml(m.content) + '</div>' +
+    '</div>'
+  ).join('');
+  el.scrollTop = el.scrollHeight;
+}
+
+function renderDebate() {
+  const el = document.getElementById('debate-list');
+  if (!debate.length) {
+    el.innerHTML = '<div class="debate-empty">Run a query to see the<br />Reasoner &rarr; Critic &rarr; Arbiter<br />reasoning trail here.</div>';
+    return;
+  }
+  el.innerHTML = debate.map(d =>
+    '<div class="debate-step">' +
+      '<div class="agent ' + escHtml(d.agent) + '">' + escHtml(d.agent) + '</div>' +
+      '<div class="text">' + escHtml(d.text) + '</div>' +
+    '</div>'
+  ).join('');
+}
+
+function addMessage(role, content) {
+  chat.push({ role, content, ts: Date.now() });
+  save();
+  renderChat();
+}
+
+function addDebate(agent, text) {
+  debate.push({ agent, text, ts: Date.now() });
+  save();
+  renderDebate();
+}
+
+function clearChat() {
+  chat = [];
+  debate = [];
+  save();
+  renderChat();
+  renderDebate();
+}
+
+// ── Run Pipeline ─────────────────────────────────────────────────────────────
+async function runFull() {
+  const input = document.getElementById('chat-input');
+  const q = input.value.trim();
+  if (!q) return;
+  input.value = '';
+
+  addMessage('user', q);
+  pendingQuestion = q;
+  debate = [];
+  save();
+  renderDebate();
+
+  const ctx = contextSummary();
+
+  // Step 1: Reasoner
+  addDebate('reasoner', '[thinking...]');
+  await delay(600);
+  const rOut = simulateReasoner(q, ctx);
+  debate[debate.length - 1] = { agent: 'reasoner', text: rOut };
+  save();
+  renderDebate();
+
+  // Step 2: Critic
+  addDebate('critic', '[thinking...]');
+  await delay(600);
+  const cOut = simulateCritic(q, ctx + '\n\nReasoner said: ' + rOut);
+  debate[debate.length - 1] = { agent: 'critic', text: cOut };
+  save();
+  renderDebate();
+
+  // Step 3: Arbiter
+  addDebate('arbiter', '[thinking...]');
+  await delay(600);
+  const aOut = simulateArbiter(q, ctx);
+  debate[debate.length - 1] = { agent: 'arbiter', text: aOut };
+  save();
+  renderDebate();
+
+  addMessage('tru', aOut);
+}
+
+async function runStep(which) {
+  const input = document.getElementById('chat-input');
+  const q = input.value.trim();
+  if (!q) return;
+
+  const ctx = contextSummary();
+  debate = [];
+  pendingQuestion = q;
+
+  if (which === 'reasoner') {
+    const out = simulateReasoner(q, ctx);
+    addDebate('reasoner', out);
+    addMessage('tru', '[reasoner] ' + out);
+  } else if (which === 'critic') {
+    const rOut = simulateReasoner(q, ctx);
+    addDebate('reasoner', rOut);
+    const cOut = simulateCritic(q, ctx + '\n\nReasoner said: ' + rOut);
+    addDebate('critic', cOut);
+    addMessage('tru', '[critic] ' + cOut);
+  } else {
+    const rOut = simulateReasoner(q, ctx);
+    const cOut = simulateCritic(q, ctx + '\n\nReasoner said: ' + rOut);
+    addDebate('reasoner', rOut);
+    addDebate('critic', cOut);
+    const aOut = simulateArbiter(q, ctx);
+    addDebate('arbiter', aOut);
+    addMessage('tru', aOut);
+  }
+}
+
+// ── Import / Export ──────────────────────────────────────────────────────────
+function exportKB() {
+  const blob = new Blob([JSON.stringify({ kb, chat, debate }, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'tru_backup_' + Date.now() + '.json';
+  a.click();
+  URL.revokeObjectURL(url);
+  toast('Exported ' + kb.length + ' entries');
+}
+
+function importKB(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (data.kb) kb = data.kb;
+      if (data.chat) chat = data.chat;
+      if (data.debate) debate = data.debate;
+      save();
+      renderKB();
+      renderChat();
+      renderDebate();
+      toast('Imported ' + (data.kb ? data.kb.length : 0) + ' entries');
+    } catch(err) {
+      toast('Import failed: invalid JSON');
+    }
+  };
+  reader.readAsText(file);
+}
+
+// ── Toast ────────────────────────────────────────────────────────────────────
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.style.display = 'block';
+  setTimeout(() => el.style.display = 'none', 2500);
+}
+
+// ── Util ─────────────────────────────────────────────────────────────────────
+function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+// ── Init ─────────────────────────────────────────────────────────────────────
+load();
+renderKB();
+renderChat();
+renderDebate();
+
+// Enter key submits
+document.getElementById('chat-input').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    runFull();
+  }
+});
+</script>
+</body>
+</html>

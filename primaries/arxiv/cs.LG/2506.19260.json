@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2506.19260",
+  "title": "Topology-Aware Differential Privacy in Federated Learning",
+  "abstract": "Federated learning transmits only model updates to protect client data, and differentially private SGD (DP-SGD) bounds content-level leakage through those updates. Neither mechanism accounts for what the communication topology of the federation itself reveals. In cross-silo deployments, a passive adversary with knowledge of the topology and organisational structure has access to information channels that DP-SGD leaves entirely unaddressed. We formalise this threat and derive a principled defense. We introduce TADI (Topology-Aware Distributional Inference), a shadow-trained channel decomposition that isolates per-client leakage into parameter, structural, and organisational components via four channel ablations, and prove an additive per-client mutual-information bound separating a controllable mechanism term from an uncontrollable prior-coupling floor. From this bound we derive Fulcrum, a closed-form balanced min-max optimal noise allocation that strictly dominates uniform DP-SGD whenever the federation's leverage profile is asymmetric, and degenerates exactly to uniform DP-SGD when it is not, making it safe to adopt unconditionally. Evaluated on Fed-ISIC2019, Fed-Heart-Disease, and synthetic CIFAR-10 across six topology families, Fulcrum delivers privacy gains of up to 1.967 nats at no measurable utility cost. The TADI channel decomposition confirms that the parameter channel is bounded by DP-SGD across all settings, the prior-coupling channel is empirically attained under matched-prior conditions, and the bound is conservative in a deployment-favourable direction under realistic cross-silo threat models.",
+  "link": "https://arxiv.org/abs/2506.19260",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CR",
+    "cs.DC",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884468+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2603.09391",
+  "title": "Physics-Informed Neural Engine Sound Modeling with Differentiable Pulse-Train Synthesis",
+  "abstract": "Engine sounds originate from sequential exhaust pressure pulses rather than sustained harmonic oscillations. While neural synthesis methods typically aim to approximate the resulting spectral characteristics, we propose directly modeling the underlying pulse shapes and temporal structure. We present the Pulse-Train-Resonator (PTR) model, a differentiable synthesis architecture that generates engine audio as parameterized pulse trains aligned to engine firing patterns and propagates them through recursive Karplus-Strong resonators simulating exhaust acoustics. The architecture integrates physics-informed inductive biases including harmonic decay, thermodynamic pitch modulation, valve-dynamics envelopes, exhaust system resonances and derived engine operating modes such as throttle operation and Deceleration Fuel Cutoff (DFCO). Validated on three diverse engine types totaling 7.5 hours of audio, PTR achieves a 21% improvement in harmonic reconstruction and a 5.7% reduction in total loss over a harmonic-plus-noise baseline model, while providing interpretable parameters corresponding to physical phenomena. Complete code, model weights, and audio examples are openly available.",
+  "link": "https://arxiv.org/abs/2603.09391",
+  "category": "cs.AI",
+  "categories": [
+    "cs.SD",
+    "cs.AI",
+    "eess.AS"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099128+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30603",
+  "title": "Learning effective Sargassum transport dynamics from limited drifter observations",
+  "abstract": "Floating-material transport is influenced by unresolved processes that are often absent from available circulation products. We develop a data-driven transport-learning framework for learning effective transport corrections from limited Lagrangian observations using physically motivated ocean--atmosphere diagnostics and finite-memory representations motivated in part by inertial-particle memory effects. The diagnostic representation is analyzed through predictive and sparse symbolic-discovery approaches under leave-one-trajectory-out validation. Applications to Sargassum-following drifters in the Puerto Rico region and the Gulf Stream show that the diagnostics contain transport-relevant information beyond the baseline circulation products. Multilayer perceptron (MLP) ensembles provide flexible predictive trajectory corrections, while Sparse Identification of Nonlinear Dynamics (SINDy) tests whether instantaneous or delayed sparse symbolic transport structure can be extracted from the diagnostics. The results differ across flow regimes: (i) in Puerto Rico, delayed sparse symbolic corrections provide modest but systematic improvement; (ii) in the Gulf Stream application, dynamically useful sparse symbolic corrections remain primarily instantaneous even though delayed predictive information persists. These results support finite-memory transport effects in coarse-grained floating-material transport while also illustrating the difficulty of obtaining stable delayed sparse symbolic closures.",
+  "link": "https://arxiv.org/abs/2605.30603",
+  "category": "cs.LG",
+  "categories": [
+    "physics.ao-ph",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307276Z"
+}

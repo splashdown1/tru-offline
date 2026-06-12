@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2603.14210",
+  "title": "Vavanagi: a Community-run Platform for Documentation of the Hula Language in Papua New Guinea",
+  "abstract": "We present Vavanagi, a community-run platform for Hula (Vula'a), an Austronesian language of Papua New Guinea with approximately 10,000 speakers. Vavanagi supports crowdsourced English-Hula text translation and voice recording, with elder-led review and community-governed data infrastructure. To date, 77 translators and 4 reviewers have produced over 12k parallel sentence pairs covering 9k unique Hula words. We also propose a multi-level framework for measuring community involvement, from consultation to fully community-initiated and governed projects. We position Vavanagi at Level 5: initiative, design, implementation, and data governance all sit within the Hula community, making it, to our knowledge, the first community-led language technology initiative for a language of this size. Vavanagi shows how language technology can bridge village-based and urban members, connect generations, and support cultural heritage on the community's own terms.",
+  "link": "https://arxiv.org/abs/2603.14210",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498442+00:00"
+}

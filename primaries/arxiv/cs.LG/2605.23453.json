@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.23453",
+  "title": "Class-Dependent Hybrid Data Augmentation for Multiclass Migraine Classification under Severe Class Imbalance",
+  "abstract": "We conducted a reproducibility-oriented re-evaluation of prior migraine classification studies, correcting for data leakage and metric bias. We then introduced (i) a clinically motivated aggregation of two hemiplegic subtypes following ICHD-3 {\\S}1.2.3, (ii) a class-dependent hybrid augmentation strategy that assigns generation methods based on per-class sample size, and (iii) the concept of fidelity asymmetry, motivating proportionally constrained growth as an alternative to full class balance. Experiments were performed on a dataset of 400 patients across seven migraine subtypes under a two-stage protocol, including the six-class configuration described above. Models were evaluated using stratified 5-fold cross-validation with macro-averaged F1 as the primary metric.\n  Correcting methodological flaws reduces previously inflated performance estimates, with the corrected macro-F1 baseline standing at 0.71. The proposed framework consistently outperformed individual augmenters in macro-F1 averaged across the eight evaluated classifiers (0.862 vs. 0.836 for Gaussian Copula, 0.815 for CTGAN, and 0.801 for the no-augmentation baseline), and achieved its peak result of 0.914 with FT-Transformer under proportional augmentation. The no-augmentation FT-Transformer baseline (0.896) shows that, at the per-classifier ceiling, clinically motivated class aggregation accounts for most of the absolute improvement; the framework's principal measurable contribution is the gain in average robustness across classifiers, highlighting the dominant role of problem formulation.",
+  "link": "https://arxiv.org/abs/2605.23453",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884278+00:00"
+}

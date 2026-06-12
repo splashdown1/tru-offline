@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30919",
+  "title": "De-attribute to Forget for LLM Unlearning",
+  "abstract": "The rapid development of large language models (LLMs) has raised concerns on the use of inappropriate data for training, which has led to a growing interest in LLM unlearning. Many existing LLM unlearning approaches rely on optimizing prediction loss(es), such as maximizing the loss on the forget set, but often face critical issues like over-forgetting and poor model utility. To address them, this paper novelly frames the optimization objective for LLM unlearning as one of zeroing out data attribution instead. In particular, we propose the first LLM unlearning framework based on data attribution rewards called DareU that performs reinforcement learning to update the LLM by reducing the attribution score of its generated responses (i.e., de-attributing) to the forget data owners. Empirical evaluation using an LLM classifier as an efficient approximation of attribution shows that DareU outperforms existing baselines by achieving effective unlearning while balancing forget quality and model utility well.",
+  "link": "https://arxiv.org/abs/2605.30919",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306870Z"
+}

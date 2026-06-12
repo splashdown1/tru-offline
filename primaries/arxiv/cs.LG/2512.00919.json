@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2512.00919",
+  "title": "Outcome-Aware Spectral Feature Learning for Instrumental Variable Regression",
+  "abstract": "We address the problem of causal effect estimation in the presence of hidden confounders using nonparametric instrumental variable (IV) regression. An established approach is to use estimators based on learned spectral features, that is, features spanning the top singular subspaces of the operator linking treatments to instruments. While powerful, such features are agnostic to the outcome variable. Consequently, the method can fail when the true causal function is poorly represented by these dominant singular functions. To mitigate, we introduce Augmented Spectral Feature Learning, a framework that makes the feature learning process outcome-aware. Our method learns features by minimizing a novel contrastive loss derived from an augmented operator that incorporates information from the outcome. By learning these task-specific features, our approach remains effective even under spectral misalignment. We provide a theoretical analysis of this framework and validate our approach on challenging benchmarks.",
+  "link": "https://arxiv.org/abs/2512.00919",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308318Z"
+}

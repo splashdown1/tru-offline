@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05182",
+  "title": "LANTERN: Layered Archival and Temporal Episodic Retrieval Network for Long-Context LLM Conversations",
+  "abstract": "Large language models discard critical details when conversation history is compacted to fit within finite context windows. We present LANTERN (Layered Archival aNd Temporal Episodic Retrieval Network), a lightweight memory layer that proactively archives every conversation turn and restores relevant details after compaction via hybrid retrieval -- requiring zero LLM calls and adding fewer than 25ms of latency per turn. On 94 real multi-turn conversations (1,894 ground-truth facts, human-validated at kappa=0.81), LANTERN-Rerank recovers 78.3% of verifiable facts lost to compaction, significantly outperforming a faithful reimplementation of MemGPT's LLM-driven extraction and multi-query search pipeline (72.4%; Wilcoxon p<0.0001, 95% CI [+3.1, +8.6] pp, d=0.43) at a fraction of the inference cost. Even without the reranker, base LANTERN matches or exceeds this LLM-driven baseline (p=0.005) using zero LLM calls. When four production LLMs answer fact-bearing questions using LANTERN-restored context, accuracy improves by 8.4 percentage points on average (Wilcoxon p<0.05 for each model individually), demonstrating that the recovered context is useful across diverse model architectures. We release the full evaluation framework -- paired significance tests, failure analysis, fact-type stratification, and compaction robustness analysis -- to support reproducibility and future work.",
+  "link": "https://arxiv.org/abs/2606.05182",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.IR"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497677+00:00"
+}

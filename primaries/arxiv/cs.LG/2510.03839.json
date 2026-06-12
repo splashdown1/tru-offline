@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2510.03839",
+  "title": "Technical note on Sequential Test-Time Adaptation via Martingale-Driven Fisher Prompting",
+  "abstract": "We present a theoretical framework for M-FISHER, a method for sequential distribution shift detection and stable adaptation in streaming data. For detection, we construct an exponential martingale from non-conformity scores and apply Ville's inequality to obtain time-uniform guarantees on false alarm control, ensuring statistical validity at any stopping time. Under sustained shifts, we further bound the expected detection delay as $\\mathcal{O}(\\log(1/\\delta)/\\Gamma)$, where $\\Gamma$ reflects the post-shift information gain, thereby linking detection efficiency to distributional divergence. For adaptation, we show that Fisher-preconditioned updates of prompt parameters implement natural gradient descent on the distributional manifold, yielding locally optimal updates that minimize KL divergence while preserving stability and parameterization invariance. Together, these results establish M-FISHER as a principled approach for robust, anytime-valid detection and geometrically stable adaptation in sequential decision-making under covariate shift.",
+  "link": "https://arxiv.org/abs/2510.03839",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307706Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2510.15859",
+  "title": "InfiMed-ORBIT: Aligning LLMs on Open-Ended Complex Tasks via Rubric-Based Incremental Training",
+  "abstract": "Reinforcement learning (RL) has powered many recent breakthroughs in large language models (LLMs), especially for tasks where rewards can be computed automatically, such as code generation. However, it is less effective in open-ended medical dialogue, where feedback is ambiguous, context-dependent, and difficult to simply summarize into a single scalar signal-often requiring heavily supervised reward models and creating risks of reward hacking. Thus, we introduce ORBIT, an open-ended rubric-based incremental training framework tailored for critical medical dialogues. ORBIT integrates medical dialogue construction with dynamically generated case-conditioned rubrics that serve as adaptive guides for incremental RL. Unlike approaches that rely on external medical knowledge bases or handcrafted rules, ORBIT uses rubric-guided evaluation and can be implemented with general-purpose instruction-following LLMs, avoiding task-specific judge fine-tuning. With only 2k training samples, ORBIT raises Qwen3-4B-Instruct's HealthBench-Hard score from 7.0 to 27.5, achieving state-of-the-art performance among similarly sized open-source models while maintaining strong consultation quality as rubric coverage broadens.",
+  "link": "https://arxiv.org/abs/2510.15859",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406141Z"
+}

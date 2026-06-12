@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.00038",
+  "title": "Beyond Tool Adoption: A Practical Five-Stage Developmental Continuum for AI Literacy in Higher Education",
+  "abstract": "Artificial intelligence (AI) literacy is increasingly recognized as a foundational competency for all university graduates. Yet students' engagement with AI tools often clusters at two extremes: avoidance driven by fear, mistrust, ethical concern, or lack of access, and uncritical reliance that produces fluent output while masking misunderstanding. Existing AI literacy frameworks provide valuable competency definitions, but most offer limited guidance for diagnosing where learners begin and how they progress toward responsible, critical engagement. This paper proposes a five-stage AI Literacy Continuum: 0) Not Yet Engaged, 1) Uncritical Use, 2) Informed Use, 3) Critical Evaluation, and 4) Improvement --that describes developmental orientations toward AI use in higher education. The continuum complements dimensional frameworks by providing educators with a practical diagnostic and instructional pathway aligned with international frameworks, including UNESCO and OECD. We present a design-based implementation case from North Carolina State University, where credit-bearing courses and intensive hands-on workshops engaged more than 330 participants between Fall 2024 and Spring 2026. Because the implementation did not use a validated pre/post instrument or comparison group, we frame the findings as observational and practice-based: participants exhibited behaviors consistent with movement from non-engagement or uncritical use toward informed engagement, while sustained and discipline-embedded experiences produced stronger evidence of critical evaluation and improvement-oriented practice. We discuss curricular pathways, opportunity considerations, assessment strategies, and argue that AI literacy should be understood not as tool adoption alone but as a developmental capacity to understand, evaluate, and responsibly apply AI systems in disciplinary and societal contexts.",
+  "link": "https://arxiv.org/abs/2606.00038",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CY",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099376+00:00"
+}

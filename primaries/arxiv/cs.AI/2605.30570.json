@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30570",
+  "title": "Procedural Generation of First Person Shooter Maps using Map-Elites",
+  "abstract": "We investigate the application of MAP-Elites (a well-known quality diversity algorithm) to design levels for First-Person Shooter (FPS) games. We consider two well-known map representations (All-Black and Grid-Graph) and introduce two novel representations (Point-Line and Spatial-Layout) that improve the characterization of FPS maps. We define a series of metrics to describe maps' topological properties (which solely depend on maps' layout), and emergent properties (which must be evaluated through actual gameplay). We perform an in-depth analysis to identify the most suitable features to guide MAP-Elites illumination process. We apply MAP-Elites with Sliding Boundaries (MESB) to evolve populations of FPS maps. Our results show that the new representations can generate maps with higher diversity and quality than the representations previously used for evolving FPS maps.",
+  "link": "https://arxiv.org/abs/2605.30570",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.357794Z"
+}

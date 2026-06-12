@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2410.02628",
+  "title": "Inverse Entropic Optimal Transport Solves Semi-supervised Learning via Data Likelihood Maximization",
+  "abstract": "Learning conditional distributions $\\pi^*(\\cdot|x)$ is a central problem in machine learning, which is typically approached via supervised methods with paired data $(x,y) \\sim \\pi^*$. However, acquiring paired data samples is often challenging, especially in problems such as domain translation. This necessitates the development of $\\textit{semi-supervised}$ models that utilize both limited paired data and additional unpaired i.i.d. samples $x \\sim \\pi^*_x$ and $y \\sim \\pi^*_y$ from the marginal distributions. The usage of such combined data is complex and often relies on heuristic approaches. To tackle this issue, we propose a new learning paradigm called $\\textbf{EBiEOT}$ that integrates both paired and unpaired data seamlessly using data likelihood maximization techniques. We demonstrate that our approach also connects intriguingly with inverse entropic optimal transport (OT). This finding allows us to apply recent advances in computational OT to establish an $\\textit{end-to-end}$ learning algorithm to get $\\pi^*(\\cdot|x)$. In addition, we derive the universal approximation property, demonstrating that our approach can theoretically recover true conditional distributions with arbitrarily small error. Finally, we demonstrate through empirical tests that our method effectively learns conditional distributions using paired and unpaired data simultaneously. The code of $\\texttt{EBiEOT}$ is available at https://github.com/MuXauJl11110/EBiEOT.",
+  "link": "https://arxiv.org/abs/2410.02628",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883841+00:00"
+}

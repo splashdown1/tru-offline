@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.06418",
+  "title": "Double Preconditioning (DoPr): Optimization for Test-Time Performance, not Validation Loss",
+  "abstract": "Many modern applications of deep learning involve training a neural network via a one-step prediction loss (e.g., $L^2$ regression, cross-entropy), but deploy the network by rolling out along its own predictions. Key examples include autoregressive language modeling, flow-based generative modeling, and robot policy learning. It is well-documented that these settings induce a phenomenon we call test-time feedback (TTF): the mismatch between the training/validation loss and downstream metrics of interest, such as task success rate and generation quality, which grows with task length. While data curation, architecture, and objective design have been proposed to combat train-test shift in TTF settings, this paper proposes optimization as a new design axis to mitigate error accumulation. Specifically, we introduce a new optimization paradigm called double-preconditioning (DoPr) uniquely tailored to the challenges of TTF. DoPr combines gradient-wise preconditioning, as in Adam and Muon, with activation-wise preconditioning (AP), such as in KFAC. We show that the addition of AP yields a drop-in intervention for increasing downstream model performance across a range of TTF settings. Interestingly, these gains in test-time performance do not consistently accompany improvements in validation loss, opening new questions about how to properly evaluate models trained with one-step supervised objectives.",
+  "link": "https://arxiv.org/abs/2606.06418",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.SY",
+    "eess.SY"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882734+00:00"
+}

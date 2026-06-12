@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2603.02376",
+  "title": "CUCo: An Agentic Framework for Compute and Communication Co-design",
+  "abstract": "Computation and communication in distributed LLM training and inference are traditionally optimized in isolation; expert-crafted systems such as DeepEP, FLUX, and TokenWeave show the potential of co-design but require deep systems expertise and hardware-specific tuning; CUCo is an agentic framework that automates compute-communication co-design of CUDA kernels by combining a structured design-space formalization with a correctness-first fast-path agent for reliable baselines and an evolution-driven slow-path agent for high-performance strategies, achieving up to 1.57x speedup across four multi-GPU workloads and discovering a two-stream overlap strategy on a DeepSeek-V3 MoE layer that hides dispatch behind local compute at an LLM inference cost under $10 per workload.",
+  "link": "https://arxiv.org/abs/2603.02376",
+  "category": "cs.LG",
+  "categories": [
+    "cs.DC",
+    "cs.AR",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884627+00:00"
+}

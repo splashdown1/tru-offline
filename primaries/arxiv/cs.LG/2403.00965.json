@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2403.00965",
+  "title": "Binary Gaussian Copula Synthesis: an LLM-powered data augmentation framework for early dialysis prediction in chronic kidney disease",
+  "abstract": "Only a small fraction of patients with chronic kidney disease (CKD) progress to dialysis, creating severe class imbalance that limits the performance of machine learning models for early dialysis prediction. This challenge is compounded by the binary structure of electronic health record (EHR) data, for which most existing augmentation methods were not designed. We propose Binary Gaussian Copula Synthesis (BGCS), a two-stage data augmentation method tailored to binary clinical data. BGCS first generates synthetic minority-class samples using a Gaussian copula framework that explicitly models pairwise dependencies among binary features, then applies a fine-tuned GPT-2 classifier to filter out clinically implausible samples before training. We evaluated BGCS on a real-world EHR dataset of 15,169 patients with CKD from West Virginia collected between 2008 and 2022, benchmarking it against SMOTE, CTGAN, and standard Gaussian Copula across four machine learning classifiers over 25 independent runs. BGCS consistently outperformed all comparison methods, achieving the highest minority-class recall for 90-day dialysis prediction, with median values ranging from 0.78 to 0.87 across classifiers, and the strongest distributional fidelity to real data, with a mean p-value of 0.68 across features. The best-performing BGCS-augmented model was integrated into an interpretable decision tree-based clinical decision support system for dialysis risk stratification, with electrolyte imbalances, cardiovascular comorbidities, and renal monitoring indicators emerging as the most influential predictive features. These findings suggest that augmentation methods designed for the structural properties of binary EHR data can meaningfully improve early dialysis risk prediction and support the development of interpretable clinical decision-support tools for CKD care.",
+  "link": "https://arxiv.org/abs/2403.00965",
+  "category": "cs.LG",
+  "categories": [
+    "stat.AP",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884416+00:00"
+}

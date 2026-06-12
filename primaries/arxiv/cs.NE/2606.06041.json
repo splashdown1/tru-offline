@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.06041",
+  "title": "Sample-efficient Low-level Motion Planning for Robotic Manipulation Tasks via Zero-shot Transfer Learning",
+  "abstract": "As robotic systems become more sophisticated, the growing complexity of their motion planning models and the longer training times pose substantial challenges. Evolutionary algorithms such as the Sample-efficient Cross-Entropy Method (iCEM) have recently demonstrated promising potential for low-level real-time planning by leveraging efficient knowledge reuse strategies to improve performance. Although effective in many control tasks, iCEM's performance can be constrained in more complex scenarios, particularly those requiring stacking, sliding, and shelf placement. In this work, we propose a novel iCEM+TL framework that explicitly leverages Transfer Learning (TL), where key iCEM parameters are transferred from simpler upstream tasks to guide more complex downstream tasks. Additionally, we applied Reward Redesign (RR) through task decomposition for stacking objects and shelf placement to optimize task-specific performance. Results from the simulation show that our framework achieves success rate improvements of up to 23%. The framework is further validated on a real Franka Emika robot in a stacking task, demonstrating its practical feasibility for real-world deployment.",
+  "link": "https://arxiv.org/abs/2606.06041",
+  "category": "cs.NE",
+  "categories": [
+    "cs.RO",
+    "cs.AI",
+    "cs.NE"
+  ],
+  "pulled_at": "2026-06-05T08:23:14.697871+00:00"
+}

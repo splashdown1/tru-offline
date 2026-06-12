@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04699",
+  "title": "Graph-Guided Universum Learning in Generalized Eigenvalue Proximal SVMs for Alzheimer's Disease Classification",
+  "abstract": "Early and accurate detection of Alzheimer's disease (AD) is important for timely intervention and disease management. Generalized Eigenvalue Proximal Support Vector Machine (GEPSVM) and its Universum-based variants have shown promising results for AD classification. However, existing methods treat Universum samples as independent points and do not consider the geometric relationships among them. This paper proposes two graph-guided Universum learning models, namely UG-GEPSVM and IUG-GEPSVM, for AD versus cognitively normal (CN) classification using structural MRI data. In the proposed framework, mild cognitive impairment (MCI) subjects are used as Universum data to provide intermediate information between AD and CN classes. A graph is constructed over the Universum samples using Gaussian similarity, Minimum Spanning Tree connectivity, and multi-hop propagation. From this graph, a Laplacian matrix is derived that captures the geometric structure of the MCI samples. This Laplacian-based regularization is incorporated into the learning process in place of the conventional independent Universum penalty term. UG-GEPSVM integrates this regularization into the generalized eigenvalue formulation, while IUG-GEPSVM extends the numerically stable improved GEPSVM framework using a standard eigenvalue formulation. Experiments on ADNI MRI dataset variants using ICA- and PCA-based features at five different noise levels show that both proposed models consistently outperform existing GEPSVM and Universum-based methods. UG-GEPSVM achieves the highest average AUC of 88.07% and maintains stable performance under increasing noise levels. Statistical tests further confirm the significance of the observed improvements.",
+  "link": "https://arxiv.org/abs/2606.04699",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098358+00:00"
+}

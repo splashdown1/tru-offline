@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.06198",
+  "title": "Hub-Aware Hybrid Search: Accelerating the Locally Aligned Ant Technique",
+  "abstract": "Finding manifold structures in noisy and high-dimensional point clouds is a challenging but important problem. In astronomical observation survey and simulation data the detection of filaments, streams (1D), walls (2D) and clusters (3D) gives rise to deeper understanding of the evolution of our universe. The Locally Aligned Ant Technique (LAAT) uses biologically inspired agents to efficiently recover faint and multidimensional structures. However, very dense hubs (e.g. nodes or globular clusters) dominate the ants' activity, creating unnecessary computational overheads. In this paper we propose a two-stage solution. First a fast preprocessing step locates the hubs and replaces them with a tailored likelihood model. Subsequently, a mixed likelihood-pheromone strategy guides the ants to efficiently bridge the dense regions. We demonstrate improvements in detection efficiency and robustness of LAAT with synthetic and a large-scale astronomical N-body simulation of the cosmic web.",
+  "link": "https://arxiv.org/abs/2606.06198",
+  "category": "cs.NE",
+  "categories": [
+    "cs.NE",
+    "astro-ph.CO",
+    "astro-ph.GA",
+    "astro-ph.IM"
+  ],
+  "pulled_at": "2026-06-05T08:23:14.697847+00:00"
+}

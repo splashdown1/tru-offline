@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2507.12453",
+  "title": "Cost-aware Stopping for Bayesian Optimization",
+  "abstract": "In automated machine learning, scientific discovery, and other applications of Bayesian optimization, deciding when to stop evaluating expensive black-box functions in a cost-aware manner is an important but underexplored practical consideration. A natural performance metric for this purpose is the cost-adjusted simple regret, which explicitly captures the trade-off between solution quality and cumulative evaluation cost. Existing stopping rules for Bayesian optimization are either heuristic, or are theoretically grounded but designed to optimize simple regret without accounting for evaluation costs; as a result, they provide no guarantees against unnecessary evaluations when costs are high. We propose a principled cost-aware stopping rule for Bayesian optimization that adapts to varying evaluation costs without heuristic tuning. Our rule is grounded in a theoretical connection to state-of-the-art cost-aware acquisition functions, namely the Pandora's Box Gittins Index (PBGI) and log expected improvement per cost (LogEIPC). When paired with either acquisition function, we prove that the resulting policy satisfies a theoretical guarantee bounding the expected cost-adjusted simple regret. Across synthetic tasks and empirical benchmarks including hyperparameter optimization and neural architecture size search, pairing our stopping rule with PBGI or LogEIPC usually matches or outperforms other acquisition-function--stopping-rule pairs in terms of cost-adjusted simple regret.",
+  "link": "https://arxiv.org/abs/2507.12453",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307621Z"
+}

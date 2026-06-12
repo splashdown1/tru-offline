@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.27557",
+  "title": "The Fundamental Limits of Fraud Detection in Card Payment Networks",
+  "abstract": "Card payment fraud detection is usually framed as a supervised classification problem. Although this approach has generated practical progress, improvement has remained incremental despite major advances in model architecture. We argue that this is not mainly a failure of function approximation or optimization, but a consequence of structural information impairments inherent to the payment ecosystem.\n  We formalize card authorization as a sequential decision problem with delayed, censored, corrupted, and counterfactually missing feedback. We derive a minimax regret lower bound showing that these impairments enter multiplicatively in the denominator of the achievable learning rate. The bound implies that improving issuer reporting quality or reducing censorship can yield larger reductions in the regret floor than increasing model complexity. We also show that heterogeneity across issuers worsens learnability beyond what average impairment rates suggest.\n  The paper contributes a theory of why fraud detection in payment networks is fundamentally harder than in standard online learning settings, identifies ecosystem information quality as the key bottleneck, and provides a theoretical basis for prioritizing investments in reporting infrastructure, dispute process quality, and selective exploration. The paper is theory-first and does not rely on proprietary transaction data.",
+  "link": "https://arxiv.org/abs/2605.27557",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308145Z"
+}

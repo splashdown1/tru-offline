@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06459",
+  "title": "Event Detection for Parameter-to-KPI Dependency Learning for AI-RAN",
+  "abstract": "Next-generation wireless networks are expected to rely on multiple concurrent AI-driven control functions that optimize different network objectives simultaneously, particularly in AI-integrated and open radio access network architectures such as AI Radio Access Network (AI-RAN) and Open Radio Access Network (O-RAN). When these functions interact, they can interfere with one another in ways that are difficult to detect from raw network data alone. A key missing piece for managing such interactions is a reliable, interpretable dependency structure that captures which control parameters are actively influencing which network performance outcomes at any given time. This paper focuses on the event-detection step needed to support such dependency learning by converting noisy continuous telemetry into binary indicators of parameter activity and KPI response. The central difficulty is that not every fluctuation in the data reflects a genuine control interaction, so the method must distinguish real parameter-outcome relationships from background variation. Because real AI-RAN traffic traces with known parameter-KPI ground truth are difficult to obtain, we introduce a synthetic closed-loop traffic generator with planted latent dependencies. We use this controlled telemetry to evaluate a machine-learning-based dependency recovery pipeline that formulates the conversion of continuous traces into binary event indicators as a significance-detection problem. Experimental evaluation shows that the proposed pipeline reliably recovers the latent dependency structure from noisy continuous traces when the signal is sufficiently separated from background variation, while highlighting threshold calibration as the key factor controlling event-detection quality. These results constitute a foundational step toward interpretable dependency learning for adaptive AI-RAN control systems.",
+  "link": "https://arxiv.org/abs/2606.06459",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882750+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30740",
+  "title": "GSAM: A Generalizable and Safe Robotic Framework for Articulated Object Manipulation",
+  "abstract": "Articulated object manipulation is a unique challenge for service robots. Existing methods employ end-to-end policy learning, visionmotion planning, and large-language/visual-language model (LLM/VLM), but often overlook the diversity of articulated objects and the complexity of interactions between end-effector and handle, leading to limited generalization and destructive collisions. To address this, we propose GSAM, a generalizable and safe robotic framework for articulated object manipulation. Specifically, a vision-based perceiver generates the kinematic parameters. Considering that pre-trained markers in perceiver yield raw estimations that may deviate from commonsense, we present a f ine-tuned VLM-based refiner, using chain-of-thought (COT) commonsense reasoning to refine perception. To prevent destructive collisions, we design an interaction constraint function generator, integrating articulated object, interaction pose, and obstacle avoidance knowledge into a base. LLM then functionalize these constraints and apply them to trajectory and posture planning. A kinematic-aware manipulation planner verifies reachability for trajectory and posture. Experiments on 50 hinge tasks across 5 object categories and 50 randomly initialized end-effectorhandle configurations show that GSAM reduces standard deviation by 3.1% and improves manipulation success rate by 36.0% compared to the best baseline, respectively demonstrating the superior object generalization and interaction safety of GSAM in practical scenarios.",
+  "link": "https://arxiv.org/abs/2605.30740",
+  "category": "cs.AI",
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358111Z"
+}

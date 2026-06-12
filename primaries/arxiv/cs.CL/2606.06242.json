@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.06242",
+  "title": "Benchmarking Open-Source Layout Detection Models for Data Snapshot Extraction from Institutional Documents",
+  "abstract": "Institutional documents contain substantial amounts of operational and analytical information embedded within figures and tables. Current approaches for extracting visual content from documents are largely built around generic document layout analysis, where figures and tables are treated as uniformly relevant document objects rather than semantically meaningful analytical artifacts. In this work, we introduce a benchmark dataset and evaluation framework for \\textit{data snapshot extraction}, the task of identifying and localizing semantically meaningful visual artifacts within institutional documents. The benchmark spans humanitarian reports, World Bank policy research working papers, and project appraisal documents, and includes annotations for figures and tables that contain reusable analytical information. Using this dataset, we benchmarked multiple open-source layout detection models and evaluated both detection performance and spatial extraction quality. Our results show that current models struggle to generalize to operational institutional documents despite strong performance on conventional academic benchmarks. Common failure modes include confusion between analytical and non-analytical content, fragmentation of composite analytical artifacts, and incomplete extraction of contextual information required for interpretation. These findings highlight a persistent gap between generic document layout analysis and operationally useful data snapshot extraction. We release the source PDFs, annotation dataset, metadata, and source code to support future research in operational document intelligence. The dataset is available at https://huggingface.co/datasets/ai4data/data-snapshot and the source code is available at https://github.com/worldbank/ai4data/tree/main/experimental/data-snapshot.",
+  "link": "https://arxiv.org/abs/2606.06242",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.CV",
+    "cs.IR"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498035+00:00"
+}

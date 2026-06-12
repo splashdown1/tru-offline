@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2409.14583",
+  "title": "LLM Bias Evaluation: Gender, Racial, and Age Disparities in Occupational and Crime Scenarios",
+  "abstract": "LLM bias evaluation is critical as large language models (LLMs) increasingly influence high-stakes decisions. This paper provides a comprehensive assessment of gender, racial, and age disparities in leading LLMs, revealing that debiasing efforts often create new fairness trade-offs. Recent advancements in LLMs have been notable, yet widespread enterprise adoption remains limited due to various constraints. This paper examines bias in LLMs - a crucial issue affecting their usability, reliability, and fairness. Our study evaluates gender bias in occupational scenarios and gender, age, and racial bias in crime scenarios across four leading LLMs released in 2024: Gemini 1.5 Pro, Llama 3 70B, Claude 3 Opus, and GPT-4o. Findings reveal that LLMs often depict female characters more frequently than male ones in various occupations, showing a 37% deviation from US BLS data. In crime scenarios, deviations from US FBI data are 54% for gender, 28% for race, and 17% for age. Critically, we observe that efforts to reduce gender and racial bias often lead to outcomes that may over-index one sub-class, potentially exacerbating disparities - a \"debiasing paradox\" that highlights the limitations of current bias mitigation techniques and underscores the need for more effective approaches.",
+  "link": "https://arxiv.org/abs/2409.14583",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358485Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2511.20102",
+  "title": "SSA: Sparse Sparse Attention by Aligning Full and Sparse Attention Outputs in Feature Space",
+  "abstract": "Sparse attention reduces the quadratic complexity of full self-attention but faces two challenges: (1) an attention gap, where applying sparse attention to full-attention-trained models causes performance degradation due to train-inference distribution mismatch, and (2) a capability gap, where models trained purely with sparse attention lack complete gradient flow, preventing them from matching full-attention performance. We propose SSA (Sparse Sparse Attention), a training framework that integrates both sparse and full attention with bidirectional attention-output alignment. We prove that the approximation error scales linearly with the attention mass dropped under sparse attention, and show that SSA's alignment objective substantially reduces this quantity compared to baselines. Experiments demonstrate that SSA achieves state-of-the-art performance under both inference modes, adapts smoothly to varying sparsity budgets, and demonstrates superior long-context capabilities.",
+  "link": "https://arxiv.org/abs/2511.20102",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498401+00:00"
+}

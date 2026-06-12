@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2408.11336",
+  "title": "FATE: Focal-modulated Attention Encoder for Multivariate Time-series Forecasting",
+  "abstract": "Climate change stands as one of the most pressing global challenges of the twenty-first century, with far-reaching consequences such as rising sea levels, melting glaciers, and increasingly extreme weather patterns. Accurate forecasting is critical for monitoring these phenomena and supporting mitigation strategies. While recent data-driven models for time-series forecasting, including CNNs, RNNs, and attention-based transformers, have shown promise, they often struggle with sequential dependencies and limited parallelization, especially in long-horizon, multivariate meteorological datasets. In this work, we present Focal Modulated Attention Encoder (FATE), a novel transformer architecture designed for reliable multivariate time-series forecasting. Unlike conventional models, FATE introduces a tensorized focal modulation mechanism that explicitly captures spatiotemporal correlations in time-series data. We further propose two modulation scores that offer interpretability by highlighting critical environmental features influencing predictions. We benchmark FATE across seven diverse real-world datasets, including ETTh1, ETTm2, Traffic, Weather5k, USA-Canada, Europe, and LargeST datasets, and show that it consistently outperforms all state-of-the-art methods, including temperature datasets. Our ablation studies also demonstrate that FATE generalizes well to broader multivariate time-series forecasting tasks.",
+  "link": "https://arxiv.org/abs/2408.11336",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883833+00:00"
+}

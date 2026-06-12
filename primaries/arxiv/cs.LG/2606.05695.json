@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05695",
+  "title": "Revisiting Prototype Rehearsal for Exemplar-Free Continual Learning: Manifold-Aware Boundary Sampling with Adaptive Class-Balanced Loss",
+  "abstract": "Exemplar-free class-incremental learning (EFCIL) aims to acquire new classes over time without storing raw data. Historically, prototype rehearsal, which samples around stored class prototypes and mixes them with current-task data, has been a popular strategy to reduce catastrophic forgetting. However, recent drift-compensation methods that explicitly realign prototypes in the evolving feature space consistently outperform prototype-based rehearsal, raising the question of whether rehearsal itself is fundamentally limited. We argue that the performance gap stems not from the idea of prototype rehearsal per se, but from how it is typically instantiated: existing approaches treat prototypes as isolated class summaries that ignore information from nearby enemy classes, and fail to correct the emerging class imbalance between a handful of synthetic old-class samples and hundreds of real instances from newly introduced classes. Building on this hypothesis, we revisit prototype rehearsal and propose a manifold-aware variant that restores its competitiveness in EFCIL. First, we introduce Constrained Expansive Over-Sampling, which interpolates each old-class prototype toward its nearest enemy features from new classes, generating boundary-aware rehearsal samples that better follow the underlying data manifold while preserving inter-class separation. Second, we design an Adaptive Class-Balanced loss that performs time-based class weighting, amplifying gradients from older prototypes when they are most informative and gradually annealing their influence as richer supervision from later tasks accumulates. Together, these components turn prototype rehearsal into a drift-resilient, imbalance-aware mechanism that closes, and often reverses, the gap to recent drift-compensation methods, achieving state-of-the-art performance across multiple EFCIL benchmarks.",
+  "link": "https://arxiv.org/abs/2606.05695",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882181+00:00"
+}

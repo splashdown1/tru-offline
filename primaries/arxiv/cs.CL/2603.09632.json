@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.09632",
+  "title": "X-GS: An Extensible Framework for Perceiving and Thinking via 3D Gaussian Splatting",
+  "abstract": "3D Gaussian Splatting (3DGS) has emerged as a powerful technique for novel view synthesis, subsequently extending into numerous spatial AI applications. However, most existing 3DGS methods operate in isolation, focusing on specific domains. In this paper, we introduce X-GS, an extensible framework consisting of two major components. The X-GS-Perceiver unifies a broad range of 3DGS techniques to enable real-time online SLAM with semantic distillation. The X-GS-Thinker accommodates multimodal models, enabling them to seamlessly interface with the Perceiver to complete downstream tasks. In our implementation of X-GS, the Perceiver leverages the latest vision foundation models to improve online SLAM performance and employs three key mechanisms to accelerate semantic distillation. The Thinker can be built upon both contrastive and generative vision-language models and utilizes the Perceiver's semantic Gaussian splats to unlock capabilities such as 3D visual grounding and scene captioning. Experimental results on diverse benchmarks demonstrate the efficiency and newly unlocked multimodal capabilities of the X-GS framework.",
+  "link": "https://arxiv.org/abs/2603.09632",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CV",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406363Z"
+}

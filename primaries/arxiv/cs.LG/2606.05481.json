@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05481",
+  "title": "Towards Unified and Data-Efficient Prognostics and Health Management with Tabular Foundation Models",
+  "abstract": "Data-driven Prognostics and Health Management (PHM) uses time-varying condition-monitoring data to diagnose system states and estimate remaining useful life in engineered assets. These tasks are central to maintenance planning, but industrial PHM data are often fragmented, partially observed, and poorly labeled, which hinders supervised learning. Foundation models offer a route toward reusable predictive systems, yet most time-series foundation models are designed for forecasting and assume long, coherent, regularly sampled sequences. To address this gap, we propose a framework for applying Tabular Foundation Models to industrial time series using in-context learning, and we evaluate them on a variety of PHM tasks. By converting raw unit-level signals into tabular rows, we show that these models perform well across multiple tasks - including prognostics, and diagnostics - and are highly data efficient. We compare them directly with sequence models, transformer baselines, and gradient-boosted trees under a common evaluation protocol. The results indicate that tabular foundation models achieve the best average ranks across prognostic and diagnostic tasks. Our findings further show that PFN-based models are competitive in low-data regimes, that temporal context can be preserved in the tabular representation, and that performance depends on representative context construction under subsampling. These results demonstrate that tabular foundation models provide a practical and general interface for heterogeneous PHM problems.",
+  "link": "https://arxiv.org/abs/2606.05481",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "eess.SP"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882058+00:00"
+}

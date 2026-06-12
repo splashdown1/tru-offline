@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31318",
+  "title": "Generalized Intention Modeling in Multi-Agent Reinforcement Learning",
+  "abstract": "Modeling an opponent's intent is critical for effective decision-making in non-cooperative, competitive, and general-sum multi-agent reinforcement learning. Existing opponent modeling methods encode intent using an embedding derived from episode information chosen a priori, such as the opponent's next action or a future environment state, and use this to guide the ego-agent's behavior. These approaches assume that the chosen information is universally representative of intent; however, we show empirically that this is not the case as intentions are often task- and environment-dependent. To address this, we introduce a task-adaptive opponent modeling framework that learns a performance-driven mixture of multiple intent representations. We further introduce a new intention representation that maximizes mutual information with the ego-agent's future returns, thereby capturing opponent information that is most directly relevant to performance. Our approach consistently matches or exceeds the performance of state-of-the-art baselines across diverse tasks and yields insights into when and why different opponent modeling strategies succeed.",
+  "link": "https://arxiv.org/abs/2605.31318",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.MA"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307077Z"
+}

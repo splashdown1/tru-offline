@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.19262",
+  "title": "Empirical Characterization of Inference-Time Elicited Probability Transformations in Large Language Models",
+  "abstract": "Large language models increasingly rely on inference-time procedures such as chain-of-thought reasoning, self-refinement, retrieval augmentation, and verifier-guided revision, yet the structure of elicited probability transformations under these procedures remains poorly understood. We study externally elicited probability assignments over candidate answers and observe recurring approximate log-ratio relationships: \\[ \\log \\tilde q_t(i) = \\alpha_t \\left( \\log q_t(i) + \\log b_t(i) \\right) + c_t, \\] where $q_t$ and $\\tilde q_t$ are pre- and post-elicitation probabilities, $b_t$ is an externally constructed evidence signal, and $\\alpha_t$ is an empirical descriptor of the prompting configuration. Across 4,975 reasoning problems from GPQA Diamond, TheoremQA, MMLU-Pro, and ARC-Challenge, evaluated on multiple instruction-tuned model families, we observe approximate log-ratio relationships with mean $R^2 \\approx 0.76$ over about $1.3 \\times 10^5$ candidate-level observations. Coefficients vary across elicitation settings, but qualitatively similar relationships persist across evaluated conditions. Robustness analyses using alternative statistical representations, prompting configurations, held-out evaluation, and token-level log-probabilities suggest that the observed structure is not tied to one prompting procedure or probability estimation method. The main contribution is not the algebraic form itself, which is related to generalized Bayesian updating and probability-transformation frameworks, but the empirical observation that diverse inference-time prompting pipelines repeatedly exhibit reproducible log-ratio structure under controlled conditions. The framework provides a protocol-sensitive perspective for analyzing calibration, evidence amplification, uncertainty propagation, and interaction sensitivity in inference-time LLM pipelines.",
+  "link": "https://arxiv.org/abs/2603.19262",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358887Z"
+}

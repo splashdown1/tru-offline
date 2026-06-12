@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.01186",
+  "title": "The Gaussian-Head OFL Family: One-Shot Federated Learning from Client Global Statistics",
+  "abstract": "Classical Federated Learning relies on a multi-round iterative process of model exchange and aggregation between server and clients, with high communication costs and privacy risks from repeated model transmissions. In contrast, one-shot federated learning (OFL) alleviates these limitations by reducing communication to a single round, thereby lowering overhead and enhancing practical deployability. Nevertheless, most existing one-shot approaches remain either impractical or constrained, for example, they often depend on the availability of a public dataset, assume homogeneous client models, or require uploading additional data or model information. To overcome these issues, we introduce the Gaussian-Head OFL (GH-OFL) family, a suite of one-shot federated methods that assume class-conditional Gaussianity of pretrained embeddings. Clients transmit only sufficient statistics (per-class counts and first/second-order moments) and the server builds heads via three components: (i) Closed-form Gaussian heads (NB/LDA/QDA) computed directly from the received statistics; (ii) FisherMix, a linear head with cosine margin trained on synthetic samples drawn in an estimated Fisher subspace; and (iii) Proto-Hyper, a lightweight low-rank residual head that refines Gaussian logits via knowledge distillation on those synthetic samples. In our experiments, GH-OFL methods deliver state-of-the-art robustness and accuracy under strong non-IID skew while remaining strictly data-free.",
+  "link": "https://arxiv.org/abs/2602.01186",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307836Z"
+}

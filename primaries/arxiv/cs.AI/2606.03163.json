@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.03163",
+  "title": "OpenAgenet/OAN: Technical Architecture for Trust-Governed Agent Identity and Discovery",
+  "abstract": "This paper describes the technical architecture of OpenAgenet / OAN. OAN is a protocol-neutral trust layer for open Agent interconnection. It specifies the role architecture, identity objects, registration workflow, Root-governed lifecycle, Root-verified package model, authorization-aware Discovery, signed trusted invocation, verification requirements, state transitions, security properties, implementation boundaries, and deployment considerations. The design is intended to support heterogeneous Agent frameworks and interaction protocols, including MCP, A2A, ANP-like systems, and domain-specific Agent protocols. OAN does not define the entire business conversation among Agents; it defines how Agent identities become admissible, discoverable, verifiable, and safe to approach before protocol-specific interaction begins.",
+  "link": "https://arxiv.org/abs/2606.03163",
+  "category": "cs.AI",
+  "categories": [
+    "cs.MA",
+    "cs.AI",
+    "cs.DC"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099432+00:00"
+}

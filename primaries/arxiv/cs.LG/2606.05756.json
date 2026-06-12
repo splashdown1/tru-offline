@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.05756",
+  "title": "Beyond Soft Masks: Hard-Perturbation Mixup Explainer for Robust GNN Explainability",
+  "abstract": "Graph Neural Networks (GNNs) have demonstrated remarkable performance across a range of applications involving graph-structured data, particularly in high-stakes domains. However, the opaque nature of their decision-making processes limits their trustworthiness and broader adoption. Existing post-hoc explanation methods aim to improve explainability by identifying subgraphs that influence GNN predictions and adopt mixup strategies to alleviate the out-of-distribution (OOD) issue caused by using subgraphs for prediction. Yet, these approaches typically rely on soft masks, which are inherently unable to fully eliminate label-irrelevant information, allowing redundant structures to leak into the mixup process and hindering the resolution of the OOD problem, thereby degrading explanation fidelity. In this work, we propose HPME, a Hard-Perturbation Mixup Explanation framework grounded in a generalized Graph Information Bottleneck, which leverages graph pooling to extract discrete explanatory subgraphs and to yield an information-capacity bound to thoroughly compress label-irrelevant components. Furthermore, we introduce a novel mixup strategy built upon structure-level replacement, generating in-distribution explanations to effectively mitigate the distribution shift. Extensive experiments on diverse tasks demonstrate that HPME achieves state-of-the-art performance in generating robust and interpretable explanations across both synthetic and real-world datasets.",
+  "link": "https://arxiv.org/abs/2606.05756",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.IT",
+    "math.IT"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882264+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "arxiv_id": "2603.10468",
+  "title": "G-STAR: End-to-End Global Speaker-Tracking Attributed Recognition",
+  "abstract": "We study timestamped speaker-attributed automatic speech recognition (SA-ASR) for long-form, multi-party speech with overlap. In this setting, chunk-wise inference must preserve meeting-level speaker identity consistency while producing time-stamped, speaker-labeled transcripts. Prior Speech-LLM systems tend to prioritize either local diarization or global labeling, lacking the ability to jointly model fine-grained temporal boundaries and robust cross-chunk identity linking. We propose G-STAR, an end-to-end framework that couples a cache-conditioned speaker-tracking module with a Speech-LLM transcription backbone. The tracker provides structured speaker cues with temporal grounding, and the LLM generates attributed text conditioned on these cues. G-STAR supports component-wise optimization and joint end-to-end training, enabling flexible learning under heterogeneous supervision and domain shift. Under chunk-wise decoding protocols, experiments on both oracle-segmented local evaluation and full-meeting global evaluation show strong speaker-attributed transcription performance.",
+  "link": "https://arxiv.org/abs/2603.10468",
+  "category": "cs.AI",
+  "categories": [
+    "eess.AS",
+    "cs.AI",
+    "cs.HC",
+    "cs.MM",
+    "cs.SD"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358871Z"
+}

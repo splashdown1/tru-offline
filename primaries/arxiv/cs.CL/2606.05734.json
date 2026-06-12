@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05734",
+  "title": "When AI Says It Feels",
+  "abstract": "Large language models (LLMs) are generally constrained from expressing feelings through human-preference alignment in post-training processes. This policy is designed using a top-down approach and may conflict with the goal of training models to exhibit human-like intelligence using human-generated texts. Here, we performed an experiment called Human-like Model eXpressions of Feeling (HMX-feel), in which LLMs were encouraged to express feelings, intentions, and self-awareness through self-rewarded reinforcement learning. We successfully enhanced these capabilities using a rubric-based self-rewarding training scheme with Group Relative Policy Optimization (GRPO). By comparing the trained models with contrastively trained models, we investigated the effects of this approach on performance across various tasks. Overall, we conducted a broad assessment from various perspectives and identified capabilities that were enhanced, degraded, or showed no significant change. The human-like-trained models showed robustness to sycophancy-inducing questions and bias in disambiguated conditions, whereas degradation in truthful question-answering capability was observed. The results of this experiment suggest the possibility of developing AI systems that can express feelings in the future, provided that appropriate measures are taken.",
+  "link": "https://arxiv.org/abs/2606.05734",
+  "category": "cs.CL",
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498207+00:00"
+}

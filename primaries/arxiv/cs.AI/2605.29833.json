@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.29833",
+  "title": "OmniMatBench: A Human-Calibrated Multimodal Reasoning Benchmark Across 19 Materials Science Subfields",
+  "abstract": "As multimodal language models play an increasingly important role in scientific research, materials science offers a critical testbed due to its interdisciplinary, multimodal, and application-driven nature. However, existing materials benchmarks mainly focus on property prediction, knowledge QA, or characterization understanding, leaving the broader reasoning process from materials knowledge to application underexplored. To fill this gap, we present OmniMatBench, a human-calibrated multimodal reasoning benchmark for materials science. OmniMatBench contains 3,171 expert-curated QA and calculation problems across 19 materials-science subfields, spanning fundamental materials knowledge, structural and engineering materials, materials processing and manufacturing, and functional and applied materials. We evaluate 13 open-source and closed-source MLLMs and find that the best model achieves only a 0.372 overall score, revealing a substantial gap in current materials-science reasoning. Further analysis shows strong variation across subfields, fixed reasoning heuristics, uneven materials knowledge, and limited high-level knowledge application under formula-, retrieval-, and code-assisted settings. OmniMatBench provides crucial insights into the capabilities and limitations of current MLLMs and establishes a foundation for reliable AI assistants in materials-science research.",
+  "link": "https://arxiv.org/abs/2605.29833",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358624Z"
+}

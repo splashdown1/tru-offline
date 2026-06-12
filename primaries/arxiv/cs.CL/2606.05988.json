@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05988",
+  "title": "Compress-Distill: Reasoning Trace Compression for Efficient Knowledge Distillation",
+  "abstract": "Reasoning models produce long chain-of-thought traces that are costly to distill and encourage verbose student outputs. We study post-hoc compression of such traces before knowledge distillation. Two teachers, Qwen3.5-397B-A17B and gpt-oss-120B, generate about 283k correct traces each; two instruction-tuned models then compress them to 8.6-21.0% of their original character length. Across a 48-run main grid plus seven Qwen-teacher truncation ablations, compressed traces reduce training tokens to 12-30% of raw, speed up training by 2.0-7.6x, and shorten inference outputs by 3-19x with smaller reductions under the shorter gpt-oss teacher. However, raw traces retain the highest downstream accuracy at every scale and for both teachers. A length-matched raw-trace truncation ablation shows that compression is not merely benefiting from a smaller token budget: model-compressed traces usually beat or match naive truncation, especially for smaller students, while maintaining shorter inference outputs. Overall, reasoning-trace compression offers an accuracy-efficiency trade-off rather than a free improvement: students retain up to 96% of raw-trace accuracy while gaining up to 18x higher per-token efficiency, and at the 0.8B scale under LoRA compressed traces narrow the raw-vs-compressed gap but do not exceed raw.",
+  "link": "https://arxiv.org/abs/2606.05988",
+  "category": "cs.CL",
+  "categories": [
+    "cs.LG",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498262+00:00"
+}

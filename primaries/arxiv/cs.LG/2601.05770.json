@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2601.05770",
+  "title": "Weights to Code: Extracting Interpretable Algorithms from the Discrete Transformer",
+  "abstract": "Algorithm extraction aims to synthesize executable programs directly from models trained on algorithmic tasks, enabling de novo recovery of executable mechanisms from weights without relying on human-written target programs. However, applying this paradigm to Transformer is complicated by representation entanglement (e.g., superposition), where features encoded in overlapping directions substantially hinder the recovery of symbolic expressions. We propose the Discrete Transformer, an architecture explicitly designed to bridge the gap between continuous representations and discrete symbolic logic. By injecting discreteness through temperature-annealed sampling, our framework effectively leverages hypothesis testing and symbolic regression to extract human-readable programs. Empirically, the Discrete Transformer achieves performance comparable to the RNN-based MIPS baseline on shared discrete tasks, while broadening extraction to tasks with continuous-valued intermediate computations. Finally, we show that architectural inductive biases provide fine-grained control over synthesized programs, establishing the Discrete Transformer as a controllable testbed for algorithm extraction and Transformer interpretability.",
+  "link": "https://arxiv.org/abs/2601.05770",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307772Z"
+}

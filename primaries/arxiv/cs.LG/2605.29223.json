@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.29223",
+  "title": "Inferring the Size of Large Language Models From Popular Text Memorization",
+  "abstract": "The parameter counts of the most widely used large language models (LLMs) are often withheld by their developers, leaving model size -- a primary reference point for interpreting capabilities and costs -- largely undisclosed. We propose a black-box method to infer conservative lower bounds on LLM size from generated text outputs alone, requiring nothing beyond the ability to submit text fragments and observe next-token predictions. Our approach is grounded in a key observation: popular, widely-circulated texts -- such as classical literature, religious texts, and foundational documents -- are present in virtually every large-scale pretraining corpus, and how accurately a model predicts the next word across text fragments of varying length is a reliable signal of how much it has memorized them, which in turn is fundamentally limited by its total parameter count. We aggregate this memorization signal across a diverse corpus of texts and fragment lengths into a single accuracy profile vector per model, and build two complementary inference methods on top of it: a pairwise statistical test that determines which of two models is larger, and a scaling-law estimator that extracts a one-dimensional latent index from these vectors via Principal Component Analysis (PCA) to map the aggregated signal to a parameter count. Validated on a broad set of open-weight models, both methods produce accurate and reliable lower bounds. When applied to popular closed-weight models, our framework recovers internal product hierarchies and reveals a clear divergence in industry scaling strategies: while some developers yield significantly higher bounds indicative of large generational parameter growth, others operate under strict parameter ceilings, demonstrating that hidden design choices can be systematically probed even under strict API limitations.",
+  "link": "https://arxiv.org/abs/2605.29223",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308155Z"
+}

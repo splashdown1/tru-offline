@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.23977",
+  "title": "Circuit-Inspired High-Order Neural Networks with Unified Neural Dynamics Modeling for PDE Solving and Visual Perception",
+  "abstract": "Deep networks often rely on architectural heuristics to shape representation evolution, limiting their ability to model data governed by intrinsic dynamics. We present the Circuit-inspired High-Order Neural Network (CHONN), a modular framework that treats representation evolution as a latent potential process and increases its effective order through Kirchhoff-inspired cascade composition. A single Kirchhoff Neural Cell implements a stable first-order update, while serially composed cells form higher-order dynamical operators within one block. This construction is interpretable, numerically stable and compatible with common neural backbones. Theoretical analysis shows that cascaded cells induce end-to-end high-order operators, and controlled experiments demonstrate that intra-block high-order construction differs from generic depth stacking, especially on derivative-sensitive measures. Across steady-state operator learning, long-horizon physical forecasting and ImageNet-1K recognition, CHONN improves structural fidelity, rollout stability and visual representation learning. These results identify high-order circuit composition as a general principle for neural dynamics modeling.",
+  "link": "https://arxiv.org/abs/2603.23977",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358895Z"
+}

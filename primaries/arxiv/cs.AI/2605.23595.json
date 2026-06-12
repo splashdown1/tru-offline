@@ -1,0 +1,15 @@
+{
+  "arxiv_id": "2605.23595",
+  "title": "Learning to Evaluate: Cost-Effective Model Evaluation on Unlabeled Data with Meta-Learning",
+  "abstract": "The rapid advancement of machine learning has led to an unprecedented expansion of model ecosystems, making it increasingly difficult to assess the reliability of newly released models on unseen and unlabeled data. Existing evaluation pipelines typically rely on costly annotation, repeated fine-tuning, or assumptions that do not generalize well to new models. We introduce MetaEvaluator, a cost-effective, model-agnostic framework for fast, label-free evaluation of unseen models across diverse architectures and modalities. MetaEvaluator meta-learns over a pool of reference models to acquire an effective initialization for accurate assessment of unseen models, thereby amortizing evaluation cost and eliminating the need for per-model retraining. To the best of our knowledge, this is the first model-agnostic framework that evaluates new models on unlabeled datasets. Extensive experiments demonstrate that MetaEvaluator delivers stable and accurate performance estimates at substantially lower cost than conventional approaches, enabling scalable benchmarking on unlabeled datasets for emerging models. The code is available at: https://github.com/phkhanhtrinh23/MetaEvaluator.",
+  "link": "https://arxiv.org/abs/2605.23595",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CV",
+    "cs.ET",
+    "cs.PF"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099322+00:00"
+}

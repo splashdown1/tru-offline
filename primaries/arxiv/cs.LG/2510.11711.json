@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2510.11711",
+  "title": "Reinforced sequential Monte Carlo for amortised sampling",
+  "abstract": "This paper proposes a synergy of amortised and particle-based methods for sampling from distributions defined by unnormalised density functions. We state a connection between sequential Monte Carlo (SMC) and neural sequential samplers trained by maximum-entropy reinforcement learning (MaxEnt RL), wherein learnt sampling policies and value functions define proposal kernels and twist functions. Exploiting this connection, we introduce an off-policy RL training procedure for the sampler that uses samples from SMC -- using the learnt sampler as a proposal -- as a behaviour policy that better explores the target distribution. We describe techniques for stable joint training of proposals and twist functions and an adaptive weight tempering scheme to reduce training signal variance. Furthermore, building upon past attempts to use experience replay to guide the training of neural samplers, we derive a way to combine historical samples with annealed importance sampling weights within a replay buffer. On synthetic multi-modal targets (in both continuous and discrete spaces) and the Boltzmann distribution of alanine dipeptide conformations, we demonstrate improvements in approximating the true distribution as well as training stability compared to both amortised and Monte Carlo methods.",
+  "link": "https://arxiv.org/abs/2510.11711",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307719Z"
+}

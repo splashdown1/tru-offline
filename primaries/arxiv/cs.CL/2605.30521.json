@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30521",
+  "title": "Evaluating using Mock Tool Calls to Quarantine Untrusted Prompt Inputs",
+  "abstract": "Large language models must frequently process untrusted inputs, such as judging an answer from another model or running tasks like spam and harm classifiers while under adversarial pressure. These inputs are often string-formatted directly into a prompt template, leaving systems fragile to manipulation. Current LLM specs from major providers like OpenAI distinguish trustworthiness along an Instruction Hierarchy, from System messages (most trusted) to Tool Results (least trusted). A possible natural mitigation is to wrap untrusted content in a mock tool call as a quarantine. We explore this hypothesis with an automated redteaming search over static attack strings across seven models and three LLM-as-a-Judge tasks. Counter to our hypothesis, tool-wrapping does not broadly improve robustness. On a binary evaluation task (GSM8K grading) it typically increases attack success rates, an apparent inversion of the instruction hierarchy. On scalar and pairwise tasks the effect is smaller and model-dependent, with no tested model reliably helped, and several showing inversion. We recommend evaluating this limitation in deployed systems, and longer-term, pursuing stronger Instruction Hierarchy training or new untrusted-input primitives.",
+  "link": "https://arxiv.org/abs/2605.30521",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405644Z"
+}

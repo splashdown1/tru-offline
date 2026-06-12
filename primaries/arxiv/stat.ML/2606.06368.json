@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.06368",
+  "title": "Optimally taming biases in black-box models for efficient semiparametric estimation",
+  "abstract": "Modern semiparametric estimation often relies on flexible black-box machine learning methods to estimate nuisance functions, raising a fundamental question: how do nuisance estimation errors propagate into inference for low-dimensional target parameters? The dominant paradigm, exemplified by double machine learning (DML), yields error bounds in which nuisance estimation errors enter multiplicatively. While widely adopted, it remains unclear whether this multiplicative-rate dependence is optimal for black-box models. In this paper, we start by revisiting the partial linear model $Y = \\mu_0(X)+T\\cdot\\beta_0+\\varepsilon$ under a structure-agnostic setting, where the nuisance function $\\mu_0$ is estimated using a generic machine learning model, with approximation error $\\delta^a_\\mu$ and stochastic error $\\delta_\\mu^s$. We show that the standard DML rate is not optimal in the regime where the auxiliary function $\\mathbb{E}[T|X=x]$ cannot be consistently estimated. We propose a new estimator for $\\beta_0$ that achieves a sharper rate of $n^{-1/2}+\\delta^a_\\mu+(\\delta_\\mu^s)^2$ and establish a matching lower bound demonstrating its optimality. Our results reveal a new principle: the first-order stochastic error of nuisance estimation can be eliminated without imposing any additional assumptions. This also leads to a revised tuning strategy favoring under-smoothing, where $\\delta^a_\\mu\\asymp(\\delta_\\mu^s)^2$, rather than the classical bias-variance trade-off $\\delta^a_\\mu \\asymp \\delta_\\mu^s$. Under mild additional conditions, the estimator is asymptotically normal with minimal asymptotic variance. The proposed method extends to a broad class of semi-parametric linear functional estimation problems, including average treatment effect estimation. Our results imply that popular orthogonal score methods in semiparametric estimation with black-box nuisance learners can be substantially improved.",
+  "link": "https://arxiv.org/abs/2606.06368",
+  "category": "stat.ML",
+  "categories": [
+    "math.ST",
+    "stat.ME",
+    "stat.ML",
+    "stat.TH"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728751+00:00"
+}

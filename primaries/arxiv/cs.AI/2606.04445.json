@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.04445",
+  "title": "RowNet: A Memory Transformer for Tabular Regression",
+  "abstract": "Real estate valuation is a structured regression problem in which prices are governed by heterogeneous feature types, sparse regional effects, nonlinear interactions, and the practical logic of comparable properties. Standard multilayer perceptrons treat each row as an isolated vector and must learn locality, scale sensitivity, and categorical matching from supervision alone. Gradient-boosted decision trees provide strong tabular baselines, but their feature-centric splitting mechanism does not explicitly model the retrieval of similar historical observations.\n  This paper presents RowNet, a retrieval-based neural architecture for real estate price-per-square-meter prediction. RowNet represents a query property through pairwise similarity features against a memory bank of labeled properties. A first retrieval layer estimates a coarse target from feature-only similarities. A second layer augments the memory comparison with target-consistency features and uses multiple learned attention heads to retrieve complementary comparable sets. A final mixture-of-experts module combines learned gating, residual correction, entropy regularization, and head-diversity regularization to produce the prediction.",
+  "link": "https://arxiv.org/abs/2606.04445",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "math.ST",
+    "stat.TH"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098225+00:00"
+}

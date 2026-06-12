@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2510.15340",
+  "title": "Singularity-free dynamical invariants-based quantum control",
+  "abstract": "State preparation is a cornerstone of quantum technologies, underpinning applications in computation, communication, and sensing. Its importance becomes even more pronounced in non-Markovian open quantum systems, where environmental memory and model uncertainties pose significant challenges to achieving high-fidelity control. Invariant-based inverse engineering provides a principled framework for synthesizing analytic control fields, yet existing parameterizations often lead to experimentally infeasible, singular pulses and are limited to simplified noise models such as those of Lindblad form. Here, we introduce a generalized invariant-based protocol for finite-dimensional state preparation under arbitrary noise conditions. We transform the finite-dimensional control problem into the equivalent problem for a single-qubit, by restricting the dynamics to a designed SU(2) subspace. The control protocol then proceeds in two-stages: first, we construct a family of bounded pulses that achieve perfect state preparation in a closed system; second, we identify the optimal member of this family that minimizes the effect of noise. The framework accommodates both (i) characterized noise, enabling noise-aware control synthesis, and (ii) uncharacterized noise, where a noise-agnostic variant preserves robustness without requiring a master-equation description. Numerical simulations demonstrate high-fidelity state preparation across diverse targets while producing smooth, hardware-feasible control fields. This singularity-free framework extends invariant-based control to realistic open-system regimes, providing a versatile route toward robust quantum state engineering on NISQ hardware and other platforms exhibiting non-Markovian dynamics.",
+  "link": "https://arxiv.org/abs/2510.15340",
+  "category": "cs.LG",
+  "categories": [
+    "quant-ph",
+    "cs.LG",
+    "cs.SY",
+    "eess.SY"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308311Z"
+}

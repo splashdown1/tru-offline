@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2411.19758",
+  "title": "LaVIDE: Language-Prompted Satellite Change Detection via Map-Image Alignment",
+  "abstract": "Remote sensing change detection based on a map reference and an up-to-date image boosts timely observation of the Earth's surface when earlier images are lacking for comparison. However, the semantic gap between high-level map categories and low-level image details hinders the extraction of homogeneous features for robust temporal association in change detection. Unlike conventional approaches that either compare pixel-level visual similarity or propagate segmentation errors, \\textcolor{black}{we propose a novel framework, \\underline{La}nguage-\\underline{VI}sion \\underline{D}iscriminator for d\\underline{E}tecting changes, LaVIDE}, which bridges the semantic gap between high-level map categories and low-level image details using language as an intermediary. Specifically, we introduce {\\it restricted prompt learning} to generate context-aware textual prompts that align map semantics with image content, and an {\\it object-aware embedding enhancement} strategy to integrate object-level attributes (e.g., shape, boundary) into map representations. These components enable robust cross-modal alignment within a unified language-vision feature space. Extensive experiments on four benchmarks, DynamicEarthNet, HRSCD, BANDON, and SECOND, demonstrate that LaVIDE outperforms state-of-the-art methods by significant margins, achieving $18.4\\%$ and $5.2\\%$ improvements in IoU on multi-class and single-class change detection tasks, respectively. Our framework not only advances the accuracy of map-image change detection but also provides a practical solution for rapid map updating with minimal human intervention, promising broad impacts in urban planning, disaster assessment, and ecological conservation. Code and datasets are available at: https://github.com/ShuGuoJ/LAVIDE.git.",
+  "link": "https://arxiv.org/abs/2411.19758",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098793+00:00"
+}

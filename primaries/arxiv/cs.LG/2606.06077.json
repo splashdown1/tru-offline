@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06077",
+  "title": "3D Underwater Path Planning via Generative Flow Field Surrogates",
+  "abstract": "Autonomous underwater vehicle (AUV) launch and recovery (LAR) into the hull of an advancing host platform requires traversal of a complex, three-dimensional propeller wake whose hydrodynamic structure cannot be characterised by a uniform current model. High-fidelity Reynolds-Averaged Navier-Stokes (RANS) Computational Fluid Dynamics (CFD) simulations resolve this structure with sufficient accuracy for path planning, but their computational cost renders them impractical for onboard use. We address this gap by integrating two conditional generative adversarial network (cGAN) architectures -- a regularised PatchGAN and a 2D3DGAN with self-attention -- as drop-in replacements for RANS CFD data within a three-dimensional, energy-weighted A* path planning framework. Both generators are driven by a hierarchical pipeline that synthesises full $128^3$ voxel flow field volumes from scalar operating condition inputs alone, with end-to-end inference times of approximately 28-146 $\\mu$s, compared to hours for a single RANS computation. We benchmark all four environmental knowledge levels: uniform current, ground-truth CFD, PatchGAN, and 2D3DGAN~SA across 19,800 independently generated trajectories spanning 550 distinct flow conditions. Full CFD wake knowledge reduces energy expenditure by 5.7-12.5% and high-velocity wake-core encounters by up to 77.8% relative to uniform-current planning, with both benefits scaling with operating severity. The cGAN surrogates recover approximately 45-60% of the CFD energy benefit and high-velocity cell avoidance benefit while operating at inference speeds compatible with edge device use. These results provide the first systematic quantification of the downstream path planning value of cGAN-predicted hydrodynamic fields in a three-dimensional maritime robotics application.",
+  "link": "https://arxiv.org/abs/2606.06077",
+  "category": "cs.LG",
+  "categories": [
+    "cs.RO",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883503+00:00"
+}

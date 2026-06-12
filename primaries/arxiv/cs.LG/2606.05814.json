@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05814",
+  "title": "Robust and sparse support vector machine via hybrid truncated loss for supervised classification",
+  "abstract": "The support vector machine (SVM) is a widely used classifier, but choosing an appropriate loss function remains difficult. Convex losses such as the hinge loss and least-squares loss are sensitive to outliers, while bounded non-convex losses often lead to high computational cost. To address this, we propose a hybrid truncated loss function ($L_{\\mathrm{ht}}$) that is both sparse and bounded, and build the $L_{\\mathrm{ht}}$-SVM model for single-view classification. We introduce the P-stationary point and use it to establish the first-order necessary and sufficient optimality conditions. Based on these conditions, we design an alternating direction method of multipliers with a working-set strategy that reduces computational cost and achieves global convergence. We further extend $L_{\\mathrm{ht}}$-SVM to multi-view learning by adding structural information and view weights, resulting in Mv$L_{\\mathrm{ht}}$-SVM, which follows both the consensus and complementarity principles. Experiments on synthetic, real-world, and image datasets show that $L_{\\mathrm{ht}}$-SVM achieves higher accuracy with fewer support vectors and better noise robustness than five single-view methods, while Mv$L_{\\mathrm{ht}}$-SVM outperforms six multi-view methods in accuracy, precision, recall, and F1-score.",
+  "link": "https://arxiv.org/abs/2606.05814",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882362+00:00"
+}

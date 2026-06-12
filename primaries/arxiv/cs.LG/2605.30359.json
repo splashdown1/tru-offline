@@ -1,0 +1,17 @@
+{
+  "arxiv_id": "2605.30359",
+  "title": "Kernel Foundry: A Diagnosis-driven Evolutionary Kernel Optimizer with Multi-Experts",
+  "abstract": "Generating high-performance GPU kernels remains challenging due to the need for both correctness and hardware-aware optimization. While large language models (LLMs) show promise in code generation, they often fail to produce kernels that are both correct and efficient.\n  We propose Kernel Foundry, a diagnosis-driven evolutionary framework for automatic GPU kernel optimization. Our method combines expert-guided, retrieval-augmented initialization with a multi-island evolutionary search, where candidate kernels are iteratively refined using structured diagnostic feedback. A centralized experience library accumulates reusable optimization knowledge to guide subsequent evolution, while explicit mechanisms prevent cheating behaviors that bypass kernel-level computation.\n  Experiments on KernelBench show that our method consistently improves both correctness and performance over strong baselines, achieving up to 100% correctness on Level~2.",
+  "link": "https://arxiv.org/abs/2605.30359",
+  "category": "cs.LG",
+  "categories": [
+    "cs.NE",
+    "cs.DC",
+    "cs.LG",
+    "cs.PF",
+    "cs.SE",
+    "cs.SY",
+    "eess.SY"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307213Z"
+}

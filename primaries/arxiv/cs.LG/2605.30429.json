@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30429",
+  "title": "Attention-based optimizer for symmetry finding",
+  "abstract": "Finding symmetries is crucial for understanding physical models. In this work, we present an optimization framework that searches Pauli symmetries of Hamiltonians, merging the fields of machine learning with automated symmetry finding. Built on a Set-Transformer architecture, our framework uses self-attention to encode the pairwise and higher-order correlations among the Pauli-Strings. The relations are then decoded as a candidate, which is further optimized with a custom commutation-based objective, and mapped to a symmetry of the input Hamiltonian. We apply our method to random Pauli Hamiltonians, periodic one and two dimensional transverse-field Ising model and the Toric code. We show that for physical Hamiltonians (Ising and Toric), our framework succeeds with near-deterministic probability while providing substantial advantage compared to state-of-the-art strategies. For random Pauli Hamiltonians, we estimate the required computational resources, specifically the number of parallel starts and the number of GPUs, to find a symmetry with high success probability under fixed design specifications.",
+  "link": "https://arxiv.org/abs/2605.30429",
+  "category": "cs.LG",
+  "categories": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307248Z"
+}

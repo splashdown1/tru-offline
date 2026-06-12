@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2410.22967",
+  "title": "Adaptive NAD: Online and Self-adaptive Unsupervised Network Anomaly Detector",
+  "abstract": "The widespread usage of the Internet of Things (IoT) has raised the risks of cyber threats; thus, developing Anomaly Detection Systems (ADSs) that can adapt to evolving traffic pattern is critical. Previous studies primarily focused on offline unsupervised learning methods to safeguard ADSs, which is not applicable in practical real-world applications. In this paper, we design Adaptive NAD, an online and self-Adaptive unsupervised Network Anomaly Detection framework for security domains. A two-layer anomaly detection strategy is proposed to generate reliable high-confidence pseudo-labels. Then, an online training scheme is introduced to update Adaptive NAD by a novel threshold calculation technique. Experimental results demonstrate that Adaptive NAD achieves the lowest false alarm rate (1.33%, 0.71%, and 0.08%) and has a more than 3 times faster online inference latency compared with state-of-the-art solutions on the CIC-Darknet2020, NSL-KDD, and Edge-IIoTset datasets, respectively. The code is released at https://github.com/MyLearnCodeSpace/Adaptive-NAD.",
+  "link": "https://arxiv.org/abs/2410.22967",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "eess.SP"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307576Z"
+}

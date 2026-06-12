@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2601.01075",
+  "title": "Flow Equivariant World Models: Memory for Partially Observed Dynamic Environments",
+  "abstract": "Embodied systems experience the world as 'a symphony of flows': a combination of many continuous streams of sensory input coupled to self-motion, interwoven with the dynamics of external objects. These sensory streams and the underlying dynamics of the world obey smooth, time-parameterized symmetries which existing world models ignore. Without a memory that respects this structure, partial observability presents a major obstacle to existing methods: each observation reveals only a fraction of the world, while unobserved regions continue to evolve. In this work, we introduce Flow Equivariant World Modeling, a framework that leverages time-parameterized symmetries within a latent memory for stable and accurate dynamics prediction over long horizons. The latent memory shifts and transforms equivariantly with self-motion and inferred external object motion, keeping information about out-of-view regions aligned as time progresses. We demonstrate the advantage of this framework over state-of-the-art diffusion, memory-augmented, and recurrent world model architectures on 2D and 3D partially observed video world modeling benchmarks. More broadly, our results suggest that predictive representations become more powerful when they are organized in line with the temporal and dynamical structure of the world they model. Project page: https://flowequivariantworldmodels.github.io/",
+  "link": "https://arxiv.org/abs/2601.01075",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307762Z"
+}

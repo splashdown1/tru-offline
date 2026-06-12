@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30776",
+  "title": "Efficient and Uncertainty-Aware Diffusion Framework for Offline-to-Online Reinforcement Learning",
+  "abstract": "Offline-to-Online Reinforcement Learning (O2O-RL) leverages an offline, pre-trained policy to minimize costly online interactions. Although data-efficient, O2O-RL is susceptible to shifts between offline and online distributions. Existing work aims to mitigate the harm of this shift by finetuning the policy on trajectory data sampled from a diffusion model. Inspired by this line of work, we propose DUAL: an efficient \\textbf{D}iffusion \\textbf{U}ncertainty-\\textbf{A}ware framework for offline-to-online reinforcement \\textbf{L}earning. DUAL utilizes the prior knowledge of the diffusion model to distill a fast-sampling diffusion actor policy and transition model in the offline phase. DUAL also employs a Laplace approximation and distance transition-state-shift detection, thereby using uncertainty quantification to improve exploration versus exploitation in the online phase. We formally show that our actor loss with the Laplace approximation provides a proxy for a principled estimate of epistemic uncertainty. Empirically, DUAL improves the online expected return over O2O-RL baselines across multiple settings and environments.",
+  "link": "https://arxiv.org/abs/2605.30776",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306798Z"
+}

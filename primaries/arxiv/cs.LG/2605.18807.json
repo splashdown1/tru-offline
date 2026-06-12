@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.18807",
+  "title": "Block-Based Double Decoders",
+  "abstract": "Encoder-decoder models offer substantial inference-time savings over decoder-only models, but their pretraining objectives suffer from sparse supervision and dynamic sequence lengths, keeping them out of practice at scale. We propose block-based double decoders, a novel transformer architecture that utilizes doubly-causal block-based attention masks to train with full loss supervision and static sequence packing, combining decoder-only training efficiency with encoder-decoder inference efficiency. In scaling law experiments, block-based double decoders strongly outperform encoder-decoders and closely track decoder-only models across scales. At inference time, they cut KV-cache memory and per-token compute by at least 2/3 without sacrificing prefill caching or other existing inference optimizations available to decoder-only models.",
+  "link": "https://arxiv.org/abs/2605.18807",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308103Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04752",
+  "title": "An Empirical Audit of Input Encoders for Multi-Channel Signal Transformers",
+  "abstract": "Transformers consuming multi-channel scalar signals must embed $C$ simultaneous values into one $d_{\\text{model}}$-dimensional vector per time step. We empirically audit eight input encoders -- spanning a shared-scalar baseline, per-channel linear projections, an orthogonality regulariser, a nonlinear MLP stem, block-partitioned concatenation, channel-independent and channel-as-token architectures, and a projected positional encoding -- on a synthetic benchmark designed to make channel identity informative and on ETTh1 as a real-data check, measured in next-step negative log-likelihood (NLL). The headline is one of practical near-equivalence within a wide \"top tier\": the standard per-channel linear projection (nn.Linear(C, $d_{\\text{model}}$)) matches every alternative in that tier up to small, statistically real but practically modest, differences. Two encoders lose decisively: the shared-scalar baseline, which collapses for information-theoretic reasons we make explicit, and the channel-independent PatchTST-spirit baseline, which underperforms on both benchmarks and overfits universally on the synthetic one. Paired tests resolve two small gaps: projecting the sinusoidal positional encoding through a learned linear layer edges the rest at small $C$, with a direct geometric probe showing the mechanism is positional-channel orthogonalisation; a nonlinear MLP stem edges them at the largest $C$ we test, with the gap shrinking under more training data. The practical recommendation is to use nn.Linear(C, $d_{\\text{model}}$) by default and reach for something more elaborate only when the task at hand gives a real reason to do so. Code and data to reproduce every experiment in this paper are available at https://github.com/OssiLehtinen/channel-encoder-audit",
+  "link": "https://arxiv.org/abs/2606.04752",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098401+00:00"
+}

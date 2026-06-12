@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31043",
+  "title": "Routing on the Stiefel Manifold: When Does Adaptive Subspace Selection Help for Cross-Domain EEG Decoding?",
+  "abstract": "Cross-domain EEG decoding remains challenging despite advances in Riemannian deep learning: covariance matrices from different subjects occupy systematically distinct regions of the SPD manifold, yet existing domain adaptation methods either require target-domain calibration data or learn subject-specific components that cannot generalise across domains. We propose dynamic Stiefel routing: a pool of $K$ expert projection filters on the Stiefel manifold, each specialised for a different region of the SPD manifold, with each input covariance routed to the most appropriate filter via cross-attention, adapting the subspace projection per sample. A central finding is that this approach, implemented naively, provably collapses to ensemble averaging: when routing weights are uniform, the adaptive filter reduces exactly to an equal-contribution combination of experts, indistinguishable from a single fixed filter. Three structural properties break this degeneracy: a symmetric anchor $W_{\\mathrm{base}} \\in \\mathrm{St}(n,k)$ that removes proximity bias among experts; a frozen domain-discriminative query encoder that decouples routing from task optimisation; and a decoupled key alignment loss that trains expert keys toward stable domain attractors. Together they produce the first genuinely committed and domain-structured routing on SPD manifolds, with consistent gains across three datasets: balanced accuracy improves from $0.773\\to 0.823$, $0.757\\to 0.809$, and $0.801\\to 0.839$, with the alignment strategy determined automatically by a single data-driven rule and no dataset-specific hyperparameter search.",
+  "link": "https://arxiv.org/abs/2605.31043",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307409Z"
+}

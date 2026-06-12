@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05198",
+  "title": "An accurate nucleic acid-small molecule docking framework via geometric deep learning with large-scale pretraining",
+  "abstract": "Nucleic acids are increasingly recognized as therapeutic targets beyond conventional protein-centered drug discovery, yet accurate and efficient docking of small molecules to nucleic acid structures remains challenging. Physics-based docking methods often show limited accuracy and efficiency, whereas deep learning approaches are constrained by the scarcity of experimentally resolved nucleic acid-ligand complexes. Here, we present NucleoDock, a deep learning framework for nucleic acid-small molecule docking. To address data scarcity, NucleoDock combines physics-guided large-scale pretraining on millions of docking-generated synthetic complexes with fine-tuning on curated experimental co-crystal structures. It further integrates sequence- and structure-informed nucleotide representations with atomistic three-dimensional features to capture both biological context and binding-site geometry. A mixture density network-based geometric scoring head is used to model conditional interaction-distance distributions for pose ranking. On an external benchmark of 125 nucleic acid-ligand complexes, NucleoDock achieved a top-1 success rate of 56 percent at an RMSD cutoff of 2.0 Angstrom, outperforming rDock with 29 percent, while generating 100 poses in approximately 5 seconds per complex. Retrospective virtual screening on the ROBIN benchmark further showed improved early enrichment. NucleoDock represents a step toward bridging the methodological gap between protein- and nucleic acid-directed computational drug discovery.",
+  "link": "https://arxiv.org/abs/2606.05198",
+  "category": "cs.LG",
+  "categories": [
+    "q-bio.BM",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882807+00:00"
+}

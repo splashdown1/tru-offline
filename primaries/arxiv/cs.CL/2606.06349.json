@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06349",
+  "title": "\"Chi nas dal soch el sent de legn\" -- Auditing Text Corpora for Lombard",
+  "abstract": "Several of the world's languages are still under-resourced in terms of Natural Language Processing (NLP) tools. This is mostly due to the lack of high-quality datasets to train, develop, and evaluate systems and models for several tasks, such as Machine Translation (MT). We conduct a manual audit of the parallel and monolingual corpora available for Lombard, an under-resourced language continuum from Italy. Our analysis reveals that the perceived abundance of web-scraped data is an illusion, with massive datasets plagued by severe language misidentification, boilerplate text, and non-linguistic noise. Furthermore, we analyze the orthographic composition of the valid Lombard portions across web-scraped datasets, curated corpora, and benchmarks. Our findings show conflicting orthographical systems and severe representational bias across all corpora: high-quality data is heavily skewed towards Western Lombard varieties, with Eastern ones left on the margins. This underscores the need for variety-aware, community-driven data curation rather than purely quantity-driven scraping.",
+  "link": "https://arxiv.org/abs/2606.06349",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498060+00:00"
+}

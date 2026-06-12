@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.04648",
+  "title": "BiNSGPS: Geometry Problem Solving via Bidirectional Neuro-Symbolic Interaction",
+  "abstract": "Geometry problem solving poses distinct challenges in artificial intelligence. Existing approaches typically fall into two paradigms: symbolic methods, which exhibit limited adaptability, and neural methods, which are prone to hallucinations. Recent neuro-symbolic hybrids predominantly rely on a unidirectional pipeline where neural outputs are fed into solvers without feedback, making system brittle to early-stage errors. To break this unidirectional bottleneck, we propose BiNSGPS, a framework that establishes Bidirectional Neuro-Symbolic Interaction (BiNS) between a MLLM Adviser and a Symbolic Solver. MLLM Adviser actively incorporates feedback from the symbolic solver to dynamically rectify inconsistent formal representations or propose auxiliary hypotheses, resolving symbolic conflicts and facilitating complex deductions.",
+  "link": "https://arxiv.org/abs/2606.04648",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097651+00:00"
+}

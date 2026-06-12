@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31222",
+  "title": "Multivariate Distributional Reinforcement Learning Using Sliced Divergences",
+  "abstract": "Distributional reinforcement learning (DRL) models the full return distribution rather than expectations, but extending it to multivariate settings remains challenging. Many common metrics do not naturally generalize beyond one dimension or lose computational tractability, and the multivariate case introduces additional difficulties such as general matrix discounting, for which no contraction results are available. We introduce Sliced Distributional Reinforcement Learning (SDRL), which lifts tractable one-dimensional divergences to multivariate return distributions via projections. We prove Bellman contraction for uniform slicing under shared scalar discounting, and introduce a maximum-slicing variant with contraction under general dense discount matrices. SDRL supports a broad class of base divergences; we analyze Wasserstein, Cram\\'er, and Maximum Mean Discrepancy (MMD), and characterize which SDRL variants suit the standard single-sample Bellman update used in distributional RL. We evaluate SDRL on a toy chain problem and a gridworld image-based environment as well as a subset of Atari games.",
+  "link": "https://arxiv.org/abs/2605.31222",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307017Z"
+}

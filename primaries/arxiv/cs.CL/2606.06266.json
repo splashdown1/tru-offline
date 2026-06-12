@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06266",
+  "title": "From Self to Other: Evaluating Demographic Perspective-Taking in LLM Hate Speech Annotation",
+  "abstract": "Hate speech detection is inherently subjective: people from different demographic groups perceive the same content very differently. Collecting enough annotations from multiple demographic groups is costly and difficult to scale. Persona-conditioned Large Language Models (models prompted to adopt a specific demographic identity) have been proposed as a way to simulate diverse perspectives at scale. But do they actually reflect how different groups disagree? We evaluate three aspects of human social judgement: (i) whether personas from different groups disagree in human-like ways (inter-group disagreement), (ii) whether they become more sensitive when content targets their own identity (in-group sensitivity), and (iii) whether they can accurately predict how another group would react (vicarious prediction). Our results show that no model consistently captures all three dimensions, and performance is highly model-dependent and does not emerge reliably from minimal identity prompts alone. However, vicarious prompting with Llama 3.1 yields the highest cross-group agreement in most demographic axes and provides the closest overall approximation to human disagreement patterns, indicating that this configuration may provide a more reliable setting for automatic annotation aligned with human judgements.",
+  "link": "https://arxiv.org/abs/2606.06266",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498039+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05263",
+  "title": "Policy-Conditioned Counterfactual Credit for Verifiable Reinforcement Learning of Long-Horizon Language Agents",
+  "abstract": "Reinforcement learning with verifiable rewards improves reasoning and tool use, yet long-horizon language agents still learn unsupported evidence chains, belief drift, and shortcut actions that satisfy terminal checks. Existing process rewards are mostly correlational: they reward retrieval-, reflection-, or verification-like steps without estimating whether the step contributes to final verified success under a specified intervention. We propose CVT-RL, a constrained policy-gradient algorithm with dense verifiable rewards, intervention-validity gating, and a policy-conditioned counterfactual contribution (PCCC) estimator. Deletion, semantic substitution, evidence substitution, and tool-output perturbation define separate controlled interventions; continuations are sampled from a frozen reference policy, and a selection-adjusted doubly robust estimator augments the advantage. Belief control uses only prefix-observable labels, while an augmented Lagrangian constrains unsupported claims, skipped verification, tool tampering, and unsafe calls. On long-context QA, ALFWorld, ScienceWorld, and web/tool tasks, CVT-RL improves average task success from 71.8% for compute-matched non-causal RL and 75.4% for an information-matched counterfactual-process baseline to 78.9%, improves evidence F1 from 78.9 to 82.8 over the information-matched baseline, and reduces measured hacking from 7.2% to 3.9%. Independent human audit estimates 4.6% hacking for CVT-RL versus 8.1% for the information-matched baseline, and adaptive detector-evasion attacks raise hacking only to 7.1%. Stratified bootstrap and mixed-effects tests give p<0.01 after Holm correction for all primary metrics. Carefully scoped counterfactual credit, paired with validity gating, diagnostics, and verifiable constraints, provides a reproducible route toward more reliable long-horizon RL for language agents.",
+  "link": "https://arxiv.org/abs/2606.05263",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881915+00:00"
+}

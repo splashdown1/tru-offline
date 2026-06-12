@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.24358",
+  "title": "Treatment Effect Estimation with Differentiated Networked Effect on Graph Data",
+  "abstract": "Estimating individual treatment effect (ITE) from observational graph data is crucial for decision-making in the fields such as commerce and medicine. This task is challenging due to interference, where individual outcomes can be influenced by the treatments and covariates of their neighbors. Existing methods attempt to model such interference for accurate ITE estimation. However, a critical issue is often overlooked: differentiated networked effect (DNE), an effect caused by local networks consisting of neighbors with varying importance and scales. Capturing DNE is vital; otherwise, we will end up with imprecise ITE estimation due to an erroneous characterization of interference, which can result in misguided decisions. To address this challenge, we propose a novel interference modeling mechanism that incorporates two partial attention mechanisms and a message amplifier. The partial attention mechanisms automatically estimate the importance of different neighbors in contributing to interference, while the message amplifier adjusts the results of the interference modeling mechanism based on the scale of neighbors, all of which enables the model to capture DNE. Experiments on three real-world graphs demonstrate that our methods outperform existing approaches for ITE estimation from graph data, which corroborates the importance of explicitly capturing DNE.",
+  "link": "https://arxiv.org/abs/2605.24358",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099326+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06196",
+  "title": "A Machine Learning-Based Framework for Discovering Huntington's Disease Stages: Integrating Graph Representation Learning and clustering to Uncover Progression Dynamics in Longitudinal Enroll-HD Dataset",
+  "abstract": "Huntington's disease (HD) is a progressive brain disorder that gradually affects movement, cognitive function, and behavior. Identifying the stage of the disease accurately and consistently is important for understanding its course, grouping patients, personalized care, and discovering treatment. Existing clinical staging frameworks rely primarily on predefined clinical measurement thresholds and clinical expert decisions, yet these discrete cut-offs may obscure meaningful intra-stage variability and remain vulnerable to inter-rater differences, especially in motor and functional assessments. To address these limitations, we developed an unsupervised machine learning framework based on dynamic graph representation learning to capture temporal relationships within and across patients from longitudinal clinical measurements. Using the learned representations, we applied K-means++ clustering to identify well-separated groups. We then iteratively increased the number of clusters (k), using stability analysis to assess robustness and reveal additional meaningful clusters beyond the initial optimal solution. We applied the framework to 302 individuals from the Enroll-HD cohort (1,477 visits, 44 clinical variables per visit; 80% manifest participants), enabling data-driven discovery of HD stages reflecting natural clinical progression. Despite the limited cohort size, the proposed framework achieved robust clustering performance using a four-dimensional latent space, identifying four meaningful and statistically distinct disease stages through clustering stability analysis. Each stage corresponded to well-defined clinical measurement boundaries, with minimal overlap compared to previously established clinical staging methods.",
+  "link": "https://arxiv.org/abs/2606.06196",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882594+00:00"
+}

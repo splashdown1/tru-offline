@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30865",
+  "title": "GlucoFM: A Dual-Stream Foundation Model for Continuous Glucose Monitoring",
+  "abstract": "Continuous glucose monitoring (CGM) provides a dense view of daily metabolic physiology, yet existing generic time-series and CGM-specific foundation models often encode glucose traces as entangled single-stream sequences, leaving the distinct temporal structure of glycemic dynamics only implicitly modeled. We present GlucoFM, a lightweight CGM foundation model that aligns irregular recordings to a 24-hour chronological grid, preserves observation masks, and decomposes glucose dynamics into slow physiological state and transient event streams, capturing low-frequency glycemic baselines and short-term deviations that may reflect acute physiological responses or sensor artifacts. GlucoFM is pretrained on 109,066 hours of unlabeled CGM recordings from 477 subjects with two complementary objectives: masked contextual latent prediction over fused daily representations and temporal dynamics prediction over state and event streams. Across four diverse cohorts and seven clinical prediction tasks, GlucoFM achieves the strongest subject-disjoint linear-probing performance among evaluated baselines, improving average PR-AUC by 4.1 points over the best CGM-specific foundation model. Its gains are most pronounced on core metabolic outcomes, leading PR-AUC on all diabetes-risk and $\\beta$-cell dysfunction tasks and on 3 of 4 insulin-resistance tasks. GlucoFM also achieves the best overall cross-dataset transfer performance and strong few-shot adaptation among evaluated methods, and consistent gains when aggregating multiple days for subject-level prediction, highlighting physiology-aware decomposition as an effective inductive bias for transferable CGM representation learning.",
+  "link": "https://arxiv.org/abs/2605.30865",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306841Z"
+}

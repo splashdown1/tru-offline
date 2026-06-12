@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.13069",
+  "title": "Memory-Efficient Structured Backpropagation for On-Device LLM Fine-Tuning",
+  "abstract": "On-device fine-tuning enables privacy-preserving personalization of large language models, but mobile devices impose severe memory constraints, typically 6--12GB shared across all workloads. Existing approaches force a trade-off between exact gradients with high memory (MeBP) and low memory with noisy estimates (MeZO). We propose Memory-efficient Structured Backpropagation (MeSP), which bridges this gap by manually deriving backward passes that exploit LoRA's low-rank structure. Our key insight is that the intermediate projection $h = xA$ can be recomputed during backward at minimal cost since rank $r \\ll d_{in}$, eliminating the need to store it. MeSP achieves 49\\% average memory reduction compared to MeBP on Qwen2.5 models (0.5B--3B) while computing mathematically identical gradients. Our analysis also reveals that MeZO's gradient estimates show near-zero correlation with true gradients (cosine similarity $\\approx$0.001), explaining its slow convergence. MeSP reduces peak memory from 361MB to 136MB for Qwen2.5-0.5B, enabling fine-tuning scenarios previously infeasible on memory-constrained devices.",
+  "link": "https://arxiv.org/abs/2602.13069",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307927Z"
+}

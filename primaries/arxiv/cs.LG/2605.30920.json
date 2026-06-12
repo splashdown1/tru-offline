@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30920",
+  "title": "Unsupervised Diffusion Solver for Combinatorial Optimization via Combinatorial Adjoint Matching",
+  "abstract": "Diffusion-based neural solvers have shown strong promise for combinatorial optimization (CO), but existing methods typically rely on supervised training with large collections of near-optimal solutions. In this work, we extend adjoint-based trajectory optimization methods to discrete combinatorial domains. We formulate diffusion-based CO as a stochastic control problem over Continuous-Time Markov Chains and introduce discrete adjoint dynamics for propagating optimization signals through discrete generative trajectories. Building on this formulation, we propose Combinatorial Adjoint Matching (CAM), an unsupervised training framework for discrete diffusion solvers with structured and low-variance trajectory-level optimization signals. Empirically, CAM consistently outperforms existing unsupervised diffusion baselines and achieves performance competitive with strong supervised diffusion solvers and even traditional solvers across diverse combinatorial optimization problems. Our code is available at https://github.com/Shengyu-Feng/CAM.",
+  "link": "https://arxiv.org/abs/2605.30920",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306874Z"
+}

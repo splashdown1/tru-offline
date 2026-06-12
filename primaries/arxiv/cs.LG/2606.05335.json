@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05335",
+  "title": "A prism hierarchy of learning regimes in large linear autoencoders",
+  "abstract": "Theoretical studies of machine learning models commonly consider different limiting regimes in which the learning dynamics of gradient descent becomes theoretically tractable. It is, however, desirable to have a systematically obtained picture of all qualitatively different extreme learning regimes for a particular type of models. In this paper we propose such a picture for large weight-tied linear autoencoders characterized by input and latent dimensions, initialization magnitude, and training set size. This model is nonlinear in the weights and its gradient flow does not have a general theoretical solution. We show that at the level of the formal loss-expansion hierarchy, its extreme regimes are naturally associated with faces of a triangular prism. In particular, there are five basic extreme regimes associated with the 2-faces of the prism: (1) large-data, (2) small-data, (3) mean-field, (4) narrow-latent, and (5) free. For regimes (1,2,3,4), we derive explicit expressions for both train and population limiting loss evolutions under gradient flow, obtaining very good agreement with experimental results.",
+  "link": "https://arxiv.org/abs/2606.05335",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881970+00:00"
+}

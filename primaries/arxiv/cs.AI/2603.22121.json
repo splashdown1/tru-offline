@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.22121",
+  "title": "GenSpan: Generation-Calibrated Motion Span Priors for Multi-Verb Video Corpus Moment Retrieval",
+  "abstract": "Video Corpus Moment Retrieval (VCMR) aims to retrieve both the correct video and its temporal segment corresponding to a natural-language query, a task that is especially challenging for multi-verb queries where temporal action ordering is critical. Existing approaches often rely solely on text or static images and struggle to capture implicit motion dynamics, leading to retrieval errors and temporal misalignment. We propose GenSpan, a generation-calibrated VCMR framework that constructs short auxiliary videos from LLM-selected subtitle cues and decomposed sub-events, using these as temporal priors rather than direct retrieval targets. A token selector filters candidate-video features aligned with generated motion, and a bidirectional state-space model efficiently predicts video-moment tuples. Experiments on TVR and ActivityNet-Captions demonstrate that GenSpan improves corpus-level retrieval and moment localization, particularly for complex multi-action queries, while reducing computational cost compared to state-of-the-art multimodal baselines.",
+  "link": "https://arxiv.org/abs/2603.22121",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099177+00:00"
+}

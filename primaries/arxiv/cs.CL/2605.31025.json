@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31025",
+  "title": "TRACE: Discovering Task-Specific Parameter via Adaptation-Aware Probing for Continual Fine-Tuning",
+  "abstract": "In real-world deployment, LLMs are often adapted continually across tasks to keep LLMs up-to-date in production, where new fine-tuning should preserve previously learned skills. However, indiscriminately mixing tasks can dilute task specialization, while sequential fine-tuning (full-parameter or low rank adaptation) often causes catastrophic forgetting due to destructive overwriting. Replay-based continual tuning and maintaining separate task-specific adapters can mitigate forgetting, but introduce additional compute, storage, and management overhead. Recognizing the redundancy of LLM parameters for any single task, we reframe continual task adaptation as task-specific parameter discovery via adaptation-aware probing: a short warm-start probe exposes a task's adaptation trace, enabling us to identify and isolate the small subset of parameters essential for each task to mitigate catastrophic forgetting. Building on this view, we introduce TRACE, a novel approach for discovering Task-specific paRameters via Adaptation-aware probing for Continual finE-tuning. We perform a short warm-start fine-tune to derive task-specific core parameters by comparing the warm-started and pre-trained models. Core parameters are identified via two strategies: importance scoring (L$_2$ norm and Fisher Information) and specificity analysis (cosine similarity of parameter updates). In continual fine-tuning settings, only the active task's core parameters are updated while others remain frozen, preserving prior knowledge. We conduct extensive experiments across multiple standard benchmarks to demonstrate the superior performance of our proposed method. Additionally, we validate the generalization of our method through a cross-model and scale transferability study, demonstrating a \"small-to-large\" paradigm that guides the fine-tuning of large-scale models under resource constraints.",
+  "link": "https://arxiv.org/abs/2605.31025",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405783Z"
+}

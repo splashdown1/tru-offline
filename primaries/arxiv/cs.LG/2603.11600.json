@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2603.11600",
+  "title": "Hybrid Energy-Aware Reward Shaping: A Unified Lightweight Physics-Guided Methodology for Policy Optimization",
+  "abstract": "Deep reinforcement learning for continuous control often suffers from high variance, low energy efficiency, and poor generalization under distribution shift, as purely data-driven exploration ignores available physical structure. This paper proposes Hybrid Energy-Aware Reward Shaping (H-EARS), which encodes dominant energy terms -- assumed known a priori -- directly as reward potentials at O(n) per-step computation. H-EARS decomposes the shaping potential into task-oriented and energy-based components, supplemented by an action regularization term that deliberately modifies the optimization objective to enforce energy-efficient control. A complete theoretical foundation is established: functional independence of shaping and regularization, energy-based gradient enrichment under positive-definite Hessian conditions, convergence guarantees under function approximation, and approximate potential error bounds. Across four continuous control benchmarks and four baseline algorithms, H-EARS achieves consistent gains in convergence speed, policy stability, and final performance. High-fidelity vehicle simulations validate applicability in safety-critical settings under extreme road conditions.",
+  "link": "https://arxiv.org/abs/2603.11600",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.SY",
+    "eess.SY",
+    "math.OC"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307978Z"
+}

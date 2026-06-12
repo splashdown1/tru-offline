@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31367",
+  "title": "Trading Complexity for Expressivity Through Structured Generalized Linear Token Mixing",
+  "abstract": "Token mixing layers play a key role in how language models can learn and generate long-range dependencies. Their efficiency relies on the necessary trade-off between decoding speed and the memory requirements, along with the cache size. Considering causal generation, this paper explores new trade-offs thanks to a unified framework which separates two crucial features: (i) the direct influence of inputs on outputs in one generation step; (ii) the recurrent propagation of information through past outputs. This framework encompasses major architectures such as attention and state-space models, but also generalizes the recurrence equations by allowing each state to depend on multiple past states rather than only the immediate predecessor. By introducing structure, we design new recurrence patterns that provably achieve the desired complexity, while providing theoretical insights on their expressivity -- trading runtime for expressivity in a principled way. Empirical validation is performed on synthetic tasks, along with language modeling. Together, these results provide a unified toolkit for the understanding and design of efficient and expressive token mixers across model families.",
+  "link": "https://arxiv.org/abs/2605.31367",
+  "category": "cs.CL",
+  "categories": [
+    "cs.LG",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406067Z"
+}

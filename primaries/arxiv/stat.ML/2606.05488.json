@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05488",
+  "title": "Sparse Functional Singular Value Decomposition for Biclustering and Triclustering Longitudinal Data",
+  "abstract": "Identifying subtypes of complex conditions, such as Inflammatory Bowel Disease (IBD), often requires capturing latent patterns in longitudinal omics data. However, these data are typically high-dimensional, sparsely sampled, and irregularly observed over time, posing substantial challenges for conventional (bi)clustering and functional data analysis methods. We propose Tri-SfSVD, a unified sparse functional Singular Value Decomposition framework for discovering biclusters and triclusters in longitudinal data. Unlike existing functional biclustering methods that rely on ad hoc imputation or enforce restrictive shape-homogeneity assumptions, Tri-SfSVD integrates continuous trajectory estimation with simultaneous subject, feature, and temporal selection within a single optimization framework. By imposing sparse penalties across subjects, variables, and temporal subregions, the proposed method works directly on observed data to uncover localized structures at the subject, subject-feature, and subject-feature-time levels. Extensive simulations demonstrate that Tri-SfSVD outperforms existing approaches in high-dimensional settings. Applied to IBD multi-omics data, the method identified three biclusters linking sample clusters with distinct IBD-related clinical characteristics to microbial pathway groups associated with specific bacterial taxa, providing interpretable subject-pathway associations for characterizing disease heterogeneity. Applied to multi-channel EEG data, the method identified three triclusters linking sample clusters with distinct alcohol-related phenotypes to localized brain activity patterns, including subgroup differences separated by temporal subregions within the same spatial region.",
+  "link": "https://arxiv.org/abs/2606.05488",
+  "category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "stat.ME"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728585+00:00"
+}

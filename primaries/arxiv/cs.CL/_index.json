@@ -1,0 +1,1148 @@
+{
+  "category": "cs.CL",
+  "pulled_at": "2026-06-05T08:23:13.671999+00:00",
+  "count": 228,
+  "cutoff_days": 30,
+  "papers": [
+    {
+      "arxiv_id": "2606.05168",
+      "title": "Epidemiology of Model Collapse: Modeling Synthetic Data Contamination via Bilayer SIR Dynamics",
+      "link": "https://arxiv.org/abs/2606.05168"
+    },
+    {
+      "arxiv_id": "2606.05173",
+      "title": "Predict and Reconstruct: Joint Objectives for Self-Supervised Language Representation Learning",
+      "link": "https://arxiv.org/abs/2606.05173"
+    },
+    {
+      "arxiv_id": "2606.05174",
+      "title": "Improving Heart-Focused Medical Question Answering in LLMs via Variance-Aware Rubric Rewards with GRPO",
+      "link": "https://arxiv.org/abs/2606.05174"
+    },
+    {
+      "arxiv_id": "2606.05175",
+      "title": "Generic Triple-Latent Compression with Gated Associative Retrieval",
+      "link": "https://arxiv.org/abs/2606.05175"
+    },
+    {
+      "arxiv_id": "2606.05176",
+      "title": "PEFT of SLM for Telecommunications Customer Support: A Comparative Study of LoRA Configurations with Energy Consumption Analysis",
+      "link": "https://arxiv.org/abs/2606.05176"
+    },
+    {
+      "arxiv_id": "2606.05177",
+      "title": "MCBench: A Multicontext Safety Assessment Benchmark for Omni Large Language Models",
+      "link": "https://arxiv.org/abs/2606.05177"
+    },
+    {
+      "arxiv_id": "2606.05179",
+      "title": "Efficient Punctuation Restoration via Weighted Lookahead Scoring Method for Streaming ASR Systems",
+      "link": "https://arxiv.org/abs/2606.05179"
+    },
+    {
+      "arxiv_id": "2606.05180",
+      "title": "From Scoring to Explanations: Evaluating SHAP and LLM Rationales for Rubric-based Teaching Quality Assessment",
+      "link": "https://arxiv.org/abs/2606.05180"
+    },
+    {
+      "arxiv_id": "2606.05181",
+      "title": "Multi-Granularity Reasoning for Natural Language Inference",
+      "link": "https://arxiv.org/abs/2606.05181"
+    },
+    {
+      "arxiv_id": "2606.05182",
+      "title": "LANTERN: Layered Archival and Temporal Episodic Retrieval Network for Long-Context LLM Conversations",
+      "link": "https://arxiv.org/abs/2606.05182"
+    },
+    {
+      "arxiv_id": "2606.05183",
+      "title": "The Granularity Gap: A Multi-Dimensional Longitudinal Audit of Sycophancy in Gemini Models",
+      "link": "https://arxiv.org/abs/2606.05183"
+    },
+    {
+      "arxiv_id": "2606.05315",
+      "title": "LoRi: Low-Rank Distillation for Implicit Reasoning",
+      "link": "https://arxiv.org/abs/2606.05315"
+    },
+    {
+      "arxiv_id": "2606.05330",
+      "title": "A Model of Multi-turn Human Persuadability Using Probabilistic Belief Tracing",
+      "link": "https://arxiv.org/abs/2606.05330"
+    },
+    {
+      "arxiv_id": "2606.05336",
+      "title": "Self-supervised User Profile Generation for Personalization",
+      "link": "https://arxiv.org/abs/2606.05336"
+    },
+    {
+      "arxiv_id": "2606.05346",
+      "title": "Trajectory Dynamics in Language Model Hidden States Predict Human Processing Costs Beyond Surprisal",
+      "link": "https://arxiv.org/abs/2606.05346"
+    },
+    {
+      "arxiv_id": "2606.05402",
+      "title": "ReasoningFlow: Discourse Structures for Understanding LLM Reasoning Traces",
+      "link": "https://arxiv.org/abs/2606.05402"
+    },
+    {
+      "arxiv_id": "2606.05414",
+      "title": "When Evidence is Sparse: Weakly Supervised Early Failure Alerting in Dialogs and LLM-Agent Trajectories",
+      "link": "https://arxiv.org/abs/2606.05414"
+    },
+    {
+      "arxiv_id": "2606.05415",
+      "title": "Executable Schema Contracts: From Automatic Ingestion to Multi-Source Retrieval",
+      "link": "https://arxiv.org/abs/2606.05415"
+    },
+    {
+      "arxiv_id": "2606.05421",
+      "title": "ComplexityMT: Benchmarking the Interaction Between Text Complexity and Machine Translation",
+      "link": "https://arxiv.org/abs/2606.05421"
+    },
+    {
+      "arxiv_id": "2606.05444",
+      "title": "Multilingual Coreference Resolution via Cycle-Consistent Machine Translation",
+      "link": "https://arxiv.org/abs/2606.05444"
+    },
+    {
+      "arxiv_id": "2606.05486",
+      "title": "Localizing Prompt Ambiguity in Large Language Models with Probe-Targeted Attribution",
+      "link": "https://arxiv.org/abs/2606.05486"
+    },
+    {
+      "arxiv_id": "2606.05494",
+      "title": "MASF: A Multi-Model Adaptive Selection Framework for Abstractive Text summarization",
+      "link": "https://arxiv.org/abs/2606.05494"
+    },
+    {
+      "arxiv_id": "2606.05523",
+      "title": "CHASE: Adversarial Red-Blue Teaming for Improving LLM Safety using Reinforcement Learning",
+      "link": "https://arxiv.org/abs/2606.05523"
+    },
+    {
+      "arxiv_id": "2606.05545",
+      "title": "Multilingual Detection of Alzheimer's Disease from Speech: A Cross-Linguistic Transfer Learning Approach",
+      "link": "https://arxiv.org/abs/2606.05545"
+    },
+    {
+      "arxiv_id": "2606.05553",
+      "title": "ArcANE: Do Role-Playing Language Agents Stay in Character at the Right Time?",
+      "link": "https://arxiv.org/abs/2606.05553"
+    },
+    {
+      "arxiv_id": "2606.05557",
+      "title": "AURA: Intent-Directed Probing for Implicit-Need Surfacing in Situated LLM Agents",
+      "link": "https://arxiv.org/abs/2606.05557"
+    },
+    {
+      "arxiv_id": "2606.05561",
+      "title": "InfoShield: Privacy-Preserving Speech Representations for Mental Health Screening via Information-Theoretic Optimization",
+      "link": "https://arxiv.org/abs/2606.05561"
+    },
+    {
+      "arxiv_id": "2606.05564",
+      "title": "Using Large Language Models to Support High Volume Application Review for an Undergraduate Research Program",
+      "link": "https://arxiv.org/abs/2606.05564"
+    },
+    {
+      "arxiv_id": "2606.05569",
+      "title": "Domain-Aware Mispronunciation Detection and Diagnosis Using Language-Specific Statistical Graphs",
+      "link": "https://arxiv.org/abs/2606.05569"
+    },
+    {
+      "arxiv_id": "2606.05570",
+      "title": "TensorBench: Benchmarking Coding Agents on a Compiler-Based Tensor Framework",
+      "link": "https://arxiv.org/abs/2606.05570"
+    },
+    {
+      "arxiv_id": "2606.05610",
+      "title": "Predictable Scaling Laws of Optimal Hyperparameters for LLM Continued Pre-training",
+      "link": "https://arxiv.org/abs/2606.05610"
+    },
+    {
+      "arxiv_id": "2606.05616",
+      "title": "What's in a Name? Morphological Shortcuts by LLMs in Pharmacology",
+      "link": "https://arxiv.org/abs/2606.05616"
+    },
+    {
+      "arxiv_id": "2606.05620",
+      "title": "An ERP Study on Recursive Locative Processing in Mandarin-Speaking Children with Autism",
+      "link": "https://arxiv.org/abs/2606.05620"
+    },
+    {
+      "arxiv_id": "2606.05622",
+      "title": "AdaPlanBench: Evaluating Adaptive Planning in Large Language Model Agents under World and User Constraints",
+      "link": "https://arxiv.org/abs/2606.05622"
+    },
+    {
+      "arxiv_id": "2606.05626",
+      "title": "When New Generators Arrive: Lifelong Machine-Generated Text Attribution via Ridge Feature Transfer",
+      "link": "https://arxiv.org/abs/2606.05626"
+    },
+    {
+      "arxiv_id": "2606.05634",
+      "title": "Bootstrapping Semantic Layer from Execution for Text-to-SQL",
+      "link": "https://arxiv.org/abs/2606.05634"
+    },
+    {
+      "arxiv_id": "2606.05671",
+      "title": "QueryAgent-R1: Bridging Query Generation and Product Retrieval for E-Commerce Query Recommendation",
+      "link": "https://arxiv.org/abs/2606.05671"
+    },
+    {
+      "arxiv_id": "2606.05688",
+      "title": "Value-and-Structure Alignment for Routing-Consistent Quantization of Mixture-of-Experts Models",
+      "link": "https://arxiv.org/abs/2606.05688"
+    },
+    {
+      "arxiv_id": "2606.05698",
+      "title": "Rethinking LoRA Memory Through the Lens of KV Cache Compression",
+      "link": "https://arxiv.org/abs/2606.05698"
+    },
+    {
+      "arxiv_id": "2606.05711",
+      "title": "Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems",
+      "link": "https://arxiv.org/abs/2606.05711"
+    },
+    {
+      "arxiv_id": "2606.05716",
+      "title": "Interpreting Style Representations via Style-Eliciting Prompts",
+      "link": "https://arxiv.org/abs/2606.05716"
+    },
+    {
+      "arxiv_id": "2606.05724",
+      "title": "Narrative Knowledge Weaver: Narrative-Centric Retrieval-Augmented Reasoning for Long-Form Text Understanding",
+      "link": "https://arxiv.org/abs/2606.05724"
+    },
+    {
+      "arxiv_id": "2606.05742",
+      "title": "AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding",
+      "link": "https://arxiv.org/abs/2606.05742"
+    },
+    {
+      "arxiv_id": "2606.05744",
+      "title": "PlanBench-V: A Spatial Planning Map Benchmark for Vision-Language Models",
+      "link": "https://arxiv.org/abs/2606.05744"
+    },
+    {
+      "arxiv_id": "2606.05749",
+      "title": "MARDoc: A Memory-Aware Refinement Agent Framework for Multimodal Long Document QA",
+      "link": "https://arxiv.org/abs/2606.05749"
+    },
+    {
+      "arxiv_id": "2606.05793",
+      "title": "CollabBench: Benchmarking and Unleashing Collaborative Ability of LLMs with Diverse Players via Proactive Engagement",
+      "link": "https://arxiv.org/abs/2606.05793"
+    },
+    {
+      "arxiv_id": "2606.05804",
+      "title": "Can LLMs Be Constrained to the Past? Improving Knowledge Cutoff through Recall-Based Prompting",
+      "link": "https://arxiv.org/abs/2606.05804"
+    },
+    {
+      "arxiv_id": "2606.05836",
+      "title": "ProSPy: A Profiling-Driven SQL-Python Agentic Framework for Enterprise Text-to-SQL",
+      "link": "https://arxiv.org/abs/2606.05836"
+    },
+    {
+      "arxiv_id": "2606.05843",
+      "title": "Mechanistic Insights into Functional Sparsity in Multimodal LLMs via CoRe Heads",
+      "link": "https://arxiv.org/abs/2606.05843"
+    },
+    {
+      "arxiv_id": "2606.05846",
+      "title": "Towards Truly Multilingual ASR: Generalizing Code-Switching ASR to Unseen Language Pairs",
+      "link": "https://arxiv.org/abs/2606.05846"
+    },
+    {
+      "arxiv_id": "2606.05857",
+      "title": "Forgive or forget: Understanding the context of hate in audio retrieval systems",
+      "link": "https://arxiv.org/abs/2606.05857"
+    },
+    {
+      "arxiv_id": "2606.05858",
+      "title": "ReverseEOL: Improving Training-free Text Embeddings via Text Reversal in Decoder-only LLMs",
+      "link": "https://arxiv.org/abs/2606.05858"
+    },
+    {
+      "arxiv_id": "2606.05859",
+      "title": "TARPO: Token-Wise Latent-Explicit Reasoning via Action-Routing Policy Optimization",
+      "link": "https://arxiv.org/abs/2606.05859"
+    },
+    {
+      "arxiv_id": "2606.05864",
+      "title": "Analysis of the Neglect-Zero Effect in Large Language Models",
+      "link": "https://arxiv.org/abs/2606.05864"
+    },
+    {
+      "arxiv_id": "2606.05868",
+      "title": "YouZhi: Towards High-Concurrency Financial LLMs via Adaptive GQA-to-MLA Transition",
+      "link": "https://arxiv.org/abs/2606.05868"
+    },
+    {
+      "arxiv_id": "2606.05874",
+      "title": "Evaluating Stochastic Collapse and Implicit Bias in Multimodal Large Language Models",
+      "link": "https://arxiv.org/abs/2606.05874"
+    },
+    {
+      "arxiv_id": "2606.05890",
+      "title": "Staying with the Uncertainty: Uncertainty-Scaffolding Strategies for Artificial Moral Advisors in LLM-to-LLM Simulated Conversations",
+      "link": "https://arxiv.org/abs/2606.05890"
+    },
+    {
+      "arxiv_id": "2606.05894",
+      "title": "EMBER: Efficient Memory via Budgeted Evidence Retention for Long-Horizon Agents",
+      "link": "https://arxiv.org/abs/2606.05894"
+    },
+    {
+      "arxiv_id": "2606.05895",
+      "title": "Representing Research Attention as Contextually Structured Flows",
+      "link": "https://arxiv.org/abs/2606.05895"
+    },
+    {
+      "arxiv_id": "2606.05901",
+      "title": "Reducing Hallucinations in Complex Question Answering using Simple Graph-based Retrieval-Augmented Generation (long version)",
+      "link": "https://arxiv.org/abs/2606.05901"
+    },
+    {
+      "arxiv_id": "2606.05906",
+      "title": "ACE-SQL: Adaptive Co-Optimization via Empirical Credit Assignment for Text-to-SQL",
+      "link": "https://arxiv.org/abs/2606.05906"
+    },
+    {
+      "arxiv_id": "2606.05924",
+      "title": "Better Literary Translation: A Multi-Aspect Data Generation and LLM Training Approach",
+      "link": "https://arxiv.org/abs/2606.05924"
+    },
+    {
+      "arxiv_id": "2606.05931",
+      "title": "To Be Multimodal or Not to Be: Query-Adaptive Audio-Visual Person Retrieval via Active Modality Detection",
+      "link": "https://arxiv.org/abs/2606.05931"
+    },
+    {
+      "arxiv_id": "2606.05936",
+      "title": "Epistemic Injustice in Language Models: An Audit of Pretraining Filters and Guardrails",
+      "link": "https://arxiv.org/abs/2606.05936"
+    },
+    {
+      "arxiv_id": "2606.05937",
+      "title": "Large Language Models are Perplexed by some Political Parties",
+      "link": "https://arxiv.org/abs/2606.05937"
+    },
+    {
+      "arxiv_id": "2606.05970",
+      "title": "Measuring the sensitivity of LLM-based structured extraction to prompt, model, and schema choices in clinical discharge summaries",
+      "link": "https://arxiv.org/abs/2606.05970"
+    },
+    {
+      "arxiv_id": "2606.05985",
+      "title": "Beyond Alignment: Value Diversity as a Collective Property in Multicultural Agent Systems",
+      "link": "https://arxiv.org/abs/2606.05985"
+    },
+    {
+      "arxiv_id": "2606.06004",
+      "title": "The Generator-Eraser Paradox: Community Guidelines for Responsible LLM-Assisted Dialect Resource Creation",
+      "link": "https://arxiv.org/abs/2606.06004"
+    },
+    {
+      "arxiv_id": "2606.06022",
+      "title": "Contextualized Prompting For Stance Detection On Social Media",
+      "link": "https://arxiv.org/abs/2606.06022"
+    },
+    {
+      "arxiv_id": "2606.06025",
+      "title": "EGTR-Review: Efficient Evidence-Grounded Scientific Peer Review Generation via Multi-Agent Teacher Distillation",
+      "link": "https://arxiv.org/abs/2606.06025"
+    },
+    {
+      "arxiv_id": "2606.06031",
+      "title": "NAVIRA: Decoupled Stochastic Remasking for Masked Diffusion Language Models",
+      "link": "https://arxiv.org/abs/2606.06031"
+    },
+    {
+      "arxiv_id": "2606.06038",
+      "title": "English-to-Prakrit Machine Translation via Multilingual Transfer Learning",
+      "link": "https://arxiv.org/abs/2606.06038"
+    },
+    {
+      "arxiv_id": "2606.06044",
+      "title": "IA-RAG: Interval-Algebra-Driven Temporal Reasoning for Dynamic Knowledge Retrieval",
+      "link": "https://arxiv.org/abs/2606.06044"
+    },
+    {
+      "arxiv_id": "2606.06047",
+      "title": "Automatic Labelling of Speech Translation Errors",
+      "link": "https://arxiv.org/abs/2606.06047"
+    },
+    {
+      "arxiv_id": "2606.06065",
+      "title": "Multi-task Learning is Not Enough: Representational Entanglement in Dual-output Second Language Speech Recognition",
+      "link": "https://arxiv.org/abs/2606.06065"
+    },
+    {
+      "arxiv_id": "2606.06079",
+      "title": "SkillComposer: Learning to Evolve Agent Skills for Specification and Generalization",
+      "link": "https://arxiv.org/abs/2606.06079"
+    },
+    {
+      "arxiv_id": "2606.06087",
+      "title": "LatentSkill: From In-Context Textual Skills to In-Weight Latent Skills for LLM Agents",
+      "link": "https://arxiv.org/abs/2606.06087"
+    },
+    {
+      "arxiv_id": "2606.06088",
+      "title": "CHALIS: A Challenge Dataset for Language Identification in Difficult Scenarios",
+      "link": "https://arxiv.org/abs/2606.06088"
+    },
+    {
+      "arxiv_id": "2606.06098",
+      "title": "IR3DE: A Linear Router for Large Language Models",
+      "link": "https://arxiv.org/abs/2606.06098"
+    },
+    {
+      "arxiv_id": "2606.06109",
+      "title": "Harnessing Structural Context for Entity Alignment Foundation Models",
+      "link": "https://arxiv.org/abs/2606.06109"
+    },
+    {
+      "arxiv_id": "2606.06177",
+      "title": "Ouvia: A User-centered Framework for Measuring Usability of Speech Translation in Real-World Communication Scenarios",
+      "link": "https://arxiv.org/abs/2606.06177"
+    },
+    {
+      "arxiv_id": "2606.06188",
+      "title": "The Tell-Tale Norm: $\\ell_2$ Magnitude as a Signal for Reasoning Dynamics in Large Language Models",
+      "link": "https://arxiv.org/abs/2606.06188"
+    },
+    {
+      "arxiv_id": "2606.06197",
+      "title": "Improving Answer Extraction in Context-based Question Answering Systems Using LLMs",
+      "link": "https://arxiv.org/abs/2606.06197"
+    },
+    {
+      "arxiv_id": "2606.06203",
+      "title": "Dense Contexts Are Hard Contexts: Lexical Density Limits Effective Context in LLMs",
+      "link": "https://arxiv.org/abs/2606.06203"
+    },
+    {
+      "arxiv_id": "2606.06211",
+      "title": "FiLM-Based Speaker Conditioning of a SpeechLLM for Pathological Speech Recognition",
+      "link": "https://arxiv.org/abs/2606.06211"
+    },
+    {
+      "arxiv_id": "2606.06242",
+      "title": "Benchmarking Open-Source Layout Detection Models for Data Snapshot Extraction from Institutional Documents",
+      "link": "https://arxiv.org/abs/2606.06242"
+    },
+    {
+      "arxiv_id": "2606.06266",
+      "title": "From Self to Other: Evaluating Demographic Perspective-Taking in LLM Hate Speech Annotation",
+      "link": "https://arxiv.org/abs/2606.06266"
+    },
+    {
+      "arxiv_id": "2606.06267",
+      "title": "Many Circuits, One Mechanism: Input Variation and Evaluation Granularity in Circuit Discovery",
+      "link": "https://arxiv.org/abs/2606.06267"
+    },
+    {
+      "arxiv_id": "2606.06271",
+      "title": "FOXGLOVE: Understanding Goal-Oriented and Anchored Writing Feedback from Experts and LLMs on Argumentative Essays",
+      "link": "https://arxiv.org/abs/2606.06271"
+    },
+    {
+      "arxiv_id": "2606.06286",
+      "title": "LLMs Can Leak Training Data But Do They Want To? A Propensity-Aware Evaluation of Memorization in LLMs",
+      "link": "https://arxiv.org/abs/2606.06286"
+    },
+    {
+      "arxiv_id": "2606.06306",
+      "title": "Decomposing Factual Sycophancy in Language Models: How Size and Instruction Tuning Shape Robustness",
+      "link": "https://arxiv.org/abs/2606.06306"
+    },
+    {
+      "arxiv_id": "2606.06349",
+      "title": "\"Chi nas dal soch el sent de legn\" -- Auditing Text Corpora for Lombard",
+      "link": "https://arxiv.org/abs/2606.06349"
+    },
+    {
+      "arxiv_id": "2606.06350",
+      "title": "EDIT: Evidence-Diagnosed Intervention Training for Rule-Faithful LLM Grading",
+      "link": "https://arxiv.org/abs/2606.06350"
+    },
+    {
+      "arxiv_id": "2606.06380",
+      "title": "Emergent Language as an Approach to Conscious AI",
+      "link": "https://arxiv.org/abs/2606.06380"
+    },
+    {
+      "arxiv_id": "2606.06399",
+      "title": "CollabSim: A CSCW-Grounded Methodology for Investigating Collaborative Competence of LLM Agents through Controlled Multi-Agent Experiments",
+      "link": "https://arxiv.org/abs/2606.06399"
+    },
+    {
+      "arxiv_id": "2606.06420",
+      "title": "A Komi-Yazva--Russian Parallel Corpus and Evaluation Protocol for Zero- and Few-Shot LLM Translation",
+      "link": "https://arxiv.org/abs/2606.06420"
+    },
+    {
+      "arxiv_id": "2606.06428",
+      "title": "Reinforcement Learning Elicits Contextual Learning of Unseen Language Translation",
+      "link": "https://arxiv.org/abs/2606.06428"
+    },
+    {
+      "arxiv_id": "2606.06443",
+      "title": "Revising Context, Shifting Simulated Stance: Auditing LLM-Based Stance Simulation in Online Discussions",
+      "link": "https://arxiv.org/abs/2606.06443"
+    },
+    {
+      "arxiv_id": "2606.06447",
+      "title": "Latent Reasoning with Normalizing Flows",
+      "link": "https://arxiv.org/abs/2606.06447"
+    },
+    {
+      "arxiv_id": "2606.06464",
+      "title": "Human Adults and LLMs as Scientists: Who Benefits from Active Exploration?",
+      "link": "https://arxiv.org/abs/2606.06464"
+    },
+    {
+      "arxiv_id": "2606.06467",
+      "title": "You Only Index Once: Cross-Layer Sparse Attention with Shared Routing",
+      "link": "https://arxiv.org/abs/2606.06467"
+    },
+    {
+      "arxiv_id": "2606.06474",
+      "title": "Self-Augmenting Retrieval for Diffusion Language Models",
+      "link": "https://arxiv.org/abs/2606.06474"
+    },
+    {
+      "arxiv_id": "2606.06481",
+      "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
+      "link": "https://arxiv.org/abs/2606.06481"
+    },
+    {
+      "arxiv_id": "2606.05186",
+      "title": "Staged Factorial Screening for Budget-Constrained Micro-Pretraining",
+      "link": "https://arxiv.org/abs/2606.05186"
+    },
+    {
+      "arxiv_id": "2606.05194",
+      "title": "Temporal Preference Concepts and their Functions in a Large Language Model",
+      "link": "https://arxiv.org/abs/2606.05194"
+    },
+    {
+      "arxiv_id": "2606.05233",
+      "title": "Domain-Conditioned Safety in Frontier Computer-Using Agents: A 793-Episode Browser Benchmark, a Coding-Domain Cross-Reference, and a Reproducibility Audit of Recent Red-Teaming",
+      "link": "https://arxiv.org/abs/2606.05233"
+    },
+    {
+      "arxiv_id": "2606.05308",
+      "title": "Statistically Reliable LLM-Based Ranking Evaluation via Prediction-Powered Inference",
+      "link": "https://arxiv.org/abs/2606.05308"
+    },
+    {
+      "arxiv_id": "2606.05384",
+      "title": "Stability vs. Manipulability: Evaluating Robustness Under Post-Decision Interaction in LLM Judges",
+      "link": "https://arxiv.org/abs/2606.05384"
+    },
+    {
+      "arxiv_id": "2606.05400",
+      "title": "LeanMarathon: Toward Reliable AI Co-Mathematicians through Long-Horizon Lean Autoformalization",
+      "link": "https://arxiv.org/abs/2606.05400"
+    },
+    {
+      "arxiv_id": "2606.05404",
+      "title": "Harnessing Generalist Agents for Contextualized Time Series",
+      "link": "https://arxiv.org/abs/2606.05404"
+    },
+    {
+      "arxiv_id": "2606.05405",
+      "title": "Agents' Last Exam",
+      "link": "https://arxiv.org/abs/2606.05405"
+    },
+    {
+      "arxiv_id": "2606.05409",
+      "title": "Would you still call this Dax? Novel Visual References in VLMs and Humans",
+      "link": "https://arxiv.org/abs/2606.05409"
+    },
+    {
+      "arxiv_id": "2606.05436",
+      "title": "Ten Headache Specialists versus Artificial Intelligence for Clinical Literature Summarization: A Critical Evaluation and Comparison",
+      "link": "https://arxiv.org/abs/2606.05436"
+    },
+    {
+      "arxiv_id": "2606.05443",
+      "title": "MIRAI: Prediction and Generation of High-Impact Academic Research",
+      "link": "https://arxiv.org/abs/2606.05443"
+    },
+    {
+      "arxiv_id": "2606.05513",
+      "title": "EpiEvolve: Self-Evolving Agents for Streaming Pandemic Forecasting under Regime Shifts",
+      "link": "https://arxiv.org/abs/2606.05513"
+    },
+    {
+      "arxiv_id": "2606.05531",
+      "title": "Almieyar-Oryx-BloomBench: A Bilingual Multimodal Benchmark for Cognitively Informed Evaluation of Vision-Language Models",
+      "link": "https://arxiv.org/abs/2606.05531"
+    },
+    {
+      "arxiv_id": "2606.05538",
+      "title": "Less is MoE: Trimming Experts in Domain-Specialist Language Models",
+      "link": "https://arxiv.org/abs/2606.05538"
+    },
+    {
+      "arxiv_id": "2606.05563",
+      "title": "SoCRATES: Towards Reliable Automated Evaluation of Proactive LLM Mediation across Domains and Socio-cognitive Variations",
+      "link": "https://arxiv.org/abs/2606.05563"
+    },
+    {
+      "arxiv_id": "2606.05568",
+      "title": "ColBERTSaR: Sparsified ColBERT Index via Product Quantization",
+      "link": "https://arxiv.org/abs/2606.05568"
+    },
+    {
+      "arxiv_id": "2606.05647",
+      "title": "Coding with \"Enemy\": Can Human Developers Detect AI Agent Sabotage?",
+      "link": "https://arxiv.org/abs/2606.05647"
+    },
+    {
+      "arxiv_id": "2606.05661",
+      "title": "Continual Learning Bench: Evaluating Frontier AI Systems in Real-World Stateful Environments",
+      "link": "https://arxiv.org/abs/2606.05661"
+    },
+    {
+      "arxiv_id": "2606.05677",
+      "title": "LongSpace: Exploring Long-Horizon Spatial Memory from Perception to Recall in Video",
+      "link": "https://arxiv.org/abs/2606.05677"
+    },
+    {
+      "arxiv_id": "2606.05725",
+      "title": "An Embarrassingly Simple Detector for Model Extraction Attacks in Large Language Model API Traffic",
+      "link": "https://arxiv.org/abs/2606.05725"
+    },
+    {
+      "arxiv_id": "2606.05728",
+      "title": "DiG-Plan: Mitigating Early Commitment for Tool-Graph Planning via Diffusion Guidance",
+      "link": "https://arxiv.org/abs/2606.05728"
+    },
+    {
+      "arxiv_id": "2606.05734",
+      "title": "When AI Says It Feels",
+      "link": "https://arxiv.org/abs/2606.05734"
+    },
+    {
+      "arxiv_id": "2606.05743",
+      "title": "Membrane: A Self-Evolving Contrastive Safety Memory for LLM Agent Defense",
+      "link": "https://arxiv.org/abs/2606.05743"
+    },
+    {
+      "arxiv_id": "2606.05748",
+      "title": "UNIVID: Unified Vision-Language Model for Video Moderation",
+      "link": "https://arxiv.org/abs/2606.05748"
+    },
+    {
+      "arxiv_id": "2606.05761",
+      "title": "SubtleMemory: A Benchmark for Fine-Grained Relational Memory Discrimination in Long-Horizon AI Agents",
+      "link": "https://arxiv.org/abs/2606.05761"
+    },
+    {
+      "arxiv_id": "2606.05799",
+      "title": "CaliDist: Calibrating Large Language Models via Behavioral Robustness to Distraction",
+      "link": "https://arxiv.org/abs/2606.05799"
+    },
+    {
+      "arxiv_id": "2606.05828",
+      "title": "Statistical Priors for Implicit Preferences: Decoupling Skill Selection as a Local Harness in Personal Agents",
+      "link": "https://arxiv.org/abs/2606.05828"
+    },
+    {
+      "arxiv_id": "2606.05889",
+      "title": "GLASS: GRPO-Trained LoRA for Acoustic Style Steering in Zero-Shot Text-to-Speech",
+      "link": "https://arxiv.org/abs/2606.05889"
+    },
+    {
+      "arxiv_id": "2606.05917",
+      "title": "MemoryCard: Topic-Aware Multi-Modal Clue Compression for Long-Video Question Answering",
+      "link": "https://arxiv.org/abs/2606.05917"
+    },
+    {
+      "arxiv_id": "2606.05920",
+      "title": "Asuka-Bench: Benchmarking Code Agents on Underspecified User Intent and Multi-Round Refinement",
+      "link": "https://arxiv.org/abs/2606.05920"
+    },
+    {
+      "arxiv_id": "2606.05922",
+      "title": "Retrospective Harness Optimization: Improving LLM Agents via Self-Preference over Trajectory Rollouts",
+      "link": "https://arxiv.org/abs/2606.05922"
+    },
+    {
+      "arxiv_id": "2606.05976",
+      "title": "The Self-Correction Illusion: LLMs Correct Others but Not Themselves",
+      "link": "https://arxiv.org/abs/2606.05976"
+    },
+    {
+      "arxiv_id": "2606.05983",
+      "title": "Framing, Judging, Steering: An Assessable Competency Model for Teach-ing Students to Reason With Generative AI",
+      "link": "https://arxiv.org/abs/2606.05983"
+    },
+    {
+      "arxiv_id": "2606.05988",
+      "title": "Compress-Distill: Reasoning Trace Compression for Efficient Knowledge Distillation",
+      "link": "https://arxiv.org/abs/2606.05988"
+    },
+    {
+      "arxiv_id": "2606.06027",
+      "title": "RedditPersona: A Modular Framework for Community-Conditioned LLM Adaptation from Reddit",
+      "link": "https://arxiv.org/abs/2606.06027"
+    },
+    {
+      "arxiv_id": "2606.06058",
+      "title": "MDP-GRPO: Stabilized Group Relative Policy Optimization for Multi-Constraint Instruction Following",
+      "link": "https://arxiv.org/abs/2606.06058"
+    },
+    {
+      "arxiv_id": "2606.06080",
+      "title": "On Advantage Estimates for Max@K Policy Gradients",
+      "link": "https://arxiv.org/abs/2606.06080"
+    },
+    {
+      "arxiv_id": "2606.06096",
+      "title": "OrderGrad: Optimizing Beyond the Mean with Order-Statistic Policy Gradient Estimation",
+      "link": "https://arxiv.org/abs/2606.06096"
+    },
+    {
+      "arxiv_id": "2606.06160",
+      "title": "Where does Absolute Position come from in decoder-only Transformers?",
+      "link": "https://arxiv.org/abs/2606.06160"
+    },
+    {
+      "arxiv_id": "2606.06168",
+      "title": "ProSarc: Prosody-Aware Sarcasm Recognition Framework via Temporal Prosodic Incongruity",
+      "link": "https://arxiv.org/abs/2606.06168"
+    },
+    {
+      "arxiv_id": "2606.06178",
+      "title": "Learning to Route LLMs from Implicit Cost-Performance Preferences via Meta-Learning",
+      "link": "https://arxiv.org/abs/2606.06178"
+    },
+    {
+      "arxiv_id": "2606.06183",
+      "title": "Revisiting Lexicon Evaluation in Unsupervised Word Discovery",
+      "link": "https://arxiv.org/abs/2606.06183"
+    },
+    {
+      "arxiv_id": "2606.06260",
+      "title": "OneReason Technical Report",
+      "link": "https://arxiv.org/abs/2606.06260"
+    },
+    {
+      "arxiv_id": "2606.06320",
+      "title": "Learning What to Forget: Improving LLM Unlearning via Learned Token-Level Importance",
+      "link": "https://arxiv.org/abs/2606.06320"
+    },
+    {
+      "arxiv_id": "2606.06388",
+      "title": "Humans' ALMANAC: A Human Collaboration Dataset of Action-Level Mental Model Annotations for Agent Collaboration",
+      "link": "https://arxiv.org/abs/2606.06388"
+    },
+    {
+      "arxiv_id": "2606.06416",
+      "title": "Unsupervised Skill Discovery for Agentic Data Analysis",
+      "link": "https://arxiv.org/abs/2606.06416"
+    },
+    {
+      "arxiv_id": "2606.06444",
+      "title": "USAD 2.0: Scaling Representation Distillation for Universal Audio Understanding",
+      "link": "https://arxiv.org/abs/2606.06444"
+    },
+    {
+      "arxiv_id": "2606.06454",
+      "title": "Scaffold, Not Vocabulary? A Controlled, Two-Tier, Pre-Registered Study of a Popperian Code-Generation Skill",
+      "link": "https://arxiv.org/abs/2606.06454"
+    },
+    {
+      "arxiv_id": "2606.06473",
+      "title": "MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery",
+      "link": "https://arxiv.org/abs/2606.06473"
+    },
+    {
+      "arxiv_id": "2606.06492",
+      "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+      "link": "https://arxiv.org/abs/2606.06492"
+    },
+    {
+      "arxiv_id": "2110.06847",
+      "title": "Ousiometrics: The essence of meaning aligns with a power-danger-structure framework instead of valence-arousal-dominance",
+      "link": "https://arxiv.org/abs/2110.06847"
+    },
+    {
+      "arxiv_id": "2406.12620",
+      "title": "What Makes Two Language Models Think Alike?",
+      "link": "https://arxiv.org/abs/2406.12620"
+    },
+    {
+      "arxiv_id": "2410.13056",
+      "title": "Channel-Wise Mixed-Precision Quantization for Large Language Models",
+      "link": "https://arxiv.org/abs/2410.13056"
+    },
+    {
+      "arxiv_id": "2502.14145",
+      "title": "LLM-Enhanced Dialogue Management for Full-Duplex Spoken Dialogue Systems",
+      "link": "https://arxiv.org/abs/2502.14145"
+    },
+    {
+      "arxiv_id": "2504.10020",
+      "title": "The Mirage of Performance Gains: Why Contrastive Decoding Fails to Mitigate Object Hallucinations in MLLMs?",
+      "link": "https://arxiv.org/abs/2504.10020"
+    },
+    {
+      "arxiv_id": "2504.10823",
+      "title": "CLASH: Evaluating Language Models on Judging High-Stakes Dilemmas from Multiple Perspectives",
+      "link": "https://arxiv.org/abs/2504.10823"
+    },
+    {
+      "arxiv_id": "2505.05026",
+      "title": "Do MLLMs Capture How Interfaces Guide User Behavior? A Benchmark for Multimodal UI/UX Design Understanding",
+      "link": "https://arxiv.org/abs/2505.05026"
+    },
+    {
+      "arxiv_id": "2507.00460",
+      "title": "Pitfalls of Evaluating Language Models with Open Benchmarks",
+      "link": "https://arxiv.org/abs/2507.00460"
+    },
+    {
+      "arxiv_id": "2507.15736",
+      "title": "IDRBench: Understanding the Capability of Large Language Models on Interdisciplinary Research",
+      "link": "https://arxiv.org/abs/2507.15736"
+    },
+    {
+      "arxiv_id": "2508.00537",
+      "title": "The Prosody of Emojis",
+      "link": "https://arxiv.org/abs/2508.00537"
+    },
+    {
+      "arxiv_id": "2508.10875",
+      "title": "A Survey on Diffusion Language Models",
+      "link": "https://arxiv.org/abs/2508.10875"
+    },
+    {
+      "arxiv_id": "2508.15851",
+      "title": "DocHop-QA: Towards Multi-Hop Reasoning over Multimodal Document Collections",
+      "link": "https://arxiv.org/abs/2508.15851"
+    },
+    {
+      "arxiv_id": "2510.05544",
+      "title": "Activation-Informed Pareto-Guided Low-Rank Compression for Efficient LLM/VLM",
+      "link": "https://arxiv.org/abs/2510.05544"
+    },
+    {
+      "arxiv_id": "2510.17256",
+      "title": "Explainability of Large Language Models: Opportunities and Challenges toward Generating Trustworthy Explanations",
+      "link": "https://arxiv.org/abs/2510.17256"
+    },
+    {
+      "arxiv_id": "2510.22768",
+      "title": "Seeing is Believing? Evaluating Vision-Language Model Susceptibility in Agent-to-Agent Multimodal Persuasion",
+      "link": "https://arxiv.org/abs/2510.22768"
+    },
+    {
+      "arxiv_id": "2511.20102",
+      "title": "SSA: Sparse Sparse Attention by Aligning Full and Sparse Attention Outputs in Feature Space",
+      "link": "https://arxiv.org/abs/2511.20102"
+    },
+    {
+      "arxiv_id": "2512.20111",
+      "title": "ABBEL: Learning Natural-Language Belief States for Memory-Efficient Interaction",
+      "link": "https://arxiv.org/abs/2512.20111"
+    },
+    {
+      "arxiv_id": "2601.12983",
+      "title": "ChartAttack: Testing the Vulnerability of LLMs to Malicious Prompting in Chart Generation",
+      "link": "https://arxiv.org/abs/2601.12983"
+    },
+    {
+      "arxiv_id": "2601.21700",
+      "title": "Toward Culturally Aligned LLMs through Ontology-Guided Multi-Agent Reasoning",
+      "link": "https://arxiv.org/abs/2601.21700"
+    },
+    {
+      "arxiv_id": "2601.22580",
+      "title": "SpanNorm: Reconciling Training Stability and Performance in Deep Transformers",
+      "link": "https://arxiv.org/abs/2601.22580"
+    },
+    {
+      "arxiv_id": "2602.05843",
+      "title": "OdysseyArena: Benchmarking Large Language Models For Long-Horizon, Active and Inductive Interactions",
+      "link": "https://arxiv.org/abs/2602.05843"
+    },
+    {
+      "arxiv_id": "2602.09574",
+      "title": "Aligning Tree-Search Policies with Fixed Token Budgets in Test-Time Scaling of LLMs",
+      "link": "https://arxiv.org/abs/2602.09574"
+    },
+    {
+      "arxiv_id": "2602.23845",
+      "title": "CLFEC: A New Task for Unified Linguistic and Factual Error Correction in paragraph-level Chinese Professional Writing",
+      "link": "https://arxiv.org/abs/2602.23845"
+    },
+    {
+      "arxiv_id": "2603.00573",
+      "title": "CoMoL: Efficient Mixture of LoRA Experts via Dynamic Core Space Merging",
+      "link": "https://arxiv.org/abs/2603.00573"
+    },
+    {
+      "arxiv_id": "2603.14210",
+      "title": "Vavanagi: a Community-run Platform for Documentation of the Hula Language in Papua New Guinea",
+      "link": "https://arxiv.org/abs/2603.14210"
+    },
+    {
+      "arxiv_id": "2603.26233",
+      "title": "Ask or Assume? Uncertainty-Aware Clarification-Seeking in Coding Agents",
+      "link": "https://arxiv.org/abs/2603.26233"
+    },
+    {
+      "arxiv_id": "2604.16370",
+      "title": "Brain-CLIPLM: Semantic Compression for EEG-to-Text Decoding",
+      "link": "https://arxiv.org/abs/2604.16370"
+    },
+    {
+      "arxiv_id": "2604.17260",
+      "title": "Rethinking Meeting Effectiveness: A Benchmark and Framework for Temporal Fine-grained Automatic Meeting Effectiveness Evaluation",
+      "link": "https://arxiv.org/abs/2604.17260"
+    },
+    {
+      "arxiv_id": "2604.20572",
+      "title": "Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents",
+      "link": "https://arxiv.org/abs/2604.20572"
+    },
+    {
+      "arxiv_id": "2604.23600",
+      "title": "Personality Shapes Gender Bias in Persona-Conditioned LLM Narratives Across English and Hindi: An Empirical Investigation",
+      "link": "https://arxiv.org/abs/2604.23600"
+    },
+    {
+      "arxiv_id": "2604.26269",
+      "title": "Calibrated Surprise: An Information-Theoretic Account of Creative Quality",
+      "link": "https://arxiv.org/abs/2604.26269"
+    },
+    {
+      "arxiv_id": "2605.01844",
+      "title": "The Cylindrical Representation Hypothesis for Language Model Steering",
+      "link": "https://arxiv.org/abs/2605.01844"
+    },
+    {
+      "arxiv_id": "2605.11632",
+      "title": "Macro: Enhancing Multilingual Counterfactual Explanations through Alignment-as-Preference Optimization",
+      "link": "https://arxiv.org/abs/2605.11632"
+    },
+    {
+      "arxiv_id": "2605.13075",
+      "title": "Scaling few-shot spoken word classification with generative meta-continual learning",
+      "link": "https://arxiv.org/abs/2605.13075"
+    },
+    {
+      "arxiv_id": "2605.15454",
+      "title": "Reasoning Models Don't Just Think Longer, They Move Differently",
+      "link": "https://arxiv.org/abs/2605.15454"
+    },
+    {
+      "arxiv_id": "2605.15913",
+      "title": "Towards Generalization of Block Attention via Automatic Segmentation and Block Distillation",
+      "link": "https://arxiv.org/abs/2605.15913"
+    },
+    {
+      "arxiv_id": "2605.19309",
+      "title": "How Do Document Parsers Break? Auditing Structural Vulnerability in Document Intelligence",
+      "link": "https://arxiv.org/abs/2605.19309"
+    },
+    {
+      "arxiv_id": "2605.20628",
+      "title": "Divide-Prompt-Refine: a Training-Free, Structure-Aware Framework for Biomedical Abstract Generation",
+      "link": "https://arxiv.org/abs/2605.20628"
+    },
+    {
+      "arxiv_id": "2605.25240",
+      "title": "JudgmentBench: Comparing Rubric and Preference Evaluation for Quality Assessment",
+      "link": "https://arxiv.org/abs/2605.25240"
+    },
+    {
+      "arxiv_id": "2605.26046",
+      "title": "When Gradients Collide: Failure Modes of Multi-Objective Prompt Optimization for LLM Judges",
+      "link": "https://arxiv.org/abs/2605.26046"
+    },
+    {
+      "arxiv_id": "2605.27866",
+      "title": "GRADE: Generalizable Reasoning-Aware Dialogue Evaluation for AI Tutors",
+      "link": "https://arxiv.org/abs/2605.27866"
+    },
+    {
+      "arxiv_id": "2606.01736",
+      "title": "Argument Collapse: LLMs Flatten Long-Form Public Debate",
+      "link": "https://arxiv.org/abs/2606.01736"
+    },
+    {
+      "arxiv_id": "2606.02750",
+      "title": "On the Persistent Effects of Lexicality in Large Language Models",
+      "link": "https://arxiv.org/abs/2606.02750"
+    },
+    {
+      "arxiv_id": "2606.02776",
+      "title": "Topics as Proxies for Sociodemographics: How Conversational Context Affects LLM Answers",
+      "link": "https://arxiv.org/abs/2606.02776"
+    },
+    {
+      "arxiv_id": "2606.02907",
+      "title": "Linear Probes Detect Task Format, Not Reasoning Mode in Language Model Hidden States",
+      "link": "https://arxiv.org/abs/2606.02907"
+    },
+    {
+      "arxiv_id": "2606.03189",
+      "title": "SenseJudge: Human-Centric Preference-Driven Judgment Framework",
+      "link": "https://arxiv.org/abs/2606.03189"
+    },
+    {
+      "arxiv_id": "2606.03650",
+      "title": "CoEval: Ranking Language Models for Custom Tasks Without Labeled Data or Trustworthy Benchmarks",
+      "link": "https://arxiv.org/abs/2606.03650"
+    },
+    {
+      "arxiv_id": "2606.03785",
+      "title": "Backdoor Unlearning Generalization: A Path Toward the Removal of Unknown Triggers in LLMs",
+      "link": "https://arxiv.org/abs/2606.03785"
+    },
+    {
+      "arxiv_id": "2306.09712",
+      "title": "Semi-Offline Reinforcement Learning for Optimized Text Generation",
+      "link": "https://arxiv.org/abs/2306.09712"
+    },
+    {
+      "arxiv_id": "2407.10486",
+      "title": "IDEAL: Leveraging Infinite and Dynamic Characterizations of Large Language Models for Query-focused Summarization",
+      "link": "https://arxiv.org/abs/2407.10486"
+    },
+    {
+      "arxiv_id": "2508.20693",
+      "title": "Leveraging Large Language Models for Generating Research Topic Ontologies: A Multi-Disciplinary Study",
+      "link": "https://arxiv.org/abs/2508.20693"
+    },
+    {
+      "arxiv_id": "2509.04027",
+      "title": "CoT-Space: A Theoretical Framework for Internal Slow-Thinking via Reinforcement Learning",
+      "link": "https://arxiv.org/abs/2509.04027"
+    },
+    {
+      "arxiv_id": "2510.05709",
+      "title": "Correcting Prompt Dependence in LLM Benchmarks: A Bayesian Hierarchical Model with Embedding-Space Clustering",
+      "link": "https://arxiv.org/abs/2510.05709"
+    },
+    {
+      "arxiv_id": "2512.05774",
+      "title": "Active Video Perception: Iterative Evidence Seeking for Agentic Long Video Understanding",
+      "link": "https://arxiv.org/abs/2512.05774"
+    },
+    {
+      "arxiv_id": "2512.15792",
+      "title": "A Systematic Analysis of Biases in Large Language Models",
+      "link": "https://arxiv.org/abs/2512.15792"
+    },
+    {
+      "arxiv_id": "2601.02880",
+      "title": "ReTreVal: Reasoning Tree with Validation and Cross-Problem Memory for Large Language Models",
+      "link": "https://arxiv.org/abs/2601.02880"
+    },
+    {
+      "arxiv_id": "2601.18383",
+      "title": "Dynamic Thinking-Token Selection for Efficient Reasoning in Large Reasoning Models",
+      "link": "https://arxiv.org/abs/2601.18383"
+    },
+    {
+      "arxiv_id": "2602.05056",
+      "title": "Grounded but Misleading: Evaluating Semantic Alignment in AI-Generated Security Explanations",
+      "link": "https://arxiv.org/abs/2602.05056"
+    },
+    {
+      "arxiv_id": "2602.07253",
+      "title": "From Out-of-Distribution Detection to Hallucination Detection: A Geometric View",
+      "link": "https://arxiv.org/abs/2602.07253"
+    },
+    {
+      "arxiv_id": "2602.08503",
+      "title": "Learning Self-Correction in Vision-Language Models via Rollout Augmentation",
+      "link": "https://arxiv.org/abs/2602.08503"
+    },
+    {
+      "arxiv_id": "2602.12124",
+      "title": "Alignment Risks from Capability-Seeking RL Training",
+      "link": "https://arxiv.org/abs/2602.12124"
+    },
+    {
+      "arxiv_id": "2603.17310",
+      "title": "InfoDensity: Rewarding Information-Dense Traces for Efficient Reasoning",
+      "link": "https://arxiv.org/abs/2603.17310"
+    },
+    {
+      "arxiv_id": "2603.17837",
+      "title": "The Silent Thought: Modeling Internal Cognition in Full-Duplex Spoken Dialogue Models via Latent Reasoning",
+      "link": "https://arxiv.org/abs/2603.17837"
+    },
+    {
+      "arxiv_id": "2603.19294",
+      "title": "Maximizing Mutual Information Between Prompt and Response Improves LLM Performance With No Additional Data",
+      "link": "https://arxiv.org/abs/2603.19294"
+    },
+    {
+      "arxiv_id": "2604.00555",
+      "title": "Ontology-Constrained Neural Reasoning in Enterprise Agentic Systems: A Neurosymbolic Architecture for Domain-Grounded AI Agents",
+      "link": "https://arxiv.org/abs/2604.00555"
+    },
+    {
+      "arxiv_id": "2604.07709",
+      "title": "IatroBench: Pre-Registered Evidence of Iatrogenic Harm from AI Safety Measures",
+      "link": "https://arxiv.org/abs/2604.07709"
+    },
+    {
+      "arxiv_id": "2604.08477",
+      "title": "SUPERNOVA: Eliciting General Reasoning in LLMs with Reinforcement Learning on Natural Instructions",
+      "link": "https://arxiv.org/abs/2604.08477"
+    },
+    {
+      "arxiv_id": "2604.12138",
+      "title": "Retrieval-Augmented Generation Must Move Beyond Factual Grounding to Represent Diverse Opinions",
+      "link": "https://arxiv.org/abs/2604.12138"
+    },
+    {
+      "arxiv_id": "2605.04135",
+      "title": "Frontier Lag: A Bibliometric Audit of Capability Misrepresentation in Academic AI Evaluation",
+      "link": "https://arxiv.org/abs/2605.04135"
+    },
+    {
+      "arxiv_id": "2605.11732",
+      "title": "AgentDisCo: Towards Disentanglement and Collaboration in Open-ended Deep Research Agents",
+      "link": "https://arxiv.org/abs/2605.11732"
+    },
+    {
+      "arxiv_id": "2605.29054",
+      "title": "Converted, Not Equivalent: Benchmarking Codebase Conversion via Observational Equivalence",
+      "link": "https://arxiv.org/abs/2605.29054"
+    },
+    {
+      "arxiv_id": "2606.00804",
+      "title": "Dynamic Coordination Strategy Selection for Enterprise Multi-Agent Systems",
+      "link": "https://arxiv.org/abs/2606.00804"
+    },
+    {
+      "arxiv_id": "2606.02031",
+      "title": "OpenWebRL: Demystifying Online Multi-turn Reinforcement Learning for Visual Web Agents",
+      "link": "https://arxiv.org/abs/2606.02031"
+    },
+    {
+      "arxiv_id": "2606.02684",
+      "title": "Filter, Then Reweight: Rethinking Optimization Granularity in On-Policy Distillation",
+      "link": "https://arxiv.org/abs/2606.02684"
+    },
+    {
+      "arxiv_id": "2606.04032",
+      "title": "Do Transformers Need Three Projections? Systematic Study of QKV Variants",
+      "link": "https://arxiv.org/abs/2606.04032"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31317",
+  "title": "Forgetting Has Neighbors: Localized Collateral Forgetting in Machine Unlearning",
+  "abstract": "Machine unlearning aims to remove the influence of selected training examples without full retraining. Standard evaluations often summarize unlearning quality with aggregate metrics, such as accuracy- and forgetting-based scores, which can hide localized failures. We study this failure mode at the example level by comparing the predictions of an unlearned model to those of the model retrained after deletion. We show that this pointwise discrepancy can be highly non-uniform: for gradient-ascent and random-labeling methods, with and without retain-set fine-tuning, it grows with geometric proximity to the forget set. We call this phenomenon localized collateral forgetting. Our analysis identifies a mechanism behind the effect: surrogate targets used during unlearning can be inconsistent with the local prediction structure induced by retraining, and this inconsistency propagates through shared representations to nearby examples. Motivated by this mechanism, we propose Local Teacher Distillation, a simple mitigation strategy that replaces random targets with soft labels from a small teacher trained only on retained neighbors of the forget set. On CIFAR-100 partial-class deletion, this local teacher brings the unlearned model substantially closer to retraining, especially near the forget set, while maintaining competitive aggregate unlearning metrics.",
+  "link": "https://arxiv.org/abs/2605.31317",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307074Z"
+}

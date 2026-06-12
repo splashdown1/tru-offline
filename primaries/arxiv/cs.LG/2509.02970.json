@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2509.02970",
+  "title": "Delayed Momentum Aggregation: Communication-efficient Byzantine-robust Federated Learning with Partial Participation",
+  "abstract": "Partial participation is essential for communication-efficient federated learning at scale, yet existing Byzantine-robust methods typically assume full client participation. In the partial participation setting, a majority of the sampled clients may be Byzantine, once Byzantine clients dominate, existing methods break down immediately. We introduce delayed momentum aggregation, a principle where the central server aggregates cached momentum from non-sampled clients along with fresh momentum from sampled clients. This principle ensures Byzantine clients remain a minority from the server's perspective even when they dominate the sampled set. We instantiate this principle in our optimizer DeMoA. We analyze the convergence rate of DeMoA, showing that DeMoA is Byzantine-robust under partial participation. Experiments show that, with 20% Byzantine ratio and only 10% partial participation rate, DeMoA achieves the best accuracy even when existing methods fail empirically.",
+  "link": "https://arxiv.org/abs/2509.02970",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307637Z"
+}

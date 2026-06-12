@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30808",
+  "title": "Differentially Private Preference Data Synthesis for Large Language Model Alignment",
+  "abstract": "Preference alignment is a crucial post-training step for large language models (LLMs) to ensure their outputs align with human values. However, post-training on real human preference data raises privacy concerns, as these datasets often contain sensitive user prompts and human judgments. To address this, we propose DPPrefSyn, a novel algorithm for generating differentially private (DP) synthetic preference data to enable privacy-preserving preference alignment. DPPrefSyn is a principled framework grounded in the Bradley-Terry preference model and the intrinsic geometric structure of pairwise human preference data. It first learns an underlying preference model from private data with formal differential privacy guarantees, and then leverages the learned model together with public prompts to synthesize high-quality preference data. It exploits the shared linear structure of per-cluster reward models to effectively capture heterogeneous human preferences in private datasets, and leverages DP Principal Component Analysis (DP-PCA) to improve learning accuracy. Extensive experimental results demonstrate that DPPrefSyn achieves competitive alignment performance under strong DP guarantees. These findings highlight the potential of synthetic preference data as a practical alternative for privacy-preserving preference alignment across a broad range of applications. To the best of our knowledge, this is the first work to generate DP synthetic preference data for LLM alignment. Our code is available at https://github.com/gfengyu/Differentially-Private-Preference-Data-Synthesis.",
+  "link": "https://arxiv.org/abs/2605.30808",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307347Z"
+}

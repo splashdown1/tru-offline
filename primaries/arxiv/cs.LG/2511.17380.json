@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2511.17380",
+  "title": "Non-Parametric Probabilistic Robustness: A Conservative Risk Estimator under Unknown Perturbation Distributions",
+  "abstract": "Deep learning (DL) models, despite their remarkable success, remain vulnerable to small input perturbations that can cause erroneous outputs, motivating the recent proposal of probabilistic robustness (PR) as a complementary alternative to adversarial robustness (AR). However, existing PR formulations assume a fixed and known perturbation distribution, an unrealistic expectation in practice. To address this limitation, we propose non-parametric probabilistic robustness (NPPR), a more practical PR metric that does not rely on any predefined perturbation distribution. Following the non-parametric paradigm in statistical modeling, NPPR learns an optimized perturbation distribution directly from data, enabling conservative PR evaluation under distributional uncertainty. We further develop an NPPR estimator based on a Gaussian Mixture Model (GMM), covering various input-dependent and input-independent perturbation scenarios. Theoretical analyses establish the relationships among AR, PR, and NPPR. Extensive experiments on CIFAR-10, CIFAR-100, and Tiny ImageNet across ResNet18/50, WideResNet50 and VGG16 validate NPPR as a more practical robustness metric, showing conservative (lower) PR estimates compared to assuming those common perturbation distributions used in state-of-the-arts.",
+  "link": "https://arxiv.org/abs/2511.17380",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308314Z"
+}

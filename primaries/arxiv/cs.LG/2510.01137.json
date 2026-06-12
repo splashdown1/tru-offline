@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2510.01137",
+  "title": "Re-examining Low Rank adaptation for private LLM fine-tuning",
+  "abstract": "Privacy is a central concern when fine-tuning large language models (LLMs) on sensitive data, and differentially private stochastic gradient descent (DP-SGD) -- which clips per-sample gradients and adds calibrated Gaussian noise -- is the standard tool for formal privacy guarantees. Both theory and practice show that lower-rank models are better suited to DP training, a property especially relevant for LLMs, whose fine-tuning gradients exhibit a strong low-rank structure. Methods such as DP-LoRA exploit this by restricting updates to a low-rank subspace, i.e., retaining only a few non-zero components in the SVD of each layer's gradient. However, we argue that while having few non-zero components is important, the isotropic noise injected by DP-SGD inflates the singular values of the gradient matrix, disrupting their naturally fast decay. In this work, we investigate whether this noise-induced eigenvalue blow-up reduces performance, and show that partially restoring the original singular-value profile significantly improves the sample efficiency of DP-SGD. Experiments on language classification (GLUE benchmark with RoBERTa) and text generation (E2E and DART table-to-text benchmarks with Qwen and Llama models up to 4B parameters) showcase that restoring the fast decay of singular values is a viable strategy for speeding up the DP optimization process, without compromising privacy guarantees.",
+  "link": "https://arxiv.org/abs/2510.01137",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307697Z"
+}

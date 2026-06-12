@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2601.21645",
+  "title": "Identifiable Equivariant Networks are Layerwise Equivariant",
+  "abstract": "We investigate the relation between end-to-end equivariance and layerwise equivariance in deep neural networks. We prove the following: For a network whose end-to-end function is equivariant with respect to group actions on the input and output spaces, there is a parameter choice yielding the same end-to-end function such that its layers are equivariant with respect to some group actions on the latent spaces. Our result assumes that the parameters of the model are identifiable in an appropriate sense. This identifiability property has been established in the literature for a large class of networks, to which our results apply immediately, while it is conjectural for others. The theory we develop is grounded in an abstract formalism, and is therefore architecture-agnostic. Overall, our results provide a mathematical explanation for the emergence of equivariant structures in the weights of neural networks during training -- a phenomenon that is consistently observed in practice.",
+  "link": "https://arxiv.org/abs/2601.21645",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "math.CT",
+    "math.RT"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307806Z"
+}

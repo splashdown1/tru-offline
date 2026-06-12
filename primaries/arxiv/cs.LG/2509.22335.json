@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2509.22335",
+  "title": "Spectral Collapse Drives Loss of Plasticity in Deep Continual Learning",
+  "abstract": "We investigate why deep neural networks suffer from loss of plasticity in continual learning, and thus fail to learn new tasks without reinitializing parameters. We show that this failure is preceded by Hessian spectral collapse at new-task initialization, where meaningful curvature directions vanish and gradient descent becomes ineffective. Analyzing a linearized ReLU network, we derive explicit $\\epsilon$-rank conditions for successful training and prove that the loss-weighted Gram matrix is spectrally equivalent to the Generalized Gauss-Newton approximation, thereby relating NTK dynamics to Hessian curvature. Targeting spectral collapse directly, we then discuss the Kronecker factored approximation of the Hessian, which motivates two regularization enhancements: maintaining high effective feature rank and applying L2 penalties. Experiments on continual supervised and reinforcement learning tasks confirm that combining these two regularizers effectively preserves plasticity.",
+  "link": "https://arxiv.org/abs/2509.22335",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307685Z"
+}

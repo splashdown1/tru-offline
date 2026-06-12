@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2509.21190",
+  "title": "Towards Foundation Models for Zero-Shot Time Series Anomaly Detection: Leveraging Synthetic Data and Relative Context Discrepancy",
+  "abstract": "Time series anomaly detection (TSAD) is a critical task, but developing models that generalize to unseen data in a zero-shot manner remains challenging. Existing foundation models for TSAD often rely on reconstruction-error scoring at inference time, which can miss subtle anomalies that are well reconstructed and can falsely flag complex but normal patterns in unseen domains. We introduce TimeRCD, a foundation model for TSAD built on Relative Context Discrepancy (RCD), a pre-training paradigm that trains the model to detect anomalies by comparing a query pattern with its surrounding context. This relational formulation, implemented with a standard Transformer architecture, enables the model to infer normality from the input context rather than relying on fixed global normal patterns. We further construct a large-scale synthetic corpus with context-dependent anomaly labels to provide supervised pre-training signals for RCD. Experiments across diverse benchmarks show that TimeRCD outperforms existing general-purpose and anomaly-specific foundation models in most zero-shot TSAD settings, while remaining competitive with dataset-specific full-shot baselines. These results provide empirical evidence that RCD is an effective direction for building robust and generalizable TSAD models.",
+  "link": "https://arxiv.org/abs/2509.21190",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307681Z"
+}

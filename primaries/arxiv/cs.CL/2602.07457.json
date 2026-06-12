@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2602.07457",
+  "title": "Pull Requests as a Training Signal for Repo-Level Code Editing",
+  "abstract": "Repository-level code editing requires models to understand complex dependencies and execute precise multi-file modifications across a large codebase. While recent gains on SWE-bench rely heavily on complex agent scaffolding, it remains unclear how much of this capability can be internalised via high-quality training signals. To address this, we propose Clean Pull Request (Clean-PR), a mid-training paradigm that leverages real-world GitHub pull requests as a training signal for repository-level editing. We introduce a scalable pipeline that converts noisy pull request diffs into Search/Replace edit blocks through reconstruction and validation, resulting in the largest publicly available corpus of 2 million pull requests spanning 12 programming languages. Using this training signal, we perform a mid-training stage followed by an agentless-aligned supervised fine-tuning process with error-driven data augmentation. On SWE-bench, our model significantly outperforms the instruction-tuned baseline, achieving absolute improvements of 13.6% on SWE-bench Lite and 12.3% on SWE-bench Verified. These results demonstrate that repository-level code understanding and editing capabilities can be effectively internalised into model weights under a simplified, agentless protocol, without relying on heavy inference-time scaffolding.",
+  "link": "https://arxiv.org/abs/2602.07457",
+  "category": "cs.CL",
+  "categories": [
+    "cs.SE",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406328Z"
+}

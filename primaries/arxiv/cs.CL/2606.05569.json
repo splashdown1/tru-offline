@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05569",
+  "title": "Domain-Aware Mispronunciation Detection and Diagnosis Using Language-Specific Statistical Graphs",
+  "abstract": "Mispronunciation Detection and Diagnosis (MDD) has gained increasing importance in computer-assisted language learning and speech technology in recent years. In this paper, we propose a method for constructing statistical graphs that enable models to learn phoneme confusion patterns represented as directed graphs. Furthermore, we introduce a language-specific strategy to capture systematic pronunciation differences across various native language (L1) backgrounds. The effectiveness of our approach is demonstrated through extensive experiments on the L2-ARCTIC benchmark, where it achieves an F1-score of 59.52%, outperforming several competitive baselines.",
+  "link": "https://arxiv.org/abs/2606.05569",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.SD",
+    "eess.AS"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497766+00:00"
+}

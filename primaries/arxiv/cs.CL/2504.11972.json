@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2504.11972",
+  "title": "Reassessing Extractive QA Datasets at Scale: LLM-as-a-Judge and In-Depth Analyses",
+  "abstract": "Extractive QA tasks are commonly evaluated using Exact Match (EM) and F1-score, but these metrics often fail to reflect true model performance. Recent studies have proposed using large language models (LLMs) as judges (LLM-as-a-judge), yet they often lack comprehensive evaluation across datasets and overlook key factors such as sensitivity to answer types, prompt variations, and self-preference bias. In this work, we conduct a systematic study of LLM-as-a-judge across four extractive QA datasets and various prompt variations, assessing multiple LLM families in both answering and judging roles. Our results show that LLM-as-a-judge judgments correlate much more strongly with human evaluations than EM (0.22) and F1 (0.40), achieving correlations up to 0.85 with open-source models. Further analysis reveals that LLM-as-a-judge performs particularly well on number-related answers but faces challenges with more complex types, such as job titles. Contrary to findings in other NLP tasks, we observe no self-preference bias, even when the same model serves as both QA model and judge. Finally, we find that prompt phrasing has minimal impact, and zero-shot, context-free judging often yields the best evaluation performance.",
+  "link": "https://arxiv.org/abs/2504.11972",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406101Z"
+}

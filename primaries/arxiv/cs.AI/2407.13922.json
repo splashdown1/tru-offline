@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2407.13922",
+  "title": "CounterFace: A Synthetic Face Dataset for Fine-Grained Counterfactual Evaluation of Face Recognition Systems",
+  "abstract": "Face recognition (FR) systems are widely deployed in critical applications, making their reliability and robustness across diverse populations and conditions essential. Standard evaluation of FR systems typically relies on datasets such as LFW to estimate average recognition accuracy. Some benchmarks also capture coarse-grained intra-identity variations such as aging, pose, and lighting. However, human faces undergo more fine-grained changes, including appearance changes such as hairstyles and makeup, that are underrepresented in existing benchmarks. Counterfactual evaluation provides a method to assess FR robustness under such fine-grained variations. Existing counterfactual face datasets synthesized with image generators, however, are limited in attribute coverage due to the use of humans for verification in the pipeline.\n  We propose CounterFace, a new counterfactual evaluation dataset comprising 20 facial attributes and 8 demographic factors, exceeding prior synthetic face datasets by 14 attributes and 2 demographics. The dataset is generated using a fully automated pipeline based on off-the-shelf image generators with custom verifiers, removing human need for verification. CounterFace contains 11,821 counterfactual face pairs, and a post-hoc user study confirms the faithfulness of the generated counterfactuals. We evaluate two commercial and four open-source FR systems (AWS Rekognition, Face++, AdaFace, MagFace, ArcFace, FaceNet) across 160 attribute-demographic combinations. Our dataset helps in the isolation of precise failure modes for individual systems unlike standard evaluation benchmarks. Results indicate that the performance degradation varies across attributes and demographics for all six systems and occluding attributes (e.g., facemask and facial hair) universally degrade performance.",
+  "link": "https://arxiv.org/abs/2407.13922",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098779+00:00"
+}

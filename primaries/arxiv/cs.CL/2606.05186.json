@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05186",
+  "title": "Staged Factorial Screening for Budget-Constrained Micro-Pretraining",
+  "abstract": "Budget-constrained micro-pretraining often requires triaging many candidate recipes on a shared accelerator before larger search budgets are spent. We study whether a staged fractional-factorial workflow can recover stable early effect structure in this setting. On a fixed autoresearch-derived single-GPU training loop, we run 613 experiments across pilot and follow-up screens at 2, 5, and 10 minutes; full 16-condition seeded reruns at 5 and 10 minutes; targeted seeded anchor checks; same-host greedy and matched-cost random baselines; a 60-minute bridge package; and bounded Windows A100 and Linux L40S anchor continuations through 24 hours. Main penalties from total batch, depth, and width are largest at short budgets and relax as budget increases. Within the predeclared seeded full-screen families, D, A, B, and C retain non-zero estimates at 5 and 10 minutes after within-budget Benjamini-Hochberg correction, while E does not. Random search can reach strong incumbents in this 32-condition space, but repeatedly in the same low-penalty region and without factor attribution. The 60-minute bridge anchor has the lowest mean, although that package does not separate workflow refinement from the larger bridge model's capacity advantage. In bounded 12-hour and 24-hour three-anchor continuations on both hosts, the bridge has the lowest sample mean while the non-bridge ordering stays host-sensitive. We therefore present a bounded methods result: use short designed screens to identify high-penalty directions, confirm promising anchors under repeated runs, and refine locally inside the reduced space. The evidence supports a bridge-centered recommendation through 24 hours on two hosts, not hardware-invariant ranking or general hyperparameter-optimization superiority.",
+  "link": "https://arxiv.org/abs/2606.05186",
+  "category": "cs.CL",
+  "categories": [
+    "cs.LG",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498112+00:00"
+}

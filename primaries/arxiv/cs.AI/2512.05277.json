@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2512.05277",
+  "title": "From Segments to Scenes: Temporal Understanding for Agentic Autonomous Driving via Vision-Language Models",
+  "abstract": "Vision-Language Models (VLMs) are increasingly deployed as the perception and reasoning backbone of autonomous agents acting in the wild, with autonomous driving (AD) being one of the most safety-critical instances. Reliable temporal understanding is essential for such agents to anticipate events, attribute causes, and act safely in dynamic environments, yet this remains a significant challenge even for state-of-the-art (SoTA) VLMs. Prior video benchmarks have emphasized other content (sports, cooking, etc.), yet no existing benchmark focuses exclusively on temporal understanding for both short- and long-form AD footage. To fill this gap, we present the Temporal Understanding in Autonomous Driving (TAD) benchmark, comprising nearly 6000 question-answer (QA) pairs across 7 tasks, and evaluate 9 closed- and open-source generalist as well as AD-specialist models. Current SoTA models perform substantially below human accuracy on TAD. To improve the temporal reasoning of VLM-based driving agents, we propose two novel training-free solutions: Scene-CoT, which uses Chain-of-Thought (CoT) reasoning, and TCogMap, which incorporates an ego-centric temporal cognitive map produced by a trajectory-analysis module that operates as an agentic tool around the VLM. Integrated with existing VLMs, our methods improve average accuracy on TAD by up to $17.72\\%$ and by up to $10.35\\%$ on STSBench. By introducing TAD, benchmarking SoTA models, and proposing effective enhancements, this work aims to catalyze further progress on temporal understanding for agentic AD systems operating in the wild. The benchmark and evaluation code are available at ${\\href{https://huggingface.co/datasets/vbdai/TAD}{\\text{Hugging Face}}}$ and ${\\href{https://github.com/vbdi/tad_bench}{\\text{GitHub}}}$, respectively.",
+  "link": "https://arxiv.org/abs/2512.05277",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098945+00:00"
+}

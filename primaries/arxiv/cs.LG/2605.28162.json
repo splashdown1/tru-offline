@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.28162",
+  "title": "Learning Logical Operations for Arbitrary Quantum Error Correction Codes",
+  "abstract": "Logical operations are essential for quantum computation within quantum error-correcting codes. However, discovering their physical realizations is challenging, especially for non-additive codes that lack a stabilizer description. We present a general learning-based framework that, given only an encoding circuit, constructs physical implementations of logical operations while enforcing structural properties such as transversality or shallow depth. Our approach is validated by rediscovering known logical operations of standard stabilizer codes. We then extend it to a co-design procedure, dubbed variational early fault-tolerant quantum computing (VarEFTQC), which tailors non-additive encodings to a given noise model and enforces desired logical gate sets, such as transversal IQP-type families or low-depth universal sets. A software library implements the complete learning pipeline, including loss-function variants, ansatz families, and optimization routines. Together, these results position VarEFTQC as a practical tool for discovering hardware-adapted logical gadgets for early fault-tolerant quantum computing.",
+  "link": "https://arxiv.org/abs/2605.28162",
+  "category": "cs.LG",
+  "categories": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308550Z"
+}

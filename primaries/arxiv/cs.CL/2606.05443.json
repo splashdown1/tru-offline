@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05443",
+  "title": "MIRAI: Prediction and Generation of High-Impact Academic Research",
+  "abstract": "The rapid pace of scientific publishing has made the identification and synthesis of high-impact work an increasingly urgent challenge. We introduce MIRAI (Multi-year Inference of Research trends and Academic Impact), a deep learning framework that predicts paper impact using only it's title, abstract, and publication date. We train MIRAI on the arXiv academic graph to predict 5-year PageRank and citation counts, achieving Spearman's $\\rho$ of 0.4686 on PageRank prediction and 0.6192 on citation prediction for papers published in 2021. We propose a research ideation pipeline built on top of MIRAI that produces research ideas oriented towards high impact. These ideas were judged as more impactful than a baseline without MIRAI by an unbiased LLM judge at a 4:3 ratio. We make the 5-year citation prediction model publicly available at https://predict-paper-impact.vercel.app.",
+  "link": "https://arxiv.org/abs/2606.05443",
+  "category": "cs.CL",
+  "categories": [
+    "cs.DL",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498157+00:00"
+}

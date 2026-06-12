@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2505.11766",
+  "title": "Reformulating Neural Operators in $d+1$ Dimensions for Embedding Evolution",
+  "abstract": "Neural Operators (NOs) are powerful architectures for learning mappings between function spaces. While most advances focus on refining kernel parameterizations over the $d$-dimensional physical domain, the evolution of lifted embeddings remains underexplored, which often drives models toward computationally expensive embedding-scaling designs to improve approximation.\n  In this paper, we introduce an auxiliary function dimension that models embedding evolution in operator form, thereby reformulating the NO pipeline in $d+1$ dimensions. We instantiate this framework via Fourier-based operators acting jointly on the physical and auxiliary domains, yielding a basis-diversified auxiliary evolution module as an alternative to brute-force embedding scaling. Across more than ten increasingly challenging benchmarks, ranging from the 1D heat equation to the highly nonlinear 3D Rayleigh-Taylor instability, our model consistently achieves the lowest relative $L_2$ error among the evaluated baselines. Crucially, this advantage is empirically supported by (1) controlled budget-aware comparisons against scaled and ablated baselines; (2) robustness under mixed-resolution training and super-resolution inference; and (3) zero-shot generalization to unseen temporal regimes. In addition, we present a broader set of design choices for lifting and recovery operators, demonstrating their impact on our model's predictive performance.",
+  "link": "https://arxiv.org/abs/2505.11766",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "quant-ph"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883867+00:00"
+}

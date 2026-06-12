@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31413",
+  "title": "Improved Guarantees for Langevin Monte Carlo with Average Smoothness",
+  "abstract": "We establish improved nonasymptotic bounds for Langevin Monte Carlo in the strongly log-concave setting, when the error is measured by the Wasserstein distance. The main result shows that the discretization error is governed by an average coordinate-wise smoothness constant, rather than by the usual global smoothness constant. The proof is short and probabilistic, and relies on a refined use of the synchronous coupling. We further show that the same ideas lead to improved bounds for variable step sizes, for potentials whose Laplacian is Lipschitz-continuous, and for finite-sum problems sampled by stochastic-gradient Langevin dynamics with fixed point control variates. In the Laplacian-smooth case, the usual Hessian-Lipschitz contribution is replaced by a weaker trace-type third-order smoothness quantity. In the finite-sum setting, the resulting SGLD bound improves the dependence on the root mean square smoothness of the component functions. Applications to generalized linear models with Gaussian design show that these refinements can yield substantial, dimension-dependent improvements over previously known bounds, especially for correlated covariates.",
+  "link": "https://arxiv.org/abs/2605.31413",
+  "category": "cs.LG",
+  "categories": [
+    "math.ST",
+    "cs.LG",
+    "stat.TH"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307526Z"
+}

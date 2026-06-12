@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.01910",
+  "title": "Stochastic Sparse Attention for Memory-Bound Inference",
+  "abstract": "Autoregressive decoding becomes bandwidth-limited at long contexts, as generating each token requires reading all $n_k$ key and value vectors from KV cache. We present Stochastic Additive No-mulT Attention (SANTA), a method that sparsifies value-cache access by sampling $S \\ll n_k$ indices from the post-softmax distribution and aggregates only those value rows. This yields an unbiased estimator of the post-softmax value aggregation while replacing value-stage multiply-accumulates with gather-and-add. We introduce stratified and systematic sampling to design variance-reduced, GPU-friendly variants. Evaluated on Llama-3.1-8B-Instruct at 32k-token contexts, S$^2$ANTA matches baseline accuracy while achieving up to $1.5\\times$ decode-step attention-kernel speedup over FlashInfer and FlashDecoding on an NVIDIA RTX 6000 Ada. In batched long-context generation, these kernel gains translate to up to $1.25\\times$ end-to-end decode-latency speedup. Finally, we propose Bernoulli $qK^\\mathsf{T}$ sampling as a complementary technique to sparsify the score stage, reducing key-feature access through stochastic ternary queries. Both methods are complementary to upstream quantization, low-rank projection, KV-cache compression, and KV-cache selection methods. Together, they point toward sparse, multiplier-free, and energy-efficient inference. We open-source our kernels at: https://github.com/OPUSLab/SANTA.git",
+  "link": "https://arxiv.org/abs/2605.01910",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.DC"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099235+00:00"
+}

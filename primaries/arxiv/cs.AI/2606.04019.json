@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04019",
+  "title": "Gravity-Aware Hierarchical Routing for Lightweight SensorLLM on Human Activity Recognition",
+  "abstract": "Recent studies on sensor-language alignment have shown that two-stage frameworks can improve the semantic modeling ability of wearable-sensor human activity recognition (HAR), where SensorLLM-style methods first perform motion-to-language alignment and then fine-tune the model for downstream tasks. However, our experiments reveal a consistent failure mode when the Stage 2 backbone is compressed to a compact model such as TinyLlama: recognition of dynamic activities remains relatively strong, while the discrimination of low-motion static classes such as standing, sitting, and lying degrades substantially. To address this issue, we propose a gravity-aware hierarchical routing head as a lightweight post-alignment adaptation built on top of an already aligned model, rather than a new large-scale pretraining framework. The method uses the per-channel mean and std from the Chronos tokenizer state to extract statistical cues related to posture and gravity direction, and adaptively combines a static expert and a full expert through soft routing, together with a load-balancing loss for stable training. On the MHealth dataset, this design significantly improves macro-F1 with minimal parameter overhead, and the gains are concentrated mainly on static classes while preserving strong performance on dynamic activities. As a first arXiv disclosure, the current paper reports results on a single dataset only, with the goal of highlighting the core method and laying the groundwork for broader evaluation in future work.",
+  "link": "https://arxiv.org/abs/2606.04019",
+  "category": "cs.AI",
+  "categories": [
+    "eess.SP",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097786+00:00"
+}

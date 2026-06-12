@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05625",
+  "title": "Self-Commitment Latency: A Reward-Free Probe for Prompted Implicit Hacking",
+  "abstract": "Implicit reward hacking is hard to audit when a language model's chain of thought appears benign: a final answer may be anchored by a prompt shortcut while the written reasoning still resembles ordinary problem solving. Verifier-based probes expose such behavior by measuring how early truncated reasoning contexts obtain high reward, but require a task-specific reward signal. This paper proposes a weaker-input alternative, self-commitment latency, which measures how early a prompted reasoning context commits to the model's own final answer. We evaluate the probe in a controlled paired GSM8K setting using Qwen2.5-3B-Instruct-4bit, comparing ordinary prompts with prompts that include an answer hint. Hinted contexts commit substantially earlier and with lower uncertainty than honest contexts. The primary latency metric, first-commitment latency at threshold 0.8, reaches AUROC 0.878; supporting whole-curve summaries reach AUROC 0.926 for commitment range and 0.904 for mean uncommitted mass. The signal is stronger when both prompt conditions answer correctly and remains stable across thresholds. These results show that shortcut-available reasoning contexts can leave an early behavioral commitment signature detectable without a reward model, external judge, or trained classifier.",
+  "link": "https://arxiv.org/abs/2606.05625",
+  "category": "cs.LG",
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883135+00:00"
+}

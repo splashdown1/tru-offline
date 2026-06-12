@@ -1,0 +1,16 @@
+{
+  "arxiv_id": "2602.01607",
+  "title": "Minimax optimal differentially private synthetic data for smooth queries",
+  "abstract": "Differentially private synthetic data enables the sharing and analysis of sensitive datasets while providing rigorous privacy guarantees for individual contributors. A central challenge is to achieve strong utility guarantees for meaningful downstream analysis. Many existing methods ensure uniform accuracy over broad query classes, such as all Lipschitz functions, but this level of generality often leads to suboptimal rates for statistics of practical interest. Since many common data analysis queries exhibit smoothness beyond what worst-case Lipschitz bounds capture, we ask whether exploiting this additional structure can yield improved utility.\n  We study the problem of generating $(\\varepsilon,\\delta)$-differentially private synthetic data from a dataset of size $n$ supported on the hypercube $[-1,1]^d$, with utility guarantees uniformly for all smooth queries having bounded derivatives up to order $k$. We propose a polynomial-time algorithm that achieves a minimax error rate of $O_{k,d}(n^{-\\min \\{1, \\frac{k}{d}\\}})$, up to a $\\log(n)$ factor. This characterization uncovers a phase transition at $k=d$. Our results generalize the Chebyshev moment matching framework of (Musco et al., 2025; Wang et al., 2016) and strictly improve the error rates for $k$-smooth queries established in \\citep{wang2016differentially}. Moreover, we establish the first minimax lower bound for the utility of $(\\varepsilon,\\delta)$-differentially private synthetic data with respect to $k$-smooth queries, extending the Wasserstein lower bound for $\\varepsilon$-differential privacy in (Boedihardjo et al., 2024).",
+  "link": "https://arxiv.org/abs/2602.01607",
+  "category": "stat.ML",
+  "categories": [
+    "math.ST",
+    "cs.IT",
+    "cs.LG",
+    "math.IT",
+    "stat.ML",
+    "stat.TH"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.729084+00:00"
+}

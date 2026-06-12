@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06053",
+  "title": "Online KL-Regularized Reinforcement Learning with Function Approximation under Misspecification",
+  "abstract": "We study KL-regularized contextual bandits and episodic reinforcement learning (RL) under general function approximation with model misspecification. Existing guarantees rely on realizability and therefore do not extend to misspecified models, where classical regret bounds may fail. This work introduces KL misspecification formulations for contextual bandits and episodic RL and analyzes regression-based algorithms with Gibbs policy updates. High-probability KL-regret guarantees with explicit misspecification terms are established, recovering the standard realizable KL-regularized setting as a special case.",
+  "link": "https://arxiv.org/abs/2606.06053",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882476+00:00"
+}

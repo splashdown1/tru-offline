@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30833",
+  "title": "Your Teacher Can't Help You Here: Combating Supervision Fidelity Decay in On-Policy Distillation",
+  "abstract": "On-policy distillation transfers reasoning capabilities by training a student model on its own generated trajectories using token-level feedback from a teacher. However, we identify a critical bottleneck, \\textbf{Supervision Fidelity Decay (SFD)}: as student-generated prefixes lengthen, the teacher's next-token distribution becomes less confident and less discriminative. Consequently, the teacher-dependent corrective signal in reverse-KL distillation weakens, causing student drift to compound across long reasoning chains. To mitigate SFD, we introduce \\textbf{Lookahead Group Reward (\\ours{})}. Building on the insight that next-step teacher confidence reflects the discriminative strength of future reverse-KL supervision, \\ours{} evaluates the student's top-K candidate tokens by the teacher confidence they induce at the subsequent step and assigns a group-normalized reward. To maintain computational efficiency, we further design an entropy-triggered tree-attention mechanism. Across six math and code benchmarks, \\ours{} improves mean@8 by \\textbf{2.57} points over OPD for a 7B student, with gains increasing in longer-generation and reaching +\\textbf{4.92} points on AIME-26 at 39k tokens.",
+  "link": "https://arxiv.org/abs/2605.30833",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405738Z"
+}

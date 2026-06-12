@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31371",
+  "title": "Softsign: Smooth Sign in Your Optimizer For Better Parameter Heterogeneity Handling",
+  "abstract": "Sign-based and LMO-inspired optimizers have recently attracted substantial attention in deep learning due to their strong performance and low memory footprint. However, their fixed-magnitude updates can hurt terminal convergence: they decouple update mechanisms from gradient magnitudes and fail to account for parameter heterogeneity, often leading to oscillation rather than convergence. We propose SoftSignum, a smooth relaxation of sign-based optimization that replaces the hard sign map with a temperature-controlled soft-sign transformation, enabling a parameter-wise transition from sign-like updates to magnitude-sensitive SGD-like steps. We complement it with an adaptive quantile-based temperature schedule and extend the same principle to matrix-valued optimizers, obtaining SoftMuon. We also develop a generalized geometry-relaxation framework based on strongly convex regularizers and Fenchel conjugates, proving convergence in stochastic non-convex setting. Experiments on diverse deep learning tasks, including LLM pretraining, show that SoftSignum and SoftMuon consistently improve over their hard sign-based counterparts and standard AdamW.",
+  "link": "https://arxiv.org/abs/2605.31371",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307114Z"
+}

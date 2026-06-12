@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.10314",
+  "title": "Stop Training for the Worst: Progressive Unmasking Accelerates Masked Diffusion Training",
+  "abstract": "Masked Diffusion Models (MDMs) have emerged as a promising approach for generative modeling in discrete spaces. By generating sequences in any order and allowing for parallel decoding, they enable fast inference and strong performance on non-causal tasks. However, this flexibility comes with a training complexity trade-off: MDMs train on an exponentially large set of masking patterns, which is not only computationally expensive, but also creates a train--test mismatch between the random masks used in training and the highly structured masks induced by inference-time unmasking. In this work, we propose Progressive UnMAsking (PUMA), a simple modification of the forward masking process that aligns training-time and inference-time masking patterns, thereby focusing optimization on inference-aligned masks and speeding up training. Empirically, PUMA speeds up pretraining at the 125M scale by $\\approx 2.5\\times$ and offers complementary advantages on top of common recipes like autoregressive initialization. We open-source our codebase at https://github.com/JaeyeonKim01/PUMA.",
+  "link": "https://arxiv.org/abs/2602.10314",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884053+00:00"
+}

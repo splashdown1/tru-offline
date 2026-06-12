@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2507.05488",
+  "title": "OLG++: A Semantic Extension of Obligation Logic Graph",
+  "abstract": "We present OLG++, a semantic extension of the Obligation Logic Graph (OLG) for modeling regulatory and legal rules in municipal and interjurisdictional contexts. OLG++ introduces richer node and edge types, including spatial, temporal, party group, defeasibility, and logical grouping constructs, enabling nuanced representations of legal obligations, exceptions, and hierarchies. The model supports structured representation of rules with contextual conditions, precedence, and complex triggers. We demonstrate its use through examples from food-business regulations, showing how OLG++ supports legal question answering using property-graph queries. We also discuss how OLG++ can complement LegalRuleML by providing graph-native constructs for subclass relations, spatial constraints, and reified exception structures. The worked examples and first-pass coverage analysis show that, on the dimensions studied, OLG++ is more expressive than the baseline OLG model for municipal regulatory representation.",
+  "link": "https://arxiv.org/abs/2507.05488",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.CY"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358503Z"
+}

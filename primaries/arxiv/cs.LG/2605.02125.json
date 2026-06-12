@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.02125",
+  "title": "FedQueue: Queue-Aware Federated Learning for Cross-Facility HPC Training",
+  "abstract": "Federated learning (FL) across multiple HPC facilities faces stochastic admission delays from batch schedulers that dominate wall-clock time. Synchronous FL suffers from severe stragglers, while asynchronous FL accumulates stale updates when queues spike. We propose FedQueue, a queue-aware FL protocol that incorporates scheduler delays directly into training and aggregation, which (i) predicts per-facility queue delays online to budget local work, (ii) applies cutoff-based admission that buffers late arrivals to bound staleness, and (iii) performs staleness-aware aggregation to stabilize heterogeneous local workloads. We prove the convergence for non-convex objectives at rate $\\mathcal{O}(1/\\sqrt{R})$ under bounded staleness, and show that the admission controls yield bounded staleness with high probability under queue-prediction error. Real-world cross-facility deployment of FedQueue shows 20.5% improvement over baseline algorithms. Controlled queue simulations demonstrate robust improvement over the baselines; in particular, up to 60% reduction in time to reach a target accuracy level under high queue variance and non-IID partitions.",
+  "link": "https://arxiv.org/abs/2605.02125",
+  "category": "cs.LG",
+  "categories": [
+    "cs.DC",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308479Z"
+}

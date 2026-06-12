@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05675",
+  "title": "Two-Way Is Better Than One: Bidirectional Alignment with Cycle Consistency for Exemplar-Free Class-Incremental Learning",
+  "abstract": "Continual learning (CL) seeks models that acquire new skills without erasing prior knowledge. In exemplar-free class-incremental learning (EFCIL), this challenge is amplified because past data cannot be stored, making representation drift for old classes particularly harmful. Prototype-based EFCIL is attractive for its efficiency, yet prototypes drift as the embedding space evolves; therefore, projection-based drift compensation has become a popular remedy. We show, however, that existing one-directional projections introduce systematic bias: they either retroactively distort the current feature geometry or align past classes only locally, leaving cycle inconsistencies that accumulate across tasks. We introduce BiCyc, a bidirectional projector alignment approach with a cycle-consistency objective. BiCyc jointly optimizes two maps, old-to-new and new-to-old, with stop-gradient gating so that transport and representation co-evolve. Analytically, we show that the cycle loss contracts the singular spectrum toward unity in whitened space, and that improved transport of class means and covariances yields smaller perturbations of classification log-odds, preserving old-class decisions and mitigating catastrophic forgetting. Empirically, across standard EFCIL benchmarks, BiCyc substantially reduces forgetting and improves accuracy in from-scratch settings, while remaining competitive in the pretrained fine-grained regime.",
+  "link": "https://arxiv.org/abs/2606.05675",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882156+00:00"
+}

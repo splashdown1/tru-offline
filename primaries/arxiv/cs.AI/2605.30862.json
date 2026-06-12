@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30862",
+  "title": "Sophrosyne: Agentic Exploration of Relational Data Systems Needs Moderation",
+  "abstract": "Text2SQL agents powered by LLMs translate natural language intent into SQL by exploring the data system through tool calls before formulating the query. However, to ensure secure and scoped access, data systems construct environments with explicit API surfaces. We study and categorize these APIs exposed today as either coarse-grained or fine-grained and posit that choosing between them presents a fundamental tradeoff between cost-efficient exploration and accurate SQL generation. Most data systems expose fine-grained APIs, but this inadvertently disadvantages agents: they over-explore, incorporating irrelevant schema elements into their query formulation and produce inaccurate results. We argue that curbing over-exploration is key to the effective use of these API surfaces, and propose Sophrosyne, a data system environment that augments API responses with directives that guide the agent's exploration process. Initial results show that directives reduce over-exploration by 4.6x and boost accuracy by up to 12.4% (approx. 4 percentage points).",
+  "link": "https://arxiv.org/abs/2605.30862",
+  "category": "cs.AI",
+  "categories": [
+    "cs.DB",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358163Z"
+}

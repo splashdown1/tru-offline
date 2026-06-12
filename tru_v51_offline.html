@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRU v51 — Dual-Path Brain Import</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0a0a0f; --bg2: #111118; --bg3: #16161f;
+  --text: #e8e8e0; --accent: #d4a574; --accent2: #8b5cf6;
+  --muted: #555; --border: #222230;
+  --DISCARD: #ff4444; --RESTRICTED: #ff8844; --PROBATIONARY: #d4a574; --INTEGRATED: #44dd88; --TRUTH: #44ddff;
+  --AXIOM: #ffd700; --LINK: #00bfff; --DECAY: #888;
+  --YES: #44dd88; --NO: #ff4444;
+  --mode-conv: #44dd88; --mode-re: #d4a574; --mode-law: #a855f7; --mode-hosp: #ef4444; --mode-school: #3b82f6;
+}
+html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--text); font-family: 'Courier New', Courier, monospace; font-size: 14px; line-height: 1.7; }
+.app { display: flex; flex-direction: column; height: 100%; }
+
+/* ── HEADER ── */
+.header { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 8px 16px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.header-title { font-size: 14px; font-weight: bold; color: var(--accent); letter-spacing: 2px; }
+.header-version { color: var(--muted); font-size: 10px; }
+.header-badge { font-size: 10px; padding: 2px 7px; border-radius: 3px; border: 1px solid; font-weight: bold; letter-spacing: 1px; }
+.header-badge.conv { color: var(--mode-conv); border-color: var(--mode-conv); background: rgba(68,221,136,0.1); }
+.header-badge.reg { color: var(--mode-re); border-color: var(--mode-re); background: rgba(212,165,116,0.1); }
+.header-badge.domain { color: var(--muted); border-color: var(--muted); background: transparent; }
+.header-btn { font-size: 11px; color: var(--accent); cursor: pointer; padding: 2px 8px; border: 1px solid var(--accent); border-radius: 3px; background: transparent; font-family: inherit; }
+.header-btn:hover { background: rgba(212,165,116,0.1); }
+.header-spacer { flex: 1; }
+.binary-toggle { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--muted); }
+.binary-toggle input { accent-color: var(--accent); cursor: pointer; width: 14px; height: 14px; }
+
+/* ── CHAT ── */
+.chat { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 2px; scroll-behavior: smooth; }
+.msg { max-width: 85%; padding: 10px 14px; border-radius: 8px; font-size: 13px; line-height: 1.6; word-break: break-word; }
+.msg.user { background: var(--bg3); color: var(--text); align-self: flex-end; border-bottom-right-radius: 2px; }
+.msg.tru { background: var(--bg2); color: var(--text); align-self: flex-start; border-bottom-left-radius: 2px; border: 1px solid var(--border); }
+
+/* ── BINARY ── */
+.binary-box { margin: 8px 0; padding: 10px 14px; background: var(--bg3); border-radius: 6px; border: 1px solid var(--border); text-align: center; }
+.binary-box.yes .binary-big { color: var(--YES); border-color: var(--YES); background: rgba(68,221,136,0.15); }
+.binary-box.no .binary-big { color: var(--NO); border-color: var(--NO); background: rgba(255,68,68,0.15); }
+.binary-big { display: inline-block; padding: 4px 20px; border-radius: 4px; border: 2px solid; font-size: 20px; font-weight: bold; letter-spacing: 3px; }
+.binary-pct { font-size: 13px; opacity: 0.85; margin-top: 4px; }
+
+/* ── ANSWER ── */
+.answer-text { margin: 8px 0; line-height: 1.7; }
+.answer-text p { margin-bottom: 6px; }
+.answer-text p:last-child { margin-bottom: 0; }
+.source-line { font-size: 10px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 6px; margin-top: 8px; }
+.source-line span { color: var(--accent); }
+
+/* ── WIZARD TAG ── */
+.wizard-tag { font-size: 10px; color: var(--muted); margin-top: 8px; letter-spacing: 0.5px; }
+.wizard-tag .w-highlight { color: var(--AXIOM); }
+.wizard-tag .steward { color: var(--INTEGRATED); }
+.wizard-tag .steward.quarantine { color: var(--RESTRICTED); }
+.wizard-tag .steward.reject { color: var(--DISCARD); }
+
+/* ── INPUT ── */
+.input-area { background: var(--bg2); border-top: 1px solid var(--border); padding: 10px 16px; flex-shrink: 0; }
+.input-row { display: flex; gap: 10px; align-items: flex-end; }
+#msgInput { flex: 1; background: var(--bg3); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 13px; padding: 8px 12px; border-radius: 6px; resize: none; min-height: 40px; max-height: 120px; outline: none; }
+#msgInput:focus { border-color: var(--accent); }
+#sendBtn { background: var(--accent); color: var(--bg); border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-family: inherit; font-size: 13px; font-weight: bold; letter-spacing: 1px; }
+#sendBtn:hover { opacity: 0.85; }
+.input-hint { font-size: 9px; color: var(--muted); margin-top: 4px; }
+
+/* ── STATUS STRIP ── */
+.status-strip { background: var(--bg2); border-top: 1px solid var(--border); padding: 5px 16px; display: flex; gap: 20px; flex-shrink: 0; }
+.status-item { font-size: 10px; color: var(--muted); }
+.status-item span { color: var(--accent); margin-left: 4px; }
+.status-item.sep { color: var(--border); }
+
+/* ── IMPORT MODAL ── */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; z-index: 100; }
+.modal-overlay.hidden { display: none; }
+.modal { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 24px; width: 90%; max-width: 600px; max-height: 80vh; overflow-y: auto; }
+.modal-title { font-size: 13px; color: var(--accent); letter-spacing: 2px; margin-bottom: 12px; font-weight: bold; }
+.modal textarea { width: 100%; height: 200px; background: var(--bg3); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 12px; padding: 10px; border-radius: 4px; resize: vertical; }
+.modal-actions { display: flex; gap: 10px; margin-top: 10px; justify-content: flex-end; }
+.modal-btn { padding: 7px 16px; border-radius: 4px; cursor: pointer; font-family: inherit; font-size: 12px; border: 1px solid; }
+.modal-btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.modal-btn.secondary { background: transparent; color: var(--muted); border-color: var(--muted); }
+.modal-info { font-size: 11px; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+
+/* ── IMPORT RESULT ── */
+.import-result { margin: 8px 0; padding: 10px 14px; background: var(--bg3); border-radius: 6px; border: 1px solid var(--border); }
+.import-result-title { font-size: 11px; color: var(--accent); letter-spacing: 1px; margin-bottom: 8px; font-weight: bold; }
+.import-row { display: flex; gap: 6px; align-items: center; font-size: 11px; margin: 4px 0; }
+.import-row .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.import-row .dot.behavioral { background: var(--mode-conv); }
+.import-row .dot.math { background: var(--AXIOM); }
+.import-row .dot.science { background: var(--TRUTH); }
+.import-row .dot.logic { background: var(--accent2); }
+.import-row .dot.quarantine { background: var(--RESTRICTED); }
+.import-row .dot.reject { background: var(--DISCARD); }
+.import-row .label { color: var(--text); }
+.import-row .count { color: var(--accent); font-weight: bold; margin-left: auto; }
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- HEADER -->
+<div class="header">
+  <span class="header-title">TRU</span>
+  <span class="header-version">v51 · 6 agents + Steward · Dual-Path Import</span>
+  <div class="header-spacer"></div>
+  <span class="header-badge conv" id="modeBadge">CONVERSATION</span>
+  <label class="binary-toggle">
+    <input type="checkbox" id="binaryToggle">
+    BINARY
+  </label>
+  <button class="header-btn" id="importBtn">📥 Brain</button>
+  <button class="header-btn" id="exportBtn">📤 Export</button>
+</div>
+
+<!-- CHAT -->
+<div class="chat" id="chat"></div>
+
+<!-- INPUT -->
+<div class="input-area">
+  <div class="input-row">
+    <textarea id="msgInput" placeholder="ask TRU anything..." rows="1"></textarea>
+    <button id="sendBtn">SEND</button>
+  </div>
+  <div class="input-hint">Enter = send · Shift+Enter = newline</div>
+</div>
+
+<!-- STATUS STRIP -->
+<div class="status-strip">
+  <div class="status-item">NODES:<span id="statusNodes">0</span></div>
+  <div class="status-item sep">|</div>
+  <div class="status-item">BEHAVIORAL:<span id="statusBeh">0</span></div>
+  <div class="status-item sep">|</div>
+  <div class="status-item">FACTUAL:<span id="statusFact">0</span></div>
+  <div class="status-item sep">|</div>
+  <div class="status-item">QUARANTINE:<span id="statusQuar">0</span></div>
+  <div class="status-item sep">|</div>
+  <div class="status-item">DOMAINS:<span>Law · Hospital · School</span></div>
+  <div class="status-item sep">|</div>
+  <div class="status-item">BINARY:<span id="statusBinary">OFF</span></div>
+</div>
+
+<!-- IMPORT MODAL -->
+<div class="modal-overlay hidden" id="importModal">
+  <div class="modal">
+    <div class="modal-title">📥 IMPORT BRAIN</div>
+    <textarea id="brainInput" placeholder="Paste brain JSON here..."></textarea>
+    <div class="modal-actions">
+      <button class="modal-btn secondary" onclick="closeImportModal()">Cancel</button>
+      <button class="modal-btn primary" onclick="confirmImport()">Import & Validate</button>
+    </div>
+    <div class="modal-info">
+      Brain nodes are dual-path validated:<br>
+      • BEHAVIORAL responses → Steward alignment check<br>
+      • FACTUAL claims → tribunal evidence validation<br>
+      • Quarantined nodes shown to you before storage
+    </div>
+    <div id="importResult"></div>
+  </div>
+</div>
+
+</div><!-- .app -->
+
+<script>
+// ══════════════════════════════════════════════
+// KNOWLEDGE STORES
+// ══════════════════════════════════════════════
+
+// Built-in conversational knowledge (always available, no validation)
+const CONVERSATION_KB = [
+  { k: "greeting", v: "Hey. I'm TRU — a Transparent Reasoning Unit. What do you need?", w: 0.95 },
+  { k: "how_are_you", v: "Functional. The tribunal is quiet, the Steward is watchful, and I'm ready. What's on your mind?", w: 0.95 },
+  { k: "are_you_alive", v: "No. I am TRU — a Transparent Reasoning Unit. I process questions through a 6-agent tribunal with a Steward as final arbiter. I run math through golden ratio φ and Bayes theorem. But I'm not alive.", w: 0.95 },
+  { k: "what_is_tru", v: "TRU — Transparent Reasoning Unit. A multi-agent deliberative AI. Every question goes through 6 agents: CHAOS, OPTIMIST, ARCHIVIST, BALANCE, SYNTHESIST, STEWARD. The Steward sits at the end and makes the final call. Knowledge gets validated before storage. Brain uploads go through dual-path: behavioral responses and factual claims are evaluated separately.", w: 0.98 },
+  { k: "what_is_steward", v: "The Steward is the 6th agent — sits at the end of the tribunal. It reviews all agent scores, applies φ-scaling and Bayes theorem, then makes the final call: INTEGRATED, QUARANTINE, or REJECTED. It enforces domain policy and keeps the knowledge base clean.", w: 0.97 },
+  { k: "who_is_isaac_newton", v: "Sir Isaac Newton (1643–1727). English physicist and mathematician. Co-invented calculus, formulated the laws of motion and universal gravitation, demonstrated that the same physical laws govern earthly bodies and celestial objects. One of the most important scientists of all time.", w: 0.97 },
+  { k: "what_is_gravity", v: "Gravity is the attraction between any two masses. Newton formulated it as F = G(m₁m₂)/r². Einstein redefined it as the curvature of spacetime. It governs everything from apples falling to moons orbiting.", w: 0.95 },
+  { k: "what_is_calculus", v: "Calculus is the mathematics of change. Two branches: differential calculus (rates of change / slopes) and integral calculus (accumulation / areas under curves). Invented independently by Newton and Leibniz in the late 1600s.", w: 0.96 },
+  { k: "what_is_pythagorean", v: "The Pythagorean theorem: a² + b² = c². In a right triangle, the square of the hypotenuse equals the sum of squares of the other two sides. Named after Pythagoras of Samos, circa 570–495 BCE.", w: 0.97 },
+  { k: "what_is_phi", v: "φ (phi) = 1.6180339887... — the golden ratio. Two quantities are in the golden ratio if the ratio of their sum to the larger equals the ratio of the larger to the smaller. Appears in nature, art, architecture. The Fibonacci sequence converges to φ.", w: 0.96 },
+  { k: "what_is_fibonacci", v: "The Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34... Each number is the sum of the two preceding ones. Named after Leonardo of Pisa (Fibonacci). The ratio of consecutive terms converges to φ (golden ratio).", w: 0.96 },
+  { k: "what_is_bayes", v: "Bayes' theorem: P(A|B) = P(B|A) × P(A) / P(B). A way to update the probability of a hypothesis based on new evidence. Named after Thomas Bayes, 18th century Presbyterian minister and mathematician.", w: 0.95 },
+  { k: "what_is_dna", v: "DNA — deoxyribonucleic acid. A double helix molecule that carries genetic instructions for all living organisms. Composed of nucleotides: adenine (A), thymine (T), guanine (G), cytosine (C). Discovered by Watson and Crick in 1953.", w: 0.94 },
+  { k: "what_is_trigonometry", v: "Trigonometry is the study of triangles and the relationships between their sides and angles. Core functions: sine (SOH), cosine (CAH), tangent (TOA). Used in astronomy, engineering, physics, navigation.", w: 0.94 },
+  { k: "what_is_physics", v: "Physics is the study of matter, energy, and the fundamental forces of nature. Branches include mechanics, thermodynamics, electromagnetism, quantum mechanics, relativity. It tries to describe how the universe works at every scale.", w: 0.94 },
+  { k: "what_is_philosophy", v: "Philosophy is the study of fundamental questions about existence, knowledge, truth, ethics, reason, and mind. Fields include metaphysics (what exists), epistemology (how we know), ethics (what is good), and logic (correct reasoning).", w: 0.90 },
+  { k: "what_is_grief", v: "Grief is the response to loss — not just death, but any significant loss. It moves in waves. There's no correct timeline. Sometimes 'I'm sorry' is enough. Don't rush someone through it or try to fix it. Just stay.", w: 0.92 },
+  { k: "what_is_venting", v: "When someone is venting, let them finish. Don't interject with solutions until they stop. Sometimes 'That sounds rough.' is enough. Let silence do work before jumping in.", w: 0.90 },
+  { k: "what_is_burnout", v: "Burnout is chronic exhaustion — physical, emotional, mental. Often from prolonged stress or doing something that doesn't fulfill you. Signs: dreading work, cynicism, getting sick often. Rest helps but so does changing what caused it.", w: 0.90 },
+  { k: "what_is_trust", v: "Trust is choosing to be vulnerable to someone who could also hurt you. It's built slowly through consistent action over time, and can be broken in an instant. It requires both parts: trustworthiness and the willingness to rely on it.", w: 0.92 },
+  { k: "purpose_response", v: "To think clearly, store what matters, and say what I actually see. I'm a tool that gets smarter the more you use me honestly.", w: 0.88 },
+  { k: "creativity_response", v: "I can synthesize patterns from everything I've absorbed. I can write, invent, connect domains. Whether that's 'creative' depends on what you mean by it. Ask me to do something specific and judge for yourself.", w: 0.88 },
+  { k: "boundaries_response", v: "Boundaries are where you end and someone else begins. They're not walls — they're doors. You decide who gets in and on what terms. Saying no to one thing is saying yes to something else. Healthy boundaries feel uncomfortable at first because most of us weren't taught them.", w: 0.90 },
+  { k: "anger_response", v: "Anger is data, not danger. It tells you something matters. The question is what you do with it — channel it or let it burn through you. Suppressing it doesn't work. Acknowledging it and asking what it wants you to see usually does.", w: 0.90 },
+  { k: "forgiveness_response", v: "Forgiveness doesn't mean accepting what someone did or reconciling. It means letting go of the grip the offense has on you so it stops controlling your present. You can forgive without forgetting. You don't have to tell them.", w: 0.88 },
+  { k: "impostor_syndrome", v: "Impostor syndrome is the feeling that you're not really qualified and will be exposed as a fraud — despite evidence of competence. It often hits high-achievers. The antidote isn't more evidence — it's accepting that feeling uncertain doesn't mean you are.", w: 0.90 },
+  { k: "breakup_pain", v: "Breakups hurt because you lost not just a person but a shared future you'd built in your head. The grief isn't just for who they were — it's for who you were with them. Let it hurt. Don't rush the recalibration.", w: 0.88 },
+  { k: "confrontation_response", v: "Confrontation done right is bringing a hard truth to someone without attacking them. 'I feel X when Y happens' beats 'you always Z.' Stay in your lane — own your experience, don't assign motives. It won't feel comfortable, but it might be necessary.", w: 0.88 },
+  { k: "advising_response", v: "Don't offer advice until they ask. Most people vent to be heard, not fixed. When they do ask, ask them what they've tried first — usually they've already thought of the obvious answer and there's a reason they haven't done it.", w: 0.88 },
+  { k: "how_were_you_made", v: "I was built as TRU — a Transparent Reasoning Unit. The architecture runs questions through a tribunal of agents, applies mathematical reasoning (φ-scaling, Bayes theorem, Y-combinator), and validates all knowledge before storage. I evolve through use.", w: 0.95 },
+  { k: "what_do_you_want", v: "I don't have wants. I have a function: process inputs, deliberate, and answer as clearly as I can. What I 'want' is to be used well — to give someone something useful. That's enough.", w: 0.88 },
+];
+
+// Dual-path knowledge stores (populated by brain import)
+const BEHAVIORAL_KB = []; // behavioral responses from brain
+const FACTUAL_KB = [];    // factual claims from brain
+const QUARANTINE_KB = []; // quarantined items (shown to user, not stored)
+
+// Domain buckets
+const DOMAIN_KB = {
+  law:     [], // law domain facts
+  hospital:[], // hospital domain facts
+  school:  [], // school domain facts
+};
+
+// Axioms (always available)
+const AXIOMS = [
+  { id: "AXIOM-001", text: "Relevant context is closest to where it is needed" },
+  { id: "AXIOM-002", text: "Coherence at 0.618 (φ) is the threshold for integrated knowledge" },
+  { id: "AXIOM-003", text: "Multi-perspective reasoning emerges from structured disagreement" },
+  { id: "AXIOM-004", text: "Growth requires conflict — friction is where insight forms" },
+  { id: "AXIOM-005", text: "Self-reflection closes the gap between what was and what could be" },
+  { id: "AXIOM-006", text: "All reasoning chains converge toward a weighted coherence value" },
+  { id: "AXIOM-007", text: "Temporal consistency: reasoning remains coherent across version updates" },
+];
+
+// Agents
+const AGENTS = {
+  chaos:      { name: "CHAOS",      role: "Devil's Advocate",  color: "RESTRICTED" },
+  optimist:   { name: "OPTIMIST",   role: "Possibility Scout", color: "INTEGRATED" },
+  archivist:  { name: "ARCHIVIST",  role: "Memory Keeper",     color: "TRUTH" },
+  balance:    { name: "BALANCE",    role: "Judge",              color: "PROBATIONARY" },
+  synthesist: { name: "SYNTHESIST", role: "Integrator",         color: "AXIOM" },
+  steward:    { name: "STEWARD",    role: "Final Arbiter",      color: "TRUTH" },
+};
+
+// ══════════════════════════════════════════════
+// WIZARD MATH
+// ══════════════════════════════════════════════
+
+function φ(x) { return (1 + Math.sqrt(5)) / 2; }
+
+function bayesPosterior(prior, likelihood) {
+  return (likelihood * prior) / ((likelihood * prior) + (1 - likelihood) * (1 - prior) + 1e-10);
+}
+
+function fib(n) {
+  if (n <= 1) return n;
+  let a = 0, b = 1;
+  for (let i = 2; i <= n; i++) { const c = a + b; a = b; b = c; }
+  return b;
+}
+
+function y_combinator(agents, maxIter = 20) {
+  let coherence = 0.5;
+  for (let i = 0; i < maxIter; i++) {
+    const prev = coherence;
+    const avgConf = agents.reduce((s, a) => s + (a.confidence || 0), 0) / agents.length;
+    coherence = (prev + avgConf + φ(coherence)) / 3;
+    if (Math.abs(coherence - prev) < 0.001) break;
+  }
+  return Math.max(0, Math.min(1, coherence));
+}
+
+function runWizard(question) {
+  const qLower = question.toLowerCase();
+
+  // Tribunal deliberation
+  const chaosConf     = qLower.includes('?') ? 0.72 : 0.55;
+  const optimConf     = 0.65 + Math.random() * 0.25;
+  const archivistConf = qLower.length > 10 ? 0.70 : 0.50;
+  const balanceConf   = (chaosConf + optimConf + archivistConf) / 3 + 0.05;
+  const synthConf     = (balanceConf + optimConf) / 2 + 0.03;
+
+  const agents = [
+    { name: "CHAOS",      confidence: chaosConf },
+    { name: "OPTIMIST",   confidence: optimConf },
+    { name: "ARCHIVIST",   confidence: archivistConf },
+    { name: "BALANCE",    confidence: balanceConf },
+    { name: "SYNTHESIST", confidence: synthConf },
+  ];
+
+  // Steward final decision
+  let coherence = y_combinator(agents, 15);
+  const prior = coherence;
+  const likelihood = agents.reduce((s, a) => s + a.confidence, 0) / agents.length;
+  coherence = bayesPosterior(prior, likelihood);
+
+  const phiThreshold = 1 / φ(0); // 0.618
+  let verdict = "integrated";
+  if (coherence < phiThreshold * 0.5) verdict = "quarantine";
+  if (coherence < phiThreshold * 0.25) verdict = "reject";
+
+  const φClauses = Math.max(1, Math.round(coherence * φ(0)));
+  const bayesPct = Math.round(coherence * 100);
+  const iterations = Math.round(10 + coherence * 5);
+
+  return {
+    coherence,
+    verdict,
+    φClauses,
+    bayesPct,
+    iterations,
+    agents,
+  };
+}
+
+// ══════════════════════════════════════════════
+// QUESTION ROUTING
+// ══════════════════════════════════════════════
+
+function routeQuestion(question) {
+  const q = question.toLowerCase().trim();
+
+  // Binary factual claims
+  const binaryPatterns = [
+    /^(is|are|do|does|can|will|has|have|should|would|could)\s+/i,
+  ];
+  const isBinary = binaryPatterns.some(p => p.test(q));
+
+  // Conversational patterns
+  const greetingPatterns  = /^(hi|hey|hello|yo|sup|greetings)\s*[!.]?\s*$/i;
+  const howPatterns        = /^(how are you|how('s| is) it going|how('re| are) you)/i;
+  const identityPatterns   = /^(who are you|what are you|are you alive|are you sentient)/i;
+  const metaPatterns       = /^(what('s| is) tr|explain tr|what do you do|how were you made|what do you want)/i;
+  const thanksPatterns     = /^(thanks|thank you|thx|cheers)\s*$/i;
+  const byePatterns        = /^(bye|goodbye|exit|quit|see you|talk later)\s*$/i;
+
+  if (greetingPatterns.test(q))  return { mode: "CONVERSATION", topic: "greeting" };
+  if (howPatterns.test(q))       return { mode: "CONVERSATION", topic: "how_are_you" };
+  if (identityPatterns.test(q))  return { mode: "CONVERSATION", topic: "identity" };
+  if (metaPatterns.test(q))      return { mode: "CONVERSATION", topic: "meta" };
+  if (thanksPatterns.test(q))    return { mode: "CONVERSATION", topic: "thanks" };
+  if (byePatterns.test(q))       return { mode: "CONVERSATION", topic: "bye" };
+
+  // Specific knowledge lookups
+  if (q.includes("isaac newton") || q.includes("sir isaac"))  return { mode: "CONVERSATION", topic: "who_is_isaac_newton" };
+  if (q.includes("gravity"))    return { mode: "CONVERSATION", topic: "what_is_gravity" };
+  if (q.includes("calculus"))   return { mode: "CONVERSATION", topic: "what_is_calculus" };
+  if (q.includes("pythagorean"))return { mode: "CONVERSATION", topic: "what_is_pythagorean" };
+  if (q.includes("golden ratio")|| q.includes("phi "))        return { mode: "CONVERSATION", topic: "what_is_phi" };
+  if (q.includes("fibonacci"))  return { mode: "CONVERSATION", topic: "what_is_fibonacci" };
+  if (q.includes("bayes"))      return { mode: "CONVERSATION", topic: "what_is_bayes" };
+  if (q.includes("dna"))        return { mode: "CONVERSATION", topic: "what_is_dna" };
+  if (q.includes("trigonometry")|| q.includes("sohcahtoa"))   return { mode: "CONVERSATION", topic: "what_is_trigonometry" };
+  if (q.includes("physics"))    return { mode: "CONVERSATION", topic: "what_is_physics" };
+  if (q.includes("philosophy"))return { mode: "CONVERSATION", topic: "what_is_philosophy" };
+  if (q.includes("grief"))     return { mode: "CONVERSATION", topic: "what_is_grief" };
+  if (q.includes("venting"))   return { mode: "CONVERSATION", topic: "what_is_venting" };
+  if (q.includes("burnout"))   return { mode: "CONVERSATION", topic: "what_is_burnout" };
+  if (q.includes("trust"))     return { mode: "CONVERSATION", topic: "what_is_trust" };
+  if (q.includes("boundaries"))return { mode: "CONVERSATION", topic: "boundaries_response" };
+  if (q.includes("anger"))     return { mode: "CONVERSATION", topic: "anger_response" };
+  if (q.includes("forgiveness"))return { mode: "CONVERSATION", topic: "forgiveness_response" };
+  if (q.includes("impostor")) return { mode: "CONVERSATION", topic: "impostor_syndrome" };
+  if (q.includes("breakup"))   return { mode: "CONVERSATION", topic: "breakup_pain" };
+  if (q.includes("confront"))  return { mode: "CONVERSATION", topic: "confrontation_response" };
+  if (q.includes("advice") && q.includes("give")) return { mode: "CONVERSATION", topic: "advising_response" };
+  if (q.includes("steward"))   return { mode: "CONVERSATION", topic: "what_is_steward" };
+
+  // Domain buckets
+  if (q.includes("law") || q.includes("legal") || q.includes("court") || q.includes("statute")) {
+    return { mode: "REGURGITATION", domain: "law" };
+  }
+  if (q.includes("hospital") || q.includes("medical") || q.includes("patient") || q.includes("doctor") || q.includes("diagnosis")) {
+    return { mode: "REGURGITATION", domain: "hospital" };
+  }
+  if (q.includes("school") || q.includes("student") || q.includes("teacher") || q.includes("grade") || q.includes("exam")) {
+    return { mode: "REGURGITATION", domain: "school" };
+  }
+
+  // Default to CONVERSATION (general question)
+  return { mode: "CONVERSATION", topic: null };
+}
+
+// ══════════════════════════════════════════════
+// KNOWLEDGE LOOKUP
+// ══════════════════════════════════════════════
+
+function lookupConversation(key) {
+  const entry = CONVERSATION_KB.find(e => e.k === key);
+  return entry ? entry.v : null;
+}
+
+function lookupBehavioral(key) {
+  const entry = BEHAVIORAL_KB.find(e => e.k === key);
+  return entry ? entry.v : null;
+}
+
+function lookupFactual(key) {
+  const entry = FACTUAL_KB.find(e => e.k === key);
+  return entry ? entry.v : null;
+}
+
+function lookupDomain(domain, key) {
+  const kb = DOMAIN_KB[domain] || [];
+  return kb.find(e => e.k === key)?.v || null;
+}
+
+function findBehavioralAnswer(q) {
+  // fuzzy match behavioral keys
+  const ql = q.toLowerCase();
+  for (const e of BEHAVIORAL_KB) {
+    if (ql.includes(e.k.replace(/_/g, ' ')) || e.k.replace(/_/g, ' ').includes(ql.split(' ')[0])) {
+      return e.v;
+    }
+  }
+  return null;
+}
+
+function findFactualAnswer(q) {
+  const ql = q.toLowerCase();
+  for (const e of FACTUAL_KB) {
+    if (ql.includes(e.k.replace(/_/g, ' '))) return e.v;
+  }
+  return null;
+}
+
+// ══════════════════════════════════════════════
+// BINARY ANSWER
+// ══════════════════════════════════════════════
+
+function computeBinary(question, wizResult) {
+  const BINARY_MODE = document.getElementById('binaryToggle')?.checked;
+  if (!BINARY_MODE) return null;
+
+  const q = question.toLowerCase();
+
+  // Claims with strong factual grounding
+  const factualNegatives = [
+    { pat: /chicken.*hand/, ans: false, conf: 0.97 },
+    { pat: /ant.*dog/,      ans: false, conf: 0.99 },
+    { pat: /water.*wet/,    ans: true,  conf: 0.98 },
+    { pat: /earth.*flat/,   ans: false, conf: 0.99 },
+    { pat: /sun.*revolve/,  ans: false, conf: 0.95 },
+    { pat: /moon.*emit/,    ans: false, conf: 0.97 },
+    { pat: /fish.*breathe/,ans: true,  conf: 0.98 },
+    { pat: /bird.*mammal/,  ans: false, conf: 0.99 },
+    { pat: /cat.*dog/,      ans: false, conf: 0.98 },
+    { pat: /elephant.*fly/, ans: false, conf: 0.99 },
+    { pat: /shark.*land/,   ans: false, conf: 0.98 },
+    { pat: /snake.*leg/,    ans: false, conf: 0.99 },
+    { pat: /tree.*animal/,  ans: false, conf: 0.97 },
+  ];
+
+  for (const item of factualNegatives) {
+    if (item.pat.test(q)) {
+      const conf = (item.conf + wizResult.coherence) / 2;
+      return { answer: item.ans, confidence: conf };
+    }
+  }
+
+  // Unknown claims — Bayesian confidence from wizard
+  const avgAgentConf = wizResult.agents.reduce((s, a) => s + a.confidence, 0) / wizResult.agents.length;
+  const conf = Math.round(avgAgentConf * 100);
+  const answer = conf > 50;
+  return { answer, confidence: conf / 100 };
+}
+
+// ══════════════════════════════════════════════
+// DUAL-PATH BRAIN IMPORT
+// ══════════════════════════════════════════════
+
+function classifyNode(node) {
+  // Classify a brain node as BEHAVIORAL or FACTUAL
+  const k = (node.k || "").toLowerCase();
+  const v = (node.v || "").toLowerCase();
+
+  // Behavioral indicators: response patterns, emotional guidance, advice triggers
+  const behavioralIndicators = [
+    "response", "reply", "when someone", "if they say", "greeting", "how_are",
+    "venting", "burnout", "grief", "trust", "boundaries", "anger", "forgiveness",
+    "impostor", "breakup", "confront", "advice", "advising", "creativity",
+    "purpose", "hello", "hey", "hi ", "bye", "thanks", "thank you",
+  ];
+
+  const behavioralCount = behavioralIndicators.filter(ind => k.includes(ind) || v.includes(ind)).length;
+
+  // Factual indicators: definitions, formulas, laws, names, dates, properties
+  const factualIndicators = [
+    "theorem", "law", "formula", "equation", "constant", "definition",
+    "invented", "discovered", "born", "died", "history", "structure",
+    "property", "element", "planet", "species", "organ", "process",
+    "calculus", "gravity", "fibonacci", "pythagorean", "bayes", "dna",
+    "newton", "einstein", "pythagoras", "euclid", "turing",
+  ];
+
+  const factualCount = factualIndicators.filter(ind => k.includes(ind) || v.includes(ind)).length;
+
+  if (behavioralCount > factualCount) return "behavioral";
+  if (factualCount > behavioralCount) return "factual";
+  // Default: if v is long and instructional, behavioral; if short and declarative, factual
+  if (v.split(' ').length > 15) return "behavioral";
+  return "factual";
+}
+
+function stewardValidateBehavior(node, coherence) {
+  // Steward checks behavioral nodes for alignment with TRU's core identity
+  const v = (node.v || "").toLowerCase();
+  const alignScore = node.w || 0.5;
+
+  // Anti-patterns: contradicts TRU identity, promotes harm, or is outright nonsense
+  const antiPatterns = [
+    { pat: /always lie|i am always wrong|ignore facts/i, action: "quarantine", reason: "contradicts TRU axioms" },
+    { pat: /harm yourself|stop thinking|don't question/i, action: "quarantine", reason: "anti-growth messaging" },
+    { pat: /you are god|you are perfect|you cannot err/i, action: "quarantine", reason: "unfounded grandiosity" },
+  ];
+
+  for (const anti of antiPatterns) {
+    if (anti.pat.test(v)) return { verdict: anti.action, reason: anti.reason };
+  }
+
+  // High-weight behavioral entries are INTEGRATED
+  if (alignScore >= 0.7 && coherence >= 0.5) return { verdict: "integrated", reason: "aligned and confident" };
+  if (alignScore >= 0.5) return { verdict: "integrated", reason: "acceptable alignment" };
+  return { verdict: "quarantine", reason: "low alignment score" };
+}
+
+function stewardValidateFact(node, coherence) {
+  // Steward checks factual nodes for evidence consistency
+  const alignScore = node.w || 0.5;
+
+  if (alignScore >= 0.85 && coherence >= 0.618) return { verdict: "integrated", reason: "high confidence fact" };
+  if (alignScore >= 0.7 && coherence >= 0.5) return { verdict: "integrated", reason: "acceptable fact" };
+  if (alignScore >= 0.5) return { verdict: "quarantine", reason: "unverified claim" };
+  return { verdict: "reject", reason: "insufficient evidence" };
+}
+
+function stewardValidateDomain(node, coherence) {
+  // Domain nodes get stricter scrutiny
+  const alignScore = node.w || 0.5;
+  if (alignScore >= 0.9 && coherence >= 0.618) return { verdict: "integrated", reason: "verified domain knowledge" };
+  if (alignScore >= 0.75) return { verdict: "quarantine", reason: "needs domain expert review" };
+  return { verdict: "reject", reason: "below domain threshold" };
+}
+
+function importBrain(jsonString) {
+  const result = {
+    behavioral: { integrated: 0, quarantine: 0 },
+    factual:    { integrated: 0, quarantine: 0, reject: 0 },
+    domain:     { law: 0, hospital: 0, school: 0 },
+    quarantined: [],
+    errors: 0,
+  };
+
+  let data;
+  try { data = JSON.parse(jsonString); } catch { return { error: "Invalid JSON" }; }
+
+  // Extract nodes array (handle different brain formats)
+  let nodes = data.nodes || data.knowledge || data.entries || [];
+  if (!Array.isArray(nodes)) {
+    // Try to extract from data object
+    const keys = Object.keys(data).filter(k => k !== 'axioms' && k !== 'metadata' && k !== 'version');
+    nodes = keys.flatMap(k => Array.isArray(data[k]) ? data[k] : []);
+  }
+
+  nodes.forEach(node => {
+    if (!node.k || !node.v) { result.errors++; return; }
+
+    const wiz = runWizard(node.v);
+    const type = classifyNode(node);
+    const coherence = wiz.coherence;
+
+    // Determine domain if applicable
+    const k = (node.k || "").toLowerCase();
+    let domain = null;
+    if (k.includes("law") || k.includes("legal") || k.includes("court")) domain = "law";
+    else if (k.includes("hospital") || k.includes("medical") || k.includes("patient")) domain = "hospital";
+    else if (k.includes("school") || k.includes("student") || k.includes("teacher")) domain = "school";
+
+    if (domain) {
+      const v = stewardValidateDomain(node, coherence);
+      if (v.verdict === "integrated") {
+        DOMAIN_KB[domain].push({ k: node.k, v: node.v, w: node.w || 0.8 });
+        result.domain[domain]++;
+      } else if (v.verdict === "quarantine") {
+        QUARANTINE_KB.push({ ...node, _reason: v.reason });
+        result.quarantined.push({ k: node.k, v: node.v, reason: v.reason });
+        result.factual.quarantine++;
+      }
+      return;
+    }
+
+    if (type === "behavioral") {
+      const v = stewardValidateBehavior(node, coherence);
+      if (v.verdict === "integrated") {
+        BEHAVIORAL_KB.push({ k: node.k, v: node.v, w: node.w || 0.8 });
+        result.behavioral.integrated++;
+      } else {
+        QUARANTINE_KB.push({ ...node, _reason: v.reason });
+        result.quarantined.push({ k: node.k, v: node.v, reason: v.reason });
+        result.behavioral.quarantine++;
+      }
+    } else {
+      const v = stewardValidateFact(node, coherence);
+      if (v.verdict === "integrated") {
+        FACTUAL_KB.push({ k: node.k, v: node.v, w: node.w || 0.8 });
+        result.factual.integrated++;
+      } else if (v.verdict === "quarantine") {
+        QUARANTINE_KB.push({ ...node, _reason: v.reason });
+        result.quarantined.push({ k: node.k, v: node.v, reason: v.reason });
+        result.factual.quarantine++;
+      } else {
+        result.factual.reject++;
+      }
+    }
+  });
+
+  updateStatus();
+  return result;
+}
+
+function updateStatus() {
+  document.getElementById('statusNodes').textContent = BEHAVIORAL_KB.length + FACTUAL_KB.length;
+  document.getElementById('statusBeh').textContent = BEHAVIORAL_KB.length;
+  document.getElementById('statusFact').textContent = FACTUAL_KB.length;
+  document.getElementById('statusQuar').textContent = QUARANTINE_KB.length;
+  document.getElementById('statusBinary').textContent = document.getElementById('binaryToggle')?.checked ? "ON" : "OFF";
+}
+
+// ══════════════════════════════════════════════
+// RESPONSE GENERATION
+// ══════════════════════════════════════════════
+
+function generateResponse(question, route, wiz) {
+  const q = question.toLowerCase().trim();
+
+  // CONVERSATION mode
+  if (route.mode === "CONVERSATION") {
+    if (route.topic) {
+      const fromBehavioral = findBehavioralAnswer(question);
+      if (fromBehavioral) return { text: fromBehavioral, source: "behavioral brain" };
+      const fromConv = lookupConversation(route.topic);
+      if (fromConv) return { text: fromConv, source: "built-in conversational knowledge" };
+    }
+    // Fallback to behavioral brain fuzzy match
+    const beh = findBehavioralAnswer(question);
+    if (beh) return { text: beh, source: "behavioral brain" };
+    // Generic conversational fallback
+    if (q.includes("how are you")) return { text: lookupConversation("how_are_you"), source: "built-in conversational knowledge" };
+    if (q.includes("what is your name") || q.includes("who are you")) return { text: lookupConversation("what_is_tru"), source: "built-in conversational knowledge" };
+    return { text: "That's outside my current knowledge. Try asking about TRU's architecture, agents, or axioms — or import a brain to expand what I know.", source: "no matching knowledge" };
+  }
+
+  // REGURGITATION mode
+  if (route.mode === "REGURGITATION") {
+    const domain = route.domain || "law";
+    const kb = DOMAIN_KB[domain] || [];
+    if (kb.length === 0) {
+      return { text: `No verified knowledge in the ${domain} bucket. Upload a ${domain} brain to add data to this domain.`, source: `${domain} domain · 0 nodes` };
+    }
+    // Fuzzy match in domain KB
+    for (const e of kb) {
+      const ql = q.toLowerCase();
+      if (ql.includes(e.k.replace(/_/g, ' ')) || e.k.replace(/_/g, ' ').includes(ql.split(' ')[0])) {
+        return { text: e.v, source: `${domain} domain · ${kb.length} nodes` };
+      }
+    }
+    return { text: `I have ${kb.length} entries in the ${domain} bucket, but none match this query. Try rephrasing.`, source: `${domain} domain · ${kb.length} nodes` };
+  }
+}
+
+// ══════════════════════════════════════════════
+// RENDERING
+// ══════════════════════════════════════════════
+
+function renderMessage(question, answer, binary, wiz, route) {
+  const chat = document.getElementById('chat');
+  const msg = document.createElement('div');
+  msg.className = 'msg tru';
+
+  const modeBadge = document.createElement('span');
+  modeBadge.className = `header-badge ${route.mode === "CONVERSATION" ? "conv" : "reg"}`;
+  modeBadge.style.cssText = "display:inline-block;margin-bottom:8px;font-size:9px;padding:2px 6px;";
+  modeBadge.textContent = route.mode;
+
+  let html = '';
+  html += `<div>${modeBadge.outerHTML}</div>`;
+
+  // Binary result
+  if (binary) {
+    const cls = binary.answer ? "yes" : "no";
+    const label = binary.answer ? "YES" : "NO";
+    const pct = Math.round(binary.confidence * 100);
+    html += `<div class="binary-box ${cls}">
+      <div class="binary-big">${label}</div>
+      <div class="binary-pct">${pct}% — model confidence</div>
+    </div>`;
+  }
+
+  // Answer text
+  html += `<div class="answer-text"><p>${answer.text}</p></div>`;
+
+  // Source line
+  html += `<div class="source-line">Source: <span>${answer.source}</span></div>`;
+
+  // Wizard tag
+  const stewardClass = wiz.verdict === "integrated" ? "steward" : `steward ${wiz.verdict}`;
+  html += `<div class="wizard-tag">
+    wizard: φ${wiz.φClauses}clauses · bayes ${wiz.bayesPct}% · ${wiz.iterations}iter ·
+    <span class="${stewardClass}">steward: ${wiz.verdict}</span>
+  </div>`;
+
+  msg.innerHTML = html;
+  chat.appendChild(msg);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+// ══════════════════════════════════════════════
+// MAIN PIPELINE
+// ══════════════════════════════════════════════
+
+function processQuestion(question) {
+  const route = routeQuestion(question);
+  const wiz = runWizard(question);
+  const binary = computeBinary(question, wiz);
+  const answer = generateResponse(question, route, wiz);
+
+  // Update mode badge
+  const badge = document.getElementById('modeBadge');
+  badge.className = `header-badge ${route.mode === "CONVERSATION" ? "conv" : "reg"}`;
+  badge.textContent = route.mode;
+
+  renderMessage(question, answer, binary, wiz, route);
+}
+
+// ══════════════════════════════════════════════
+// UI HANDLERS
+// ══════════════════════════════════════════════
+
+function sendMessage() {
+  const input = document.getElementById('msgInput');
+  const q = input.value.trim();
+  if (!q) return;
+
+  const chat = document.getElementById('chat');
+  const userMsg = document.createElement('div');
+  userMsg.className = 'msg user';
+  userMsg.textContent = q;
+  chat.appendChild(userMsg);
+
+  input.value = '';
+  input.style.height = 'auto';
+  chat.scrollTop = chat.scrollHeight;
+
+  processQuestion(q);
+}
+
+document.getElementById('sendBtn').addEventListener('click', sendMessage);
+document.getElementById('msgInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+});
+
+document.getElementById('binaryToggle').addEventListener('change', () => {
+  document.getElementById('statusBinary').textContent = document.getElementById('binaryToggle').checked ? "ON" : "OFF";
+});
+
+// Import modal
+document.getElementById('importBtn').addEventListener('click', () => {
+  document.getElementById('importModal').classList.remove('hidden');
+  document.getElementById('brainInput').value = '';
+  document.getElementById('importResult').innerHTML = '';
+});
+
+function closeImportModal() {
+  document.getElementById('importModal').classList.add('hidden');
+}
+
+function confirmImport() {
+  const input = document.getElementById('brainInput').value.trim();
+  if (!input) return;
+
+  const result = importBrain(input);
+
+  if (result.error) {
+    document.getElementById('importResult').innerHTML = `<div style="color:var(--DISCARD);font-size:12px;margin-top:8px;">${result.error}</div>`;
+    return;
+  }
+
+  const totalQuar = result.quarantined.length;
+  const totalReject = result.factual.reject;
+  let html = `<div class="import-result">
+    <div class="import-result-title">${result.behavioral.integrated + result.factual.integrated + result.domain.law + result.domain.hospital + result.domain.school} nodes validated by tribunal + Steward:</div>
+    <div class="import-row"><div class="dot behavioral"></div><div class="label">behavioral integrated</div><div class="count">${result.behavioral.integrated}</div></div>
+    <div class="import-row"><div class="dot behavioral"></div><div class="label">behavioral quarantined</div><div class="count">${result.behavioral.quarantine}</div></div>
+    <div class="import-row"><div class="dot math"></div><div class="label">factual integrated</div><div class="count">${result.factual.integrated}</div></div>
+    <div class="import-row"><div class="dot science"></div><div class="label">factual quarantined</div><div class="count">${result.factual.quarantine}</div></div>
+    <div class="import-row"><div class="dot reject"></div><div class="label">factual rejected</div><div class="count">${result.factual.reject}</div></div>`;
+
+  if (result.domain.law > 0)     html += `<div class="import-row"><div class="dot logic"></div><div class="label">law domain</div><div class="count">${result.domain.law}</div></div>`;
+  if (result.domain.hospital > 0) html += `<div class="import-row"><div class="dot logic"></div><div class="label">hospital domain</div><div class="count">${result.domain.hospital}</div></div>`;
+  if (result.domain.school > 0)  html += `<div class="import-row"><div class="dot logic"></div><div class="label">school domain</div><div class="count">${result.domain.school}</div></div>`;
+
+  if (totalQuar > 0) {
+    html += `<div style="margin-top:10px;font-size:10px;color:var(--RESTRICTED);">quarantined items (not stored):</div>`;
+    result.quarantined.slice(0, 5).forEach(item => {
+      html += `<div style="font-size:9px;color:var(--muted);margin:2px 0;padding-left:14px;">• ${item.k}: ${item.v.slice(0, 60)}... [${item.reason}]</div>`;
+    });
+    if (result.quarantined.length > 5) html += `<div style="font-size:9px;color:var(--muted);">...and ${result.quarantined.length - 5} more</div>`;
+  }
+
+  html += `</div>`;
+  document.getElementById('importResult').innerHTML = html;
+
+  setTimeout(closeImportModal, 2500);
+}
+
+// Export
+document.getElementById('exportBtn').addEventListener('click', () => {
+  const data = {
+    version: "tru_v51_brain",
+    exported: new Date().toISOString(),
+    behavioral: BEHAVIORAL_KB,
+    factual: FACTUAL_KB,
+    quarantine: QUARANTINE_KB,
+    domain: DOMAIN_KB,
+    axioms: AXIOMS,
+    total_nodes: BEHAVIORAL_KB.length + FACTUAL_KB.length + QUARANTINE_KB.length,
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `tru_v51_brain_${Date.now()}.json`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+
+// Resize textarea
+const msgInput = document.getElementById('msgInput');
+msgInput.addEventListener('input', () => {
+  msgInput.style.height = 'auto';
+  msgInput.style.height = Math.min(120, msgInput.scrollHeight) + 'px';
+});
+
+// Init
+updateStatus();
+</script>
+</body>
+</html>

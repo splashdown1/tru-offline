@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31186",
+  "title": "How well does Classification Accuracy capture Concept Drift Detection Quality? An overview of Concept Drift Detection evaluation",
+  "abstract": "Data streams are nowadays among the most frequently analyzed data structures, with the concept drift posing a major challenge encountered by processing systems. Despite the proposition of numerous solutions to counteract the accuracy degeneration due to concept drift, the scientific community has not yet established a unified framework for evaluating the concept drift detection task. Existing research often relies on classification quality metrics, but these can be affected by multiple factors and may not reliably reflect drift detection quality. In this work, we present an in-depth overview of the relationship between metrics for quantifying drift detection quality and classification performance in synthetic nonstationary data streams. The proposed research studies eight drift detection quality metrics in relation to the classifier's performance across seven synthetic data stream generation tools, additionally considering drift dynamics as a factor. The studies aim to identify the most informative set of drift detection quality metrics and provide a deep understanding of the method's evaluation.",
+  "link": "https://arxiv.org/abs/2605.31186",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306995Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06104",
+  "title": "A Sliced-Wasserstein Framework on Correlation Matrices for EEG Decoding",
+  "abstract": "Electroencephalography (EEG) offers noninvasive, millisecond resolution recordings of neuronal activity and is widely used in neuroscience and healthcare. Many EEG decoding pipelines rely on covariance descriptors for their robustness to noise, but such representations are sensitive to channel-wise scaling. Recent studies have therefore advocated full-rank correlation matrices as a scale-invariant alternative for EEG decoding. In this paper, we propose a general framework for Sliced Wasserstein (SW) discrepancies on manifolds endowed with Pullback Euclidean Metrics (PEMs), termed Pullback Euclidean Metric Sliced Wasserstein (PEMSW). Within this framework, we instantiate two Correlation Sliced-Wasserstein (CorSW) discrepancies on the manifold of full-rank correlation matrices under two recently introduced correlation geometries, \\textit{i.e.}, the Off-Log Metric (OLM) and Log-Scaled Metric (LSM). Building on CorSW, we further develop a domain generalization (DG) framework for EEG decoding. Experiments on three EEG datasets demonstrate improved generalization under distribution shifts, with low training overhead and no additional inference cost. The source code is available at https://github.com/ChenHu-ML/CorSW.",
+  "link": "https://arxiv.org/abs/2606.06104",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882501+00:00"
+}

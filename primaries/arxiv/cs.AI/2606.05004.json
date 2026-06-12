@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05004",
+  "title": "SharedRequest: Privacy-Preserving Model-Agnostic Inference for Large Language Models",
+  "abstract": "With the widespread deployment of public large language models (LLMs) such as ChatGPT, protecting user prompt privacy has become an increasingly critical issue. Existing privacy-preserving inference methods sacrifice either utility or efficiency, and often require model-specific modifications that limit their compatibility. In this paper, we propose SharedRequest, a model-agnostic framework for privacy-preserving LLM inference that reformulates privacy protection at the batch level rather than the individual-prompt level. The key idea is to obscure sensitive information by mixing original prompts with noisy variants, while grouping semantically equivalent instructions to amortize the inference cost over a large batch of queries with minimal impact on LLM response quality. This design is independent of the LLM architecture, requiring no access to model parameters or architectural modification. Empirical results demonstrate that SharedRequest achieves over $20\\%$ higher utility compared to prior differential privacy baselines, and its shared-prompt mechanism reduces query cost by up to $5\\times$ compared to non-batched inference.",
+  "link": "https://arxiv.org/abs/2606.05004",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CR",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098524+00:00"
+}

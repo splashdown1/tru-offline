@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31113",
+  "title": "TSM-Bench: Detecting LLM-Generated Text in Real-World Wikipedia Editing Practices",
+  "abstract": "Automatically detecting machine-generated text (MGT) is critical to maintaining the knowledge integrity of user-generated content (UGC) platforms such as Wikipedia. Existing detection benchmarks primarily focus on \\textit{generic} text generation tasks (e.g., ``Write an article about machine learning.''). However, editors frequently employ LLMs for specific writing tasks (e.g., summarisation). These \\textit{task-specific} MGT instances tend to resemble human-written text more closely due to their constrained task formulation and contextual conditioning. In this work, we show that a range of SOTA MGT detectors struggle to identify task-specific MGT reflecting real-world editing on Wikipedia. We introduce \\textsc{TSM-Bench}, a multilingual, multi-generator, and \\textit{multi-task} benchmark for evaluating MGT detectors on common, real-world Wikipedia editing tasks. Our findings demonstrate that (\\textit{i}) average detection accuracy drops by 10--40\\% compared to prior benchmarks, and (\\textit{ii}) a generalisation asymmetry exists: fine-tuning on task-specific data enables generalisation to generic data -- even across domains -- but not vice versa. We demonstrate that models fine-tuned exclusively on generic MGT overfit to superficial artefacts of machine generation. Our results suggest that, in contrast to prior benchmarks, most detectors remain unreliable for automated detection in real-world contexts such as UGC platforms. \\textsc{TSM-Bench} therefore provides a critical foundation for developing and evaluating future models.",
+  "link": "https://arxiv.org/abs/2605.31113",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405807Z"
+}

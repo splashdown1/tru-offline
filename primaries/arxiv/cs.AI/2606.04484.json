@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04484",
+  "title": "AgentJet: A Flexible Swarm Training Framework for Agentic Reinforcement Learning",
+  "abstract": "We present AgentJet, a distributed swarm training framework for large language model (LLM) agent reinforcement learning. Unlike centralized frameworks that tightly couple agent rollouts with model optimization, AgentJet adopts a decoupled multi-node architecture in which swarm server nodes host trainable models and run optimization on GPU clusters, whereas swarm client nodes execute arbitrary agents on arbitrary devices. This design provides capabilities that are difficult to support in centralized frameworks: (1) heterogeneous multi-model reinforcement learning, enabling the training of heterogeneous multi-agent teams with multiple LLM as brains; (2) multi-task cocktail training with isolated agent runtimes; (3) fault-tolerant execution that prevents external environment failures from interrupting the training process; and (4) live code iteration, which allows agents to be edited during training by replacing swarm client nodes. To support efficient RL in multi-model, multi-turn, and multi-agent settings, AgentJet introduces a context tracking module with timeline merging, which consolidates redundant context and achieves a 1.5-10x training speedup. Finally, AgentJet introduces an automated research system that takes a research topic as input and autonomously conducts long-horizon, multi-day RL studies on large-scale clusters. By leveraging the swarm architecture, this system reproduces key exploratory workflows of RL researchers without human intervention during execution.",
+  "link": "https://arxiv.org/abs/2606.04484",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097474+00:00"
+}

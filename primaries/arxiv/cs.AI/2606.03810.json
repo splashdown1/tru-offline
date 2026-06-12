@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.03810",
+  "title": "Consistency Training Can Entrench Misalignment",
+  "abstract": "Consistency training encourages a model to produce similar outputs across related inputs or sampling procedures. Such methods are simple, scalable, and largely label-free, but their effects on model alignment remain poorly understood. Could the self-bootstrapping nature of these methods amplify undesired behavior in models? We test seven consistency training methods on 108 model organisms: open-source models (7B--70B) fine-tuned to exhibit various forms of controlled misaligned behavior. We find that outcomes vary significantly: consistency training generally suppresses reward hacking and emergent misalignment but amplifies sycophancy. We present evidence that distribution shifts induced by the consistency labeling process, rather than variation in the selection operators, may be the primary driver of systematic alignment effects. Finally, we present a unifying theoretical framework to derive conditions under which consistency training will amplify or suppress misalignment. In total, our study establishes that consistency training is not alignment-neutral, and that its use in critical systems should be carefully audited.",
+  "link": "https://arxiv.org/abs/2606.03810",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099482+00:00"
+}

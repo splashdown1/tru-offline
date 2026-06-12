@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.07724",
+  "title": "Curated Synthetic Data Doesn't Have to Collapse: A Theoretical Study of Generative Retraining with Pluralistic Preferences",
+  "abstract": "Recursive retraining of generative models poses a critical representation challenge: when synthetic outputs are curated based on a fixed reward signal, the model tends to collapse onto a narrow set of outputs that over-optimize that objective. Prior work suggests that such collapse is unavoidable without adding real data into the mix. We revisit this conclusion from an alignment perspective and show that collapse can be mitigated through curation based on multiple reward functions. We formalize the dynamics of recursive training under heterogeneous preferences and prove that, under certain conditions, the model converges to a stable distribution that allocates probability mass across competing high-reward regions. The limiting distribution preserves diversity and provably satisfies a weighted Nash bargaining solution, offering a formal interpretation of value aggregation in synthetic retraining loops.",
+  "link": "https://arxiv.org/abs/2605.07724",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099253+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.23280",
+  "title": "Mollified Value Learning",
+  "abstract": "Offline goal-conditioned reinforcement learning (GCRL) learns goal-reaching behaviors from static datasets, but accurate value estimation remains challenging under limited state-action coverage. Existing physics-informed approaches address this by imposing pointwise distance-like geometric constraints derived from Hamilton--Jacobi--Bellman (HJB) optimality principles, often through first-order partial differential equations such as the Eikonal equation. However, enforcing local consistency through explicit differential structure can become unstable in complex, high-dimensional environments. Our key insight is to instead reinterpret distance-like constraints as an expectation over a local spatial measure. By aggregating constraints over this measure rather than evaluating them pointwise, the objective acts as a spatial mollifier, inducing distance-like value geometry without requiring expensive differential operators. We refer to this as Mollified Value Learning (MVL). Experiments across navigation and high-dimensional robotic manipulation tasks show that MVL learns structured, value representations, improving goal-reaching performance, when used with implicit value representation learning methods. Open-source codes are available at https://github.com/HrishikeshVish/MVL.",
+  "link": "https://arxiv.org/abs/2602.23280",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.RO"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307954Z"
+}

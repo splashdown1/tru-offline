@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04408",
+  "title": "An Ensembled Latent Factor Model via Differential Evolution and Gradient Descent Optimization",
+  "abstract": "High-dimensional and incomplete (HDI) data are prevalent in many real-world big data scenarios. Latent factor models serve as a common representation learning approach, capable of uncovering informative latent factors from such data. Nevertheless, most existing latent factor models rely solely on gradient descent for optimization, which may lead to insufficient and biased representations, particularly when dealing with heterogeneous HDI data. Thus, this study proposes an Ensembled Latent Factor Model via Differential Evolution and Gradient Descent Optimization (ELFM-DEGDO) with two-fold designed: 1) two diverse latent factor models are independently modeled via differential evolution and gradient descent optimization, respectively, and 2) the two diverse latent factor models are combined via a customized self-adaptive weighting mechanism to effectively fuse their strengths. By leveraging the complementary advantages of both optimization paradigms, ELFM-DEGDO is able to produce more comprehensive and less biased representations for HDI data. Three HDI datasets are tested to show that ELFM-DEGDO consistently performs better than related several latent factor models.",
+  "link": "https://arxiv.org/abs/2606.04408",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098189+00:00"
+}

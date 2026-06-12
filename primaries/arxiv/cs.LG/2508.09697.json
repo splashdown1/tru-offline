@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2508.09697",
+  "title": "Towards Label-Noise Resistant Learning via Optimal Brain Damage Masking",
+  "abstract": "Noisy labels are inevitable in real-world scenarios. Due to the strong capacity of deep neural networks to memorize corrupted labels, these noisy labels cause significant performance degradation. Existing noise-robust methods have mainly focused on robust loss functions and sample selection, with comparatively limited exploration of dynamic architectural adaptation. In this paper, we rethink the role of model connectivity in the presence of label noise. Intuitively, performance degradation caused by noisy labels stems from the backpropagation of noisy gradients. Since the final classifier layer acts as the primary gateway for this error propagation, directly discarding redundant connections within the classifier can structurally intercept noisy gradients at the root. Consequently, to identify these redundant connections, we leverage the seminal Optimal Brain Damage (OBD) theory from model compression, which posits that parameters causing negligible loss perturbation can be safely removed without impairing performance. Guided by this principle, we reveal that masking low-activation edges maintains the network's normal fitting capacity while effectively reducing the risk of backpropagating noisy gradients. To bridge this theoretical insight with practical training, we propose a novel Selective Edge Masking (SEM) mechanism for the widely-adopted fully connected (FC) layer to enhance model robustness against noisy labels. It can adaptively preserve only the most critical edges for information propagation while suppressing gradient errors caused by noisy labels. As a plug-and-play component, SEM can be seamlessly integrated into various noise-robust methods, including robust loss functions and sample selection. Extensive evaluations on both synthetic and real-world benchmarks demonstrate that our OBD-driven approach consistently outperforms state-of-the-art methods.",
+  "link": "https://arxiv.org/abs/2508.09697",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883932+00:00"
+}

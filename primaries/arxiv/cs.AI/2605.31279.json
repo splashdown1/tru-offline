@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31279",
+  "title": "Practical Cross-Band Channel Prediction for AI-RAN via Physics-Guided Deep Unfolding",
+  "abstract": "To make cross-band channel prediction practical for AI-native RAN, algorithms must generalize across diverse environments and support real-time inference. Existing approaches achieve one but not both. To bridge this gap, we introduce GUIDE, a physics-guided deep unfolding framework that embeds wireless channel physics into differentiable layers. Without retraining in unseen environments, GUIDE achieves 2.75x beamforming gain than the deep learning-based baseline FIRE with only a slight increase in inference time, and 1.39x beamforming gain than the strongest model-based baseline R2F2 while running over 1610x faster.",
+  "link": "https://arxiv.org/abs/2605.31279",
+  "category": "cs.AI",
+  "categories": [
+    "eess.SP",
+    "cs.AI",
+    "cs.NI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358367Z"
+}

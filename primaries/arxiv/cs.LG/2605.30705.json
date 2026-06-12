@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30705",
+  "title": "Equivariant Latent Alignment via Flow Matching under Group Symmetries",
+  "abstract": "Geometry-aware generative models and novel view synthesis approaches have shown strong potential in visual fidelity and consistency. In parallel, equivariant representation learning has emerged as a powerful framework for constructing latent spaces where analytically known group transformations could act directly, capturing geometric structure in data and enhancing both interpretability and generalization in novel view synthesis. However, we identify that existing approaches often suffer from latent misalignment, a discrepancy between the intended group action and the actually required transformations in the latent space. Consequently, the learned latents often fail to consistently preserve the equivariant relations imposed by the underlying group symmetry. To address this, we propose Residual Latent Flow, a flow-based framework that corrects the misaligned latents, thereby improving compliance with the underlying equivariance relation. Our comprehensive experiments show that our method significantly reduces latent misalignment and improves novel view synthesis quality, under rotation groups SO(n).",
+  "link": "https://arxiv.org/abs/2605.30705",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307330Z"
+}

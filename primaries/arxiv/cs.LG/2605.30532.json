@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30532",
+  "title": "True Self-Avoiding Walk for Accelerating Markov-Chain Monte Carlo Integration",
+  "abstract": "We study true self-avoiding walk (TSAW) as a mechanism for improving empirical integral estimation via Markov chain Monte Carlo (MCMC). We consider finite-state adaptive sampling dynamics associated with an irreducible Markov kernel $P$ on a finite set, with stationary distribution $\\pi$, in which the transition probabilities are penalized according to empirical overuse.\n  Our main result is that the empirical occupation counts $L_t(i)$ and transition counts $N_t(i,j)$ of the resulting TSAW-based walk satisfy \\[ L_t(i)-t\\pi_i = O(\\sqrt{\\log t}) \\quad\\text{and}\\quad N_t(i,j)-t\\pi_iP_{ij}=O(\\sqrt{\\log t}) \\qquad\\text{almost surely} \\] for every state $i$ and every edge $(i,j)$ with $P_{ij}>0$. Consequently, for every bounded function $f:V\\to\\mathbb R$, the error of our integral estimator converges as \\[ \\left|\\frac1t\\sum_{s=0}^{t-1} f(X_s)-\\sum_{i\\in V}\\pi_i f(i)\\right| = O\\left(\\frac{\\sqrt{\\log t}}{t}\\right) \\qquad\\text{almost surely}. \\]\n  These results show that, in contrast with the usual $t^{-1/2}$ error scaling for empirical averages under standard random-walk-based methods, TSAW-based estimator yields empirical integral errors of order $O(\\sqrt{\\log t}/t)$ almost surely, thereby achieving a substantially sharper dependence on the sample size $t$.",
+  "link": "https://arxiv.org/abs/2605.30532",
+  "category": "cs.LG",
+  "categories": [
+    "stat.CO",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307269Z"
+}

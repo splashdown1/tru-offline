@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.28829",
+  "title": "Aryabhata 2: Scaling Reinforcement Learning for Advanced STEM Reasoning",
+  "abstract": "Competitive STEM examinations such as JEE and NEET require multi-step symbolic reasoning, precise numerical computation, and deep conceptual understanding across physics, chemistry, and mathematics. Recent large language models perform strongly on common reasoning benchmarks, yet they remain difficult to deploy at scale, where millions of student doubts demand domain-specific, consistently structured problem solving.\n  We introduce Aryabhata 2, a reasoning-focused language model for competitive STEM examinations, trained via reinforcement-learning post-training. Using PhysicsWallah's internal question banks, we construct a high-quality training curriculum and post-train GPT-OSS-20B through reinforcement learning with verifiable rewards. Training combines prolonged reinforcement learning with broadened exploration via progressively larger rollout group sizes.\n  We evaluate Aryabhata 2 on competitive examination benchmarks, including JEE Main, JEE Advanced, and NEET, as well as out-of-distribution reasoning datasets such as AIME, HMMT, MMLU-Pro, MMLU-Redux 2.0, and GPQA. Results show that Aryabhata 2 outperforms its base model GPT-OSS-20B on competitive STEM reasoning while requiring substantially fewer output tokens (up to 64\\% fewer).",
+  "link": "https://arxiv.org/abs/2605.28829",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.CY"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099344+00:00"
+}

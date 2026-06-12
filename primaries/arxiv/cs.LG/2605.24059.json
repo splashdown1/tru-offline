@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.24059",
+  "title": "Spectral Probe-Circuits: A Three-Step Recipe for Identifying Attention-Head Circuits in Pretrained Transformers",
+  "abstract": "We present a three-step recipe for identifying attention-head circuits in pretrained transformers. A per-head spectral signal -- the time-integrated participation ratio of each head's attention output -- ranks heads doing sustained content-dependent computation without labels or attribution gradients. A task-pattern screen filters this general indicator into a task-specific candidate circuit, and group ablation against a matched-random control completes the causal claim. We validate across an 8x parameter range (51M to 1B-active / 7B-total), two architecture families (dense, mixture-of-experts), and four pretraining pipelines. The recipe ports: a 2-6 head induction circuit is causally necessary in every model tested, with a 94-100% drop in synthetic-induction top-1 after ablation. The spectral signal is predictive without supervision: on six independent seeds of a 51M-parameter probe model, the same computation identifies the seed-specific circuit on each seed. The fraction of heads doing identifiable specialized computation is conserved at 17-19% across the Pythia family (124M to 410M), while specific induction circuits stay 3-11 heads -- sublinear in total head count. This paper is the methodology anchor of a three-paper program; companion papers extend the recipe to developmental trajectories during pretraining and to composed-task circuits where pattern selectivity decouples from task-causal structure.",
+  "link": "https://arxiv.org/abs/2605.24059",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884282+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2604.23468",
+  "title": "Progress in Formalizing Sphere Packing in Dimension 8",
+  "abstract": "In 2016, Viazovska famously solved the sphere packing problem in dimension $8$, using modular forms to construct a 'magic' function satisfying optimality conditions determined by Cohn and Elkies in 2003. In March 2024, Hariharan and Viazovska launched a project to formalize this solution and related mathematical facts in the Lean Theorem Prover. A significant milestone was achieved in February 2026: the result was formally verified, with the final stages of the verification done by Math, Inc.'s autoformalization model 'Gauss'. We discuss the techniques used to achieve this milestone, reflect on the unique collaboration between humans and Gauss, and discuss project objectives that remain.",
+  "link": "https://arxiv.org/abs/2604.23468",
+  "category": "cs.AI",
+  "categories": [
+    "math.MG",
+    "cs.AI",
+    "cs.LO",
+    "math.NT"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358922Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2604.15959",
+  "title": "Multi-Objective Bayesian Optimization via Adaptive \\varepsilon-Constraints Decomposition",
+  "abstract": "Multi-objective Bayesian optimization (MOBO) provides a principled framework for optimizing multiple expensive black-box functions. However, existing MOBO methods often struggle with coverage, scalability, and handling constraints and preferences. In this work we propose STAGE-BO, Sequential Targeting Adaptive Gap-Filling $\\varepsilon$-Constraint Bayesian Optimization: by analyzing the coverage of the surrogate Pareto front, our method identifies the Pareto front point with the largest uncovered gap, and uses its coordinates to define adaptive constraints in $\\varepsilon$-constraint method, which transforms the problem into a sequence of inequality-constrained subproblems, efficiently solved via constrained expected improvement acquisition. Our approach provides uniform Pareto coverage without hypervolume computation and naturally handles constraints and preferences. Experiments on synthetic and real-world benchmarks demonstrate superior coverage and competitive hypervolume performance against state-of-the-art baselines. Our code implementation can be found at https://github.com/YangYaohong1/STAGE-BO.",
+  "link": "https://arxiv.org/abs/2604.15959",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308046Z"
+}

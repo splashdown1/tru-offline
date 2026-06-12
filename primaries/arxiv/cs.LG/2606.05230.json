@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05230",
+  "title": "Central Description Length (CDL) Clustering Validation Index",
+  "abstract": "Selecting a clustering algorithm and its hyperparameters without labels is a common difficulty in engineering machine learning pipelines that work with unsupervised analysis of sensor, image, or process data. Clustering validation indices (CVIs) provide internal scores for ranking candidate clusterings, but most popular CVIs are built from Euclidean compactness and separation terms and so tend to favour compact, convex partitions. Their performance is known to degrade on non convex, irregular, or variable density data, where kernel transformations or alternative distance measures are typically used at the cost of additional tuning and computation. This paper introduces the Central Description Length (CDL) clustering validation index. CDL uses the observed within cluster compactness, the estimated cluster centers, and the estimated cluster covariances to compute a probabilistic upper bound on the description length associated with the unobservable true cluster centers. The bound condenses intra cluster compactness and centroid displacement into a single computable quantity and is evaluated on the partition produced by any clustering algorithm. The implementation uses only observable quantities (the data, the partition, the estimated centers, and the estimated covariances) and does not use ground truth labels. On synthetic benchmarks with non convex and arbitrary shape clusters, CDL-CVI selected the reference number of clusters more often and reached higher Adjusted Rand Index (ARI) values than the conventional CVIs we tested, without an additional kernel preprocessing stage. On image benchmarks (MNIST, CIFAR-10, STL-10) clustered from frozen unsupervised embeddings, CDL-CVI returned cluster numbers close to the reference class counts across K-means, DBSCAN, and spectral clustering in the reported trials.",
+  "link": "https://arxiv.org/abs/2606.05230",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "eess.SP"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882853+00:00"
+}

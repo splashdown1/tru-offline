@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05552",
+  "title": "Balancing Image Compression and Generation with Bootstrapped Tokenization",
+  "abstract": "Despite progress in image tokenization, standard methods encode redundant information by mixing all granularities within each token, thus redundancy persists between tokens. The mix of information of different granularity also complicates the training of generators. This paper introduces SelfBootTok, a method that resolves this by cleanly decomposing information into global and local token groups. Through self-bootstrapped learning, the model predicts local details exclusively from global tokens, shifting the burden of visual details from the generator to the tokenizer. Consequently, our generator is far more efficient, requiring only global tokens and reducing computation by approximately 40%, while delivering superior reconstruction and generation. Moreover, this paradigm scales elegantly: by leveraging more data or parameters to self-supervise local representation learning, SelfBootTok achieves a new state-of-the-art gFID score of 1.56 using only 64 tokens.",
+  "link": "https://arxiv.org/abs/2606.05552",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.GR"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882092+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05864",
+  "title": "Analysis of the Neglect-Zero Effect in Large Language Models",
+  "abstract": "We investigate the extent to which the language processing of LLMs resembles human cognitive processes, focusing on a human cognitive bias called the $\\textit{neglect-zero effect}$. This effect refers to the human tendency to ignore $\\textit{zero-models}$, which are configurations that render a proposition vacuously true by virtue of an empty set. We focus on two types of inferences driven by the neglect-zero effect, and examine how LLMs process these inferences by comparing their behavior with that in an inference that does not involve the neglect-zero effect. For this purpose, we employ a paradigm based on $\\textit{structural priming}$, where recent exposure to a preceding sentence (the $\\textit{prime}$) facilitates the processing of a subsequent sentence (the $\\textit{target}$) due to their structural similarity. We prepare primes to force LLMs to consider the zero-model, and analyze whether they also consider it in the target. The results suggest that the neglect-zero effect may not occur in the LLMs analyzed in this study. Our code is available at https://github.com/ynklab/neglect_zero",
+  "link": "https://arxiv.org/abs/2606.05864",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497877+00:00"
+}

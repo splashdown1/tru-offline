@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.06384",
+  "title": "Estimation of the sub-Gaussian parameter",
+  "abstract": "The sub-Gaussian parameter (also called the variance proxy) of a mean-zero random variable $X$ is defined as $\\xi^2_* = \\sup_{\\lambda \\in \\mathbb{R}} L(\\lambda)$ where $L(\\lambda) = \\frac{2}{\\lambda^2} \\log \\mathbb{E} e^{\\lambda X}$ is a weighted cumulant generating function. Despite the ubiquity of sub-Gaussian random variables, the estimation of $\\xi^2_*$ has received little attention and is not yet well understood. In this work, we study a natural estimator of $\\xi^2_*$ based on constrained maximization of the empirical analogue of $L$. We prove that the estimator is consistent bound the rates of convergence under assumptions on $L$: if $L$ has an maximizer, then our bound is $O_p(n^{-1/2 + \\varepsilon})$ for any $\\varepsilon > 0$; if the argmax of $L$ is also bounded, then the bound improves to $O_p(n^{-1/2})$. We show that our assumptions on $L$ are necessary by proving that the minimax risk over all sub-Gaussian distributions is $\\Omega(1)$; imposing increasingly strong assumptions on the tail growth of $L$ yields a continuum of classes whose minimax lower bound interpolates between $\\Omega(1/\\log n)$ and $\\Omega(1)$. Root-n rate is possible if we restrict to a subclass of distributions where $L$ attains its supremum in a bounded region, in which case our estimator is minimax optimal. If the underlying distribution is not sub-Gaussian, we show that our estimator goes to infinity with a divergence rate controlled by the tail of the distribution. Finally, we apply our estimator in a Gene Ontology (GO) enrichment study to construct p-values for a large-scale permutation test, showing that it can serve as a reliable alternative to the peaks-over-threshold approach, particularly in regimes where the peaks-over-threshold method is of uncertain validity.",
+  "link": "https://arxiv.org/abs/2606.06384",
+  "category": "stat.ML",
+  "categories": [
+    "math.ST",
+    "stat.ME",
+    "stat.ML",
+    "stat.TH"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728756+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2505.15405",
+  "title": "HOPSE: Scalable Higher-Order Positional and Structural Encoder for Combinatorial Representations",
+  "abstract": "While Graph Neural Networks (GNNs) have proven highly effective at modeling relational data, pairwise connections cannot fully capture multi-way relationships naturally present in complex real-world systems. In response to this, Topological Deep Learning (TDL) leverages more general combinatorial representations--such as simplicial or cellular complexes--to accommodate higher-order interactions. Existing TDL methods often extend GNNs through Higher-Order Message Passing (HOMP), but face critical scalability challenges due to the steep complexity overhead of propagating messages through combinatorial structures. To overcome this limitation, we propose HOPSE (Higher-Order Positional and Structural Encoder), a framework free of message passing layers that uses Hasse graph decompositions to derive efficient and expressive encodings over arbitrary higher-order domains. Notably, HOPSE scales linearly with the size of combinatorial representations while preserving the expressive power and permutation equivariance of the HOMP approaches. Experiments on molecular and topological benchmarks show that it matches or surpasses state-of-the-art performance while consistently achieving speedups over HOMP-based models, opening a new path for scalable TDL. The code is available at https://github.com/geometric-intelligence/topobench.git.",
+  "link": "https://arxiv.org/abs/2505.15405",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883877+00:00"
+}

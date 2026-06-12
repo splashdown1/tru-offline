@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2604.06881",
+  "title": "MENO: MeanFlow-Enhanced Neural Operators for Dynamical Systems",
+  "abstract": "Neural operators have emerged as powerful surrogates for dynamical systems due to their grid-invariant properties and computational efficiency. However, Fourier-based variants inherently truncate high-frequency components in spectral space, resulting in the loss of small-scale structures and degraded prediction quality at high resolutions when trained on low-resolution data. While diffusion-based enhancement methods can recover multi-scale features, they introduce substantial inference overhead that undermines the efficiency advantage of neural operators. In this work, we introduce MeanFlow-Enhanced Neural Operators (MENO), a novel framework that achieves accurate all-scale predictions with minimal inference cost. By leveraging the improved MeanFlow method, MENO restores both small-scale details and large-scale dynamics with superior physical fidelity and statistical accuracy. We evaluate MENO on three challenging dynamical systems, including phase-field dynamics, 2D Kolmogorov flow, and active matter dynamics, at resolutions up to 256$\\times$256. Across all benchmarks, MENO improves the power spectrum density accuracy by up to a factor of 2 compared to baseline neural operators while achieving up to $14\\times$ faster inference than the state-of-the-art Denoising Diffusion Implicit Model (DDIM)-enhanced counterparts, effectively bridging the gap between accuracy and efficiency. The flexibility and efficiency of MENO position it as an efficient surrogate model for scientific machine learning applications where both statistical integrity and computational efficiency are paramount.",
+  "link": "https://arxiv.org/abs/2604.06881",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "physics.flu-dyn"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308035Z"
+}

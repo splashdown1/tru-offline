@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.21422",
+  "title": "PRISM: Preference-Aware Influence Function Based Data Selection Method for Efficient Fine-Tuning",
+  "abstract": "As LLMs continue to scale up, improving training efficiency heavily relies on effective data utilization. Data selection mitigates this issue by allocating the limited training budget to high-value examples that optimally facilitate the model's target behavior. Most existing approaches define target behavior via a set of target examples and score candidate training data based on their estimated influence on these samples. However, such methods uniformly treat all target examples as equally important, ignoring the varying relevance of individual examples to model optimization. Specifically, target examples that align closely with the model's inherent behavior deliver stronger supervisory signals, whereas discrepant examples yield only weak and ineffective local guidance. We propose PRISM, a Preference-aware Influence function based Data Selection Method. It leverages model preference to assign weights to target examples and builds a preference-aware target direction. PRISM evaluates candidate training samples according to their influence on this direction, and prioritizes data budget allocation to samples that effectively drive the model to match expected target behavior. Theoretical analysis verifies that weighted preference construction generates a superior first-order gradient direction for boosting target preference, compared with uniform aggregation strategies. Extensive experiments covering diverse model architectures and parameter scales demonstrate that PRISM achieves better performance in efficient fine-tuning and safety-aligned supervised fine-tuning rectification. The results validate that accurate characterization of target behavior serves as the core of cost-effective data selection.",
+  "link": "https://arxiv.org/abs/2605.21422",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308115Z"
+}

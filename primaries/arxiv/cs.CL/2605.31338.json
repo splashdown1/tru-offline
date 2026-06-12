@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31338",
+  "title": "Bundesrecht: An Open Library and Corpus for German Statutory Reference Processing",
+  "abstract": "Statutory references are central to legal language understanding, but are difficult to process automatically, as they appear in compact and variable surface forms, may combine multiple targets, use special abbreviations, and often point to lower-level units. Existing tools for German focus either on parsing references from legal documents or accessing statutory text once citations are explicit. This paper introduces bundesrecht, an open resource for German statutory reference processing, consisting of a software library and a structured corpus of German federal law. The library parses, normalizes, and resolves German statutory references, mapping raw citation strings to structured objects, expanding compact references into canonical forms, and linking them to statutory provisions. The accompanying dataset preserves the internal hierarchy of statutes from laws to fine-granular subclauses. We evaluate the parser and normalizer on 2,944 annotated German legal references using strict exact-match and micro information extraction metrics. We further evaluate canonical reference deduplication and show that normalized references group real citation surface variants far more reliably than string matching. bundesrecht is the first open resource that covers German statutory reference processing as an end-to-end pipeline, from raw citation string to resolved statutory provision, and is available on PyPI.",
+  "link": "https://arxiv.org/abs/2605.31338",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405853Z"
+}

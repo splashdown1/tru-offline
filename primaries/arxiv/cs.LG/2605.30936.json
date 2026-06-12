@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30936",
+  "title": "Local linear convergence of gradient methods for overparameterized Gaussian mixtures",
+  "abstract": "We study the problem of learning Gaussian mixture models under overparameterization. Prior work has shown that while overparameterization is essential for avoiding spurious local optima and enables global recovery of the ground-truth model using the gradient-EM (expectation-maximization) algorithm, it can dramatically slow down the local rate of convergence. Under certain assumptions on the mixture weights, we show that a standard divergence measure minimized by statistical learning procedures possesses a manifold of slow growth on which the well-known Polyak stepsize reduces the loss geometrically, and design a gradient-based method that converges to minimizers at a locally linear rate. Additionally, we show that our method converges to nearly optimal solutions -- up to a natural misspecification threshold -- for mixtures with arbitrary weights. At a high level, the method alternates between several \"short\" gradient descent steps that approach the manifold and \"long\" Polyak steps that contract the distance to minimizers. Our results suggest that slow convergence is not an intrinsic challenge of overparameterization, but can be overcome by exploiting the favorable structure of the loss landscape.",
+  "link": "https://arxiv.org/abs/2605.30936",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306877Z"
+}

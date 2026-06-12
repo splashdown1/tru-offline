@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2512.05038",
+  "title": "The SuperActivator Mechanism: Transformers Concentrate Reliable Concept Signals in the Tail",
+  "abstract": "Concept vectors aim to enhance model interpretability by linking internal representations with human-understandable semantics, but their practical utility is often limited by noisy and inconsistent activations. In this work, we uncover the SuperActivator Mechanism: a transformer dynamic that amplifies concept activation gaps, concentrating the most reliable concept evidence into a small set of high-activation tokens. To develop a theoretical understanding of this mechanism, we prove that concept-aligned attention heads multiplicatively amplify pairwise activation gaps, with already-extreme activations growing fastest. We find that this amplification is not just theoretical, but also occurs empirically on large-scale models: while in- and out-of-concept activation distributions overlap considerably, the in-concept distribution develops a positive tail clearly separated from the noise. These high-tail tokens, which we call SuperActivators, appear consistently across concept-positive samples, making them reliable indicators of concept presence. Accordingly, SuperActivator-based detection improves F1 by up to 0.14 over standard concept activation aggregators and prompting baselines across image and text modalities, models, layers, and concept extraction techniques, demonstrating the generality and practicality of our insights. Further empirical analysis demonstrates that the most reliable SuperActivators are sparse, with detection typically peaking when using only 5-10% of in-concept token activations, and capture more faithful localized semantics than global concept vectors.",
+  "link": "https://arxiv.org/abs/2512.05038",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307745Z"
+}

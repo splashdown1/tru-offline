@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2510.22048",
+  "title": "PF$\\Delta$: A Benchmark Dataset for Power Flow under Load, Generation, and Topology Variations",
+  "abstract": "Power flow (PF) calculations are the backbone of real-time grid operations, across workflows such as contingency analysis (where repeated PF evaluations assess grid security under outages) and topology optimization (which involves PF-based searches over combinatorially large action spaces). Running these calculations at operational timescales or across large evaluation spaces remains a major computational bottleneck. Additionally, growing uncertainty in power system operations from the integration of renewables and climate-induced extreme weather also calls for tools that can accurately and efficiently simulate a wide range of scenarios and operating conditions. Machine learning methods offer a potential speedup over traditional solvers, but their performance has not been systematically assessed on benchmarks that capture real-world variability. This paper introduces PF$\\Delta$, a benchmark dataset for power flow that captures diverse variations in load, generation, and topology. PF$\\Delta$ contains 859,800 solved power flow instances spanning six different bus system sizes, capturing three types of contingency scenarios (N , N -1, and N -2), and including close-to-infeasible cases near steady-state voltage stability limits. We evaluate traditional solvers and GNN-based methods, highlighting key areas where existing approaches struggle, and identifying open problems for future research. Our dataset is available at https://huggingface.co/datasets/pfdelta/pfdelta/tree/main and our code with data generation scripts and model implementations is at https://github.com/MOSSLab-MIT/pfdelta.",
+  "link": "https://arxiv.org/abs/2510.22048",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883957+00:00"
+}

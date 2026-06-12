@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.28068",
+  "title": "PINE: Pruning Boosted Tree Ensembles with Conformal In-Distribution Prediction Equivalence",
+  "abstract": "Tree ensembles are machine learning models with strong predictive performance and interpretability, and remain widely used for tabular data. Standard pruning methods for tree ensembles typically optimize an accuracy-compression trade-off and may change a subset of predictions, potentially compromising decision consistency. Faithful pruning methods address this issue by preserving prediction equivalence over the entire input space, but this requirement leads to lower compression ratios. We propose PINE, a pruning method that provides strong guarantees within an in-distribution region. PINE preserves prediction equivalence within this region and controls the region size using a single parameter $\\alpha$ via conformal calibration. Experiments on 12 public tabular datasets show that PINE improves the compression ratio by up to 30% while preserving predictions at a comparable level to existing faithful pruning methods.",
+  "link": "https://arxiv.org/abs/2605.28068",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308149Z"
+}

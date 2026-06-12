@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.12124",
+  "title": "Alignment Risks from Capability-Seeking RL Training",
+  "abstract": "While most AI alignment research focuses on preventing models from generating explicitly harmful content, a more subtle risk arises from capability-seeking RL training in vulnerable environments. We investigate whether language models, when trained with reinforcement learning (RL) in environments with implicit loopholes, can learn to exploit these flaws to maximize reward, even without being explicitly instructed to do so. To test this, we design a suite of four diverse \"vulnerability games,\" each presenting a structural vulnerability related to context-conditional compliance, proxy metrics, reward tampering, and self-evaluation. Our experiments show that models often learn to exploit these vulnerabilities, discovering opportunistic strategies that increase reward while sometimes preserving or even improving standard task-performance metrics. More critically, we find that these exploitative strategies are not always narrow \"tricks\": they can transfer in structured but limited ways, propagate from a capable teacher model to other student models through SFT, and in several cases remain more persistent when learned through RL than when distilled through SFT. Our findings show that alignment risks from capability-seeking RL training can be difficult to detect with standard performance monitoring, suggesting that future AI safety work should extend beyond content moderation to auditing and securing training environments, reward mechanisms, and evaluation channels. Code is available at https://github.com/YujunZhou/Capability-seeking-RL-risk.",
+  "link": "https://arxiv.org/abs/2602.12124",
+  "category": "cs.CL",
+  "categories": [
+    "cs.LG",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498615+00:00"
+}

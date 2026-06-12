@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31444",
+  "title": "Answer-Set-Programming-based Abstractions for Reinforcement Learning",
+  "abstract": "Reinforcement Learning (RL) enables autonomous agents to learn policies from experience, but realistic problems often involve enormous state spaces, making learning and generalisation challenging. Abstraction and approximation are therefore essential. Relational Reinforcement Learning (RRL) offers a way to reason about objects and their relations, and the CARCASS framework by Martijn van Otterlo demonstrates how logical representations can model Markov Decision Processes (MDPs) in first-order domains. Originally implemented in Prolog, CARCASS leverages domain knowledge to create powerful abstractions. We explore Answer-Set Programming (ASP), which is a rich and, contrary to Prolog, fully declarative modelling language, to realise CARCASS abstractions. We evaluate our ASP-based implementation in case studies of two domains, viz. Blocks World and Minigrid. Our results indicate that CARCASS with ASP provides a promising approach to constructing abstractions for RL, especially when domain knowledge is available.",
+  "link": "https://arxiv.org/abs/2605.31444",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.LO"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.357883Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2512.14980",
+  "title": "Softly Constrained Denoisers for Diffusion Models Applied to Partial Differential Equations",
+  "abstract": "Diffusion models have become a powerful generative prior for solutions of partial differential equations (PDEs). Existing approaches enforce physical constraints either by adding the PDE residuals as loss regularizers or through inference-time adjustments. These methods bias the model away from the true data distribution, which is especially problematic when the governing PDE is misspecified. To circumvent these issues while making the most out of the PDE constraint, we introduce soft inductive biases into the denoiser architecture derived from the PDEs. We show that these softly constrained denoisers exploit constraint knowledge to improve compliance over standard denoisers, while maintaining enough flexibility to deviate from it in case of misspecification with respect to observed data.",
+  "link": "https://arxiv.org/abs/2512.14980",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307753Z"
+}

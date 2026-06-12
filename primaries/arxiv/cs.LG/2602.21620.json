@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.21620",
+  "title": "Revisiting the Bertrand Paradox via Equilibrium Analysis of No-regret Learners",
+  "abstract": "We study the discrete Bertrand pricing game with a non-increasing demand function. The game has $n \\ge 2$ players who simultaneously choose prices from the set $\\{1/k, 2/k, \\ldots, 1\\}$, where $k\\in\\mathbb{N}$. The player who sets the lowest price captures the entire demand; if multiple players tie for the lowest price, they split the demand equally.\n  We study the Bertrand paradox, where classical theory predicts low prices, yet real markets often sustain high prices. To understand this gap, we analyze a repeated-game model in which firms set prices using no-regret learners. Our goal is to characterize the equilibrium outcomes that can arise under different no-regret learning guarantees. We are particularly interested in questions such as whether no-external-regret learners can converge to undesirable high-price outcomes, and how stronger guarantees such as no-swap regret shape the emergence of competitive low-price behavior. We address these and related questions through a theoretical analysis, complemented by experiments that support the theory and reveal surprising phenomena for no-swap regret learners.",
+  "link": "https://arxiv.org/abs/2602.21620",
+  "category": "cs.LG",
+  "categories": [
+    "cs.GT",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308400Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2510.15416",
+  "title": "Adaptive Minds: Empowering Agents with LoRA-as-Tools",
+  "abstract": "We investigate a framework in which LoRA adapters are treated as callable tools that a base language model can dynamically select and invoke. We hypothesize that, when adapters are trained to provide strong domain-specific gains and are exposed with clear metadata, a base model can reliably route queries to the appropriate expert, effectively aggregating the benefits of many specialized adapters within a single framework. We introduce Adaptive Minds, a general framework within which we study both single-step routing and multi-step agentic reasoning. In this setting, the agent can iteratively invoke multiple adapters alongside other tools (e.g., external APIs, retrieval systems, or execution environments) and reason over their outputs across multiple steps. This reframes adapters as modular skills or memory units that can be composed during reasoning rather than statically applied. In our evaluation, the routing layer reaches 98.3% accuracy on a 30-adapter library, and well-trained specialists provide +4.6 to +84.0 percentage points of strict-scorer gain across nine task families under a single shared training recipe; the AM router aggregates these gains within 5 pp of the direct specialist on every benchmark whose queries surface domain signal. Our findings suggest that the effectiveness of this approach depends on the quality and specialization of individual adapters, and that enabling flexible composition of many such experts can significantly expand the practical capabilities of language model agents, moving toward more general, tool-augmented intelligence.",
+  "link": "https://arxiv.org/abs/2510.15416",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098624+00:00"
+}

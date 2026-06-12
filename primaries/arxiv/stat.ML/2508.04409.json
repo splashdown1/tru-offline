@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2508.04409",
+  "title": "The Relative Instability of Model Comparison with Cross-validation",
+  "abstract": "Cross-validation (CV) is known to provide asymptotically exact tests and confidence intervals for model improvement but only when the model comparison is relatively stable. Surprisingly, we prove that even simple, individually stable models can generate relatively unstable comparisons, calling into question the validity of CV inference. Specifically, we show that the Lasso and its close cousin, soft-thresholding, generate relatively unstable comparisons and invalid CV inferences, even in the most favorable of learning settings and when both models are individually stable. These findings highlight the importance of verifying relative stability before deploying CV for model comparison.",
+  "link": "https://arxiv.org/abs/2508.04409",
+  "category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728939+00:00"
+}

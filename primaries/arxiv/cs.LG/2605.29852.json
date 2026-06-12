@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.29852",
+  "title": "Parameter-Efficient Subspace Decoupling ViT for Mitigating Multi-Task Negative Transfer in Histological Scoring",
+  "abstract": "Histological scoring is essential for diagnosing Non-Alcoholic Fatty Liver Disease (NAFLD), yet its automation remains challenging due to the high annotation cost and negative transfer among the strongly correlated NAFLD Activity Score (NAS) indicators in multi-task learning. To address this issue, we propose a subspace-decoupled multi-task Vision Transformer (ViT) that integrates lightweight task-specific Adapters with orthogonality-based constraints. This design constructs independent feature subspaces for steatosis, ballooning, and inflammation, effectively reducing task interference while retaining shared representations. We further construct a curated multi-task mouse NAFLD histology dataset with expert annotations for all NAS components. Experimental results demonstrate that the proposed method improves multi-task stability and generalization with substantially reduced computational cost compared to training separate single-task models. The code and the curated dataset have been prepared and will be made publicly available upon acceptance to support reproducibility.",
+  "link": "https://arxiv.org/abs/2605.29852",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.LG",
+    "cs.MM"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308566Z"
+}

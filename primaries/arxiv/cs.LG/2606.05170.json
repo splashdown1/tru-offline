@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05170",
+  "title": "ERRORQUAKE: Heavy-Tailed Error Severity Distributions in Open-Weight Large Language Models",
+  "abstract": "At matched accuracy, open-weight LLMs differ substantially in the shape of their error severity distribution -- a difference invisible to the scalar error rate. Hallucination benchmarks report a single error count and treat all errors as equivalent, yet a wrong date and a fabricated court ruling differ by orders of magnitude. We introduce Errorquake-10k, a 10,000-query benchmark scoring each response on a continuous 0-4 severity scale across 8 domains and 5 difficulty tiers, and we fit per-model severity distributions for 21 open-weight models. For each model we estimate a severity distribution index (b, the Gutenberg-Richter upper-tail slope) with 95% bootstrap confidence intervals. Headline: across the 210 model pairs, 85 have disjoint 95% b confidence intervals at matched accuracy (|Delta epsilon| < 0.05) on human-consensus scoring, e.g. deepseek-v3.2 vs. ministral-14b at epsilon = 0.586 and Delta b = 0.47. A 519-item three-rater human validation study confirms measurement reliability (ICC(2,k=3) = 0.85), validates the LLM-judge ranking (rho = 0.89), and confirms the dense-model scaling correlation on human data (rho_s = -0.86). We prove a Non-Reducibility Theorem showing that severity profile and error rate are informationally non-redundant (I(b; model | epsilon) = 1.56 bits; 64.5% of cross-model b variance is unexplained by epsilon). A severity mechanism taxonomy (kappa = 0.83) reveals that error type shifts categorically with severity: low-severity errors are retrievals (71%); high-severity errors are fabrications (39%) -- and this composition differs by model size (p < 0.0001). Severity distribution should be reported alongside accuracy; it carries discriminative information that the error rate cannot.",
+  "link": "https://arxiv.org/abs/2606.05170",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881812+00:00"
+}

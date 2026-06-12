@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05946",
+  "title": "Short paper: Models in the dark -- Rectification and erasure under GDPR in ML supply chains",
+  "abstract": "The rights to rectification and erasure, as established under the General Data Protection Regulation (GDPR), are central to protecting individuals' privacy. However, their effective enforcement in machine learning (ML) systems remains challenging. Existing work has largely addressed these rights from either a legal or a technical perspective in isolation and disregards the fact that models are produced in complex supply chains involving multiple actors across development, distribution, and deployment. This paper presents a holistic survey of challenges in implementing the rights to rectification and erasure in ML models. Drawing on academic literature and guidance from data protection authorities, we find that many GDPR requirements cannot yet be technically met in practice. Our findings further suggest that issues arising in ML supply chains are insufficiently addressed in research. To tackle this gap, we introduce the notion of models in the dark -- derived models created further downstream in an ML chain without sufficient transparency or traceability -- and analyse the urgent challenges posed by this phenomenon. By adopting an interdisciplinary perspective, this work contributes to bridging the gap between legal requirements and the technical implementation of data subject rights in ML, ultimately supporting the development of trustworthy artificial intelligence.",
+  "link": "https://arxiv.org/abs/2606.05946",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882414+00:00"
+}

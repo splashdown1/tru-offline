@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2411.05894",
+  "title": "SSSD: Simply-Scalable Speculative Decoding",
+  "abstract": "Speculative Decoding has emerged as a popular technique for accelerating inference in Large Language Models. However, most existing approaches yield only modest improvements in production serving systems. Methods that achieve substantial speedups typically rely on an additional trained draft model or auxiliary model components, increasing deployment and maintenance complexity. This added complexity reduces flexibility, particularly when serving workloads shift to tasks, domains, or languages that are not well represented in the draft model's training data.\n  We introduce Simply-Scalable Speculative Decoding (SSSD), a training-free method that combines lightweight n-gram matching with hardware-aware speculation. Relative to standard autoregressive decoding, SSSD reduces latency by up to 2.9x. It achieves performance on par with leading training-based approaches across a broad range of benchmarks, while requiring substantially lower adoption effort--no data preparation, training or tuning are needed--and exhibiting superior robustness under language and domain shift, as well as in long-context settings.",
+  "link": "https://arxiv.org/abs/2411.05894",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098784+00:00"
+}

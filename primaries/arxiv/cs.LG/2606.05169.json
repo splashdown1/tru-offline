@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05169",
+  "title": "The Evaluation Blind Spot: A Stereological Theory of Benchmark Coverage for Large Language Models",
+  "abstract": "We give a stereological theory of LLM benchmark coverage. For any suite with effective dimensionality d_eff, the visible Hausdorff distance between two convex capability profiles consistent with the same scores is bounded by epsilon + C R m^(-1/(d_eff-1)), with matching Lipschitz lower bound. Empirically, three independent leaderboards (Open LLM v2, an extended 12-benchmark suite, LiveBench) all have d_eff in [2.86, 4.80] on their competitive frontier; the structural blind spot exceeds the observed runner-up score gap by two orders of magnitude and dominates statistical noise by 52-127x. Under a chi-squared projection model, the isotropic prior is the optimistic case; across six hidden-capability priors and four ambient dimensions the simulated half-split swap rate of the top two models stays in [0.38, 0.49], and a 500-trial random visible/held-out split shows that 92% of trials swap the top-1 ranking with on average 2.83 of 5 top-5 models changing. A submodular greedy algorithm with the Nemhauser (1 - 1/e) guarantee finds a stable core of 4 benchmarks; 7 of 12 suffice for 90% coverage, and the trained subset transfers across temporal quarters with 93-97% retention. A counterfactual validation across 12 internal benchmarks and 27 Chatbot Arena categories confirms that the eigenstructure predicts which evaluations are irreplaceable (rho = -0.69, p = 0.013 for removal disruption) and which external evaluations bring new information (rho = +0.38). As a second, independent theoretical contribution, we resolve Gardner's Problem 1.5 (1995) for C^2 support functions, establishing the minimax rate Theta(R/(kappa m^(2/(D-1)))) in general dimension via optimal recovery theory on S^(D-1).",
+  "link": "https://arxiv.org/abs/2606.05169",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881782+00:00"
+}

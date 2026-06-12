@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.07928",
+  "title": "A Kinetic Energy Perspective of Flow Matching",
+  "abstract": "Flow-based generative models can be viewed through a physics lens: sampling transports a particle from noise to data by integrating a learned velocity field, and each sample corresponds to a trajectory with its own dynamical effort. Motivated by classical mechanics, we introduce Kinetic Path Energy (KPE), an action-like, per-sample diagnostic that measures the accumulated kinetic effort along an ordinary differential equation (ODE) trajectory. Empirically, KPE exhibits two robust correspondences: {i} higher KPE predicts stronger semantic fidelity; {ii} high-KPE trajectories land in sparse representation regions. We further provide theoretical guarantees linking trajectory energy to data sparsity. Paradoxically, this correlation is non-monotonic. At sufficiently high energy, generation can degenerate into memorization. Leveraging the closed-form formula of empirical flow matching, we show that extreme energies drive trajectories toward near-copies of training examples. This yields a Goldilocks principle and motivates Kinetic Trajectory Shaping (KTS), a training-free two-phase inference strategy that boosts early motion and enforces a late-time soft landing, reducing memorization and improving generation quality across benchmark tasks.",
+  "link": "https://arxiv.org/abs/2602.07928",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307889Z"
+}

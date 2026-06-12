@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04772",
+  "title": "Coarse-to-fine Hierarchical Architecture with Sequential Mamba for Brain Reconstruction",
+  "abstract": "Understanding the relationship between deep visual representations and the human visual system is a fundamental challenge in computational neuroscience. While modern vision models achieve strong performance in image recognition, their correspondence with the hierarchical organization of the human visual cortex remains an open question. In this study, we propose CHASMBrain, a novel hierarchical two-stage framework for image-to-fMRI encoding. Our architecture leverages a dual-stream Mamba design to explicitly separate and process global semantic tokens and local spatial patches, motivated by the functional organization of the visual cortex. A coarse-to-fine strategy is employed: Stage 1 predicts denoised ROI-level activations, while Stage 2 refines these coarse responses into full voxel-level predictions using a Mamba-VAE. Experiments on the Natural Scenes Dataset (NSD) demonstrate that our method achieves a Pearson correlation of 0.429 and an MSE of 0.261, outperforming all evaluated baselines including ridge regression and DINOv2 linear probes. Beyond predictive performance, causal branch-ablation experiments reveal an asymmetric specialization: the patch stream is specifically locked to early visual cortex (retinotopic regions), while the CLS stream contributes broader semantic context to higher-order areas -- a correspondence that holds causally, not merely correlationally. Cross-subject transfer experiments further show that the learned backbone generalizes across individuals with minimal per-subject adaptation, suggesting the model captures a shared, subject-agnostic visual representation.",
+  "link": "https://arxiv.org/abs/2606.04772",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098416+00:00"
+}

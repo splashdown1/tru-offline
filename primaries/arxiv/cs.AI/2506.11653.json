@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2506.11653",
+  "title": "DISCO: Mitigating Bias in Deep Learning with Conditional Distance Correlation",
+  "abstract": "Dataset bias often leads deep learning models to exploit spurious correlations instead of task-relevant signals. We introduce the Standard Anti-Causal Model (SAM), a unifying causal framework that characterizes bias mechanisms and yields a conditional independence criterion for causal stability. Building on this theory, we propose DISCO$_m$ and sDISCO, efficient and scalable estimators of conditional distance correlation that enable independence regularization in gradient-based models. Across six diverse datasets, our methods consistently outperform or are competitive in existing observed bias mitigation approaches, while requiring fewer hyperparameters and scaling seamlessly to multi-bias scenarios. This work bridges causal theory and practical deep learning, providing both a principled foundation and effective tools for robust prediction. Source Code: https://github.com/yakamoz5/DISCO.",
+  "link": "https://arxiv.org/abs/2506.11653",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358672Z"
+}

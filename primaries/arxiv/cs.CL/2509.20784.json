@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2509.20784",
+  "title": "Towards Atoms of Large Language Models",
+  "abstract": "The fundamental representational units (FRUs) of large language models (LLMs) remain undefined, limiting further understanding of their underlying mechanisms. In this paper, we introduce Atom Theory to systematically define, evaluate, and identify such FRUs, which we term atoms. Building on the atomic inner product (AIP), a non-Euclidean metric that captures the underlying geometry of LLM representations, we formally define atoms and propose two key criteria for ideal atoms: faithfulness ($R^2$) and stability ($q^*$). We further prove that atoms are identifiable under threshold-activated sparse autoencoders (TSAEs). Empirically, we uncover a pervasive representation shift in LLMs and demonstrate that the AIP corrects this shift to capture the underlying representational geometry. We find that two widely used units, neurons and features, fail to qualify as ideal atoms: neurons are faithful ($R^2=1$) but unstable ($q^*=0.5\\%$), while features are more stable ($q^*=68.2\\%$) but unfaithful ($R^2=48.8\\%$). To find atoms of LLMs, leveraging atom identifiability under TSAEs, we show via large-scale experiments that reliable atom identification occurs only when the TSAE capacity matches the data scale. Guided by this insight, we identify FRUs with near-perfect faithfulness ($R^2=99.9\\%$) and stability ($q^*=99.8\\%$) across layers of Gemma2-2B, Gemma2-9B, and Llama3.1-8B, satisfying the criteria of ideal atoms statistically. Further analysis confirms that these atoms align with theoretical expectations and exhibit substantially higher monosemanticity. Overall, we propose and validate Atom Theory as a foundation for understanding the internal representations of LLMs. Code available at https://github.com/ChenhuiHu/towards_atoms.",
+  "link": "https://arxiv.org/abs/2509.20784",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406123Z"
+}

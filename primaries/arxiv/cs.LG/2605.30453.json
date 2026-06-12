@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30453",
+  "title": "Generative Models and Statistical Validation",
+  "abstract": "Generative machine learning has become an essential tool in theoretical and experimental physics, especially in the context of fast surrogates and density estimators. In this work, we first introduce the underlying framework of modern generative networks and then discuss challenges in quantifying their accuracy, precision, and statistical power.",
+  "link": "https://arxiv.org/abs/2605.30453",
+  "category": "cs.LG",
+  "categories": [
+    "hep-ph",
+    "cs.LG",
+    "physics.data-an"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307255Z"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.06137",
+  "title": "Autoregressive Visual Generation Needs a Prologue",
+  "abstract": "In this work, we propose Prologue, an approach to bridging the reconstruction-generation gap in autoregressive (AR) image generation. Instead of modifying visual tokens to satisfy both reconstruction and generation, Prologue generates a small set of prologue tokens prepended to the visual token sequence. These prologue tokens are trained exclusively with the AR cross-entropy (CE) loss, while visual tokens remain dedicated to reconstruction. This decoupled design lets us optimize generation through the AR model's true distribution without affecting reconstruction quality, which we further formalize from an ELBO perspective. On ImageNet 256x256, Prologue-Base reduces gFID from 21.01 to 10.75 without classifier-free guidance while keeping reconstruction almost unchanged; Prologue-Large reaches a competitive rFID of 0.99 and gFID of 1.46 using a standard AR model without auxiliary semantic supervision. Interestingly, driven only by AR gradients, prologue tokens exhibit emergent semantic structure: linear probing on 16 prologue tokens reaches 35.88% Top-1, far above the 23.71% of the first 16 tokens from a standard tokenizer; resampling with fixed prologue tokens preserves a similar high-level semantic layout. Our results suggest a new direction: generation quality can be improved by introducing a separate learned generative representation while leaving the original representation intact.",
+  "link": "https://arxiv.org/abs/2605.06137",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358931Z"
+}

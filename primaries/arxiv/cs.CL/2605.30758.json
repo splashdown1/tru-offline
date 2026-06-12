@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30758",
+  "title": "Pairwise Reference Alignment as a Model-Level Ordinal Observable",
+  "abstract": "Pairwise preference data is widely used in language-model evaluation and alignment, often for model ranking, reward modeling, or preference optimization. This note formulates a more basic measurement question: given a reference distribution of pairwise preferences, what model-level quantity is estimated when we test whether a model ranks preferred responses above rejected responses?\n  We define pairwise reference alignment as an ordinal observable induced by a model scoring function. Given a reference pair distribution $P_{\\mathrm{pair}}$ over triples $(x,y^+,y^-)$, and a scalar model score $S_M(x,y)$, we define the alignment observable as the probability that the model-induced ordering agrees with the reference preference ordering. We further define a centered order-parameter-like statistic and discuss a margin-based extension. The resulting quantities admit simple finite-sample estimators and concentration bounds under independent sampling assumptions.\n  This note does not introduce a new benchmark. It provides a conceptual and statistical formulation for pairwise reference alignment, clarifies the role of the reference pair distribution, and distinguishes the general ordinal observable from scoring choices such as normalized log-probability or energy-based scores. We also provide an initial empirical study on Qwen2.5 models and RewardBench, where the proposed statistics increase with model size and instruction tuning and vary across reference-pair subsets as predicted by the formulation.",
+  "link": "https://arxiv.org/abs/2605.30758",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405719Z"
+}

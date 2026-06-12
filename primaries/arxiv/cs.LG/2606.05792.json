@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.05792",
+  "title": "Can LLMs Write Correct TLA+ Specifications? Evaluating Natural-Language-to-TLA+ Generation",
+  "abstract": "TLA+ has supported industrial verification at companies such as Amazon and Microsoft, yet writing correct TLA+ specifications from natural language still requires time and expertise, which limits adoption. LLMs show promise, but no prior study measures whether they produce semantically correct TLA+ specifications from natural language. This paper presents the first systematic evaluation of LLM-based TLA+ specification synthesis from natural language. Our study evaluates 30 LLMs across eight families on a curated dataset of 205 TLA+ specifications: 25 open-weight models across four prompting strategies (2,600 runs) and 5 proprietary models under few-shot prompting (130 runs), all validated by the SANY parser and TLC model checker. LLMs achieve up to 26.6% syntactic correctness but only 8.6% semantic correctness, with successes exclusive to progressive prompting. Results show that model size does not predict quality, e.g., DeepSeek r1:8b outperforms its 70B variant across all strategies, which suggests the importance of reasoning alignment for formal languages. Code-specialized models consistently underperform due to negative transfer from mainstream language training. We identify five recurring hallucination categories, all traceable to specific training data biases. These results suggest that current LLMs do not generate reliable TLA+ specifications without expert oversight. We release the evaluation framework, code, and dataset to support reproducibility and future research.",
+  "link": "https://arxiv.org/abs/2606.05792",
+  "category": "cs.LG",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.LO",
+    "cs.SE"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883291+00:00"
+}

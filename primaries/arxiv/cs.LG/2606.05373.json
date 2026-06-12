@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05373",
+  "title": "Evidence-Guided Neural Architecture Selection under Uncertainty for Subject-Specific Blood Glucose Forecasting",
+  "abstract": "Reliable neural architecture selection is an open challenge in time-series forecasting under limited, noisy, and heterogeneous data, where standard heuristic architecture design and validation approaches fail to ensure accurate and reliable prediction and generalization. We propose EVIDENT (EVidence-based IDEntification of Neural archiTectures), a framework for architecture selection that integrates Bayesian training, evidence-based ranking, and task-specific validation under uncertainty. The framework explores the candidate architecture pool and identifies the lowest-capacity model that satisfies a prescribed validation criterion. We demonstrate this method using temporal convolutional networks (TCNs) for individualized blood glucose forecasting in type 1 diabetes patients. The results show that EVIDENT systematically rejects both under- and over-parameterized TCN architectures on population-level diabetes data, while identifying models that generalize reliably to unseen patients. When multiple architectures are competitive, the framework further supports plausibility-weighted ensemble predictions that enhance predictive performance. Compared with a random-search baseline, EVIDENT identified smaller architectures with more consistent forecasting performance on unseen patients. These findings establish EVIDENT as a strategy to neural architecture discovery, enabling reliable model selection for high-consequence forecasting in data-limited and heterogeneous settings.",
+  "link": "https://arxiv.org/abs/2606.05373",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "physics.bio-ph"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881986+00:00"
+}

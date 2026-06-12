@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2511.18454",
+  "title": "AttnRegDeepLab: A Two-Stage Decoupled Framework for Interpretable Embryo Fragmentation Grading",
+  "abstract": "Embryo fragmentation is a morphological indicator critical for evaluating developmental potential in In Vitro Fertilization (IVF). However, manual grading is subjective and inefficient, while existing deep learning solutions often lack clinical explainability or suffer from accumulated errors in segmentation area estimation. To address these issues, this study proposes AttnRegDeepLab (Attention-Guided Regression DeepLab), a framework characterized by dual-branch Multi-Task Learning (MTL). A vanilla DeepLabV3+ decoder is modified by integrating Attention Gates into its skip connections, explicitly suppressing cytoplasmic noise to preserve contour details. Furthermore, a Multi-Scale Regression Head is introduced with a Feature Injection mechanism to propagate global grading priors into the segmentation task, rectifying systematic quantification errors. A 2-stage decoupled training strategy is proposed to address the gradient conflict in MTL. Also, a range-based loss is designed to leverage weakly labeled data. Our method achieves robust grading precision while maintaining excellent segmentation accuracy (Dice coefficient =0.729), in contrast to the end-to-end counterpart that might minimize grading error at the expense of contour integrity. This work provides a clinically interpretable solution that balances visual fidelity and quantitative precision.",
+  "link": "https://arxiv.org/abs/2511.18454",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098927+00:00"
+}

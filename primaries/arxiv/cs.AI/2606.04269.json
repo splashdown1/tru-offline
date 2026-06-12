@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04269",
+  "title": "Instant-Fold: In-Context Imitation Learning for Deformable Object Manipulation",
+  "abstract": "Deformable object manipulation (DOM) is challenging due to high-dimensional, partially observable states that evolve through long-horizon, topology-changing interactions with multiple valid manipulation modes. We introduce Instant-Fold, an in-context imitation learning framework for DOM. Given a single human demonstration, our policy infers and executes diverse manipulation modes directly from the demonstration, including variations in spatial execution and ordering, without requiring gradient updates. Our approach first learns deformation-aware visual representations via temporal contrastive pretraining, after which a flow-matching transformer policy conditioned on the demonstration predicts actions to execute the intended manipulation mode. Trained entirely in simulation, Instant-Fold generalizes across diverse folding modes and transfers zero-shot to real-world settings without additional data collection or finetuning. Videos are available at https://instant-fold.github.io.",
+  "link": "https://arxiv.org/abs/2606.04269",
+  "category": "cs.AI",
+  "categories": [
+    "cs.RO",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098068+00:00"
+}

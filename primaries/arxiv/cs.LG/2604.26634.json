@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2604.26634",
+  "title": "Electricity price forecasting across Norway's five bidding zones in the post-crisis era",
+  "abstract": "Norway's electricity market is heavily dominated by hydropower, but the 2021-2022 energy crisis and stronger integration with Continental Europe have fundamentally altered price formation, reducing the reliability of forecasting models calibrated on historical data. Despite the critical need for updated models, a unified benchmark evaluating feature contributions across all structurally diverse Norwegian bidding zones remains lacking. Here we present a comprehensive evaluation of one-step-ahead forecasting of the Nord Pool market across all five Norwegian bidding zones. We constructed a multimodal hourly dataset spanning 2019-2025 and evaluated eight forecasting model families, including Light Gradient Boosting Machine (LightGBM), autoregressive models with exogenous variables, and advanced deep learning architectures, using a strictly causal test set. We implemented robust rolling-origin backtesting, leave-one-group-out feature ablation, and conditional regime analysis to dissect model performance and feature utility. Our results show that LightGBM achieves the best performance in every zone, with mean absolute error ranging from 1.60 to 5.58 euros per megawatt-hour, while a ridge-regularized autoregressive model with exogenous variables remains a highly competitive linear benchmark in northern zones. Feature ablation reveals that models relying solely on lagged prices and calendar variables achieve high accuracy and often match or closely approach the performance of the full multimodal model. However, conditional regime analysis demonstrates that external features like reservoir levels and gas prices remain crucial to stratify forecast errors, which consistently increase under stressed market regimes. This highlights the practical value of model interpretability and regime awareness for decision makers facing structural changes in market dynamics.",
+  "link": "https://arxiv.org/abs/2604.26634",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "econ.GN",
+    "q-fin.EC",
+    "stat.AP"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884190+00:00"
+}

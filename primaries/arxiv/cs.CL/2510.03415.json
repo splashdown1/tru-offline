@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2510.03415",
+  "title": "LLMs Lean on Priors, Not Programming Language Semantics",
+  "abstract": "Recent work asks whether large language models (LLMs) condition their reasoning on explicit rules rather than statistical regularities from pretraining. Program execution provides a canonical instance: formal semantics define behavior through symbolic transition rules that can be systematically altered under distribution shift. We investigate whether LLMs can condition their reasoning on formal semantics through program execution and introduce PLSemanticsBench, pairing featherweight C programs with two semantic systems -- small-step operational semantics and K semantics -- and probing four capabilities: composing rules for final states, selecting rules when state is unmutated, sustaining such conditioning over long traces, and following supplied rules under novel semantics. To decouple semantic reasoning from syntactic familiarity, we redefine familiar operators to induce symbol-meaning conflict and introduce novel symbols defined only through the supplied rules, and stress-test models on Human-Written, LLM-Translated, and Fuzzer-Generated splits with increasing structural complexity. Across 11 frontier LLMs, strong final-state accuracy under standard semantics (up to 90%) drops sharply -- by as much as 40--60% points -- under semantic mutations and increasing structural complexity. Only a handful of models achieve non-zero long-horizon conditioning accuracy, and even the best systems reach just 35%. Together, these results suggest that contemporary LLMs often rely on pretrained lexical associations rather than systematically conditioning on supplied formal rules. PLSemanticsBench is publicly available at https://EngineeringSoftware.github.io/PLSemanticsBench.",
+  "link": "https://arxiv.org/abs/2510.03415",
+  "category": "cs.CL",
+  "categories": [
+    "cs.PL",
+    "cs.AI",
+    "cs.CL",
+    "cs.SE"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406292Z"
+}

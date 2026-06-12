@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05200",
+  "title": "A differentiable machine learning small-angle X-ray scattering analysis framework for structure elucidation of lipid nanoparticles",
+  "abstract": "Lipid nanoparticles (LNPs) are efficient delivery systems for negatively charged nucleic acids. Their multi-component architecture yields a core-shell structure. Small-angle X-ray scattering (SAXS) is an important characterization technique for LNPs, but recovering internal structure and size distribution from SAXS is an inverse problem with non-unique solutions. Realistic models are often too expensive for systematic exploration. We introduce a machine-learning-accelerated, differentiable framework for SAXS analysis of heterogeneous, polydisperse LNPs. The forward model combines a core-shell particle with a Gaussian random-field interior, a neural surrogate for the monodisperse SAXS map, and a differentiable layer integrating over particle-size distributions. The surrogate reduces prediction cost by four orders of magnitude, while differentiability enables large-scale multi-start fitting and ensemble identifiability analysis. Applied to synthetic and experimental MC3 LNP data, the framework shows that near-identical SAXS fits can arise from distinct parameter modes, with the experimental fits dominated by a trade-off between size-distribution and interior-structure parameters.",
+  "link": "https://arxiv.org/abs/2606.05200",
+  "category": "cs.LG",
+  "categories": [
+    "physics.comp-ph",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882812+00:00"
+}

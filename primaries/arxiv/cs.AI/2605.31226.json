@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31226",
+  "title": "What changes after deployment? A survey on On-device Learning in TinyML",
+  "abstract": "Machine learning models on microcontroller-class devices (TinyML) face a fundamental challenge: post-deployment distribution change undermines static models. On-device learning (ODL) addresses this by running the learning process directly on the device. The existing literature has not characterized how distribution change occurs or how different change types require different solutions. Approximately 70 ODL works are surveyed under one principle: the distribution change regime. The survey analyzes how different types of distribution change influence the applications addressable on-device, the hardware employed, and the structure of the solutions. A persistent gap between methodological benchmarks and real-world deployment scenarios is also identified.",
+  "link": "https://arxiv.org/abs/2605.31226",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358332Z"
+}

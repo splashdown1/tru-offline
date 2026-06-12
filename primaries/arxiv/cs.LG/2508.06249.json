@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2508.06249",
+  "title": "In-Training Defenses against Emergent Misalignment in Language Models",
+  "abstract": "Fine-tuning lets practitioners repurpose aligned large language models (LLMs) for new domains, yet recent work reveals emergent misalignment (EM): Even a small, domain-specific fine-tune can induce harmful behaviors far outside the target domain. Even in the case where model weights are hidden behind a fine-tuning API, this gives attackers inadvertent access to a broadly misaligned model in a way that can be hard to detect from the fine-tuning data alone. We present the first systematic study of in-training safeguards against EM that are practical for providers who expose fine-tuning via an API: We evaluate whether they a) prevent broad misalignment, b) allow narrow misalignment, c) learn well on benign tasks, and d) remain coherent. We investigate five training regularization interventions: (i) KL-divergence regularization toward a safe reference model, (ii) $\\ell_2$ distance in feature space, (iii) preventive steering with an evil persona vector, (iv) interleaving training examples from a general instruct-tuning dataset and (v) inoculation prompting. We demonstrate that selecting interleaving data by the perplexity gap between aligned and misaligned models yields the best results overall.",
+  "link": "https://arxiv.org/abs/2508.06249",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883924+00:00"
+}

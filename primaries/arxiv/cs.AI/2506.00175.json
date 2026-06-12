@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2506.00175",
+  "title": "Who Gets Credit or Blame? Attributing Accountability in Modern AI Systems",
+  "abstract": "Modern AI systems are typically developed through multiple stages-pretraining, fine-tuning rounds, and subsequent adaptation or alignment, where each stage builds on the previous ones and updates the model in distinct ways. This raises a critical question of accountability: when a deployed model succeeds or fails, which stage is responsible, and to what extent? We pose the accountability attribution problem for tracing model behavior back to specific stages of the model development process. To address this challenge, we propose a general framework that answers counterfactual questions about stage effects: how would the model's behavior have changed if the updates from a particular stage had not occurred? Within this framework, we introduce estimators that efficiently quantify stage effects without retraining the model, accounting for both the data and key aspects of model optimization dynamics, including learning rate schedules, momentum, and weight decay. We demonstrate that our approach successfully quantifies the accountability of each stage to the model's behavior. Based on the attribution results, our method can identify and remove spurious correlations learned during image classification and text toxicity detection tasks that were developed across multiple stages. Our approach provides a practical tool for model analysis and represents a significant step toward more accountable AI development.",
+  "link": "https://arxiv.org/abs/2506.00175",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358663Z"
+}

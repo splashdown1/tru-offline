@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2510.14904",
+  "title": "CaptionFormer: Unified Segmentation, Tracking, and Captioning for Spatio-Temporal Objects",
+  "abstract": "Dense Video Object Captioning (DVOC) is the task of jointly detecting, tracking, and captioning object trajectories in a video, requiring the ability to understand spatio-temporal details and describe them in natural language. Due to the complexity of the task and the high cost associated with manual annotation, previous approaches resort to training strategies with limited data, potentially leading to suboptimal performance. To circumvent this issue, we propose to generate captions about spatio-temporally localized entities leveraging a state-of-the-art VLM, and extend the LVIS and LV-VIS datasets with our synthetic captions (LVISCap and LV-VISCap). Moreover, we introduce an end-to-end model, CaptionFormer, capable of jointly detecting, segmenting, tracking and captioning object trajectories. CaptionFormer achieves state-of-the-art DVOC results on three existing benchmarks, VidSTG, VLN and BenSMOT. The datasets and code are available at https://www.gabriel.fiastre.fr/captionformer/.",
+  "link": "https://arxiv.org/abs/2510.14904",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308308Z"
+}

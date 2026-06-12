@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06353",
+  "title": "Maximising the Set-Piece Return: Optimising Football Corner Tactics with Graph Reinforcement Learning",
+  "abstract": "Machine learning is increasingly employed for the evaluation of football tactics. However, existing approaches focus on characterising historical actions or analyst-specified counterfactual scenarios. In this work, we seek to go beyond the imitation of historically observed patterns towards discovering new generalisable player configurations and strategies. To tackle this, we focus on optimising corner kick routines, and formulate a decision-making problem in which a central policy makes adjustments to attacking player positions and velocities to maximise first contact shot probability. Unlike classic optimisation that solves for isolated setups, we contribute a reinforcement learning architecture operating on graph-structured data that yields a general policy for adjusting arbitrary starting player positions. Evaluated on over 3,000 Premier League corners, our approach strongly outperforms baseline optimisation techniques under matched inference budgets. Our results suggest that graph reinforcement learning can shift set-piece analysis from historical evaluation and imitation towards reward-driven tactical discovery.",
+  "link": "https://arxiv.org/abs/2606.06353",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882706+00:00"
+}

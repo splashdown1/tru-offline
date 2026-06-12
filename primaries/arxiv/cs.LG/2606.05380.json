@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05380",
+  "title": "Learning-Augmented Online Minimization with Dual Predictions",
+  "abstract": "We present learning-augmented algorithms for two general classes of online minimization problems: metrical task systems and laminar set cover. Both algorithms achieve improved theoretical guarantees using machine-learned predictions of an optimal solution to the dual linear program. Unlike optimal primal solutions, which can change drastically under tiny instance perturbations, these dual solutions are much more stable, which ensures the existence of good (and learnable) predictions for families of similar instances. While previous work has used dual predictions in offline settings and for online maximization problems, our algorithms are, to the best of our knowledge, the first demonstration that such dual predictions can be effective for online minimization. Our theoretical results are complemented by experiments on the $k$-server problem and the parking permit problem.",
+  "link": "https://arxiv.org/abs/2606.05380",
+  "category": "cs.LG",
+  "categories": [
+    "cs.DS",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883021+00:00"
+}

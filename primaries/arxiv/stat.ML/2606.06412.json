@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.06412",
+  "title": "Nonreversible Gauge Fields in Fokker--Planck Dynamics: Supersymmetric Hamiltonians and Learned Finite Forces",
+  "abstract": "We formulate stationary-density-preserving nonreversible perturbations of Fokker--Planck dynamics as gauge fields that deform relaxation spectra while leaving the invariant state fixed. When detailed balance holds, a similarity transformation maps the reversible Fokker--Planck operator to a Witten-Laplacian-type supersymmetric Hamiltonian; nonreversible gauges then appear as non-Hermitian perturbations that preserve the zero mode but modify the excited spectrum. This operator viewpoint gives a common language for relaxation gaps, circulating probability currents, hypocoercive acceleration, and finite control costs. We represent admissible gauge currents by antisymmetric tensor fields and identify the detailed-balance-violating Ohzeki--Ichiki force as a constant symplectic example whose infinite-strength limit is Hamiltonian dynamics. The continuous-time spectral gap alone does not select a finite gauge strength, so we introduce a finite-time regularized objective and an actor--critic procedure for learning the gauge. An exactly solvable anisotropic Gaussian Ornstein--Uhlenbeck benchmark separates the spectral transition from the finite-time optimum and shows that the learned gauge recovers the Lyapunov-equation optimum. A double-well benchmark then illustrates the same constrained selection in a nonconvex metastable landscape. Stochastic gradient methods enter this framework as physically relevant Fokker--Planck systems: mini-batch noise acts as an effective diffusion tensor, and adaptive methods such as Adam correspond to metric choices with possible nonequilibrium currents.",
+  "link": "https://arxiv.org/abs/2606.06412",
+  "category": "stat.ML",
+  "categories": [
+    "cond-mat.dis-nn",
+    "quant-ph",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728761+00:00"
+}

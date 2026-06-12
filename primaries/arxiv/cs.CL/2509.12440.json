@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2509.12440",
+  "title": "MedFact: Benchmarking the Fact-Checking Capabilities of Large Language Models on Chinese Medical Texts",
+  "abstract": "Deploying Large Language Models (LLMs) in medical applications requires fact-checking capabilities to ensure patient safety and regulatory compliance. We introduce MedFact, a challenging Chinese medical fact-checking benchmark with 2,116 expert-annotated instances from diverse real-world texts, spanning 13 specialties, 8 error types, 4 writing styles, and 5 difficulty levels. Construction uses a hybrid AI-human framework where iterative expert feedback refines AI-driven, multi-criteria filtering to ensure high quality and difficulty. We evaluate 20 leading LLMs on veracity classification and error localization, and results show models often determine if text contains errors but struggle to localize them precisely, with top performers falling short of human performance. Our analysis reveals the \"over-criticism\" phenomenon, a tendency for models to misidentify correct information as erroneous, which can be exacerbated by advanced reasoning techniques such as multi-agent collaboration and inference-time scaling. MedFact highlights the challenges of deploying medical LLMs and provides resources to develop factually reliable medical AI systems.",
+  "link": "https://arxiv.org/abs/2509.12440",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406119Z"
+}

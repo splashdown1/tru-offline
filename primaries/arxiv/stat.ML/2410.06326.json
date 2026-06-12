@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2410.06326",
+  "title": "Convex Estimation of Gaussian Graphical Regression Models with Covariates",
+  "abstract": "Gaussian graphical models (GGMs) are widely used to recover the conditional independence structure among random variables. Recent work has sought to incorporate auxiliary covariates to improve estimation, particularly in applications such as co-expression quantitative trait locus (eQTL) studies, where both gene expression levels and their conditional dependence structure may be influenced by genetic variants. Existing approaches to covariate-adjusted GGMs either restrict covariate effects to the mean structure or lead to nonconvex formulations when jointly estimating the mean and precision matrix. In this paper, we propose a convex framework that simultaneously estimates the covariate-adjusted mean and precision matrix via a natural parametrization of the multivariate Gaussian likelihood. The resulting formulation enables joint convex optimization and yields improved theoretical guarantees under high-dimensional scaling, where the sparsity and dimension of covariates grow with the sample size. We support our theoretical findings with numerical simulations and demonstrate the practical utility of the proposed method through a reanalysis of an eQTL study of glioblastoma multiforme and an analysis of diet on the human gut microbiome.",
+  "link": "https://arxiv.org/abs/2410.06326",
+  "category": "stat.ML",
+  "categories": [
+    "stat.ME",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.729021+00:00"
+}

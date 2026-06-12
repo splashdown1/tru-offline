@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.13430",
+  "title": "Towards a holistic understanding of Selection Bias for Causal Effect Identification",
+  "abstract": "Selection bias is pervasive in observational studies. For example, large scale biobanks data can exhibit ``healthy volunteer bias'' when respondents are healthier and of higher socio-economic status than the population they are meant to represent. Recovering causal effects from such sub-population is an important problem in causal inference, as estimating average treatment effects (ATE) from selected populations can result in a severely biased estimate of the ATE from the whole population. In this paper, we investigate the identifiability of the ATE under selection bias. We provide necessary and sufficient conditions for ATE identifiability, leveraging weak assumptions on probability classes to characterize propensity score and selection probability, . Compared to previous works, our results extend existing graphical identifiability criteria and offer a more comprehensive understanding of causal effect identification with strictly weaker conditions in the presence of selection bias.",
+  "link": "https://arxiv.org/abs/2605.13430",
+  "category": "cs.AI",
+  "categories": [
+    "stat.ME",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358950Z"
+}

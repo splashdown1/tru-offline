@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2602.12386",
+  "title": "Provably Convergent Actor-Critic for MARL through Risk-aversion",
+  "abstract": "Learning stationary policies in infinite-horizon general-sum Markov games (MGs) remains a fundamental open problem in Multi-Agent Reinforcement Learning (MARL). While stationary strategies are preferred for their practicality, computing stationary forms of classic game-theoretic equilibria is computationally intractable -- a stark contrast to the comparative ease of solving single-agent RL or zero-sum games. To bridge this gap, we study Risk-averse Quantal response Equilibria (RQE), a solution concept rooted in behavioral game theory that incorporates risk aversion and bounded rationality. We demonstrate that RQE possesses strong regularity conditions that make it uniquely amenable to learning in MGs. We propose a novel single-timescale Actor-Critic algorithm characterized by a faster actor and a slower critic. Leveraging the regularity of RQE, we prove that this approach achieves global convergence with finite-sample guarantees. We empirically validate our algorithm in several environments to demonstrate superior convergence properties compared to risk-neutral baselines.",
+  "link": "https://arxiv.org/abs/2602.12386",
+  "category": "cs.LG",
+  "categories": [
+    "cs.MA",
+    "cs.GT",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308380Z"
+}

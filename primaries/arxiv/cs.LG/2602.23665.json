@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2602.23665",
+  "title": "Geodesic Semantic Search: Cartographic Navigation of Citation Graphs with Learned Local Riemannian Maps",
+  "abstract": "We present Geodesic Semantic Search (GSS), a retrieval system that learns node-specific Riemannian metrics on citation graphs to enable geometry-aware semantic search. Unlike standard embedding-based retrieval that relies on fixed Euclidean distances, \\gss{} learns a low-rank metric tensor $\\mL_i \\in \\R^{d \\times r}$ at each node, inducing a local positive semi-definite metric $\\mG_i = \\mL_i \\mL_i^\\top + \\eps \\mI$. This parameterization guarantees valid metrics while keeping the model tractable. Retrieval proceeds via multi-source Dijkstra on the learned geodesic distances, followed by Maximal Marginal Relevance reranking and path coherence filtering. On citation prediction benchmarks with 169K arXiv papers, GSS achieves 23\\% relative improvement in Recall@20 over SPECTER+FAISS baselines. We provide a Bridge Recovery Guarantee characterizing when geodesic retrieval qualitatively outperforms direct similarity, a margin separation result connecting training loss to retrieval quality, and characterize the expressiveness of low-rank metric parameterization. Our hierarchical coarse-to-fine search with k-means pooling reduces computational cost by $4\\times$ while maintaining 97\\% retrieval quality.",
+  "link": "https://arxiv.org/abs/2602.23665",
+  "category": "cs.LG",
+  "categories": [
+    "cs.IR",
+    "cs.LG",
+    "cs.SI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884623+00:00"
+}

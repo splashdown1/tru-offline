@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05268",
+  "title": "Aggregating LLM-Based Weak Verifiers for Spatial Layout Generation",
+  "abstract": "We present a pipeline for building and aggregating task-specific, LLM-generated weak (imperfect) verifiers into a strong verifier for spatial layout domains. Given a task description, our pipeline asks an LLM to synthesize a collection of verifier programs using a layout verification DSL. Each individual LLM-generated verifier usually provides an imperfect check for a match between the layout and the corresponding task description. We show that by aggregating the responses of many such verifiers we can produce a stronger verifier. Moreover, by applying techniques from weak learning, our pipeline can learn how to aggregate the weak verifiers from a very sparse set of human labeled example layouts (about 10). We find that the strong verifiers produced by our pipeline outperform the status-quo approach of using a set of LLM judges to directly check whether a layout matches a task description, raising F1-scores by up to 7X across a variety of 3D room layout and 2D poster design tasks. We also demonstrate that verifier-guided layout generation using natural language feedback from our strong verifiers improves layout quality of a base layout generator by up to 66.2% according to a human evaluator.",
+  "link": "https://arxiv.org/abs/2606.05268",
+  "category": "cs.LG",
+  "categories": [
+    "cs.GR",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882913+00:00"
+}

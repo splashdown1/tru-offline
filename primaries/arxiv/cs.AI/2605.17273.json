@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.17273",
+  "title": "Position: State-of-the-Art Claims Require State-of-the-Art Evidence",
+  "abstract": "State-of-the-Art (SOTA) claims pervade Artificial Intelligence (AI) and Machine Learning (ML) research. These claims rest on benchmark evaluations, where models are ranked by aggregate scores across tasks. Public benchmarks or leaderboards are the most visible instance, but the same structure appears in paper tables throughout the literature. However, such minimal evidence often cannot support these strong claims. We identify a widespread claim-evidence gap in AI benchmarking. Claiming SOTA carries implicit assumptions beyond mean score superiority, suggesting that a model meaningfully outperforms alternatives across most tasks. However, a marginal improvement in the mean score merely indicates a top average rank rather than true superiority. Analyzing ten cross-domain benchmarks from public leaderboards, we found that in more than half of top-model comparisons, at least one commonly assumed property of superiority does not hold. These properties include meaningful effect size, consistency across tasks, or robustness to dataset removal. Instead, aggregate gains are frequently driven by outlier datasets. This fragility persists even in benchmarks with many tasks. We argue that claim language should reflect the strength of the underlying evidence. This requires no additional experiments, only honest reporting of what results actually show, enabling more precise and interpretable comparisons across models.",
+  "link": "https://arxiv.org/abs/2605.17273",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099285+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2412.11800",
+  "title": "Scalable Temporal Anomaly Causality Discovery in Large Systems: Achieving Computational Efficiency with Binary Anomaly Flag Data",
+  "abstract": "Extracting anomaly causality facilitates diagnostics once monitoring systems detect system faults. Identifying anomaly causes in large systems involves investigating a broader set of monitoring variables across multiple subsystems. However, learning graphical causal models (GCMs) comes with a significant computational burden that restrains the applicability of most existing methods in real-time and large-scale deployments. In addition, modern monitoring applications for large systems often generate large amounts of binary alarm flags, and the distinct characteristics of binary anomaly data -- the meaning of state transition and data sparsity -- challenge existing causality learning mechanisms. This study proposes an anomaly causal discovery approach (AnomalyCD), addressing the accuracy and computational challenges of generating GCMs from temporal binary flag datasets. The AnomalyCD presents several strategies, such as anomaly data-aware causality testing, sparse data and prior link compression, and edge pruning adjustment approaches. We validate the performance of the approach on two datasets: monitoring sensor data from the readout-box system of the Compact Muon Solenoid experiment at CERN, and a public dataset from an information technology monitoring system. The results on temporal GCMs demonstrate a considerable reduction of computation overhead and a moderate enhancement of accuracy on the binary anomaly datasets. Code: https://github.com/muleina/AnomalyCD .",
+  "link": "https://arxiv.org/abs/2412.11800",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883850+00:00"
+}

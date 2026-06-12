@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2509.24901",
+  "title": "Unmute the Patch Tokens: Rethinking Probing in Multi-Label Audio Classification",
+  "abstract": "Although probing frozen models has become a standard evaluation paradigm, self-supervised learning in audio defaults to fine-tuning when pursuing state-of-the-art on AudioSet. A key reason is that global pooling creates an information bottleneck causing linear probes to misrepresent the embedding quality: The $\\texttt{cls}$-token discards crucial token information about dispersed, localized events in audio. This weakness is rooted in the mismatch between the pretraining objective (globally) and the downstream task (localized). Across a comprehensive benchmark of 13 datasets and 6 spectrogram-based encoders, we investigate the global pooling bottleneck. We introduce binarized prototypical probes: a lightweight and simple pooling method that learns prototypes to perform class-wise information aggregation. Despite its simplicity, our method notably outperforms linear and attentive probing. Our work establishes probing as a competitive and efficient paradigm for evaluating audio SSL models, challenging the reliance on costly fine-tuning.",
+  "link": "https://arxiv.org/abs/2509.24901",
+  "category": "cs.LG",
+  "categories": [
+    "cs.SD",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308293Z"
+}

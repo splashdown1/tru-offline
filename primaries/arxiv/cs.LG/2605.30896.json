@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30896",
+  "title": "Zero Collapse: A Failure Mode of Policy Gradient Methods in Discontinuous Reward Environments",
+  "abstract": "Bidding in repeated auctions is a central challenge for reinforcement learning (RL), combining continuous control with the strategic complexities of digital advertising. While policy gradient and value-based methods seem well-suited for these settings, they often struggle with the discontinuous, \"cliff-like\" nature of auction reward landscapes. In a first-price auction, for example, a bidder receives zero reward until they cross a specific threshold, after which the reward decreases as the bid increases. This creates a landscape of flat, zero-reward regions separated by sharp boundaries.\n  We identify a fundamental failure mode in this setting termed \"zero collapse.\" We show that stochastic exploration and gradient-based updates can cause policies to overshoot optimal high-reward regions and enter flat, zero-reward regimes. Once there, the lack of an informative gradient signal makes recovery extremely sample-inefficient, effectively trapping the agent. We find that actor-critic methods are particularly susceptible, as biased value estimates can accelerate this movement toward unstable regions.\n  Our contributions include: (1) a mechanistic explanation of how discontinuous rewards lead to vanishing signals and zero collapse; (2) an analysis of the interaction between policy stochasticity and step size; and (3) an empirical demonstration of this phenomenon across REINFORCE and actor-critic variants. We propose practical mitigation strategies involving initialization and architectural choices to improve stability. Finally, we introduce a formal RL framework for auction environments highlighting their unique structural properties.",
+  "link": "https://arxiv.org/abs/2605.30896",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306851Z"
+}

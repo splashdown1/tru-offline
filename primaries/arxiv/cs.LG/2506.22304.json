@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2506.22304",
+  "title": "Unfolding Generative Flows with Koopman Operators: Trajectory-Preserving Linearization",
+  "abstract": "Continuous Normalizing Flows (CNFs) enable elegant generative modeling but remain bottlenecked by their iterative nature requiring costly sampling and lacking interpretability of the intermediate states. Recent approaches accelerate sampling by straightening trajectories or distilling endpoints, yet they treat the original generative process as a black box, discarding the teacher's intermediate dynamics. We propose a fundamentally different perspective: globally linearizing flow dynamics via Koopman theory to achieve trajectory-preserving linearization. By lifting a pre-trained Conditional Flow Matching (CFM) model into a higher-dimensional Koopman space, we represent its evolution with a single linear operator. Crucially, unlike boundary-only distillation, our method enforces infinitesimal consistency with the teacher's vector field along the full generative path. We derive a practical, simulation-free training objective that ensures this global alignment and yields two key benefits. First, sampling becomes one-step and parallelizable. Second, because the linearization is faithful to the dynamics, the Koopman operator provides unique insights on the generation. We demonstrate that this structure enables novel applications unavailable in prior approaches, including discovery of semantically coherent editing directions, inversion with a teacher-aligned linear operator and class-conditional spectral signatures. Empirically, our approach achieves competitive sample quality, while enabling spectral analysis and control of the entire trajectories of generative flows.",
+  "link": "https://arxiv.org/abs/2506.22304",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307617Z"
+}

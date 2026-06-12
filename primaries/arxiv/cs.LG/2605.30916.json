@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30916",
+  "title": "Welfare, Improvability, and Variance: A Principal-Agent Approach to Optimal Benchmark Item Aggregation",
+  "abstract": "AI benchmarks have well-documented limitations, with prior work examining contamination, saturation, and construct underspecification. Aggregation has received far less attention: benchmarks are typically summarized by uniformly averaging item-level scores, implicitly treating every test item as equally valuable. We model benchmarking as a multitask principal-agent game and show that the welfare loss from a benchmark is determined jointly by three item-level primitives: alignment with normative welfare priorities, marginal improvability, and performance variance. We translate the theory into an audit framework that ranks items along each of these three axes, and apply it to OLMES items using WORKBank for welfare, the EvoLM 4B suite for improvability, and the PolyPythias 410M panel for variance. The framework surfaces items that are Pareto-inferior within OLMES subject to a pro-worker welfare operationalization. All code is available at https://github.com/stair-lab/principal-agent-benchmarks.",
+  "link": "https://arxiv.org/abs/2605.30916",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.GT",
+    "econ.TH"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306867Z"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05602",
+  "title": "Fix the Mind, Not the Move: Interpretable AI Assistance via Knowledge-Gap Localization",
+  "abstract": "AI assistants in human-AI collaboration often correct suboptimal human actions through behavioral feedback (e.g., alerts or steering-wheel nudges in assistive driving). Such interventions can mitigate immediate errors, but long-term improvement requires addressing the underlying misconceptions that cause repeated mistakes. We introduce SENSEI, a framework that infers user misconceptions from interaction behavior and provides targeted, minimal yet sufficient suggestions to correct them. Our approach departs from action- or trajectory-level interventions by operating over a structured knowledge representation to localize and correct the sources of erroneous behavior. Across three long-horizon tasks with diverse misconceptions and corresponding behaviors, SENSEI demonstrates zero-shot compositional generalization, disentangling multiple overlapping misconceptions despite training only on single-misconception cases. A user study further shows that our method identifies real human misconceptions and provides effective guidance that improves long-horizon task performance, successfully correcting $90\\%$ of student misconceptions. Code and project page are available at https://misoshiruseijin.github.io/SENSEI/.",
+  "link": "https://arxiv.org/abs/2606.05602",
+  "category": "cs.LG",
+  "categories": [
+    "cs.AI",
+    "cs.HC",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883119+00:00"
+}

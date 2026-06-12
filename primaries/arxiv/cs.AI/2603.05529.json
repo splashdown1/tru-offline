@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.05529",
+  "title": "NGDBench: Towards Neural Graph Data Management",
+  "abstract": "Data critical to real-world decision-making is increasingly found within organizations. Such data is heterogeneous, constantly evolving, and only imperfectly captured. However, current data management systems remain largely passive, retrieving what is explicitly stored while offering limited support for uncovering implicit structure or reasoning under noise, incompleteness, and continuous updates. We argue that next-generation data management requires neural capabilities, which can uncover complex latent relationships, distinguish reliable signals from noise, and remain consistent as the underlying data state evolves. To support this direction, we introduce NGDBench, a benchmark across five domains that unifies structured and unstructured sources. NGDBench adopts a graph view because graphs provide a flexible abstraction for modeling complex systems, capturing latent relationships, and subsuming structured formats such as relational tables. Each instance pairs a clean latent graph with a realistically perturbed observed graph. NGDBench supports full Cypher queries and dynamic data management operations. Evaluations of state-of-the-art Text-to-Cypher by LLMs and GraphRAG pipelines reveal that current neural query methods remain sensitive to noise and struggle with dynamic state tracking, highlighting the need for resilient, inference-capable data management. Our code is available at https://github.com/HKUST-KnowComp/NGDBench.",
+  "link": "https://arxiv.org/abs/2603.05529",
+  "category": "cs.AI",
+  "categories": [
+    "cs.DB",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358859Z"
+}

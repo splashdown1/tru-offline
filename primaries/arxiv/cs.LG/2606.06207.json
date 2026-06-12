@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06207",
+  "title": "Unsupervised Pattern Analysis in Japanese Veterinary Toxicology: A Regulatory-Compliant Framework for Cross-Species Risk Assessment",
+  "abstract": "Veterinary pharmacovigilance systems are essential for monitoring adverse drug events (ADEs), yet existing approaches often fail to capture region-specific toxicity patterns shaped by local biological and regulatory contexts. In Japan, these challenges are amplified by species-specific metabolic differences and reporting practices defined by the Ministry of Agriculture, Forestry, and Fisheries (MAFF). Most prior work relies on prediction-oriented models, limiting mechanistic interpretability. This study proposes a regulatory-integrated unsupervised framework for pattern discovery using the National Veterinary Assay Laboratory (NVAL) database. ADEs are encoded into organ system-aligned representations and adjusted for species-specific reporting biases, enabling cross-species comparison. Similarity-based clustering and dimensionality reduction are applied to identify latent toxicity structures. Analysis of 4,120 high-confidence ADE reports (9,080 drug-ADE combinations) identified three significant species clusters (p < 0.01), including hepatic-dominant patterns in companion animals (0.42 $\\pm$ 0.06), renal toxicity in ruminants (0.39 $\\pm$ 0.07), and dermatological sensitivity in sheep (0.35 $\\pm$ 0.07). Drug-level clustering achieved 83% alignment with pharmacological classes, while cosine similarity outperformed alternative metrics (silhouette score: 0.48; cluster precision: 87%). Regulatory validation showed strong agreement with established classifications. These findings demonstrate that regulation-aligned unsupervised analysis can uncover biologically meaningful, region-specific toxicity patterns, providing an interpretable and scalable framework for veterinary drug safety assessment.",
+  "link": "https://arxiv.org/abs/2606.06207",
+  "category": "cs.LG",
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883552+00:00"
+}

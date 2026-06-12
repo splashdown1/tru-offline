@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05649",
+  "title": "Diff2SP: Diffusion Models for Correlated Scenario Generation in Stochastic Programming",
+  "abstract": "Scenario generation is a critical component in stochastic programming (SP), as it directly influences the quality of decision-making under uncertainty. Existing approaches predominantly rely on either sampling-based techniques or supervised learning using neural networks. Sampling-based techniques often struggle to capture complex dependencies and rare but plausible events, while supervised learning requires fixed input-output pairs for training and is limited in its ability to generate a wide variety of realistic scenarios that are not restricted by predefined patterns or rules. To address these limitations, we introduce Diff2SP, a diffusion-based generative framework that incorporates downstream optimization objectives directly into scenario generation. Unlike conventional methods that treat scenario generation and decision-making as separate steps, Diff2SP embeds stochastic optimization into the training process, enabling the generation of scenarios that are both statistically coherent and decision-aware. To formally justify this optimization-aware design, we establish a regret bounds that link distributional accuracy to decision quality, and establish sample complexity guarantees showing faster convergence than traditional generative models such as GANs. Empirical results on both synthetic and power-system datasets validate these theoretical insights, demonstrating that Diff2SP consistently improves both statistical fidelity and downstream optimization outcomes.",
+  "link": "https://arxiv.org/abs/2606.05649",
+  "category": "cs.LG",
+  "categories": [
+    "stat.CO",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883148+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2510.15814",
+  "title": "On Universality of Deep Equivariant Networks",
+  "abstract": "Universality results for equivariant neural networks remain rare. Those that do exist typically hold only in restrictive settings: either they rely on regular or higher-order tensor representations, leading to impractically high-dimensional hidden spaces, or they target specialized architectures, often confined to the invariant setting. This work develops a more general account. For invariant networks, we establish a universality theorem under separation constraints, showing that the addition of a fully connected readout layer secures approximation within the class of separation-constrained continuous functions. For equivariant networks, where results are even scarcer, we demonstrate that standard separability notions are inadequate and introduce the sharper criterion of $\\textit{entry-wise separability}$. We show that with sufficient depth or with the addition of appropriate readout layers, equivariant networks attain universality within the entry-wise separable regime. Together with prior results showing the failure of universality for shallow models, our findings identify depth and readout layers as a decisive mechanism for universality, additionally offering a unified perspective that subsumes and extends earlier specialized results.",
+  "link": "https://arxiv.org/abs/2510.15814",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884537+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05191",
+  "title": "PyCC.id: A package for hypothesis-driven equation discovery with structural identifiability",
+  "abstract": "Data-driven equation discovery is fundamentally an inverse problem that seeks to infer the governing differential equations of a system directly from time-series measurements. A known issue is the ill-conditioned nature of the inverse problem, which frequently produces multiple mathematical models that fit the data similarly well. One path to address this issue is by incorporating known hypotheses and constraints into the training phase beforehand. While this approach effectively reduces the search space, it still results in multiple candidate models, forcing practitioners to rely on post-hoc manual filtering based on their own domain expertise. A recent approach incorporates structural `skeletons' inspired by characteristic curves (CCs), defining a hypothesis-driven methodology. In this methodology, practitioners define a skeleton, which is associated with a family of ordinary differential equations (ODEs), and then add their hypotheses and priors based on their domain knowledge to refine the obtained model iteratively. An important advantage of this approach is that some skeletons have demonstrable structural identifiability properties, which are useful for checking whether the skeleton is correct or should be discarded. Furthermore, this formalism enables the use of multiple equation discovery paradigms due to its modularity (such as neural networks, symbolic regression, and sparse regression). In this work, we present the Python library PyCC, which condenses these efforts into a flexible tool that allows researchers and engineers to seamlessly define their skeletons and hypotheses to discover ODEs from time-dependent data.",
+  "link": "https://arxiv.org/abs/2606.05191",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "eess.SP"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881830+00:00"
+}

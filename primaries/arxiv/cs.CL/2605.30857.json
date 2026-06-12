@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30857",
+  "title": "MADS: Model-Aware Diverse Core Set Selection for Instruction Tuning",
+  "abstract": "Instruction fine-tuning is employed to enhance the instruction-following ability of large language models (LLMs). As the amount of instruction fine-tuning data increases, selecting the optimal core set becomes particularly important. However, ensuring the diversity of the core set remains a significant challenge. Existing methods predominantly distinguish different training data based on the text features themselves, decoupled from LLMs' own understanding and representation of the data. To address this issue, we propose a Model-Aware Diverse Core Set Selection method, which distinguishes data features based on the neural activation states during LLM inference. This approach serves as an efficient instantiation of coverage-based selection using model-intrinsic activation features to ensure the diversity in the core set. We extensively evaluate our method on six benchmarks that cover five distinct tasks. In our method, the core set selected by the 3B-parameter LLM performs effectively when utilized to fine-tune larger models with 7B, 8B, and 13B parameters. Experimental results on the Alpaca-GPT4 dataset, which comprises 52K instruction-response pairs, show that the core set, sized at 15\\% of the original dataset and selected by Llama-3.2-3B-Instruct, achieves an average improvement of 2.5\\% when fine-tuning four larger base models compared with training on the full dataset. The experimental results demonstrate that our method enhances model performance on multiple downstream tasks while reducing data requirements.",
+  "link": "https://arxiv.org/abs/2605.30857",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405747Z"
+}

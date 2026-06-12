@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.06046",
+  "title": "Learning solution operators of PDEs with sparse approximation methods",
+  "abstract": "We investigate the approximation of solution operators for partial differential equations (PDEs) using sparse high-dimensional techniques. Building on a dimension-incremental framework, we combine product basis expansions with sparse recovery methods, specifically orthogonal matching pursuit (OMP), to substantially reduce the required sample size compared with a previously considered cubature-based approach. We evaluate the resulting method numerically on several examples, comparing it against both cubature-based sparse approximation and Fourier neural operators in terms of accuracy, runtime, and sample size. The experiments show that our approach considerably reduces the number of required PDE solves relative to its predecessor while maintaining competitive accuracy, particularly when the solution admits a sparse representation in the chosen basis. Furthermore, the recovered sparse index sets yield interpretable insights into the relevant variables and parameter interactions.",
+  "link": "https://arxiv.org/abs/2606.06046",
+  "category": "cs.LG",
+  "categories": [
+    "math.NA",
+    "cs.LG",
+    "cs.NA"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883491+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2605.30913",
+  "title": "Toxic HallucinAItions: Perturbing Prompts and Tracing LLM Circuits",
+  "abstract": "Large language models (LLMs) are increasingly deployed in conversational settings where user tone ranges from polite to adversarial or toxic, yet less is known about whether toxic language in otherwise semantically equivalent prompts can degrade factual reliability. We study how lexical and tone-based prompt perturbations affect the factual reliability of LLMs. Using controlled prompt variations across polite, random, and three toxicity levels, we evaluate five LLMs on ARC-Easy, GSM8K, and MMLU. We find that toxic lexical perturbations consistently reduce factual accuracy and increase uncertainty, while polite phrasing yields limited and inconsistent changes. To examine whether these answer inconsistencies correspond to internal changes, we conduct attribution-graph analyses of model activations and influences. We find that increasing toxicity selectively amplifies perturbation-sensitive variant nodes while relatively stable core reasoning nodes remain more invariant. These findings position prompt tone as a critical dimension of LLM reliability and provide behavioral and mechanistic evidence that surface-level lexical variation can alter factual outputs and internal computation.",
+  "link": "https://arxiv.org/abs/2605.30913",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.CY",
+    "cs.HC"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405760Z"
+}

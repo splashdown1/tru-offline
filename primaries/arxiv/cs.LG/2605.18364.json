@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.18364",
+  "title": "Proximal basin hopping: global optimization with guarantees",
+  "abstract": "Global optimization is a challenging problem, with plenty of algorithms displaying empirical success, but scarce theoretical backing. In this work, we propose a new theoretical framework called Proximal Basin Hopping (PBH), carefully tailored to combine proximal optimization and local minimization. We use it to construct a practical algorithm that converges to the global minimizer with high probability, when using a finite amount of samples. Proximal Basin Hopping outperforms well known algorithms with theoretical backing on standard synthetic hard functions, and real problems such as fitting scaling laws for deep learning. Furthermore, the higher the dimension, the better the performance gap.",
+  "link": "https://arxiv.org/abs/2605.18364",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308095Z"
+}

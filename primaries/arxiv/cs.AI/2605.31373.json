@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31373",
+  "title": "Scaling Higher-Order Graph Learning with Maximal Clique Complexes",
+  "abstract": "Graph neural networks (GNNs) are limited to modeling pairwise interactions, while higher-order models based on cell complexes achieve greater expressivity but often suffer from poor scalability. We introduce simplified and factored cellular Weisfeiler Leman tests (sCWL and fCWL), which preserve the expressivity of the CWL test while improving computational efficiency. We further introduce the maximal clique complex, enabling scalable CWNs with reduced time and memory complexity while retaining strong empirical performance. To avoid explicit clique enumeration, we propose CliqueWalk, a biased random walk that samples maximal cliques and scales linearly with graph size. These contributions yield a scalable topological learning framework for higher-order graph representation.",
+  "link": "https://arxiv.org/abs/2605.31373",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358403Z"
+}

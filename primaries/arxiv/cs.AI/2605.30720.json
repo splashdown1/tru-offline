@@ -1,0 +1,15 @@
+{
+  "arxiv_id": "2605.30720",
+  "title": "Kalimati Vegetable Price Index Forecasting with a Momentum Corrected Online Stacking Ensemble",
+  "abstract": "Forecasting agricultural commodity prices in emerging economies is difficult due to high volatility, frequent supply disruptions, and strong cultural influences on demand. This study introduces the Kalimati Vegetable Price Index (KVPI), a new inverse-volatility weighted composite index that aggregates 135 daily wholesale commodities from Kathmandu over ten years (2013-2023). By creating a stable macro-level signal, the KVPI reduces the noise inherent in modelling individual crops. A rich set of 64 causally valid features was developed, including festival lead-lag effects, rolling statistics, and calendar variables. Fourteen forecasting models spanning statistical, tree-based, deep learning, hybrid, and transformer architectures were rigorously evaluated across short (7-day), medium (14- and 30-day), and long-term (90-day) horizons. Tree-based ensembles proved notably robust, while classical statistical models and complex transformers struggled with the noisy dataset. The proposed Momentum-Corrected Online Stacking Ensemble achieved the strongest performance, yielding a Root Mean Square Error (RMSE) of 1.771, an exceptionally low Mean Absolute Percentage Error (MAPE) of 0.68%, and explaining 84.5% of the variance (R-squared = 0.845) at the 90-day horizon. This open-source pipeline provides policymakers and supply chain actors in Nepal and similar markets with a practical, reliable tool for anticipating price movements and strengthening food security.",
+  "link": "https://arxiv.org/abs/2605.30720",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "econ.GN",
+    "q-fin.EC",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358105Z"
+}

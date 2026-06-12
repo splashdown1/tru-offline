@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05434",
+  "title": "Selective-Advantage Entropy-Adaptive Horizon GRPO: Asymmetric Token-Level Discounting for Efficient Reinforcement Learning of Language Models",
+  "abstract": "Group Relative Policy Optimisation (GRPO) has emerged as an effective reinforcement-learning algorithm for aligning language models on reasoning tasks, but it treats every token position and every sampled rollout symmetrically. We introduce two complementary extensions: (i) Adaptive-Horizon GRPO (AH-GRPO), which weights each token's policy gradient using a cumulative entropy-based discount that reduces the effective horizon when the model is uncertain, and (ii) Selective-Advantage AH-GRPO (SA-AH-GRPO), which applies this discounting only to negative-advantage rollouts, leaving positive-advantage, successful trajectories unattenuated. We evaluate standard GRPO with alpha = 0, AH-GRPO with alpha = 0.5, and SA-AH-GRPO with alpha = 0.5 on the GSM8K mathematical reasoning benchmark using both Qwen 2.5-1.5B-Instruct and Qwen 2.5-3B-Instruct fine-tuned with LoRA. On the 3B model, SA-AH-GRPO achieves Pass@1 = 0.858 at its peak at step 30 and maintains 0.846 at 180 steps, with training variance reduced to 0.0246, a 3.6 times reduction relative to GRPO while matching its peak accuracy. On the 1.5B model, SA-AH-GRPO achieves a peak Pass@1 of 0.686, improving over the zero-shot baseline of 0.637. Our analysis shows that asymmetric discounting preserves the full gradient signal on correct solutions, prevents entropy collapse, and substantially stabilises training, suggesting a principled inductive bias for reinforcement learning with verifiable rewards on structured generation tasks.",
+  "link": "https://arxiv.org/abs/2606.05434",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882032+00:00"
+}

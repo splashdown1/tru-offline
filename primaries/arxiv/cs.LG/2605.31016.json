@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31016",
+  "title": "An Efficient and Scalable Graph Condensation with Structure-Preserving",
+  "abstract": "Graph condensation (GC) is pivotal for enabling Graph Neural Networks (GNNs) deployment in resource-constrained scenarios by compressing large-scale graphs into compact synthetic counterparts. Existing GC methods commonly suffer from computational inefficiency due to coupled optimization as well as encountering poor generalization across GNN architectures. To address these challenges, this study proposes an Efficient and Scalable Graph Condensation with Structure-Preserving (SP-ESGC), which possesses a decoupled design that separates node condensation from graph structure generation. Specifically, it first employs heat kernel feature propagation to generate node representation via spectral graph theory-inspired diffusion. Further, a novel hybrid clustering strategy is designed to extracts discriminative intra-class centroids from the node representation. Finally, a pre-trained edge predictor infers transferable structural patterns from the original graph, ensuring accurate synthetic graph generation. Extensive experiments on real-world graph datasets demonstrate that the proposed SP-ESGC implementes a precise GC with significantly high computational efficiency. Moreover, SP-ESGC also generalizes well across diverse GNN architectures.",
+  "link": "https://arxiv.org/abs/2605.31016",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306909Z"
+}

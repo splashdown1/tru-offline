@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31245",
+  "title": "Toward Identifiable Sparse Autoencoders",
+  "abstract": "Recently, sparse autoencoders (SAEs) have emerged as an attractive tool for interpreting and interacting with representations in practical neural networks. While it is common empirical folklore, we also show theoretically that SAEs are highly unstable: different training runs are likely to produce different concept dictionaries and sparse codes. We characterize the model properties that hinder the stability of real-world SAEs, and address each of these problems through minimal changes to the architecture and training procedure. Together, these changes yield two versions of an \\textbf{i}dentifiable SAE (iSAE), a variant of the standard TopK SAE with lower reconstruction error and improved stability. We explain this improvement theoretically by connecting SAEs with traditional dictionary learning approaches, and show that the dictionaries learned in practice satisfy an approximate restricted isometry condition, rendering the corresponding sparse codes in those models near-identifiable.",
+  "link": "https://arxiv.org/abs/2605.31245",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307034Z"
+}

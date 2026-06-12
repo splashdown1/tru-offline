@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.00747",
+  "title": "SkyShield: Occupancy as a Safety Interface for Low-Altitude UAV Autonomy",
+  "abstract": "For low-altitude Unmanned Aerial Vehicle (UAV) autonomy, 3D spatial understanding is not merely a perception objective, but the safety interface between human instructions and physical flight. In human-scale urban airspace below 20 meters, thin geometry, occlusions, vegetation, and urban clutter define whether an aerial agent can safely enter the space ahead. However, existing UAV datasets mainly provide 2D annotations or 3D boxes, while driving-oriented occupancy benchmarks assume stable ground-level sensor rigs. Both miss the defining regime of low-altitude flight: a front-facing monocular camera observing occupied and free space from a moving aerial body with frame-wise changing 6-DoF pose and camera extrinsics. To bridge this gap, we introduce SkyShield, to the best of our knowledge the first front-view monocular semantic occupancy benchmark for urban UAV flight below 20 meters. Built on CARLA, SkyShield contains 36K front-view UAV samples across diverse urban scenes and weather conditions, pairing each image with frame-wise 6-DoF UAV pose, frame-wise dynamic camera geometry, UAV states, and front-frustum semantic occupancy labels. We further propose KAR-mIoU, a UAV-centric and dynamics-aware metric that re-weights voxel-level evaluation by kinematic reachability and time-to-collision, revealing safety-critical risks hidden by conventional mIoU. To tackle this challenging new setting, we provide SkyOcc, a geometry-first monocular baseline that integrates frame-wise UAV attitude into projection, fuses temporal occupancy features, and applies safety-prior optimization to preserve sparse collision-critical structures. Together, SkyShield, KAR-mIoU, and SkyOcc establish occupancy as a safety interface for low-altitude aerial autonomy. Code and dataset will be released publicly.",
+  "link": "https://arxiv.org/abs/2606.00747",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099380+00:00"
+}

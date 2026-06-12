@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05258",
+  "title": "Harnessing Source Heterogeneity for Cluster-Structured Transfer Learning",
+  "abstract": "Transfer learning is a natural strategy when a target population has limited data but multiple related auxiliary sources are available. A central difficulty is source heterogeneity: auxiliary sources may not be equally useful, and their usefulness may vary in a structured, cluster-like fashion. Existing transfer-learning methods often reduce source selection to a binary informative/non-informative decision, overlooking subgroups of sources with differential transferability. Motivated by a suicide-risk study using data from the Connecticut Hospital Information Management Exchange (CHIME), comprising 636,758 patients across 27 hospitals, we propose Trans-GLMC, a cluster-structured transfer-learning procedure for generalized linear models. The CHIME setting illustrates the core challenge: hospital-specific risk models are unstable because suicide attempts are rare at any single facility, whereas indiscriminate pooling across hospitals can obscure facility-level differences in patient mix and risk profiles. Trans-GLMC first constructs a coefficient-based distance among the target and candidate sources to recover latent source clusters. It then combines global fusion, within-cluster refinement, and target debiasing to produce an estimator that adapts to the detected structure. We establish a non-asymptotic error bound that improves over its unclustered counterpart whenever a meaningful target cluster exists and matches the unclustered rate up to constants otherwise. In simulations and in the CHIME study, Trans-GLMC improves facility-specific prediction, identifies interpretable communities of hospitals with mutual transferability, and recovers clinically coherent suicide-risk factors.",
+  "link": "https://arxiv.org/abs/2606.05258",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "stat.AP"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882882+00:00"
+}

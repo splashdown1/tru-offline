@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31143",
+  "title": "Extending the UXR Point of View Pyramid: A Generative AI-Augmented Methodology for Human-Centred AI Systems",
+  "abstract": "Rising household debt and cost-of-living pressures in the United Kingdom have intensified the role of AI-driven financial technologies in mediating credit assessment, repayment structuring, and debt support services. These systems increasingly shape consequential financial decisions, yet they operate within complex socio-technical environments characterised by regulatory constraint, algorithmic opacity, and heightened vulnerability risk. User Experience Research (UXR) Points of View (PoVs) are critical in translating heterogeneous research evidence into strategic direction for product and governance decisions. However, the existing UXR PoV framework was not designed for AI-mediated financial systems where interpretability, fairness, and accountability are central. This paper extends the UXR PoV pyramid into an AI-augmented methodological framework for Human-Centred AI debt management technologies in the UK financial services context. We formalise (1) an AI-Augmented PoV Pyramid, (2) a structured prompt architecture for synthesis and hypothesis generation, and (3) an AI-enabled Playbook Card system that embeds Generative AI into UXR workflows while preserving traceability and ethical oversight. Generative AI is positioned not as an analytic authority, but as an epistemic support mechanism subject to human validation and regulatory awareness. By grounding the framework in debt management technologies, including affordability assessment, repayment planning, and financial stress prediction systems, this work advances UXR methodology for high-stakes financial AI environments and contributes to the evolution of responsible, AI-powered UXR practice within the CHI community.",
+  "link": "https://arxiv.org/abs/2605.31143",
+  "category": "cs.AI",
+  "categories": [
+    "cs.HC",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358278Z"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05185",
+  "title": "Drishti AI-Event Guardian: An Intelligent Real-Time Crowd Monitoring and Emergency Response System for Mass Gathering Events",
+  "abstract": "Mass gathering events are associated with critical safety incidents caused by insufficient crowd monitoring and inadequate emergency response coordination. Traditional surveillance systems lack intelligent analytics, resulting in delayed threat identification, poor resource deployment, and weak support for vulnerable individuals during dense public assemblies. This paper presents Drishti AI-Event Guardian, an intelligent crowd management framework using deep learning for public safety enhancement. The architecture combines multimodal data from CCTV networks and UAV platforms, processed by models on Google Vertex AI infrastructure. Core methods include real-time crowd density estimation using YOLOv8, spatiotemporal anomaly detection, and predictive crowd-flow modeling through gradient-boosted regression. Drishti also integrates four modules: (i) facial recognition for missing person identification with crowd-wide notification; (ii) medical emergency reporting with automated dispatch; (iii) a conversational AI chatbot for reports and complaints; and (iv) an intelligent guard reallocation engine that dynamically reassigns personnel in response to crowd density changes. The system is evaluated on two scenarios: the Kumbh Mela gathering and the RCB Victory Parade event, achieving crowd density estimation MAE of 3.2 persons/m2, anomaly detection F1-score of 0.91, facial recognition precision of 0.93, and median alert latency of 111 ms. Predictive congestion modeling provides five-minute forecasts with MAPE of 8.3%, enabling preemptive intervention. The chatbot resolved 89% of incident filings without human operators, while guard reallocation reduced responder deployment latency by 34% versus manual reassignment. Results demonstrate a shift from passive surveillance toward active crowd intelligence and scalable foundation for events from local gatherings to mega festivals.",
+  "link": "https://arxiv.org/abs/2606.05185",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CY",
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882802+00:00"
+}

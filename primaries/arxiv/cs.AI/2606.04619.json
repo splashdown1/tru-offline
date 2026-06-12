@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04619",
+  "title": "A Normative Intermediate Representation for ASP-Based Compliance Reasoning",
+  "abstract": "We propose MONIR, a Modalized-Output Normative Intermediate Representation for ASP-based compliance reasoning. Its core fragment has a staged operational semantics, while MONIR-ASP provides an executable compilation and extensions for external functions, temporal rules, and stable-model reasoning. We instantiate the framework on Chinese ADAS regulations and standards with an LLM-assisted pipeline. Experiments evaluate extraction quality and the efficiency of modular and incremental ASP solving.",
+  "link": "https://arxiv.org/abs/2606.04619",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.LO"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097522+00:00"
+}

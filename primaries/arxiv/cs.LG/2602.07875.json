@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.07875",
+  "title": "Harpoon: Generalised Manifold Guidance for Conditional Tabular Diffusion",
+  "abstract": "Generating tabular data under conditions is critical to applications requiring precise control over the generative process. Existing methods rely on training-time strategies that do not generalise to unseen constraints during inference, and struggle to handle conditional tasks beyond tabular imputation. While manifold theory offers a principled way to guide generation, current formulations are tied to specific inference-time objectives and are limited to continuous domains. We extend manifold theory to tabular data and expand its scope to handle diverse inference-time objectives. On this foundation, we introduce HARPOON, a tabular diffusion method that guides unconstrained samples along the manifold geometry to satisfy diverse tabular conditions at inference. We validate our theoretical contributions empirically on tasks such as imputation and enforcing inequality constraints, demonstrating HARPOON'S strong performance across diverse datasets and the practical benefits of manifold-aware guidance for tabular data. Code URL: https://github.com/adis98/Harpoon",
+  "link": "https://arxiv.org/abs/2602.07875",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884048+00:00"
+}

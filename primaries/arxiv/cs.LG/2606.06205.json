@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06205",
+  "title": "Non-Negative Matrix Factorization for Event Data",
+  "abstract": "Continuous-time event data, in which entities emit instantaneous events over time, arises naturally across many domains such as neuroscience, seismology, and social networks. Non-negative matrix factorization (NMF) is a natural tool to uncover interpretable structure in such data, but it has so far only been applied after binning or smoothing the entity-level counting measures. This preprocessing step comes with the risk of erasing entity-level heterogeneities and fine-grained temporal features. In this paper, we introduce EventNMF, a continuous-time non-negative factorization model that operates directly on event times: each entity's events are modeled as a Poisson process whose intensity factorizes through a non-negative B-spline basis, and a simple estimation procedure recovers interpretable temporal templates shared across entities. The resulting method is mathematically principled, easy to implement, and computationally efficient. We further show that standard binned-count approaches arise as the special case of degree-zero splines, explore bias-variance tradeoffs and compare against existing methods on a synthetic latent factor model, and demonstrate the effectiveness of EventNMF on several real-world applications.",
+  "link": "https://arxiv.org/abs/2606.06205",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882605+00:00"
+}

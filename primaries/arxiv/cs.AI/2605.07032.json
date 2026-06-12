@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.07032",
+  "title": "A Systematic Investigation of RL-Jailbreaking in LLMs",
+  "abstract": "The evolution of generative models from next-token predictors to autonomous engines of complex systems necessitates rigorous safety hardening. Adversarial jailbreaking, the strategic manipulation of models to elicit harmful output, remains a primary threat to safe deployment. While Reinforcement Learning (RL) frames jailbreaking as a multi-step attack through sequential optimization, a mechanistic understanding of why the framework succeeds remains incomplete. To fill this gap, we present the first systematic decomposition of RL jailbreaking. We deconstruct the framework into problem formalization (reward function, action space, episode length), and algorithmic measures (RL algorithm, training data, reward-shaping) to identify the structural determinants of adversarial success. Our results reveal that the RL-jailbreaker successfully compromised all targeted models and safeguards. Through this first-of-its-kind analysis, we demonstrate that environment formalization, specifically dense rewards and extended episode lengths, is the primary driver of jailbreaking success. This work provides a tool for improving RL-jailbreaker efficiency and, ultimately, harden generative models resistant to RL-based attacks.",
+  "link": "https://arxiv.org/abs/2605.07032",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099249+00:00"
+}

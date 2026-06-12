@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31210",
+  "title": "Simulation of collision avoidance behavior in crowd movement by data-driven approach",
+  "abstract": "Crowd movement simulation is essential for pedestrian safety management and facility layout optimization. Data-driven models enhance trajectory prediction accuracy under Euclidean metrics, yet they suffer from excessively high collision rates, especially in bidirectional and multidirectional flows. In this paper, we establish a novel data-driven crowd simulation model that incorporates the pedestrian collision mechanism into the loss function to reduce collisions. A new lateral-acceleration-based collision loss function and a Voronoi-based motion feature extraction approach are proposed. The model is based on a Generative Adversarial Network (GAN) architecture and is termed CPGAN (Collision-Penalized GAN). We evaluate CPGAN in bidirectional flow scenarios, which involve frequent collision avoidance behaviors. Results show that the proposed lateral-acceleration-based collision loss significantly reduces opposite-direction pedestrian collision rates to levels comparable with controlled experiments. CPGAN effectively simulates bidirectional flow, reproducing lane formation and N-t curves. The research outcomes can provide inspiration for integrating pedestrian dynamics mechanisms into loss functions in data-driven crowd simulation.",
+  "link": "https://arxiv.org/abs/2605.31210",
+  "category": "cs.AI",
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358320Z"
+}

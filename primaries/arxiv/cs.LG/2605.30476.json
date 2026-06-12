@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2605.30476",
+  "title": "Local Differential Privacy with Correlated Noise Achieves Central-DP Optimal Cost",
+  "abstract": "We study privately estimating the sum of $n$ user-held values in the presence of an honest-but-curious server. This motivates requiring privacy not only at data release but also throughout server-side computation. We therefore adopt the local (pure) differential privacy model, in which each user transmits a noise-perturbed value. It is well known that independent local noise typically incurs a substantial utility loss compared to the centralized model, where noise is added only after aggregation.\n  We show that this gap is not fundamental. By carefully designing correlations among the locally added noise variables, we construct $\\varepsilon$-DP mechanisms whose estimation cost matches the optimal cost achievable in the centralized setting, up to an arbitrarily small error.",
+  "link": "https://arxiv.org/abs/2605.30476",
+  "category": "cs.LG",
+  "categories": [
+    "cs.IT",
+    "cs.CR",
+    "cs.LG",
+    "math.IT"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307258Z"
+}

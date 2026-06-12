@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30451",
+  "title": "VeriGate: Verifier-Gated Step-Level Supervision for GRPO",
+  "abstract": "Group Relative Policy Optimization (GRPO) is an effective recipe for training reasoning models with verifier-based outcome rewards, but its supervision is sparse: when all sampled trajectories for a prompt receive the same verifier reward, the group-relative advantage collapses to zero and learning stalls. Outcome-only rewards also provide no step-level credit assignment, limiting exploration and making it harder to learn robust reasoning. We present VeriGate (Verifier-Gated Step-Level GRPO), a verifier-gated extension of GRPO that addresses these limitations with three design choices. First, VeriGate keeps the verifier in charge whenever verifier rewards induce a meaningful preference among sampled trajectories, and uses process supervision only when verifier rewards are degenerate. Second, instead of collapsing Process Reward Model (PRM) step scores into a single trajectory reward, VeriGate converts them into future-cumulated rewards to assign continuation-aware credit. Third, VeriGate transforms these rewards into group-normalized token-level advantages, restoring informative gradients and fine-grained credit assignment while remaining less susceptible to reward hacking than methods that optimize aggregated PRM scores. Empirically, training on MATH with 1.5B and 7B Qwen2.5-Instruct models and evaluating on six reasoning benchmarks, VeriGate improves average accuracy by about 20% and 12% for 1.5B and 7B models respectively, substantially reduces zero-gradient failures, decreases reward-hacking behavior, and improves reasoning quality relative to outcome-only GRPO and PRM-as-outcome baselines.",
+  "link": "https://arxiv.org/abs/2605.30451",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306581Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31044",
+  "title": "The Challenges of Using Reinforcement Learning for Controlling Industrial Energy Systems",
+  "abstract": "Reinforcement learning has shown promising results for optimizing the control of industrial energy systems, yet most existing studies remain limited to the application in simulation environments. We investigate the challenges of deploying reinforcement learning in a real-world industrial energy system, considering a thermal heating network as a use case. We formulate the task as a Markov Decision Process and systematically analyze the associated challenges along the structure of the formal description, including partial observability, action space design, reward design, and the simulation-to-reality gap. The challenges are grounded in an existing real-world deployment, where reinforcement learning achieves operational stability but shows a significant performance gap compared to simulation.",
+  "link": "https://arxiv.org/abs/2605.31044",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306926Z"
+}

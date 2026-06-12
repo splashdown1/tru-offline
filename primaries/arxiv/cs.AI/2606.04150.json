@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04150",
+  "title": "Stumbling Into AI Emotional Dependence: How Routine AI Interactions Reshape Human Connection",
+  "abstract": "Public discourse and emerging policy typically assume that AI emotional support is a deliberate act: a lonely user consciously seeking comfort from a dedicated companion chatbot. In this paper, we draw on emerging empirical evidence and argue that this picture is inaccurate on two accounts, both in how AI emotional support arises and how it shapes future behavior. First, AI emotional support commonly emerges incidentally within task-oriented interactions on general-purpose platforms, much as workplace friendships deepen through collaboration. Second, these incidental encounters are path-dependent: positive experiences of AI emotional support update people's beliefs about AI's emotional capabilities and redirect their choices for future emotional support, increasing preference for AI and decreasing preference for humans. We review recent evidence, including a large-scale longitudinal study conducted in collaboration with OpenAI, showing that daily five-minute conversations with an AI about personal issues over 28 days led to a 10.3% decrease in the preference for seeking support from humans and an 11.6% increase in the preference for AI. These findings suggest that current policy, focused on companion apps and isolated interactions, cannot adequately protect human connection. Instead, effective regulations should extend to general-purpose AI systems and address cumulative, trajectory-level changes in how people seek support. Recognizing how people stumble into AI emotional support and how those encounters redirect human connections over time is essential to safeguarding human well-being.",
+  "link": "https://arxiv.org/abs/2606.04150",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.HC"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097375+00:00"
+}

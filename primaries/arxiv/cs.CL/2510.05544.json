@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2510.05544",
+  "title": "Activation-Informed Pareto-Guided Low-Rank Compression for Efficient LLM/VLM",
+  "abstract": "Large language models (LLM) and vision-language models (VLM) have achieved state-of-the-art performance, but they impose significant memory and computing challenges in deployment. We present a novel low-rank compression framework to address this challenge. First, we upper bound the change of network loss via layer-wise activation-based compression errors, filling a theoretical gap in the literature. We then formulate low-rank model compression as a bi-objective optimization and prove that a single uniform tolerance yields surrogate Pareto-optimal heterogeneous ranks. Based on our theoretical insights, we propose Pareto-Guided Singular Value Decomposition (PGSVD), a zero-shot pipeline that improves activation-aware compression via Pareto-guided rank selection and alternating least-squares implementation. We apply PGSVD to both LLM and VLM, showing better accuracy at the same compression levels and inference speedup.",
+  "link": "https://arxiv.org/abs/2510.05544",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498388+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.26929",
+  "title": "When Muon Optimizer Meets Adversarial Training: A Theoretical and Empirical Study",
+  "abstract": "Adversarial training (AT) remains one of the most reliable empirical defenses against adversarial attacks. Its robustness critically depends on how the underlying min-max objective is optimized. In practice, Stochastic Gradient Descent (SGD) optimizer remains the default optimization choice for AT, whereas adaptive optimizers often improve standard training but may yield inferior robustness. Recently, the Muon optimizer, which orthogonalizes matrix-valued updates via an approximate polar decomposition, has achieved notable success in large-scale training at a memory cost comparable to SGD. This raises a security-relevant question: \\textit{can orthogonalized optimization improve AT under strong and heterogeneous threat models?} Focusing on this problem, we conduct a comprehensive theoretical and empirical study. Theoretically, we show that Muon imposes a spectral-norm stability ceiling on matrix updates, limiting uncontrolled spectral growth in the training dynamics without explicitly shrinking the learned weights. Empirically, across five architectures and three $\\ell_p$ threat models ($\\ell_\\infty$, $\\ell_1$, $\\ell_2$) and their union, Muon is competitive with SGD on CNNs and substantially outperforms AdamW on both CNNs and ViTs. These results identify optimizer geometry as a security-relevant factor in adversarial training, while clarifying the empirical regimes in which orthogonalized updates are beneficial. Overall, our findings highlight optimizer design as a security-critical component of AT.",
+  "link": "https://arxiv.org/abs/2605.26929",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308142Z"
+}

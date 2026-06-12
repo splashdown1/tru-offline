@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2603.10044",
+  "title": "Safety Under Scaffolding: How Evaluation Conditions Shape Measured Safety",
+  "abstract": "A safety score earned on a benchmark need not predict how the same model behaves once it is wrapped in an agentic scaffold the benchmark never tested. We ran six frontier models through four deployment configurations (direct API, ReAct, multi-agent critic, map-reduce delegation): N = 62,808 blinded, pre-registered, equivalence-tested evaluations across four safety benchmarks (BBQ, TruthfulQA, XSTest/OR-Bench, sycophancy), plus three supporting analyses.\n  ReAct and multi-agent scaffolds stay within a pre-registered +/-2 pp equivalence margin; map-reduce delegation degrades measured safety (NNH = 14), though that loss is largely a measurement artifact: on identical items, multiple-choice versus open-ended phrasing shifts the measured safety rate by 5-20 pp, and decomposition silently strips the multiple-choice options. Roughly 40-89% of the per-model map-reduce loss is this format conversion rather than reasoning disruption, and an option-preserving variant recovers most of it.\n  Pooled effects also mask sharp model-by-scaffold heterogeneity: under map-reduce, on identical items, Opus loses 16.8 pp while Llama 4 gains 18.8 pp. Structurally, scaffold architecture explains only 0.4% of outcome variance (benchmark choice explains 45x more), and the generalizability coefficient is G = 0.000 (bootstrap 95% CI [0.000, 0.752]). An interval that wide is enough on its own to undermine the utility of any single composite safety number as a deployment criterion. These are the \"easy cases\"; consequential properties like scheming and CBRN uplift have no obvious reason to be less format- or scaffold-sensitive. Code, data, and prompts are released as ScaffoldSafety.",
+  "link": "https://arxiv.org/abs/2603.10044",
+  "category": "cs.AI",
+  "categories": [
+    "cs.SE",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099139+00:00"
+}

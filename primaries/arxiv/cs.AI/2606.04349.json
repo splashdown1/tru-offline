@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04349",
+  "title": "MorphoQuant: Modality-Aware Quantization for Omni-modal Large Language Models",
+  "abstract": "Conventional Post-Training Quantization (PTQ) methods struggle with 4-bit Omni-modal Large Language Models (OLLMs) due to the extreme distribution heterogeneity and disparate outlier patterns across modalities. To address this, we propose MorphoQuant, a modality-aware PTQ framework engineered to preserve cross-modal morphology and mitigate outlier loss. Specifically, we introduce Distribution-Aware Bias Compensation (DABC), which selectively absorbs long-tailed outliers into channel-wise biases. This mechanism safeguards outlier magnitudes while maintaining high-precision discretization for dense inliers, thereby preserving accurate discretization across diverse modal distribution. Complementing this, we propose Morphology-Directed Quantization Function Optimization (MDQFO) to co-optimize the quantization grid with the bias mask, ensuring fine-grained alignment across modalities. Extensive evaluations on Qwen2.5-Omni across benchmarks like MMMU and Video-MME demonstrate our approach's superiority. Notably, our W4A4 model achieves 76.63% on ScienceQA, significantly outperforming SOTA W4A4 methods and surprisingly surpassing the W4A16 baseline, which fully demonstrates the exceptional accuracy-efficiency trade-off of our framework.",
+  "link": "https://arxiv.org/abs/2606.04349",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098141+00:00"
+}

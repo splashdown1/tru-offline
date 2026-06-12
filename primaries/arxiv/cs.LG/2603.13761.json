@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.13761",
+  "title": "Level Up: Defining and Exploiting Transitional Problems for Curriculum Learning",
+  "abstract": "Curriculum learning--ordering training examples in a sequence to aid machine learning--takes inspiration from human learning, but has not gained widespread acceptance. Static strategies for scoring item difficulty rely on indirect proxy scores of varying quality and produce curricula that are not specific to the learner at hand. Dynamic approaches base difficulty estimates on gradient information, requiring considerable extra computation during training. We introduce a novel method for measuring the difficulty of individual problem instances that is calibrated to a series of models of increasing competence, and identify \\emph{transitional problems} that are consistently easier as model ability increases. Applying this method to diverse model series constructed from sets of models that are readily available on many tasks, we find that training on a curriculum that \\emph{levels up} from easier to harder transitional problems most efficiently improves a model to the next tier of competence. These problems induce a natural progression from easier to harder items, which outperforms other training strategies. By measuring difficulty directly relative to model competence, our method yields interpretable problems, learner-specific curricula, and a principled basis for step-by-step improvement.",
+  "link": "https://arxiv.org/abs/2603.13761",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884107+00:00"
+}

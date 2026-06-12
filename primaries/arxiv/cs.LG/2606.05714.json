@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05714",
+  "title": "Hybrid CNN-LSTM Framework for Intelligent Cyber Attack Detection and Prevention in U.S. Critical Digital Infrastructure: A Comparative Machine Learning Evaluation on CSE-CIC-IDS2018",
+  "abstract": "Digital infrastructure is growing at a rapid pace in the United States, and as a result, exposure to advanced cyber threats to critical sectors including healthcare, finance, transportation, energy and government systems is growing. The traditional cybersecurity approaches, including signature-based intrusion detection systems, have become less effective against today's cyber attacks, as they are unable to detect unknown and changing attacks in real time. To overcome these constraints, this research suggests a smart cyber-defense system, which utilizes Artificial Intelligence (AI) and Machine Learning (ML) algorithms in the detection and prevention of cyber attacks in the U.S. digital infrastructure. This study uses the CSE-CIC-IDS2018 dataset, which is a realistic network traffic dataset, along with various cyber attack scenarios, including Distributed Denial of Service (DDoS), brute force attacks, botnets, infiltration attacks, and web-based attacks. A number of machine learning and deep learning models such as Random Forest, XGBoost, Convolutional Neural Networks (CNN) and Long Short-Term Memory (LSTM) networks are implemented and evaluated to be used in identifying malicious network behavior and boosting the accuracy of intrusion detection. The framework proposed combines data preprocessing, feature engineering, real-time traffic monitoring, intelligent threat classification with automated prevention mechanisms to build cybersecurity resilience. E",
+  "link": "https://arxiv.org/abs/2606.05714",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CR",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883252+00:00"
+}

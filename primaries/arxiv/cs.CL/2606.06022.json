@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06022",
+  "title": "Contextualized Prompting For Stance Detection On Social Media",
+  "abstract": "Stance detection on social media is challenging due to short, noisy, and context-dependent language. While large language models (LLMs) show zero-shot generalization, they are typically prompted without contextual information, which limits their ability to interpret ambiguous posts. In this work, we systematically investigate the impact of incorporating real-world (e.g., user biographies), derived (e.g., political party), and LLM-generated (e.g., target descriptions) contextual features into zero-shot prompting for stance detection on Twitter. Our evaluation spans four benchmark datasets, including a new high-quality German Twitter stance dataset. Across multiple LLMs, we find that integrating contextual information improves performance, but only under specific conditions. LLM-generated target descriptions consistently enhance accuracy, while other user metadata has mixed or even detrimental effects. Notably, we show that the inclusion of other tweets by the same user, often beneficial in supervised learning, can impair performance due to input noise. Our qualitative analysis reveals that LLMs struggle to distinguish task-specific useful information from irrelevant context. Our findings highlight both the promise and challenges of prompting with context information in noisy real-world settings. We publish code and data at this \\href{https://github.com/tilmanbeck/stance-context-twitter}{page}.",
+  "link": "https://arxiv.org/abs/2606.06022",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497959+00:00"
+}

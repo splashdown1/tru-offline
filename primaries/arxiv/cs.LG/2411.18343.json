@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2411.18343",
+  "title": "Comprehensive and Reliable Feature Attribution for Diverse Modalities and Models via Frequency-Domain Insights",
+  "abstract": "Personalized Federal learning(PFL) allows clients to cooperatively train a personalized model without disclosing their private dataset. However, PFL suffers from Non-IID, heterogeneous devices, lack of fairness, and unclear contribution which urgently need the interpretability of deep learning model to overcome these challenges. These challenges proposed new demands for interpretability. Low cost, privacy, and detailed information. There is no current interpretability method satisfying them. In this paper, we propose a novel interpretability method \\emph{FreqX} by introducing Signal Processing and Information Theory. Our experiments show that the explanation results of FreqX contain both attribution information and concept information. FreqX runs at least 10 times faster than the baselines which contain concept information.",
+  "link": "https://arxiv.org/abs/2411.18343",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883846+00:00"
+}

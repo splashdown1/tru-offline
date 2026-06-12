@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2510.15614",
+  "title": "HypoSpace: A Diagnostic Benchmark for Set-Valued Hypothesis Generation under Underdetermination and Sublinear Coverage Bounds",
+  "abstract": "Many scientific problems are underdetermined: multiple distinct hypotheses are equally consistent with the same observations. In such settings, effective inference requires not only producing valid explanations, but also systematically exploring and covering the admissible hypothesis set. We introduce HypoSpace, a benchmark that treats large language models (LLMs) as samplers over finite hypothesis spaces and evaluates them on three metrics: Validity, Uniqueness, and Recovery. HypoSpace spans three structured domains (causal graph inference, gravity-constrained 3D voxel reconstruction, and Boolean genetic interaction modeling) with deterministic validators and exactly enumerable solution spaces, plus real-world anchored case studies. Empirically, HypoSpace reveals a capability- and scale-dependent coverage failure: models can maintain high Validity while exhibiting reduced Uniqueness and Recovery as admissible hypothesis spaces become larger or more combinatorial. We further show that the analysis on stratified decoding partially mitigates this collapse, demonstrating HypoSpace's utility as a diagnostic benchmark for set-valued inference. Code is available at: https://github.com/CTT-Pavilion/_HypoSpace.",
+  "link": "https://arxiv.org/abs/2510.15614",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406138Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2508.15851",
+  "title": "DocHop-QA: Towards Multi-Hop Reasoning over Multimodal Document Collections",
+  "abstract": "Despite rapid progress in large language models (LLMs), current QA benchmarks still overlook the core challenge of real-world scientific information seeking: synthesizing multimodal evidence scattered across multiple documents and structural formats. Existing QA benchmarks remain narrow in scope, relying on unimodal text and short-span reasoning that fail to capture the complexity of real information seeking. We introduce DocHop-QA, a benchmark of 11,379 instances for evaluating multimodal, multi-document, multi-hop scientific QA. Built from publicly available PubMed articles, DocHop-QA incorporates textual passages, tables, and layout cues, enabling cross-document inference without explicit hyperlinks. To scale realistic QA construction, we develop an LLM-driven generation pipeline grounded in 11 scientific reasoning concepts, producing diverse and coherent question-answer pairs. To highlight the utility and versatility of the dataset, we propose a task-driven evaluation framework spanning four settings, including generative answering, multimodal evidence integration, and structured index prediction. Experiments show that current models struggle with the long-context and multi-evidence demands of DocHop-QA, establishing it as a rigorous testbed for advancing next-generation scientific QA systems.",
+  "link": "https://arxiv.org/abs/2508.15851",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498384+00:00"
+}

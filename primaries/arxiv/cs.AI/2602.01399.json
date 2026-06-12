@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2602.01399",
+  "title": "An Odd Estimator for Shapley Values",
+  "abstract": "The Shapley value is a ubiquitous framework for attribution in machine learning, encompassing feature importance, data valuation, and causal inference. However, its exact computation is generally intractable, necessitating efficient approximation methods. While the most effective and popular estimators leverage the paired sampling heuristic to reduce estimation error, the theoretical mechanism driving this improvement has remained opaque. In this work, we provide an elegant and fundamental justification for paired sampling: we prove that the Shapley value depends exclusively on the odd component of the set function, and that paired sampling orthogonalizes the regression objective to filter out the irrelevant even component. Leveraging this insight, we propose OddSHAP, a novel consistent estimator that performs polynomial regression solely on the odd subspace. By utilizing the Fourier basis to isolate this subspace and employing a proxy model to identify high-impact interactions, OddSHAP overcomes the combinatorial explosion of higher-order approximations. Through an extensive benchmark, we find that OddSHAP achieves state-of-the-art estimation accuracy at larger sampling budgets.",
+  "link": "https://arxiv.org/abs/2602.01399",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358792Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30991",
+  "title": "Parallel Tempering Initial Sampling in Inference-Time Reward Alignment",
+  "abstract": "Inference-time reward alignment steers pretrained diffusion and flow-based generative models to satisfy user-specified rewards without retraining. Recently, Sequential Monte Carlo (SMC) has emerged as a powerful framework for this task by iteratively filtering and propagating multiple particles. However, we show that standard SMC-based methods often suffer from poor performance because they initialize particles from a standard prior, whereas high-reward regions in complex reward landscapes are extremely rare. Further, we show that even recent reward-aware initial sampling approaches remain vulnerable to getting trapped in local modes, as complex reward landscapes are often multi-modal. To overcome these limitations, we propose PATHS (PArallel Tempering for High-complexity reward Sampling), a novel initialization method that couples multiple sampling chains through parallel tempering. PATHS maintains a ladder of reward-tempered chains and periodically performs Metropolis swaps, enabling efficient exploration across flattened reward landscapes, thereby mitigating the mode-trapping issues. Our analysis reveals that this mechanism substantially enhances the finite-budget exploration of rare, high-reward regions that are typically challenging to sample. Experiments on layout-to-image and quantity-aware generation show that PATHS achieves consistent gains in alignment quality, particularly on complex prompts.",
+  "link": "https://arxiv.org/abs/2605.30991",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306888Z"
+}

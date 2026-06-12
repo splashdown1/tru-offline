@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05728",
+  "title": "DiG-Plan: Mitigating Early Commitment for Tool-Graph Planning via Diffusion Guidance",
+  "abstract": "Generating executable tool plans requires selecting appropriate subsets from tool libraries, a combinatorial search problem with an exponentially large solution space. However, we identify a critical misalignment in predominant approaches: standard autoregressive (AR) decoding suffers from early commitment, where initial token choices rigidly constrain the search trajectory. A controlled study shows that masked denoising raises Pass@10 solution coverage from 0.320 to 0.943 over AR sampling under matched compute. Motivated by this, we propose DiG-Plan, a framework that decouples combinatorial exploration from structural refinement. DiG-Plan employs a diffusion-based proposer to generate diverse tool sets via iterative refinement, followed by an AR refiner for dependency prediction. On TaskBench, DiG-Plan improves over AR baselines by a 10% relative margin, with the largest gains on complex compositional tasks; API-Bank results show that the propose-refine-select design remains effective across domains. Code is available at https://github.com/puddingyeah/DiG-Plan.",
+  "link": "https://arxiv.org/abs/2606.05728",
+  "category": "cs.CL",
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498202+00:00"
+}

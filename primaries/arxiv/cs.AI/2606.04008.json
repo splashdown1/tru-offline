@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04008",
+  "title": "Neural Radiated-Noise Fields for Unmanned Underwater Vehicle Noise Spectrum Prediction in Three-Dimensional Scenes",
+  "abstract": "Radiated noise in unmanned underwater vehicles (UUVs) is an important indicator for characterizing acoustic signatures and evaluating platform performance. To address the strong dependence of traditional physics-based modeling and numerical simulation methods on target structural information and environmental boundary conditions, and their inability to achieve continuous spatial spectrum-response modeling in three-dimensional scenes, this paper proposes a neural radiated-noise field (NRNF). An NRNF represents the UUV radiated-noise spectrum as a continuous function of the three-dimensional UUV position, the three-dimensional hydrophone position, the UUV yaw angle, and the frequency, enabling query-based prediction at arbitrary spatial locations. The proposed method employs sinusoidal encoding for position and frequency, and introduces a learnable three-dimensional scene feature grid to explicitly represent environmental structure and propagation effects. A spectrum-prediction dataset is constructed from lake trials, and the proposed model is evaluated under three settings: horizontal extrapolation, depth extrapolation, and cross-run generalization. Results show that the NRNF achieves an average prediction error of 3.5 dB in the 50 to 5000 Hz band. Horizontal extrapolation is easiest, depth extrapolation is the most challenging, and cross-run generalization is of intermediate difficulty. Further ablation results demonstrate that the scene feature grid significantly improves the prediction stability and spatial generalization of the model.",
+  "link": "https://arxiv.org/abs/2606.04008",
+  "category": "cs.AI",
+  "categories": [
+    "eess.SP",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097772+00:00"
+}

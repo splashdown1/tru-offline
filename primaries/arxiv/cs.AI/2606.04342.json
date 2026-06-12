@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04342",
+  "title": "Expectations vs. Realities: The Cost of MSE-Optimal Forecasting Under Conditional Uncertainty",
+  "abstract": "Multi-step time series forecasting (MSF) is commonly evaluated using point-wise error metrics such as mean squared error (MSE), implicitly treating the conditional mean as a sufficient target. We show that this can be misleading under conditional uncertainty, where the conditional expectation becomes unrepresentative of typical realized values at longer horizons. We formalize this effect through a conditional uncertainty gap and prove that whenever this gap is nonzero, no deterministic predictor can simultaneously minimize MSE and match the marginal distribution of realized futures. This establishes a fundamental, model-agnostic trade-off between point accuracy and marginal realism in MSF evaluation. Using controlled stochastic dynamical systems and nine real-world forecasting benchmarks, we empirically characterize the resulting accuracy--realism frontier and \\textbf{quantify the practical cost of MSE-only model selection}. As conditional uncertainty increases with forecast horizon, the attainable set expands into a pronounced Pareto front, separating MSE-optimal but under-dispersed predictors from methods that trade accuracy for realistic marginal variability. \\textbf{Across benchmarks, we find that small relaxations in MSE ($\\boldsymbol{\\le 5\\%}$) frequently unlock disproportionate gains in marginal realism, with median improvements of $\\mathbf{17.3\\%}$ and gains exceeding $\\mathbf{30\\%}$ in some datasets.} We further show that common forecasting strategies systematically occupy different regions of this frontier: direct multi-output predictors concentrate near the accuracy-optimal extreme, while recursive strategies and sample-based inference favors marginal realism. Together, these results expose a structural failure mode of MSE-based evaluation in long-horizon forecasting and recast strategy and inference selection as navigation of an unavoidable accuracy--realism trade-off.",
+  "link": "https://arxiv.org/abs/2606.04342",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098132+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.01023",
+  "title": "Data Collection for Training Quality-Control AI in Carpet Manufacturing",
+  "abstract": "Visual inspection remains the dominant quality-control practice in woven and tufted carpet production, yet it is slow, subjective, and inconsistent at the line speeds and widths of modern looms. We present a design proposal for an in-line machine-vision system whose primary purpose is twofold: to inspect the carpet web in real time and, equally importantly, to systematically collect and label images of defect patterns so that increasingly capable quality-control models can be trained over the life of the installation. The proposal is grounded in a concrete industrial setting: a Six Sigma (DMAIC) project at a woven-carpet production facility that anticipated a production bottleneck following the installation of additional weaving machines, with a substantial baseline defect rate and significant financial exposure associated with quality failures. We describe an imaging subsystem based on synchronized line-scan cameras with combined bright-field and grazing illumination, derive the resolution and throughput requirements needed to resolve fine structural defects across a multi-metre web, and define a carpet-specific defect taxonomy. We then lay out a staged modelling strategy that begins with unsupervised anomaly detection trained on defect-free material, following the paradigm exemplified by the carpet category of the MVTec Anomaly Detection benchmark, and matures through a human-in-the-loop annotation flywheel into supervised detection and segmentation models. Finally, we connect detection performance to the DMAIC objectives, showing how reductions in escaped defects translate into improved process quality and process sigma levels. The contribution is an end-to-end, deployable blueprint that treats data collection as a first-class engineering objective rather than an afterthought.",
+  "link": "https://arxiv.org/abs/2606.01023",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099385+00:00"
+}

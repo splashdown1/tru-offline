@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.09787",
+  "title": "What is Missing? Explaining Neurons Activated by Absent Concepts",
+  "abstract": "Explainable artificial intelligence (XAI) aims to provide human-interpretable insights into the behavior of deep neural networks (DNNs), typically by estimating a simplified causal structure of the model. In existing work, this causal structure often includes relationships where the presence of a concept is associated with a strong activation of a neuron. For example, attribution methods primarily identify input pixels that contribute most to a prediction, and feature visualization methods reveal inputs that cause high activation of a target neuron - the former implicitly assuming that the relevant information resides in the input, and the latter that neurons encode the presence of concepts. However, a largely overlooked type of causal relationship is that of encoded absences, where the absence of a concept increases neural activation. In this work, we show that such missing but relevant concepts are common and that mainstream XAI methods struggle to reveal them when applied in their standard form. To address this, we propose two simple extensions to attribution and feature visualization techniques that uncover encoded absences. Across experiments, we show how mainstream XAI methods can be used to reveal and explain encoded absences, how ImageNet models exploit them, and that debiasing can be improved when considering them.",
+  "link": "https://arxiv.org/abs/2603.09787",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308407Z"
+}

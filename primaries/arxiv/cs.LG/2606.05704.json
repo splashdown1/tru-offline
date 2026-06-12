@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05704",
+  "title": "Critic-Guided Heterogeneous Multi-Agent Reasoning for Reliable Mathematical Problem Solving",
+  "abstract": "Recent Large Language Models (LLMs) have shown impressive reasoning abilities; but they are still susceptible to hallucinations, intermediate reasoning mistakes, and unreliable reasoning results in complex mathematical reasoning problems. In this study, we introduce a critic-based heterogeneous multi-agent approach to improve the dependability of mathematical reasoning. This framework incorporates several LLM agents of different specialties and employs a critic-driven adaptive learning system to assess and guide the reasoning process based on intermediate feedback. The system adopts a generator-validator framework, with the validator not only determining correctness but also offering critiques to guide regeneration of solutions. This allows for adaptive error correction and prevents error cascading. Our experiments on the GSM8K benchmark show that the proposed method achieves up to 13% accuracy improvement over single-shot and non-critic models. Additionally, findings suggest that heterogeneity and critique reduce the need for large models, allowing smaller models to perform on par. Ablation studies reveal the main performance gains are due to the critic-based feedback loop and not model size. In summary, the proposed approach showcases the benefits of combining heterogeneous multi-agent collaboration and critique to obtain reliable and interpretable reasoning systems.",
+  "link": "https://arxiv.org/abs/2606.05704",
+  "category": "cs.LG",
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883247+00:00"
+}

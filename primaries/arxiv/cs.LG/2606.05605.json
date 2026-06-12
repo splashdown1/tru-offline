@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05605",
+  "title": "From Prediction to Self: Developmental Conditions for Agency in Minimal Neural Systems",
+  "abstract": "How does a system that merely predicts the world come to distinguish its own causal influence from everything else? We trace this transition in a minimal 192-dimensional GRU through 40 controlled experiments arranged as a developmental sequence, adding components one at a time and tracking whether the system can distinguish self-caused from world-caused changes.\n  The developmental path reveals four conditions that must be satisfied in strict order: (1) persistent state forming stable attractors, (2) a causal action loop linking output to input, (3) proprioceptive feedback that makes implicit causal knowledge explicit, and (4) asynchronous awakening - perceptual learning must consolidate before action learning begins. We propose agency gain (A = Err_world - Err_self), the predictive advantage of knowing one's own action, as a metric to track this process. The self-aware predictor consistently outperforms the self-blind predictor across periodic (sinusoidal) and chaotic (Lorenz) environments, and the metric survives ablation of all auxiliary components. Only forward-sampled action selection produces meaningful agency gain; two gradient-based alternatives degenerate.\n  Equally significant are 12 falsified hypotheses mapping where development stalls: predictive coding alone does not produce self-represent",
+  "link": "https://arxiv.org/abs/2606.05605",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.NE"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882136+00:00"
+}

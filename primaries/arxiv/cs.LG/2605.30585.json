@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30585",
+  "title": "Benchmarking Machine Learning Uncertainty Quantification Methodologies for Predicting Turbine Gas Temperature Degradation",
+  "abstract": "Effective prognostics and health management of modern engines relies on accurate turbine gas temperature predictions and robust uncertainty quantification to ensure reliability and safety. This paper investigates five major approaches for constructing prediction intervals -- namely the Delta method, Bayesian Monte Carlo Dropout, Bootstrap method, Lower-Upper Bound Estimation, and Mean-Variance Estimation -- as a means of capturing the uncertainty in neural network predictions of turbine gas temperature. Each approach is implemented within a unified experimental framework that employs cross-validation for hyperparameter selection, repeated train-test splits for performance robustness, and multiple metrics to evaluate both the accuracy and tightness of the intervals. In particular, Coverage Probability, Normalized Mean Prediction Interval Width, and the Coverage Width-based Criterion are measured to comprehensively assess each method's reliability and sharpness. Experiments conducted on a representative turbine gas temperature dataset reveal distinct trade-offs among the five methods in terms of interval coverage, width, and stability. These findings provide a practical guide for selecting and tuning prediction interval methods in engine health management and prognostics, ensuring both interpretability and precision in real-world applications.",
+  "link": "https://arxiv.org/abs/2605.30585",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CE"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306679Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05413",
+  "title": "CausalPOI: Spatio-Temporal Graph-Based Causal Modeling for Cold-Start POI Check-in Forecasting",
+  "abstract": "As urban environments continue to evolve rapidly, accurately modeling the dynamic behaviour of Points of Interest is essential for supporting data-driven urban planning and commercial decision-making. While recent advancements in spatio-temporal graph learning have improved POI forecasting, most methods rely on proximity-based graphs and correlation-driven modeling, which overlook the functional dependencies between POIs and fail to capture the causal effects of urban interventions. In this paper, we introduce a novel research problem -- cold-start POI check-in forecasting, which aims to predict the future check-in pattern of a newly introduced POI, by modeling its temporal evolution and functional interactions with nearby POIs in a structured urban spatial context. To address these challenges, we propose CausalPOI, a spatio-temporal graph-based causal representation learning framework. CausalPOI leverages Spatio-Temporal Functional Interaction Graph to model semantic and spatial relationships between POIs, and constructs structurally aligned treatment and control graphs to simulate factual and counterfactual scenarios. Extensive experiments on real-world SafeGraph datasets demonstrate that CausalPOI significantly outperforms state-of-the-art baselines across the board, validating its effectiveness in spatio-temporal forecasting, semantic interaction modeling, and causal effect estimation, providing a more interpretable and actionable foundation for urban intervention analysis. Source code is available at Github.",
+  "link": "https://arxiv.org/abs/2606.05413",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882025+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31410",
+  "title": "FAM-Bench: A Multimodal Benchmark for Condition-Aware Food-as-Medicine Reasoning",
+  "abstract": "Food-as-Medicine requires models to reason beyond what a dish is or what nutrition it contains: they must decide whether a concrete food choice is appropriate for a specific health condition. Existing food AI benchmarks primarily evaluate dish recognition, recipe understanding, nutrient estimation, or general nutrition question answering, leaving this health-aware decision layer largely untested. We introduce FAM-Bench, a multi-modal Food-as-Medicine benchmark with 2500 nutrition-expert-verified instances across 13 diet-related health conditions. The benchmark contains two complementary tasks: dish-level suitability assessment, where models judge whether a dish is suitable for a condition from its image and ingredient list, and comparative dish analysis, where models rank four candidate dishes by condition-specific suitability. Both tasks require integrating ingredient evidence, visual preparation cues, and clinical nutrition constraints, providing a standardized testbed for grounded health-aware reasoning in language and vision-language models.",
+  "link": "https://arxiv.org/abs/2605.31410",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.357880Z"
+}

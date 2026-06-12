@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05742",
+  "title": "AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding",
+  "abstract": "Speculative decoding accelerates generation by verifying multiple drafted tokens in a single target-model forward pass, reducing sequential decoding iterations. Model-free variants avoid auxiliary draft models by reusing text and model states already available during generation, but their speedup depends on the reliability of the constructed drafts. We identify two limitations of existing reuse-based methods: lexically anchored retrieval has limited recall under surface-form variation, and deterministic span copying can be brittle when the retrieved context does not uniquely determine the continuation. We propose \\emph{AdaPLD}, a training-free method that adaptively improves both retrieval and draft construction. AdaPLD preserves high-precision lexical reuse while using semantic similarity to recover additional reuse opportunities when lexical matching fails. It further constructs branched reuse hypotheses to account for continuation uncertainty, rather than relying on a single copied span. Across diverse benchmarks, AdaPLD reduces target-model forward passes and achieves up to $3.10\\times$ decoding speedup.",
+  "link": "https://arxiv.org/abs/2606.05742",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497829+00:00"
+}

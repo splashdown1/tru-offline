@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.22235",
+  "title": "ShapDBM: Exploring Decision Boundary Maps in Shapley Space",
+  "abstract": "Decision Boundary Maps (DBMs) are an effective tool for visualising machine learning classification boundaries. Yet, DBM quality strongly depends on the dimensionality reduction (DR) technique and high dimensional space used for the data points. For complex ML data, DR can create many mixed classes which yield DBMs that are hard to use or even misleading. We propose a new technique to compute DBMs by transforming data space into Shapley space and computing DR on it. Compared to DBMs computed directly from data, our maps have similar or higher quality metric values and visibly more compact, easier to explore, decision zones that better agree with measured model performance.",
+  "link": "https://arxiv.org/abs/2603.22235",
+  "category": "cs.LG",
+  "categories": [
+    "cs.HC",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308445Z"
+}

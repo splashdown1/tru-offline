@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31360",
+  "title": "dashi: A Python library for Dataset Shift Characterization to Support Trustworthy AI Development and Deployment",
+  "abstract": "The Artificial Intelligence (AI) life cycle requires a thorough understanding of the underlying data dynamics for robust, safe and cost-effective AI development and use. Dataset shifts are defined as changes between train and test data distributions. Whether occurring over time (temporal) or across different sites (multi-source), they can severely degrade model performance and compromise data quality. This is particularly important in health AI, where the safety and fundamental rights of patients can be severely affected by uncontrolled shifts both at training and operational stages. While the theoretical foundations of covariate, prior, and concept shifts are well established, there is a lack of accessible and comprehensive software tools to perform their analysis. We introduce dashi, an open-source Python library designed for the exploration, quantification, and characterization of dataset shifts. dashi provides a dual approach: an unsupervised approach that leverages information geometry and non-parametric statistical manifolds to data variability characterization and analysis (e.g., Information Geometric Temporal plots and Multi-Source Variability metrics like Global Probabilistic Deviation and Source Probabilistic Outlyingness), and a supervised approach that quantifies and characterizes model performance degradation. Both unsupervised and supervised approaches work across user-defined temporal and domain/source batches. We demonstrate the utility of dashi on three simulated and real-world health AI case studies on gestational diabetes mellitus, COVID-19 and emergency medical dispatch. By providing interactive visual analytics and variability metrics, dashi supports trustworthiness of AI life cycle stages enabling robust and safe machine learning pipelines through the assessment of data coherence and AI performance.",
+  "link": "https://arxiv.org/abs/2605.31360",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358397Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06043",
+  "title": "Adaptive Learning Rates with Surrogate Probability for Follow-the-Perturbed-Leader",
+  "abstract": "Follow-the-regularized-leader framework has shown effectiveness and flexibility in online learning problems, where the choice of learning rates are known to be crucial. Recently, adaptive learning rates defined in terms of the arm-selection probabilities, obtained by solving convex optimization, have achieved improved best-of-both-worlds (BOBW) guarantees in various bandit problems. In contrast, BOBW guarantees for its computationally efficient alternative, follow-the-perturbed-leader (FTPL), remain relatively limited since its optimization-free nature ironically makes the design of adaptive, probability-dependent learning rates non-trivial. To address this challenge, we propose an adaptive learning rate for FTPL by introducing surrogate probability functions that can be computed only from the available quantities, without requiring the exact probabilities. Based on these learning rates with surrogate functions, we provide the BOBW guarantee for FTPL with Pareto perturbations for any shape parameter $\\alpha >1$, generalizing prior results restricted to specific choices of $\\alpha=2$. We further show the BOBW guarantees for FTPL with adaptive learning rates in the bandit problem with expert advices. Our approach preserves the computational simplicity of FTPL while enabling probability-dependent adaptivity, and the surrogate-based methodology may be of independent interest in other algorithmic frameworks beyond FTPL and learning rate designs.",
+  "link": "https://arxiv.org/abs/2606.06043",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883486+00:00"
+}

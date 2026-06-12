@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30694",
+  "title": "Universal Decision Learners",
+  "abstract": "Many theories of decision making -- planning, reinforcement learning, causal intervention, online learning, and game-theoretic equilibrium -- turn local information into globally coherent behavior. This paper proposes a common categorical formulation: a Universal Decision Learner (UDL) extends a partially specified decision functor from observed contexts to new contexts by a pair of universal constructions. Left Kan extensions express rollout, aggregation, and candidate generation; right Kan extensions express consistency, constraint satisfaction, and fixed-point semantics. The central claim is not that every decision problem has the same algorithm, but that many decision formalisms instantiate the same universal problem: extend local behavioral data canonically, then characterize the globally coherent extensions. We give the abstract UDL construction, prove its universal comparison property, define Kan-invariant behavioral equivalence and minimal abstractions, and show how Bellman equations, planning recursions, causal interventions, online regret, and equilibria arise as special cases. The supplementary material develops the reinforcement-learning specialization in more detail.",
+  "link": "https://arxiv.org/abs/2605.30694",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306756Z"
+}

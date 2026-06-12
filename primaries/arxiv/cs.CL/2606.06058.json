@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.06058",
+  "title": "MDP-GRPO: Stabilized Group Relative Policy Optimization for Multi-Constraint Instruction Following",
+  "abstract": "Reinforcement learning with verifiable rewards is ideal for multi-constraint instruction following, yet standard group-relative policy optimization (GRPO) becomes unstable under discrete, low-dispersion rewards, where within-group reward distributions are frequently homogeneous. We identify and formalize three pathologies of z-score group normalization in this regime: low-variance amplification, mean-centering blindness, and zero-variance collapse. To address them, we propose MDP-GRPO, which stabilizes learning through (1) multi-temperature sampling to increase reward dispersion, (2) dual-anchor advantages to restore gradients in homogeneous groups and stop mean-centering blindness, (3) prospect-theoretic shaping to bound updates and penalize violations based on Kahneman and Tversky's theory, and (4) asymmetric KL regularization. Evaluated on FollowBench, IFEval, and a curated multi-constraint dataset, MDP-GRPO outperforms standard GRPO, improving strict constraint satisfaction by up to 5.0% on Llama-3.2-3B. Our method also enables stable convergence with small group sizes while preserving general capabilities on MMLU and ARC.",
+  "link": "https://arxiv.org/abs/2606.06058",
+  "category": "cs.CL",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498270+00:00"
+}

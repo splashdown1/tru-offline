@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2508.02217",
+  "title": "Population-Free Pareto Tracking for Sample-Efficient Multi-Policy MORL",
+  "abstract": "Multi-objective reinforcement learning (MORL) is a fundamental framework for real-world decision-making problems involving multiple conflicting criteria. Existing multi-policy (MP) methods typically rely on online evolutionary frameworks that maintain large policy populations, leading to high sample complexity and excessive agent-environment interactions. To mitigate these limitations, we present Multi-policy Pareto Front Tracking (MPFT), a framework without a self-evolving population. It leverages an efficient Pareto-tracking mechanism initialized with single-objective extreme policies to trace the Pareto front, and further densifies sparse regions to achieve an accurate approximation of the full Pareto front. MPFT can be seamlessly integrated with advanced offline MORL algorithms, thereby substantially improving sample efficiency. We evaluate MPFT on six robotic control tasks with up to three objectives and three high-dimensional tasks with more than three objectives. Experimental results show that MPFT outperforms state-of-the-art baselines in terms of hypervolume and expected utility. It also significantly reduces agent-environment interactions. These results further demonstrate that MPFT serves as a general-purpose framework that can seamlessly integrate both online and offline MORL algorithms.",
+  "link": "https://arxiv.org/abs/2508.02217",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307624Z"
+}

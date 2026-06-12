@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2508.11911",
+  "title": "Reduced-order modeling of Hamiltonian dynamics based on symplectic neural networks",
+  "abstract": "We introduce a novel data-driven symplectic induced-order modeling (ROM) framework for high-dimensional Hamiltonian systems that unifies latent-space discovery and dynamics learning within a single, end-to-end neural architecture. The encoder-decoder is built from Henon neural networks (HenonNets) and may be augmented with linear SGS-reflector layers. This yields an exact symplectic map between full and latent phase spaces. Latent dynamics are advanced by a symplectic flow map implemented as a HenonNet. This unified neural architecture ensures exact preservation of the underlying symplectic structure at the reduced-order level, significantly enhancing the fidelity and long-term stability of the resulting ROM. We validate our method through comprehensive numerical experiments on canonical Hamiltonian systems. The results demonstrate the method's capability for accurate trajectory reconstruction, robust predictive performance beyond the training horizon, and accurate Hamiltonian preservation. These promising outcomes underscore the effectiveness and potential applicability of our symplectic ROM framework for complex dynamical systems across a broad range of scientific and engineering disciplines.",
+  "link": "https://arxiv.org/abs/2508.11911",
+  "category": "cs.LG",
+  "categories": [
+    "math.NA",
+    "cs.LG",
+    "cs.NA",
+    "physics.comp-ph"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308274Z"
+}

@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.05414",
+  "title": "When Evidence is Sparse: Weakly Supervised Early Failure Alerting in Dialogs and LLM-Agent Trajectories",
+  "abstract": "Early failure alerting requires deciding, while a dialog or agent trajectory is still unfolding, whether to flag it as likely to fail. This is challenging because supervision is typically available only as a trajectory-level success/failure label while alerts must be raised from partial interactions. Prior early-classification methods often bridge this gap by assigning the terminal label to every prefix, treating every turn as failure evidence. We hypothesize that this prefix-label assumption is poorly matched to multi-turn language interactions, where evidence of eventual failure is sparse and often delayed. In this paper, we introduce a two-stage approach that learns from this sparse evidence structure and uses the resulting risk estimates for controllable early alerting. Specifically, our attention-based failure predictor learns sparse turn-level failure evidence from trajectory labels and uses it to estimate failure risk from partial histories. We then pair this predictor with $\\alpha$-STOP, a single preference-conditioned stopping policy that selects an accuracy-earliness operating point at inference time rather than training a separate trigger for each preference. Across five benchmarks spanning customer support, task-oriented dialog, persuasion, tool use, and planning, we first show that high-relevance failure evidence occupies only 4.7-11.3% of turns and first appears after 59.0-83.6\\% of trajectories on average. We further show that the attention-based predictor improves Pareto-frontier quality (hypervolume) by 1-10\\% over naive prefix supervision, and that the full system improves frontier quality by 3-42\\% over state-of-the-art trigger policies while reducing training cost per operating point by 1-3 orders of magnitude.",
+  "link": "https://arxiv.org/abs/2606.05414",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.HC",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497711+00:00"
+}

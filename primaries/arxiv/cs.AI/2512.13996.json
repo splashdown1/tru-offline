@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2512.13996",
+  "title": "DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training",
+  "abstract": "Sparse Mixture-of-Experts architectures are essential for scaling model capacity efficiently, yet the standard Top-$k$ routing imposes a rigid sparsity pattern that ignores the intrinsic variance in token difficulty and layer-specific computational needs. Top-$p$ routing is more adaptive because it selects experts until their cumulative routing probability reaches a threshold, allowing confident tokens to use fewer experts and ambiguous tokens to recruit more. However, we demonstrate that existing naive Top-$p$ implementations with fixed global probability thresholds provide only marginal gains over Top-$k$, suffer from hyperparameter sensitivity, and result in uncontrolled computational costs. In this paper, we propose **DTop-$p$**, a sparsity-controllable dynamic routing mechanism that learns the Top-$p$ probability threshold with a Proportional-Integral controller and uses dynamic routing normalization to support layer-wise expert selection under a global sparsity constraint. Extensive experiments on Large Language Models and Diffusion Transformers demonstrate that **DTop-$p$** consistently outperforms both Top-$k$ and fixed Top-$p$ baselines while matching the average FLOPs of Top-$k$ MoE. Our analysis confirms that **DTop-$p$** exhibits strong scaling properties across expert granularity, total expert capacity, model size, and dataset size, offering a robust and efficient MoE framework for foundation model pre-training.",
+  "link": "https://arxiv.org/abs/2512.13996",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358525Z"
+}

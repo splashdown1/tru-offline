@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31421",
+  "title": "Neuro-symbolic Syntactic Parsing: Shaping a Neural Network with the CYK Algorithm",
+  "abstract": "In this paper, we show the possibility of a direct injection of algorithms into neural network architecture. We focus on a complex algorithm, that is, Cocke-Youger-Kasami (CYK) for parsing context-free grammars in Chomsky Normal Form and we propose CYKNN, a simple recurrent neural network architecture for encoding the CYK algorithm in trainable matrix-vector multiplications.We experimented with a very simple grammar with 4 variations showing that our approach outperforms existing LLMs with more than 20B parameters with an in-context learning setting and smaller LLMs of the Qwen family fine-tuned with LoRA. Our attempt paves the way to a different approach to neuro-symbolic methodologies.",
+  "link": "https://arxiv.org/abs/2605.31421",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.DS"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405887Z"
+}

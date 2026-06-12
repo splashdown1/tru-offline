@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2512.23626",
+  "title": "Regret-Based Federated Causal Discovery with Unknown Interventions",
+  "abstract": "Most causal discovery methods recover a completed partially directed acyclic graph representing a Markov equivalence class from observational data. Recent work has extended these methods to federated settings to address data decentralization and privacy constraints, but often under idealized assumptions that all clients share the same causal model. Such assumptions are unrealistic in practice, as client-specific policies or protocols, for example, across hospitals, naturally induce heterogeneous and unknown interventions. In this work, we address federated causal discovery under unknown client-level interventions. We propose I-PERI, a novel federated algorithm that first recovers the CPDAG of the union of client graphs and then orients additional edges by exploiting structural differences induced by interventions across clients. This yields a tighter equivalence class, which we call the $\\mathbf{\\Phi}$-Markov Equivalence Class, represented by the $\\mathbf{\\Phi}$-CPDAG. We provide theoretical guarantees on the convergence of I-PERI, as well as on its privacy-preserving properties, and present empirical evaluations on synthetic data demonstrating the effectiveness of the proposed algorithm.",
+  "link": "https://arxiv.org/abs/2512.23626",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358531Z"
+}

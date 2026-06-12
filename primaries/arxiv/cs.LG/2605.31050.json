@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31050",
+  "title": "Best-Arm Identification-Based Trust Region Selection for Bayesian Optimization on Multimodal Functions",
+  "abstract": "Gaussian process-based Bayesian optimization (BO) is a popular approach for expensive black-box optimization, but its performance often degrades on complex multimodal or high-dimensional problems. Trust region-based BO mitigates this issue by focusing on local regions, and recent studies suggest that selecting an effective region can be formulated as a multi-armed bandit problem. We propose a trajectory-aware framework that integrates best-arm identification (BAI) with trust region-based BO to efficiently solve multimodal optimization problems. Our method extrapolates the optimization trajectories of multiple locally initialized optimizers to predict their final performance and progressively eliminates suboptimal candidates via BAI. We theoretically show that the proposed BAI-guided BO converges faster to the global optimum than conventional BO under mild assumptions, and demonstrate its effectiveness through extensive experiments on synthetic and real-world benchmarks.",
+  "link": "https://arxiv.org/abs/2605.31050",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306931Z"
+}

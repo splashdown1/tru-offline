@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2503.14190",
+  "title": "Inferring Events from Time Series using Language Models",
+  "abstract": "A common goal in analyzing time series data is to understand how events cause observed variations. We study whether Large Language Models (LLMs) can infer natural language events associated with time series data. We introduce an automated method for generating tasks that test a model's ability to reason about events associated with time series data based on sports data, and develop a new benchmarking method. In experiments spanning 18 LLMs, we prompt LLMs to infer unobserved events given time series data and observe surprising successes, even when providing minimal context. We then show that combining distillation with Reinforcement Learning (RL) can improve the performance for small language models to approach that of large proprietary reasoning models. All resources needed to reproduce our work are available: https://github.com/hartvigsen-group/GAMETime",
+  "link": "https://arxiv.org/abs/2503.14190",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358497Z"
+}

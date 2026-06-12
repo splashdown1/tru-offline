@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05906",
+  "title": "ACE-SQL: Adaptive Co-Optimization via Empirical Credit Assignment for Text-to-SQL",
+  "abstract": "Text-to-SQL maps natural language questions to executable SQL queries. Modern databases often contain large and complex schemas, making schema linking a critical step for accurate SQL generation. Existing methods either rely on full-schema generation, which leaves schema linking implicit within a large search space, or use a separate retriever trained with static gold-column supervision, whose targets may be suboptimal for the current generator policy. To address this issue, we propose Adaptive Co-optimization via Empirical Credit Assignment for Text-to-SQL (ACE-SQL), a reinforcement learning (RL) framework that jointly optimizes schema retrieval and SQL generation under execution feedback. ACE-SQL constructs an online column-set pool from generator rollouts and derives adaptive on-policy retrieval targets from the column set most frequently associated with execution-correct rollouts. This induces bidirectional adaptation, where the retriever adapts toward column sets that the generator can execute correctly, while the generator adapts to the retriever's evolving schema selections under execution feedback. With approximately 3k synthetic Text-to-SQL question-database pairs for RL training, ACE-SQL achieves 65.3% greedy execution accuracy on BIRD Dev while using 0.93k output tokens per query. The repository is available at https://github.com/xbchen1/ACE-SQL.",
+  "link": "https://arxiv.org/abs/2606.05906",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497923+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04115",
+  "title": "dMX: Differentiable Mixed-Precision Assignment for Low-Precision Floating-Point Formats",
+  "abstract": "Quantizing large language models (LLMs) to low-precision floating-point representations is central to efficient deployment, yet applying a single bit-width uniformly across all layers is sub-optimal in terms of both performance and accuracy. This work introduces dMX, a differentiable mixed-precision quantization framework for learnable floating-point bit-width assignment. We study its application for the microscaling floating-point (MXFP) family of data types defined by the Open Compute Project (OCP) standard. The per-layer bit-width assignment is formulated as a continuous optimization problem in which each layer's floating-point format format is parameterized by a scalar parameter, folding the multi-variate design space into a single learnable offset. During training this offset takes continuous values, avoiding sudden oscillations between discrete quantization formats. A temperature-based annealing schedule progressively discretizes the learned offsets, ensuring that the final configuration maps to hardware-compatible MXFP formats without abrupt transitions between training and inference behavior. A target-aware regularization term steers the average bit-width toward a user-specified budget, serving as a coarse-grained proxy for inference cost and balancing model quality against deployment efficiency. We performed experiments on different families of LLM, such as Llama, Qwen3, and SmolLM2, evaluating perplexity on WikiText-2 and accuracy on four zero-shot reasoning benchmarks. Across these settings, dMX consistently yields Pareto-dominating models and improves over Kullback-Leibler (KL) divergence-based layer-selection heuristics, efficiently navigating trade-offs between model quality and average bit-width.",
+  "link": "https://arxiv.org/abs/2606.04115",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097955+00:00"
+}

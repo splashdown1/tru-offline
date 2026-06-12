@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.04485",
+  "title": "LimiX-2M: Mitigating Low-Rank Collapse and Attention Bottlenecks in Tabular Foundation Models",
+  "abstract": "Tabular foundation models (TFMs) increasingly rival tree ensembles, but their performance is often compute-inefficient: with standard affine scalar tokenization, each feature injects value variation through an essentially one-dimensional channel, and feature IDs/positional signals cannot increase within-feature value degrees of freedom, yielding weak early-layer value sensitivity and redundant hidden states. We present a unified tokenize-and-route framework for strong TFMs: RaBEL expands each scalar into compact localized RBF features (optionally exponent-gated) to improve conditioning and shallow-layer effective rank, while a reordered bidirectional block S->N->F aligns computation with the readout by aggregating cross-sample context before feature mixing and using attention pooling. Together, these changes yield LimiX-2M, a 2M-parameter model that outperforms larger TabPFN-v2 and TabICL baselines on widely used tabular benchmarks while reducing training and inference costs. These results highlight value-aware tokenization and readout-aligned routing as key levers for improving the accuracy--efficiency trade-off in TFMs. Model checkpoints and inference code are available at https://github.com/limix-ldm-ai/LimiX.",
+  "link": "https://arxiv.org/abs/2606.04485",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884334+00:00"
+}

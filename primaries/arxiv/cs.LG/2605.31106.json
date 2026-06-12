@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31106",
+  "title": "Riemannian Diffusion Models on General Manifolds via Physics-Informed Neural Networks",
+  "abstract": "Riemannian diffusion models generalize score-based generative modeling to manifold-supported data via stochastic diffusion equations on the manifold. However, training requires sampling from and differentiating the manifold heat kernel, which is rarely available in closed form beyond a few highly symmetric manifolds. We propose a general approach that approximates the heat kernel by directly solving the manifold heat equation with a physics-informed neural network (PINN). Given an explicit manifold specification, we choose a coordinate system, derive the corresponding heat (Fokker--Planck) equation and a short-time asymptotic approximation, and then train a PINN to learn the log heat kernel. The resulting surrogate enables both forward noising (heat-kernel sampling) and conditional-score evaluation for denoising score matching. We demonstrate the method on diverse manifolds including $S^2$, $SO(3)$, $\\mathrm{SPD}(n)$, and permutation-quotiented point clouds.",
+  "link": "https://arxiv.org/abs/2605.31106",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306941Z"
+}

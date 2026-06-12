@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31176",
+  "title": "Retriever Portfolios: A Principled Approach to Adaptive RAG",
+  "abstract": "Retrieval-augmented generation (RAG) systems typically rely on a single retriever and a single set of hyperparameters, despite facing highly heterogeneous queries that range from simple factoid questions to complex multi-hop reasoning. We propose a method that automatically selects a small, diverse subset of retrievers (a portfolio) from a large pool of candidates, to cover different regions of the target query distribution. We formalize this setting via an expected best-of-$k$ objective over the query distribution and show that it admits an efficient portfolio construction algorithm with near-optimal guarantees. Across multiple QA benchmarks, our learned portfolios and router pipeline consistently outperform single-retriever and naive multi-retriever baselines on both retrieval metrics and answer quality. In addition, compared to inference-time hyperparameter tuning approaches, fixed portfolios enable parallel retrieval and LLM calls, achieving comparable (and sometimes better) accuracy with substantially lower latency and token cost.",
+  "link": "https://arxiv.org/abs/2605.31176",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.DS"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306992Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30375",
+  "title": "Full-field prediction for engineering-scale three-dimensional aircraft with multigrid-hierarchical learning",
+  "abstract": "High-fidelity computational fluid dynamics is essential for aerospace design, but engineering-scale simulations of practical three-dimensional aircraft remain computationally expensive. Learning-based flow-field initialization can improve efficiency by reducing the numerical distance between the initial and converged solutions, yet existing deep learning approaches remain difficult to scale to large three-dimensional aircraft flows with multiscale regional heterogeneity. Most prior studies therefore focus on two-dimensional problems, surface quantities, integral aerodynamic coefficients, or simplified three-dimensional cases with limited grid resolution.Here we propose MHLF, a multigrid-hierarchical learning framework for accelerating engineering-scale aircraft flow simulations while preserving high-fidelity numerical accuracy. MHLF combines a topologically consistent geometric multigrid representation with a hierarchical strategy that captures regional flow heterogeneity during both prediction and subsequent CFD correction. Across three engineering-scale aircraft cases spanning Mach 0.15 to 6.0 and covering subsonic, transonic and supersonic regimes, MHLF accelerates convergence without sacrificing flow-field accuracy, achieving a 3 to 8 times efficiency improvement over conventional initialization. These results demonstrate practical full-flow-field prediction for large three-dimensional aircraft within the CFD domain and provide a foundation for data-driven acceleration of high-fidelity aircraft flow simulation.",
+  "link": "https://arxiv.org/abs/2605.30375",
+  "category": "cs.AI",
+  "categories": [
+    "physics.flu-dyn",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.357928Z"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2603.08721",
+  "title": "KernelCraft: Benchmarking for Agentic Close-to-Metal Kernel Generation on Emerging Hardware",
+  "abstract": "New AI accelerators with novel instruction set architectures (ISAs) often require developers to manually craft low-level kernels, a time-consuming and error-prone process that does not scale across hardware targets. This delays emerging hardware platforms from reaching the market. While prior LLM-based code generation has shown promise in mature GPU ecosystems, it remains unclear whether agentic LLM systems can quickly produce valid and efficient kernels for emerging hardware with new ISAs. We present KernelCraft: the first benchmark for evaluating an LLM agent's ability to generate and optimize low-level kernels for customized accelerators through a function-calling, feedback-driven workflow. We evaluate agent performance across three emerging accelerators on more than 20 machine-learning tasks, each with five diverse task configurations. Across four leading reasoning models, the strongest agents generate functionally correct kernels for unseen ISAs within a few refinement steps and produce optimized kernels that match or outperform compiler baselines. These results demonstrate KernelCraft's potential to accelerate the accelerator chip development cycle. KernelCraft is available at https://kernelcraft-cam.github.io/.",
+  "link": "https://arxiv.org/abs/2603.08721",
+  "category": "cs.LG",
+  "categories": [
+    "cs.AR",
+    "cs.LG",
+    "cs.SE"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308404Z"
+}

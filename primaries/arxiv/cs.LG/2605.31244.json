@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31244",
+  "title": "Spectral Reach: Understanding Neural Scaling as Progress into the Spectral Tail",
+  "abstract": "Neural scaling laws describe predictable power-law relationships between model size, dataset size, compute, and performance. While these laws guide the development of modern foundation models, the mechanisms underpinning them remain poorly understood, in part due to the absence of scalable analysis tools. To close this gap, we introduce \"spectral position\": a scalable measure of which eigenvalues of the empirical neural tangent kernel (eNTK) currently drive loss reduction. Applying this measure to scaling experiments, we find that spectral position decreases throughout training: learning shifts from dominant eigenmodes into the spectral tail. Larger models reach further into the tail than smaller models, revealing a size-dependent capacity we call \"spectral reach\". This suggests why larger models achieve lower losses: they sustain learning on weak spectral signals inaccessible to smaller models. We further identify feature learning as a key enabler of spectral reach. It adaptively amplifies gradient magnitudes as learning advances, sustaining progress where frozen representations stall. This points to concrete interventions through architecture and optimizer design.",
+  "link": "https://arxiv.org/abs/2605.31244",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "physics.comp-ph"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307030Z"
+}

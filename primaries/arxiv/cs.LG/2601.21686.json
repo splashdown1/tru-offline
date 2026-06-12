@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2601.21686",
+  "title": "Don't be so Stief! Learning KV Cache low-rank approximation over the Stiefel manifold",
+  "abstract": "Key-value (KV) caching enables fast autoregressive decoding but at long contexts becomes a dominant bottleneck in High Bandwidth Memory (HBM) capacity and bandwidth. A common mitigation is to compress cached keys and values by projecting per-head matrices to a lower rank, storing only the projections in the HBM. However, existing post-training approaches typically fit these projections using SVD-style proxy objectives, which may poorly reflect end-to-end reconstruction after softmax, value mixing, and subsequent decoder-layer transformations.\n  For these reasons, we introduce StiefAttention, a post-training KV-cache compression method that learns orthonormal projection bases by directly minimizing decoder-layer output reconstruction error. StiefAttention additionally constructs layer-wise error-rank profiles over candidate ranks, enabling sequential rank allocation under a user-specified KV cache budget. Notably, on Llama3-8B under the same conditions, StiefAttention outperforms EigenAttention by $4.2$ points on C4 perplexity and $8.9$ points on 0-shot MMLU accuracy at iso-compression, yielding lower relative error and higher cosine similarity with respect to the original decoder-layer outputs.",
+  "link": "https://arxiv.org/abs/2601.21686",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307809Z"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05587",
+  "title": "HDST-GNN: Heterogeneous Dynamic Spatiotemporal Graph Neural Networks for Multi-Object Tracking in UAV Aerial Imagery",
+  "abstract": "Multi-object tracking (MOT) from UAV imagery presents unique challenges: altitude varies across sequences, objects are small and densely packed, and frequent occlusion causes identity switches. Existing graph-based trackers assume fixed spatial context and treat all objects uniformly, ignoring the heterogeneous lifecycle states of detections, active tracklets, and lost targets. We propose HDST-GNN, a Heterogeneous Dynamic Spatiotemporal Graph Neural Network with three novel contributions. First, Altitude-Adaptive Edge Construction estimates a camera-altitude proxy from mean object area and adjusts the graph connectivity radius accordingly. Second, Heterogeneous Node Representation models detections (Type-D), confirmed tracklets (Type-T), and lost tracklets (Type-L) as distinct node types with dedicated projections and typed edge relations. Third, Occlusion-Gated Temporal Aggregation gates each node's attention contribution by its occlusion confidence, preventing occluded nodes from corrupting neighbour embeddings. HDST-GNN is trained end-to-end with a differentiable Sinkhorn head using joint cross-entropy and triplet loss. On VisDrone2019-MOT with oracle detections, HDST-GNN achieves 94.51% MOTA and 97.24% IDF1, outperforming SORT by +5.0 MOTA points and reducing identity switches by 81%. With real YOLOv8n detections, HDST-GNN reduces identity switches by 49% vs. SORT. Ablation studies confirm the independent contribution of each component.",
+  "link": "https://arxiv.org/abs/2606.05587",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883104+00:00"
+}

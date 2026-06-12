@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31010",
+  "title": "MoG: Mixture of Experts for Graph-based Retrieval-Augmented Generation",
+  "abstract": "Retrieval-augmented generation is intensively studied to ground large language models on external evidence. However, retrieving from a unified knowledge base could inevitably introduce irrelevant information that may mislead generation for complex reasoning. Inspired by the conditional computation of mixture of experts (MoE), where a router sparsely selects specialized experts alongside shared ones for each input, we propose \\textbf{M}ixture \\textbf{o}f experts for \\textbf{G}raph-based Retrieval-Augmented Generation, i.e., \\textbf{MoG}. It organizes knowledge into two core components: (i) diverse, always-accessible hub graphs that encode semantically and structurally central knowledge and provide contextual clues for expert activation, and (ii) sparsely activated expert graphs that contain domain-specific evidence. MoG first accesses hub graphs to identify general evidence and derive contextual clues. Then, a topology-aware router dynamically activates a limited set of expert graphs conditioned on the query, thereby confining retrieval to a focused evidence subspace. Extensive experiments on challenging benchmarks show that MoG consistently outperforms strong baselines, with over 20\\% relative improvement on MuSiQue. Our code is available in https://github.com/DEEP-PolyU/MoG.",
+  "link": "https://arxiv.org/abs/2605.31010",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405780Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30699",
+  "title": "A Context-Aware Middleware for Medical Image Based Reports: An approach based on image feature extraction and association rules",
+  "abstract": "This work proposes a context-aware middleware for medical workflow organization and efficiency improvement. In hospitals, laboratories and teleradiology companies, each physician or technician is specialized in a specific kind of diagnosis or analysis. Therefore, certain types of medical images are often forwarded to a certain physician or a certain group. This forwarding is time consuming. That is, repeatedly deciding who would be the best physician, whether he is available at a certain moment given a certain context is exhaustive and may be very inefficient. Thus, the proposed middleware has the ability to process and collect data from images analyzed by each medical staff. Based on the collected data and current clinical context, the middleware is able to infer who would be the best fit staff to receive a certain incoming medical image.",
+  "link": "https://arxiv.org/abs/2605.30699",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306759Z"
+}

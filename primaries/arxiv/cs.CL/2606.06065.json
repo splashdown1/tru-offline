@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.06065",
+  "title": "Multi-task Learning is Not Enough: Representational Entanglement in Dual-output Second Language Speech Recognition",
+  "abstract": "Second-language (L2) speech recognition often requires transcriptions of pronunciations and intended meanings. Multi-task learning (MTL) is a natural approach because it assumes that shared representations benefit both outputs. However, this paper shows that this assumption does not hold across Korean and English. MTL improves meaning but degrades surface transcription, especially in English, where the degradation scales with surface-meaning divergence measured by Levenshtein edit distance.Encoder analysis links these patterns to encoder-level entanglement, with Korean preserving distinct task representations while English produces nearly identical ones. Cross-task decoder analysis shows that the meaning dual-output decoder adapts with a unique representation, while the surface dual-output decoder remains constrained by the encoder. These findings motivate the design of MTL frameworks that mitigate encoder-level entanglement to reduce surface degradation in dual-output L2 automatic speech recognition.",
+  "link": "https://arxiv.org/abs/2606.06065",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.SD",
+    "eess.AS"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497985+00:00"
+}

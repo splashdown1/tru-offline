@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2512.15783",
+  "title": "Towards AI epidemiology: a measurement standardisation framework for prospective risk detection",
+  "abstract": "This paper proposes a measurement standardisation framework that compresses expert-AI interactions into structured, comparable fields for prospective risk detection in deployed AI systems, without access to model internals. The main aim of this concept paper is to define the scope of the framework, both semantically and statistically, and to specify a protocol for its empirical testing in future work. The population-level claims the framework is designed to support are therefore the subject of a staged research programme rather than results claimed in this paper. Measurement standardisation underpins all three claims that follow. The first is a reliability claim: under bounded conditions, large language models can produce reliable, standardised assessments of the evidential and policy alignment of expert-AI interactions. The second is a governance claim: alignment scores give experts an immediate signal during deployment and give institutions a basis for monitoring alignment patterns across mission types, models, and domains. The third is an epidemiological claim: once measurement standardisation is established, aggregate alignment scores could be used to study associations with downstream outcomes in regulated professional settings. This introduces the possibility of an \"AI epidemiology\" that detects risk based on correlated variables instead of mechanistic analysis. This paper addresses the first claim and specifies protocols for investigating the second and third. To enable empirical evaluation in future studies, this paper sets out a defined grammar, together with a statistical protocol based on paired bootstrap inference, DeLong's test for paired AUCs as a sensitivity check, a pre-specified one-sided non-inferiority margin of 0.05, and Holm-Bonferroni correction.",
+  "link": "https://arxiv.org/abs/2512.15783",
+  "category": "cs.LG",
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884549+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2503.06525",
+  "title": "From Motion Signals to Insights: A Unified Framework for Student Behavior Analysis and Feedback in Physical Education Classes",
+  "abstract": "Analyzing student behavior in educational scenarios is crucial for enhancing teaching quality and student engagement. Existing AI-based models often rely on classroom video footage to identify and analyze student behavior. While these video-based methods can partially capture and analyze student actions, they struggle to accurately track each student's actions in physical education classes, which take place in outdoor, open spaces with diverse activities, and are challenging to generalize to the specialized technical movements involved in these settings. Furthermore, current methods typically lack the ability to integrate specialized pedagogical knowledge, limiting their ability to provide in-depth insights into student behavior and offer feedback for optimizing instructional design. To address these limitations, we propose a unified end-to-end framework that leverages human activity recognition technologies based on motion signals, combined with advanced large language models, to conduct more detailed analyses and feedback of student behavior in physical education classes. Our framework begins with the teacher's instructional designs and the motion signals from students during physical education sessions, ultimately generating automated reports with teaching insights and suggestions for improving both learning and class instructions. This solution provides a motion signal-based approach for analyzing student behavior and optimizing instructional design tailored to physical education classes. Experimental results demonstrate that our framework can accurately identify student behaviors and produce meaningful pedagogical insights.",
+  "link": "https://arxiv.org/abs/2503.06525",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CY",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098798+00:00"
+}

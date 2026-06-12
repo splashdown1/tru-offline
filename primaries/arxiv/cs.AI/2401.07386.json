@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2401.07386",
+  "title": "How do machines learn? Evaluating the AIcon2abs method",
+  "abstract": "This study expands on previous work that introduced the AIcon2abs method (AI from Concrete to Abstract: Demystifying Artificial Intelligence to the general public), an innovative approach designed to increase public understanding of machine learning (ML) across diverse age groups, including K-12 students, and aims to evaluate its effectiveness. AIcon2Abs employs the WiSARD algorithm, a weightless neural network known for its simplicity, and user accessibility. WiSARD does not require Internet, making it ideal for non-technical users and resource-limited environments. This method enables participants to intuitively visualize and interact with ML processes through engaging, hands-on activities, as if they were the algorithms themselves. The method allows users to intuitively visualize and understand the internal processes of training and classification through practical activities. Once WiSARDs functionality does not require an Internet connection, it can learn effectively from a minimal dataset, even from a single example. This feature enables users to observe how the machine improves its accuracy incrementally as it receives more data. Moreover, WiSARD generates mental images representing what it has learned, highlighting essential features of the classified data. AIcon2abs was tested through a six-hour remote course with 34 Brazilian participants, including 5 children, 5 adolescents, and 24 adults. Data analysis was conducted from two perspectives: a mixed-method pre-experiment (including hypothesis testing), and a qualitative phenomenological analysis. Nearly all participants rated AIcon2abs positively, with the results demonstrating a high degree of satisfaction in achieving the intended outcomes. This research was approved by the CEP-HUCFF-UFRJ Research Ethics Committee.",
+  "link": "https://arxiv.org/abs/2401.07386",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CY",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097739+00:00"
+}

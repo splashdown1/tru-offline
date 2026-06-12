@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.27991",
+  "title": "Gradient-Flow Optimization as Dynamic Random-Effects Inference: Testing and Early Stopping with Applications to Deep Learning",
+  "abstract": "Gradient-flow optimization is usually viewed as an algorithmic procedure for minimizing empirical loss, with training duration selected by validation or heuristic early-stopping rules. We develop a statistical inference framework for the gradient-flow training trajectory itself. The central object is fixed-operator squared-error gradient flow: whenever the fitted value evolves through a time-invariant positive semidefinite training operator, the trained model output at each training time is exactly equivalent to the best linear unbiased predictor, or empirical-Bayes posterior mean, under a corresponding random-effects model. Under this representation, training time becomes a variance-component parameter governing how variance is reallocated from residual noise to structured signal. This turns two basic training decisions into inferential problems. First, whether training is needed is formulated as a variance-component test for signal beyond initialization. Second, how long to train is formulated as restricted maximum likelihood (REML) estimation of the training-time variance component. The resulting REML-guided early stopping rule has a spectral interpretation: it selects the training time at which optimized spectral losses become empirically decorrelated from the eigenvalues of the training operator, yielding an effective degrees-of-freedom measure for the evolving trained model. We establish asymptotic prediction optimality for fixed-design in-sample risk and, under additional kernel regularity conditions, random-design out-of-sample risk. Deep learning models in fixed-kernel gradient regimes provide canonical modern-AI instantiations of the theory. Numerical experiments and a UK Biobank proteomics application show that the proposed inferential approach attains competitive prediction accuracy while reducing the reliance on validation splits and repeated checkpoint evaluation.",
+  "link": "https://arxiv.org/abs/2605.27991",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884793+00:00"
+}

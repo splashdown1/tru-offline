@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06148",
+  "title": "Tight list replicability bounds via a novel sphere covering theorem",
+  "abstract": "In recent years, list replicability has emerged as a framework for formalizing reproducibility in learning theory. A central question is how the required list size relates to the accuracy parameter and natural complexity measures of the hypothesis class.\n  To achieve sharp bounds on list replicability, we prove a novel topological sphere covering theorem, derived from the Borsuk-Ulam theorem. Specifically, if the $d$-sphere is covered by open sets, each of which lies in an open hemisphere, then $d+1$ of these sets must have a common intersection. Using this result, we obtain a sharp bound on the relationship between list size and accuracy for VC classes. We also show that for large-margin half-spaces, provided the margin is not too large, the optimal list size equals the ambient dimension. However, when the margin is taken to be very large, we devise a replicable algorithm achieving the minimal list size of $\\lceil d/2 \\rceil + 1$.",
+  "link": "https://arxiv.org/abs/2606.06148",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882513+00:00"
+}

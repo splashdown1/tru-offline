@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31191",
+  "title": "Student Capacity Moderates Knowledge Distillation Effectiveness: A Systematic Study Across ResNet Teacher-Student Pairs on CIFAR-10",
+  "abstract": "We investigate how teacher-student capacity relationships modulate knowledge distillation (KD) effectiveness in ResNet-based image classification on CIFAR-10. Across three teacher-student pairs -- R50->R18, R34->R18, and R50->R34 -- we compare Logit-KD and Feature-KD under controlled, reproducible conditions (3 seeds, mean+/-std reported throughout). We report three main findings. First, student capacity is a key moderating factor in distillation gain: R34 students benefit substantially more from KD than R18 students even when teacher-student accuracy gaps are comparable, with the strongest gain of +0.30pp observed for R50->R34 Feature-KD versus +0.18pp for R34->R18 Feature-KD and +0.00pp for R34->R18 Logit-KD. Second, implementation correctness critically affects Feature-KD: a gradient clipping bug that excluded projection layers suppressed Feature-KD performance and produced misleading comparisons with Logit-KD. After correction, Feature-KD matches or outperforms Logit-KD in two of three pairs, reaching 95.55% on R50->R34 against a baseline of 95.25%. Third, input-resolution-aware architecture is a prerequisite for effective distillation: correcting the ResNet stem for 32x32 inputs raises teacher accuracy by over 5pp -- an order of magnitude larger than any KD gain. All code and results are available at github.com/umutonuryasar/kd-capacity-gap.",
+  "link": "https://arxiv.org/abs/2605.31191",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307003Z"
+}

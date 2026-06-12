@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.11189",
+  "title": "MuCO: Generative Peptide Cyclization Empowered by Multi-stage Conformation Optimization",
+  "abstract": "Modeling peptide cyclization is critical for the virtual screening of candidate peptides with desirable physical and pharmaceutical properties. This task is challenging because a cyclic peptide often exhibits diverse, ring-shaped conformations, which cannot be well captured by deterministic prediction models derived from linear peptide folding. In this study, we propose MuCO (Multi-stage Conformation Optimization), a generative peptide cyclization method that models the distribution of cyclic peptide conformations conditioned on the corresponding linear peptide. In principle, MuCO decouples the peptide cyclization task into three stages: topology-aware backbone design, generative side-chain packing, and physics-aware all-atom optimization, thereby generating and optimizing conformations of cyclic peptides in a coarse-to-fine manner. This multi-stage framework enables an efficient parallel sampling strategy for conformation generation and allows for rapid exploration of diverse, low-energy conformations. Experiments on the large-scale CPSea dataset demonstrate that MuCO significantly and consistently outperforms state-of-the-art methods in physical stability, structural diversity, secondary structure recovery, and computational efficiency, making it a promising computational tool for exploring and designing cyclic peptides. The demo of the proposed method can be found at https://github.com/mianqiu00/MuCO.",
+  "link": "https://arxiv.org/abs/2602.11189",
+  "category": "cs.AI",
+  "categories": [
+    "q-bio.BM",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099065+00:00"
+}

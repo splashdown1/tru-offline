@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31345",
+  "title": "Log-Ratio Propagation on the Simplex: A Theory of Cellwise Contamination for Compositional Data",
+  "abstract": "Compositional data must be analysed through log-ratios: scale invariance, the defining axiom of the field, leaves no alternative. The centred log-ratio divides by the geometric mean of every part, so a single contaminated component shifts every centred-log-ratio coordinate at once, displacing the log-ratio vector by a fixed amount that no choice of coordinates can reduce. We develop a theory of cellwise contamination on the simplex around this observation. A scale-invariant contamination model built from multiplicative perturbation combines with a propagation theorem showing that corruption of a single raw part induces a rank-one shift of the log-ratio vector, with direction determined by the contrast matrix. The resulting perturbation pattern is not equivalent to any independent cellwise contamination model in log-ratio coordinates -- so standard Euclidean cellwise methods applied to log-ratios are ill-posed under the simplex contamination mechanism. For estimators whose Euclidean cellwise breakdown is witnessed by a column-concentrated configuration -- a class including MCD, $S$-, $\\tau$-, and coordinate-wise $M$-estimators of location and scatter -- the cellwise breakdown value on the simplex is reduced by the factor $(D-1)/D$ relative to its Euclidean counterpart, a reduction that is tight and arises purely from the normalisation mismatch between $nD$ raw cells and $n(D-1)$ ilr cells. The cellwise influence function for the variation matrix carries a diagnostic fingerprint: contamination of a single part inflates exactly one row and column, identifying the responsible component. These results form the theoretical foundation for cellwise-robust methods on the simplex; a companion paper develops a cellwise-robust PCA estimator that exploits the propagation geometry and demonstrates it on simulated and geochemical data.",
+  "link": "https://arxiv.org/abs/2605.31345",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "stat.ME"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307506Z"
+}

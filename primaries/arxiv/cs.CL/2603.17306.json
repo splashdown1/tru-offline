@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.17306",
+  "title": "Evidence for systematic semantic structure in individual phonemes",
+  "abstract": "A foundational assumption in linguistics holds that sound-meaning relations are largely arbitrary. Here we show that this assumption fails at the level of individual phonemes: each English phoneme carries a structured, multidimensional semantic profile that is recoverable from text, perceived across languages, and grounded in articulation. Three large language models independently detected consistent semantic structure across nine perceptual dimensions in 220 pairwise letter contrasts. Native English speakers (N = 93) confirmed these associations in a preregistered forced-choice task (85.3% agreement with model predictions), and listeners of five typologically diverse languages (N = 155) replicated the effect under audio presentation (73.2%-81.9% accuracy). Articulatory features predicted the structure with cross-validated R^2 of 0.56-0.98, indicating that the bodily act of producing a sound systematically shapes the meaning it conveys. These findings reframe phoneme-level iconicity as a pervasive, embodied property of the phonological system.",
+  "link": "https://arxiv.org/abs/2603.17306",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "q-bio.NC"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406201Z"
+}

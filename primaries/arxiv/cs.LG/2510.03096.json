@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2510.03096",
+  "title": "Adaptive Node Feature Selection For Graph Neural Networks",
+  "abstract": "We propose an adaptive node feature selection approach for graph neural networks (GNNs) that identifies and removes unnecessary features during training. The ability to measure how features contribute to model output is key for interpreting decisions and reducing dimensionality by eliminating unhelpful variables. However, graph-structured data introduces complex dependencies that may be unsuited to classical feature importance metrics. Inspired by this, we present a data-, model-, and task-agnostic method that determines relevant features during training based on changes in validation performance upon permuting feature values. We theoretically motivate our approach by characterizing how the relationships between node data and graph structure influences GNN performance. Empirically, we show that (i) our highly general approach rivals the performance of tailored feature selection approaches that exploit prior assumptions; (ii) we return meaningful feature importance scores well before the GNN is fully trained; and (iii) our scores demonstrably extract relevant properties that inform feature importance for various graph learning settings.",
+  "link": "https://arxiv.org/abs/2510.03096",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307703Z"
+}

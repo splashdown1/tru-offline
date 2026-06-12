@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30597",
+  "title": "ScaleMAP: Preserving Local Density and Neighborhood Structure in Low-Dimensional Embeddings",
+  "abstract": "Nonlinear dimensionality-reduction methods such as UMAP and PaCMAP adaptively normalize local distances during graph construction, erasing neighborhood scale from the data. This distorts more than relative cluster sizes: sparse structures like bridges between transitioning cell types and narrow spectral spikes in hyperspectral images can be suppressed or lost entirely. DensMAP adds a density penalty to correct this, but this penalty competes with UMAP's attraction-repulsion forces, scattering points far from their neighborhoods. ScaleMAP takes a different approach: each pairwise embedding displacement is divided by the geometric mean of the two endpoints' original-space local radii, re-injecting scale information as a change of variables rather than as a competing objective. Across standard benchmarks and scientific datasets from transcriptomics, hyperspectral imaging, and flow cytometry, ScaleMAP matches DensMAP on density preservation while maintaining UMAP-level neighborhood preservation. In transcriptomic data, it recovers sparse bridges between cell populations that UMAP collapses; in flow cytometry, it faithfully represents density structure across 17 orders of magnitude. The same principle applied to PaCMAP yields consistently improved density preservation, suggesting the approach generalizes beyond UMAP.",
+  "link": "https://arxiv.org/abs/2605.30597",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306695Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31099",
+  "title": "KnowledgeGain: Evaluating and Optimizing Science News Generation for Reader Learning",
+  "abstract": "Science news is an important medium to communicate discoveries between the research communities and the public. Yet, most metrics for generated or summarized text evaluate semantic similarity and factual consistency, but do not measure how much knowledge readers learn from the news. We introduce KnowledgeGain, a metric that evaluates the quality of science news by measuring how much knowledge readers gained after reading it. To evaluate the metric, we first performed a controlled human study and showed that the metric successfully captures the differential knowledge gained by human readers reading different types of science media. The data allowed us to calibrate a prompt-only LLM reader simulator. We use it to rank and filter candidate articles before human evaluation. A second human study shows that articles selected with this simulator improve post-reading accuracy and normalized KnowledgeGain over a strong generation baseline. Our work is a step toward generating science news that better meets the knowledge and comprehension goals of Bloom's Taxonomy.",
+  "link": "https://arxiv.org/abs/2605.31099",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358256Z"
+}

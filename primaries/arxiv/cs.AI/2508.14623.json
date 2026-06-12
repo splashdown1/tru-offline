@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2508.14623",
+  "title": "A Study of the Scale Invariant Signal to Distortion Ratio in Speech Separation with Noisy References",
+  "abstract": "This paper examines the implications of using the Scale-Invariant Signal-to-Distortion Ratio (SI-SDR) as both evaluation and training objective in supervised speech separation, when the training references contain noise, as is the case with the de facto benchmark WSJ0-2Mix. A derivation of the SI-SDR with noisy references reveals that noise limits the achievable SI-SDR, or leads to undesired noise in the separated outputs. To address this, a method is proposed to enhance references and augment the mixtures with WHAM!, aiming to train models that avoid learning noisy references. Two models trained on these enhanced datasets are evaluated with the non-intrusive NISQA.v2 metric. Results show reduced noise in separated speech but suggest that processing references may introduce artefacts, limiting overall quality gains. Negative correlation is found between SI-SDR and perceived noisiness across models on the WSJ0-2Mix and Libri2Mix test sets, underlining the conclusion from the derivation.",
+  "link": "https://arxiv.org/abs/2508.14623",
+  "category": "cs.AI",
+  "categories": [
+    "eess.AS",
+    "cs.AI",
+    "cs.SD"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098845+00:00"
+}

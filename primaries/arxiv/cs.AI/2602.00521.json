@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.00521",
+  "title": "Diagnosing the Reliability of LLM-as-a-Judge via Item Response Theory",
+  "abstract": "While LLM-as-a-Judge is widely used in automated evaluation, existing validation practices primarily operate at the level of observed outputs, offering limited insight into whether LLM judges themselves function as stable and reliable measurement instruments. To address this limitation, we introduce a two-phase diagnostic framework for assessing reliability of LLM-as-a-Judge, grounded in Item Response Theory (IRT). The framework adopts Graded Response Model (GRM) of IRT and formalizes reliability along two complementary dimensions: (1) intrinsic consistency, defined as the stability of measurement behavior under prompt variations, and (2) human alignment, capturing correspondence with human quality assessments. We empirically examine diverse LLM judges with this framework, and show that leveraging IRT-GRM yields interpretable signals for diagnosing judgments systematically. These signals provide practical guidance for verifying reliablity of LLM-as-a-Judge and identifying potential causes of unreliability.",
+  "link": "https://arxiv.org/abs/2602.00521",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358541Z"
+}

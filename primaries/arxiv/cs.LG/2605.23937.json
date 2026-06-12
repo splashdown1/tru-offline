@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2605.23937",
+  "title": "BoxLitE: A Faithful Knowledge Base Embedding Based on Convex Optimization",
+  "abstract": "Knowledge base (KB) embeddings aim at combining the capability of classical knowledge graph embeddings to generalize the information present in facts, the ABox, with conceptual knowledge represented in an ontology language, the TBox. Several authors have recently explored the idea of mapping concepts to convex regions in a vector space. This is useful to represent hierarchies, typically present in TBoxes, since more general concepts can be mapped to larger regions, containing those regions associated with more specific concepts. However, the power of convexity is rarely leveraged during the actual learning tasks. Here, we introduce BoxLitE, a KB embedding model for DL-Lite$^{\\mathcal{H}}$ that allows for convex optimization. We show that for any satisfiable DL-Lite$^{\\mathcal{H}}$ KB, there is a BoxLitE embedding that is a weakly faithful model. As a proof of concept, we show how to formulate the KB embedding task as a convex optimization problem and how to obtain embeddings with such desirable faithfulness properties.",
+  "link": "https://arxiv.org/abs/2605.23937",
+  "category": "cs.LG",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.LO",
+    "math.OC"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308509Z"
+}

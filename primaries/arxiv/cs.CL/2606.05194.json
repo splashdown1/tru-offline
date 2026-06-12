@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05194",
+  "title": "Temporal Preference Concepts and their Functions in a Large Language Model",
+  "abstract": "Large Language Models (LLMs) are increasingly being deployed to make decisions that require trading off near-term gains against long-term consequences, yet little is known about how they internally represent or resolve these tradeoffs. In this work, we causally localize an underlying subgraph for temporal preference in a distilled LLM (Qwen3-4B-Instruct-2507), identifying mid-to-upper-layer nodes through converging evidence from gradient-based attribution and activation patching. We find that the geometry of time horizon is encoded in the residual stream at the expected localized layers. A behavioral analysis reveals that unintervened LLMs discount the future several times less steeply than humans, yet this preference is unstable across contexts, motivating explicit control rather than implicit reliance on training. Finally, we find suggestive evidence that steering vectors can shift temporal preference. Our work demonstrates how mechanistic interpretability can bring us closer to reliable control over how LLMs plan and reason",
+  "link": "https://arxiv.org/abs/2606.05194",
+  "category": "cs.CL",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498116+00:00"
+}

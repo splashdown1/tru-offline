@@ -1,0 +1,16 @@
+{
+  "arxiv_id": "2602.09405",
+  "title": "Is Memorization Helpful or Harmful? Prior Information Sets the Threshold",
+  "abstract": "We examine the connection between training error and generalization error for arbitrary estimating procedures, working in an overparameterized linear model under general priors in a Bayesian setup. We find determining factors inherent to the prior distribution $\\pi$, giving explicit conditions under which optimal generalization necessitates that the training error be (i) near interpolating relative to the noise size (i.e., memorization is necessary), or (ii) close to the noise level (i.e., overfitting is harmful). Remarkably, these phenomena occur when the noise reaches thresholds determined by the Fisher information and the variance parameters of the prior $\\pi$.",
+  "link": "https://arxiv.org/abs/2602.09405",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.IT",
+    "cs.LG",
+    "math.IT",
+    "math.ST",
+    "stat.TH"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308377Z"
+}

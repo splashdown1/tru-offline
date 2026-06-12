@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30680",
+  "title": "Healthcare Mechanisms from Policy-as-Code Search under Strategic Provider Response",
+  "abstract": "Healthcare mechanisms are inseparable from the strategic provider response they induce: existing healthcare AI benchmarks hold this response fixed and so cannot evaluate mechanisms by the equilibrium they produce. We recast hospital mechanism design as program synthesis for language models: typed, inspectable rule programs are executed and scored by Medi-Sim, a multi-agent simulator with five strategic provider channels (coding, selection, delay, effort, triage). An incentive sweep recovers classical health-economics findings as adjacent regimes -- up-coding and low-complexity-patient selection under profit pressure, and Goodhart-style drift where measured performance becomes anti-correlated with true outcomes -- and a single audit lever exposes pressure migration: closing the coding channel more than doubles low-complexity selection. LLM-guided evolutionary code search over the same rule-program space then synthesizes an inspectable mixed-objective program that eliminates up-coding, halves rejection, and retains most of the profit-oriented baseline's funds.",
+  "link": "https://arxiv.org/abs/2605.30680",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.MA"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.357810Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2505.17607",
+  "title": "Symbolic Intermediaries as a Linguistic-Numerical Interface for LLM-Driven Geometric Reasoning",
+  "abstract": "Large Language Models (LLMs) display reasoning capabilities over linguistic and symbolic objects but have limited capabilities to directly interpret the continuous numerical outputs of physics simulators, e.g., distances, curvatures, and trajectories that resist discrete tokenisation. Across spatially grounded engineering reasoning tasks, from mechanism design to motion planning, this defines a fundamental gap, which limits the wider application of LLMs within broader geometrical domains, for exmaple interfacing with physics simulators. We propose symbolic intermediaries, compact analytical expressions discovered via symbolic regression, as a structured interface that translates a simulator's numerical traces into a symbolic form, which language models can interpret, compare, and critique while preserving the original geometric semantics. Around this interface we build an agentic coordination-and-refinement loop: a design agent maps natural-language specifications to executable simulation code, a critique agent reasons over the shared symbolic vocabulary, and a revision step turns this feedback into grounded refinement decisions, enabling inference-time generalization without parameter updates. On the MSynth benchmark for planar mechanism synthesis, all three evaluated LLM agents outperform a budget-matched genetic-algorithm baseline by 19-53% (up to 63% lower median error with feedback), and analysis of the critique entries across three model architectures shows that the interface shifts reasoning from generic structural commentary to grounded geometric verification. The principle of translating continuous simulation outputs into symbolic forms generalises to any domain where simulator behaviour must be interpreted linguistically.",
+  "link": "https://arxiv.org/abs/2505.17607",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358500Z"
+}

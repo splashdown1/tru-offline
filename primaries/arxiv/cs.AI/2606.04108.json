@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.04108",
+  "title": "SymTRELLIS: Symmetry-Enforced Voxel Latents for 3D Generation",
+  "abstract": "Single-view 3D generative models have achieved impressive visual quality, yet they are not designed to satisfy structural or functional requirements, and in practice, often fall short. Symmetry is one such requirement: violations, even subtle ones, on symmetry can render a model physically unusable. We present SymTRELLIS, a method that enforces arbitrary finite point group symmetries (rotational, reflectional, and polyhedral) during the flow-based 3D generation of TRELLIS.2, without retraining the underlying VAE or flow model. Our key idea is to approximate the latent-space action of spatial transformations as a learned linear operator on voxel latents, implemented as a lightweight spatial-transform latent mapper trained on generic, non-symmetric 3D data. At generation time, we enforce symmetry by averaging predicted flow velocities across all symmetry-equivalent transformations at each ODE step, a process we call velocity symmetrization. The symmetry specification can be estimated automatically from an initial TRELLIS.2 generation or supplied by the user, enabling deliberate fold manipulation beyond what the input image suggests. On a curated benchmark of 266 strictly symmetric objects spanning 2- to 20-fold rotations and polyhedral symmetry groups, SymTRELLIS substantially reduces all symmetry error metrics compared to TRELLIS.2, Hunyuan3D-2.1, and TripoSG, while maintaining reconstruction accuracy comparable to the base model.",
+  "link": "https://arxiv.org/abs/2606.04108",
+  "category": "cs.AI",
+  "categories": [
+    "cs.GR",
+    "cs.AI",
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097938+00:00"
+}

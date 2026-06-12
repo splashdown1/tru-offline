@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31140",
+  "title": "EvoDefense: Co-Evolving Black-Box Defense with Large Language Models",
+  "abstract": "Large Language Models (LLMs) remain highly vulnerable to diverse attacks, particularly in black-box settings where the internals of target models are inaccessible. Existing black-box defenses typically rely on pre-defined filtering heuristics, which often fail to generalize to unseen attack types and target model architectures. We introduce EvoDefense, an experience-guided co-evolving black-box defense paradigm. EvoDefense employs a guard LLM to detect malicious queries and an experience memory module to accumulate defense knowledge from previous interactions. At the core of EvoDefense is a continuous attack-defense evolution loop, where an attack generator and the guard model iteratively refine their attack strategies and defense policies through experience-guided optimization. This design enables EvoDefense to generalize across unseen attacks and target models without retraining. Experiments on HarmBench, AdvBench, and AlpacaEval show that EvoDefense achieves consistently strong defense performance across seven popular models and five representative LLM attacks, while preserving competitive general capabilities. On HarmBench, EvoDefense reduces the attack success rate (ASR) of AutoDAN-turbo on Gemini-3-flash and LLaMA-3-8B-Instruct from 29.4% and 43.4% to 8.4% and 6.2%, respectively.",
+  "link": "https://arxiv.org/abs/2605.31140",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CR",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406047Z"
+}

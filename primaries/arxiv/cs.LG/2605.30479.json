@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30479",
+  "title": "Universal Multiclass Transductive Online Learning",
+  "abstract": "We consider the problem of universal transductive online classification with a possibly unbounded label space. This setting considers online learning, with the sequence of instances (without labels) known to the learner in advance. We say a concept class $\\mathcal{H}$ is learnable if there is a learning algorithm $\\mathcal{A}$, such that for every realizable sequence, the number of mistakes made by $\\mathcal{A}$ grows at most sublinearly with the number of predictions. We characterize the learnability of this setting and show that there are only two possible optimal rates for the learnable classes: either bounded or increasing logarithmically. We introduce a new combinatorial structure, called ``Level-Constrained-Littlestone-Littlestone (LCLL) tree'', which, along with the indifference property, characterizes the learnability. We also extend the learnability result to the agnostic case and the case where only the stochastic process that generates the instance sequence is known.",
+  "link": "https://arxiv.org/abs/2605.30479",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306601Z"
+}

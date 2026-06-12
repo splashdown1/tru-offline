@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2604.20572",
+  "title": "Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents",
+  "abstract": "Online lifelong learning agents must decide not only how to act but also when to consult prior experience to continually improve on long-horizon tasks. Existing methods typically retrieve memories passively, such as at task initialization or after each step, and therefore miss knowledge gaps that arise during interaction. We propose ProactAgent, an experience-driven lifelong learning framework for proactive retrieval over a structured Experience Base. ProactAgent continually improves through ExpOnEvo, which jointly updates policies and refines memory, organizing past interactions into factual, episodic, and skill repositories. It further introduces ProactRL, which treats retrieval as an explicit policy action and learns when and what to retrieve. By comparing paired continuations from identical interaction prefixes with and without retrieval, ProactRL provides step-level process rewards that encourage retrieval only when it improves task outcomes or efficiency. Experiments on SciWorld, AlfWorld, and StuLife show that ProactAgent consistently outperforms all baselines, achieving up to 32% relative improvement in success rate and over 33% reduction in interaction rounds. Our code will be publicly available at GitHub.",
+  "link": "https://arxiv.org/abs/2604.20572",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498459+00:00"
+}

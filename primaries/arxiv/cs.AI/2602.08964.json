@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2602.08964",
+  "title": "A Behavioural and Representational Evaluation of Goal-Directedness in Language Model Agents",
+  "abstract": "Understanding an agent's goals helps explain and predict its behaviour, yet there is no established methodology for reliably attributing goals to agentic systems. We propose a framework for evaluating goal-directedness that integrates behavioural evaluation with interpretability-based analyses of models' internal representations. As a case study, we examine an LLM agent navigating a 2D grid world towards a goal state. Behaviourally, we evaluate the agent against optimal policies across varying grid sizes, obstacle densities, and goal structures, finding that performance scales with task difficulty while remaining robust to difficulty-preserving transformations and multi-goal structures. We then use probing methods to decode internal representations of the environment and multi-step action plans. We find that the LLM agent non-linearly encodes a coarse spatial map, preserving approximate task-relevant cues about its position and the goal location; that its actions are broadly consistent with these internal representations; and that reasoning reorganises them, shifting from spatial cues towards immediate action selection. Our findings support the view that introspective examination is required beyond behavioural evaluations to characterise how agents represent and pursue their objectives.",
+  "link": "https://arxiv.org/abs/2602.08964",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL",
+    "cs.CY"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358817Z"
+}

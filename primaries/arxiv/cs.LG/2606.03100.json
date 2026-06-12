@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.03100",
+  "title": "Zero-Shot 3D Question Answering via Hierarchical View-to-Token Transportation",
+  "abstract": "Recently, zero-shot 3D scene understanding via 2D Vision-Language Models (VLMs) has gained increasing research interest due to their promising spatial reasoning capabilities. Typically, multiple 2D views are sampled from a 3D point cloud and fed into pre-trained VLMs to answer a given question. This paradigm highlights the critical role of input context quality and raises the challenge of retaining as many task-relevant 3D details as possible under a limited input budget. We propose \\texttt{KeyVT}, a hierarchical approach for input context collection at both the view and token levels. Specifically, we combine pixel features with camera parameters and assess view importance based on both semantic content and geometric position, resulting in spatially consistent and task-relevant views. Furthermore, we address redundancy among patches across selected views by identifying representative tokens under the optimal transport (OT) framework, where view tokens and key tokens are formulated as two discrete distributions in the embedding space. These key tokens are expected to cover all view features by minimizing the OT distance. We evaluate our framework on three widely used benchmarks, demonstrating significant improvements over existing tuning-free methods and performance comparable to training-based approaches.",
+  "link": "https://arxiv.org/abs/2606.03100",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884820+00:00"
+}

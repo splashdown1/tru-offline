@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31156",
+  "title": "TabCausal: Pretraining Across Causal Environments for Tabular Causal Discovery",
+  "abstract": "Causal discovery aims to recover directed causal relations from observational and interventional data, providing a basis for mechanistic understanding and reliable decision-making. Causal discovery foundation models (CDFMs) seek to amortize this problem by mapping a dataset directly to a causal graph in a single forward pass, avoiding per-dataset testing, search, or optimization. However, existing CDFMs remain limited, often failing to consistently match strong classical methods, and we find that a key bottleneck is how causal pretraining tasks are constructed. Based on this observation, we propose TabCausal, a data-driven CDFM trained with broad causal pretraining over diverse graph priors, structural mechanisms, noise models, dimensions, sample sizes, and intervention regimes. A dynamic task construction strategy composes these causal environments into varied discovery tasks, enabling more transferable structural learning from observational and mixed-interventional data. On large-scale synthetic benchmarks, TabCausal achieves better macro-averaged performance than a diverse set of causal discovery baselines. To further bridge abstract synthetic generators and realistic causal reasoning scenarios, we introduce a protocol-guided and LLM-audited semantic causal environment benchmark, where domain-grounded SCMs generate interpretable observational and interventional datasets for out-of-distribution analysis. Across both synthetic and semantic environments, TabCausal demonstrates robust structure recovery, especially under interventional evidence, highlighting broad causal pretraining as a key ingredient for transferable amortized causal discovery.",
+  "link": "https://arxiv.org/abs/2605.31156",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306982Z"
+}

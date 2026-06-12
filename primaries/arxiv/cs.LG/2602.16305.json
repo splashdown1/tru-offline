@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.16305",
+  "title": "BAT: Better Audio Transformer Guided by Convex Gated Probing",
+  "abstract": "Probing is widely adopted in computer vision to faithfully evaluate self-supervised learning (SSL) embeddings, as finetuning may misrepresent their inherent quality. In contrast, audio SSL models still rely on finetuning because simple probing fails to unlock their full potential and alters their rankings when competing on AudioSet. Hence, a robust and efficient probing mechanism is required to guide the trajectory of audio SSL towards reliable and reproducible methods. We introduce Convex Gated Probing (CGP), a prototype-based method that significantly closes the gap between finetuning and probing in audio. CGP efficiently utilizes all frozen layers via a gating mechanism and exposes the location of latent task-relevant information. Guided by CGP as a reliable post-hoc evaluation probe, we rework the entire SSL pipeline of current best performing audio models that use legacy implementations of prior SSL methods. By refining data preprocessing, model architecture, and pretraining recipe, we introduce Better Audio Transformer (BAT), and establish new SOTA on audio benchmarks.",
+  "link": "https://arxiv.org/abs/2602.16305",
+  "category": "cs.LG",
+  "categories": [
+    "cs.SD",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308383Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05927",
+  "title": "Addressing Imbalance in Multi-Label Data via Label-Specific Distance-based Oversampling",
+  "abstract": "The complex imbalanced label distribution poses a crucial challenge to multi-label classification, as most classifiers are biased towards the majority class and high-frequent labels. Oversampling is an efficient and flexible solution that augments instances to provide a more balanced training dataset for multi-label classifiers. Most existing oversampling methods create synthetic instances in a heuristic way that essentially relies on neighborhood information retrieved using Euclidean distance within the entire feature space. However, they fail to consider the varying semantic relevance of features to different labels, leading to label inconsistency among proximate neighbors and further introducing label confusion and overfitting to synthetic instances. To overcome the above issue, we propose a novel sampling approach called Label-Specific Distance-based Multi-Label Oversampling (LSDMLO) that creates more useful and well-labeled synthetic instances to address the imbalance in multi-label datasets. LSDMLO derives the label-specific distance to identify label-consistent neighbors based on the weighted pertinent feature space, which facilitates selecting seed instances that express more label correlations in boundary areas and generating synthetic instances aligned with the label distribution of original data. The comprehensive experiments verify that the proposed LSDMLO outperforms the state-of-the-art multi-label sampling approaches under various base classifiers.",
+  "link": "https://arxiv.org/abs/2606.05927",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882406+00:00"
+}

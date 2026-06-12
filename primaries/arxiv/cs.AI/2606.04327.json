@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04327",
+  "title": "A Geometric Characterization of the Stationary Plateau for Two-Layer Neural Networks",
+  "abstract": "We investigate the geometric structure of stationary plateaus that arise in the loss landscape of two-layer neural networks with smooth activation functions. We focus on the phenomenon of \"neuron splitting\" where duplicating a hidden neuron yields an affine set of stationary points in a wider network. We provide a comprehensive classification of all stationary points on these plateaus, determining under what conditions they constitute local minima or saddle points. Our characterization hinges on a per-neuron curvature object we term the \"inner Hessian\" matrix. Our analysis reveals that the definiteness of the inner Hessian and the choice of splitting coefficients jointly dictate the local geometry of the plateau. We show that \"splitting\" a local minimum can yield either a mixture of local minima and saddles or an all-saddle plateau, with a concrete sure-saddle region identified under mild assumptions. In contrast, splitting a saddle point always produces a plateau of saddle points. Our results unify and extend prior landscape analyses, elucidating when and how model expansion preserves or alters the nature of stationary points. These findings offer new geometric insights into the effects of width expansion and reparameterization in neural networks.",
+  "link": "https://arxiv.org/abs/2606.04327",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098118+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2602.11137",
+  "title": "Weight Decay Improves Language Model Plasticity",
+  "abstract": "Large language models are typically trained in two broad phases: pretraining to produce a base model, followed by further training to improve downstream performance. However, hyperparameter optimization and scaling laws are studied primarily from the perspective of the base model's validation loss, overlooking a crucial model property: downstream adaptability. In this work, we study pretraining from the perspective of model plasticity, that is, the ability of the base model to successfully adapt to downstream tasks upon additional training. We focus on the role of weight decay, a key regularization parameter during pretraining, and show through systematic experiments that larger weight decay increases the plasticity of the pretrained model, resulting in greater performance gains downstream after fine-tuning. This effect can lead to counterintuitive trade-offs where base models that perform worse after pretraining can perform better after further training. Further investigation of weight decay's mechanistic effects on model behavior reveals that it encourages linearly separable representations, regularizes attention matrices, and reduces overfitting on the training data. Together, these findings highlight the importance of pretrained model plasticity, the limits of using cross-entropy loss as the sole metric for hyperparameter optimization, and the multifaceted role that a single optimization hyperparameter plays in shaping model behavior.",
+  "link": "https://arxiv.org/abs/2602.11137",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358829Z"
+}

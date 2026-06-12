@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06098",
+  "title": "IR3DE: A Linear Router for Large Language Models",
+  "abstract": "Foundational Large Language Models (LLMs) demonstrate proficiency on a wide range of general tasks, and achieve remarkable results on various specialized tasks via domain-expert LLMs. With the ever-growing list of available LLMs, inference routers are being proposed to select the most appropriate LLM for each prompt. However, existing routing methods either optimize cost across weak-to-strong generalist LLMs or require substantial training to support domain-expertise routing. In this paper, we propose IR3DE, a Ridge Regression-based Router for Domain Experts that provides cheap and fast routing decisions for each prompt. We evaluate IR3DE in two Causal Language Modeling (CLM) settings where the tasks are next-token prediction for all domains, and one reasoning setting where each domain has its own distinct reasoning task. Despite being a linear router, IR3DE achieves performance comparable to the other baselines in both CLM settings, and surpassing them in the reasoning setting, with a normalized performance of 98.4%. Moreover, IR3DE enables the addition or removal of new domain experts without requiring the router to be retrained from scratch, allowing a dynamic set of LLMs to be served with minimal disruption to the router itself. Our code is available at: github.com/gensyn-ai/IR3DE.",
+  "link": "https://arxiv.org/abs/2606.06098",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CL",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883515+00:00"
+}

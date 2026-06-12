@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31522",
+  "title": "Chem-PerturBridge: a harmonized compendium of small molecule perturbation transcriptomic effects",
+  "abstract": "Large perturbation models require training data encompassing chemical, cellular, and assay diversity. Current transcriptomic resources for small-molecule modeling, however, are fragmented across technologies, metadata conventions, controls, doses, and preprocessing pipelines. We introduce Chem-PerturBridge, a harmonized multi-dataset resource comprising over 37k compounds, 136 cellular contexts, and 1.25M transcriptomic samples across eight assay types, with standardized identifiers, metadata, and replicate-aware condition-level effects. We use the resource to evaluate matched-condition agreement across datasets and replicate agreement within datasets. Matched same-compound conditions generally show weak agreement in fine-grained logFC rankings and magnitudes across most dataset pairs, often falling below same-context different-compound baselines. In contrast, logFC direction agreement is substantially more stable and usually exceeds these baselines. We further evaluate Chem-PerturBridge as a pretraining resource for compound representation learning. Under a compound-held-out OP3 evaluation split, embeddings pretrained on Chem-PerturBridge improve over L1000-only embeddings, Morgan fingerprints, and the descriptor-free OP3 baseline across metrics. An extensive molecule-holdout evaluation across 11 datasets further shows that models trained on Chem-PerturBridge outperform or match those that are not. Chem-PerturBridge therefore supports both diagnostic evaluation of cross-dataset signature agreement and model-oriented reuse of heterogeneous perturbation transcriptomic data.",
+  "link": "https://arxiv.org/abs/2605.31522",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "q-bio.GN",
+    "q-bio.QM"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307181Z"
+}

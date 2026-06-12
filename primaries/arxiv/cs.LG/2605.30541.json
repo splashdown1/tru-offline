@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30541",
+  "title": "SubsurfaceGen: Procedural Generation of Field-Scale Earth Models and Seismic Data",
+  "abstract": "Full waveform inversion (FWI) is the gold standard for subsurface imaging, with applications from carbon sequestration to energy and mineral exploration to earthquake hazard assessment. Machine learning approaches to FWI need field-scale, geologically diverse, and physically realistic training data, but existing resources such as Marmousi, SEAM, and OpenFWI fall short on spatial extent, temporal extent, geological diversity, and physical realism. We address these limitations with SubsurfaceGen, a GPU-accelerated generator for 3D velocity models and seismic data. Along with SubsurfaceGen, we release a paired dataset of 4,276 2D velocity slices, 5 s wavefields, and 8 s shot gathers drawn from 42 realistic, field-scale 3D velocity models, each spanning 10 km x 10 km laterally and 6.19 km deep at 10 m resolution. The dataset spans six geological settings -- four built with SubsurfaceGen and two drawn from prior sources -- relevant for carbon sequestration and hydrocarbon exploration. We use this dataset to evaluate neural operators on wavefield prediction and encoder-decoders on end-to-end velocity inversion, holding out one geological setting for out-of-distribution testing. These experiments surface failure modes at field-scale and demonstrate how SubsurfaceGen and the associated dataset can impact ML-based FWI.",
+  "link": "https://arxiv.org/abs/2605.30541",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "physics.geo-ph"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306660Z"
+}

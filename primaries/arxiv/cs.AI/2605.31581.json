@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31581",
+  "title": "Choosing the Lens: Strategic Perspective Activation in Context-Dependent Argumentation",
+  "abstract": "The same arguments often need to be evaluated under different external regimes. An agent with influence over the regime has a strategic lever that standard formalisms do not directly capture. We introduce context-dependent argumentation frameworks (CDAFs), an extension of Dung's theory in which a defeat function determines, per context, which attacks succeed. A perspective-labeled specialisation derives the defeat function from a relevance set $\\rho$ and a priority $\\pi$. The relevance set is the agent's action space. In a small worked example, the agent's target argument is rejected under every full-relevance injective priority, yet accepted under partial activations, one of which no VAF audience can mirror. We define the corresponding decision problem, ACTIVATION-MANIPULATION, and record baseline complexity bounds. Tight bounds and multi-agent variants are left open.",
+  "link": "https://arxiv.org/abs/2605.31581",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.357892Z"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2006.04013",
+  "title": "AI from concrete to abstract: demystifying artificial intelligence to the general public",
+  "abstract": "Artificial Intelligence (AI) has been adopted in a wide range of domains. This shows the imperative need to develop means to endow common people with a minimum understanding of what AI means. Combining visual programming and WiSARD weightless artificial neural networks, this article presents a new methodology, AI from concrete to abstract (AIcon2abs), to enable general people (including children) to achieve this goal. The main strategy adopted by is to promote a demystification of artificial intelligence via practical activities related to the development of learning machines, as well as through the observation of their learning process. Thus, it is possible to provide subjects with skills that contributes to making them insightful actors in debates and decisions involving the adoption of artificial intelligence mechanisms. Currently, existing approaches to the teaching of basic AI concepts through programming treat machine intelligence as an external element/module. After being trained, that external module is coupled to the main application being developed by the learners. In the methodology herein presented, both training and classification tasks are blocks that compose the main program, just as the other programming constructs. As a beneficial side effect of AIcon2abs, the difference between a program capable of learning from data and a conventional computer program becomes more evident. In addition, the simplicity of the WiSARD weightless artificial neural network model enables easy visualization and understanding of training and classification tasks internal realization.",
+  "link": "https://arxiv.org/abs/2006.04013",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CY",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097734+00:00"
+}

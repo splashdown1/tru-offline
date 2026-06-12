@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.03993",
+  "title": "Specialization of softmax attention heads: insights from the high-dimensional single-location model",
+  "abstract": "Multi-head attention enables transformer models to represent multiple attention patterns simultaneously. Empirically, head specialization emerges in distinct stages during training, while many heads remain redundant and learn similar representations. We propose a theoretical model capturing this phenomenon, based on the multi-index and single-location regression frameworks. In the first part, we analyze the training dynamics of multi-head softmax attention under SGD, revealing an initial unspecialized phase followed by a multi-stage specialization phase in which different heads sequentially align with latent signal directions. In the second part, we study the impact of attention activation functions on performance. We introduce the Bayes-softmax attention, which achieves optimal prediction performance in this setting.",
+  "link": "https://arxiv.org/abs/2603.03993",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cond-mat.dis-nn"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884095+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31309",
+  "title": "Non-Asymptotic Convergence of Stochastic Iterative Algorithms: A Lyapunov Framework",
+  "abstract": "We survey Lyapunov-based techniques for the finite-time analysis of stochastic iterative algorithms, also known as stochastic approximation (SA) algorithms, for solving fixed-point equations $\\bar{F}(x)=x$, where the operator $\\bar{F}(\\cdot)$ can only be accessed through a noisy oracle. We first focus on the standard setting in which $\\bar{F}(\\cdot)$ is contractive with respect to some norm and the noise is i.i.d., and explain how generalized Moreau envelopes serve as universal Lyapunov functions, regardless of the underlying norm. We then show how this framework yields mean-square convergence guarantees and applies to stochastic gradient descent, linear SA, and value-based reinforcement learning algorithms such as Q-learning and temporal-difference learning. Finally, we discuss extensions to Markovian noise, seminorm-contractive operators, dissipative operators, and high-probability bounds, and conclude with open problems. The goal is to present a unified and self-contained roadmap for the finite-time analysis of SA and its applications, especially in reinforcement learning.",
+  "link": "https://arxiv.org/abs/2605.31309",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307068Z"
+}

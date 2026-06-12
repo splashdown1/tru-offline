@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30934",
+  "title": "Do Large Language Models Encode Institutional Experience? Evidence from Cross-Linguistic Moral Reasoning Under Ambiguity",
+  "abstract": "Large language models (LLMs) exhibit systematic differences in moral reasoning across languages, yet the source of this variation remains unclear. We test the hypothesis that languages encode aspects of the institutional environments in which they are spoken, allowing LLMs to inherit institution-specific moral priors through training. Across nine languages spanning a broad gradient of institutional quality, six frontier LLMs, and two preregistered studies, we examine moral dilemmas whose acceptability depends on institutional functioning. In Study 1, explicit institutional framing produced uniformly null results: cross-linguistic moral divergence did not increase in institutionally contingent scenarios, nor did it track institutional differences between language communities. In Study 2, we introduced institutionally ambiguous scenarios in which institutional stakes were present but not explicitly stated. Under these conditions, cross-linguistic moral divergence increased relative to institutionally inert controls and, with one theoretically informative exception, was associated with real-world institutional differences between language communities. Explicit framing again attenuated these effects. These findings suggest that institutional experience may leave detectable traces in language that shape LLM moral reasoning, while also indicating that explicit institutional cues can suppress the expression of those differences.",
+  "link": "https://arxiv.org/abs/2605.30934",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405769Z"
+}

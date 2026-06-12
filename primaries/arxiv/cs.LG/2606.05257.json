@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05257",
+  "title": "Scaling Laws for Behavioral Foundation Models over User Event Sequences",
+  "abstract": "Foundation models are increasingly trained on sequences of user actions in recommendation, payments, fraud, and commerce, but these models still lack the kind of compute calibration that scaling laws provide for language models. We study a common two-part behavioral-model architecture: a feature-based event embedder maps each multi-modal item to a vector, and a decoder-only transformer predicts the next event from the resulting sequence. Across roughly 600 runs on real interaction data, spanning $10^{15}$-$10^{19}$ training FLOPs, we jointly vary four deployment-relevant axes: the two-part parameter split, critical batch size, model/data allocation, and the number of sampled negatives used after freezing the embedder. A small embedder ($s^{\\star}\\!\\approx\\!2\\%$ of parameters) is compute-optimal at every budget we test because embedder parameters are both more expensive per step and exposed to far more repeated items than contextualizer parameters. Compute-optimal training is data-heavy relative to text at low compute, but its $D/N$ ratio moves toward the Chinchilla heuristic as compute increases. The sampled training objective and deployed ranking metrics disagree in ways that themselves scale: critical batch size, optimal negative count after freezing, and the agreement between loss and ranking quality all shift with compute and with the chosen evaluation metric. For negative sampling, larger budgets increasingly prefer more negatives; by $10^{19}$ FLOPs the active constraint is candidate-axis memory rather than FLOPs. In behavioral foundation models, the evaluation metric is therefore part of the scaling law: changing it can change the compute-optimal recipe.",
+  "link": "https://arxiv.org/abs/2606.05257",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.IR"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881881+00:00"
+}

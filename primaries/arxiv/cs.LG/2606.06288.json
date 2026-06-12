@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06288",
+  "title": "Discrete Causal Representations from Heterogeneous Domains: A Bayesian Approach with Social Survey Applications",
+  "abstract": "Causal representation learning aims to infer the high-level latent causal concepts that give rise to observed low-level measurements. This is particularly relevant for heterogeneous data from different environments or domains since distribution shifts often arise through sparse, localized changes in some of the underlying causal mechanisms, while other parts of the generative process remain unchanged. Whereas identifiability of causal representations has been studied extensively, practical uncertainty-aware methods and real-world use cases remain less explored. In this work, we propose a Bayesian approach to learning causal representations from multi-environment data, focusing on the case of discrete causal concepts and unknown multi-node soft interventions. To this end, we translate causal assumptions and interpretability desiderata into suitable priors and parametric choices within a hierarchical model. We then devise an inference scheme based on sequential Monte Carlo sampling to approximate the resulting multimodal posterior. We showcase our approach through case studies on social survey data, where latent causal concepts correspond to cultural values or political opinions, measurements to survey responses, and environments to different countries or states. Our model infers meaningful high-level concepts and plausible causal relations among them, demonstrating its utility for learning causal representations of complex real-world data.",
+  "link": "https://arxiv.org/abs/2606.06288",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883586+00:00"
+}

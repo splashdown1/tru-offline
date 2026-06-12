@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05744",
+  "title": "PlanBench-V: A Spatial Planning Map Benchmark for Vision-Language Models",
+  "abstract": "Spatial planning maps are central to territorial governance, translating planning objectives, regulations, and spatial strategies into visual forms for decision-making, public communication, and institutional coordination. Their interpretation, however, requires fine-grained visual perception, spatial reasoning, and policy-informed professional judgment, creating major challenges for both human learners and AI systems. With the rapid progress of Vision-Language Models (VLMs), their use in urban planning analysis is gaining attention, yet existing multimodal benchmarks mainly target general visual understanding and overlook the domain-specific cognitive processes of planning practice. To address this gap, we introduce PlanBench-V, the first comprehensive benchmark for evaluating VLMs in spatial planning map interpretation. We first build the Spatial Planning Map Database (SPMD), an expert-annotated dataset of 223 planning maps and 1629 question-answer pairs curated by professional planners, covering diverse geographic regions and cartographic styles. We then propose a theory-informed evaluation framework assessing four progressive capabilities: Perception, Reasoning, Association, and Implementation, corresponding to the cognitive pipeline of planning map interpretation. Extensive experiments across two generations of VLMs show clear progress but persistent limitations. The best 2026 agentic reasoning model, Qwen3.6-Plus, substantially outperforms the best 2025 model, GPT-4o, by 27%. Nevertheless, all models still struggle with implementation-oriented tasks requiring evaluative judgment, policy sensitivity, and constraint-aware decision-making. These findings reveal fundamental limitations of current VLMs in professional planning contexts and highlight the need for domain-adaptive multimodal reasoning frameworks. Code and data are available at https://plangpt.github.io.",
+  "link": "https://arxiv.org/abs/2606.05744",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497833+00:00"
+}

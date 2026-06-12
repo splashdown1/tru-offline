@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05620",
+  "title": "An ERP Study on Recursive Locative Processing in Mandarin-Speaking Children with Autism",
+  "abstract": "Recursion enables the generation of hierarchical linguistic structures but imposes substantial processing demands during real-time comprehension. While difficulties with complex syntax have been reported in autism spectrum disorder (ASD), the temporal dynamics of recursive processing remain poorly understood. This study used event-related potentials (ERPs) to examine how Mandarin-speaking children with ASD process two-level recursive locative constructions. Twenty-four children (12 ASD, 12 typically developing, TD) participated in a cross-modal sentence-picture matching task. Neural responses were analyzed across three processing stages associated with structural prediction (P200), semantic integration (N400), and syntactic reanalysis (P600), with mental age controlled. Results revealed a systematic divergence between groups. TD children showed clear P200 and P600 modulation in response to structural mismatch, whereas ASD children exhibited attenuated early differentiation and reduced late reanalysis effects. In contrast, ASD children showed enhanced N400 responses under mismatch conditions, indicating increased semantic integration demands. In addition, the ASD group displayed significantly greater inter-individual variability in hemispheric lateralization, although lateralization strength was not associated with receptive vocabulary performance. These findings support a cascading account in which reduced early predictive engagement in ASD leads to increased integration costs and diminished reanalysis efficiency during recursive processing. More broadly, the results highlight the importance of both temporal processing dynamics and neural variability in understanding language differences in ASD.",
+  "link": "https://arxiv.org/abs/2606.05620",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497783+00:00"
+}

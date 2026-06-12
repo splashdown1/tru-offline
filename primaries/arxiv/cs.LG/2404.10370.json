@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2404.10370",
+  "title": "Know Yourself Better: Diverse Object-Related Features Improve Open Set Recognition",
+  "abstract": "Open set recognition (OSR) is a critical aspect of machine learning, addressing the challenge of detecting novel classes during inference. Within the realm of deep learning, neural classifiers trained on a closed set of data typically struggle to identify novel classes, leading to erroneous predictions. To address this issue, various heuristic methods have been proposed, allowing models to express uncertainty by stating \"I don't know.\" However, a gap in the literature remains, as there has been limited exploration of the underlying mechanisms of these methods. In this paper, we conduct an analysis of open set recognition methods, focusing on the aspect of feature diversity. Our research reveals a significant correlation between learning diverse discriminative features and enhancing OSR performance. Building on this insight, we propose a novel OSR approach that leverages the advantages of feature diversity. The efficacy of our method is substantiated through rigorous evaluation on a standard OSR testbench, demonstrating a substantial improvement over state-of-the-art methods.",
+  "link": "https://arxiv.org/abs/2404.10370",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884427+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2509.25397",
+  "title": "A Cartography of Open Collaboration in Open Source AI: Mapping Practices, Motivations, and Governance in 14 Open Large Language Model Projects",
+  "abstract": "The proliferation of open large language models (LLMs) is fostering a vibrant ecosystem in artificial intelligence (AI). However, the methods of collaboration used to develop open LLMs, both before and after their public release, have not yet been systematically studied, limiting our understanding of how open LLM projects are initiated, organised, and governed, as well as the opportunities to further foster this ecosystem. We address this gap through an exploratory analysis of open collaboration throughout the development and reuse lifecycle of open LLMs, drawing on semi-structured interviews with the developers of 14 diverse open LLM projects. These collaborations span multiple artefact domains -- including models, data, software, evaluation, compute, and community engagement -- each enabling distinct forms of participation and involving different stakeholders that evolves across the LLM development lifecycle, shifting from concentrated, selective engagement in the early stages to broader, distributed participation after model release. The open LLM developers are motivated by a variety of social, economic, and technological motivations, ranging from democratising access to AI and promoting open science to building regional ecosystems and expanding language representation. These dynamics are coordinated through a range of governance structures, typically formal and professionalised to varying degrees, including centralised company-led efforts to decentralised grassroots initiatives. We synthesise our findings in a conceptual model of open collaboration in open LLM ecosystems, provide recommendations for practice, and conclude that openness in open source AI is not a uniform property but an emergent outcome of how collaboration is organised across interconnected artefact domains, lifecycle stages, and institutional contexts.",
+  "link": "https://arxiv.org/abs/2509.25397",
+  "category": "cs.LG",
+  "categories": [
+    "cs.SE",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884517+00:00"
+}

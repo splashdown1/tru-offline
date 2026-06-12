@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31070",
+  "title": "Learning to Bid in FCR Markets: A Best-of-Both-Worlds Approach",
+  "abstract": "Bidding in the European Frequency Containment Reserve (FCR) market is challenging for flexibility providers because competing offers are hidden and bidders observe only partial feedback form the market, such as, clearing price and awarded quantity. For a participant active in a single country, we show that the multi-country FCR clearing problem can be recast as a repeated multi-unit uniform-price auction against an endogenous vector of opposing bids. This reformulation yields an online learning problem and allows us to adapt a Best-of-Both-Worlds combinatorial semi-bandit algorithm implementable from this standard market feedback. The resulting bidder achieves logarithmic pseudo-regret in stochastic environments and $\\mathcal{O}(\\sqrt{T})$ regret in adversarial ones. Synthetic experiments confirm the expected scaling, and backtests on historical European FCR data show competitive performance in practice: the method performs especially well on stable products, while EXP3-type baselines can be safer under stronger non-stationarity. Overall, the results show that learning-based bidding in FCR markets is theoretically grounded and practically useful when the learning rule matches product-level market stability.",
+  "link": "https://arxiv.org/abs/2605.31070",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.GT"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306938Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30615",
+  "title": "Improving Selective Classification with Pairwise Queries for Binary Classification",
+  "abstract": "In selective classification, a model predicts the labels of data samples where it is confident, and abstains from predicting labels for samples on which it is not confident. The rejected samples are often labeled by an expert, which is expensive. The budget for the expert is best utilized when the model has low error on non-rejected samples. However, the estimate of a model's confidence might be inconsistent with the model's predictions, which can lead to high error on non-rejected points. Such situations can readily occur in in-context binary classification by LLMs. To remedy this, we propose making additional pairwise queries to the same model. These pairwise queries can detect high-error samples and be incorporated into selective classification techniques to reduce the error on non-rejected samples. Theoretically, we establish the conditions under which a simple algorithm using pairwise queries outperforms an inconsistent confidence estimate. We support this insight through extensive experiments for $1$ synthetic and $4$ in-context learning-based real binary classification datasets. In all these cases, we show that our algorithms, using pairwise queries, obtain a better accuracy-cost tradeoff than using only the raw confidence estimates, for instance, the LLM's next-token logits.",
+  "link": "https://arxiv.org/abs/2605.30615",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306713Z"
+}

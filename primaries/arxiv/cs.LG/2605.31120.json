@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31120",
+  "title": "SWIM: Single-Instance Whole-Body Imitation for swiMming",
+  "abstract": "We propose a new method for synthesizing physically-based swimming motions. Physically-based character animation aims to generate physically valid, controllable, and natural-looking motions which can respond to unexpected disturbances, where one dictating factor of difficulty is the complexity of the task, especially the level of sophistication of the required interactions with the environment. Existing research has succeeded in various tasks in static and dynamic environments. We push the difficulty further to swimming, which requires full-body coordination and continuous interactions with fluids, a new level of complexity when it comes to interacting with the environment. This complexity imposes challenges in learning control under volatile environmental forces, generalizing control to different environments and swimming styles, lack of data references, and prohibitively slow physical simulation which is inevitable during control learning. To this end, we propose SWIM, a new imitation method for swimming motions, which can learn from a single swimming motion and generalize to unseen environments, body conditions, and swimming styles. Extensive evaluation and comparison demonstrate that SWIM is data-efficient, stable, robust, and generalizable, outperforming alternative methods across multiple classes of tasks and metrics.",
+  "link": "https://arxiv.org/abs/2605.31120",
+  "category": "cs.LG",
+  "categories": [
+    "cs.GR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307426Z"
+}

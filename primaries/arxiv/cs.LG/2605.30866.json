@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30866",
+  "title": "Generative Quantum Data Embeddings for Supervised Learning",
+  "abstract": "Many practically relevant applications of quantum machine learning involve classical data, for which performance depends critically on how inputs are embedded into quantum states. Yet the use of a fixed embedding circuit ansatz remains standard practice. We propose an energy-based generative learning framework that synthesizes gate sequences to optimize embedding structures and refine data-tailored parameters, using a fidelity-based surrogate objective to guide the search toward improved class distinguishability. Empirically, the method improves classification performance across diverse settings, while also revealing datasets where architecture search within the present embedding family yields only limited additional gains. We explain this saturation by deriving bounds on the achievable empirical risk in terms of the Wasserstein distance in the input space, showing that classical data geometry provides an \\emph{a priori} diagnostic for regimes in which substantial gains from embedding optimization are unlikely. The results establish a practically useful and theoretically motivated framework for searching effective quantum data embeddings through generative optimization, with the attainable gains diagnosed through the geometry of the underlying classical data.",
+  "link": "https://arxiv.org/abs/2605.30866",
+  "category": "cs.LG",
+  "categories": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307370Z"
+}

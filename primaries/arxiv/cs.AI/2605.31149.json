@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31149",
+  "title": "Developing a UXR Point of View for Cognitive Accessibility in Mobile Learning with Generative AI",
+  "abstract": "This study investigates how UX research (UXR) principles, combined with Large Language Model (LLM)-supported analysis, can be used to improve the quality of requirements for mobile learning systems designed for learners with cognitive disabilities. Using the UXR Point-of-View (PoV) pyramid as a methodological framework, the study progressed through four stages: foundational structuring of psychological, behavioral, and design layers; structured validation using the DeLone and McLean Information Systems Success Model and Quality Function Deployment (QFD); insight consolidation through the development of nine Cognitive Accessibility UXR Play Cards; and stakeholder-specific PoV articulation to support interdisciplinary communication. LLM-supported synthesis was integrated to assist in theme clustering, requirement refinement, and hypothesis formulation under human oversight. Findings suggest that many usability and engagement challenges in mobile learning originate from ambiguous or under-specified requirements rather than interface design alone. By embedding cognitive accessibility principles into measurable and technically traceable requirements, the proposed Cognitive Accessibility UXR Playbook provides a structured pathway for aligning theory, system architecture, and stakeholder strategy.",
+  "link": "https://arxiv.org/abs/2605.31149",
+  "category": "cs.AI",
+  "categories": [
+    "cs.HC",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358293Z"
+}

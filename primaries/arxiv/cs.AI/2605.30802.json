@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30802",
+  "title": "Design and Evaluation of Multi-Agent AI Oracle Systems for Prediction Market Resolution",
+  "abstract": "Prediction markets aggregate collective intelligence to forecast uncertain events, but their utility depends on reliable outcome resolution. Existing oracle systems tradeoff fast but brittle automation against accurate but costly human arbitration. Single-LLM oracles achieve meaningful accuracy but inherit all failure modes of their underlying model with no self-correction mechanism. We evaluate whether multi-agent LLM architectures can improve oracle resolution accuracy over single-model baselines. We compare independent aggregation and deliberative consensus against single-LLM baselines (GPT-5 Nano, DeepSeek V3, and Llama-3.3-70B) on 1,189 resolved prediction market questions from KalshiBench. All agents share a common evidence layer through Exa, with retrieval filtered by publication date to isolate reasoning from retrieval quality. Independent aggregation with confidence-weighted voting achieves the highest accuracy at 83.43 percent, outperforming the best individual model by 1.01 percentage points. Deliberative consensus degrades accuracy to approximately 76 percent, below every single-model baseline, attributed to error propagation during debate where confidently wrong models flip correct ones. Error correlations across models (0.529-0.689) explain why aggregation gains fall short of the theoretical Condorcet ceiling, placing a fundamental limit on ensemble approaches. Many questions resist correction by any multi-agent architecture, motivating escalation to human arbitration. We propose routing criteria for hybrid AI-human oracle systems: auto-resolving only unanimous, high-confidence questions yields 97.87 percent accuracy on 47 percent of the dataset, with inter-agent disagreement flagging the remainder for human review.",
+  "link": "https://arxiv.org/abs/2605.30802",
+  "category": "cs.AI",
+  "categories": [
+    "cs.MA",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358133Z"
+}

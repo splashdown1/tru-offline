@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2601.22296",
+  "title": "ParalESN: Enabling parallel information processing in Reservoir Computing",
+  "abstract": "Reservoir Computing (RC) has established itself as an efficient paradigm for temporal processing. However, its scalability remains severely constrained by the need to process temporal data sequentially and the prohibitive memory footprint of high-dimensional reservoirs. To address these limitations, we revisit RC through the lens of structured operators and state space modeling, introducing Parallel Echo State Network (ParalESN). Leveraging diagonal linear recurrence in the complex domain, ParalESN enables parallel processing of temporal data and the construction of efficient, high-dimensional reservoirs. A thorough theoretical analysis demonstrates that the Echo State Property and the universality guarantees of traditional Echo State Networks are preserved, while also admitting an equivalent representation of arbitrary linear reservoirs in the complex diagonal form. Empirically, ParalESN achieves competitive predictive accuracy with traditional RC and with fully trainable sequence models, while delivering computational savings by orders of magnitude. Overall, ParalESN offers a scalable and principled pathway for integrating RC within the deep learning landscape.",
+  "link": "https://arxiv.org/abs/2601.22296",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307817Z"
+}

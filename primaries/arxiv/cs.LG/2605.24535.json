@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.24535",
+  "title": "Steering Beyond the Support: Adversarial Training on Unsupervised Jailbroken Activation Simulation",
+  "abstract": "Jailbreak prompts can trigger harmful completions on aligned LLMs, In accordance, safety steering has been proposed: test-time activation interventions that steer jailbreak activations to trigger refusal while preserving benign utility. However, existing steering methods are fundamentally supervised and tied to a static, limited training set, whereas real jailbreaks evolve and are often out-of-distributed from the training set, leading to failures on unseen attacks. In this paper, we tackle the failure on unseen jailbreaks problem, base on unsupervised latent direction discovery. We propose a bi-level adversarial training framework for zero-shot jailbreak defense. In the inner step, we simulate diverse jail-broken activations by extrapolating from refusal-state harmful-request activations via unsupervised latent direction discovery, which expands the coverage of real jailbreak activation subspaces. In the outer step, we train a potential-induced steering field to push these adversarial jailbroken states into refusal regions while keeping benign unchanged. Across three LLMs and six classical jailbreak families, our method achieves strong defense with attack success rates mostly below 5%, and rising subspace coverage throughout training helps explain the improved generalization.",
+  "link": "https://arxiv.org/abs/2605.24535",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CR",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308513Z"
+}

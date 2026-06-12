@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31311",
+  "title": "S$^3$LDBO: A Snapshot Single-Loop Algorithm for Decentralized Bilevel Optimization",
+  "abstract": "Networked AI systems increasingly rely on multiple agents that collaboratively learn and adapt models over communication networks. In such systems, bilevel formulations naturally arise in hyperparameter optimization, data cleaning, and meta-learning, but the repeated evaluation of gradients, Jacobians, and Hessians can impose a substantial computational burden on individual agents. To address this challenge, we propose Snapshot-SLDBO (S$^3$LDBO), an efficient single-loop decentralized bilevel optimization algorithm that enables agents to intermittently skip expensive derivative evaluations through a snapshot mechanism. This mechanism can be interpreted as an autonomous computation-adaptation strategy for networked AI, where agents selectively perform costly local updates while maintaining global collaborative learning. We establish the ergodic iteration complexity and the high probability nonergodic iteration complexity of the proposed algorithm within a deterministic setting. Experimental results on hyperparameter optimization with synthetic and MNIST datasets, data hyper-cleaning on Fashion-MNIST, and decentralized meta-learning on miniImageNet demonstrate that the proposed algorithm improves computational efficiency while maintaining competitive learning performance.",
+  "link": "https://arxiv.org/abs/2605.31311",
+  "category": "cs.LG",
+  "categories": [
+    "math.OC",
+    "cs.DC",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307501Z"
+}

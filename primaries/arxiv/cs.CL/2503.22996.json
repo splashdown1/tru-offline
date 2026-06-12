@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2503.22996",
+  "title": "Rethinking Sparse Mixture of Experts from a Unified Perspective",
+  "abstract": "Sparse Mixture of Experts (SMoE) models scale the capacity of models while maintaining constant computational overhead. SMoE methods fall into two categories: Token Choice, which routes each token to a fixed number of experts, and Expert Choice, which assigns a fixed number of tokens to each expert. However, the use of fixed budgets for tokens or experts causes both approaches to select irrelevant token-expert pairs or overlook critical assignments, which degrades overall performance. To fill that gap, we rethink SMoE from a unified perspective through the lens of linear programming, which provides a general formulation for SMoE models. Furthermore, we introduce Unified Sparse Mixture of Experts (USMoE), a novel framework comprising a unified mechanism and a unified score to overcome these limitations. We provide both theoretical justification and empirical evidence demonstrating USMoE's effectiveness. Extensive evaluations across diverse data settings (clean and corrupted), multiple domains (including texts and vision tasks), and different learning approaches (training-free and training-based) show that USMoE not only delivers significant performance improvements over existing SMoE methods, but also enables more flexible expert selection budgets, reducing inference costs without compromising model performance. Our implementation is publicly available at https://github.com/giangdip2410/USMoE.",
+  "link": "https://arxiv.org/abs/2503.22996",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406098Z"
+}

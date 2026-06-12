@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30713",
+  "title": "Diversity Matters: Revisiting Test-Time Compute in Vision-Language Models",
+  "abstract": "Test-time compute (TTC) strategies have emerged as a lightweight approach to boost reasoning in large language models (LLMs). However, their application and benefits for vision-language models (VLMs) remain underexplored. We present a systematic study of TTC across seven VLMs and six benchmarks, specifically analyzing feature-based scoring and majority voting methods. We find that feature heuristics fail and voting yields only modest gains in single-model settings. We theoretically show that this limitation stems from a lack of prediction diversity: when outputs are highly correlated, voting provides little benefit. In contrast, multi-model ensembles offer richer diversity, yet standard majority voting fails to account for varying model capabilities. To address this, we propose Entropy-based TTC (ETTC), which selects the most confident prediction based on predictive entropy. Our method reduces to majority voting in the single-model case, but in model ensembles, it leverages confidence disparities to prioritize stronger models. We prove that ETTC outperforms majority voting under mild assumptions and empirically demonstrate that it consistently surpasses both voting and the best individual model. Crucially, our results show that smaller models can synergistically enhance larger ones, unlocking ensembling gains not achievable with standard strategies.",
+  "link": "https://arxiv.org/abs/2605.30713",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CV",
+    "cs.MM"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306762Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2601.09719",
+  "title": "Bounded Hyperbolic Tangent: A Stable and Efficient Alternative to Pre-Layer Normalization in Large Language Models",
+  "abstract": "Pre-Layer Normalization (Pre-LN) is the de facto choice for large language models (LLMs) and is crucial for stable pretraining and effective transfer learning. However, Pre-LN incurs repeated statistical-computation overhead and remains vulnerable to the curse of depth, where hidden-state magnitudes and variances grow as the number of layers increases, destabilizing training. Efficiency-oriented normalization-free methods such as Dynamic Tanh (DyT) improve throughput but remain fragile at depth. To jointly address stability and efficiency, we propose Bounded Hyperbolic Tanh (BHyT), a drop-in replacement for Pre-LN. BHyT combines a tanh nonlinearity with explicit, data-driven input bounding to keep activations within a non-saturating range. It prevents depth-wise growth in activation magnitude and variance and provides a theoretical stability guarantee. For efficiency, BHyT computes exact statistics once per block and replaces a second normalization with a lightweight variance approximation. Empirically, BHyT demonstrates improved stability and efficiency during pretraining, achieving an average of 1.6\\% faster training and an average of 1.77\\% higher token generation throughput compared to RMSNorm, while maintaining strong pretraining-only and post-SFT performance across language understanding and reasoning benchmarks\\footnote{Code is available at: https://github.com/MLAI-Yonsei/BHyT}.",
+  "link": "https://arxiv.org/abs/2601.09719",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098974+00:00"
+}

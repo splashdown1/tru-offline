@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30837",
+  "title": "Send a SCOUT First: Pre-hoc Reasoning for Adaptive Detector Allocation in Prompt-Injection Defense",
+  "abstract": "Prompt-injection detectors are heterogeneous: each is strong on a different slice of attacks, and none is always reliable. Yet existing systems still treat detection as a fixed single-detector pipeline, committing every request to one detector's blind spots. We reframe defense as detector allocation: given a heterogeneous pool, decide per request which detectors to run and whether to escalate to an LLM judge. Our framework SCOUT (Scalable and Controllable Outcome-prediction for Uncertainty-aware Triage) makes this decision dynamic by predicting each detector's per-sample reliability and latency from how it behaved on similar past inputs, and exposes a single safety-utility threshold to the operator (where utility bundles benign-pass rate and wall-clock). To evaluate this setting, we build SCOUT-450, a benchmark that captures the structurally complex, agent-facing injections that older prompt-injection sets under-represent. On SCOUT-450, a safety-oriented operating point reduces attack-success rate by 46% and total wall-clock by 40% relative to an always-on GPT-4o judge, at a 5.1-point benign-utility drop. SCOUT also transfers to three external benchmarks (BIPIA, IPI, and IHEval), improving the safety-utility frontier.",
+  "link": "https://arxiv.org/abs/2605.30837",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CR",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307361Z"
+}

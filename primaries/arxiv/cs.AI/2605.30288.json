@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30288",
+  "title": "MIRA: Mid-training Rubric Anchoring for Source-Aware Data Selection",
+  "abstract": "Mid-training has become an important stage in modern LLM development, using large-scale curated mixtures to strengthen capabilities before final post-training. Its data selection problem is distinct: the data are optimized under a pretraining-style objective at near-pretraining scale, but are curated toward downstream capabilities and drawn from heterogeneous sources with different formats and training roles. As a result, effective selection requires both scalability and source-adaptive semantic criteria. Existing model-based methods scale well, but provide only implicit quality signals. Semantic selection methods offer stronger judgments, but usually assume fixed rubrics or standardized data formats. To address this mismatch, we propose MIRA, a source-aware filtering framework based on self-anchored rubric discovery. The key idea is to make rubric construction part of data selection: MIRA first discovers what should be evaluated for each source group, then distills those judgments into scalable student scorers for full-corpus filtering. On code-oriented mid-training with 21 sources and 5 source groups, MIRA outperforms selection baselines across nine code benchmarks and matches the full-corpus run while using only half the tokens.",
+  "link": "https://arxiv.org/abs/2605.30288",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358630Z"
+}

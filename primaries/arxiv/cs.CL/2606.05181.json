@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05181",
+  "title": "Multi-Granularity Reasoning for Natural Language Inference",
+  "abstract": "Natural Language Inference (NLI) is a fundamental task in natural language understanding that requires determining the logical relationship between a premise and a hypothesis. Despite the remarkable success of transformer-based pre-trained models, most existing approaches primarily rely on the final-layer token representations, which are often insufficient for capturing the complex and hierarchical semantic interactions required for effective reasoning. In particular, fine-grained lexical cues, phrasal compositions, and higher-level contextual semantics are typically entangled or diluted in a single representation space. To address these limitations, we propose a novel \\emph{Multi-Granularity Reasoning Network} (MGRN) that explicitly leverages hierarchical semantic features within an interactive reasoning space. The proposed framework mimics the human cognitive process of language understanding, which naturally progresses from shallow lexical matching to deeper semantic abstraction and logical reasoning. By integrating semantic information across multiple granularities in a progressive and structured manner, MGRN is able to uncover intricate semantic relationships underlying natural language expressions. Extensive experiments on multiple public benchmarks demonstrate that MGRN consistently outperforms strong baseline models, validating the effectiveness and robustness of the proposed approach.",
+  "link": "https://arxiv.org/abs/2606.05181",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497671+00:00"
+}

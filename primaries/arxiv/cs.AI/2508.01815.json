@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2508.01815",
+  "title": "From Graph Retrieval to Schema Realization: Counterfactual Validation for Text-to-SPARQL over Heterogeneous Knowledge Graphs",
+  "abstract": "Text-to-SPARQL maps natural-language questions to executable SPARQL queries over RDF knowledge graphs. While standard evaluations often fix the target graph in advance, practical knowledge graph question answering (KGQA) may involve heterogeneous graph collections with different schemas, partial alignments, and incomplete metadata. In this setting, query generation depends on more than SPARQL syntax: the system must identify a graph schema that can support the predicates, entity types, joins, filters, and constraints required by the question. We present SchemaForge, a schema-grounded agentic framework for text-to-SPARQL over heterogeneous KG collections. Its central mechanism is question-conditioned schema-slice alignment: weak graph evidence first identifies plausible graphs, while stronger schema evidence determines whether a local schema slice can realize the intended query. The selected schema slice then constrains query generation and verification before execution. When only one graph is available, the same formulation reduces to standard single-KG text-to-SPARQL with schema grounding. We evaluate SchemaForge on LC-QuAD 2.0, QALD-9 Plus, QALD-10, and Spider4SPARQL. Across the four public benchmarks, SchemaForge improves execution accuracy over the strongest matched agent baseline by 11.50 percentage points on average. On Spider4SPARQL, SchemaForge improves execution accuracy from 54.86% to 64.18% and achieves 73.0% Top-1 and 97.0% Top-3 graph allocation accuracy. These results show that moving from weak graph evidence to schema-specific query commitments, together with counterfactual answer-set checks, improves executable query generation over heterogeneous knowledge graphs.",
+  "link": "https://arxiv.org/abs/2508.01815",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098836+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.15706",
+  "title": "Differentiable Mixture-of-Agents Incentivizes Swarm Intelligence of Large Language Models",
+  "abstract": "Recent advances in Large Language Models (LLMs) have catalyzed the development of multi-agent systems (MAS) for complex reasoning tasks. However, existing MAS typically rely on pre-defined or pre-compiled communication topologies, which limits their flexibility and adaptability to dynamic task requirements. In this work, we propose Differentiable Mixture-of-Agents (DMoA), a self-evolving multi-agent framework that enables elastic and adaptive agent collaboration during inference. Instead of statically constructing workflows, DMoA dynamically routes and activates agents at each reasoning step, allowing the system to implicitly simulate diverse communication topologies and adapt to evolving demands. To achieve this, we design a differentiable, context-aware routing mechanism that leverages recurrent structures to incorporate historical and contextual information, producing sparse agent activations in a step-wise manner. Furthermore, we introduce predictive entropy as self-supervised signals to optimize the routing process, enabling efficient test-time adaptation without external annotations. Extensive experiments across 9 benchmarks demonstrate that DMoA achieves state-of-the-art performance while exhibiting strong efficiency, robustness, and ensembling capabilities.",
+  "link": "https://arxiv.org/abs/2605.15706",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308081Z"
+}

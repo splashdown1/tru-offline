@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.10286",
+  "title": "What Does Preference Learning Recover from Pairwise Comparison Data?",
+  "abstract": "Pairwise preference learning is central to machine learning, with recent applications in aligning language models with human preferences. A typical dataset consists of triplets $(x, y^+, y^-)$, where response $y^+$ is preferred over response $y^-$ for context $x$. The Bradley--Terry (BT) model is the predominant approach, modeling preference probabilities as a function of latent score differences. Standard practice assumes data follows this model and learns the latent scores accordingly. However, real data may violate this assumption, and it remains unclear what BT learning recovers in such cases. Starting from triplet comparison data, we formalize the preference information it encodes through the conditional preference distribution (CPRD). We give precise conditions for when BT is appropriate for modeling the CPRD, and identify factors governing sample efficiency -- namely, margin and connectivity. Together, these results offer a data-centric foundation for understanding what preference learning actually recovers.",
+  "link": "https://arxiv.org/abs/2602.10286",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307907Z"
+}

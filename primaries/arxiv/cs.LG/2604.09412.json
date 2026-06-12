@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2604.09412",
+  "title": "Sharp description of local minima in the loss landscape of high-dimensional two-layer ReLU neural networks",
+  "abstract": "We study the population loss landscape of two-layer ReLU networks of the form $\\sum_{k=1}^K \\mathrm{ReLU}(w_k^\\top x)$ in a realisable teacher-student setting with Gaussian covariates. We show that local minima admit an exact low-dimensional representation in terms of summary statistics, yielding a sharp and interpretable characterisation of the landscape. We further establish a direct link with one-pass SGD: local minima correspond to attractive fixed points of the dynamics in summary statistics space. This perspective reveals a hierarchical organisation of minima into discrete families and shows how overparameterisation changes their stability and reachability under gradient-based dynamics. In this overparameterised regime, global minima become increasingly accessible, attracting the dynamics and reducing convergence to spurious solutions. Overall, our results reveal intrinsic limitations of common simplifying assumptions, which may miss essential features of the loss landscape even in minimal neural network models.",
+  "link": "https://arxiv.org/abs/2604.09412",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cond-mat.dis-nn",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308460Z"
+}

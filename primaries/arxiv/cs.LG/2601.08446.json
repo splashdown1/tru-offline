@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2601.08446",
+  "title": "Noise-Adaptive Regularization for Robust Multi-Label Remote Sensing Image Classification",
+  "abstract": "The development of reliable methods for multi-label classification (MLC) has become a prominent research direction in remote sensing (RS). As the scale of RS data continues to expand, annotation procedures increasingly rely on thematic products or crowdsourced procedures to reduce the cost of manual annotation. While cost-effective, these strategies often introduce multi-label noise in the form of partially incorrect annotations. In MLC, label noise arises as additive noise, subtractive noise, or a combination of both in the form of mixed noise. Previous work has largely overlooked this distinction and commonly treats noisy annotations as supervised signals, lacking mechanisms that explicitly adapt learning behavior to different noise types. To address this limitation, we propose NAR, a noise-adaptive regularization method that explicitly distinguishes between additive and subtractive noise within a semi-supervised learning framework. NAR employs a confidence-based label handling mechanism that dynamically retains label entries with high confidence, temporarily deactivates entries with moderate confidence, and corrects low confidence entries via flipping. This selective attenuation of supervision is integrated with early-learning regularization (ELR) to stabilize training and mitigate overfitting to corrupted labels. Experiments across additive, subtractive, and mixed noise scenarios demonstrate that NAR consistently improves robustness compared with existing methods. Performance improvements are most pronounced under subtractive and mixed noise, indicating that adaptive suppression and selective correction of noisy supervision provide an effective strategy for noise robust learning in RS MLC.",
+  "link": "https://arxiv.org/abs/2601.08446",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884557+00:00"
+}

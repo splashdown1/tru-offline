@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2605.30370",
+  "title": "Updating the standard neuron model in artificial neural networks",
+  "abstract": "From their inception in the 1950s, artificial neural networks (ANNs) started using the so-called point neuron model then prevalent in neuroscience, hoping that this analogy would allow for a better emulation of brain function. Over the years the neuroscience literature has shown that the point neuron model is too simplistic to properly represent many fundamental neural processes; however, the standard neuron model in ANNs still remains the same. Here we substitute it by a very recent model of cortical cells and demonstrate through theoretical analyses and experimental results how, simply by using a more realistic neural unit element without augmenting the number of parameters, the resulting ANNs offer a number of important advantages that include increases in expressivity, robustness and learning speed, and a reduction in memorization and the amount of training data needed.",
+  "link": "https://arxiv.org/abs/2605.30370",
+  "category": "cs.LG",
+  "categories": [
+    "cs.NE",
+    "cs.AI",
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307224Z"
+}

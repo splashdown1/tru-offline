@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2408.16457",
+  "title": "HYGENE: A Diffusion-based Hypergraph Generation Method",
+  "abstract": "Hypergraphs are powerful mathematical structures that can model complex, high-order relationships in various domains, including social networks, bioinformatics, and recommender systems. However, generating realistic and diverse hypergraphs remains challenging due to their inherent complexity and lack of effective generative models. In this paper, we introduce a diffusion-based Hypergraph Generation (HYGENE) method that addresses these challenges through a progressive local expansion approach. HYGENE works on the bipartite representation of hypergraphs, starting with a single pair of connected nodes and iteratively expanding it to form the target hypergraph. At each step, nodes and hyperedges are added in a localized manner using a denoising diffusion process, which allows for the construction of the global structure before refining local details. Our experiments demonstrated the effectiveness of HYGENE, proving its ability to closely mimic a variety of properties in hypergraphs. To the best of our knowledge, this is the first attempt to employ deep learning models for hypergraph generation, and our work aims to lay the groundwork for future research in this area.",
+  "link": "https://arxiv.org/abs/2408.16457",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.DM"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307568Z"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2604.09429",
+  "title": "Rays as Pixels: Learning A Joint Distribution of Videos and Camera Trajectories",
+  "abstract": "Recovering camera parameters from images and rendering scenes from novel viewpoints have been treated as separate tasks in computer vision and graphics. This separation breaks down when image coverage is sparse or poses are ambiguous, since each task depends on what the other produces. We propose Rays as Pixels, a Video Diffusion Model (VDM) that learns a joint distribution over videos and camera trajectories. To our knowledge, this is the first model to predict camera poses and do camera-controlled video generation within a single framework. We represent each camera as dense ray pixels (raxels), a pixel-aligned encoding that lives in the same latent space as video frames, and denoise the two jointly through a Decoupled Self-Cross Attention mechanism. A single trained model handles three tasks: predicting camera trajectories from video, generating video from input images along a pre-defined trajectory, and jointly synthesizing video and trajectory from input images. We evaluate on pose estimation and camera-controlled video generation, and introduce a closed-loop self-consistency test showing that the model's predicted poses and its renderings conditioned on those poses agree. Ablations against Pl\\\"ucker embeddings confirm that representing cameras in a shared latent space with video is subtantially more effective.",
+  "link": "https://arxiv.org/abs/2604.09429",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358908Z"
+}

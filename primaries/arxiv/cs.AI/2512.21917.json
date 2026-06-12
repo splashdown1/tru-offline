@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2512.21917",
+  "title": "Semiparametric Preference Optimization: Your Language Model is Secretly a Single-Index Model",
+  "abstract": "Policy alignment to preference data typically assumes a known link function between observed preferences and latent rewards (e.g., Bradley-Terry model / logistic link). Misspecification of this link can bias inferred rewards and misalign learned policies. We study policy alignment under an unknown and unrestricted link function. We formulate an $f$-divergence-constrained reward maximization problem and show that realizability in a policy class induces a semiparametric single-index binary choice model, where a scalar policy-induced index captures all dependence on demonstrations and the remaining preference distribution is unrestricted. Rather than impose identifiability of structural parameters of such a model and estimate them, as in econometrics, we develop methods that directly learn policies, with the reward function implicit, analyzing error to the optimal policy and allowing for unidentifiable and nonparametric indices. We prove link-agnostic convergence guarantees in terms of generic function complexity measures and validate the methods and theory empirically. Code is available at https://github.com/causalml/spo/.",
+  "link": "https://arxiv.org/abs/2512.21917",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "econ.EM",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098960+00:00"
+}

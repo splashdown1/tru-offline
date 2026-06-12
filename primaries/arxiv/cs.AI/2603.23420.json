@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2603.23420",
+  "title": "Bilevel Autoresearch: Meta-Autoresearching Itself",
+  "abstract": "If autoresearch is itself a form of research, then autoresearch can be applied to research itself. We present Bilevel Autoresearch, a bilevel framework in which an outer autoresearch loop improves an inner autoresearch loop by reading its code and traces, identifying bottlenecks, and generating injectable Python search mechanisms at runtime. The inner loop optimizes task performance; the outer loop optimizes how the inner loop searches. Both loops use the same LLM, so improvements come from the bilevel architecture rather than a stronger meta-level model, although the outer loop consumes additional inference and wall-clock budget.\n  On Karpathy's GPT pretraining benchmark, the meta-autoresearch outer loop achieves a 5x improvement over the standard inner loop alone (-0.045 vs. -0.009 val_bpb), while parameter-level adjustment without mechanism change yields no reliable gain. The outer loop instantiates mechanisms from adjacent search domains, including combinatorial optimization, multi-armed bandits, and design of experiments, without human specification of the final mechanism design. Trace analysis suggests that these mechanisms break deterministic search patterns and force exploration of directions the LLM's priors avoid.\n  The experiments demonstrate, on this benchmark, a first bilevel step: an outer loop improves the search behavior of an inner loop. Code is the mechanism carrier in this implementation, but skills, prompts, workflows, evaluators, domain principles, world-model assumptions, and memory schemas can also encode mechanisms that shape future agent behavior. This suggests a path toward recursive bootstrapping, where mechanisms discovered for the inner loop can be fed back to improve the meta-level loop itself.",
+  "link": "https://arxiv.org/abs/2603.23420",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098679+00:00"
+}

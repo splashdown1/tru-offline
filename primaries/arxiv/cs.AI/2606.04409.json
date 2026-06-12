@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04409",
+  "title": "An Empirical Study of Data Scale, Model Complexity, and Input Modalities in Visual Generalization",
+  "abstract": "Modern deep neural networks usually have large parameter scales and nonlinear hierarchical structures, and they have achieved strong performance in computer vision. However, the source of their generalization performance remains difficult to explain using traditional statistical learning theory. Among the factors that may affect visual generalization, data scale, model complexity, and input modalities are fundamental and controllable variables. This study empirically analyzes how these three factors influence model generalization performance. Specifically, in a preliminary experiment, we construct a one-dimensional nonlinear function and vary the number of training samples and the polynomial degree to observe the effects of data scale and model complexity on model performance. In the main experiments, we compare model performance on CIFAR-10 and CIFAR-100 under different training data scales, model architectures, and input modalities. The experimental results show that increasing the training data scale consistently improves generalization performance, whereas changes in model complexity do not provide stable gains. In addition, removing color information degrades model performance, while explicit prior features such as gradients, edges, and wavelets have inconsistent effects across different model architectures. Overall, this study provides an empirical analysis of the relationships among data scale, model complexity, input modalities, and visual generalization performance. Code and experimental logs are available at: https://github.com/zlyd-CV/DeepLearning-Empirical-Studies.",
+  "link": "https://arxiv.org/abs/2606.04409",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098195+00:00"
+}

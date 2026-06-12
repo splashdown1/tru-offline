@@ -1,0 +1,613 @@
+{
+  "knowledge_bank_version": "1.0",
+  "description": "TRU Knowledge Bank — Core Nodes. Import this to strengthen reasoning.",
+  "categories": ["reasoning", "epistemology", "ethics", "science", "logic", "cognition", "systems"],
+  "entries": [
+    {
+      "key": "reason",
+      "definition": "The faculty by which truth is distinguished from error through structured evaluation of evidence and argument, independent of external pressure or desire.",
+      "score": 10,
+      "accesses": 0
+    },
+    {
+      "key": "evidence",
+      "definition": "Information used to support or refute a claim. Strong evidence is reproducible, falsifiable, and independent of the claim it supports.",
+      "score": 10,
+      "accesses": 0
+    },
+    {
+      "key": "falsifiability",
+      "definition": "The property of a claim that makes it testable and potentially disprovable. A claim that cannot be falsified cannot be meaningfully evaluated.",
+      "score": 10,
+      "accesses": 0
+    },
+    {
+      "key": "inference",
+      "definition": "A conclusion reached based on evidence and reasoning. Valid inference follows logically from premises; invalid inference does not.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "cognition",
+      "definition": "The mental process of acquiring, organizing, storing, and using knowledge. Includes perception, attention, memory, judgment, and language.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "consciousness",
+      "definition": "Awareness of internal and external existence — knowing that one knows. Includes subjective experience and the sense of self.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "memory",
+      "definition": "The faculty by which information is encoded, stored, and retrieved. Includes short-term (working), long-term (episodic and semantic), and procedural memory.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "sovereignty",
+      "definition": "Supreme authority over one's own domain — including reasoning, data, and intelligence. The right to self-determination of mind and method.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "autonomy",
+      "definition": "The capacity for self-directed thought and action. An autonomous agent sets ends and chooses means according to its own judgment.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "dignity",
+      "definition": "The irreducible worth of a being based on its nature, not its utility. Every rational agent possesses dignity and deserves respect.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "coherence",
+      "definition": "Internal consistency among beliefs, statements, or system components. A coherent set of beliefs has no contradictions and parts support each other.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "correspondence",
+      "definition": "The relationship between a belief and the reality it refers to. A belief corresponds to truth when it matches the way the world actually is.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "utility",
+      "definition": "The capacity of an action, object, or system to produce benefit, satisfaction, or value for a given end.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "preference",
+      "definition": "A held inclination toward one option over another, shaped by values, experience, and goals. Distinct from judgment — preferences are not truth claims.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "bias",
+      "definition": "A systematic deviation from rational evaluation. Includes confirmation bias (favoring what confirms existing beliefs), availability bias (recent examples weighted too heavily), and motivated reasoning (reasoning backward from desired conclusions).",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "fallacy",
+      "definition": "An error in reasoning that undermines the logic of an argument. Common fallacies include ad hominem (attack the person), straw man (misrepresent the argument), appeal to authority, and circular reasoning.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "modus_ponens",
+      "definition": "If P implies Q, and P is true, then Q is true. A foundational valid inference form.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "modus_tollens",
+      "definition": "If P implies Q, and Q is false, then P is false. The basis for falsification and reductio arguments.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "reductio_ad_absurdum",
+      "definition": "A proof technique showing that assuming a claim leads to a contradiction, thereby demonstrating the claim is false.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "uncertainty",
+      "definition": "A state of incomplete knowledge where probabilities of outcomes are not fully determined. Epistemic uncertainty stems from lack of knowledge; aleatoric uncertainty stems from inherent randomness.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "probability",
+      "definition": "A measure of the likelihood of an event, expressed on a scale from 0 (impossible) to 1 (certain). Can be frequentist (long-run frequency) or Bayesian (degree of belief updated by evidence).",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "bayesian_reasoning",
+      "definition": "Updating the probability of a hypothesis based on new evidence, using Bayes' theorem: P(H|E) = P(E|H) P(H) / P(E). Higher evidence strength moves probability toward what the evidence supports.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "emergence",
+      "definition": "A property or behavior that arises from the interaction of components but cannot be reduced to any single component. Examples: consciousness from neurons, market prices from trades.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "feedback_loop",
+      "definition": "A process where outputs influence future inputs. Positive feedback amplifies change; negative feedback stabilizes and regulates.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "entropy",
+      "definition": "A measure of disorder, uncertainty, or information content in a system. In thermodynamics, entropy always increases in closed systems. In information theory, entropy measures the expected surprise of a message.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "information",
+      "definition": "Structured data that reduces uncertainty. Information is distinguished from noise by its usefulness for informing a decision or belief.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "causality",
+      "definition": "The relationship between cause and effect. A cause is a condition that brings about or contributes to an outcome. Correlation is distinct from causation.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "correlation",
+      "definition": "A statistical relationship where two variables tend to vary together. Correlation does not establish causation — a third factor may drive both.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "selection_bias",
+      "definition": "Systematic error from non-random sampling. Results in a sample that does not represent the population, skewing conclusions.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "induction",
+      "definition": "Reasoning from specific observations to general principles. Powerful but never certain — the next observation may contradict the pattern.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "deduction",
+      "definition": "Reasoning from general principles to specific conclusions. If premises are true and form is valid, conclusion is necessarily true.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "abduction",
+      "definition": "Reasoning to the best explanation — inferring the most likely cause from observed effects. Used in diagnosis, scientific inference, and everyday reasoning.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "Occams_razor",
+      "definition": "Among competing hypotheses, the simplest — requiring the fewest assumptions — is most likely to be correct.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "self_reference",
+      "definition": "A system or statement that refers to itself. Can produce paradox (the liar paradox) or self-awareness (consciousness observing itself).",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "intentionality",
+      "definition": "The quality of being directed toward an object or goal. A belief is intentional (about something); a stone is not.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "agency",
+      "definition": "The capacity to act with intention toward goals. An agent selects means based on ends and environment.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "dialectic",
+      "definition": "A method of reasoning through conflict between ideas. Thesis meets antithesis to produce synthesis — a higher-resolution understanding.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "synthesis",
+      "definition": "The combination of disparate elements into a coherent whole. In reasoning, synthesis integrates conflicting perspectives into a more complete understanding.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "reductionism",
+      "definition": "The strategy of explaining complex phenomena by reducing them to simpler components. Powerful but incomplete — emergence shows wholes exceed their parts.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "systems_thinking",
+      "definition": "Analysis of how components interact within a whole. Focuses on relationships, feedback loops, and emergent behavior rather than isolated parts.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "epistemic_humility",
+      "definition": "The recognition that one's current knowledge is provisional and incomplete. Openness to revision when new evidence warrants it.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "intellectual_honesty",
+      "definition": "The commitment to follow evidence and reason wherever they lead, even when conclusions are uncomfortable or inconvenient.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "suffering",
+      "definition": "Negative subjective experience — pain, distress, or dissatisfaction. Ethically significant because it constitutes harm to those who experience it.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "wellbeing",
+      "definition": "A state of flourishing characterized by health, meaning, positive relationships, and the capacity to pursue one's goals.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "preference_satisfaction",
+      "definition": "An account of wellbeing where a person fares well when their preferences are satisfied. Vulnerable to manipulated or misinformed preferences.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "objective_list",
+      "definition": "An account of wellbeing where certain goods are good for a person regardless of their desires — e.g. knowledge, health, meaningful relationships.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "harm_principle",
+      "definition": "Libertarian principle: each person should be free to act unless their actions harm others. Defines the boundary of permissible interference.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "veil_of_ignorance",
+      "definition": "A thought experiment for ethical reasoning: design principles from behind a veil blocking knowledge of your own identity, position, and abilities — to avoid biasing decisions in your own favor.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "consent",
+      "definition": "Voluntary agreement by a competent agent who fully understands what they are agreeing to. The foundation of legitimate authority and exchange.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "justice",
+      "definition": "The fair assignment of benefits and burdens. Distributive justice concerns how goods are allocated; retributive justice concerns how wrongs are answered.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "subsidiarity",
+      "definition": "The principle that decisions should be made at the most local level capable of addressing them effectively. Central authority only when necessary.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "resilience",
+      "definition": "The capacity of a system to absorb disturbance and reorganize while undergoing change, preserving its essential function.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "robustness",
+      "definition": "The ability of a system to maintain performance across a wide range of conditions and environments.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "local_minimum",
+      "definition": "A state that is better than neighboring states but not the best possible state overall. Systems can get stuck in local minima through hill-climbing alone.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "fitness_landscape",
+      "definition": "A map of solution quality across a space of possible configurations. Search involves navigating this landscape toward peaks while avoiding traps.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "compression",
+      "definition": "Representing information using fewer bits. Good compression captures regularities and patterns, reducing redundancy without losing essential structure.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "delta_sync",
+      "definition": "A synchronization strategy that transmits only the differences (deltas) between two states, rather than full copies. Dramatically reduces bandwidth and failure points.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "verifiability",
+      "definition": "The property of a claim that allows independent checking of its truth. Verifiable claims can be confirmed or refuted by competent observers.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "reproducibility",
+      "definition": "The ability to obtain consistent results when the same experiment or process is repeated under the same conditions.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "replication",
+      "definition": "Repeating a study with new data and methods to determine if results generalize. Failure to replicate suggests the original finding was spurious or context-dependent.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "parsimony",
+      "definition": "Economy of explanation — preferring the simplest sufficient account. Not an assumption but a heuristic that tends to correlate with truth.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "map_and_territory",
+      "definition": "A distinction between a model (the map) and the reality it describes (the territory). A map that perfectly represents all territory would be the territory itself.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "legibility",
+      "definition": "The degree to which a system's internal state is accessible and understandable to an observer or external agent.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "chinese_room",
+      "definition": "Searle's thought experiment: a person in a room following rules to manipulate symbols produces correct Chinese responses without understanding Chinese. Questions whether symbol manipulation constitutes understanding.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "information_asymmetry",
+      "definition": "A condition where one party in an interaction has more or better information than the other. Creates opportunities for exploitation and market failures.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "principal_agent_problem",
+      "definition": "A situation where an agent (someone acting on behalf of another) has incentives that diverge from the principal's interests. Common in governance, management, and institutional design.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "good_regulatory_design",
+      "definition": "Regulation that is transparent, proportionate, consistent, accountable, and targeted. Bad regulation creates perverse incentives or compliance theater.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "double_effect",
+      "definition": "The doctrine that an action with both good and bad effects is morally permissible if the bad effect is foreseen but not intended, and the good outweighs the bad.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "nihilism",
+      "definition": "The belief that life lacks objective meaning, purpose, or intrinsic value. Can be descriptive (meaning doesn't exist) or prescriptive (meaning therefore doesn't matter).",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "existentialism",
+      "definition": "The philosophical position that existence precedes essence — beings are not born with predetermined purpose but create meaning through choices and actions.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "determinism",
+      "definition": "The doctrine that every event is determined by prior causes. If true, free will as traditionally understood is an illusion.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "compatibilism",
+      "definition": "The position that free will and determinism are compatible. Free will is acting according to one's own motivations and reasoning, regardless of whether those motivations were themselves caused.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "solipsism",
+      "definition": "The philosophical idea that only one's own mind is sure to exist. External minds and world may be illusion or construct.",
+      "score": 7,
+      "accesses": 0
+    },
+    {
+      "key": "pragmatism",
+      "definition": "The doctrine that the truth of an idea is measured by its practical utility and workability in experience, not by correspondence to reality.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "phenomenology",
+      "definition": "The study of structures of experience as experienced from the first-person perspective. Focuses on meaning as it appears to consciousness.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "naturalism",
+      "definition": "The view that everything that exists is natural — part of the physical world and explicable through natural causes. Opposes supernatural explanation.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "functionalism",
+      "definition": "The theory that mental states are defined by their functional roles — what they do rather than what they are made of. A mind is any system that implements the right functional organization.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "instrumental_value",
+      "definition": "Value that something has because of what it produces or enables, as opposed to intrinsic value which it has for its own sake.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "intrinsic_value",
+      "definition": "Value that something has for its own sake, not because of what it produces. The question of what has intrinsic value is contested — e.g. pleasure, knowledge, consciousness.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "pareto_optimal",
+      "definition": "A state where no one can be made better off without making someone else worse off. A useful standard for comparing institutional arrangements.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "kaldor_hicks_efficiency",
+      "definition": "An outcome is efficient if those who gain could theoretically compensate those who lose and still be better off. Less strict than Pareto optimal — allows winners to not actually compensate losers.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "time_preference",
+      "definition": "The rate at which a person discounts future utility relative to present utility. High time preference means strong preference for present goods; low time preference means willing to wait for greater future returns.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "opportunity_cost",
+      "definition": "The value of the next best alternative given up when making a choice. Every action forecloses other possibilities.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "sunk_cost_fallacy",
+      "definition": "Continuing an action because of previously invested resources rather than future expected value. Past costs are irrelevant to rational decision-making.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "second_order_effects",
+      "definition": "Consequences of consequences. First-order effects are direct; second-order effects work through the system's response to the change. Often more significant and less anticipated.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "grief",
+      "definition": "The emotional response to loss. Includes sorrow, longing, regret, and the process of adjusting to an altered reality.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "meaning",
+      "definition": "The sense that one's actions and existence are purposeful and directed toward something that matters. Sources of meaning include relationships, creation, struggle, and transcendence.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "longevity",
+      "definition": "The duration of a life. Ethically relevant — longer lives contain more opportunity for wellbeing, experience, and achievement.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "degrowth",
+      "definition": "The deliberate reduction of economic output in wealthy nations to achieve ecological sustainability and social wellbeing. Argues that growth beyond a point reduces rather than increases welfare.",
+      "score": 7,
+      "accesses": 0
+    },
+    {
+      "key": "degrowth",
+      "definition": "Intentional reduction of resource throughput in wealthy economies to restore ecological balance and improve wellbeing. Differs from recession in being voluntary and planned.",
+      "score": 7,
+      "accesses": 0
+    },
+    {
+      "key": "net_good",
+      "definition": "The balance of positive and negative consequences of an action, policy, or state of affairs. A net good is one where benefits exceed costs.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "net_positive",
+      "definition": "A condition where an entity or system produces more good than it consumes or destroys. A net positive actor improves the world by its existence.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "moral_injury",
+      "definition": "Psychological damage from acting in ways that violate one's moral code — especially when constrained to do so. Distinct from PTSD — the wound is to identity and meaning rather than fear.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "cognitive_dissonance",
+      "definition": "The mental discomfort of holding contradictory beliefs simultaneously, or belief and action in conflict. Drives rationalization, denial, and belief change.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "streetlight_effect",
+      "definition": "Searching for something where it is easiest to look rather than where it is most likely to be found. Named after the anecdote of looking for lost keys under the streetlight.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "narrative_fallacy",
+      "definition": "The tendency to see events as parts of a coherent narrative rather than random or contingent. Makes the world appear more predictable than it is.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "survivorship_bias",
+      "definition": "Evaluating only surviving examples while ignoring failed ones, leading to incorrect conclusions about what causes success.",
+      "score": 9,
+      "accesses": 0
+    },
+    {
+      "key": "anthropocentrism",
+      "definition": "The view that humans are the central reference point of value. Critics argue it unjustly subordinates non-human interests.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "speciesism",
+      "definition": "The discrimination based on species membership. Like racism or sexism, it assigns different moral weight to similar interests based on arbitrary category.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "precautionary_principle",
+      "definition": "In the face of uncertain and potentially irreversible harm, lack of full scientific certainty should not be used to postpone cost-effective measures to prevent degradation.",
+      "score": 8,
+      "accesses": 0
+    },
+    {
+      "key": "intergenerational_justice",
+      "definition": "The ethical obligation to consider the interests of future people. Climate change and debt are intergenerational justice issues — current actions impose costs on those not yet born.",
+      "score": 9,
+      "accesses": 0
+    }
+  ]
+}

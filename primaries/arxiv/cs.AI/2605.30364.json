@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30364",
+  "title": "Hamiltonian-Inspired Attention Mechanism for Scalable RF Transmitter Fingerprinting",
+  "abstract": "Radio-frequency (RF) fingerprinting identifies wire-less transmitters using hardware-induced imperfections present in baseband I/Q signals. However, deep learning models often degrade under receiver and channel distribution shifts, particularly as transmitter populations grow. This work proposes the Hamiltonian Transformer, a physics-informed attention architecture that enforces norm preserving value dynamics within each attention head using a learned skew-symmetric generator and a St\\\"ormer-Verlet leapfrog integration step. An additional phase-increment embedding exposes oscillator dynamics at the input layer. All experiments use non-equalized raw I/Q signals from the WiSig dataset under four protocols: same-day classification, cross-receiver generalisation, cross-day generalisation, and transmitter scaling up to 150 devices. The Hamiltonian Transformer achieves 99.12% accuracy under same-day conditions and 61.64% at 150 transmitters, consistently outperforming CNN and Transformer baselines across all scale points. A controlled ablation study identifies norm-preservation in the value update as the primary inductive bias driving the scaling advantage, with the phase increment embedding providing the single largest per-component improvement. These results indicate that embedding physics-informed structural priors into attention mechanisms is an effective approach to large-scale transmitter identification on raw wireless signals.",
+  "link": "https://arxiv.org/abs/2605.30364",
+  "category": "cs.AI",
+  "categories": [
+    "eess.SP",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.357912Z"
+}

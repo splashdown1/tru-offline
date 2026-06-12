@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.27052",
+  "title": "Multi-Level Barriers to Generative AI Adoption Across Disciplines and Professional Roles in Higher Education",
+  "abstract": "Generative Artificial Intelligence (GenAI) is rapidly reshaping higher education, yet barriers to its adoption across different disciplines and institutional roles remain underexplored. Existing literature frequently attributes adoption barriers to individual-level factors such as perceived usefulness and ease of use. This study instead investigates whether such barriers are structurally produced. Drawing on a multi-method survey analysis of 272 academic and professional services (PSs) staff at a Russell Group university, we examine how disciplinary contexts and institutional roles shape perceived barriers. By integrating multinomial logistic regression (MLR), structural equation modelling (SEM), and semantic clustering of open-ended responses, we move beyond descriptive accounts to provide a multi-level explanation of GenAI adoption. Our findings reveal clear, systematic differences: non-STEM academics primarily report ethical and cultural barriers related to academic integrity, whereas STEM and PSs staff disproportionately emphasize institutional, governance, and infrastructure constraints. We conclude that GenAI adoption barriers are deeply embedded in organizational ecosystems and epistemic norms, suggesting that universities must move beyond generalized training to develop role-specific governance and support frameworks.",
+  "link": "https://arxiv.org/abs/2603.27052",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CY",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358902Z"
+}

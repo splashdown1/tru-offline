@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.05371",
+  "title": "Mamba-Assisted Non-Markovian Closure for Reduced-Order Modeling",
+  "abstract": "Reduced-order modeling of high-dimensional dynamical systems is often hindered by the non-Markovian closure term that represents the effect of unresolved variables on the resolved dynamics. Inspired by the Mori--Zwanzig formalism, in which the closure takes the form of a memory functional of the resolved trajectory, we recast closure modeling as a sequence modeling problem and propose the Mamba-Assisted Closure (MAC) framework: a Mamba-based sequence model, trained to predict the closure from the resolved trajectory, is coupled with the reduced-order governing equations through a numerical integrator to advance the resolved variables in time. A key feature of the framework is its exploitation of the dual representation of state-space models -- the model is trained in a sequence-to-sequence fashion via the convolutional form, and deployed for step-by-step autoregressive rollout via the recurrent form, yielding both efficient long-trajectory training and constant per-step inference cost. On the viscous Burgers' equation and the chaotic two-scale Lorenz '96 system, the MAC model substantially outperforms the Markovian reduced-order model, the GRU-based sequence model, and the Wilks method in predictive accuracy and long-time rollout stability.",
+  "link": "https://arxiv.org/abs/2606.05371",
+  "category": "stat.ML",
+  "categories": [
+    "cs.LG",
+    "cs.NA",
+    "math.NA",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728661+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2406.07049",
+  "title": "GridPE: A Grid Cell-Inspired Unified Position Embedding for Arbitrary-Dimensional Spaces",
+  "abstract": "Understanding spatial relationships across all dimensions is fundamental for intelligent systems. However, existing positional embeddings, such as Rotary Positional Embedding (RoPE), lack theoretical guarantees for high-dimensional spatiotemporal tasks like video understanding and robotic navigation. Inspired by the hexagonal periodic coding of grid cells in mammalian spatial cognition, we propose GridPE -- a novel positional embedding framework that integrates computational neuroscience principles with harmonic analysis. Our approach builds upon Random Fourier Features and leverages principles from neuroscience to construct efficient embeddings. Theoretically, we prove that any translation-invariant spatial function can be approximated by a finite sum of Fourier bases, which naturally reduces to RoPE in the one-dimensional case. We then derive the directions and quantities of frequency vectors at each scale in any Euclidean dimension, along with the optimal ratio between different scales, from a bioavailability perspective. These derivations are equivalent to the relationship between the centroid and the vertices of a regular simplex in that dimension. We validate GridPE across a range of spatial modeling tasks, including 2D image classification (ImageNet100) and 3D point cloud recognition (ModelNet40). Our theoretical analysis establishes GridPE as a unified framework for positional embedding in arbitrary-dimensional spaces, while empirical results demonstrate its superiority over existing methods.",
+  "link": "https://arxiv.org/abs/2406.07049",
+  "category": "cs.LG",
+  "categories": [
+    "cs.NE",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884432+00:00"
+}

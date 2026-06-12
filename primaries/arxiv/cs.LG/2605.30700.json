@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30700",
+  "title": "Mathematical Morphology in Machine Learning",
+  "abstract": "This work introduces mathematical morphology-an established visual computing theory-into machine learning to exploit shape and density aspects often overlooked by standard techniques. We propose a fast clustering algorithm based on morphological reconstruction that accurately preserves cluster shapes and density. This scheme offers unique features: an intrinsic sense of maximal clusters, cost-free noise removal, and diverse growth patterns controlled by structuring elements.Additionally, we propose a novel distance metric combining Minkowski and Chebyshev distances, highly efficient for morphological dilations. In $Z^2$ discrete neighbourhood iterations, it is roughly 1.3 times faster than Manhattan and 329.5 times faster than Euclidean distances. When evaluated using a k-Nearest Neighbours (k-NN) classifier across 33 UCI datasets against 14 other distances, our metric achieved above-average accuracies most frequently (26 of 33 cases) and the best overall accuracy in 9 cases.Finally, we introduce novel morphological classifiers. Unlike current literature, this proposal uniquely models shape, density, and fractal information in datasets.",
+  "link": "https://arxiv.org/abs/2605.30700",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307327Z"
+}

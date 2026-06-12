@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2506.11042",
+  "title": "GenFT: A Generative Parameter-Efficient Fine-Tuning Method for Pretrained Foundation Models",
+  "abstract": "Parameter-efficient fine-tuning (PEFT) has emerged as a resource-efficient strategy for adapting Pretrained Foundation Models (PFMs) by learning a small number of task-specific updates $\\Delta W$. Existing methods often learn $\\Delta W$ largely independently of pretrained weights $W_0$, or exploit $W_0$ mainly through initialization or simple reparameterization. To further leverage the structural information encoded in $W_0$, we propose Generative Parameter-Efficient Fine-Tuning (GenFT), a $W_0$-conditioned PEFT method that uses a deterministic weight generator to produce task-specific updates. Specifically, GenFT performs row and column transformations with nonlinear activations to extract structured patterns from $W_0$, and introduces a shared-specific decomposition to balance cross-layer information reuse and layer-specific flexibility. GenFT is simple and parameter-efficient, achieving competitive or better average performance across NLP and CV benchmarks. We further provide a pilot study on LLaMA-7B to examine its feasibility for generative models. The code is available at GitHub https://github.com/xuguangning1218/GenFT.",
+  "link": "https://arxiv.org/abs/2506.11042",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883909+00:00"
+}

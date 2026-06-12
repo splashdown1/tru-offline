@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2505.05168",
+  "title": "Dynamical local Fr\\'echet curve regression in manifolds",
+  "abstract": "Under mild conditions, this paper derives a least-squares local linear Fr\\'echet curve predictor for response and regressor evaluated in a separable Hilbert space. We obtain the conditions allowing the implementation of this local linear Fr\\'echet functional predictor in the ambient L^{2}-space of vector functions, with values in the time-varying tangent space on a compact Riemannian manifold. An intrinsic local linear Fr\\'echet curve predictor evaluated in such a manifold is secondly proposed, based on a weighted Fr\\'echet mean approach. Its asymptotical optimality is proved. The simulation study and real-data application analyze the finite-sample performance of the empirical versions of both predictors, compared with a geodesic Nadaraya-Watson-type curve predictor. In the real-data application, the functional prediction of the time-varying spherical coordinates of the Earth's magnetic field is addressed, from the observation of the geocentric latitude and longitude of the satellite NASA's MAGSAT spacecraft.",
+  "link": "https://arxiv.org/abs/2505.05168",
+  "category": "cs.LG",
+  "categories": [
+    "math.ST",
+    "cs.LG",
+    "stat.ML",
+    "stat.TH"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308185Z"
+}

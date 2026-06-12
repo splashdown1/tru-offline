@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2510.10968",
+  "title": "Blade: A Derivative-free Bayesian Inversion Method using Diffusion Priors",
+  "abstract": "Derivative-free Bayesian inversion arises in science and engineering applications, particularly when forward model is costly or infeasible to differentiate through. Existing derivative-free methods collapse the posterior to a point estimate or return severely over-confident uncertainty on high-dimensional, nonlinear problems. We introduce Blade, which produces accurate and well-calibrated posteriors using an ensemble of interacting particles. Blade leverages diffusion models as data-driven priors, and only queries the forward model through forward evaluations (i.e., derivative-free). Theoretically, we show the convergence and stability of Blade under forward model approximation and prior score estimation error. Empirically, on nonlinear fluid dynamics, Blade produces well-calibrated posterior samples that existing derivative-free methods cannot, as measured by CRPS, the spread-skill ratio, and the rank histogram. Its accuracy and calibration improve consistently with more iterations and particles, backed by our convergence and stability analysis and empirical experiments.",
+  "link": "https://arxiv.org/abs/2510.10968",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883953+00:00"
+}

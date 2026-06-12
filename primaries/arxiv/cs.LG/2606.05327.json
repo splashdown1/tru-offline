@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05327",
+  "title": "Multimarginal flow matching with optimal transport potentials",
+  "abstract": "Flow matching (FM) has emerged as a powerful framework for learning dynamic transport maps between two empirical distributions. However, less explored is the setting with intermediate observed marginals that can help constrain the flows between the endpoints. This \"multimarginal\" regime is central to modeling temporal evolution in dynamical systems in many scientific domains that can sample sequential distributions. We tackle this problem with a novel approach that leverages the connection between FM and dynamic optimal transport (OT), softly steering the flow towards the intermediate marginals through potential terms in the dynamic OT action. By extending the conditional FM learning target to incorporate these potentials, we derive an efficient, simulation-free algorithm for multimarginal FM that offers considerable flexibility in the spatiotemporal dynamics of the learned flows. We demonstrate state-of-the-art performance and training efficiency of OT-potential FM (OTP-FM) on diverse single-cell RNA sequencing, oceanographic, and meteorological datasets. Our code is available at https://github.com/Bexorg-Inc/OTP-FM.",
+  "link": "https://arxiv.org/abs/2606.05327",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "q-bio.QM",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881966+00:00"
+}

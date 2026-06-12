@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04684",
+  "title": "Real-Time Automatic License Plate Recognition Using YOLOv8, SORT Tracking, and Temporal Data Interpolation",
+  "abstract": "The real-time hardships of video processing seriously limit the usage of Automatic License Plate Recognition (ALPR) with application in dynamic traffic monitoring settings. High-fidelity recognition of unconstrained variables, e.g. drastic variations in illumination, acute camera scans, high vehicle speeds, and harsh physical concealment, is a problem that often leads to disjointed tracking paths and poor Optical Character Recognition (OCR) rates. In order to mitigate these weaknesses, the study proposes a 5 stage, end-to-end algorithmic pipeline, encompassing a smooth transition between deep learning based object detection, multi-object tracking which is kinematic in nature, and geometry temporal data interpolation. The suggested architecture takes advantage of a very powerful YOLOv8 nano model to localize the vehicle at the first stage and then Simple Online and Realtime Tracking (SORT) algorithm is used to build spatial-temporal links between frames. Another, more specific typology of YOLOv8 object detectors the license plate area, channeling the sliced array to an EasyOCR chain under the limitations of positional syntax verification. More importantly, an offline interpolation mechanism of temporal bounding box is initiated to recast fragmented paths.",
+  "link": "https://arxiv.org/abs/2606.04684",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098354+00:00"
+}

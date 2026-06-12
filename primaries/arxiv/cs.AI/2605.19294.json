@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.19294",
+  "title": "DEFLECT: Temporal Counterfactual Preference Learning for Delay-Robust Asynchronous VLAs",
+  "abstract": "Vision-Language-Action (VLA) policies increasingly rely on asynchronous inference to hide large-model latency behind ongoing robot motion. While this avoids the stop-and-go behavior of synchronous action-chunk execution, it creates a prediction-execution mismatch: the next chunk is computed from a stale observation at inference start but executed only after the robot and scene have evolved. As a result, actions that fit the prediction-time state can become misaligned with the execution-time state. Existing runtime repair, behavior-cloning, and preference-alignment approaches do not directly teach the policy to resolve this stale-input mismatch. We propose DEFLECT, an offline post-training framework for delay-robust asynchronous VLAs. DEFLECT converts latency-induced mismatch into counterfactual preference supervision: a frozen reference VLA generates a preferred chunk from the future execution-time observation and a rejected chunk from the stale prediction-time observation. The trainable policy scores both chunks under the same deployment-time input, learning to favor execution-time-aligned actions while a supervised fine-tuning anchor preserves the expert action manifold. DEFLECT requires no human preference labels, reward models, online robot rollouts, architectural changes, or additional inference-time computation. Across Kinetix, LIBERO, and three real-robot tasks, DEFLECT improves delay robustness over strong asynchronous VLA baselines, raising high-latency success by up to 6.4 percentage points and achieving a 4.6 percentage-point gain at the longest delay on a real-scale VLA.",
+  "link": "https://arxiv.org/abs/2605.19294",
+  "category": "cs.AI",
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099299+00:00"
+}

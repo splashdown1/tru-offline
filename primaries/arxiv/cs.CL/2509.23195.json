@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2509.23195",
+  "title": "The relative strength of hierarchical structure and statistics differs across the measures in naturalistic reading",
+  "abstract": "The hierarchical syntactic structure and non-hierarchical, statistical, or sequential factors have long been framed as rival theories in accounting for online comprehension. A lot of evidence has shown that both hierarchical and non-hierarchical factors can shape comprehension and the more open question is when, and how strongly, hierarchy exerts its influence in comprehension. We addressed the question with co-registered EEG and eye-tracking, treating syntactic depth as the variable for operationalizing hierarchical structure. For the timing question, hierarchical syntactic structure is shown to influence reading before reading a sentence and can emerge as early as 108ms before reading. This is supported by both transitional probability analysis and regression on fixation-related potential. Analyses on fixation-transition showed that readers preferentially moved between syntactically central words rather than according to serial word order, suggesting that scanpaths are driven by deep syntactic structure rather than by pure statistics. For the strength question, we combined Bayesian network modeling and regression analysis to show that strength of a variable is dependent on the phenomenon that is to be explained. Bayesian network analysis showed that hierarchical syntactic structure carried more predictive weight than statistical features. Regression on fixation-related potential demonstrated that hierarchical syntactic structure significantly predicted word-level neural activity in the front-right region in regression analyses, but is generally weaker in comparison with lexical surprisal. Evidence combined, our analyses suggested that hierarchical structure can anticipatorily guide subjects' online comprehension both on a behavioral and neural level, with its strength varies across different facets of reading behavior.",
+  "link": "https://arxiv.org/abs/2509.23195",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "q-bio.NC"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406126Z"
+}

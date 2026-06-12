@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04126",
+  "title": "HighTide: An Agent-Curated Open-Source VLSI Benchmark Suite",
+  "abstract": "We introduce HighTide, an evolving AI-assisted benchmark suite. Specifically, the contributions are: (i) a diverse open-source suite spanning multiple design languages and technology nodes, (ii) Bazel-based incremental RTL-to-GDS compilation with remote caching, (iii) AI-assisted design curation through twelve agent skills covering the design lifecycle, flow optimization, tool reference, and meta-maintenance, backed by per-design decision logs that serve as long-term memory of tuning rationale across the suite, and (iv) an infrastructure with RTL compilation verification for stable releases. The suite is publicly available and designed to grow with the open-source hardware ecosystem.",
+  "link": "https://arxiv.org/abs/2606.04126",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AR",
+    "cs.AI",
+    "cs.SE"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097970+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.04903",
+  "title": "Provably Auditable and Safe LLM Agents from Human-Authored Ontologies",
+  "abstract": "We introduce the LLM agent architecture Agentic Redux, intended for use with nontrivial problem domains that require linear auditability. Using the typed lambda calculus, we prove that, run on appropriate domains, Agentic Redux executions are semantically guaranteed to be correct, with all decisions recorded in an append-only ledger. We present two production-grade appropriate domains, in healthcare billing compliance, and security vulnerability disclosure. Working code for Agentic Redux run on both domains is available in a supporting code repository. We also introduce Ontology-First Agent Design, a methodology for creation of agent frameworks on a problem domain, in which a human expert ontologizes the problem domain with Basic Formal Ontology, and then assigns an LLM to derive roles that agents and humans-in-the-loop can fill, in order to work the problems in the domain.",
+  "link": "https://arxiv.org/abs/2606.04903",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LO",
+    "cs.AI",
+    "cs.MA",
+    "cs.PL"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098476+00:00"
+}

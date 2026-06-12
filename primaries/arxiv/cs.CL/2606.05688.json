@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05688",
+  "title": "Value-and-Structure Alignment for Routing-Consistent Quantization of Mixture-of-Experts Models",
+  "abstract": "Mixture-of-Experts (MoE) models scale foundation models efficiently by activating only a subset of experts for each token, but their large number of expert parameters still makes quantization essential for practical deployment. Unlike dense models, however, MoE models are sensitive to routing instability: small quantization-induced perturbations can change the top-$k$ expert selection, altering the computation path and degrading model quality. We propose Value-and-Structure Routing Alignment for Quantization (VSRAQ), a MoE-specific post-training quantization objective that preserves pre-quantization expert-selection behavior under quantization. VSRAQ combines two complementary objectives that jointly preserve expert-selection behavior: value alignment, which matches routing-relevant logits or scores, and structure alignment, which preserves expert ordering and top-$k$ decision boundaries. By maintaining routing consistency, VSRAQ reduces quantization-induced degradation without introducing any inference-time overhead and can be integrated into existing quantization frameworks. Experiments on recent MoE foundation models show that VSRAQ improves expert-selection consistency and consistently outperforms reconstruction-only and router-aware baselines.",
+  "link": "https://arxiv.org/abs/2606.05688",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497806+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05345",
+  "title": "PJ-RoPE: A Fourier-Jet-Affine Position Space for Relative Attention",
+  "abstract": "We unify RoPE's Fourier phase, Jordan-RoPE's finite jets, and ALiBi's affine recency into a single learnable relative-position space, and study which regions of this space are selected by different tasks. PJ-RoPE is a Fourier-Jet-Affine formulation for relative attention, with an optional Poincare-type reading as the affine completion of a homogeneous Fourier-jet positional representation. Algebraically, the same primitives form a finite constant-coefficient difference module: simple roots of the lag-shift operator give Fourier/RoPE characters, repeated nonzero roots give Jordan/Fourier jets, and the repeated unit root gives ALiBi-like affine recency.\n  The framework separates scalar PJ-bias kernels from exact PJ-rotary feature transforms, introduces adaptive sector diagnostics, and uses LC/rapidity coordinates to stabilize high-order jets. Controlled probes verify sector containment and selection; small language runs expose an affine/recency boundary; music-token streams provide the clearest case where LC/affine variants remain strong while carrying measurable high-order corrections; and LC diagnostics show a scale-stability gain coupled to phase-resolution loss.",
+  "link": "https://arxiv.org/abs/2606.05345",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881978+00:00"
+}

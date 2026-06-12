@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.03067",
+  "title": "Trajectory-Aware Node Contributions and the Limits of Static Controllability",
+  "abstract": "A recurring data mining task in complex networks is to determine how individual nodes contribute to system behavior. Existing approaches rely on either static-graph centralities or control-theoretic quantities such as controllability Gramians, which assume linear, time-invariant dynamics. Estimated systems, however, are typically nonlinear and time-varying. We define \"emergent contribution (EC),\" a finite-horizon measure of a node's dynamical leverage: the metric-weighted energy of its impulse response accumulated along the system trajectory. Computed from the Jacobians of any differentiable model, EC is estimator-agnostic and reduces exactly to average controllability in the linear, time-invariant limit. Our contribution is a characterization of when the two measures agree and diverge. Using a controlled synthetic family with known ground-truth contribution, we construct a phase diagram spanning nonlinearity, regime structure, persistence, and perturbation amplitude. EC and average controllability agree under static or smoothly drifting dynamics and both track ground truth. Divergence emerges under persistent regime switching, is strongest under persistent sign reversal, and disappears when the sign reversal is removed. At extreme perturbation amplitudes, both measures degrade, identifying the limits of local linearization. We place five estimated real systems from several domains within this phase space. Their placement serves as a diagnostic of when EC provides information beyond static controllability and therefore justifies its additional computational cost. On one panel examined in depth, a twenty-seed retraining ensemble reveals a robust variance--leverage dissociation: nodes whose perturbations propagate widely despite low within-system variance, which is not recovered by static centralities nor variance-based summaries.",
+  "link": "https://arxiv.org/abs/2606.03067",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884812+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2605.03753",
+  "title": "Exact and Evolutionary Algorithms for Sequential Multi-Objective Transmission Topology Planning",
+  "abstract": "We study day-ahead transmission topology control for high-voltage grid operation under $N-1$ security constraints. The operational task is to select, over a 24-hour horizon, a sequence of substation topologies obtained via busbar-coupler switching to relieve line overloads while limiting switching effort and topological complexity. We formulate this task as a sequential multi-objective optimization problem with four objectives used in TSO decision making: worst-case $N-1$ line loading, maximum topological depth, number of topology changes, and time spent outside the reference topology. We propose an exact block algorithm that exploits the temporal structure of topology plans: consecutive hours with the same topology are represented as blocks, enabling enumeration of the complete Pareto front over the admissible set of topologies under fixed operational bounds on depth and switching. We also develop a tailored NSGA-III-based evolutionary heuristic and evaluate it against the exact front. Using real operational data from the Dutch high-voltage transmission grid operated by TenneT, the block algorithm computes the exact front for a highly congested day in under three minutes after topology-level load-flow preprocessing. The exact front reveals low-switching plans with no DC $N-1$ thermal overloads that the tested evolutionary search fails to find. The proposed method, therefore, provides both a practical day-ahead decision-support tool for transmission operators and a benchmark for heuristic and learning-based topology-control methods.",
+  "link": "https://arxiv.org/abs/2605.03753",
+  "category": "cs.NE",
+  "categories": [
+    "math.OC",
+    "cs.NE",
+    "cs.SY",
+    "eess.SY"
+  ],
+  "pulled_at": "2026-06-05T08:23:14.697922+00:00"
+}

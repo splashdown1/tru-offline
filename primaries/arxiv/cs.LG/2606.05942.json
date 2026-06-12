@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05942",
+  "title": "EML-CD: Causal Mechanism Recovery via EML Symbolic Trees in Structure Learning",
+  "abstract": "Neural network (NN)-based nonlinear causal discovery methods recover DAG structure but leave each causal mechanism as a black box. Waxman et al. argued that extracting causal mechanisms from NN weights is ill-posed. We propose EML-CD, a framework that integrates the EML operator (capable of composing elementary functions from a single binary operator) into causal structure learning, with interpretable mechanism recovery as the primary objective. EML-CD represents each edge mechanism as a gated EML binary tree and automatically discovers closed-form causal equations. Analytical Jacobians can be directly computed from the output equations, enabling quantitative understanding of causal effects. On real data (Sachs protein signaling, d=11), EML-CD achieves SHD=11.2 +/- 0.4 (5-seed mean; baselines are single deterministic runs), on par with PC/GES within seed variance and below CAM, while attaching closed-form equations to each detected edge (precision 0.756, recall 0.365). In a controlled bivariate test with known mechanisms, EML-CD recovers 10 of 11 elementary function families faithfully (held-out shape correlation >= 0.96; only high-frequency sine is partial). On a symbolic synthetic benchmark, EML-CD attains a substantially lower and more stable held-out mechanism f-MSE than a fixed SINDy dictionary (mean 3.67 vs. 7644, the latter inflated by catastrophic extrapolation on one seed), although its structure recovery (SHD 14.0) only matches the dictionary and stays below specialized optimizers; on the Causal Chambers light-tunnel subset, a depth-2 model improves F1 over linear OLS-BIC (0.444 vs. 0.273).",
+  "link": "https://arxiv.org/abs/2606.05942",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883449+00:00"
+}

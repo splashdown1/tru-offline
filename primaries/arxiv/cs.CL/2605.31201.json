@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31201",
+  "title": "Learning Whom to Trust: Market-Feedback Adaptive Retrieval for Frozen LLMs in Event-Driven Financial RAG",
+  "abstract": "Financial retrieval-augmented generation (RAG) systems typically rank evidence by textual relevance, but in financial markets the useful evidence source depends on event type, forecast horizon, and market context. We study news-triggered event-impact prediction as a point-in-time financial RAG problem. For each company-news anchor, the system retrieves related financial news and SEC filing passages, appends a pre-decision market-context card, and predicts multi-horizon residual-return signals. Our method keeps the large language model (LLM) reader frozen and adapts the retrieval layer through an external Bayesian source memory updated from matured residual-return feedback. On a fixed 89-stock Nasdaq-oriented universe derived from the FinRL-DeepSeek/FNSPID task, using original FNSPID news and point-in-time EDGAR filing passages, Frozen Reader with Source Memory improves held-out macro-F1 from 0.438 to 0.471 and downstream portfolio Sharpe from 0.52 to 0.84 relative to Frozen Reader with No Memory. A supervised LoRA reader improves static RAG modestly, but does not improve over the frozen source-memory reader. These results suggest that, for financial RAG, learning where to retrieve from can be as important as learning how to read, offering a simple, modular route to market-feedback adaptation.",
+  "link": "https://arxiv.org/abs/2605.31201",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405831Z"
+}

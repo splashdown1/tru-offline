@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deterministic New Testament Engine</title>
+    <style>
+        /* Modern dark theme optimized for battery saving and touchscreens */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 650px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 5px;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            color: #888888;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        
+        /* Large touch-friendly local file loader container */
+        .file-box {
+            background-color: #252526;
+            border: 2px dashed #007acc;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-sizing: border-box;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 15px auto;
+            color: #888888;
+            font-size: 14px;
+        }
+
+        .status-loaded { 
+            color: #4caf50; 
+            font-weight: bold; 
+            font-size: 15px;
+            margin: 5px 0 0 0;
+        }
+
+        .status-empty { 
+            color: #ff9800; 
+            font-weight: bold; 
+            font-size: 15px;
+            margin: 5px 0 0 0;
+        }
+
+        /* Responsive touch input box */
+        textarea {
+            width: 100%;
+            height: 120px;
+            background-color: #2d2d2d;
+            border: 2px solid #3d3d3d;
+            border-radius: 8px;
+            color: #ffffff;
+            padding: 15px;
+            font-size: 16px;
+            resize: none;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        textarea:focus {
+            border-color: #007acc;
+        }
+
+        /* Large touch-action button */
+        button {
+            width: 100%;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button:active {
+            background-color: #005999;
+            transform: scale(0.98);
+        }
+
+        button:disabled {
+            background-color: #444444;
+            color: #888888;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Output container block */
+        .result-box {
+            margin-top: 30px;
+            padding: 22px;
+            background-color: #252526;
+            border-left: 4px solid #00aaff;
+            border-radius: 4px;
+            text-align: left;
+            min-height: 100px;
+            box-sizing: border-box;
+        }
+
+        .verse-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #a9ffb4;
+            font-style: italic;
+            margin: 0 0 12px 0;
+        }
+
+        .verse-ref {
+            font-size: 14px;
+            font-weight: bold;
+            color: #00aaff;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Scripture Seeker v2</h1>
+    <div class="subtitle">Deterministic Local New Testament Search Engine</div>
+    
+    <!-- STEP 1: Load Local File Assets -->
+    <div class="file-box">
+        <label style="display:block; font-weight:bold; font-size:15px;">1. Load your local dataset file:</label>
+        <input type="file" id="bibleFileInput" accept=".json" onchange="loadLocalDatabase()">
+        <p id="loadStatus" class="status-empty">Offline Database Status: Disconnected</p>
+    </div>
+
+    <!-- STEP 2: Input Query Box -->
+    <textarea id="userInput" placeholder="2. Enter a specific feeling, scenario, or keywords to search..."></textarea>
+    <button id="searchBtn" onclick="seekScripture()" disabled>SEEK SCRIPTURE</button>
+
+    <!-- STEP 3: Pure-Engine Display Area -->
+    <div class="result-box">
+        <p class="verse-text" id="displayWords">Please load your JSON data file above into memory to activate searching.</p>
+        <p class="verse-ref" id="displayRef"></p>
+    </div>
+</div>
+
+<script>
+// Global runtime array holding your localized text data
+let OFFLINE_BIBLE_DATA = [];
+
+// Filtering tokens to eliminate sentence structural noise from search scores
+const STOPWORDS = new Set([
+    "i", "am", "a", "the", "and", "is", "to", "in", "of", "with", "for", 
+    "about", "feeling", "so", "you", "are", "what", "how", "this", "that", 
+    "it", "on", "was", "my", "me", "have", "not", "be", "do", "but", "or"
+]);
+
+// Read and restructure the open-source GitHub json layout entirely inside memory
+function loadLocalDatabase() {
+    const fileInput = document.getElementById('bibleFileInput');
+    const status = document.getElementById('loadStatus');
+    const searchBtn = document.getElementById('searchBtn');
+    const displayWords = document.getElementById('displayWords');
+    
+    if (fileInput.files.length === 0) return;
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const rawData = JSON.parse(e.target.result);
+            OFFLINE_BIBLE_DATA = [];
+            
+            // Loop hierarchy: Books -> Chapters -> Verses mapping
+            rawData.books.forEach(book => {
+                book.chapters.forEach(chapter => {
+                    chapter.verses.forEach(verse => {
+                        OFFLINE_BIBLE_DATA.push({
+                            ref: `${book.book} ${chapter.chapter}:${verse.verse}`,
+                            text: verse.text
+                        });
+                    });
+                });
+            });
+
+            // Update app interface status smoothly
+            status.innerText = `Offline Database Status: Loaded ${OFFLINE_BIBLE_DATA.length} Verses!`;
+            status.className = "status-loaded";
+            displayWords.innerText = "Database ready. Input your words below and press Seek.";
+            searchBtn.disabled = false;
+        } catch(err) {
+            status.innerText = "System Error: Invalid JSON template formatting.";
+            status.className = "status-empty";
+            alert("Error parsing file. Please ensure it is the exact open-source Scriptures JSON schema format.");
+        }
+    };
+    reader.readAsText(fileInput.files);
+}
+
+// Clean syntax stripping for absolute keyword calculations
+function cleanWords(text) {
+    return text.toLowerCase()
+        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"']/g, "")
+        .split(/\s+/)
+        .filter(word => word.length > 0 && !STOPWORDS.has(word));
+}
+
+// Fixed-logic scoring loop engine
+function seekScripture() {
+    const rawInput = document.getElementById("userInput").value;
+    const queryWords = cleanWords(rawInput);
+
+    if (queryWords.length === 0) {
+        document.getElementById("displayWords").innerText = "Please type a clear situation, emotion, or word phrase.";
+        document.getElementById("displayRef").innerText = "";
+        return;
+    }
+
+    let bestMatch = null;
+    let highestScore = 0;
+
+    // Linear mathematical optimization sweep across the database memory
+    OFFLINE_BIBLE_DATA.forEach(verse => {
+        const verseWords = cleanWords(verse.text);
+        let matchCount = 0;
+
+        queryWords.forEach(word => {
+            if (verseWords.includes(word)) {
+                matchCount++;
+            }
+        });
+
+        // Advanced math: density normalized against the square root of the verse word length
+        let score = matchCount / Math.sqrt(verseWords.length + 1);
+
+        if (score > highestScore) {
+            highestScore = score;
+            bestMatch = verse;
+        }
+    });
+
+    // Render directly onto your touchscreen view layer
+    if (bestMatch && highestScore > 0) {
+        document.getElementById("displayWords").innerText = `"${bestMatch.text}"`;
+        document.getElementById("displayRef").innerText = bestMatch.ref;
+    } else {
+        document.getElementById("displayWords").innerText = "No mathematical keyword matches found across your local file dataset.";
+        document.getElementById("displayRef").innerText = "";
+    }
+}
+</script>
+
+</body>
+</html>

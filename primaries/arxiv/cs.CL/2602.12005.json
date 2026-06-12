@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.12005",
+  "title": "LaCy: What Small Language Models Can and Should Learn is Not Just a Question of Loss",
+  "abstract": "Language models have consistently grown to compress more world knowledge into their parameters, but the knowledge that can be pretrained into them is upper-bounded by their parameter size. Especially the capacity of Small Language Models (SLMs) is limited, leading to factually incorrect generations. This problem is often mitigated by giving the SLM access to an outside source: the ability to query a larger model, documents, or a database. Under this setting, we study the fundamental question of \\emph{which tokens an SLM can and should learn} during pretraining, versus \\emph{which ones it should delegate} via a \\texttt{<CALL>} token. We find that this is not simply a question of loss: although the loss is predictive of whether a predicted token mismatches the ground-truth, it is insufficient for identifying which predictions would actually lead to factual or semantically invalid continuations. Some high-loss tokens correspond to \\emph{acceptable} alternative continuations of a pretraining document and therefore should not trigger a \\texttt{<CALL>}. This suggests that learnability cannot be characterized from loss alone, but requires additional domain-specific signals about the role of a token in the sentence. In Wikipedia-like domains, we show that augmenting the loss signal with lightweight grammatical information from a spaCy parser substantially improves delegation decisions. Based on this insight, we propose LaCy, a novel pretraining method that combines loss with factuality signals to decide which tokens an SLM should learn. Our experiments demonstrate that LaCy models successfully learn which tokens to predict and when to call for help. This results in higher FactScores when generating in a cascade with a bigger model and outperforms Rho or LLM-judge trained SLMs, while being simpler and cheaper.",
+  "link": "https://arxiv.org/abs/2602.12005",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406173Z"
+}

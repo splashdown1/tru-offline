@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04469",
+  "title": "Adaptive Calibration for Fair and Performant Facial Recognition",
+  "abstract": "We introduce Adaptive Calibration (AC), a novel calibration strategy for facial recognition that maps cosine similarity between normalized embeddings to well-calibrated probabilities. By incorporating local context into calibration, Adaptive Calibration corrects for a fundamental mismatch in cosine similarity, whereby the same distance can correspond to different match probabilities in different embedding regions. Our approach improves both overall performance and results in a fairer calibration without requiring demographic metadata.\n  Our approach consistently dominates existing methods both on accuracy and fairness metrics across a variety of pretrained models and standard benchmarks. AC provides a practical solution for equitable facial recognition, without requiring demographic group annotations, and while improving overall performance. Unlike existing approaches, our method provides continuous, region-specific calibration that avoids \"leveling down\" where fairness comes at the cost of degraded performance for some groups.",
+  "link": "https://arxiv.org/abs/2606.04469",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098249+00:00"
+}

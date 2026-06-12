@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31261",
+  "title": "Why Linear Recurrent Memory Works in Partially Observable Reinforcement Learning",
+  "abstract": "The family of linear recurrent neural networks has shown strong performance as recurrent memory units in partially observable reinforcement learning. We provide a theoretical justification for their empirical effectiveness by constructing and studying two linear filters: (i) the first exactly reproduces the pre-softmax logits of the belief vector in a hidden Markov model (HMM) under a deterministic transition matrix, thereby serving as a sufficient statistic for optimal policy learning, (ii) the second achieves vanishing state-decoding error under a nearly deterministic transition matrix, thus reducing state ambiguity to near zero. The results extend to action-controlled HMMs, where the corresponding linear filters become time-varying with action-dependent dynamics. We illustrate our main results through numerical experiments and further show that the constructed linear filter serves as a strong feature extractor in a small reinforcement learning game.",
+  "link": "https://arxiv.org/abs/2605.31261",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358353Z"
+}

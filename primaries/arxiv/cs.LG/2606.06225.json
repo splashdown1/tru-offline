@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.06225",
+  "title": "Bridging the Semantic-Collaborative Gap: An Asymmetric Graph Architecture for Cold-Start Item Recommendation",
+  "abstract": "Collaborative filtering and graph-based recommendation models are highly effective because they leverage observed user interactions, but this dependence creates a fundamental cold-start challenge when newly added content has no interaction history. In Tubi's production retrieval system, this challenge is further constrained by the serving interface: new content must be assigned a standalone embedding immediately, and the model must also produce device embeddings suitable for approximate nearest-neighbor retrieval. We address this setting by formulating cold-start recommendation as an inductive graph-completion problem on a temporal bipartite device-content graph. We propose Shallow-RHS, an asymmetric link-prediction architecture in which the left-hand side (LHS) device tower leverages temporally valid watch-history message passing to capture collaborative signals, while the right-hand side (RHS) content tower is intentionally shallow with respect to the graph and encodes content solely from intrinsic features. The RHS tower does not use ID-based embeddings, content-side subgraphs, neighbor aggregation, or interaction-derived representations, forcing the content encoder to map intrinsic features into a collaborative-filtering-aware embedding space. After training, the learned content encoder generates embeddings for both warm and newly ingested content, enabling implicit graph completion through retrieval of warm surrogate neighbors. We further extend the same representation-completion principle to device cold-start by constructing cohort-based embeddings from demographic features. Large-scale online experiments demonstrate consistent relative improvements in content cold-start engagement, promotion speed, impression acquisition, and device cold-start engagement.",
+  "link": "https://arxiv.org/abs/2606.06225",
+  "category": "cs.LG",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883561+00:00"
+}

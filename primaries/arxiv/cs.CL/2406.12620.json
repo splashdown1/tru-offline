@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2406.12620",
+  "title": "What Makes Two Language Models Think Alike?",
+  "abstract": "Do architectural and training differences influence the way models represent and process language? Traditional similarity metrics tell us whether two models share a similar representational geometry, but they cannot explain why. Here, we propose a new, simple, approach to address this question. This approach maps neural activity in each model layer onto a set of interpretable linguistic features and quantifies how much each of them drives similarities and differences between models. We use this approach to compare 43 language models across 10 families, including decoder Transformers, State-Space Models, and Recurrent Neural Networks. We find that model-level similarity is driven most strongly by release date, a proxy for general LLM development, and model family, suggesting that linguistic signatures are not primarily shaped by scale or architecture class. Overall, our approach provides a way to link theoretically-motivated symbolic descriptions to neural representations and can readily be extended to other domains such as speech and vision, and to other neural systems such as biological brains.",
+  "link": "https://arxiv.org/abs/2406.12620",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498341+00:00"
+}

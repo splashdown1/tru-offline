@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2507.17335",
+  "title": "TransLPRNet: Lite Vision-Language Network for Single/Dual-line Chinese License Plate Recognition",
+  "abstract": "License plate recognition in open environments is widely applicable across various domains; however, the diversity of license plate types and imaging conditions presents significant challenges. To address the limitations encountered by CNN and CRNN-based approaches in license plate recognition, this paper proposes a unified solution that integrates a lightweight visual encoder with a text decoder, within a pre-training framework tailored for single and double-line Chinese license plates. To mitigate the scarcity of double-line license plate datasets, we constructed a single/double-line license plate dataset by synthesizing images, applying texture mapping onto real scenes, and blending them with authentic license plate images. Furthermore, to enhance the system's recognition accuracy, we introduce a perspective correction network (PTN) that employs license plate corner coordinate regression as an implicit variable, supervised by license plate view classification information. This network offers improved stability, interpretability, and low annotation costs. The proposed algorithm achieves an average recognition accuracy of 99.34% on the corrected CCPD test set under coarse localization disturbance. When evaluated under fine localization disturbance, the accuracy further improves to 99.58%. On the double-line license plate test set, it achieves an average recognition accuracy of 98.70%, with processing speeds reaching up to 167 frames per second, indicating strong practical applicability.",
+  "link": "https://arxiv.org/abs/2507.17335",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CV",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406283Z"
+}

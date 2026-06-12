@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.25402",
+  "title": "Anatomy-Anchored Self-Supervision: Distilling Vision Foundation Models for Invariant Ultrasound Representation",
+  "abstract": "Self-supervised pre-training paradigm has gained increasing prominence for learning transferable representations in medical imaging, yet existing methods for ultrasound (US) images operate at the image or frame level, overlooking the anatomical context for clinical-aligned representation learning. In this work, we propose an anatomy-anchored ultrasound self-supervision framework ANAUS that shifts representation learning from generic visual regions to clinically meaningful anatomical structures. Utilizing a learnable latent prompt engine alongside a one-time domain adaptation on existing public image-mask pairs, we empower the LP-SAM module to achieve annotation-free anatomy delineation at scale. Building upon this anatomical grounding, we propose a dual-policy self-supervised learning paradigm consisting of inter-view semantics-aware anatomy-separating alignment and contextual core-region prediction to enhance representation learning. Specifically, the former enforces feature invariance within identical anatomical regions while promoting discriminability across distinct structures; the latter compels the model to reconstruct corrupted regions, thereby capturing fine-grained structural details. Extensive evaluations on six public datasets demonstrate that ANAUS consistently outstrips current state-of-the-art methods while maintaining the computational efficiency essential for clinical deployment. Code is available at https://github.com/zhcz328/ANAUS.",
+  "link": "https://arxiv.org/abs/2605.25402",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099335+00:00"
+}

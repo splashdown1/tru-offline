@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.02636",
+  "title": "Too Much of a Good Thing: When sim2real Efforts Impede Policy Learning (And What to Do About It)",
+  "abstract": "While sim2real efforts are necessary for effective policy transfer to hardware, there is such a thing as too much of a good thing. We argue that sim2real efforts have led to misaligned incentives with policy learning, resulting in simulator lock in and poor policy exploration due to the unreasonable constraints imposed by the real world. We offer a diagnosis and explanation of the current status of the problem, and propose a potential solution via a sim2sim2real paradigm that leverages the robot's kinematics as the sole design constraint.",
+  "link": "https://arxiv.org/abs/2606.02636",
+  "category": "cs.AI",
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099414+00:00"
+}

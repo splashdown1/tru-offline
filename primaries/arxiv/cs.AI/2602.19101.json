@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.19101",
+  "title": "Value Entanglement: Conflation Between Different Kinds of Good In (Some) Large Language Models",
+  "abstract": "Value alignment of Large Language Models (LLMs) requires us to empirically measure these models' actual, acquired representation of value. Among the characteristics of value representation in humans is that they distinguish among value of different kinds. We investigate whether LLMs likewise distinguish three different kinds of good: moral, grammatical, and economic. By probing model behavior, embeddings, and residual stream activations, we report pervasive cases of value entanglement: a conflation between these distinct representations of value. Specifically, both grammatical and economic valuation was found to be overly influenced by moral value, relative to human norms. This conflation was repaired by selective ablation of the activation vectors associated with morality.",
+  "link": "https://arxiv.org/abs/2602.19101",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099092+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.17524",
+  "title": "Covariance Structure and Coordinate Heterogeneity Govern Binary Quantization of Contrastive Embeddings",
+  "abstract": "Binary quantization (BQ) compresses high-dimensional embeddings into one or two bits per coordinate, enabling nearest neighbor search at extreme speed. Yet a striking puzzle persists: BQ achieves competitive recall on contrastive embeddings but fails on others -- and two leading systems adopt diametrically opposite strategies (random rotation vs. preserving coordinate axes) without a common theory explaining when each is appropriate. We address this puzzle by connecting the Gaussian structure recently established for InfoNCE-trained representations to a statistical framework for BQ quality. Our analysis reveals two distinct roles of the covariance matrix. First, the full covariance structure -- not merely its diagonal -- determines the absolute level of ranking fidelity, with off-diagonal correlations contributing 30--50% of the signal. Second, coordinate heterogeneity (the non-uniformity of per-coordinate variances) governs key design choices: how much each additional bit contributes, and whether random rotation helps or hurts. We derive approximate expressions for ranking fidelity under a Gaussian model, show that the magnitude bit carries information proportional to heterogeneity, and show that random rotation destroys precisely the signal that one paradigm exploits while creating the isotropy that the other requires. A phenomenological scaling law predicts fidelity across models and dimensions. Experiments on 18 datasets spanning 9 embedding families support the main predictions and provide, to our knowledge, the first principled design guide for binary quantization systems.",
+  "link": "https://arxiv.org/abs/2605.17524",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.DB"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308088Z"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05911",
+  "title": "DBHN-Net: Dual-Branch Hybrid Neural Network For Low-Complexity Monaural Speech Enhancement",
+  "abstract": "Although artificial neural network (ANN) based speech enhancement (SE) methods demonstrate excellent performance, the high computational complexity and high energy consumption hinder their deployment in practical front-end processing tasks.} Currently, the spiking neural networks (SNNs) have shown potential in reducing power consumption. However, the discrete binary activation and complex spatio-temporal dynamics of SNNs often result in information loss. The current challenge therefore focuses on how to maintain performance and reduce computational complexity. To address this issue, this work propose a Dual-Branch Hybrid Neural (DBHN) Network. 1) In terms of network architecture: A dual-branch network integrating ANN and SNN was designed, where the SNN branch reduces power consumption while the ANN branch addresses information loss; The BandSplit and Time-Frequency (TF) -Mamba modules were developed to simultaneously compress energy consumption and enhance model performance; Spiking Feature Extraction Group (SFEG) and Information Transformation Block (ITB) components were implemented with residual connections to mitigate information loss while further refining feature representations. 2) To facilitate inter-branch information fusion: An Interaction module was designed to promote information exchange at various stages of the dual-branch network; A TF-Cross Attention-Fusion module was designed to perform time-frequency domain fusion of dual-branch information while data-adaptively guiding the SNN branch to retain more critical information. Results show that the proposed model maintains superior performance across three public datasets while achieving an average 7.5 fold reduction in computational complexity compared to baseline models.",
+  "link": "https://arxiv.org/abs/2606.05911",
+  "category": "cs.LG",
+  "categories": [
+    "cs.SD",
+    "cs.LG",
+    "eess.AS"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883411+00:00"
+}

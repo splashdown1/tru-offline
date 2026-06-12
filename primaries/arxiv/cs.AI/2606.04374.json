@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04374",
+  "title": "DSIRM: Learning Query-Bridged Discrete Semantic Identifiers for E-commerce Relevance Modeling",
+  "abstract": "Despite rapid progress of continuous embeddings for e-commerce search relevance, a long-standing open problem is the difficulty in capturing fine-grained attribute distinctions. While discrete Semantic Identifiers (SIDs) have been widely adopted as a promising alternative, existing SID generation methods rely heavily on unsupervised quantization. In realistic scenarios, the lack of explicit supervision often makes it more difficult to dictate which items should share an SID, resulting in limited capability for query-dependent ranking. To address the issue of unsupervised SIDs, we propose to explicitly model discrete relevance features and develop a Discrete Semantic Identifier Relevance Model (DSIRM). Specifically, we present a query-bridged contrastive quantization approach on the item side, injecting query-item interaction supervision into Residual Quantization to actively learn relevance-aware semantic partitions. On the other hand, we explore generative LLMs on the query side to explicitly predict item SIDs from text, resolving tail queries and intent ambiguity. Hierarchical prefix matching between query and item SIDs yields discriminative features that perfectly complement dense signals. Extensive experimental results on Tmall's production data show that our proposed approach has achieved better results, improving offline AUC by +1.54\\%. Deployed via an efficient hybrid architecture, it achieves significant online lifts (+0.13\\% UCTR, +0.25\\% UCTCVR), proving its massive industrial value.",
+  "link": "https://arxiv.org/abs/2606.04374",
+  "category": "cs.AI",
+  "categories": [
+    "cs.IR",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098155+00:00"
+}

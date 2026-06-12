@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.13384",
+  "title": "VulnAgent-R2: Evidence-Calibrated Multi-Agent Auditing for Repository-Level Vulnerability Detection",
+  "abstract": "Software vulnerabilities often depend on cross-file data flow, build options, framework conventions, and runtime guards, so isolated function classifiers produce fragile and poorly calibrated warnings. Repository-level LLM agents can gather richer evidence, but prior variants under-specify reproducibility, verifier behavior, baseline fairness, and statistical uncertainty. We present VulnAgent-R2, a budget-aware agentic auditing framework with three additional reusable modules: counterfactual evidence reweighting, build-aware verification-plan synthesis, and a cost-risk Pareto scheduler. The system combines graph triage, bounded context optimization, role-specialized agents, sceptic counter-evidence, selective dynamic verification, and calibrated fusion. On Devign, Big-Vul, DiverseVul, and PrimeVul, VulnAgent-R2 obtains 0.798/0.895, 0.739/0.871, 0.700/0.842, and 0.385/0.781 F1/AUROC, respectively. On JITVul it reaches 0.606 F1, 0.529 Top-1, and 0.742 Top-3 localization, while reducing online tokens by 38.3\\% over always-full multi-agent execution. Online time includes retrieval, LLM calls, CER scoring, verifier planning, compilation, and test execution, but excludes one-time shared indexing. Bootstrap tests show the PrimeVul gain over VulnAgent-X is +0.038 F1, 95\\% CI [0.020, 0.055], Holm-adjusted $p=0.009$. Treating vulnerability detection as calibrated evidence accumulation improves detection, localization, auditability, and cost control under the evaluated protocol, while remaining a prioritization aid rather than a replacement for manual review.Code is available at https://github.com/renweimeng/Vlun-Agent-X.",
+  "link": "https://arxiv.org/abs/2603.13384",
+  "category": "cs.AI",
+  "categories": [
+    "cs.SE",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099157+00:00"
+}

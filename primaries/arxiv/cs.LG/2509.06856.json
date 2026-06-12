@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2509.06856",
+  "title": "Sequential Least-Squares Estimators with Fast Randomized Sketching for Linear Statistical Models",
+  "abstract": "We propose a novel randomized framework for the estimation problem of large-scale linear statistical models, namely Sequential Least-Squares Estimators with Fast Randomized Sketching (SLSE-FRS), which integrates Sketch-and-Solve and Iterative-Sketching methods for the first time. By iteratively constructing and solving sketched least-squares (LS) subproblems with increasing sketch sizes to achieve better precisions, SLSE-FRS gradually refines the estimators of the true parameter vector, ultimately producing high-precision estimators. We analyze the convergence properties of SLSE-FRS, and provide its efficient implementation. Numerical experiments show that SLSE-FRS outperforms the state-of-the-art methods, namely the Preconditioned Conjugate Gradient (PCG) method, and the Iterative Double Sketching (IDS) method.",
+  "link": "https://arxiv.org/abs/2509.06856",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "cs.NA",
+    "math.NA"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308285Z"
+}

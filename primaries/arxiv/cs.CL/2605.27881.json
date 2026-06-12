@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.27881",
+  "title": "Retrieval, Reward, and Training Protocols: What Matters in Training Search Agents?",
+  "abstract": "Search agents powered by large language models can autonomously decompose queries, retrieve information, and synthesize answers through multi-step reasoning. However, the rapid growth of training methods has outpaced controlled comparison: existing works differ in retrieval corpora, reward designs, and training protocols, making it unclear what actually drives improvements. We present a controlled empirical study that isolates three under-explored dimensions of search agent training. First, we identify a critical data-coverage issue in the widely used Wikipedia 2018 corpus and show that correcting it alone yields larger gains than the differences between training algorithms. Second, we systematically compare outcome-based and process-based reward methods across three base models, finding that the simplest outcome-based approach achieves competitive or superior performance in most settings, and that process-level credit assignment can over-correct agent behavior. Third, we analyze training data diversity, off-policy data utilization, and search budget scaling, distilling practical guidelines for training effective search agents. Our code is available at https://github.com/YiboZhao624/SearchAgentReview.",
+  "link": "https://arxiv.org/abs/2605.27881",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406237Z"
+}

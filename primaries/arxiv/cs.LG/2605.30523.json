@@ -1,0 +1,15 @@
+{
+  "arxiv_id": "2605.30523",
+  "title": "Revisiting Padded Transformer Expressivity: Which Architectural Choices Matter and Which Don't",
+  "abstract": "Recent work describes what transformers can and cannot compute through connections to boolean circuits, but existing results lack exact characterizations and are sensitive to modeling choices. Padded transformers -- to whose input filler symbols such as ``...'' are appended -- emerge as a useful gadget for establishing equivalences to circuit classes by providing polynomial space for adaptive parallel computation. However, only a limited set of padded transformer idealizations has been studied, leaving open how robustly these equivalences hold under changes to attention type, model width, and uniformity. We find that, under practical assumptions, padded transformers are surprisingly robust to all of these, and identify numeric precision and model depth as the main factors affecting expressivity. Concretely, we prove that polynomially padded $\\text{L-uniform}$ constant-precision transformers are equivalent to $\\text{L-uniform AC}^0$, while growing-precision ones achieve $\\text{L-uniform TC}^0$ regardless of width. Furthermore, looping enables sequential processing analogous to circuits: $\\log^d N$-looped constant-precision transformers reach $\\text{FO-uniform AC}^d$, and growing-precision ones reach $\\text{FO-uniform TC}^d$. Interestingly, growing width or precision beyond logarithmic does not increase expressivity, and all our results hold for both softmax and average hard attention transformers.",
+  "link": "https://arxiv.org/abs/2605.30523",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CC",
+    "cs.CL",
+    "cs.FL"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306643Z"
+}

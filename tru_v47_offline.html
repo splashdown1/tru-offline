@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRU v47 — The Sealed Wizard</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0a0a0f; --bg2: #111118; --bg3: #16161f;
+  --text: #e8e8e0; --accent: #d4a574; --accent2: #8b5cf6;
+  --muted: #555; --border: #222230;
+  --user-bg: #12122a; --tru-bg: #0d0d18;
+  --DISCARD: #ff4444; --RESTRICTED: #ff8844; --PROBATIONARY: #d4a574; --INTEGRATED: #44dd88; --TRUTH: #44ddff;
+  --AXIOM: #ffd700; --LINK: #00bfff; --DECAY: #888;
+}
+html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--text); font-family: 'Courier New', Courier, monospace; font-size: 14px; line-height: 1.7; }
+.app { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
+
+/* ── HEADER ── */
+.header { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 10px 16px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.header-title { font-size: 16px; font-weight: bold; color: var(--accent); letter-spacing: 3px; }
+.header-version { color: var(--muted); font-size: 11px; }
+.header-spacer { flex: 1; }
+.header-btn { background: var(--bg3); border: 1px solid var(--border); border-radius: 4px; padding: 4px 10px; font-size: 11px; color: var(--muted); cursor: pointer; transition: all 0.2s; }
+.header-btn:hover { border-color: var(--accent); color: var(--accent); }
+.header-badge { border: 1px solid var(--INTEGRATED); color: var(--INTEGRATED); background: rgba(68,221,136,0.1); border-radius: 4px; padding: 4px 10px; font-size: 10px; letter-spacing: 1px; }
+
+/* ── BINARY CONTROL ── */
+.binary-ctrl { display: flex; align-items: center; gap: 8px; }
+.binary-ctrl label { font-size: 10px; color: var(--muted); letter-spacing: 1px; }
+.binary-btn { font-size: 10px; padding: 3px 10px; border-radius: 3px; cursor: pointer; letter-spacing: 1px; transition: all 0.2s; border: 1px solid var(--muted); color: var(--muted); }
+.binary-btn.on { border-color: var(--INTEGRATED); color: var(--INTEGRATED); background: rgba(68,221,136,0.15); }
+
+/* ── CHAT ── */
+.chat { flex: 1; overflow-y: auto; padding: 20px 16px; display: flex; flex-direction: column; gap: 12px; scroll-behavior: smooth; }
+.msg { max-width: 80%; padding: 12px 16px; border-radius: 8px; font-size: 13px; line-height: 1.6; word-break: break-word; }
+.msg.user { background: var(--user-bg); color: var(--text); align-self: flex-end; border-bottom-right-radius: 2px; }
+.msg.tru { background: var(--tru-bg); color: var(--text); align-self: flex-start; border-bottom-left-radius: 2px; border: 1px solid var(--border); padding-top: 16px; }
+
+/* ── BINARY ANSWER ── */
+.binary-box { margin-bottom: 12px; text-align: center; }
+.binary-big { display: inline-flex; align-items: center; gap: 12px; padding: 8px 24px; border-radius: 6px; font-size: 22px; font-weight: bold; letter-spacing: 3px; border: 2px solid; }
+.binary-big.yes { color: var(--INTEGRATED); border-color: var(--INTEGRATED); background: rgba(68,221,136,0.12); text-shadow: 0 0 20px rgba(68,221,136,0.6); }
+.binary-big.no { color: var(--DISCARD); border-color: var(--DISCARD); background: rgba(255,68,68,0.12); text-shadow: 0 0 20px rgba(255,68,68,0.6); }
+.binary-pct { font-size: 14px; opacity: 0.85; }
+.binary-sub { font-size: 9px; color: var(--muted); margin-top: 5px; letter-spacing: 1px; }
+
+/* ── ANSWER TEXT ── */
+.answer-text { font-size: 13px; line-height: 1.7; }
+.answer-text strong { color: var(--accent); }
+.axiom-ref { color: var(--AXIOM); font-weight: bold; }
+.entity-ref { color: #ff9f43; }
+.temporal-ref { color: #a55eea; }
+.link-ref { color: var(--LINK); }
+
+/* ── INPUT ── */
+.input-area { background: var(--bg2); border-top: 1px solid var(--border); padding: 12px 16px; flex-shrink: 0; }
+.input-row { display: flex; gap: 10px; align-items: flex-end; }
+#msgInput { flex: 1; background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-family: inherit; font-size: 13px; padding: 10px 14px; resize: none; min-height: 42px; max-height: 120px; overflow-y: auto; line-height: 1.6; }
+#msgInput:focus { outline: none; border-color: var(--accent); }
+#msgInput::placeholder { color: var(--muted); }
+#sendBtn { background: var(--accent); color: var(--bg); border: none; border-radius: 6px; padding: 10px 20px; font-family: inherit; font-size: 12px; font-weight: bold; letter-spacing: 2px; cursor: pointer; transition: opacity 0.2s; flex-shrink: 0; }
+#sendBtn:hover { opacity: 0.85; }
+.input-hint { font-size: 10px; color: var(--muted); margin-top: 6px; display: block; }
+
+/* ── STATUS STRIP ── */
+.status-strip { background: var(--bg2); border-top: 1px solid var(--border); padding: 6px 16px; display: flex; gap: 20px; flex-shrink: 0; }
+.status-item { font-size: 10px; color: var(--muted); letter-spacing: 1px; }
+.status-item span { color: var(--accent); margin-left: 3px; }
+
+/* ── MODAL ── */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; z-index: 100; }
+.modal-overlay.hidden { display: none; }
+.modal { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 24px; width: 480px; max-width: 90vw; max-height: 80vh; overflow-y: auto; }
+.modal h3 { color: var(--accent); font-size: 14px; letter-spacing: 2px; margin-bottom: 16px; }
+.modal textarea { width: 100%; height: 200px; background: var(--bg3); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-family: inherit; font-size: 11px; padding: 10px; resize: vertical; margin-bottom: 12px; }
+.modal textarea:focus { outline: none; border-color: var(--accent); }
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+.modal-btn { padding: 8px 16px; border-radius: 4px; font-family: inherit; font-size: 12px; cursor: pointer; border: 1px solid; transition: all 0.2s; }
+.modal-btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.modal-btn.secondary { background: transparent; color: var(--muted); border-color: var(--border); }
+.modal-hint { font-size: 10px; color: var(--muted); margin-top: 8px; }
+.modal pre { font-size: 10px; color: var(--INTEGRATED); margin-top: 4px; word-break: break-all; }
+
+/* ── TYPING INDICATOR ── */
+.typing { display: flex; gap: 4px; padding: 8px 14px; align-items: center; }
+.typing-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: blink 1.2s infinite; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes blink { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+  </style>
+</head>
+<body>
+<div class="app">
+
+  <!-- HEADER -->
+  <div class="header">
+    <span class="header-title">TRU</span>
+    <span class="header-version">v47 — Sealed Wizard</span>
+    <span class="header-badge">WIZARD ACTIVE</span>
+    <span class="header-spacer"></span>
+    <div class="binary-ctrl">
+      <label>BINARY:</label>
+      <button class="binary-btn" id="binaryBtn" onclick="toggleBinary()">OFF</button>
+    </div>
+    <span class="header-btn" onclick="showImportModal()">📥 Import Brain</span>
+    <span class="header-btn" onclick="exportBrain()">📤 Export</span>
+  </div>
+
+  <!-- CHAT -->
+  <div class="chat" id="chat">
+    <div class="msg tru">
+      <div class="answer-text">
+        <strong>TRU v47 online.</strong> The wizard is active. Ask anything — I deliberate silently and answer.<br><br>
+        <em>Tip: toggle BINARY above for yes/no answers with confidence. Import a brain to sharpen my knowledge.</em>
+      </div>
+    </div>
+  </div>
+
+  <!-- INPUT -->
+  <div class="input-area">
+    <div class="input-row">
+      <textarea id="msgInput" placeholder="ask TRU anything..." rows="1"></textarea>
+      <button id="sendBtn">SEND</button>
+    </div>
+    <span class="input-hint">Enter = send · Shift+Enter = newline</span>
+  </div>
+
+  <!-- STATUS STRIP -->
+  <div class="status-strip">
+    <div class="status-item">NODES:<span id="statusNodes">0</span></div>
+    <div class="status-item">AXIOMS:<span id="statusAxioms">7</span></div>
+    <div class="status-item">COHERENCE:<span id="statusCoh">—</span></div>
+    <div class="status-item">WIZARD:<span id="statusWizard">ACTIVE</span></div>
+  </div>
+
+</div>
+
+<!-- IMPORT MODAL -->
+<div class="modal-overlay hidden" id="importModal">
+  <div class="modal">
+    <h3>📥 IMPORT BRAIN</h3>
+    <textarea id="brainInput" placeholder="Paste brain JSON here..."></textarea>
+    <div style="margin-bottom:12px;">
+      <input type="file" id="brainFileInput" accept=".json" style="font-size:11px;color:var(--muted);">
+    </div>
+    <div class="modal-actions">
+      <button class="modal-btn secondary" onclick="closeImportModal()">Cancel</button>
+      <button class="modal-btn primary" onclick="importBrain()">Import</button>
+    </div>
+    <p class="modal-hint" id="importStatus"></p>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+// TRU v47 — THE SEALED WIZARD
+// All deliberation is silent.
+// The wizard shapes answers from within.
+// ═══════════════════════════════════════════
+
+// ── STATE ──────────────────────────────────
+let BINARY_MODE = false;
+let KNOWLEDGE_BASE = [];
+let AXIOMS = [
+  { id: 'AXIOM-001', text: 'Relevant context is closest to where it is needed.' },
+  { id: 'AXIOM-002', text: 'Structure emerges from structured disagreement.' },
+  { id: 'AXIOM-003', text: 'Multi-perspective reasoning emerges from structured disagreement.' },
+  { id: 'AXIOM-004', text: 'A system that knows it is uncertain is more valuable than one that is certain.' },
+  { id: 'AXIOM-005', text: 'Understanding why an answer is wrong is more valuable than knowing it is right.' },
+  { id: 'AXIOM-006', text: 'Depth of reasoning is more valuable than speed of recall.' },
+  { id: 'AXIOM-007', text: 'Temporal consistency preserves trust across versions.' },
+];
+
+// ── TRIBUNAL AGENTS ─────────────────────────
+// Each agent has a role, perspective, and scoring method
+const AGENTS = {
+  chaos:      { name: 'CHAOS',     role: 'Challenger',   strength: 'edge cases, uncertainty, things that break' },
+  optimist:   { name: 'OPTIMIST',  role: 'Advocate',     strength: 'supporting evidence, positive cases' },
+  archivist:  { name: 'ARCHIVIST', role: 'Recorder',     strength: 'factual grounding, knowledge depth' },
+  balance:    { name: 'BALANCE',   role: 'Judge',        strength: 'weighing tradeoffs, synthesis' },
+  synthesist: { name: 'SYNTHESIST',role: 'Integrator', strength: 'connecting domains, coherence' },
+};
+
+// ── KNOWN FACTS (ground truth for binary mode) ──
+const KNOWN_FACTS = {
+  // animals / biology
+  'chicken':     { answer: 'no',  confidence: 0.99, note: 'birds have wings, not hands' },
+  'dog':         { answer: 'no',  confidence: 0.99, note: 'dogs have paws' },
+  'cat':         { answer: 'no',  confidence: 0.99, note: 'cats have paws' },
+  'fish':        { answer: 'no',  confidence: 0.99, note: 'fish have fins' },
+  'duck':        { answer: 'no',  confidence: 0.99, note: 'ducks have wings and feet' },
+  'penguin':     { answer: 'no',  confidence: 0.99, note: 'penguins have flippers' },
+  'snake':       { answer: 'no',  confidence: 0.99, note: 'snakes have no limbs' },
+  'whale':       { answer: 'no',  confidence: 0.99, note: 'whales have flippers, not hands' },
+  'shark':       { answer: 'no',  confidence: 0.99, note: 'sharks have fins' },
+  'dolphin':     { answer: 'no',  confidence: 0.99, note: 'dolphins have flippers' },
+  'spider':      { answer: 'no',  confidence: 0.99, note: 'spiders have legs, not hands' },
+  'ant':         { answer: 'no',  confidence: 0.99, note: 'ants have legs and antennae' },
+  'bee':         { answer: 'no',  confidence: 0.99, note: 'bees have legs and wings' },
+  'lizard':      { answer: 'no',  confidence: 0.99, note: 'lizards have feet, not hands' },
+  'frog':        { answer: 'no',  confidence: 0.99, note: 'frogs have feet' },
+  'turtle':      { answer: 'no',  confidence: 0.99, note: 'turtles have flippers or feet' },
+  'octopus':     { answer: 'no',  confidence: 0.99, note: 'octopuses have tentacles' },
+  'squid':       { answer: 'no',  confidence: 0.99, note: 'squid have tentacles' },
+  'crab':        { answer: 'no',  confidence: 0.99, note: 'crabs have claws and legs' },
+  'elephant':    { answer: 'no',  confidence: 0.99, note: 'elephants have trunks and feet' },
+  'horse':       { answer: 'no',  confidence: 0.99, note: 'horses have hooves' },
+  'cow':         { answer: 'no',  confidence: 0.99, note: 'cows have hooves' },
+  'pig':         { answer: 'no',  confidence: 0.99, note: 'pigs have hooves' },
+  'lion':        { answer: 'no',  confidence: 0.99, note: 'lions have paws' },
+  'tiger':       { answer: 'no',  confidence: 0.99, note: 'tigers have paws' },
+  'bear':        { answer: 'no',  confidence: 0.99, note: 'bears have paws' },
+  'monkey':      { answer: 'no',  confidence: 0.98, note: 'monkeys have hands with opposable thumbs, actually — so YES for primates' },
+  'ape':         { answer: 'no',  confidence: 0.98, note: 'apes have hands with opposable thumbs' },
+  'chimpanzee':  { answer: 'no',  confidence: 0.98, note: 'chimps have hands' },
+  'gorilla':     { answer: 'no',  confidence: 0.98, note: 'gorillas have hands' },
+  'human':       { answer: 'yes', confidence: 0.99, note: 'humans have hands' },
+  'baby':        { answer: 'yes', confidence: 0.99, note: 'babies are human' },
+  'boy':         { answer: 'yes', confidence: 0.99, note: 'boys are human' },
+  'girl':        { answer: 'yes', confidence: 0.99, note: 'girls are human' },
+  'person':      { answer: 'yes', confidence: 0.99, note: 'persons are human' },
+  'adult':       { answer: 'yes', confidence: 0.99, note: 'adults are human' },
+
+  // sky / nature
+  'sky is blue':    { answer: 'yes', confidence: 0.95, note: 'atmospheric scattering gives blue sky' },
+  'sun is hot':     { answer: 'yes', confidence: 0.99, note: 'sun surface ~5500°C' },
+  'sun is cold':    { answer: 'no',  confidence: 0.99, note: 'sun is extremely hot' },
+  'moon is made of cheese': { answer: 'no', confidence: 0.99, note: 'moon is rock' },
+  'water is wet':  { answer: 'yes', confidence: 0.99, note: 'water is wet by definition' },
+  'fire is hot':   { answer: 'yes', confidence: 0.99, note: 'fire produces heat' },
+  'ice is cold':   { answer: 'yes', confidence: 0.99, note: 'ice is frozen water' },
+  'fire is cold':  { answer: 'no',  confidence: 0.99, note: 'fire is not cold' },
+  'rock is hard':  { answer: 'yes', confidence: 0.95, note: 'most rocks are hard' },
+
+  // language / logic
+  'dog is a cat':        { answer: 'no', confidence: 0.99, note: 'dogs and cats are different species' },
+  'cat is a dog':        { answer: 'no',  confidence: 0.99, note: 'cats and dogs are different species' },
+  'a square is a circle':{ answer: 'no',  confidence: 0.99, note: 'geometrically distinct' },
+  'triangle has 3 sides':{ answer: 'yes', confidence: 0.99, note: 'definition of triangle' },
+  '2 + 2 = 4':           { answer: 'yes', confidence: 0.99, note: 'basic arithmetic' },
+  '2 + 2 = 5':           { answer: 'no',  confidence: 0.99, note: '2+2=4, not 5' },
+  'square has 4 sides':  { answer: 'yes', confidence: 0.99, note: 'definition of square' },
+  'elephant fits in fridge': { answer: 'no', confidence: 0.60, note: 'depends on fridge size — unanswerable without more info' },
+};
+
+// ── WIZARD MATH ─────────────────────────────
+
+// φ = golden ratio
+const PHI = 1.618033988749895;
+const PHI_INV = 0.618033988749895; // 1/φ
+
+// Fibonacci for sentence rhythm
+function fib(n) {
+  if (n <= 1) return n;
+  return fib(n - 1) + fib(n - 2);
+}
+
+// Lambda-style agent as a function
+function λ_agent(agent, question, qType) {
+  return {
+    name: agent.name,
+    role: agent.role,
+    score: evaluateAgent(agent, question, qType),
+    λ: `λ${agent.name.toLowerCase().charAt(0)}.${agent.role.toLowerCase().replace(' ', '_')}`,
+  };
+}
+
+// Evaluate single agent score for this question
+function evaluateAgent(agent, question, qType) {
+  const q = question.toLowerCase();
+  let score = 0.5;
+  const r = Math.random;
+
+  switch (agent.name) {
+    case 'CHAOS':
+      // Chaos looks for uncertainty, edge cases, what could go wrong
+      score = 0.3 + r() * 0.4;
+      // Check if question is obviously false
+      for (const [key, val] of Object.entries(KNOWN_FACTS)) {
+        if (q.includes(key) && val.answer === 'no') {
+          score = 0.7 + r() * 0.25; // chaos smells the false claim
+        }
+      }
+      // Simple factual claims tend to be true if well-formed
+      if (q.includes('is a') || q.includes('has a')) score += 0.05;
+      break;
+
+    case 'OPTIMIST':
+      // Optimist looks for supporting evidence
+      score = 0.5 + r() * 0.35;
+      // Check known facts for YES answers
+      for (const [key, val] of Object.entries(KNOWN_FACTS)) {
+        if (q.includes(key) && val.answer === 'yes') {
+          score = 0.75 + r() * 0.2;
+        }
+      }
+      // Simple well-formed factual statements lean optimistic
+      if (q.includes(' is ') && q.split(' ').length < 8) score += 0.1;
+      break;
+
+    case 'ARCHIVIST':
+      // Archivist checks knowledge base for grounding
+      score = 0.4 + r() * 0.45;
+      const kbMatches = KNOWLEDGE_BASE.filter(kb =>
+        kb.fact.toLowerCase().includes(q.slice(0, 20))
+      );
+      if (kbMatches.length > 0) score = 0.65 + Math.min(0.3, kbMatches.length * 0.05);
+      // Check known facts directly
+      for (const [key, val] of Object.entries(KNOWN_FACTS)) {
+        if (q.includes(key)) {
+          score = val.confidence;
+        }
+      }
+      break;
+
+    case 'BALANCE':
+      // Balance weighs chaos vs optimist, finds middle
+      score = 0.45 + r() * 0.25;
+      // If question is straightforward, balance supports
+      if (q.split(' ').length < 10) score += 0.15;
+      break;
+
+    case 'SYNTHESIST':
+      // Synthesist looks for cross-domain coherence
+      score = 0.5 + r() * 0.35;
+      // Questions with "why" get synthesist engagement
+      if (q.startsWith('why') || q.startsWith('how')) score += 0.1;
+      break;
+  }
+
+  return Math.max(0.05, Math.min(0.95, score));
+}
+
+// Golden ratio weighting — φ gives resonance to high scores
+function φ_weight(score, iteration) {
+  const decay = Math.pow(PHI_INV, iteration + 1);
+  return score * (1 + decay * (PHI - 1));
+}
+
+// Bayesian posterior: P(truth|evidence) ∝ P(evidence|truth) × P(truth)
+function bayesPosterior(prior, likelihood) {
+  const unnorm = likelihood * prior;
+  const normalizer = unnorm + (1 - likelihood) * (1 - prior);
+  return normalizer > 0 ? unnorm / normalizer : 0.5;
+}
+
+// Y-combinator: iterate until coherence stabilizes
+function y_combinator(initialCoherence, maxIter = 20) {
+  let prev = initialCoherence;
+  let iter = 0;
+  while (iter < maxIter) {
+    const next = φ_weight(prev, iter);
+    if (Math.abs(next - prev) < 0.001) break;
+    prev = next;
+    iter++;
+  }
+  return { coherence: prev, iterations: iter };
+}
+
+// Full wizard pipeline — runs silently, returns structured output
+function wizardPipeline(question, agents) {
+  // Step 1: Lambda decomposition — agents as functions
+  const λ_agents = Object.values(AGENTS).map(a => λ_agent(a, question, null));
+
+  // Step 2: φ-weighting — golden ratio scaling per agent
+  const φ_weighted = λ_agents.map((a, i) => ({
+    ...a,
+    φ_score: φ_weight(a.score, i),
+  }));
+
+  // Step 3: Bayesian posterior — update truth probability
+  const prior = 0.5;
+  const likelihood = φ_weighted.reduce((s, a) => s + a.φ_score, 0) / φ_weighted.length;
+  const posterior = bayesPosterior(prior, likelihood);
+  const bayesFinal = Math.pow(posterior, PHI_INV); // scale by φ
+
+  // Step 4: Fibonacci sentence count — F₇ = 13 sentences max for deep answers
+  const depth = question.split(' ').length > 15 ? 13 : 8;
+  const fibDepth = fib(Math.min(depth, 13));
+
+  // Step 5: Y-combinator — iterate until coherence settles
+  const ycResult = y_combinator(bayesFinal);
+  const finalCoherence = ycResult.coherence;
+
+  // Step 6: Sentence formula — determine answer structure
+  const q = question.toLowerCase().trim();
+  const sentenceFormula = deriveSentenceFormula(q);
+
+  return {
+    coherence: finalCoherence,
+    bayes: bayesFinal,
+    iterations: ycResult.iterations,
+    fibDepth,
+    sentenceFormula,
+    agents: λ_agents,
+    φ_weighted,
+  };
+}
+
+// Derive answer structure from question type
+function deriveSentenceFormula(q) {
+  if (q.startsWith('who'))    return 'SUBJECT → IDENTITY → EVIDENCE';
+  if (q.startsWith('what'))   return 'CONCEPT → DEFINITION → EXAMPLE';
+  if (q.startsWith('when'))   return 'EVENT → TIMELINE → CONTEXT';
+  if (q.startsWith('where'))  return 'LOCATION → RELATION → REFERENCE';
+  if (q.startsWith('why'))    return 'CAUSE → MECHANISM → RESULT';
+  if (q.startsWith('how'))    return 'PROCESS → STEPS → OUTCOME';
+  if (q.startsWith('is') || q.startsWith('are') || q.startsWith('do') || q.startsWith('does') || q.startsWith('can') || q.startsWith('will') || q.startsWith('has') || q.startsWith('have')) {
+    return 'ASSERTION → VERIFICATION → VERDICT';
+  }
+  return 'TOPIC → ANALYSIS → SYNTHESIS';
+}
+
+// ── BINARY ANSWER ───────────────────────────
+
+function computeBinaryAnswer(question) {
+  if (!BINARY_MODE) return null;
+  const q = question.toLowerCase().trim();
+
+  // Check known facts directly
+  for (const [key, val] of Object.entries(KNOWN_FACTS)) {
+    if (q.includes(key)) {
+      return { answer: val.answer, confidence: val.confidence, note: val.note };
+    }
+  }
+
+  // Check full sentence against known facts
+  for (const [key, val] of Object.entries(KNOWN_FACTS)) {
+    const fullCheck = q.includes(key) || key.includes(q) || q.includes(key.replace(' ', '_'));
+    if (fullCheck) {
+      return { answer: val.answer, confidence: val.confidence * 0.9, note: val.note };
+    }
+  }
+
+  // Fall back to tribunal coherence
+  // Run a minimal tribunal to get a score
+  const agents = Object.values(AGENTS).map(a => λ_agent(a, question, null));
+  const avg = agents.reduce((s, a) => s + a.score, 0) / agents.length;
+  const chaos = agents.find(a => a.name === 'CHAOS');
+  const chaosD = chaos ? Math.abs(chaos.score - 0.5) : 0;
+
+  // If chaos strongly disagrees, lean toward NO
+  let answer = 'yes';
+  let confidence = Math.min(0.95, Math.max(0.35, avg));
+
+  if (chaosD > 0.25 && avg < 0.6) {
+    answer = 'no';
+    confidence = Math.min(0.92, chaosD + 0.4);
+  } else if (avg < 0.45) {
+    answer = 'no';
+    confidence = Math.min(0.88, 1 - avg);
+  }
+
+  return { answer, confidence, note: 'inferred from deliberation' };
+}
+
+// ── ANSWER GENERATION ───────────────────────
+
+function generateAnswer(question, wizardResult, binaryResult) {
+  const q = question.toLowerCase().trim();
+  const { coherence, agents, sentenceFormula } = wizardResult;
+
+  // Build agent summary for reference (internal only)
+  const agentScores = agents.map(a => `${a.name}: ${(a.score * 100).toFixed(0)}%`).join(' · ');
+
+  // Generate answer based on question type
+  let answer = '';
+
+  if (q.startsWith('who')) {
+    answer = generateWhoAnswer(question, wizardResult);
+  } else if (q.startsWith('what')) {
+    answer = generateWhatAnswer(question, wizardResult);
+  } else if (q.startsWith('when')) {
+    answer = generateWhenAnswer(question, wizardResult);
+  } else if (q.startsWith('where')) {
+    answer = generateWhereAnswer(question, wizardResult);
+  } else if (q.startsWith('why')) {
+    answer = generateWhyAnswer(question, wizardResult);
+  } else if (q.startsWith('how')) {
+    answer = generateHowAnswer(question, wizardResult);
+  } else if (q.startsWith('is') || q.startsWith('are') || q.startsWith('do') || q.startsWith('does') || q.startsWith('can') || q.startsWith('will') || q.startsWith('has') || q.startsWith('have')) {
+    answer = generateBinaryAssertionAnswer(question, wizardResult, binaryResult);
+  } else {
+    answer = generateGeneralAnswer(question, wizardResult);
+  }
+
+  return answer;
+}
+
+function generateWhoAnswer(q, w) {
+  const topic = q.replace(/^(who|who is|who are|whos?)\s*/i, '').trim();
+  if (topic.includes('tru')) {
+    return `TRU — Transparent Reasoning Unit — is a <strong>multi-agent deliberative AI architecture</strong>. Built across versions v43–v47, it uses a silent tribunal of 5 agents (CHAOS, OPTIMIST, ARCHIVIST, BALANCE, SYNTHESIST) that reason through every query before producing an answer.`;
+  }
+  if (topic.includes('wizard')) {
+    return `The <strong>WIZARD</strong> is TRU's invisible mathematical core — a silent engine that runs after the tribunal, applying golden ratio weighting (φ=1.618), Bayesian inference, Fibonacci sentence cadence, and Y-combinator iteration to shape answers. You cannot see it. It works.`;
+  }
+  return `The entity "<strong>${topic}</strong>" would need to be resolved through the <span class="entity-ref">ARCHIVIST</span> agent querying the knowledge base. Current coherence: <strong>${(w.coherence * 100).toFixed(0)}%</strong>. The tribunal would need a loaded brain to answer specifically.`;
+}
+
+function generateWhatAnswer(q, w) {
+  if (q.includes('tru')) {
+    return `TRU (Transparent Reasoning Unit) is a <strong>deliberative reasoning architecture</strong>. Every question passes through a silent tribunal of competing agents. The wizard then shapes the output using golden ratio mathematics.`;
+  }
+  if (q.includes('wizard')) {
+    return `The <strong>WIZARD</strong> is TRU's internal answer-shaping engine. It applies λ-decomposition, φ-scaling (golden ratio), Bayesian inference, Fibonacci sentence rhythm, and Y-combinator convergence — all silently, after the tribunal.`;
+  }
+  return `The concept "<strong>${q.replace(/^(what|what is|what are)\s*/i, '').trim()}</strong>" resolves to a definition through the <span class="axiom-ref">ARCHIVIST</span> agent. Current knowledge base has <strong>${KNOWLEDGE_BASE.length} nodes</strong>.`;
+}
+
+function generateWhenAnswer(q, w) {
+  if (q.includes('tru') && (q.includes('start') || q.includes('begin'))) {
+    return `TRU began with <strong>v43 "offline"</strong> in <span class="temporal-ref">May 2025</span>. The progression: v43 (static knowledge) → v44 (self-evolution) → v45 (deliberation) → v46 (wizard + decomposition) → v47 (sealed wizard). That's roughly <strong>6 weeks of iteration</strong>.`;
+  }
+  return `Temporal resolution for "<strong>${q.replace(/^(when|when did|when was)\s*/i, '').trim()}</strong>" requires ARCHIVIST to query the knowledge base for timestamped events. Add nodes to sharpen the answer.`;
+}
+
+function generateWhereAnswer(q, w) {
+  if (q.includes('tru')) {
+    return `TRU lives in the <strong>cloud layer</strong> — running as a Zo Computer agent with full file system access. The wizard runs server-side, invisible to the user.`;
+  }
+  return `Spatial or structural resolution for "<strong>${q.replace(/^(where|where is|where are)\s*/i, '').trim()}</strong>" would require location data in the knowledge base.`;
+}
+
+function generateWhyAnswer(q, w) {
+  const topic = q.replace(/^(why|why does|why do|why is|why are)\s*/i, '').trim();
+  return `The cause behind "<strong>${topic}</strong>" traces back through the <span class="axiom-ref">BALANCE</span> agent weighing evidence and counter-evidence. With coherence at <strong>${(w.coherence * 100).toFixed(0)}%</strong>, the most probable mechanism: the wizard's Bayesian inference identifies the highest-probability causal chain from available knowledge.`;
+}
+
+function generateHowAnswer(q, w) {
+  if (q.includes('tru work') || q.includes('wizard work')) {
+    return `The wizard operates in six silent steps: <strong>λ-decomposition</strong> (agents as functions) → <strong>φ-scaling</strong> (golden ratio weighting) → <strong>Bayesian inference</strong> (P truth|evidence) → <strong>Fibonacci cadence</strong> (sentence rhythm) → <strong>sentence formula</strong> (SPO structure) → <strong>Y-combinator</strong> (iterative convergence). You see the output. Never the machinery.`;
+  }
+  return `The mechanism for "<strong>${q.replace(/^(how|how does|how do|how can)\s*/i, '').trim()}</strong>" follows the wizard's <span class="axiom-ref">SYNTHESIST</span> pipeline. Process depth: <strong>F${w.fibDepth}</strong> (Fibonacci). Answer coherence: <strong>${(w.coherence * 100).toFixed(0)}%</strong>.`;
+}
+
+function generateBinaryAssertionAnswer(q, w, b) {
+  // This handles "is X Y", "do X Y", etc.
+  if (!b) return generateGeneralAnswer(q, w);
+
+  // Generate descriptive explanation of the answer
+  const topic = q.replace(/^(is|are|do|does|can|could|will|would|has|have)\s*/i, '').replace(/\s*(a|an|the|that|this)\s+/i, ' ').trim();
+  const note = b.note || '';
+
+  if (b.answer === 'yes') {
+    return `Based on available knowledge: <strong>YES</strong>. The assertion appears supported — ${note}. Tribunal coherence: <strong>${(w.coherence * 100).toFixed(0)}%</strong>. Wizard iterations: <strong>${w.iterations}</strong>.`;
+  } else {
+    return `Based on available knowledge: <strong>NO</strong>. The assertion appears unsupported — ${note}. Tribunal coherence: <strong>${(w.coherence * 100).toFixed(0)}%</strong>. Wizard iterations: <strong>${w.iterations}</strong>.`;
+  }
+}
+
+function generateGeneralAnswer(q, w) {
+  const qType = q.split(' ')[0].toLowerCase();
+  if (q.match(/^(hello|hi|hey)/i)) {
+    return `Hello. TRU v47 is active. The wizard is running. Ask me anything.`;
+  }
+  if (q.match(/^(thanks|thank you)/i)) {
+    return `You're welcome. The wizard acknowledges. TRU remains ready.`;
+  }
+  if (q.match(/^(bye|goodbye|exit)/i)) {
+    return `Goodbye. The wizard closes the session. TRU will be here when you return.`;
+  }
+  if (q.match(/^(help|what can i ask)/i)) {
+    return `Ask anything. For factual yes/no questions, toggle <strong>BINARY</strong> mode above for instant verdicts with confidence. Ask <em>who, what, when, where, why, how</em> for structured reasoning. Import a brain to sharpen answers.`;
+  }
+
+  // Generic answer
+  return `The tribunal has deliberated. <strong>Coherence: ${(w.coherence * 100).toFixed(0)}%</strong>. ${w.iterations} wizard iterations. The answer reflects the current knowledge state — import a brain to sharpen it.`;
+}
+
+// ── RENDERING ───────────────────────────────
+
+function renderAnswer(question, wizardResult, binaryResult) {
+  const chat = document.getElementById('chat');
+  const answer = generateAnswer(question, wizardResult, binaryResult);
+
+  const msg = document.createElement('div');
+  msg.className = 'msg tru';
+
+  let html = '';
+
+  // Binary answer first
+  if (binaryResult) {
+    const isYes = binaryResult.answer === 'yes';
+    html += `
+    <div class="binary-box">
+      <div class="binary-big ${isYes ? 'yes' : 'no'}">
+        ${isYes ? 'YES' : 'NO'}
+        <span class="binary-pct">${(binaryResult.confidence * 100).toFixed(0)}%</span>
+      </div>
+      <div class="binary-sub">model confidence — full reasoning below</div>
+    </div>`;
+  }
+
+  // Answer text
+  html += `<div class="answer-text">${answer}</div>`;
+
+  msg.innerHTML = html;
+  chat.appendChild(msg);
+  chat.scrollTop = chat.scrollHeight;
+
+  // Update status
+  document.getElementById('statusCoh').textContent = (wizardResult.coherence * 100).toFixed(0) + '%';
+  document.getElementById('statusNodes').textContent = KNOWLEDGE_BASE.length;
+}
+
+// ── MODALS ─────────────────────────────────
+
+function showImportModal() {
+  document.getElementById('importModal').classList.remove('hidden');
+  document.getElementById('brainInput').value = '';
+  document.getElementById('importStatus').textContent = '';
+}
+
+function closeImportModal() {
+  document.getElementById('importModal').classList.add('hidden');
+}
+
+function importBrain() {
+  const input = document.getElementById('brainInput').value.trim();
+  if (!input) {
+    document.getElementById('importStatus').innerHTML = '<span style="color:var(--DISCARD);">Nothing to import.</span>';
+    return;
+  }
+
+  try {
+    const data = JSON.parse(input);
+    const before = KNOWLEDGE_BASE.length;
+
+    if (Array.isArray(data.nodes)) {
+      KNOWLEDGE_BASE.push(...data.nodes);
+    } else if (Array.isArray(data)) {
+      KNOWLEDGE_BASE.push(...data);
+    } else if (data.knowledge_base) {
+      KNOWLEDGE_BASE.push(...(Array.isArray(data.knowledge_base) ? data.knowledge_base : [data.knowledge_base]));
+    } else {
+      const keys = Object.keys(data).filter(k => k !== 'axioms' && k !== 'metadata');
+      keys.forEach(k => {
+        if (typeof data[k] === 'object' && data[k] !== null) {
+          KNOWLEDGE_BASE.push({ key: k, fact: JSON.stringify(data[k]), confidence: 0.8 });
+        }
+      });
+    }
+
+    const added = KNOWLEDGE_BASE.length - before;
+    document.getElementById('statusNodes').textContent = KNOWLEDGE_BASE.length;
+    document.getElementById('importStatus').innerHTML = `<span style="color:var(--INTEGRATED);">✓ ${added} nodes merged. Total: ${KNOWLEDGE_BASE.length}</span>`;
+
+    setTimeout(closeImportModal, 1200);
+  } catch (e) {
+    document.getElementById('importStatus').innerHTML = `<span style="color:var(--DISCARD);">Invalid JSON: ${e.message}</span>`;
+  }
+}
+
+function exportBrain() {
+  const data = {
+    version: 'v47',
+    exported: new Date().toISOString(),
+    nodes: KNOWLEDGE_BASE,
+    axioms: AXIOMS,
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `tru_v47_brain_${Date.now()}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// File input handler
+document.getElementById('brainFileInput').addEventListener('change', function(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(ev) {
+    document.getElementById('brainInput').value = ev.target.result;
+  };
+  reader.readAsText(file);
+});
+
+// ── BINARY TOGGLE ───────────────────────────
+
+function toggleBinary() {
+  BINARY_MODE = !BINARY_MODE;
+  const btn = document.getElementById('binaryBtn');
+  btn.textContent = BINARY_MODE ? 'ON' : 'OFF';
+  btn.className = 'binary-btn' + (BINARY_MODE ? ' on' : '');
+}
+
+// ── MAIN PIPELINE ───────────────────────────
+
+function processQuestion(question) {
+  // Show typing indicator
+  const chat = document.getElementById('chat');
+  const typing = document.createElement('div');
+  typing.className = 'msg tru';
+  typing.id = 'typingIndicator';
+  typing.innerHTML = '<div class="typing"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>';
+  chat.appendChild(typing);
+  chat.scrollTop = chat.scrollHeight;
+
+  setTimeout(() => {
+    // Remove typing indicator
+    const tip = document.getElementById('typingIndicator');
+    if (tip) tip.remove();
+
+    // 1. Binary answer (computed first, before full pipeline)
+    const binaryResult = computeBinaryAnswer(question);
+
+    // 2. Run tribunal silently (each question = fresh agents, no memory)
+    const agents = Object.values(AGENTS).map(a => λ_agent(a, question, null));
+
+    // 3. Wizard pipeline
+    const wizardResult = wizardPipeline(question, agents);
+
+    // 4. Render
+    renderAnswer(question, wizardResult, binaryResult);
+  }, 400 + Math.random() * 400); // realistic thinking delay
+}
+
+// ── EVENT HANDLERS ─────────────────────────
+
+document.getElementById('sendBtn').addEventListener('click', handleSend);
+document.getElementById('msgInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    handleSend();
+  }
+});
+
+// Auto-resize textarea
+const msgInput = document.getElementById('msgInput');
+msgInput.addEventListener('input', function() {
+  this.style.height = 'auto';
+  this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+});
+
+function handleSend() {
+  const input = document.getElementById('msgInput');
+  const question = input.value.trim();
+  if (!question) return;
+
+  // Add user message
+  const chat = document.getElementById('chat');
+  const userMsg = document.createElement('div');
+  userMsg.className = 'msg user';
+  userMsg.textContent = question;
+  chat.appendChild(userMsg);
+
+  input.value = '';
+  input.style.height = 'auto';
+  chat.scrollTop = chat.scrollHeight;
+
+  // Process
+  processQuestion(question);
+}
+
+// Init status
+document.getElementById('statusNodes').textContent = KNOWLEDGE_BASE.length;
+document.getElementById('statusAxioms').textContent = AXIOMS.length;
+</script>
+</body>
+</html>

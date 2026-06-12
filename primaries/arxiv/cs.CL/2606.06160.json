@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06160",
+  "title": "Where does Absolute Position come from in decoder-only Transformers?",
+  "abstract": "RoPE-trained transformers distinguish absolute position in their attention patterns, even though RoPE encodes only relative offsets in the inner product. We trace this leakage to two architectural components, The causal mask is responsible for the first: its per-query softmax denominator depends on the absolute query position by construction. The residual stream supplies the second. Under causal attention the activation at position $0$ attends only to itself and runs as a closed dynamical system from the embedding of the token at that position; downstream attention reads this trajectory through sink-reading heads. Both components appear in all three architectures we study, in architecturally specific balance: NTK scaling suppresses the residual-stream component, sliding-window attention allows it to accumulate with depth, and standard RoPE sits between. Replacing the \\texttt{BOS} embedding before the forward pass removes $40\\%$ of the residual-stream component at early queries. Attention sinks are token-anchored stabilizers that pass forward a deterministic fingerprint of the token at position $0$, constant across inputs when that token is the auto-prepended \\texttt{BOS} and varying with it otherwise.",
+  "link": "https://arxiv.org/abs/2606.06160",
+  "category": "cs.CL",
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498284+00:00"
+}

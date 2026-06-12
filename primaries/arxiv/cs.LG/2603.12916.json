@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.12916",
+  "title": "Surprised by Attention: Predictable Query Dynamics for Time Series Anomaly Detection",
+  "abstract": "Multivariate time series anomalies often manifest as shifts in cross-channel dependencies rather than simple amplitude excursions. In autonomous driving, for instance, a steering command might be internally consistent but decouple from the resulting lateral acceleration. Residual-based detectors can miss such anomalies when flexible sequence models still reconstruct signals plausibly despite altered coordination. We introduce AxonAD, an unsupervised detector that treats multi-head attention query evolution as a short horizon predictable process. A gradient-updated reconstruction pathway is coupled with a history-only predictor that forecasts future query vectors from past context. This is trained via a masked predictor-target objective against an exponential moving average (EMA) target encoder. At inference, reconstruction error is combined with a tail-aggregated query mismatch score, which measures cosine deviation between predicted and target queries on recent timesteps. This dual approach provides sensitivity to structural dependency shifts while retaining amplitude-level detection. On proprietary in-vehicle telemetry with interval annotations and on the TSB-AD multi-variate suite (17 datasets, 180 series) with threshold-free and range-aware metrics, AxonAD improves ranking quality and temporal localization over strong baselines. Ablations confirm that query prediction and combined scoring are the primary drivers of the observed gains. Code is available at the URL https://github.com/iis-esslingen/AxonAD.",
+  "link": "https://arxiv.org/abs/2603.12916",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307981Z"
+}

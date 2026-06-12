@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2604.14575",
+  "title": "Generative Augmented Inference",
+  "abstract": "Large language models enable inexpensive AI-generated annotations, but using them reliably for causal inference remains challenging. Naively pooling AI and human data induces bias, while existing methods such as Prediction-Powered Inference (PPI; Angelopoulos et al., 2023a) treat AI outputs as proxies of true labels -- an assumption often violated for generative model outputs in practice. We propose Generative Augmented Inference (GAI), a framework that treats AI outputs as general, potentially high-dimensional informative features for learning human labels rather than as surrogates. GAI flexibly models this relationship using nonparametric methods, enabling consistent estimation and valid inference from combined human and AI data. We establish asymptotic normality and show that, under random labeling, GAI strictly improves asymptotic efficiency over human-data-only estimation whenever AI outputs are informative for true labels. Empirical studies on real-world datasets demonstrate that GAI significantly reduces estimation error and improves confidence interval quality across diverse generative data sources relative to human-only and PPI-based estimation.",
+  "link": "https://arxiv.org/abs/2604.14575",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099215+00:00"
+}

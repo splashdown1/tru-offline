@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.07751",
+  "title": "3ViewSense: Spatial and Mental Perspective Reasoning from Orthographic Views in Vision-Language Models",
+  "abstract": "Current Large Language Models have achieved Olympiad-level logic, yet Vision-Language Models paradoxically falter on elementary spatial tasks like block counting. This capability mismatch reveals a critical ``spatial intelligence gap,'' where models fail to construct coherent 3D mental representations from 2D observations. We uncover this gap via diagnostic analyses showing the bottleneck is a missing view-consistent spatial interface rather than insufficient visual features or weak reasoning. To bridge this, we introduce \\textbf{3ViewSense}, a framework that grounds spatial reasoning in Orthographic Views. Drawing on engineering cognition, we propose a ``Simulate-and-Reason'' mechanism that decomposes complex scenes into canonical orthographic projections to resolve geometric ambiguities. By aligning egocentric perceptions with these allocentric references, our method facilitates explicit mental rotation and reconstruction. Empirical results on spatial reasoning benchmarks demonstrate that our method significantly outperforms existing baselines, with consistent gains on occlusion-heavy counting and view-consistent spatial reasoning. The framework also improves the stability and consistency of spatial descriptions, offering a scalable path toward stronger spatial intelligence in multimodal systems.~\\footnote{https://github.com/Jasaxion/3ViewSense}",
+  "link": "https://arxiv.org/abs/2603.07751",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CV",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406359Z"
+}

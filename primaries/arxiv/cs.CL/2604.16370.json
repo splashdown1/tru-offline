@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2604.16370",
+  "title": "Brain-CLIPLM: Semantic Compression for EEG-to-Text Decoding",
+  "abstract": "Decoding natural language from non-invasive electroencephalography (EEG) remains constrained by low signal-to-noise ratio and limited information bandwidth. This raises a central question: can sentence-level language be reliably recovered from such signals? Under realistic information constraints, this direct-recovery assumption may be too strong. We introduce a semantic compression hypothesis: non-invasive EEG may preserve recoverable semantic anchors rather than the full lexical--syntactic form of a sentence. From this perspective, direct sentence reconstruction is overly fine-grained relative to the recoverable information scale of EEG. To address this mismatch, we propose Brain-CLIPLM, a two-stage framework that decomposes EEG-to-text decoding into semantic-anchor recovery and anchor-guided sentence reconstruction. Stage 1 uses contrastive learning to align word-level EEG evidence with a fixed keyword vocabulary and recover ordered semantic anchors. Stage 2 uses a retrieval-grounded large language model with chain-of-thought reasoning prompts to reconstruct sentence meaning from these anchors, following a granularity matching principle that aligns decoding complexity with the recoverable neural information scale. On the combined Zurich Cognitive Language Processing (ZuCo) benchmark, Brain-CLIPLM achieves 67.6\\% Top-5 and 85.0\\% Top-25 sentence retrieval accuracy, with the strongest performance at intermediate anchor granularity. Control analyses, including a permutation test, show that EEG-derived anchors carry sentence-specific information beyond language-model priors. These findings suggest that EEG-to-text decoding is better framed as recovering compressed semantic content before anchor-guided sentence reconstruction.",
+  "link": "https://arxiv.org/abs/2604.16370",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498451+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2502.06434",
+  "title": "Unifying Dataset Pruning and Distillation for Efficient Large-scale Compression",
+  "abstract": "Dataset pruning (DP) and dataset distillation (DD) fundamentally differ in their outputs: DP selects original image subsets, while DD generates synthetic images. Recently, DD's increasing reliance on original images suggests a convergence of the two directions. To investigate this convergence trend, we propose a unified dataset compression (DC) benchmark. This benchmark reveals an interesting trade-off for soft-label-DD: while soft labels provide valuable information, they can make the distillation process less essential, as distilled images may not always outperform random subsets. In addition, the benchmark reveals that in current stages, dataset pruning outperforms dataset distillation at small dataset sizes. Given these observations, we explore hard-label-DC as a complementary approach that emphasizes image quality while offering substantial storage efficiency. Our PCA (Prune, Combine, and Augment) is the first framework that does not rely on soft labels but instead focuses on image quality. (1) \"P'' means selecting easy samples based on dataset pruning metrics, (2) \"C'' indicates combining these samples effectively, and (3) \"A'' is to apply constrained image augmentation during training. Our code is available at https://github.com/ArmandXiao/Unifying-Dataset-Pruning-and-Distillation",
+  "link": "https://arxiv.org/abs/2502.06434",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884445+00:00"
+}

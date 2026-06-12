@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05441",
+  "title": "GOTabPFN: From Feature Ordering to Compact Tokenization for Tabular Foundation Models on High-Dimensional Data",
+  "abstract": "We investigate how to make small tabular foundation models effective for High-Dimensional, Low-Sample Size (HDLSS) tabular prediction without retraining large backbones. We introduce Graph-guided Ordering with Local Refinement (GO-LR), show its equivalence to weighted Minimum Linear Arrangement, and interpret the practical solver as a TSP-path-style surrogate. We propose GOTabPFN,which builds on GO-LR, and a Neuro-Inspired Subunit Compression (NSC) unit to pool locally adjacent ordered features into meta-features, yielding a compact representation that makes TabPFN-style prediction practical in HDLSS regimes. Across tabular benchmarks, GOTabPFN improves stability and accuracy under tight token budgets.",
+  "link": "https://arxiv.org/abs/2606.05441",
+  "category": "stat.ML",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728666+00:00"
+}

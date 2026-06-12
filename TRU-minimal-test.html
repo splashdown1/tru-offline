@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TRU MINIMAL TEST</title>
+</head>
+<body>
+<div id="chat"></div>
+<input id="userInput" onkeydown="if(event.key==='Enter')sendMsg()" placeholder="type here">
+<button onclick="sendMsg()">SEND</button>
+<button onclick="ask('hello')">ask hello</button>
+<button onclick="ask('who are you')">ask who</button>
+
+<script>
+var BRAIN = [
+  {k:"god_unchanging",v:"Malachi 3:6 — I the LORD do not change.",t:"scripture",w:1,s:"FOUNDATION"},
+  {k:"christ_truth",v:"John 14:6 — I am the way, the truth, and the life.",t:"scripture",w:1,s:"CHRIST"}
+];
+
+function addMsg(text, role) {
+  var chat = document.getElementById("chat");
+  var d = document.createElement("div");
+  d.textContent = role + ": " + text;
+  chat.appendChild(d);
+}
+
+function sendMsg() {
+  var input = document.getElementById("userInput");
+  var q = input.value.trim();
+  if (!q) { alert("empty"); return; }
+  addMsg(q, "USER");
+  input.value = "";
+  var top = BRAIN[0];
+  addMsg(top.v, "TRU");
+}
+
+function ask(q) {
+  document.getElementById("userInput").value = q;
+  sendMsg();
+}
+
+(function() {
+  addMsg("TRU loaded. " + BRAIN.length + " nodes.", "TRU");
+})();
+</script>
+</body>
+</html>

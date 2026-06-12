@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30729",
+  "title": "SemStruct: Contextualizing Semantic Embeddings with Structural Information for Schema Matching",
+  "abstract": "Schema matching is a fundamental step in integrating heterogeneous data sources. While Pre-trained Language Models (PLMs) have revolutionized this task by capturing linguistic semantics, they typically process tabular data as serialized text sequences of standalone column descriptions. This serialization discards critical structural information -- specifically, the row-level co-occurrences, i.e. the relational context -- forcing models to rely solely on column header semantics or standalone distributions. To bridge this gap, we propose SemStruct, a framework that joins the semantic power of frozen PLMs with the structural inductive bias of Graph Neural Networks (GNNs). We model the table as a heterogeneous graph where columns and values are nodes connected by rows, allowing the GNN to propagate disambiguating context across the structure. Unlike other state-of-the-art methods that require proprietary LLM access and fine-tuning of language models, SemStruct keeps the language model frozen and trains only a lightweight structural encoder. Extensive experiments on the Valentine and SOTAB-SM benchmarks demonstrate that SemStruct achieves state-of-the-art performance, outperforming fully fine-tuned baselines on complex, semantically joinable datasets. Furthermore, our ablation studies reveal that row representations serve primarily as topological conduits rather than semantic entities, validating the necessity of explicit structural modeling in schema matching.",
+  "link": "https://arxiv.org/abs/2605.30729",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.IR"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306780Z"
+}

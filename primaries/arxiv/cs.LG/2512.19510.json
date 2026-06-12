@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2512.19510",
+  "title": "Toward Scalable and Valid Conditional Independence Testing with Spectral Representations",
+  "abstract": "Conditional independence (CI) is central to causal inference, feature selection, and graphical modeling, yet it is untestable in many settings without additional assumptions. Existing CI tests often rely on restrictive structural conditions, limiting their validity. Kernel methods using partial covariance operators offer a more principled approach but suffer from limited adaptivity and scalability. In this work, we explore whether representation learning can help address these limitations. Specifically, we focus on representations derived from the singular value decomposition of partial covariance operators and use them to construct a simple test statistic. We also introduce a bi-level contrastive algorithm to learn these representations. Our theory links representation learning error to test performance and establishes asymptotic validity and power guarantees. Experiments on real and synthetic data suggest that this approach offers a principled and statistically grounded path toward scalable CI testing, bridging kernel-based theory with modern representation learning.",
+  "link": "https://arxiv.org/abs/2512.19510",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884006+00:00"
+}

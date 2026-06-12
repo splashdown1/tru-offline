@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.18837",
+  "title": "L2G-Net: Local to Global Spectral Graph Neural Networks via Cauchy Factorizations",
+  "abstract": "Despite their theoretical advantages, spectral methods based on the graph Fourier transform (GFT) are seldom used in graph neural networks (GNNs) due to the cost of computing the eigenbasis and the lack of vertex-domain locality in the resulting representations. As a result, most GNNs rely on local approximations such as polynomial Laplacian filters or message passing, which limit their ability to model long-range dependencies. In this paper, we introduce an exact factorization of the GFT into operators acting on subgraphs, which are then combined via a sequence of Cauchy matrices. Building on this factorization, we propose a new class of spectral GNNs, termed L2G-Net (Local to Global Net). Unlike existing spectral methods, which are either fully global (when using the GFT) or local (when using polynomial filters), L2G-Net operates by processing the spectral representations of subgraphs and then combining them via structured matrices. Our algorithm avoids full eigendecompositions, exploiting graph topology to construct the factorization with quadratic complexity in the number of nodes, scaled by the maximum cut size between subgraphs. Experiments stressing long-range dependencies on large graphs show that L2G-Net scales to regimes out of reach for the standard GFT, and is competitive with state-of-the-art methods with orders of magnitude fewer learnable parameters.",
+  "link": "https://arxiv.org/abs/2602.18837",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307947Z"
+}

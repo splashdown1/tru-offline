@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30786",
+  "title": "AbstainGNN: Teaching Graph Neural Networks to Abstain for Graph Classification",
+  "abstract": "Graph classification is a core task in graph data mining with widespread real-world applications. Recent advances in graph neural networks (GNNs) have led to substantial performance improvements for graph classification. However, existing GNNs are typically forced to make predictions even under high uncertainty or unknown conditions, resulting in unreliable decisions that can severely impact downstream tasks, particularly in safety-critical scenarios. To address this critical limitation, we propose AbstainGNN, a novel and theory-driven framework for graph classification with abstention, which enables GNNs to reject uncertain predictions instead of producing incorrect decisions. Specifically, AbstainGNN explicitly models both the predictive function and the abstention function, allowing for effective utilization of graph structural information. Moreover, unlike existing heuristic abstention methods, we theoretically characterize the trade-off between classification errors and rejection costs from a PAC-Bayesian generalization perspective, and derive a unified learning objective for model optimization. Guided by this theoretical insight, we further develop an efficient two-stage training strategy consisting of predictive function warm-start and abstention function calibration. Extensive experiments on five benchmark datasets show that AbstainGNN outperforms existing abstention methods, achieving superior classification performance under the same rejection rates.",
+  "link": "https://arxiv.org/abs/2605.30786",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306801Z"
+}

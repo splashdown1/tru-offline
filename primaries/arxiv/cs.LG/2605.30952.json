@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30952",
+  "title": "Spectral Anatomy of Quantum Gaussian Process Kernels",
+  "abstract": "Two recent results have reshaped quantum Gaussian processes (QGPs). On the one hand, \\citet{lowe2025assessing} rule out the exponential speedups claimed by HHL-based QGP regression in the typical, well-conditioned regime; on the other, an independent line of work shows that highly expressive quantum kernels suffer posterior pathologies that break Bayesian optimization. We show that these seemingly unrelated phenomena are governed by the same quantity: the normalized spectral entropy $S(K)/\\log n$ of the kernel Gram matrix. We prove a Cauchy--Schwarz tail bound on Nystr\\\"om approximation error, a finite-sample variance-contraction identity in terms of Bach's degrees of freedom $d_\\sigma(K)$, and a characterization of the \\emph{target-dependent} optimal entropy via the intrinsic dimension of the target in the kernel eigenbasis. Empirically, the diagnostic is kernel-agnostic: hardware-efficient, matchgate, IQP \\emph{and} RBF/Mat\\'ern/RFF/deep-kernel families all collapse onto identical $S/\\log n$ curves on dequantization, ECE, and variance-contraction panels. The NLL sweet spot lives at high entropy for smooth targets and at low entropy for band-limited quantum-data targets. The diagnostic transfers from simulator to IBM Heron hardware with median absolute error $3.2\\%$ and mean $5.2\\%$ in $S/\\log n$ across $24$ configurations at $n_q = 4$, with matchgate and IQP within $5\\%$ mean and a single HE configuration returning a $30\\%$ outlier that drops to $0.5\\%$ on rerun (attributed to calibration drift); the same diagnostic transfers to a second Heron backend (mean error $2.7\\%$) and to a $n_q = 6$ scale-up on the original backend (mean error $1.7\\%$). No error mitigation is applied throughout.",
+  "link": "https://arxiv.org/abs/2605.30952",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306881Z"
+}

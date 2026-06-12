@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05724",
+  "title": "Narrative Knowledge Weaver: Narrative-Centric Retrieval-Augmented Reasoning for Long-Form Text Understanding",
+  "abstract": "Long-form narrative QA requires reasoning over evolving story worlds rather than isolated passages: answers may depend on earlier goals, changing character states, social relations, causal triggers, temporal position, and later consequences. Existing retrieval and graph-augmented generation methods improve evidence access, but their units--chunks, entities, relations, summaries, or tool actions--do not directly encode how evidence functions in a story. We introduce Narrative Knowledge Weaver(NKW), a source-grounded framework that aligns textual evidence, atomic facts, canonical graph structure, entity profiles, interactions, episodes, and storylines. At query time, NKW uses text, graph, and narrative tools with post-retrieval reading skills to assemble evidence and audit actor, scope, polarity, state, and temporal constraints. Across STAGE, FairytaleQA, and QuALITY, NKW is strongest on screenplay-level story-world QA while remaining competitive on more passage-centered benchmarks. Ablations, question-type analyses, graph-asset statistics, and case studies show complementary benefits for character, scene, temporal, causal, and narrative-progression reasoning.",
+  "link": "https://arxiv.org/abs/2606.05724",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497825+00:00"
+}

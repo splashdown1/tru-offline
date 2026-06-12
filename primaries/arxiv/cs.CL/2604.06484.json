@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2604.06484",
+  "title": "ValueGround: Evaluating Culture-Conditioned Visual Value Grounding in MLLMs",
+  "abstract": "Cultural values are expressed not only through language but also through visual scenes and everyday social practices. Yet existing evaluations of cultural values in language models are almost entirely text-only, leaving it unclear whether culture-conditioned judgments remain stable when response options are visualized. We introduce ValueGround, a benchmark for evaluating culture-conditioned visual value grounding in multimodal large language models (MLLMs). Built from World Values Survey questions, ValueGround uses minimally contrastive image pairs to represent opposing response options while controlling irrelevant variation. Given a country, a question, and an image pair, a model must choose the image that best matches the country's value tendency without access to the original response-option texts. Experiments across six MLLMs and 13 countries show that models perform substantially worse with visualized response options than with the original textual options, with average accuracy dropping from 72.8% to 62.6%. Our benchmark provides a controlled testbed for studying cross-modal transfer of culture-conditioned value judgments.",
+  "link": "https://arxiv.org/abs/2604.06484",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406210Z"
+}

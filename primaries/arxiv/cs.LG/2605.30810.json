@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30810",
+  "title": "IRIS: time-structured manifold projections",
+  "abstract": "High-dimensional biomedical data, such as cell-by-gene matrices, are increasingly generated temporally. However, Manifold Learning algorithms, like t-SNE and UMAP, cannot incorporate time-ordering in their layouts, obfuscating the dynamics of cell types or other classes. As a solution, we present IRIS, a new Manifold Learning algorithm that structures layouts both chronologically and by manifold topology. IRIS can visualize a wide range of dynamic biomedical data, including scRNA-seq, comparative metagenomics, and literature.",
+  "link": "https://arxiv.org/abs/2605.30810",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306811Z"
+}

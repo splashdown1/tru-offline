@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31254",
+  "title": "Formalizing and falsifying causal pathways of rare events",
+  "abstract": "Building on recent formalizations of root cause analysis for rare events (``outliers'') in structural equation models, we propose a formal definition of a causal pathway and discuss its testable implications. We identify conditions under which these implications depend only on a causal abstraction defined by the pathway of rare events, rather than on the full causal graph of the underlying system. Accordingly, we introduce an abstraction of causal structure to pathways of rare events that bridges simple verbal causal explanations and detailed causal modeling.",
+  "link": "https://arxiv.org/abs/2605.31254",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.357859Z"
+}

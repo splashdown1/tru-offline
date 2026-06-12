@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2604.27617",
+  "title": "Robust Lightweight Crack Classification for Real-Time UAV Bridge Inspection",
+  "abstract": "With the widespread application of Unmanned Aerial Vehicles (UAVs) in bridge structural health monitoring, deep learning-based automatic crack detection has become a major research focus. However, practical UAV inspections still face four key challenges: weak crack features, degraded imaging conditions, severe class imbalance, and limited computational resources for practical UAV inspection workflows. To address these issues, this paper proposes a unified lightweight convolutional neural network framework composed of four synergistic components: a lightweight backbone network, a Convolutional Block Attention Module (CBAM) for channel and spatial enhancement, a directed robust augmentation strategy based on inspection-scene priors, and Focal Loss for hard-sample learning under class imbalance. Experiments on the SDNET2018 bridge deck dataset show that the proposed method achieves an inference speed of 825 FPS with only 11.21M parameters and 1.82G FLOPs. Compared with the baseline model, the complete framework improves the F1-score by 2.51% and recall by 3.95%. In addition, Grad-CAM visualizations indicate that the introduced attention module shifts the model's focus from scattered regions to precise tracking along crack trajectories. Overall, this study achieves a strong balance among accuracy, speed, and robustness, providing a practical solution for ground-station assisted real-time deployment in UAV bridge inspections. The source code is available at: https://github.com/skylynf/AttXNet .",
+  "link": "https://arxiv.org/abs/2604.27617",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358925Z"
+}

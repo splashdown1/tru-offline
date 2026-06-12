@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31257",
+  "title": "Fraud Type Decomposition and the Observation-Mechanism Taxonomy:Class-Specific Detection Limits in Payment Networks",
+  "abstract": "Fraud detection in payment networks relies on labels generated through heterogeneous and imperfect observation processes, yet existing approaches treat fraud as a homogeneous binary variable. We show that this assumption is structurally incorrect and leads to provable inefficiency. We introduce an observation-mechanism taxonomy that partitions fraud into five classes, each defined by a distinct censorship and labeling pipeline. We prove that estimating fraud rates separately by class and aggregating strictly dominates pooled estimation, with the efficiency gap characterized as a Jensen penalty arising from heterogeneous observation rates. For each class, we derive the binding theoretical constraint on detection, including endogenous label corruption, structural non-observability, and feature non-informativeness. These results establish that fraud detection is fundamentally a collection of distinct estimation problems, each governed by its own observation structure and detection limit.",
+  "link": "https://arxiv.org/abs/2605.31257",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307042Z"
+}

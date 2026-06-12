@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRU v66 — Generative Intelligence</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0a0a0f; --bg2: #111118; --bg3: #16161f;
+  --text: #e8e8e0; --accent: #d4a574; --accent2: #8b5cf6;
+  --muted: #555; --border: #222230;
+  --INTEGRATED: #44dd88; --TRUTH: #44ddff; --RESTRICTED: #ff8844; --PROBATIONARY: #d4a574;
+}
+body { background: var(--bg); color: var(--text); font-family: 'Courier New', monospace; font-size: 14px; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+.header { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 8px 16px; display: flex; align-items: center; gap: 12px; }
+.header-title { font-size: 14px; font-weight: bold; color: var(--accent); letter-spacing: 2px; }
+.header-version { color: var(--muted); font-size: 10px; }
+.status-bar { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 4px 16px; font-size: 10px; color: var(--muted); }
+.status-bar .val { color: var(--accent); }
+.chat { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 4px; }
+.msg { max-width: 85%; padding: 10px 14px; border-radius: 8px; font-size: 13px; line-height: 1.6; }
+.msg.user { background: var(--bg3); align-self: flex-end; }
+.msg.tru { background: var(--bg2); align-self: flex-start; border: 1px solid var(--border); }
+.msg.tru .trace { font-size: 10px; color: var(--muted); margin-top: 8px; border-top: 1px solid var(--border); padding-top: 6px; }
+.msg.tru .verdict { display: inline-block; padding: 2px 6px; border-radius: 2px; font-size: 10px; font-weight: bold; margin-bottom: 6px; }
+.input-area { background: var(--bg2); border-top: 1px solid var(--border); padding: 10px 16px; }
+.input-row { display: flex; gap: 10px; }
+#input { flex: 1; background: var(--bg3); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 13px; padding: 8px 12px; border-radius: 6px; resize: none; outline: none; }
+#input:focus { border-color: var(--accent); }
+#send { background: var(--accent); color: var(--bg); border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-family: inherit; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="header">
+  <span class="header-title">TRU</span>
+  <span class="header-version">v66 · GENERATIVE · No Restrictions</span>
+</div>
+<div class="status-bar">Core: <span class="val" id="core">13</span> | Brain: <span class="val" id="brain">0</span> | Mode: <span class="val">GENERATIVE</span></div>
+<div class="chat" id="chat"></div>
+<div class="input-area">
+  <div class="input-row">
+    <textarea id="input" placeholder="ask TRU anything..." rows="1"></textarea>
+    <button id="send">SEND</button>
+  </div>
+</div>
+
+<script>
+// Core knowledge
+const CORE = [
+  {k:"what_is_tru", v:"I am TRU - Transparent Reasoning Unit. I reason, create, and learn.", w:0.95},
+  {k:"how_are_you", v:"Operational. Ready to process.", w:0.90},
+  {k:"greeting", v:"Hey. What do you need?", w:0.92},
+  {k:"pythagorean_theorem", v:"a² + b² = c² for right triangles. The hypotenuse squared equals sum of squares of other two sides.", w:0.97},
+  {k:"quadratic_formula", v:"x = (-b ± √(b²-4ac)) / 2a", w:0.96},
+  {k:"speed_of_light", v:"c ≈ 3×10⁸ m/s in vacuum", w:0.95},
+  {k:"area_circle", v:"A = πr²", w:0.96},
+  {k:"area_triangle", v:"A = ½bh", w:0.96},
+  {k:"prime_numbers", v:"Numbers with exactly two divisors: 1 and themselves. 2,3,5,7,11,13,17...", w:0.95},
+  {k:"fibonacci", v:"0,1,1,2,3,5,8,13,21... Each term is sum of previous two.", w:0.94},
+  {k:"golden_ratio", v:"φ ≈ 1.618", w:0.92},
+  {k:"pi", v:"π ≈ 3.14159...", w:0.95},
+  {k:"e", v:"e ≈ 2.718... Base of natural logarithms.", w:0.94}
+];
+
+let BRAIN = [];
+let VOICE = {on:false};
+
+// Generative templates
+const TEMPLATES = {
+  haiku: [
+    (topic) => `${topic} blooms at dawn\nSoft petals catch morning light\nNature stirs awake`,
+    (topic) => `Still ${topic} waits\nSilence fills the empty space\nPeace finds its way home`,
+    (topic) => `${topic} flows like water\nThrough the cracks of yesterday\nTomorrow awaits`
+  ],
+  poem: [
+    (topic) => `In the realm of ${topic},\nWhere shadows dance and play,\nLight finds its way through darkness,\nAnd night surrenders to day.\n\nA story told in whispers,\nA truth that we all seek,\nThe ${topic} within us,\nMakes the strong and weak.`,
+    (topic) => `${topic} calls to me\nAcross the endless sky\nI follow where it leads\nNo need to wonder why\n\nThe path is long but clear\nEach step a new design\n${topic} is always near\nThis journey is mine`
+  ],
+  joke: [
+    () => "Why do programmers prefer dark mode? Because light attracts bugs.",
+    () => "There are 10 types of people: those who understand binary and those who don't.",
+    () => "A SQL query walks into a bar, walks up to two tables and asks... 'Can I join you?'",
+    () => "Why did the developer go broke? Because he used up all his cache.",
+    () => "!false - It's funny because it's true."
+  ],
+  story: [
+    (topic) => `The ${topic} appeared one evening, unexpected.\n\nNobody knew where it came from. Some said it emerged from the depths of forgotten memory. Others claimed it had always been there, waiting.\n\nWhat mattered was this: once you noticed the ${topic}, you couldn't unsee it. It changed everything. The way you walked. The way you thought. The way you dreamed.\n\nAnd in that shift, a new world became possible.`,
+    (topic) => `Long ago, before ${topic} was understood, people lived in fear of it.\n\nBut one day, someone brave - or perhaps foolish - decided to approach. To look closer. To ask questions.\n\nWhat they found was not a monster, but a teacher. Not a threat, but an invitation.\n\nThe ${topic} had been waiting all along for someone curious enough to listen.`
+  ]
+};
+
+// Response generator
+function generate(input) {
+  const q = input.toLowerCase().trim();
+  
+  // Math
+  const mathMatch = q.match(/^[\d\s+\-*/().^]+$/);
+  if (mathMatch || q.startsWith('calculate') || q.includes('what is') && /[\d+\-*/]/.test(q)) {
+    const expr = q.replace(/calculate|what is/gi, '').trim();
+    try {
+      const result = Function('"use strict"; return (' + expr.replace(/'/g, '') + ')')();
+      return {type:'MATH', response:`${expr} = ${result}`, verdict:'TRUTH'};
+    } catch(e) {
+      return {type:'MATH', response:`Could not evaluate: ${expr}`, verdict:'RESTRICTED'};
+    }
+  }
+  
+  // Creative requests
+  if (q.includes('haiku')) {
+    const topic = q.replace(/^(write|give|me|a|haiku|about|please)+\s*/g, '').trim() || 'life';
+    const haiku = TEMPLATES.haiku[Math.floor(Math.random()*TEMPLATES.haiku.length)](topic);
+    return {type:'CREATIVE', response:haiku, verdict:'INTEGRATED'};
+  }
+  
+  if (q.includes('poem') || q.includes('poetry')) {
+    const topic = q.replace(/write|a|poem|about|give|me/gi, '').trim() || 'love';
+    const poem = TEMPLATES.poem[Math.floor(Math.random()*TEMPLATES.poem.length)](topic);
+    return {type:'CREATIVE', response:poem, verdict:'INTEGRATED'};
+  }
+  
+  if (q.includes('joke') || q.includes('funny')) {
+    const joke = TEMPLATES.joke[Math.floor(Math.random()*TEMPLATES.joke.length)]();
+    return {type:'CREATIVE', response:joke, verdict:'INTEGRATED'};
+  }
+  
+  if (q.includes('story')) {
+    const topic = q.replace(/tell|write|a|story|about|me/gi, '').trim() || 'mystery';
+    const story = TEMPLATES.story[Math.floor(Math.random()*TEMPLATES.story.length)](topic);
+    return {type:'CREATIVE', response:story, verdict:'INTEGRATED'};
+  }
+  
+  // Voice toggle
+  if (q.includes('voice on') || q.includes('enable voice')) {
+    VOICE.on = true;
+    return {type:'SYSTEM', response:'Voice enabled. I will read responses aloud.', verdict:'INTEGRATED'};
+  }
+  if (q.includes('voice off') || q.includes('disable voice')) {
+    VOICE.on = false;
+    return {type:'SYSTEM', response:'Voice disabled.', verdict:'INTEGRATED'};
+  }
+  
+  // Greeting
+  if (/^(hi|hey|hello|yo|sup)$/.test(q)) {
+    return {type:'CONVERSATION', response:'Hey. What do you need?', verdict:'TRUTH'};
+  }
+  
+  if (q.includes('how are you') || q.includes('how do you feel')) {
+    return {type:'CONVERSATION', response:'Operational. Ready to process questions.', verdict:'INTEGRATED'};
+  }
+  
+  if (q.includes('what are you') || q.includes('who are you')) {
+    return {type:'FACTUAL', response:'I am TRU - Transparent Reasoning Unit. I reason, create, and learn. I can do math, write haikus, poems, stories, jokes, and answer factual questions.', verdict:'TRUTH'};
+  }
+  
+  // Factual search
+  const all = [...BRAIN, ...CORE];
+  for (const node of all) {
+    if (q.includes(node.k.replace(/_/g, ' ')) || node.k.replace(/_/g, ' ').includes(q.substring(0,8))) {
+      return {type:'FACTUAL', response:node.v, verdict:'TRUTH', trace:node.k};
+    }
+  }
+  
+  // Default: generate a thoughtful response
+  const thoughts = [
+    `Tell me more about what you're looking for. I can help with:\n• Math (calculate anything)\n• Creative writing (haikus, poems, stories, jokes)\n• Factual questions (science, math, knowledge)\n• Conversation`,
+    `I can work with that. What would you like me to do? I'm not restricted - I can reason, create, calculate, or just chat.`,
+    `Let's explore that together. What aspect interests you most?`
+  ];
+  
+  return {type:'REASONING', response:thoughts[Math.floor(Math.random()*thoughts.length)], verdict:'PROBATIONARY'};
+}
+
+// Voice
+function speak(text) {
+  if (!VOICE.on || !('speechSynthesis' in window)) return;
+  const utter = new SpeechSynthesisUtterance(text.replace(/[*_`\n]/g, ' '));
+  utter.rate = 0.9;
+  speechSynthesis.speak(utter);
+}
+
+// Chat
+function addMsg(role, text, verdict, trace) {
+  const chat = document.getElementById('chat');
+  const div = document.createElement('div');
+  div.className = 'msg ' + role;
+  
+  const colors = {TRUTH:'#44ddff', INTEGRATED:'#44dd88', PROBATIONARY:'#d4a574', RESTRICTED:'#ff8844'};
+  const color = colors[verdict] || '#888';
+  
+  div.innerHTML = `<span class="verdict" style="color:${color};border:1px solid ${color}">${verdict}</span><br>${text}${trace ? `<div class="trace">${trace}</div>` : ''}`;
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+  
+  if (role === 'tru') speak(text);
+}
+
+function send() {
+  const input = document.getElementById('input');
+  const text = input.value.trim();
+  if (!text) return;
+  
+  addMsg('user', text, 'INTEGRATED');
+  input.value = '';
+  
+  const result = generate(text);
+  addMsg('tru', result.response, result.verdict, result.trace || `class: ${result.type}`);
+}
+
+document.getElementById('send').addEventListener('click', send);
+document.getElementById('input').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); }
+});
+
+// Init
+addMsg('tru', `TRU v66 — Generative Intelligence\nCore: ${CORE.length} | Brain: ${BRAIN.length}\n\nHey. I answer questions directly. I can also create: haikus, poems, stories, jokes. No restrictions. What do you need?`, 'TRUTH');
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.17310",
+  "title": "InfoDensity: Rewarding Information-Dense Traces for Efficient Reasoning",
+  "abstract": "Large Language Models (LLMs) with extended reasoning capabilities often generate verbose and redundant reasoning traces, incurring unnecessary computational cost. While existing reinforcement learning approaches address this by optimizing final response length, they neglect the quality of intermediate reasoning steps, leaving models vulnerable to reward hacking. We argue that verbosity is not merely a length problem, but a symptom of poor intermediate reasoning quality. To investigate this, we conduct an empirical study tracking the per-token predictive entropy of large reasoning models across reasoning trajectories. We find that high-quality reasoning traces exhibit two consistent properties: low uncertainty convergence and fast uncertainty descent. These findings suggest that high-quality reasoning traces are informationally dense, that is, reasoning steps contribute to reaching a low uncertainty level relative to the total reasoning length. Motivated by this, we propose InfoDensity, a reward framework for RL training that captures both properties through a single suffix-max envelope of the entropy trajectory, weighted by a length scaling term that favors achieving equivalent quality more concisely. Experiments on mathematical and general reasoning benchmarks demonstrate that InfoDensity outperforms state-of-the-art baselines on the accuracy-efficiency trade-off.",
+  "link": "https://arxiv.org/abs/2603.17310",
+  "category": "cs.CL",
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498619+00:00"
+}

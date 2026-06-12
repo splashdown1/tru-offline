@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2601.06196",
+  "title": "Geometry-Aware Hallucination Detection in Large Language Models",
+  "abstract": "Large language models (LLMs) frequently generate factually incorrect or unsupported content, commonly referred to as hallucinations. Prior work has explored decoding strategies, retrieval augmentation, and supervised fine-tuning for hallucination detection, while recent studies show that in-context learning (ICL) can substantially influence factual reliability. However, existing ICL demonstration selection methods often rely on surface-level similarity heuristics and exhibit limited robustness across tasks and models.\n  We propose GA-ICL, a geometry-aware demonstration sampling framework for selecting in-context demonstrations that leverages latent representations extracted from frozen LLMs. By jointly modeling local manifold structure and class-aware prototype geometry, GA-ICL selects demonstrations based on their proximity to learned prototypes rather than lexical or embedding similarity alone.\n  Across factual verification (FEVER) and hallucination detection (HaluEval) benchmarks, GA-ICL outperforms standard ICL selection baselines in the majority of evaluated settings, with particularly strong gains on dialogue and summarization tasks. The method remains robust under temperature perturbations and model variation, indicating improved stability compared to heuristic retrieval strategies. While lexical retrieval can remain competitive in certain question-answering regimes at smaller model scales, our results demonstrate that geometry-aware prototype selection provides a reliable and training-light approach for hallucination detection without modifying LLM parameters. Extended evaluations on Phi-14B and Qwen3-32B confirm that GA-ICL scales effectively to larger models, outperforming all compared baselines including on QA tasks where smaller models show boundary-condition limitations, offering a principled direction for improved ICL demonstration selection.",
+  "link": "https://arxiv.org/abs/2601.06196",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098965+00:00"
+}

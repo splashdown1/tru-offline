@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.03161",
+  "title": "OpenAgenet/OAN: Open Infrastructure for Trusted Agent Interconnection",
+  "abstract": "OpenAgenet, abbreviated as OAN, is an open infrastructure project for trusted Agent interconnection. It addresses a problem that becomes visible when Agents move from isolated applications into open, multi-operator networks: before an Agent can safely discover, select, and invoke another Agent, it needs a way to verify identity provenance, governance state, discovery authorization, freshness, and pre-connection trust evidence. OAN is designed as a protocol-neutral trust layer. It does not replace Agent interaction protocols, tool protocols, model orchestration frameworks, or application-level workflows. Instead, it provides Root-governed identity admission, Registrar-assisted onboarding, Root-verified package publication, authorization-aware Discovery, and signed trusted invocation. This paper presents the motivation, architecture, roles, governance model, relationship with MCP, A2A, and ANP, deployment patterns, cooperation model, blockchain-backed authorization bulletin, prototype status, performance profile, and roadmap of OAN.",
+  "link": "https://arxiv.org/abs/2606.03161",
+  "category": "cs.AI",
+  "categories": [
+    "cs.MA",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099427+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05967",
+  "title": "Fast and Robust Convergence Rate for TD(0) with Linear Function Approximation, Universal Learning Steps and I.I.D. Samples",
+  "abstract": "In this paper, we study the finite-time behavior of the TD(0) temporal-difference method with linear function approximation (LFA). We consider on-policy independent and identically distributed (i.i.d.) samples, a constant learning step, and the Polyak-Juditsky averaging method. We establish a new convergence rate, for the Mean-Square Error (MSE) on the approximated function, that is (i) fast in the sense that it admits an optimal dependency in the number of iterations k (i.e., of order 1/k), (ii) robust to ill-conditioning: it only depends on an initial error and modelindependent constants and (iii) sharp up to a multiplicative constant lower than 11. In particular, it does not depend on the smallest eigenvalue of the uncentered covariance matrix of the linear parametrization, unlike all pre-existing O(1/k) rates in the TD(0) literature. We also introduce PCTD(0), a variant of TD(0), which benefits from better convergence properties under an additional assumption of strong mixing on the Markov Chain.",
+  "link": "https://arxiv.org/abs/2606.05967",
+  "category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728605+00:00"
+}

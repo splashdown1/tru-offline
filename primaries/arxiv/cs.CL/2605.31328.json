@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31328",
+  "title": "Reinforcement Learning Amplifies Emergent Misalignment from Harmless Rewards",
+  "abstract": "Emergent misalignment (EM) is the surprising tendency of language models to become broadly misaligned after fine-tuning on narrowly misaligned examples. While EM has been extensively studied in the supervised fine-tuning (SFT) setting, evidence that it also arises from reinforcement learning (RL) is limited to large, closed-source models, leaving the phenomenon expensive to study and difficult to reproduce. We characterize EM from RL in small, off-the-shelf open-weight models along three axes. First, we show that rewarding narrow, overtly misaligned behavior produces substantially higher general-domain misalignment than sample-matched SFT. Second, we show that EM from RL can be induced by reward signals that could plausibly arise naturally, such as unpopular aesthetic preferences or poor rhetorical appeals. Third, we evaluate in-training mitigations developed for SFT-induced EM and find that they broadly transfer, with interleaving on-policy safety data performing best.",
+  "link": "https://arxiv.org/abs/2605.31328",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405849Z"
+}

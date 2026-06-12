@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2408.10441",
+  "title": "Goldfish: Monolingual Language Models for 350 Languages",
+  "abstract": "For many low-resource languages, the only available language models are large multilingual models trained on many languages simultaneously. Despite state-of-the-art performance on reasoning tasks, we find that these models still struggle with basic grammatical text generation in many languages. First, large multilingual models perform worse than bigrams for many languages (e.g. 24% of languages in XGLM 4.5B; 43% in BLOOM 7.1B) using FLORES perplexity as an evaluation metric. Second, when we train small monolingual models with only 125M parameters on 1GB or less data for 350 languages, these small models outperform large multilingual models both in perplexity and on a massively multilingual grammaticality benchmark. To facilitate future work on low-resource language modeling, we release Goldfish, a suite of over 1,000 small monolingual language models trained comparably for 350 languages. These models represent the first publicly-available monolingual language models for 215 of the languages included.",
+  "link": "https://arxiv.org/abs/2408.10441",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406089Z"
+}

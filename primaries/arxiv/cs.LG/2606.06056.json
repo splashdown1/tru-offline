@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.06056",
+  "title": "Metamorphic Testing with the Rashomon Set: Explanation Faithfulness in Machine Learning",
+  "abstract": "Multiple machine learning models can achieve near-equivalent predictive performance on the same task, yet provide divergent feature-based explanations. This is called the Rashomon effect of (explainable) machine learning, and it raises the question of which explanations, if any, are trustworthy. We propose a framework based on metamorphic testing that assesses explanation faithfulness without requiring ground-truth labels by exploring attributed feature importance from post-hoc explanation methods. Five metamorphic relations formalize expected consistency properties between model behavior and feature attributions. We apply this general framework to two tabular regression datasets and two post-hoc explainers (SHAP and LIME) to demonstrate the approach. The framework offers a practical, model-agnostic tool for selecting accurate models with reliable and trustworthy explanations.",
+  "link": "https://arxiv.org/abs/2606.06056",
+  "category": "cs.LG",
+  "categories": [
+    "cs.SE",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883495+00:00"
+}

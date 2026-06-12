@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05201",
+  "title": "State commitment learning: training language models to distinguish computation from memory",
+  "abstract": "Reasoning language models do not distinguish tokens used for computation from tokens that constitute persistent state: once generated, all hidden thoughts remain in context and influence future predictions. As a result, downstream reasoning may depend on failed attempts, dead ends, and private scratch work that should not be safely relied on later. We recast this phenomenon as a new training objective, state commitment learning: training models to explicitly distinguish information that should be committed as persistent state from temporary computation that can be discarded. We define a counterfactual criterion, persistent-state sufficiency, which makes it trainable and measurable whether an answer remains usable after hidden thoughts are erased. We then propose Counterfactual Erasure RL (CERL), which evaluates, under the same prefix, both a path that keeps hidden thoughts and a path that erases them, and gives reward only when the erasure path remains correct. We also introduce the Erasure Dependence Protocol and show across mathematics, long-chain logic, scientific QA, and multi-turn tool-use evaluation that CERL substantially reduces answer dependence on hidden thoughts without sacrificing accuracy, consistently outperforming correctness-only RL and long-answer SFT baselines.",
+  "link": "https://arxiv.org/abs/2606.05201",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881845+00:00"
+}

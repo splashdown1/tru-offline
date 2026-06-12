@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04705",
+  "title": "Enhancing MedSAM with a Lightweight Box Predictor for Medical Image Segmentation",
+  "abstract": "Semantic segmentation in medical imaging is a critical yet challenging task due to data scarcity and high variability across modalities. While foundation models like the Segment Anything Model (SAM) show promise, they often struggle with medical images without specific adaptation. Moreover, point prompts, despite being the most natural form of user interaction, provide insufficient spatial context for reliable segmentation, particularly when target structures are irregular or poorly contrasted. In this paper, we propose an enhanced segmentation framework that integrates a lightweight Box Predictor module into the MedSAM architecture. The Box Predictor estimates an approximate bounding box from a single user click using localized image embedding features, providing spatial guidance that reduces the ambiguity of point prompts, while introducing only 1.6M additional parameters and negligible inference overhead. We introduce a two-stage training pipeline where the Box Predictor is trained independently before being integrated into MedSAM. To validate the generalization capability of our method, we conduct extensive evaluations on four diverse datasets (FLARE22, BRISC, BUSI, LungSegDB) spanning distinct imaging modalities, including CT, MRI, and Ultrasound. Our method improves segmentation accuracy and robustness across varied anatomical structures and imaging domains, achieving Dice scores of 0.89 (BUSI), 0.93 (FLARE22), 0.88 (BRISC), and 0.98 (LungSegDB). Code is available at https://github.com/Amirhosseinmovahedi/MedSAM-BoxPredictor",
+  "link": "https://arxiv.org/abs/2606.04705",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098363+00:00"
+}

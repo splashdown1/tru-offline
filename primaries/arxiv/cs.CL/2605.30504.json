@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30504",
+  "title": "Auditing LLM Benchmarks with Item Response Theory",
+  "abstract": "LLM benchmark labels are frozen at release and silently propagated into downstream benchmarks, errors and all. We introduce an Item Response Theory-based indicator that surfaces likely mislabels at 95% precision in the top 200 examples across seven preference and multiple-choice benchmarks using responses from 114 models, outperforming a supervised classifier. We trace these errors to mechanical labeling heuristics, upstream annotation mistakes inherited unchanged from source datasets, and fundamentally ambiguous items without a defensible single label. The same model fit reveals that reward models specialize in stylistic preference rather than factual knowledge, and identifies one frontier reward model that agrees with detected mislabels at 78% accuracy versus 38% for its peers, consistent with benchmark contamination or benchmark-specific over-optimization.",
+  "link": "https://arxiv.org/abs/2605.30504",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405641Z"
+}

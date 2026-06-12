@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2605.30825",
+  "title": "Unlearning in Diffusion Models: A Unified Framework with KL Divergence and Likelihood Constraints",
+  "abstract": "Unlearning in diffusion models aims to remove undesirable data or concepts while preserving the utility of pretrained models -- two fundamentally conflicting objectives. We propose a principled constrained optimization framework that formulates unlearning as minimizing the deviation from a pretrained model, subject to explicit separation constraints from the unlearning distributions. Specifically, we formulate three constrained optimization problems based on reverse and forward KL divergences, and likelihood constraints. The first two generalize existing approaches for concept and data unlearning, while the third offers a novel and natural formulation for unlearning. Despite the nonconvexity of the KL constraints, we establish strong duality for all three problems, enabling us to explicitly characterize their optimal solutions as unlearning targets and develop primal-dual algorithms for each formulation. Experimental results demonstrate that our KL-constrained approach achieves superior retention-unlearning tradeoffs compared to weight-based baselines for concept and data unlearning, and that our likelihood-based approach matches unlearning effectiveness while better preserving retained concepts compared to baselines.",
+  "link": "https://arxiv.org/abs/2605.30825",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306821Z"
+}

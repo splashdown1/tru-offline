@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2512.09706",
+  "title": "Training One Model to Master Cross-Level Agentic Actions via Reinforcement Learning",
+  "abstract": "The paradigm of agentic AI is shifting from engineered complex workflows to post-training native models. However, existing agents are typically confined to static, predefined action spaces-such as exclusively using APIs, GUI events, or robotic commands. This rigidity limits their adaptability in dynamic environments where the optimal granularity of interaction varies contextually. To bridge this gap, we propose CrossHA, a unified agentic model that masters heterogeneous action spaces and autonomously selects the most effective interface for each step of a trajectory. We introduce a comprehensive training pipeline that integrates cold-start supervised fine-tuning with a Multi-Turn Group Relative Policy Optimization (GRPO) algorithm. This approach enables the agent to learn adaptive action switching-balancing high-level efficiency with low-level precision-without human-specified rules. Extensive experiments on over 800 tasks in the open-world Minecraft environment demonstrate that CrossHA achieves state-of-the-art performance. By dynamically leveraging the strengths of diverse action spaces, our model significantly outperforms fixed-action baselines, exhibiting superior generalization and efficiency in long-horizon reasoning. All code and models are available at https://github.com/CraftJarvis/OpenHA.",
+  "link": "https://arxiv.org/abs/2512.09706",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883988+00:00"
+}

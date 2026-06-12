@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30393",
+  "title": "NumLeak: Public Numeric Benchmarks as Latent Labels in Foundation Models",
+  "abstract": "Public numeric benchmarks appear in pretraining, so an evaluation that conditions on a date may be measuring memorized recall rather than out-of-sample skill. We introduce NumLeak, a measurement framework that combines API-boundary probes on production models with a white-box controlled validation on an open causal LM. Top-tier frontier LLMs recall the Fama-French market excess return at 3-seed pooled Pearson r=0.97-0.99 while staying within 0.15 within-25bps on the five sibling factors; comparable fidelity appears on U.S. unemployment, CPI inflation, and NOAA temperature. On a recent-release holdout, parse rate collapses to 21-57% but r stays at approximately 0.99 on months answered, the refuse-or-recall asymmetry a memorized channel predicts. The white-box experiment reproduces the dose-response, and logprob ranking detects memorization that open-ended generation misses, implying closed-API black-box probes understate the channel. A Sonnet \"date to market-sentiment\" regression that correlates with true Mkt-RF at r=0.74 collapses to r=0.02 once the model's own recall is residualized out. A one-line system-prompt defense blocks 99.8% of a non-adaptive single-turn suffix attack set at near-zero utility cost on conceptual and historical-narrative queries",
+  "link": "https://arxiv.org/abs/2605.30393",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CR"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306565Z"
+}

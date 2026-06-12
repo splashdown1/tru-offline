@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2604.28020",
+  "title": "Cost-Aware Learning",
+  "abstract": "We consider the problem of Cost-Aware Learning, where sampling different components of a finite-sum objective incurs different costs. The objective is to reach a target error while minimizing the total cost. We propose Cost-Aware SGD, which uses a distribution based on gradient norms and costs to sample components. We provide a thorough analysis of this algorithm, including cost-improvement bounds over baselines, a characterization of distribution proxy sub-optimality, and a lower bound. We apply our theoretical insights to reinforcement learning with language models, where the computational cost of sequence-level policy gradients varies with length. We find that the advantage magnitude serves as a high-fidelity proxy for gradient norms, and use this to introduce Cost-Aware GRPO. Empirical results on 1.5B, 4B, and 8B LLMs demonstrate that this algorithm significantly reduces the tokens used in policy optimization while matching or exceeding baseline accuracy.",
+  "link": "https://arxiv.org/abs/2604.28020",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308058Z"
+}

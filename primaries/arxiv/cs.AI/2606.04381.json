@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04381",
+  "title": "From Symbolic to Geometric: Enabling Spatial Reasoning in Large Language Models",
+  "abstract": "Recent large language models (LLMs) often appear to exhibit spatial reasoning ability; however, this capability is largely \\emph{symbolic}, arising from pattern matching over spatial language rather than true \\emph{geometric} reasoning over space. Because LLMs operate on discrete tokens, they lack native support for continuous spatial representations, explicit geometric computation, and structured spatial operators. To address this limitation, we introduce the \\emph{Spatial Language Model (SLM)}, the first multimodal LLM that treats location information as a first-class modality and enables geometric spatial reasoning within the model's inference process. SLM directly operates on learned spatial representations rather than textual descriptions of spatial relations. To support effective training, we construct a \\emph{Spatial Instruction Dataset} that aligns spatial representations, atomic geometric operations, and natural language instructions. We further propose a new benchmark named \\emph{SpatialEval}, which is designed to evaluate spatial reasoning across attributes, distance, topology, and relative-position tasks. Extensive experiments show that SLM significantly outperforms existing LLM-based approaches that rely on symbolic reasoning via prompt engineering or textual abstraction, demonstrating the benefits of integrating geometric spatial representations for robust spatial reasoning.\n  Our instruction dataset, evaluation benchmark, model training codes, and models' checkpoints can be found at:\n  \\hyperlink{https://github.com/chuchen2017/SLM}{https://github.com/chuchen2017/SLM}.",
+  "link": "https://arxiv.org/abs/2606.04381",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098160+00:00"
+}

@@ -1,0 +1,63 @@
+{
+  "category": "cs.NE",
+  "pulled_at": "2026-06-05T08:23:14.700067+00:00",
+  "count": 11,
+  "cutoff_days": 30,
+  "papers": [
+    {
+      "arxiv_id": "2606.05982",
+      "title": "Quantifying Uncertainty In Wide Two-Layer Neural Networks: On The Law Of The Limiting Fluctuation Process",
+      "link": "https://arxiv.org/abs/2606.05982"
+    },
+    {
+      "arxiv_id": "2606.06198",
+      "title": "Hub-Aware Hybrid Search: Accelerating the Locally Aligned Ant Technique",
+      "link": "https://arxiv.org/abs/2606.06198"
+    },
+    {
+      "arxiv_id": "2606.05189",
+      "title": "Bio-plausible Neuromorphic Disturbance Observer Based on Emulation Theory: Extended Version",
+      "link": "https://arxiv.org/abs/2606.05189"
+    },
+    {
+      "arxiv_id": "2606.05408",
+      "title": "Mutation Without Variation: Convergence Dynamics in LLM-Driven Program Evolution",
+      "link": "https://arxiv.org/abs/2606.05408"
+    },
+    {
+      "arxiv_id": "2606.05605",
+      "title": "From Prediction to Self: Developmental Conditions for Agency in Minimal Neural Systems",
+      "link": "https://arxiv.org/abs/2606.05605"
+    },
+    {
+      "arxiv_id": "2606.06041",
+      "title": "Sample-efficient Low-level Motion Planning for Robotic Manipulation Tasks via Zero-shot Transfer Learning",
+      "link": "https://arxiv.org/abs/2606.06041"
+    },
+    {
+      "arxiv_id": "2606.06159",
+      "title": "ITP-STDP: An Intrinsic-Timing Power-of-Two Learning Engine for On-Chip SNN Training",
+      "link": "https://arxiv.org/abs/2606.06159"
+    },
+    {
+      "arxiv_id": "2606.06380",
+      "title": "Emergent Language as an Approach to Conscious AI",
+      "link": "https://arxiv.org/abs/2606.06380"
+    },
+    {
+      "arxiv_id": "2406.07049",
+      "title": "GridPE: A Grid Cell-Inspired Unified Position Embedding for Arbitrary-Dimensional Spaces",
+      "link": "https://arxiv.org/abs/2406.07049"
+    },
+    {
+      "arxiv_id": "2410.04907",
+      "title": "Decomposition Polyhedra of Piecewise Linear Functions",
+      "link": "https://arxiv.org/abs/2410.04907"
+    },
+    {
+      "arxiv_id": "2605.03753",
+      "title": "Exact and Evolutionary Algorithms for Sequential Multi-Objective Transmission Topology Planning",
+      "link": "https://arxiv.org/abs/2605.03753"
+    }
+  ]
+}

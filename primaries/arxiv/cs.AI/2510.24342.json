@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2510.24342",
+  "title": "A Unified Geometric Space for Topological Alignment Between Transformer-Based Models and Human Brain Networks",
+  "abstract": "Prior brain-AI alignment studies are typically constrained by specific inputs and tasks, limiting their ability to capture organizational properties across models with different modalities. In this work, we focus on Transformer-based models and introduce a brain-model topological alignment space. Rather than inferring alignment from neural mechanisms, we examine it through graph-based organizational properties, mapping the intrinsic spatial attention topology of a model onto canonical human intrinsic connectivity networks (ICNs). This enables a modality-agnostic and task-free comparison across vision, language, and multimodal systems at the level of organizational properties. Analyzing 151 Transformer-based models across these modalities and scales, we observe a continuous arc-shaped distribution, reflecting varying degrees of topological alignment. Consistent with their training objectives, models optimized for global semantic abstraction were associated more closely with higher-order ICNs, while local detail-focused models associated with low-level ICNs. More surprisingly, we uncovered non-intuitive phenomena: DINOv2 exhibited reduced alignment compared to its predecessors, distilled DeiT models showed a counterintuitive scaling inversion where larger models aligned less well with higher-order ICNs, and fine-tuning as well as instruction tuning had limited effect on alignment. Furthermore, topological alignment scores showed non-significant correlation with ImageNet-1K Top-1 accuracy in 30 vision Transformers (r=0.266, p=0.156). This work provides a new quantitative perspective for comparing the organizational properties of Transformer-based models through brain-referenced topological mapping.",
+  "link": "https://arxiv.org/abs/2510.24342",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098633+00:00"
+}

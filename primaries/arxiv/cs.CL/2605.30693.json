@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30693",
+  "title": "Triaging Threats to Specialized Guardrails",
+  "abstract": "Building robust safety guardrails is essential for deploying Large Language Models across diverse real-world applications. However, this goal remains challenging because safety risks span heterogeneous threat domains, while existing datasets cover only fragmented risk subsets and rely on inconsistent taxonomies. Consequently, it remains unclear whether current guardrails can generalize beyond narrow evaluation settings. To better understand the robustness of guardrail models, we first introduce GuardZoo, a unified human-annotated benchmark with 32,460 samples covering 15 distinct unsafe categories. Evaluation on GuardZoo reveals that monolithic guardrails suffer from task interference: different threat domains require distinct decision boundaries that are difficult to compress into a single model. We therefore propose RouteGuard, a router-expert framework that triages each conversation to specialized expert guardrails for threat-specific detection. Experiments show that RouteGuard improves fine-grained threat detection over strong guardrail baselines, generalizes better under out-of-domain evaluation, and supports flexible modular expansion to emerging threats.",
+  "link": "https://arxiv.org/abs/2605.30693",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CR",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405995Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30456",
+  "title": "DisjunctiveNet: Neural Symbolic Learning via Differentiable Convexified Optimization Layers",
+  "abstract": "Many learning tasks in science and engineering are characterized by sparse datasets, which limits the effectiveness of purely data-driven approaches. At the same time, these problems are often accompanied by rich domain knowledge derived from physical laws, operational requirements, and expert heuristics. Such knowledge is frequently expressed as rules involving logical propositions and linear inequalities. Existing neuro-symbolic methods typically enforce these rules approximately through soft penalties, assume input-independent rules when designing specialized architectures, or rely on non-differentiable post-processing at inference time to achieve hard constraint satisfaction. While recent advances in differentiable optimization layers enable end-to-end feasibility enforcement within neural networks, extending these approaches to logical or mixed-integer rules remains challenging due to inherent nonconvexity. In this work, we propose a unified end-to-end framework for enforcing hard, input-dependent mixed integer linear constraints within neural networks. Our approach represents rules as disjunctive constraints and applies hierarchical convex relaxations to obtain convex hull formulations. These relaxations yield tractable linear constraints that can be embedded as differentiable optimization layers while enabling exact rule satisfaction. We demonstrate the effectiveness of the proposed framework on real-world datasets, achieving perfect rule satisfaction and strong predictive performance.",
+  "link": "https://arxiv.org/abs/2605.30456",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306588Z"
+}

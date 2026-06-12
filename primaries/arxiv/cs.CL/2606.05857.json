@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05857",
+  "title": "Forgive or forget: Understanding the context of hate in audio retrieval systems",
+  "abstract": "Handling toxic retrieval in text-to-audio systems is challenging due to contextual dependencies. Existing strategies (e.g., rephrasing, summarization) risk altering intent or omitting details. We propose a post hoc causal debiasing framework with a sentiment-controlled mediator to preserve semantic relevance while suppressing harmful speech. Our approach is model-agnostic and integrates seamlessly with existing retrieval pipelines. We introduce two variants: Forgive, which re-ranks and filters toxic audio via logit adjustment, and Forget, which generates counterfactual toxic prompts to mitigate harmful retrievals. Experiments show consistent toxicity reduction with minimal loss in retrieval accuracy, improving both safety and reliability.",
+  "link": "https://arxiv.org/abs/2606.05857",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497864+00:00"
+}

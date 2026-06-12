@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30818",
+  "title": "GaMi: Geometry-Agnostic Material Identification via Cross-Modal Subtractive Disentanglement",
+  "abstract": "Non-contact material identification enables adaptive interaction for embodied intelligence yet faces challenges from geometry-induced variations (e.g., orientation, shape, distance) and single-modality ambiguities. In this paper, we present GaMi, a multimodal material identification system integrating mmWave and acoustic sensing to robustly operate under unconstrained geometric conditions. By leveraging the insight of shared geometric consistency between co-located bimodal sensors, GaMi employs an intra-sample cross-modal subtractive disentanglement framework. By semantically aligning modalities and subtracting the shared geometric context, it isolates intrinsic material features. Furthermore, GaMi incorporates inter-sample contrastive learning to correct the residual interference caused by cross-modal misalignment. Additionally, a pairing-based adaptation strategy between two modalities enables few-shot generalization across devices. Extensive evaluations on 20 materials show that GaMi achieves 95.2% accuracy, outperforming single-modality baselines across unseen geometric conditions.",
+  "link": "https://arxiv.org/abs/2605.30818",
+  "category": "cs.AI",
+  "categories": [
+    "cs.ET",
+    "cs.AI",
+    "cs.SD"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358139Z"
+}

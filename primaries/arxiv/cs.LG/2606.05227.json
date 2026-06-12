@@ -1,0 +1,15 @@
+{
+  "arxiv_id": "2606.05227",
+  "title": "Quantifying the biophysical properties of stomatocytes in health and disease",
+  "abstract": "Hereditary stomatocytosis (HS) comprises red blood cell (RBC) disorders characterized by cup-shaped erythrocytes that respond oppositely to splenectomy: curative in overhydrated HS (OHS) but potentially thrombogenic in dehydrated HS (DHS/xerocytosis). This paradox persists because RBC biomechanics is governed by partly independent parameters--shear modulus, bending rigidity, surface-to-volume ratio (S/V), and cytoplasmic viscosity--that existing assays capture only piecemeal. Here we combine dissipative particle dynamics (DPD) simulations with microfluidic imaging to construct a control discocyte and three stomatocyte models (ST-RBC1-3) at fixed membrane area and decreasing volume (109.7, 101.5, 89.8 fL), spanning the OHS-to-DHS range. Tracing this parameter set through five mechanically orthogonal assays, we find that interendothelial-slit (IES) traversal is geometry-dominated: overhydrated ST-RBC1 requires an order of magnitude higher critical pressure than healthy RBCs, whereas dehydrated ST-RBC3 passes freely. ST-RBC3 nonetheless suppresses membrane tank-treading and raises low-shear whole-blood viscosity by ~29% at physiological haematocrit, comparable to Gaucher-disease hyperviscosity. A funnel-obstacle chip amplifies these differences into a label-free centerline-offset signal predicted to separate all four RBC types (~4.5 standard deviations between extreme phenotypes). These results unite single-cell mechanics, splenic filtration, and hemorheology in one framework, resolve the splenectomy paradox, and point toward microfluidic pre-operative risk stratification in HS.",
+  "link": "https://arxiv.org/abs/2606.05227",
+  "category": "cs.LG",
+  "categories": [
+    "q-bio.CB",
+    "cs.LG",
+    "math-ph",
+    "math.MP",
+    "q-bio.BM"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882845+00:00"
+}

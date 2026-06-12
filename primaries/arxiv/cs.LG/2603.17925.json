@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2603.17925",
+  "title": "Multi-Armed Sequential Hypothesis Testing by Betting",
+  "abstract": "We consider a variant of sequential testing by betting where, at each time step, the statistician is presented with multiple data sources (arms) and obtains data by choosing one of the arms. We consider the composite global null hypothesis $\\mathscr{P}$ that all arms are null in a certain sense (e.g. all dosages of a treatment are ineffective) and we are interested in rejecting $\\mathscr{P}$ in favor of a composite alternative $\\mathscr{Q}$ where at least one arm is non-null (e.g. there exists an effective treatment dosage). We posit an optimality desideratum that we describe informally as follows: even if several arms are non-null, we seek $e$-processes and sequential tests whose performance are as strong as the ones that have oracle knowledge about which arm generates the most evidence against $\\mathscr{P}$. Formally, we generalize notions of log-optimality and expected rejection time optimality to more than one arm, obtaining matching lower and upper bounds for both. A key technical device in this optimality analysis is a modified upper-confidence-bound-like algorithm for unobservable but sufficiently \"estimable\" rewards. In the design of this algorithm, we derive nonasymptotic concentration inequalities for optimal wealth growth rates in the sense of Kelly [1956]. These may be of independent interest.",
+  "link": "https://arxiv.org/abs/2603.17925",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ME",
+    "cs.LG",
+    "math.ST",
+    "stat.TH"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884639+00:00"
+}

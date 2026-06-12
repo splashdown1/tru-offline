@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05895",
+  "title": "Representing Research Attention as Contextually Structured Flows",
+  "abstract": "Research attention is widely used as an indicator of visibility, influence, and societal uptake, yet it is typically represented as aggregated counts that do not preserve how attention develops across contexts over time. This creates a mismatch between how attention is interpreted and how it is represented. We propose attention flows as contextually structured representations that encode the organisation of attention and its evolution over time. We evaluate whether these representations capture transferable structure by constructing a benchmark based on analogy-style reasoning across research outputs. Comparing signal, sequence, and flow-based representations, we find that flow representations more effectively support structural comparison, particularly in settings where attention is shaped by temporal progression or context distributions. We further show that learned flow representations improve robustness under partial observation and structural perturbation. Overall, these results support modelling attention as a contextually structured phenomenon and provide a basis for more informative approaches to research evaluation.",
+  "link": "https://arxiv.org/abs/2606.05895",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CL",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883318+00:00"
+}

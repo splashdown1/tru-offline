@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2512.23292",
+  "title": "Agentic Physical AI toward a Domain-Specific Foundation Model for Energy Systems: A Case Study on Nuclear Reactor Control",
+  "abstract": "The prevailing paradigm in AI for physical systems: scaling general-purpose foundation models toward universal multimodal reasoning, confronts a barrier at the control interface. Frontier vision-language models achieve only 50-53% accuracy on basic quantitative physics tasks, behaving as approximate guessers that preserve semantic plausibility while violating physical constraints. Safety-critical control demands outcome-space guarantees over executed actions, not parameter-space imitation. Here we present a pathway toward domain-specific foundation models through compact language models operating as Agentic Physical AI: policy optimization driven by physics-based simulator validation rather than perceptual inference. We train a 360M-parameter model on synthetic nuclear reactor scenarios scaled from 10^3 to 10^5 examples. Scaling produces strong, regime-dependent reliability gains under nominal simulated conditions, with variance collapse of approximately 500x and elimination of >10% terminal-power excursions on the sampled distribution. Despite balanced exposure to four actuation families, the model concentrates 95% of runtime execution on a single-bank strategy, without reinforcement learning or reward engineering. Representations transfer across simulators without architectural change. We position the system as a candidate decision component within a verification, monitoring, and defense-in-depth architecture, not as a stand-alone safety solution: the demonstrated behavior speaks to closed-loop reliability on a single-step task in simulation and does not yet address off-nominal operation, sensor faults, or uncertainty quantification.",
+  "link": "https://arxiv.org/abs/2512.23292",
+  "category": "cs.LG",
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308328Z"
+}

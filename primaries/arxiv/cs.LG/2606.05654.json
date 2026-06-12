@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05654",
+  "title": "When Surface Form Changes Moderation Decisions: A Paired Study of Code-Mixed Workflow Instability",
+  "abstract": "Hate moderation is often evaluated as classification on clean English inputs, but deployed systems must route content to actions such as ALLOW, FLAG, or REVIEW. We study how this workflow changes under code-mixed inputs using a paired evaluation setting where the same underlying content is expressed as clean English and Tamil-English code-mix. Under thresholds tuned on clean English development data, code-mixed inputs produce substantial action instability, with a paired clean- to-code-mix decision flip rate of 0.265. The main workflow effects are increased review burden and increased false-flagging of non-hateful content: review rate rises from 0.138 to 0.297 and non-hate false-flag rate rises from 0.069 to 0.104. Tamil-only inputs show stronger degradation overall, suggesting a broader language-coverage limitation rather than the same code-mixed instability pattern. A simple disagreement-based deferral rule reduces automatic errors on stressed inputs, but only by increasing review load. These results show that workflow-level evaluation reveals moderation failures that standard classification summaries can miss.",
+  "link": "https://arxiv.org/abs/2606.05654",
+  "category": "cs.LG",
+  "categories": [
+    "cs.SE",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883152+00:00"
+}

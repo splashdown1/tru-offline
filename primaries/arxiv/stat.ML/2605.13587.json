@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.13587",
+  "title": "Reframing preprocessing selection as model-internal calibration in near-infrared spectroscopy: A large-scale benchmark of operator-adaptive PLS and Ridge models",
+  "abstract": "Preprocessing screening is often the most expensive part of a near-infrared spectroscopy calibration workflow. It works because smoothing, derivatives, detrending and related filters change the spectral directions seen by partial least squares (PLS) or Ridge regression, but a full external search repeatedly refits nearly the same linear model. This paper studies the case where that search can be collapsed into one calibration step. For a strict linear preprocessing operator A acting on row spectra as XA^T, the transformed PLS cross-covariance satisfies (XA^T)^T Y = A X^T Y, and Ridge regression depends on the operator-induced kernel X A^T A X^T. These identities let a finite operator bank be screened inside the model while retaining original-wavelength coefficients, and the same identity extends to cheaply evaluated linear operator chains. Sample-adaptive or fitted corrections such as SNV, MSC, EMSC and ASLS are not strict linear; we prove the boundary and keep them as fold-local branches. The cohort has 61 regression and 17 classification rows, with a strict paired regression denominator of N=32 for the eight paper variants. There, AOM-PLS reaches median RMSEP ratios of 0.991/0.990 (simple) and 0.985/1.002 (best) against PLS-default/PLS-HPO, and AOM-Ridge reaches 0.974/0.984 (simple) and 0.918/0.966 (best) against Ridge-default/Ridge-HPO. The operator-adaptive classifier AOM-PLS-DA improves balanced accuracy by a median 0.159 on N=13 datasets (12/13 wins). The practical result is the runtime gap: PLS-HPO takes a median 710.81 s per run, whereas AOM-PLS takes 1.18-1.63 s -- 436 to 602 times less PLS fitting time. Linear operator-adaptive calibration thus gives prediction quality comparable to exhaustive preprocessing screening, with orders-of-magnitude less fitting time for PLS.",
+  "link": "https://arxiv.org/abs/2605.13587",
+  "category": "stat.ML",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "eess.SP"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728974+00:00"
+}

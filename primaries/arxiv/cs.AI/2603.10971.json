@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.10971",
+  "title": "ContactExplorer: Contact Coverage-Guided Exploration for General-Purpose Dexterous Manipulation",
+  "abstract": "Reinforcement learning has achieved remarkable success in domains such as Atari games, navigation, and locomotion, where exploration can often be guided by novelty over states or dynamics. In contrast, dexterous manipulation requires rich physical hand--object interactions, but existing methods often suffer from unstable contact-based novelty signals, inefficient distance novelty signals, or reliance on task-specific priors. We propose ContactExplorer, a general exploration method for dexterous manipulation tasks. ContactExplorer represents contact as the intersection between object surface points and hand keypoints, encouraging dexterous hands to discover diverse and novel contact patterns, namely which fingers contact which object regions. It maintains a contact counter conditioned on discretized object states obtained via learned hash codes, capturing how frequently each finger interacts with different object regions. This counter is leveraged in two complementary ways: (1) to assign a count-based contact coverage reward that promotes exploration of novel contact patterns, and (2) an energy-based reaching reward that guides the agent toward under-explored contact regions. We evaluate ContactExplorer on a diverse set of dexterous manipulation tasks. Experimental results show that ContactExplorer substantially improves sample efficiency and success rates over existing exploration methods, and that the contact patterns learned with ContactExplorer transfer robustly to the real world. Project page is https://contact-explorer.github.io.",
+  "link": "https://arxiv.org/abs/2603.10971",
+  "category": "cs.AI",
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099148+00:00"
+}

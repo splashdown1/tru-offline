@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.06055",
+  "title": "Are we chasing ghosts? Quantifying unattributable polarization, and attributing the rest to annotator groups",
+  "abstract": "Standard agreement metrics often fail to capture systematic differences in opinion between minority and majority-group annotators, jeopardizing tasks such as hate speech and toxicity detection. Polarization has recently been proposed as a more robust way of distinguishing minor disagreements from systematic differences in opinion, but existing approaches do not provide practical tools for attributing it to specific annotator groups. We evaluate current methods and identify two major limitations in realistic settings: (1) the presence of ``inherent'' polarization that cannot be attributed to any known or latent groups, and (2) opposing polarization effects canceling each other out in aggregated annotations. To address these issues, we introduce a new metric that measures and tests the statistical significance of polarization attribution for annotator groups while avoiding these limitations, as well as an open-source Python library implementation, finding that no more than 20 annotators are needed per comment for reliable estimation. We apply our method to four subjective NLP datasets and find that gender and race consistently explain polarization patterns, while differences between annotator groups become stronger as the groups are further apart.",
+  "link": "https://arxiv.org/abs/2602.06055",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406159Z"
+}

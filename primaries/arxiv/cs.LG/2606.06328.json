@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06328",
+  "title": "PAMF: Prior-Aware Multimodal Fusion for Incomplete Time Series Data",
+  "abstract": "In healthcare, multimodal time series tasks often operate on incomplete observations in practice, for example when ECG segments are lost because electrodes detach or an entire respiratory channel is unavailable during overnight monitoring. Such missingness typically appears in two structurally distinct patterns: within-modality missing, where values are absent within an otherwise observed modality, and modality-level missing, where an entire modality is unavailable. Existing methods typically represent unobserved data implicitly through masks or missing embeddings, without learning instance-specific missing information, and most are designed for only one missingness pattern. A natural approach is to explicitly estimate the missing data; however, existing imputation methods treat missingness uniformly despite their different structural priors, and the imputation process is often isolated from downstream tasks, preventing downstream tasks from guiding imputation toward more informative representations. To address these limitations, we present PAMF, a multimodal time-series framework that explicitly handles different missingness patterns while coupling imputation with downstream prediction through prior-aware flow matching and weight sharing. Specifically, the method initializes the flow-matching source state with type-specific priors to distinguish two missing types. It further connects imputation and classification through architecturally matched encoders with weight sharing, transferring task-relevant representations into the imputation process. Experiments on multiple multimodal healthcare time-series benchmarks show that the proposed method achieves the strongest overall downstream performance across diverse datasets and missing settings compared with existing baselines.",
+  "link": "https://arxiv.org/abs/2606.06328",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882666+00:00"
+}

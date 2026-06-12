@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06123",
+  "title": "Adaptive state-action abstractions via rate-distortion",
+  "abstract": "When learning to walk, infants seem to address a coarse version of the problem first - stay upright, reach the caregiver - and refine it only when further practice at that resolution stops paying off. Reinforcement learning offers multiple techniques for building simple versions of complex tasks, but lacks general principles for how to dynamically adjust the granularity of these abstractions during learning. This paper proposes one such principle: refine the abstraction as soon as the learning error within it becomes comparable to the error induced by the abstraction itself. Here, we investigate one way of formalising this principle via a performance certificate that decomposes value error into two terms: a learning error bound captured by a Bellman residual, and an abstraction error bound given by a bisimulation metric. The resulting switching strategy is implemented by soft state-action abstractions built from rate-distortion principles, whose resolution along state and action axes can be continuously adjusted. We validate this construction in a range of tabular settings, showing that near-optimal performance can be achieved under substantial lossy compression of state and action information.",
+  "link": "https://arxiv.org/abs/2606.06123",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882506+00:00"
+}

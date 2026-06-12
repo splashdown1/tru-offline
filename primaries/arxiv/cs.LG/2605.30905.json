@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30905",
+  "title": "A Unifying View of Anchoring via Operator-Side Tikhonov Regularization",
+  "abstract": "Anchored fixed point and monotone equation methods, including Halpern iteration, extra anchored gradient, and their relatives, add a vanishing pull toward a reference point to obtain last-iterate guarantees. Existing anchored variants often achieve sharp last-iterate guarantees, but from the update-level perspective the placement of the anchor can be algorithm-specific and conceptually opaque. We show that anchoring admits a single operator-side construction: regularize the operator queried by the base method with a vanishing Tikhonov term, then run the unmodified base method. Applied to the Picard iteration, this recipe reproduces the Halpern iteration; applied to the forward step, extragradient (EG), and past extragradient (PEG, also known as Popov's method), it yields three variants whose anchor placements inherit the base method's query pattern. The forward-step instantiation gives a new residual convergence guarantee, while the EG and PEG instantiations give new regularized variants. The four analyses share a residual recurrence, recovering the $O(1/k)$ Halpern residual-norm convergence rate, giving $O(1/\\sqrt{k})$ for the regularized forward step, and giving $O(1/k)$ for the regularized EG and PEG variants in the unconstrained monotone Lipschitz setting.",
+  "link": "https://arxiv.org/abs/2605.30905",
+  "category": "cs.LG",
+  "categories": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307378Z"
+}

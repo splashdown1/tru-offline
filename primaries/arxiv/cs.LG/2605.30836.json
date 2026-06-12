@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30836",
+  "title": "Cross-Layer Subspace Coupling for LLM Compression: A Unifying Framework and Its Empirical Limits",
+  "abstract": "Recent SVD based compression methods for large language models like SVD LLM and Basis Sharing can be unified under one optimization problem. While mathematical proofs and tests on Pythia models show this unified approach improves weight reconstruction error by up to 46% percent it fails in practical tasks. Downstream metrics like perplexity and accuracy severely degrade compared to standard per layer SVD LLM. The authors explain this failure mechanistically. Although the bundle method mathematically couples adjacent layers the transformer residual stream actually decouples them during forward passes. Thus per layer optimality matters more than joint cross layer optimization. The paper concludes that weight space reconstruction is a flawed objective for cross layer compression and future methods must focus on per layer activation reconstruction instead.",
+  "link": "https://arxiv.org/abs/2605.30836",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "math.DG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306824Z"
+}

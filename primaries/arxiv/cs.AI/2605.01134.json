@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.01134",
+  "title": "To Use AI as Dice of Possibilities with Timing Computation",
+  "abstract": "The dominant noun-based modeling paradigm has fundamentally constrained AI development, precluding any adequate representation of the future as an open temporal dimension. This paper introduces a verb-based paradigm, together with precise definitions of \\emph{timing computation} and \\emph{possibility}, that enables AI to function as an effective instrument for realizing the grammar of our thought.\n  Applied to longitudinal EHR data from 3,276 breast cancer patients, the framework empirically demonstrates: (1) automatic discovery of clinically significant patient trajectories, and (2) counterfactual timing deduction. Both results are purely data-driven, require no prior domain knowledge, and, to our knowledge, represent the first such demonstrations in the machine learning literature.",
+  "link": "https://arxiv.org/abs/2605.01134",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358577Z"
+}

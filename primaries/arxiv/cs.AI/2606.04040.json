@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04040",
+  "title": "Channel-Oriented Design for EEG-to-Music Reconstruction",
+  "abstract": "Brain-computer interfaces aim to decode naturalistic stimuli from neural signals, yet most progress to date has focused on vision and language. In this article, we study a more challenging but far less explored setting, EEG-to-music reconstruction, where signals are weak, distributed, and highly susceptible to noise and channel variability. Our central finding is that early channel mixing destroys weak but discriminative EEG signals. To address this, we propose a channel-oriented design with three key components. Specifically, channel-wise tokenization treats each electrode as an explicit token to retain spatially localized neural evidence, channel-wise multi-view self-distillation enforces consistency across temporal crops and random channel subsets to learn robust and distributed representations, and channel-wise data augmentation introduces structured channel dropout to improve invariance to noise, artifacts, and missing electrodes. Together, these components preserve weak yet informative signals across channels and enable stable alignment to a semantic music representation space. We integrate this channel-oriented design within an encoding-alignment-decoding pipeline for EEG-to-music reconstruction. Theoretically, we characterize when preserving channel-level structure leads to improved alignment. Empirically, we compare with a range of state-of-the-art baselines and demonstrate consistent and significant performance gains.",
+  "link": "https://arxiv.org/abs/2606.04040",
+  "category": "cs.AI",
+  "categories": [
+    "cs.SD",
+    "cs.AI",
+    "eess.AS"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097826+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.07905",
+  "title": "MedCoG: Maximizing LLM Inference Density in Medical Reasoning via Meta-Cognitive Regulation",
+  "abstract": "Large Language Models (LLMs) have shown strong potential in complex medical reasoning yet face diminishing gains under inference scaling laws. While existing studies augment LLMs with various knowledge types, it remains unclear how effectively the additional costs translate into accuracy. In this paper, we explore how meta-cognition of LLMs, i.e., their self-assessment of their own cognitive states, can regulate the reasoning process. Specifically, we propose MedCoG, a Medical Meta-Cognition Agent with Knowledge Graph, where the meta-cognitive assessments of task complexity, familiarity, and knowledge density dynamically regulate utilization of procedural, episodic, and factual knowledge. The LLM-centric on-demand reasoning aims to mitigate the diminishing returns under scaling law by (1) reducing costs via avoiding indiscriminate scaling, (2) improving accuracy via filtering out distractive knowledge. To validate this, we empirically characterize the scaling curve and introduce inference density to quantify inference efficiency. Experiments demonstrate the effectiveness and efficiency of MedCoG on five hard sets of medical benchmarks, yielding 6.2x inference density. Furthermore, the Oracle study highlights the significant potential of meta-cognitive regulation.",
+  "link": "https://arxiv.org/abs/2602.07905",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358546Z"
+}

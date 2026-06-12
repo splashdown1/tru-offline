@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.24210",
+  "title": "From Leaky Thoughts to Private Reasoning: Controlling What LRMs Say to Themselves",
+  "abstract": "Large reasoning models (LRMs) produce reasoning traces (RTs) that often contain sensitive information. These leaky thoughts are difficult to control and frequently violate explicit privacy directives. Because RTs can be exposed through prompt injection attacks, this becomes a direct privacy risk to the user. We approach this as a controllability problem: since privacy directives are themselves instructions, improving instruction-following (IF) within the RT provides a direct path to reducing privacy leaks. To this end, we introduce an SFT dataset that teaches models to follow general instructions throughout their reasoning process, and propose Staged Decoding, a simple decoding strategy that decouples RT and answer generation using separate LoRA adapters to maximize IF of each component. We evaluate our approach on six models from two families (1.7B-14B parameters), across two IF benchmarks and two privacy benchmarks. Our method yields substantial improvements, with gains of up to 20.9 points in IF and 51.9 percentage points on privacy benchmarks, though these can come at the cost of task utility due to the trade-off between reasoning performance and IF. Our results show that improving IF in LRMs can significantly enhance privacy, suggesting a promising direction for future privacy-aware LRMs. Our code is available at https://github.com/UKPLab/arxiv2026-controllable-reasoning-models.",
+  "link": "https://arxiv.org/abs/2602.24210",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406188Z"
+}

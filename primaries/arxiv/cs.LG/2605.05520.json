@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.05520",
+  "title": "Bayesian Rain Field Reconstruction using Commercial Microwave Links and Diffusion Model Priors",
+  "abstract": "Commercial Microwave Links (CMLs) offer dense spatial coverage for rainfall sensing but produce path-integrated measurements that make accurate ground-level reconstruction challenging. Existing methods typically oversimplify CMLs as point sensors and neglect line integration relating rainfall to signal attenuation, resulting in degraded performance under heterogeneous precipitation. In this work, we view rain field reconstruction as a Bayesian inverse problem with Diffusion Models (DMs) as high-fidelity spatial priors. We show that diffusion models better preserve key rainfall statistics compared to censored Gaussian processes. Framing rainfall estimation as a Bayesian inverse problem with a DM prior enables training-free posterior sampling using a broad family of methods, including Plug-and-Play, Sequential Monte Carlo, and Replica Exchange methods. Experiments on synthetic and real-world datasets demonstrate consistent improvements over established CML-based reconstruction baselines.",
+  "link": "https://arxiv.org/abs/2605.05520",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.AP",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308065Z"
+}

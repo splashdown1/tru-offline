@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.05533",
+  "title": "What Objects Enable, Not What They Are: Functional Latent Spaces for Affordance Reasoning",
+  "abstract": "Existing robot planning systems rely on appearance-based reasoning, where visual observations are encoded into latent spaces organized around object appearances (e.g., recognizing a \"cart\" based on how it looks). However, planning requires reasoning about task-relevant functionalities of objects (e.g., whether an object is \"movable\"), which appearance-based latent spaces do not capture. As a result, existing approaches struggle to generalize to novel robot-object interactions. We address this limited generalizability through affordance reasoning, enabling planning based on task-relevant object functionalities instead of appearance alone. We introduce A4D, which maps visual observations into a shared latent space structured around affordances (e.g., \"movable\"). By projecting visual observations into this functional latent space and measuring their proximity to affordances, A4D infers functionalities relevant to the observed object. Furthermore, we introduce an affordance discovery mechanism that expands the latent space to handle unseen scenarios where existing affordances are insufficient. A4D uses proximity in the functional latent space to quantify uncertainty in affordance inference and selectively triggers affordance discovery. We evaluate A4D across several planning tasks involving diverse and unseen affordances. A4D achieves 94% inference accuracy on existing affordances outperforming state-of-the-art approaches by over 15% points, improves new-affordance inference accuracy from 70% to over 90% with fewer than 10% of the original training data, and enables 100x faster inference. Code, videos, and data available at: https://A4Dance-reasoning.github.io.",
+  "link": "https://arxiv.org/abs/2606.05533",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882080+00:00"
+}

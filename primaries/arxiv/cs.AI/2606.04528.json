@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04528",
+  "title": "Optical-Guided Neural Collapse for SAR Few-Shot Class Incremental Learning",
+  "abstract": "Few-shot class-incremental learning (FSCIL) in synthetic aperture radar imagery presents unique challenges due to severe data scarcity and SAR-specific variability. In particular, strong azimuth sensitivity in SAR induces large intra-class variation and inter-class confusion, and FSCIL sequential updates further lead to catastrophic forgetting of previously learned classes. Inspired by neural collapse, we propose an optical-guided SAR FSCIL framework, which derives orthogonal feature subspaces from a data-rich optical ATR dataset and uses them as geometric priors to guide SAR feature learning. SAR features are projected onto these orthogonal subspaces via principal angle constraints, effectively transferring discriminative structure from the optical to the SAR domain. Specifically, our projection loss and the classifier loss optimized with a frozen simplex-ETF geometry jointly induce neural collapse by concentrating features around class means while maintaining large inter-class angles. We evaluate the approach on a benchmark comprising an optical ATR dataset and a SAR ATR dataset with 24 target classes, organized into a base training session and seven incremental sessions. Compared with recent FSCIL methods including NCFSCIL and so on, our method achieves the highest final accuracy and a favorable trade-off between final performance and performance degradation. Moreover, neural collapse metrics show improved intra-class compactness and inter-class separability, indicating that the learned features more closely approximate the ideal simplex-ETF geometry.",
+  "link": "https://arxiv.org/abs/2606.04528",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098297+00:00"
+}

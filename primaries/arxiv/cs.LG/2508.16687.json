@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2508.16687",
+  "title": "Native Hierarchical and Compositional Representations with Subspace Embeddings",
+  "abstract": "Traditional embeddings represent datapoints as vectors, which makes similarity easy to compute but limits how well they capture hierarchies and compositionality. We propose a fundamentally different approach: representing concepts as linear subspaces. By spanning multiple dimensions, subspaces can model broader concepts with higher-dimensional regions and nest more specific concepts within them. This geometry naturally captures generality through dimension, hierarchy through inclusion, and enables an emergent structure for composition via linear algebraic operations. To make this paradigm trainable, we introduce a differentiable subspace parameterization via soft projection matrices, allowing the effective dimension of each subspace to be learned. Our method not only achieves state-of-the-art performance on hierarchical and natural language inference benchmarks but also provides a geometrically-grounded model of entailment. Further, we demonstrate that while standard vector embeddings degrade to near-random performance on negated queries, subspace embeddings natively capture logical composition without explicit supervision, while preserving compatibility with efficient Euclidean vector search.",
+  "link": "https://arxiv.org/abs/2508.16687",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307630Z"
+}

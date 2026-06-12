@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30592",
+  "title": "Learning Transferable Predictability Representations",
+  "abstract": "We study the problem of assigning a scalar score to a short trajectory window that reflects its position on an ordered continuum of predictability regimes, spanning structured deterministic dynamics to unstructured stochastic noise. Existing methods address deterministic-versus-stochastic discrimination within a single system and do not produce scores with a consistent numerical interpretation across systems. We formalize this as ordinal estimation over a five-level predictability ladder and identify a structural source of cross-system ambiguity: ranking supervision alone leaves the score coordinate unfixed up to a monotone reparameterization, which we term the gauge freedom of ordinal scoring. We propose the Gauge-Fixed Ordinal Network (GON), a temporal convolutional model trained with an anchor-and-variance objective that pins level-wise score means to shared target coordinates. GON operates on 2-jet features that expose local trajectory geometry, preserved by smooth flows and disrupted by stochastic surrogate procedures. On five held-out dynamical systems, initializing from a pretrained GON checkpoint consistently outperforms training from scratch across all window budgets, with adaptation depth reflecting geometric proximity to the training family. Zero-shot scores retain ordinal structure at the stochastic boundary, where surrogate procedures most strongly disrupt nonlinear geometry, and pretrained initialization consistently beats scratch across all window budgets. Pairwise discrimination and globally coherent ordinal scoring are distinct properties requiring a stable score coordinate for cross-system transfer, with direct implications for predictability assessment, model selection, and early-warning diagnostics across natural and engineered dynamical systems.",
+  "link": "https://arxiv.org/abs/2605.30592",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306686Z"
+}

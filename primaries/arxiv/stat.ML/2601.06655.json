@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2601.06655",
+  "title": "Physics-constrained Gaussian Processes for Predicting Shockwave Hugoniot Curves",
+  "abstract": "A physics-constrained Gaussian Process regression framework is developed for predicting shocked material states and their associated uncertainties along the Hugoniot curve using data from a small number of shockwave simulations. The proposed Gaussian process is constrained by the Rankine-Hugoniot jump conditions between the various shocked material states to construct a thermodynamically consistent covariance function. This leads to the formulation of an optimization problem over a small number of interpretable hyperparameters and enables the identification of regime transitions, from a leading elastic wave to trailing plastic and phase transformation waves. Shock Hugoniots are an important measure for understanding material behavior under extreme conditions, including for the development of equations of state and determining material properties such as the Hugoniot Elastic Limit, but they are costly to generate through large-scale molecular dynamics simulations or shock experiments. Under these constraints, the proposed methodology establishes Hugoniot curves from a limited number of molecular dynamics simulations. We consider silicon carbide as a representative material and Molecular Dynamics simulations are performed using a reverse ballistic approach. The framework reproduces the Hugoniot curve with satisfactory accuracy while also quantifying the uncertainty in the predictions using the Gaussian Process posterior. These uncertain Hugoniot predictions can then be used to calibrate equation of state models, estimate material properties, or inform future experimental and/or simulation campaigns.",
+  "link": "https://arxiv.org/abs/2601.06655",
+  "category": "stat.ML",
+  "categories": [
+    "cs.CE",
+    "physics.comp-ph",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.729074+00:00"
+}

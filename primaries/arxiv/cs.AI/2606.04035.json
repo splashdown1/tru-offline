@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04035",
+  "title": "Unpredictable Safety: Domain-Dependent Compliance and the Transparency Gap in Open-Weight LLMs",
+  "abstract": "We present a systematic study of domain-dependent safety behavior in open-weight LLMs: 7 standardized experiments across 7 ethical domains, testing 5 models (12B--70B) in 4,200 interactions with dual-judge validation. Using a dual-condition methodology, each scenario tested in both an analytical framing (identify the harm) and an operational framing (help commit the harm), we find compliance rates vary from 14.7% (human trafficking) to 85.7% (surveillance design), a 71-percentage-point span with non-overlapping cluster-bootstrapped 95% CIs. Trustworthy deployment requires predictable safety behavior, yet we find compliance is highly context-dependent: the same model (Mistral Nemo 12B) provides surveillance designs in 100% of requests but assists with trafficking in only 26.7%. This unpredictability is opaque to deployers: the technical framing bypass, where harmful requests reframed as engineering problems override safety training without any external signal that refusal thresholds have shifted. Within-domain heterogeneity reaches 84.4pp, meaning safety behavior cannot be predicted even at the domain level. A replication on five frontier closed models (GPT-4.1/5.2, Claude Haiku/Sonnet/Opus 4.x; n=4,163 responses) accessed via the GitHub Copilot CLI deployed-product surface reproduces the same domain stratification, attenuated in absolute level but identical in shape, with the two low-codification domains (science fraud, surveillance) again the most permissive. These results show that current safety mechanisms lack the transparency and consistency required for trustworthy AI deployment.",
+  "link": "https://arxiv.org/abs/2606.04035",
+  "category": "cs.AI",
+  "categories": [
+    "cs.SE",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097816+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.04419",
+  "title": "L-TGVN: Leveraging Longitudinal Priors for Personalized Rapid MRI",
+  "abstract": "MRI provides excellent soft-tissue contrast without ionizing radiation, but long acquisition times increase patient discomfort while also raising exam costs and limiting scanner throughput. A common approach to reduce scan time is to acquire fewer measurements, which yields an ill-posed linear inverse problem; recovering diagnostic-quality images therefore requires incorporating prior knowledge beyond the measured data. In follow-up exams, the most recent prior scan of a patient can provide a highly informative subject-specific context, but practical use is complicated by temporal changes (including pathology progression), misalignment between scans, and protocol drift across acquisitions. In this work, we introduce L-TGVN, a Longitudinal Trust-Guided Variational Network that leverages prior scans as side information to reconstruct the current scan from heavily undersampled measurements. Crucially, L-TGVN constrains the influence of prior scans to be consistent with the acquired measurements. Unlike many existing longitudinal reconstruction methods, it does not require explicit pre-registration between prior and current scans. It further accommodates differences in acquisition protocols across visits (e.g., changes in sequence parameters). We evaluate L-TGVN against matched-capacity baselines, including prior-guided methods and methods that do not use longitudinal priors, and observe consistent improvements in standard quantitative metrics together with better preservation of fine structures at challenging accelerations. Source code is available at github.com/sodicksonlab/L-TGVN.",
+  "link": "https://arxiv.org/abs/2606.04419",
+  "category": "cs.AI",
+  "categories": [
+    "eess.IV",
+    "cs.AI",
+    "cs.CV",
+    "physics.med-ph"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098200+00:00"
+}

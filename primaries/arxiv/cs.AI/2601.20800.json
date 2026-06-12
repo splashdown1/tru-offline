@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2601.20800",
+  "title": "Conditional PED-ANOVA: Hyperparameter Importance in Hierarchical & Dynamic Search Spaces",
+  "abstract": "We propose conditional PED-ANOVA (condPED-ANOVA), a principled framework for estimating hyperparameter importance (HPI) in conditional search spaces, where the presence or domain of a hyperparameter can depend on other hyperparameters. Although the original PED-ANOVA provides a fast and efficient way to estimate HPI within the top-performing regions of the search space, it assumes a fixed, unconditional search space and therefore cannot properly handle conditional hyperparameters. To address this, we introduce a conditional HPI for top-performing regions and derive a closed-form estimator that accurately reflects conditional activation and domain changes. Experiments show that naive adaptations of existing HPI estimators yield misleading or uninterpretable importances in conditional settings, whereas condPED-ANOVA consistently provides meaningful importances that reflect the underlying conditional structure. Our code is publicly available at https://github.com/kAIto47802/condPED-ANOVA.",
+  "link": "https://arxiv.org/abs/2601.20800",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099010+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30538",
+  "title": "DisasterLex: An Expert Concept-to-Schema Knowledge Graph for Geospatial Reasoning in Disaster Analytics",
+  "abstract": "Disasters are inevitable and increasingly costly, and effective response depends on querying structured tabular data: precise, information-dense records of hazard, exposure, vulnerability, and lifeline infrastructure that underpin disaster management. Current text-to-SQL methods enable natural-language access to such tables but transfer poorly to the disaster domain, where queries span heterogeneous geospatial schemas and require reasoning over causal relations. We introduce DisasterLex, a knowledge-graph-mediated framework that inserts an Expert Knowledge Graph (EKG) of curated concepts and typed causal edges between the user query and the database, bridged to schema by concept-to-table links. The orchestration runs four stages (identifying query entities, routing to the operational domain, planning over causal edges, and grounding the SQL), restricting the schema passed to the model at each step. We instantiate it on a disaster-analytics database (36 geospatial tables, 150 columns) with an EKG of 107 concepts, 117 causal edges, and 52 concept-to-schema links, evaluated on a 75-query test set. On all seven base models spanning proprietary and open-weight families, DisasterLex beats four state-of-the-art baselines (LightRAG, HippoRAG 2, ReFoRCE, CHESS) by 1.4x to 2.75x, with absolute scores of 1.65 to 3.56 (of 5.0). Error analysis shows baseline failures cluster in routing and multi-table SQL composition, the operations our orchestration explicitly addresses. Code, data, and the EKG artifact are available at https://github.com/YimingXiao98/DisasterLex and on Zenodo at https://doi.org/10.5281/zenodo.20388029.",
+  "link": "https://arxiv.org/abs/2605.30538",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306657Z"
+}

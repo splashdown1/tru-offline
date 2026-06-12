@@ -1,0 +1,15 @@
+{
+  "arxiv_id": "2605.31080",
+  "title": "A Pilot Study on Curator-Guided Multilingual Art Description for Blind and Low-Vision Audiences with Small Vision-Language Models",
+  "abstract": "Blind and low-vision (BLV) audiences remain underserved by visual art descriptions, particularly across languages and in museum settings where privacy and intellectual-property constraints may favour small on-premise vision-language models (VLMs). This pilot study investigates curator-guided multilingual art description with Qwen2.5-VL-3B-Instruct for German, Romanian, and Serbian. We construct a parallel BLV-oriented caption corpus from artwork images and metadata, and compare language-specific LoRA adapters with a single multilingual adapter under a fixed backbone and training budget. Evaluation combines automatic lexical and embedding-based metrics with an LLM-as-Judge protocol calibrated against a small Romanian BLV pilot study. Under our pilot setup, language-specific adapters show more stable controllability and visually grounded description quality for Romanian and Serbian, while multilingual adaptation remains competitive in German. We frame these findings as deployment-oriented evidence for small on-premise VLMs, and highlight the need for larger BLV user studies and broader language coverage before drawing general conclusions about multilingual accessibility.",
+  "link": "https://arxiv.org/abs/2605.31080",
+  "category": "cs.CL",
+  "categories": [
+    "cs.MM",
+    "cs.AI",
+    "cs.CL",
+    "cs.CV",
+    "cs.HC"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406044Z"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30899",
+  "title": "A Unified and Reproducible Experimentation Framework for Speech Understanding",
+  "abstract": "Speech foundation models and Speech LLMs have advanced speech understanding, yet deployment-oriented model selection is hindered by non-comparable evaluations caused by mismatched post-processing, and by training results that are hard to reproduce across data scales and pipelines. We present SURE, a unified experimentation framework that standardizes prediction formats, normalization, and scoring. SURE evaluates strong systems across paradigms, from conventional pipelines to Speech LLMs, on representative tasks under realistic acoustic and linguistic stressors. Beyond evaluation, SURE introduces an agent-assisted training conversion flow that maps paper and code into versioned, runnable training pipelines under a unified protocol on matched open-data subsets. Overall, SURE improves comparability and reproducibility for deployment-oriented evaluation.",
+  "link": "https://arxiv.org/abs/2605.30899",
+  "category": "cs.AI",
+  "categories": [
+    "eess.AS",
+    "cs.AI",
+    "cs.SD"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358171Z"
+}

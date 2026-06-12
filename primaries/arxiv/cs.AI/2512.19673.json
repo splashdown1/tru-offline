@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2512.19673",
+  "title": "Bottom-up Policy Optimization: Your Language Model Policy Secretly Contains Internal Policies",
+  "abstract": "Existing reinforcement learning (RL) approaches treat large language models (LLMs) as a unified policy, overlooking their internal mechanisms. In this paper, we decompose the LLM-based policy into Internal Layer Policies and Internal Modular Policies via the Transformer's residual stream. Our entropy analysis of internal policy reveals distinct patterns: (1) universally, internal policies evolve from high-entropy exploration in early layers to deterministic refinement in the top layers; and (2) Qwen exhibits an explicit progressive reasoning structure, contrasting with the abrupt convergence in Llama. Furthermore, we discover that optimizing internal layers induces feature refinement, forcing lower layers to capture high-level reasoning representations early. Motivated by these findings, we propose Bottom-up Policy Optimization (BuPO), a novel RL paradigm that reconstructs the LLM's reasoning foundation from the bottom up by optimizing internal layers in early stages. Extensive experiments on complex reasoning benchmarks demonstrate the effectiveness of BuPO.",
+  "link": "https://arxiv.org/abs/2512.19673",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358753Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06227",
+  "title": "Drag reduction or reward hacking? Recurrent multi-agent reinforcement learning that earns its reward",
+  "abstract": "A reinforcement-learning agent maximises its reward, which can diverge from the outcome its designer intended. In physical control the reward rarely closes that gap, and drag reduction in wall turbulence makes it concrete. A mass-conservation projection couples agents' outputs and erases the per-agent credit the policy gradient needs; a memoryless policy cannot resolve the slow near-wall cycle it acts on; and a pressure-gradient reward pays for nominal drag reduction by pumping power through the wall. Two degenerate controllers achieve large drag reductions while total dissipation rises, so the reported figure can mask a more wasteful flow. We trace each fault to its cause and fix it: a differentiable projection that restores credit, a recurrent policy with a widened sensing stencil, and a reward scored on the true wall power. The corrected controller acts on the flow within a closed energy budget, earning a conservative $17\\%$ under honest accounting.",
+  "link": "https://arxiv.org/abs/2606.06227",
+  "category": "cs.LG",
+  "categories": [
+    "physics.flu-dyn",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883568+00:00"
+}

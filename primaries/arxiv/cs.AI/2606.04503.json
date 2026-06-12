@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04503",
+  "title": "Smart Picks in the Dark: Towards Efficient RLVR for Reasoning via Tracing Metacognitive Pivots",
+  "abstract": "Reinforcement learning with verifiable rewards (RLVR) has greatly advanced large reasoning models (LRMs), but it requires timely training on a huge fully-annotated dataset. To this end, data-efficient RLVR methods have been widely studied from two perspectives: (i) data selection methods identify a small subset of \"golden\" samples that yield near-full-data performance, but they rely on a pre-existing pool of labeled data. (ii) unsupervised RLVR methods train the model using its own internal supervision signals on large-scale unlabeled data, yet they exhibit suboptimal performance. Accordingly, we investigate the \"pick in the dark\" setup for RLVR, which aims to select, without prior supervision, unlabeled samples that are most beneficial for training and worthy of annotation. Through systematic analysis, we demonstrate that smart picks hinge on a well-calibrated uncertainty estimator to enable strategic partitioning of data for adaptive training regimes. Building on this insight, we propose PivotTrace, a three-way data triage framework that leverages attention dynamics to trace metacognitive pivots during reasoning. By precisely quantifying uncertainty through pivot density, PivotTrace achieves automated data routing to synergistically maximize both annotation and training efficiency. Empirically, PivotTrace surpasses the fully supervised LRM with only 29.3% annotated samples and 2.75 faster convergence.",
+  "link": "https://arxiv.org/abs/2606.04503",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098267+00:00"
+}

@@ -1,0 +1,1160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>tru — offline reasoning system</title>
+  <style>
+    :root {
+      --bg: #081018;
+      --panel: #101924;
+      --panel-2: #0c141d;
+      --line: #223042;
+      --text: #ecf1f8;
+      --muted: #8c9ab0;
+      --accent: #7aa7ff;
+      --good: #40c38d;
+      --warn: #efb36b;
+      --bad: #ef7b7b;
+      --chip: rgba(122, 167, 255, 0.14);
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top, rgba(122,167,255,0.14), transparent 28%),
+        radial-gradient(circle at 20% 20%, rgba(64,195,141,0.08), transparent 18%),
+        linear-gradient(180deg, #071019, #050b11 70%);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -20%;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(122,167,255,0.08), transparent 24%),
+        radial-gradient(circle at 80% 30%, rgba(64,195,141,0.06), transparent 20%),
+        radial-gradient(circle at 50% 80%, rgba(239,179,107,0.05), transparent 22%);
+      animation: drift 26s ease-in-out infinite alternate;
+      pointer-events: none;
+      opacity: 0.8;
+    }
+
+    @keyframes drift {
+      from { transform: translate3d(-1.5%, -1%, 0) scale(1); filter: blur(0px); }
+      to { transform: translate3d(1.5%, 1%, 0) scale(1.03); filter: blur(0.5px); }
+    }
+
+    .app {
+      position: relative;
+      height: 100%;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      z-index: 1;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 20px;
+      background: rgba(10, 17, 25, 0.86);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(180deg, rgba(122,167,255,0.24), rgba(64,195,141,0.16));
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--text);
+      box-shadow: var(--shadow);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mark::after {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle, rgba(255,255,255,0.28), transparent 48%);
+      animation: spinPulse 6s linear infinite;
+      opacity: 0.55;
+    }
+
+    @keyframes spinPulse {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .titlewrap { min-width: 0; }
+    .title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 750;
+      letter-spacing: 0.04em;
+      text-transform: lowercase;
+    }
+    .subtitle {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .statusrow {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .pill strong { color: var(--text); font-weight: 700; }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--good);
+      box-shadow: 0 0 0 4px rgba(64,195,141,0.14);
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+
+    .dot.busy {
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(122,167,255,0.14);
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(0.82); opacity: 0.65; }
+    }
+
+    .main {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr) 360px;
+      gap: 14px;
+      padding: 14px;
+    }
+
+    .panel {
+      min-height: 0;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(16,25,36,0.72);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      backdrop-filter: blur(10px);
+      transform: translateZ(0);
+    }
+
+    .panel-head {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .panel-head h2 {
+      margin: 0;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    .panel-body {
+      min-height: 0;
+      overflow: auto;
+      padding: 14px;
+    }
+
+    .panel-foot {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 12px;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .kv {
+      display: grid;
+      gap: 10px;
+    }
+
+    .node {
+      padding: 12px 12px 11px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(7,12,18,0.42);
+    }
+
+    .node-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .node-key {
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .badge.fact { color: var(--good); }
+    .badge.rule { color: var(--warn); }
+    .badge.ghost { color: #ffd38e; }
+    .badge.tool { color: #7cc6ff; }
+
+    .node-val {
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.55;
+      white-space: pre-wrap;
+    }
+
+    .node-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .bar {
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      overflow: hidden;
+      margin-top: 10px;
+      position: relative;
+    }
+
+    .bar > div {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--good));
+      border-radius: inherit;
+      position: relative;
+      overflow: hidden;
+      animation: breathe 3.8s ease-in-out infinite;
+    }
+
+    .bar > div::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent);
+      transform: translateX(-120%);
+      animation: sweep 2.8s linear infinite;
+    }
+
+    @keyframes breathe {
+      0%, 100% { filter: saturate(1); opacity: 0.92; }
+      50% { filter: saturate(1.2); opacity: 1; }
+    }
+
+    @keyframes sweep {
+      from { transform: translateX(-120%); }
+      to { transform: translateX(120%); }
+    }
+
+    .controls {
+      display: grid;
+      gap: 8px;
+    }
+
+    .controls input,
+    .controls textarea,
+    .composer textarea,
+    .composer input {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(4, 8, 12, 0.55);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 11px 12px;
+      outline: none;
+      font: inherit;
+    }
+
+    .controls input:focus,
+    .controls textarea:focus,
+    .composer textarea:focus,
+    .composer input:focus {
+      border-color: rgba(122,167,255,0.7);
+      box-shadow: 0 0 0 3px rgba(122,167,255,0.12);
+    }
+
+    .controls textarea { min-height: 90px; resize: vertical; }
+    .controls .row,
+    .composer .row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: 0;
+      border-radius: 12px;
+      padding: 10px 12px;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 650;
+      cursor: pointer;
+      transition: transform 0.12s ease, opacity 0.12s ease, background 0.12s ease;
+    }
+
+    button:hover { transform: translateY(-1px); }
+    button:active { transform: translateY(0); }
+
+    .primary { background: linear-gradient(180deg, #88abff, #5c7fe5); color: #071018; }
+    .secondary { background: rgba(255,255,255,0.06); color: var(--text); border: 1px solid rgba(255,255,255,0.08); }
+    .ghostbtn { background: transparent; color: var(--muted); border: 1px solid rgba(255,255,255,0.08); }
+    .danger { background: rgba(239,123,123,0.13); color: #ffb5b5; border: 1px solid rgba(239,123,123,0.18); }
+
+    .chatlog {
+      display: grid;
+      gap: 12px;
+    }
+
+    .turn {
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(7,12,18,0.38);
+      border-radius: 16px;
+      padding: 12px 14px;
+      animation: rise 0.22s ease;
+    }
+
+    .turn.user { background: rgba(122,167,255,0.07); }
+    .turn.assistant { background: rgba(64,195,141,0.07); }
+
+    .turn.busy {
+      background: rgba(122,167,255,0.11);
+      border-color: rgba(122,167,255,0.18);
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .turn-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .turn-body {
+      white-space: pre-wrap;
+      line-height: 1.6;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .typing {
+      display: inline-flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .typing span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: bounce 1s infinite ease-in-out;
+    }
+
+    .typing span:nth-child(2) { animation-delay: 0.12s; }
+    .typing span:nth-child(3) { animation-delay: 0.24s; }
+
+    @keyframes bounce {
+      0%, 80%, 100% { transform: translateY(0); opacity: 0.5; }
+      40% { transform: translateY(-4px); opacity: 1; }
+    }
+
+    .evidence {
+      display: grid;
+      gap: 10px;
+    }
+
+    .evidence-item {
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(7,12,18,0.38);
+    }
+
+    .evidence-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .score {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .muted { color: var(--muted); }
+    .small { font-size: 12px; line-height: 1.5; }
+
+    .trail {
+      display: grid;
+      gap: 10px;
+    }
+
+    .trail-item {
+      border-left: 2px solid rgba(122,167,255,0.45);
+      padding: 10px 12px 10px 14px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 0 12px 12px 0;
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.55;
+      white-space: pre-wrap;
+    }
+
+    .trail-item strong { color: var(--accent); }
+
+    .composer {
+      display: grid;
+      gap: 10px;
+    }
+
+    .composer textarea {
+      min-height: 82px;
+      resize: vertical;
+    }
+
+    .composer .row {
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hint {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .kbd {
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--text);
+      font-size: 11px;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(7,12,18,0.92);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      font-size: 12px;
+      display: none;
+      z-index: 40;
+    }
+
+    input[type="file"] { display: none; }
+
+    @media (max-width: 1200px) {
+      body { overflow: auto; }
+      .app { height: auto; min-height: 100%; }
+      .main { grid-template-columns: 1fr; }
+      .panel { min-height: 420px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="mark">tr</div>
+        <div class="titlewrap">
+          <h1 class="title">tru — offline reasoning system</h1>
+          <div class="subtitle">weighted local knowledge, visible evidence, no external calls, no pretending to be something else</div>
+        </div>
+      </div>
+      <div class="statusrow">
+        <div class="pill"><span class="dot" id="liveDot"></span><strong id="statusText">ready</strong></div>
+        <div class="pill">nodes <strong id="countNodes">0</strong></div>
+        <div class="pill">facts <strong id="countFacts">0</strong></div>
+        <div class="pill">avg confidence <strong id="countConf">0%</strong></div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>knowledge bank</h2>
+          <span class="badge">local memory</span>
+        </div>
+        <div class="panel-body">
+          <div class="controls">
+            <input id="keyInput" placeholder="key, e.g. tru_identity" />
+            <textarea id="valueInput" placeholder="value, e.g. tru is an offline reasoning engine with visible weights and evidence."></textarea>
+            <div class="row">
+              <input id="typeInput" placeholder="type: fact / rule / ghost / tool" style="flex:1; min-width: 110px;" />
+              <input id="weightInput" placeholder="weight: 0.0 to 1.0" style="width: 132px;" />
+            </div>
+            <div class="row">
+              <input id="sourceInput" placeholder="source, e.g. user, seed, archive" style="flex:1;" />
+            </div>
+            <div class="row">
+              <button class="primary" onclick="addNode()">add node</button>
+              <button class="secondary" onclick="seedBrain()">reset seed</button>
+              <button class="ghostbtn" onclick="exportBrain()">export</button>
+              <button class="ghostbtn" onclick="document.getElementById('importFile').click()">import</button>
+              <input type="file" id="importFile" accept="application/json" onchange="importBrain(this)" />
+            </div>
+            <div class="row">
+              <button class="secondary" onclick="showTop('heavy')">heavy</button>
+              <button class="secondary" onclick="showTop('ghosts')">ghosts</button>
+              <button class="secondary" onclick="showTop('contradictions')">contradictions</button>
+              <button class="danger" onclick="clearChat()">clear chat</button>
+            </div>
+          </div>
+        </div>
+        <div class="panel-foot">
+          <div class="hint">add facts, rules, ghosts, or tools. each node gets a weight. high weight + high match = stronger answer.</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>chat</h2>
+          <span class="badge">reasoner → critic → arbiter</span>
+        </div>
+        <div class="panel-body" id="chatLog"></div>
+        <div class="panel-foot">
+          <div class="composer">
+            <textarea id="questionInput" placeholder="ask tru something. try: what is tru, what's the weight story, or teach truth is coherence."></textarea>
+            <div class="row">
+              <div class="hint">submit with <span class="kbd">enter</span> or click ask. commands: stats, heavy, ghosts, contradictions, export, reset</div>
+              <div class="row">
+                <button class="primary" onclick="ask()">ask</button>
+                <button class="secondary" onclick="askStep('reasoner')">reasoner</button>
+                <button class="secondary" onclick="askStep('critic')">critic</button>
+                <button class="secondary" onclick="askStep('arbiter')">arbiter</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>evidence and trail</h2>
+          <span class="badge">explainable</span>
+        </div>
+        <div class="panel-body">
+          <div class="evidence" id="evidencePanel"></div>
+          <div style="height: 14px"></div>
+          <div class="trail" id="trailPanel"></div>
+        </div>
+        <div class="panel-foot">
+          <div class="hint">this is the part that makes it feel less fake: it shows what was used, how much it mattered, and how sure it is.</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const STORE = "tru_proper_brain_v1";
+    const CHAT_STORE = "tru_proper_chat_v1";
+    const TRAIL_STORE = "tru_proper_trail_v1";
+
+    const seed = [
+      { key: "tru_identity", value: "tru is an offline reasoning system. it uses local weights, explicit evidence, and visible uncertainty instead of hidden magic.", type: "fact", weight: 0.98, source: "seed" },
+      { key: "tru_scope", value: "tru runs locally. it does not call external ai services. it answers from stored nodes and the current conversation.", type: "fact", weight: 0.96, source: "seed" },
+      { key: "truth", value: "truth is what survives contact with reality and evidence.", type: "fact", weight: 0.91, source: "seed" },
+      { key: "weight", value: "weight is the system's trust signal. it combines confidence, usefulness, and recent support.", type: "fact", weight: 0.93, source: "seed" },
+      { key: "uncertainty", value: "uncertainty should be visible. if support is weak, the answer should say so plainly.", type: "rule", weight: 0.92, source: "seed" },
+      { key: "evidence", value: "strong answers should point back to the nodes that support them.", type: "rule", weight: 0.9, source: "seed" },
+      { key: "memory", value: "memory matters when earlier claims change later answers.", type: "ghost", weight: 0.73, source: "seed" },
+      { key: "reasoner", value: "reasoner drafts a candidate answer from the strongest matches.", type: "tool", weight: 0.84, source: "seed" },
+      { key: "critic", value: "critic checks for weak support, contradiction, and overreach.", type: "tool", weight: 0.84, source: "seed" },
+      { key: "arbiter", value: "arbiter produces the final answer after weighing evidence and criticism.", type: "tool", weight: 0.84, source: "seed" },
+      { key: "style", value: "the system should sound direct, grounded, and calm, not theatrical.", type: "rule", weight: 0.88, source: "seed" },
+      { key: "offline_status", value: "offline means no network dependency for core reasoning.", type: "fact", weight: 0.89, source: "seed" }
+    ];
+
+    let brain = [];
+    let chat = [];
+    let trail = [];
+    let lastAnswer = "";
+
+    function load() {
+      try {
+        const b = localStorage.getItem(STORE);
+        const c = localStorage.getItem(CHAT_STORE);
+        const t = localStorage.getItem(TRAIL_STORE);
+        brain = b ? JSON.parse(b) : [];
+        chat = c ? JSON.parse(c) : [];
+        trail = t ? JSON.parse(t) : [];
+      } catch (e) {
+        brain = [];
+        chat = [];
+        trail = [];
+      }
+      if (!brain.length) brain = seed.map(n => ({ ...n, hits: 0, createdAt: Date.now(), updatedAt: Date.now() }));
+      if (!trail.length) trail = ["seed loaded.", "tru is awake enough to answer, but still honest about its limits."];
+      renderAll();
+      setAmbientMood();
+    }
+
+    function save() {
+      localStorage.setItem(STORE, JSON.stringify(brain));
+      localStorage.setItem(CHAT_STORE, JSON.stringify(chat));
+      localStorage.setItem(TRAIL_STORE, JSON.stringify(trail));
+      updateStats();
+      setAmbientMood();
+    }
+
+    function normalize(s) {
+      return String(s || "").toLowerCase().replace(/[^a-z0-9\s:_-]/g, " ").replace(/\s+/g, " ").trim();
+    }
+
+    function tokens(s) {
+      return normalize(s).split(" ").filter(Boolean).filter(w => w.length > 2);
+    }
+
+    function escapeHtml(s) {
+      return String(s)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;");
+    }
+
+    function toast(msg) {
+      const el = document.getElementById("toast");
+      el.textContent = msg;
+      el.style.display = "block";
+      clearTimeout(toast._t);
+      toast._t = setTimeout(() => el.style.display = "none", 2400);
+    }
+
+    function setBusy(on) {
+      const dot = document.getElementById("liveDot");
+      dot.classList.toggle("busy", !!on);
+      document.getElementById("statusText").textContent = on ? "thinking" : (brain.length ? "ready" : "empty");
+    }
+
+    function setAmbientMood() {
+      const avg = brain.length ? brain.reduce((a, n) => a + (Number(n.weight) || 0), 0) / brain.length : 0;
+      const tone = avg > 0.88 ? "sharp" : avg > 0.72 ? "awake" : avg > 0.55 ? "forming" : "thin";
+      const status = brain.length ? `${tone} / ${brain.length} nodes` : "empty";
+      document.querySelector(".subtitle").textContent = `weighted local knowledge, visible evidence, no external calls, no pretending to be something else · ${status}`;
+    }
+
+    function updateStats() {
+      const avg = brain.length ? Math.round((brain.reduce((a, n) => a + (Number(n.weight) || 0), 0) / brain.length) * 100) : 0;
+      document.getElementById("countNodes").textContent = brain.length;
+      document.getElementById("countFacts").textContent = brain.filter(n => n.type === "fact").length;
+      document.getElementById("countConf").textContent = avg + "%";
+      document.getElementById("statusText").textContent = brain.length ? "ready" : "empty";
+    }
+
+    function typeRank(type) {
+      const t = String(type || "fact").toLowerCase();
+      if (t === "fact") return 1;
+      if (t === "rule") return 1.1;
+      if (t === "ghost") return 0.85;
+      if (t === "tool") return 0.95;
+      return 1;
+    }
+
+    function scoreNode(node, qTokens, rawQuestion) {
+      const key = normalize(node.key);
+      const value = normalize(node.value);
+      let score = (Number(node.weight) || 0) * 100 * typeRank(node.type);
+
+      if (!qTokens.length) return score;
+
+      if (key === normalize(rawQuestion)) score += 45;
+      if (key.includes(normalize(rawQuestion))) score += 28;
+      if (normalize(rawQuestion).includes(key)) score += 24;
+
+      for (const t of qTokens) {
+        if (key.includes(t)) score += 16;
+        if (value.includes(t)) score += 8;
+        if (rawQuestion.toLowerCase().includes(t)) score += 1;
+      }
+
+      if (normalize(rawQuestion).includes("what is tru") || normalize(rawQuestion).includes("what’s tru") || normalize(rawQuestion).includes("whats tru")) {
+        if (key.includes("tru")) score += 80;
+      }
+
+      if (normalize(rawQuestion).includes("weight")) {
+        if (key.includes("weight")) score += 60;
+      }
+
+      if (normalize(rawQuestion).includes("offline")) {
+        if (key.includes("offline") || value.includes("offline")) score += 60;
+      }
+
+      if (normalize(rawQuestion).includes("contradiction")) {
+        if (value.includes("contradiction") || value.includes("inconsistent")) score += 40;
+      }
+
+      return score;
+    }
+
+    function retrieve(question) {
+      const q = normalize(question);
+      const qTokens = tokens(q);
+      const ranked = brain.map(node => ({
+        ...node,
+        score: scoreNode(node, qTokens, question)
+      })).sort((a, b) => b.score - a.score);
+
+      const top = ranked.slice(0, 6);
+      top.forEach(node => node.hits = (node.hits || 0) + 1);
+      return top;
+    }
+
+    function contradictions() {
+      const groups = new Map();
+      for (const node of brain) {
+        const base = normalize(node.key).split(" ")[0] || node.key;
+        if (!groups.has(base)) groups.set(base, []);
+        groups.get(base).push(node);
+      }
+      const out = [];
+      for (const [key, items] of groups.entries()) {
+        if (items.length < 2) continue;
+        const values = new Set(items.map(n => normalize(n.value)));
+        if (values.size > 1) out.push({ key, items });
+      }
+      return out.sort((a, b) => b.items.length - a.items.length).slice(0, 6);
+    }
+
+    function buildExplanation(question, hits) {
+      const q = normalize(question);
+      const best = hits[0];
+      const confidence = hits.length ? Math.min(99, Math.round((hits[0].score / 180) * 100)) : 0;
+      let answer = "";
+
+      if (!hits.length) {
+        answer = "i do not have enough local evidence to answer that cleanly. add nodes, or ask again in a narrower way.";
+      } else if (q.includes("what is tru") || q.includes("who are you") || q.includes("what are you")) {
+        answer = `tru is an offline reasoning system. it ranks local nodes by weight, shows evidence, and says when confidence is weak.\n\ncore read: ${best.value}`;
+      } else if (q.includes("what is going on") || q.includes("what's going on") || q.includes("whats going on")) {
+        answer = `what's going on: the system is using ${hits.length} local matches to answer from its own memory instead of pretending to know more than it does.\n\nbest support: ${best.value}`;
+      } else if (q.startsWith("teach ") || q.includes(" is ") || q.includes(" means ")) {
+        const parts = q.replace(/^teach\s+/, "").split(/\s+is\s+|\s+means\s+/i);
+        if (parts.length >= 2) {
+          answer = `noted. i will treat “${parts[0].trim()}” as “${parts[1].trim()}” in this local brain.\n\nrelated support: ${best.value}`;
+        } else {
+          answer = `i can learn that locally, but the statement is too loose for a clean insertion.\n\nstrongest evidence: ${best.value}`;
+        }
+      } else if (q.includes("weight")) {
+        answer = `weights matter here. stronger nodes rise to the top, but i also surface why they won.\n\n${best.key}: ${best.value}`;
+      } else if (q.includes("offline")) {
+        answer = `offline means the reasoning loop stays inside this page. no api call. no hidden handoff.\n\n${best.key}: ${best.value}`;
+      } else {
+        const pieces = hits.slice(0, 3).map(n => n.value).filter(Boolean);
+        answer = pieces.length ? pieces.join(" ") : "no clear answer yet.";
+        if (confidence < 45) answer += "\n\nconfidence is low. the match is partial, not strong.";
+      }
+
+      return { answer, confidence };
+    }
+
+    function renderChat() {
+      const el = document.getElementById("chatLog");
+      if (!chat.length) {
+        el.innerHTML = `
+          <div class="turn assistant">
+            <div class="turn-head"><span>assistant</span><span>offline</span></div>
+            <div class="turn-body">add knowledge on the left, then ask something. this page is built to feel grounded: it shows weights, evidence, and the actual reasoning trail.</div>
+          </div>`;
+        return;
+      }
+      el.innerHTML = chat.map(turn => `
+        <div class="turn ${turn.role}">
+          <div class="turn-head"><span>${turn.role === "user" ? "you" : "tru"}</span><span>${new Date(turn.ts).toLocaleString()}</span></div>
+          <div class="turn-body">${escapeHtml(turn.text)}</div>
+        </div>
+      `).join("");
+      el.scrollTop = el.scrollHeight;
+    }
+
+    function renderKnowledge(list = brain) {
+      const el = document.getElementById("evidencePanel");
+      if (!list.length) {
+        el.innerHTML = `<div class="small muted">no nodes yet.</div>`;
+        return;
+      }
+      el.innerHTML = list.map(node => `
+        <div class="node">
+          <div class="node-top">
+            <div class="node-key">${escapeHtml(node.key)}</div>
+            <div class="badge ${escapeHtml(node.type || "fact")}">${escapeHtml(node.type || "fact")}</div>
+          </div>
+          <div class="node-val">${escapeHtml(node.value)}</div>
+          <div class="bar"><div style="width:${Math.max(6, Math.min(100, Math.round((Number(node.weight) || 0) * 100)))}%"></div></div>
+          <div class="node-meta">
+            <span>weight ${Number(node.weight || 0).toFixed(2)}</span>
+            <span>hits ${node.hits || 0}</span>
+            <span>source ${escapeHtml(node.source || "seed")}</span>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function renderTrail(items = trail) {
+      const el = document.getElementById("trailPanel");
+      if (!items.length) {
+        el.innerHTML = `<div class="small muted">no trail yet.</div>`;
+        return;
+      }
+      el.innerHTML = items.map((item, index) => `
+        <div class="trail-item"><strong>${index === 0 ? "live" : index === 1 ? "echo" : "trail"}</strong> ${escapeHtml(item)}</div>
+      `).join("");
+    }
+
+    function renderAll() {
+      updateStats();
+      renderChat();
+      renderKnowledge(brain.slice().sort((a, b) => (Number(b.weight) || 0) - (Number(a.weight) || 0)).slice(0, 12));
+      renderTrail(trail.slice(0, 12));
+    }
+
+    function pushChat(role, text) {
+      chat.push({ role, text, ts: Date.now() });
+      save();
+      renderChat();
+    }
+
+    function pushTrail(text) {
+      trail.unshift(text);
+      trail = trail.slice(0, 12);
+      save();
+      renderTrail();
+    }
+
+    function addNode() {
+      const key = document.getElementById("keyInput").value.trim();
+      const value = document.getElementById("valueInput").value.trim();
+      const type = (document.getElementById("typeInput").value.trim() || "fact").toLowerCase();
+      const weight = Number(document.getElementById("weightInput").value || 0.75);
+      const source = document.getElementById("sourceInput").value.trim() || "user";
+
+      if (!key || !value) {
+        toast("key and value are required");
+        return;
+      }
+
+      const idx = brain.findIndex(n => normalize(n.key) === normalize(key));
+      const node = {
+        key,
+        value,
+        type: ["fact", "rule", "ghost", "tool"].includes(type) ? type : "fact",
+        weight: Math.max(0, Math.min(1, isFinite(weight) ? weight : 0.75)),
+        source,
+        hits: idx >= 0 ? (brain[idx].hits || 0) : 0,
+        createdAt: idx >= 0 ? brain[idx].createdAt : Date.now(),
+        updatedAt: Date.now()
+      };
+
+      if (idx >= 0) brain[idx] = node;
+      else brain.unshift(node);
+
+      document.getElementById("keyInput").value = "";
+      document.getElementById("valueInput").value = "";
+      document.getElementById("typeInput").value = "";
+      document.getElementById("weightInput").value = "";
+      document.getElementById("sourceInput").value = "";
+
+      save();
+      renderAll();
+      toast(idx >= 0 ? "node updated" : "node added");
+    }
+
+    function showTop(mode) {
+      let list = [];
+      if (mode === "heavy") {
+        list = brain.slice().sort((a, b) => (Number(b.weight) || 0) - (Number(a.weight) || 0)).slice(0, 10);
+        pushTrail("heavy nodes: the top weights currently shaping the brain.");
+      } else if (mode === "ghosts") {
+        list = brain.filter(n => n.type === "ghost").slice(0, 10);
+        pushTrail("ghosts: unresolved or aspirational concepts.");
+      } else if (mode === "contradictions") {
+        const c = contradictions();
+        if (!c.length) {
+          trail.unshift("contradictions: none found in the current brain.");
+          save();
+          renderTrail();
+          toast("no contradictions found");
+          return;
+        }
+        trail.unshift(`contradictions: ${c.length} candidate groups`);
+        save();
+        renderTrail();
+        list = c.flatMap(group => group.items.map(n => ({ ...n, key: `${group.key} · ${n.key}` })));
+      }
+      renderKnowledge(list);
+      toast(mode + " shown");
+    }
+
+    function clearChat() {
+      chat = [];
+      trail = [];
+      lastAnswer = "";
+      save();
+      renderAll();
+      toast("chat cleared");
+    }
+
+    function exportBrain() {
+      const blob = new Blob([JSON.stringify({ brain, chat, trail }, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `tru_offline_backup_${Date.now()}.json`;
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 500);
+      toast("export ready");
+    }
+
+    function importBrain(input) {
+      const file = input.files && input.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const data = JSON.parse(String(reader.result || "{}"));
+          if (Array.isArray(data.brain)) brain = data.brain;
+          if (Array.isArray(data.chat)) chat = data.chat;
+          if (Array.isArray(data.trail)) trail = data.trail;
+          save();
+          renderAll();
+          toast("imported");
+        } catch (e) {
+          toast("import failed");
+        }
+      };
+      reader.readAsText(file);
+      input.value = "";
+    }
+
+    function commandRouter(q) {
+      const s = normalize(q);
+      if (s === "stats") {
+        const avg = brain.length ? (brain.reduce((a, n) => a + (Number(n.weight) || 0), 0) / brain.length) : 0;
+        return `stats:\n- nodes: ${brain.length}\n- facts: ${brain.filter(n => n.type === "fact").length}\n- rules: ${brain.filter(n => n.type === "rule").length}\n- ghosts: ${brain.filter(n => n.type === "ghost").length}\n- tools: ${brain.filter(n => n.type === "tool").length}\n- average weight: ${avg.toFixed(2)}`;
+      }
+      if (s === "heavy") {
+        return brain.slice().sort((a, b) => (Number(b.weight) || 0) - (Number(a.weight) || 0)).slice(0, 8).map(n => `${n.key} (${Number(n.weight).toFixed(2)})`).join("\n");
+      }
+      if (s === "ghosts") {
+        const g = brain.filter(n => n.type === "ghost");
+        return g.length ? g.map(n => `${n.key}: ${n.value}`).join("\n\n") : "no ghosts in the brain.";
+      }
+      if (s === "contradictions") {
+        const c = contradictions();
+        return c.length ? c.map(g => `${g.key}: ${g.items.length} competing nodes`).join("\n") : "no contradictions found.";
+      }
+      if (s === "reset") {
+        seedBrain();
+        return "brain reset to seed.";
+      }
+      if (s === "export") {
+        exportBrain();
+        return "export started.";
+      }
+      return null;
+    }
+
+    function answer(question, mode = "arbiter") {
+      const hits = retrieve(question);
+      const { answer, confidence } = buildExplanation(question, hits);
+      const reasoned = hits.slice(0, 3).map((n, i) => `#${i + 1} ${n.key} · w ${Number(n.weight).toFixed(2)} · score ${Math.round(n.score)}\n${n.value}`).join("\n\n");
+      const criticText = hits.length ? (confidence < 50 ? "weak support: the current query is only loosely matched." : "support is decent, but keep uncertainty visible.") : "no strong support in the current brain.";
+      const arbiterText = `${answer}\n\nconfidence: ${confidence}%`;
+
+      trail.unshift(`question: ${question}\n\nreasoner:\n${reasoned || "none"}\n\ncritic:\n${criticText}\n\narbiter:\n${arbiterText}`);
+      trail = trail.slice(0, 12);
+      save();
+      renderTrail();
+
+      if (mode === "reasoner") return reasoned || "no local evidence.";
+      if (mode === "critic") return criticText;
+      return arbiterText;
+    }
+
+    async function ask() {
+      const input = document.getElementById("questionInput");
+      const q = input.value.trim();
+      if (!q) return;
+      input.value = "";
+
+      setBusy(true);
+      pushChat("user", q);
+
+      const cmd = commandRouter(q);
+      if (cmd !== null) {
+        pushChat("assistant", cmd);
+        lastAnswer = cmd;
+        renderKnowledge(brain.slice().sort((a, b) => (Number(b.weight) || 0) - (Number(a.weight) || 0)).slice(0, 12));
+        pushTrail(`command accepted: ${q}`);
+        setBusy(false);
+        return;
+      }
+
+      const typingId = addTypingBubble();
+      await wait(180);
+      const out = answer(q, "arbiter");
+      removeTypingBubble(typingId);
+      pushChat("assistant", out);
+      lastAnswer = out;
+
+      const hits = retrieve(q);
+      renderKnowledge(hits);
+      document.getElementById("statusText").textContent = "answered";
+      setBusy(false);
+      pushTrail(`answer settled: ${hits[0] ? hits[0].key : "no strong match"}`);
+      flashLastAnswer(out, hits[0]);
+    }
+
+    function askStep(mode) {
+      const input = document.getElementById("questionInput");
+      const q = input.value.trim();
+      if (!q) return;
+      setBusy(true);
+      const out = answer(q, mode);
+      pushChat("assistant", `[${mode}]\n${out}`);
+      lastAnswer = out;
+      renderKnowledge(retrieve(q));
+      document.getElementById("statusText").textContent = mode;
+      setBusy(false);
+      pushTrail(`${mode} ran on: ${q}`);
+    }
+
+    function seedBrain() {
+      brain = seed.map(n => ({ ...n, hits: 0, createdAt: Date.now(), updatedAt: Date.now() }));
+      chat = [];
+      trail = ["seed restored.", "the brain starts with a small, stable identity and clear epistemic rules.", "it wakes with weight, not with theatre."];
+      save();
+      renderAll();
+      toast("seed restored");
+    }
+
+    function wait(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    function addTypingBubble() {
+      const el = document.getElementById("chatLog");
+      const id = "typing-" + Date.now();
+      const div = document.createElement("div");
+      div.className = "turn assistant busy";
+      div.id = id;
+      div.innerHTML = `
+        <div class="turn-head"><span>tru</span><span>processing</span></div>
+        <div class="turn-body"><span class="typing"><span></span><span></span><span></span></span></div>
+      `;
+      el.appendChild(div);
+      el.scrollTop = el.scrollHeight;
+      return id;
+    }
+
+    function removeTypingBubble(id) {
+      const el = document.getElementById(id);
+      if (el) el.remove();
+    }
+
+    function flashLastAnswer(text, best) {
+      const tag = best ? `${best.key} · ${Math.round(best.score)} score` : "no strong match";
+      pushTrail(`live answer: ${text.slice(0, 120)}${text.length > 120 ? "…" : ""}`);
+      pushTrail(`best current support: ${tag}`);
+    }
+
+    document.getElementById("questionInput").addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        ask();
+      }
+    });
+
+    load();
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.05919",
+  "title": "Finding Most Influential Sets",
+  "abstract": "Identifying most influential sets (MIS) - size-$k$ subsets whose removal maximally changes a target estimand - is typically infeasible because it requires searching over $\\binom{n}{k}$ subsets. For estimands with linear-fractional leave-set-out effects, we show that MIS selection reduces to a one-parameter sequence of top-$k$ problems. Dinkelbach's method yields an algorithm with $\\mathcal{O}(n)$ cost per iteration and finite termination. For fixed residualized inputs, the algorithm returns a globally optimal set for the univariate ratio objective, including the oracle-residualized partial linear model. With estimated nuisance functions, uniform denominator and generated-score stability imply approximation to the first-order oracle orthogonal-score objective; exact set recovery follows under a separation condition. Simulations and applications show that the method recovers exact MIS that were previously computationally inaccessible.",
+  "link": "https://arxiv.org/abs/2606.05919",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "econ.EM",
+    "stat.CO"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883421+00:00"
+}

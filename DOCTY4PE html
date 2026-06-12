@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRU • NEW TESTAMENT</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #0f0f0f;
+            color: #e0e0e0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: #1a1a1a;
+            padding: 12px 20px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .chat-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .message {
+            max-width: 80%;
+            padding: 14px 18px;
+            border-radius: 18px;
+            line-height: 1.5;
+        }
+        .user {
+            align-self: flex-end;
+            background: #3b82f6;
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+        .tru {
+            align-self: flex-start;
+            background: #27272a;
+            border-bottom-left-radius: 4px;
+        }
+        .verse {
+            background: #1f2937;
+            padding: 16px;
+            border-radius: 12px;
+            margin-top: 8px;
+            font-size: 1.05em;
+        }
+        .reference {
+            font-size: 0.9em;
+            color: #60a5fa;
+            margin-bottom: 6px;
+        }
+        input-area {
+            background: #1a1a1a;
+            padding: 12px 20px;
+            border-top: 1px solid #333;
+            display: flex;
+            gap: 10px;
+        }
+        input {
+            flex: 1;
+            padding: 14px 18px;
+            background: #27272a;
+            border: none;
+            border-radius: 9999px;
+            color: white;
+            font-size: 1.05em;
+        }
+        button {
+            padding: 0 28px;
+            background: #eab308;
+            color: black;
+            border: none;
+            border-radius: 9999px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .header-title {
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-title">TRU • NEW TESTAMENT</div>
+        <div style="font-size:0.9em; color:#888;">offline • plain words for everyone</div>
+    </header>
+
+    <div class="chat-container" id="chat">
+        <!-- Messages will appear here -->
+        <div class="message tru">
+            Hello. Ask me anything about life, money, sin, fear, decisions, love, etc.
+        </div>
+    </div>
+
+    <div class="input-area">
+        <input type="text" id="userInput" placeholder="Ask anything — life, money, sin, fear, decisions..." onkeypress="if(event.key==='Enter') sendMessage()">
+        <button onclick="sendMessage()">Ask TRU</button>
+    </div>
+
+    <script>
+        // Simple embedded example verses (you can expand this massively)
+        const verses = [
+            { ref: "Matthew 6:25", text: "Therefore I say unto you, Take no thought for your life, what ye shall eat, or what ye shall drink; nor yet for your body, what ye shall put on. Is not the life more than meat, and the body than raiment?" },
+            { ref: "Matthew 6:34", text: "Take therefore no thought for the morrow: for the morrow shall take thought for the things of itself. Sufficient unto the day is the evil thereof." },
+            { ref: "1 Corinthians 13:1", text: "If I speak in the tongues of men or of angels, but do not have love, I am only a resounding gong or a clanging cymbal." },
+            { ref: "Matthew 7:14", text: "Because strait is the gate, and narrow is the way, which leadeth unto life, and few there be that find it." },
+            // Add hundreds more here later
+        ];
+
+        function sendMessage() {
+            const input = document.getElementById("userInput");
+            const query = input.value.trim();
+            if (!query) return;
+
+            // Add user message
+            addMessage(query, "user");
+
+            // Simulate TRU response
+            setTimeout(() => {
+                const response = getRelevantVerses(query);
+                addMessage(response, "tru");
+            }, 400);
+
+            input.value = "";
+        }
+
+        function addMessage(text, sender) {
+            const chat = document.getElementById("chat");
+            const div = document.createElement("div");
+            div.className = `message ${sender}`;
+            
+            if (sender === "tru") {
+                div.innerHTML = text;
+            } else {
+                div.textContent = text;
+            }
+            chat.appendChild(div);
+            chat.scrollTop = chat.scrollHeight;
+        }
+
+        function getRelevantVerses(query) {
+            const q = query.toLowerCase();
+            let results = verses.filter(v => 
+                v.text.toLowerCase().includes(q) || 
+                v.ref.toLowerCase().includes(q)
+            );
+
+            if (results.length === 0) {
+                return `<div>Searching the scriptures...</div>
+                        <div class="verse">
+                            <div class="reference">Matthew 6:25</div>
+                            "Therefore I say unto you, Take no thought for your life..."
+                        </div>`;
+            }
+
+            let html = "";
+            results.forEach(v => {
+                html += `
+                    <div class="verse">
+                        <div class="reference">${v.ref}</div>
+                        ${v.text}
+                    </div>`;
+            });
+            return html;
+        }
+    </script>
+</body>
+</html>

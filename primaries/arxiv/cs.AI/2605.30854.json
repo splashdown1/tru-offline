@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30854",
+  "title": "Safe Equilibrium Policy Optimization for Strategic Agent Policies",
+  "abstract": "Language models fine-tuned with reinforcement learning typically optimize for task reward, ignoring multi-agent strategic structure. Because these agents condition on natural language game-state descriptions and emit actions through free-form generation, strategic failure modes -- exploiting weaker opponents, coordinating on harmful equilibria, and externalizing costs are inseparable from the language interface itself. We propose Safe Equilibrium Policy Optimization (\\sepo{}), a training objective that augments expected payoff with explicit penalties for exploitability, collusion risk, and externality cost. We implement \\sepo{} as a reward signal for Group Relative Policy Optimization (GRPO), applied to Gemma~4 E4B-it and Qwen~3.5-4B after supervised fine-tuning (SFT). Evaluated across five strategic domains: Iterated Prisoner's Dilemma, repeated auctions, two negotiation variants, and Kuhn Poker. \\sepo{} achieves zero exploit-pool advantage in Kuhn Poker for both models, outperforms the base model on safety in four domains, and corrects the over-cooperative behavior introduced by SFT. In negotiation, \\sepo{} achieves a positive-safety outcome and only the positive normalized relative advantage of any negotiation configuration. Ablation experiments confirm that per-rollout exploit computation is necessary: a shared constant penalty cancels in GRPO advantage normalization (constant control-variate property), producing zero gradient. To support further research in strategic safety for agents, we release our \\href{https://anonymous.4open.science/r/sepo-2668/README.md}{code} and SFT datasets.",
+  "link": "https://arxiv.org/abs/2605.30854",
+  "category": "cs.AI",
+  "categories": [
+    "cs.MA",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358157Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30573",
+  "title": "Zeroth-Order Non-Log-Concave Sampling with Variance Reduction and Applications to Inverse Problems",
+  "abstract": "Sampling from high-dimensional, non-log-concave distributions with unnormalized densities remains a fundamental challenge in machine learning, particularly in black-box settings where gradient information is inaccessible or computationally prohibitive. While Langevin dynamics provides a principled framework for sampling when gradients are accessible, its extension to the black-box settings suffers from high variance and lacks non-asymptotic convergence guarantees for non-log-concave sampling. To address these limitations, we propose a variance-reduced zeroth-order Langevin sampling method. Our method employs a gradient estimator that substantially reduces the variance of the classical batched zeroth-order estimator and eliminates the unfavorable dimensional dependence of the batch size required for accurate estimation, enabling practical and stable sampling. We establish the first non-asymptotic convergence guarantees for zeroth-order non-log-concave sampling in terms of $\\varepsilon$-relative Fisher information, and, under a Poincar\\'e inequality assumption, squared total variation distance. We further propose ZO-APMC, a posterior sampling algorithm for black-box inverse problems with pre-trained score-based generative priors, establishing the first non-asymptotic convergence guarantees for such methods. We validate our theory through synthetic experiments and demonstrate strong empirical performance on practical linear and nonlinear inverse problems.",
+  "link": "https://arxiv.org/abs/2605.30573",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306674Z"
+}

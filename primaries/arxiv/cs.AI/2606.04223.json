@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.04223",
+  "title": "Consensus is Strategically Insufficient: Reasoning-Trace Disagreement as a Knowledge-Representation Signal",
+  "abstract": "Multi-agent systems are commonly designed to reduce disagreement through voting, consensus protocols, debate, or fault-tolerant aggregation. We argue that this objective is insufficient for value-laden tasks, where disagreement may reflect genuine normative uncertainty rather than agent error. Building on prior work on reasoning-trace disagreement in human-AI collaborative moderation, we propose a knowledge-representation layer in which reasoning traces and agent decisions are abstracted into symbolic disagreement states. Given agents producing explicit reasoning traces and binary decisions, we distinguish four states according to reasoning similarity and conclusion agreement: convergent agreement, divergent agreement, convergent disagreement and divergent disagreement. These states support defeasible strategic routing rules. We instantiate the framework in content moderation and argue that disagreement-aware routing provides a bridge between sub-symbolic LLM deliberation and symbolic knowledge representation for multi-agent strategic reasoning.",
+  "link": "https://arxiv.org/abs/2606.04223",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097392+00:00"
+}

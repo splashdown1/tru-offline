@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30509",
+  "title": "Improved Distribution Estimation in $\\ell_\\infty$",
+  "abstract": "We present improved bounds for estimating discrete probability distributions under the $\\ell_\\infty$ norm. These include minimax bounds in expectation and high-probability tail bounds. We resolve some of the open questions posed in Kontorovich and Painsky (JMLR, 2025) -- including a fully empirical version of the tightest risk bound they presented and identifying the form of the worst-case extremal distribution. Encouraging empirical results are reported as well.",
+  "link": "https://arxiv.org/abs/2605.30509",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307262Z"
+}

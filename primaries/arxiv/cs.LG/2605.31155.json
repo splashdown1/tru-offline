@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31155",
+  "title": "Learning Hyperspherical Time-Frequency Representations for Time-Series Out-of-Distribution Detection",
+  "abstract": "Out-of-distribution (OOD) detection for time-series data remains comparatively underexplored compared to vision and language, with a limited principled understanding of how supervised time-series representations can be leveraged for reliable detection under distributional shifts. This work formulates time-series OOD detection as representation learning with hyperspherical embeddings, where class-conditional structure is induced by a von Mises-Fisher (vMF) likelihood-based objective on the unit sphere. The learned representation combines time- and frequency-domain views of the input signal via domain-specific encoders, integrating them into a joint embedding space for OOD detection. Detection uses distance-based scores over the learned embeddings, including k-nearest neighbors (k-NN) and Mahalanobis scores. We evaluate the approach at scale on the complete UCR and UEA time-series archives under a cross-dataset protocol. Empirical results show consistent improvements under both k-NN and Mahalanobis scoring over strong contrastive learning and post-hoc baselines in the same setting. Code is available at https://github.com/tiiuae/hypertf-time-series-ood.",
+  "link": "https://arxiv.org/abs/2605.31155",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306979Z"
+}

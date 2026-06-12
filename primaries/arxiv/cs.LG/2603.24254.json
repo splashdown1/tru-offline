@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.24254",
+  "title": "Beyond Static Uncertainty: Modeling Temporal Uncertainty Dynamics for Probabilistic Time Series Forecasting",
+  "abstract": "Real-world time series exhibit temporally structured uncertainty: volatility clusters in turbulent regimes, dissipates in stable periods, and shifts abruptly around structural breaks. Yet many probabilistic forecasting methods estimate predictive uncertainty as an independent per-step quantity, leaving the evolution and persistence of volatility regimes under-modeled. We formalize this missing dimension as temporal uncertainty dynamics and instantiate it in the Volatility Dynamics Variational Autoencoder (VolDy-VAE), a non-autoregressive generative forecaster with a location-scale decoder. VolDy-VAE combines a location path for mean prediction with a recurrent scale path that transfers and evolves a volatility hidden state from the look-back window to the forecasting horizon, enabling temporally coherent predictive variances. This design yields an adaptive attenuation mechanism: high-variance observations receive lower influence on the location estimate while their uncertainty is preserved through explicit scale predictions. We further provide a simplified regime-switching analysis showing that, when variances are known or consistently estimated, the volatility-aware objective reduces to inverse-variance weighting, whereas MSE-based estimators remain unbiased but statistically inefficient. Experiments on nine benchmarks show that VolDy-VAE improves forecasting accuracy and uncertainty calibration over competitive probabilistic and point-forecasting baselines while maintaining low inference latency; plug-in studies further indicate that the VolDy principle can benefit GAN, Koopman VAE, and Transformer backbones. The source code is publicly available at https://github.com/wangyijunlyy/VolDy-VAE.",
+  "link": "https://arxiv.org/abs/2603.24254",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308003Z"
+}

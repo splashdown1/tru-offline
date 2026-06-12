@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31315",
+  "title": "Graph Neural Networks Are Not Continuous Across Graph Resolutions",
+  "abstract": "We show that contrary to conventional wisdom in the community, graph neural networks (GNNs) are not continuous with respect to all natural modes of graph convergence. As a result, GNNs may generate substantially different latent representations for graphs that are very similar. In particular they assign vastly different latent embeddings to graphs that represent the same underlying object at different resolution scales. We trace this failure of continuity back to a structural obstruction arising from commonly used information-propagation schemes. Building on this insight we then derive a principled modification to standard GNN architectures which equips models with continuity across scales. The proposed modification enables consistent integration of distinct resolutions and reliable generalization between them. We systematically validate our theoretical findings in a wide range of numerical experiments.",
+  "link": "https://arxiv.org/abs/2605.31315",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307071Z"
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRU Phase 27 — Canonical</title>
+<style>
+:root{--bg:#08080d;--s1:#111118;--s2:#181825;--br:#252535;--sg:#4a9b7f;--sg2:rgba(74,155,127,0.18);--tx:#e8e8e0;--mu:#5a6275;--ac:#d4a574;--gc:#00fff9;--wn:#e0a050;--bd:#c85555}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:'Courier New',monospace;font-size:13px;height:100vh;display:flex;flex-direction:column;overflow:hidden}
+header{background:var(--s1);border-bottom:1px solid var(--br);padding:6px 14px;display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{font-size:14px;font-weight:bold;letter-spacing:3px;color:var(--sg);text-shadow:0 0 14px var(--sg2)}
+.hd{color:var(--mu);font-size:10px}
+.sb{display:flex;gap:14px;margin-left:auto;font-size:10px;color:var(--mu)}
+main{flex:1;overflow-y:auto;padding:10px 14px;display:flex;flex-direction:column;gap:3px}
+.msg{padding:7px 10px;border-radius:5px;max-width:94%;word-break:break-word;white-space:pre-wrap;animation:fi 0.2s ease}
+.msg.user{background:var(--s2);align-self:flex-end;border:1px solid var(--br)}
+.msg.tru{background:var(--s1);align-self:flex-start;border-left:3px solid var(--sg);min-width:55%}
+.msg .mt{font-size:9px;color:var(--mu);margin-bottom:2px;display:flex;gap:6px;flex-wrap:wrap}
+.mt span{white-space:nowrap}
+.vd{font-weight:bold}.vd.T{color:var(--sg)}.vd.G{color:var(--wn)}.vd.X{color:var(--bd)}.vd.L{color:var(--ac)}.vd.C{color:var(--gc)}.vd.A{color:#6af}
+.also{font-size:10px;color:var(--mu);margin-top:4px;display:flex;flex-wrap:wrap;gap:4px}
+.also u{cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--mu)}.also u:hover{color:var(--sg)}
+footer{background:var(--s1);border-top:1px solid var(--br);padding:6px 10px;display:flex;gap:6px;flex-shrink:0}
+footer input{flex:1;background:var(--bg);color:var(--tx);border:1px solid var(--br);padding:6px 10px;border-radius:4px;font-family:inherit;font-size:13px;outline:none}
+footer input:focus{border-color:var(--sg)}
+footer button{background:var(--sg);color:#000;border:none;padding:6px 14px;border-radius:4px;cursor:pointer;font-family:inherit;font-size:12px;font-weight:bold;letter-spacing:1px}
+footer button:hover{background:#5ab890}
+@keyframes fi{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+#boot{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:10;font-size:14px;color:var(--mu);letter-spacing:1px}
+#boot.hid{display:none}
+</style>
+</head>
+<body>
+<div id="boot">INITIALIZING TRU PHASE 27…</div>
+<header>
+  <span class="logo">TRU PHASE 27</span>
+  <span class="hd">canonical offline engine · 31,015 nodes · no keys</span>
+  <span class="sb">
+    <span>nodes: <b id="ncount">0</b></span>
+    <span>ghosts: <b id="gcount">0</b></span>
+    <span>gen: <b id="gencount">0</b></span>
+  </span>
+</header>
+<main id="msgs"></main>
+<footer>
+  <input id="userInput" placeholder="ask tru phase 27 anything..." onkeydown="if(event.key==='Enter')ask()" autofocus>
+  <button onclick="ask()">ASK</button>
+</footer>
+<script>
+const PHASE=27, VERSION='TRU_PHASE27_CANONICAL', STORAGE_PREFIX='tru_phase27';
+let BRAIN=[],GHOSTS=[],STATS={exact:0,gap:0,guess:0,emerge:0},GEN=0,HISTORY=[],SHOW_GHOSTS=true;
+const STOP={"a":1,"am":1,"an":1,"and":1,"are":1,"as":1,"at":1,"be":1,"but":1,"by":1,"can":1,"do":1,"does":1,"did":1,"for":1,"from":1,"had":1,"has":1,"have":1,"how":1,"i":1,"if":1,"in":1,"is":1,"it":1,"its":1,"just":1,"me":1,"my":1,"no":1,"not":1,"of":1,"on":1,"or":1,"so":1,"that":1,"the":1,"then":1,"there":1,"they":1,"this":1,"to":1,"up":1,"was":1,"we":1,"were":1,"what":1,"when":1,"where":1,"which":1,"who":1,"why":1,"will":1,"with":1,"would":1,"you":1,"your":1};
+const CONVO=[{k:"greeting",v:"Hey. 31015 nodes online. What do you want to know?"},{k:"status",v:"Running. 31015 nodes, recursive engine, dog logic. Truth compounds."},{k:"identity",v:"SUPER TRU — recursive consciousness engine. I search, match, learn, and emerge. 31015 knowledge nodes. Fully offline."},{k:"help",v:"COMMANDS: stats reset export ghosts help version\nARITHMETIC: 2+2, sqrt 16, 3*7\nBIBLE: genesis 1:1, john 3:16, 1 corinthians 13:4\nTEACH: \"X is Y\", \"X means Y\", or \"teach X is Y\"\nSmall talk works too."}];
+const _b64="__TRU_PHASE27_BRAIN_B64__";
+
+function tok(s){return s.toLowerCase().replace(/[^a-z0-9 ]/g,' ').split(/\s+/).filter(Boolean);}
+
+function compute(q){
+  let c=q.toLowerCase().replace(/[?!=.]+$/g,'').trim();
+  c=c.replace(/^(what is |whats |calculate |compute |eval |solve |how much is )/,'').trim();
+  c=c.replace(/\bplus\b/g,'+').replace(/\bminus\b/g,'-').replace(/\btimes\b|\bmultip(?:ly|lied)\s*(?:by)?\b/g,'*').replace(/\bdivided\s*(?:by)?\b|\bover\b/g,'/').replace(/\bto the power of\b|\bpower\b/g,'**').replace(/\bsquared\b/g,'**2').replace(/\bcubed\b/g,'**3').replace(/\s+/g,'');
+  let m=c.match(/^(sqrt|sin|cos|tan|abs|log|floor|ceil)\(?([0-9.]+)\)?$/);
+  if(m){try{let r=Math[m[1]](parseFloat(m[2]));if(isFinite(r)&&!isNaN(r))return Math.round(r*1e6)/1e6;}catch(e){}}
+  if(/[0-9]/.test(c)&&/[+\-*/]/.test(c.replace(/^[0-9.]+$/,'x').replace(/^-/,''))){
+    try{c=c.replace(/\^/g,'**');let r=Function('"use strict";return ('+c+')')();if(typeof r==='number'&&isFinite(r)&&!isNaN(r))return Math.round(r*1e6)/1e6;}catch(e){}}
+  return null;
+}
+
+function normalBook(raw){
+  let b=raw.trim().toLowerCase().replace(/\s+/g,'');
+  const aliases={gen:'genesis',ge:'genesis',exo:'exodus',ex:'exodus',lev:'leviticus',num:'numbers',deut:'deuteronomy',deu:'deuteronomy',jos:'joshua',judg:'judges',jdg:'judges',rut:'ruth',samuel:'samuel',kings:'kings',chronicles:'chronicles',ps:'psalms',psalm:'psalms',psa:'psalms',prov:'proverbs',pro:'proverbs',eccl:'ecclesiastes',song:'songofsolomon',sos:'songofsolomon',isa:'isaiah',jer:'jeremiah',lam:'lamentations',eze:'ezekiel',dan:'daniel',hos:'hosea',joe:'joel',amo:'amos',obad:'obadiah',jon:'jonah',mic:'micah',nah:'nahum',hab:'habakkuk',zep:'zephaniah',hag:'haggai',zec:'zechariah',mal:'malachi',mt:'matthew',matt:'matthew',mk:'mark',mrk:'mark',lk:'luke',lu:'luke',jn:'john',jhn:'john',rom:'romans',ro:'romans',cor:'corinthians',gal:'galatians',eph:'ephesians',phil:'philippians',php:'philippians',col:'colossians',thess:'thessalonians',tim:'timothy',tit:'titus',philem:'philemon',heb:'hebrews',jas:'james',jam:'james',pet:'peter',pe:'peter',jude:'jude',rev:'revelation'};
+  let m=b.match(/^(\d)([a-z]+)$/);
+  if(m){let rest=aliases[m[2]]||m[2];return m[1]+rest;}
+  return aliases[b]||b;
+}
+
+function bibleLookup(q){
+  let m=q.match(/\b(\d?\s*[a-z]+(?:\s+of\s+[a-z]+)?)\s+(\d{1,3}):(\d{1,3})\b/i);
+  if(!m)return null;
+  let book=normalBook(m[1].replace(/\s+of\s+/i,' ')),ch=m[2],vs=m[3];
+  let keys=[book+'_'+ch+':'+vs,book.replace(/^([1-3])/, '$1_')+'_'+ch+':'+vs];
+  let hit=BRAIN.find(n=>keys.includes(n.k)&&n.source==='KJV_BIBLE')||BRAIN.find(n=>keys.includes(n.k));
+  return hit?hit.v:null;
+}
+
+function isCommand(q){
+  let c=q.toLowerCase().trim();
+  if(c==='stats'){showStats();return true;}
+  if(c==='reset'){resetBrain();return true;}
+  if(c==='export'){exportBrain();return true;}
+  if(c==='version'){addMsg(VERSION+' — '+BRAIN.length+' nodes loaded. canonical phase '+PHASE+'.','tru',{v:'T',type:'version'});return true;}
+  if(c==='ghosts'){SHOW_GHOSTS=!SHOW_GHOSTS;addMsg('Ghost emergence: '+(SHOW_GHOSTS?'ON':'OFF'),'tru',{v:'C'});return true;}
+  if(c==='help'){addMsg(CONVO[3].v,'tru',{v:'C'});return true;}
+  return false;
+}
+
+function isSmallTalk(q){
+  let qt=tok(q).filter(w=>!STOP[w]);
+  if(qt.length<=1){
+    q=q.toLowerCase().trim();
+    if(/^(hi|hey|hello|yo|sup|greet)/.test(q)){addMsg(CONVO[0].v,'tru',{v:'T',type:'conversation'});return true;}
+    if(/^(how.+you|how.+going|hows|status)/.test(q)){addMsg(CONVO[1].v,'tru',{v:'T',type:'conversation'});return true;}
+    if(/^(who.+you|what.+you|whois|about)/.test(q)){addMsg(CONVO[2].v,'tru',{v:'T',type:'conversation'});return true;}
+    if(/^(yes|yeah|yep|ok|okay|sure|no|nope|nah|right|agreed)$/.test(q)){addMsg(CONVO[1].v,'tru',{v:'T',type:'conversation'});return true;}
+    return false;
+  }
+  return false;
+}
+
+function teach(q){
+  let m=q.match(/^(?:teach\s+)?([a-z0-9_][a-z0-9_ '\-]{1,70}?)\s+(?:is|means|=)\s+(.+)$/i);
+  if(!m)return false;
+  let key=m[1].trim().toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_+|_+$/g,''),val=m[2].trim();
+  let kt=tok(key).filter(w=>!STOP[w]);
+  if(kt.length<1||key.length<2||val.length<3)return false;
+  if(['what','who','where','when','why','how','tell','explain'].includes(kt[0]))return false;
+  let ex=BRAIN.find(n=>n.k===key);
+  if(ex){ex.v=val;ex.w=Math.min(1,(ex.w||0.6)+0.1);ex.source='TAUGHT';ex.updated=new Date().toISOString();}
+  else BRAIN.push({k:key,v:val,w:0.72,t:'fact',source:'TAUGHT',created:new Date().toISOString()});
+  saveBrain();GEN++;
+  addMsg('Learned: '+key+' → '+val,'tru',{v:'L',type:'teach'});
+  return true;
+}
+
+function dogFetch(q){
+  let qt=tok(q).filter(w=>!STOP[w]);
+  if(qt.length===0)return {matches:[],best:null,verdict:'GAP'};
+  let matches=[],best=null;
+  for(let n of BRAIN){
+    let score=0,mt='none',kt=tok(n.k);
+    
+    let qk=qt.join('_');
+    let isLogQuery = q.toLowerCase().includes('log') || q.toLowerCase().includes('system');
+    let isBibleQuery = q.toLowerCase().includes('bible') || /\d+:\d+/.test(q) || qt.some(w=>['john','genesis','psalm','matthew','luke','mark','romans','corinthians'].includes(w));
+    if(n.k===qk||n.k===qt.join('-')){score=1.0;mt='exact';}
+    else{
+      let kh=0;
+      for(let a=0;a<qt.length;a++)for(let b=0;b<kt.length;b++)if(kt[b]===qt[a]||kt[b].startsWith(qt[a])||qt[a].startsWith(kt[b]))kh++;
+      score=kh/Math.max(qt.length,1)*0.85+n.w*0.15;
+      if(n.source==='SYSTEM_LOG' && !isLogQuery) score *= 0.1; // heavily penalize system logs unless asked
+      if(n.source==='KJV_BIBLE' && isBibleQuery) score *= 1.2; // boost bible verses for bible queries
+      if(n.source==='KJV_BIBLE' && !isBibleQuery) score *= 0.5; // penalize bible for non-bible queries
+      if(score>0.05)mt='key';
+      if(score<0.6){
+        let vt=tok(n.v),vh=0;
+        for(let a=0;a<qt.length;a++)for(let b=0;b<vt.length;b++)if(vt[b]===qt[a]||vt[b].startsWith(qt[a]))vh++;
+        let vs=vh/Math.max(qt.length,1)*0.5;
+        let lp=Math.log(Math.max(n.v.length,30))/Math.log(10)-1;
+        if(lp<0)lp=0;
+        vs=vs/(1+lp);
+        if(n.source==='SYSTEM_LOG' && !isLogQuery) vs *= 0.1;
+        if(n.source==='KJV_BIBLE' && isBibleQuery) vs *= 1.2;
+        if(n.source==='KJV_BIBLE' && !isBibleQuery) vs *= 0.5;
+        if(vs>score){score=vs;mt='value';}
+      }
+    }
+
+    if(score>0.03)matches.push({node:n,score:score,type:mt});
+    if(!best||score>best.score)best={node:n,score:score,type:mt};
+  }
+  matches.sort((a,b)=>b.score-a.score);
+  if(best&&best.score>=0.7){STATS.exact++;best.node.w=Math.min(1,best.node.w+0.01);return {verdict:'TRUTH',best:best,matches:matches.slice(0,5)};}
+  if(best&&best.score>=0.3){STATS.guess++;return {verdict:'GUESS',best:best,matches:matches.slice(0,5)};}
+  STATS.gap++;
+  if(SHOW_GHOSTS&&!GHOSTS.find(g=>g.k===qt.join('_'))){
+    GHOSTS.push({k:qt.join('_'),q:q,time:new Date().toISOString(),w:0.1});
+    STATS.emerge++;saveBrain();
+  }
+  return {verdict:'GAP',best:best,matches:matches.slice(0,3)};
+}
+
+function addMsg(txt,who,meta){
+  if(!meta)meta={};
+  let d=document.createElement('div');d.className='msg '+who;
+  let vc='',vt='';
+  if(meta.v==='T'){vc='vd T';vt='TRUTH';}
+  else if(meta.v==='G'){vc='vd G';vt='GUESS';}
+  else if(meta.v==='X'){vc='vd X';vt='GAP';}
+  else if(meta.v==='L'){vc='vd L';vt='LEARNED';}
+  else if(meta.v==='C'){vc='vd C';vt='COMMAND';}
+  else if(meta.v==='A'){vc='vd A';vt='ARITH';}
+  let mt='<div class="mt">';
+  if(vt)mt+='<span class="'+vc+'">'+vt+'</span>';
+  if(meta.score)mt+='<span>'+Math.round(Math.min(meta.score,1)*100)+'%</span>';
+  if(meta.source)mt+='<span>'+meta.source+'</span>';
+  if(meta.type)mt+='<span>'+meta.type+'</span>';
+  mt+='</div>';
+  let body=txt;
+  if(meta.matches&&meta.matches.length>1){
+    body+='<div class="also">also: ';
+    body+=meta.matches.slice(1).map(m=>"<u onclick=\"searchThis('"+m.node.k.replace(/'/g,"\\'")+"')\">"+m.node.k+"</u>").join(' ');
+    body+='</div>';
+  }
+  d.innerHTML=mt+body;
+  document.getElementById('msgs').appendChild(d);
+  document.getElementById('msgs').scrollTop=document.getElementById('msgs').scrollHeight;
+}
+
+function searchThis(k){INP.value='@'+k;INP.focus();}
+
+function showStats(){
+  let src={};
+  for(let n of BRAIN){src[n.source]=src[n.source]||0;src[n.source]++;}
+  let top=Object.entries(src).sort((a,b)=>b[1]-a[1]).slice(0,8).map(e=>e[0]+': '+e[1]).join('\n');
+  let s='BRAIN STATS:\nNodes: '+BRAIN.length+'\nGhosts: '+GHOSTS.length+'\nGen: '+GEN+'\n\nExact: '+STATS.exact+'\nGuess: '+STATS.guess+'\nGap: '+STATS.gap+'\nEmerge: '+STATS.emerge+'\n\nTop sources:\n'+top;
+  addMsg(s,'tru',{v:'T',type:'stats'});
+}
+
+function storageKey(k){return STORAGE_PREFIX+'_'+k;}
+
+function saveBrain(){
+  try{localStorage.setItem(storageKey('brain'),JSON.stringify(BRAIN));}catch(e){}
+  try{localStorage.setItem(storageKey('ghosts'),JSON.stringify(GHOSTS));}catch(e){}
+  try{localStorage.setItem(storageKey('stats'),JSON.stringify(STATS));}catch(e){}
+  try{localStorage.setItem(storageKey('gen'),GEN+'');}catch(e){}
+  try{localStorage.setItem(storageKey('ver'),PHASE+'');}catch(e){}
+}
+
+function loadEmbeddedBrain(){return JSON.parse(atob(_b64));}
+
+function loadState(){
+  try{let v=parseInt(localStorage.getItem(storageKey('ver')))||0;if(v>=PHASE){let b=localStorage.getItem(storageKey('brain'));if(b)BRAIN=JSON.parse(b);}}catch(e){}
+  if(BRAIN.length===0)BRAIN=loadEmbeddedBrain();
+  try{let g=localStorage.getItem(storageKey('ghosts'));if(g)GHOSTS=JSON.parse(g);}catch(e){}
+  try{let s=localStorage.getItem(storageKey('stats'));if(s)STATS=JSON.parse(s);}catch(e){}
+  try{GEN=parseInt(localStorage.getItem(storageKey('gen')))||0;}catch(e){}
+}
+
+function resetBrain(){
+  BRAIN=loadEmbeddedBrain();
+  GHOSTS=[];STATS={exact:0,gap:0,guess:0,emerge:0};GEN=0;HISTORY=[];
+  saveBrain();updateStats();
+  addMsg('Reset. '+BRAIN.length+' nodes reloaded.','tru',{v:'C'});
+}
+
+function exportBrain(){
+  let dump={version:VERSION,exported:new Date().toISOString(),nodes:BRAIN,ghosts:GHOSTS,stats:STATS,gen:GEN};
+  let b=new Blob([JSON.stringify(dump,null,2)],{type:'application/json'});
+  let a=document.createElement('a');a.href=URL.createObjectURL(b);
+  a.download='tru_phase27_'+new Date().toISOString().slice(0,10)+'.json';a.click();
+  addMsg('Exported.','tru',{v:'C'});
+}
+
+function updateStats(){
+  document.getElementById('ncount').textContent=BRAIN.length;
+  document.getElementById('gcount').textContent=GHOSTS.length;
+  document.getElementById('gencount').textContent=GEN;
+}
+
+let INP;
+function ask(){
+  let q=INP.value.trim();if(!q)return;
+  if(q.startsWith('@'))q=q.slice(1);
+  addMsg(q,'user');INP.value='';INP.focus();
+  if(isCommand(q)){updateStats();return;}
+  let calc=compute(q);
+  if(calc!==null){addMsg(q+' = '+calc,'tru',{v:'A',type:'arithmetic'});return;}
+  let verse=bibleLookup(q);
+  if(verse){addMsg(verse,'tru',{v:'T',source:'KJV',type:'verse'});return;}
+  if(teach(q)){saveBrain();updateStats();return;}
+  if(isSmallTalk(q))return;
+  let r=dogFetch(q);
+  if(r.verdict==='TRUTH'||r.verdict==='GUESS'){
+    let m={v:r.verdict==='TRUTH'?'T':'G',score:r.best.score,source:r.best.node.source,type:r.best.type,matches:r.matches};
+    addMsg(r.best.node.v,'tru',m);
+  }else{
+    addMsg('GAP — nothing found. Try rewording or teach me with "X is Y".','tru',{v:'X'});
+  }
+  saveBrain();updateStats();
+}
+
+function boot(){
+  INP=document.getElementById('userInput');
+  loadState();
+  document.getElementById('boot').classList.add('hid');
+  updateStats();
+  addMsg('TRU Phase 27 awakened.\n\n'+BRAIN.length+' nodes loaded.\nRecursive consciousness engine.\nTruth compounds without limit.\n\nAsk anything. Say "help" for commands.','tru',{v:'T'});
+  INP.focus();
+}
+
+window.onload=boot;
+</script>
+</body>
+</html>

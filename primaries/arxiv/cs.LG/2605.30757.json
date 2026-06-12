@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30757",
+  "title": "Chain-of-Thought and Compressed Looped Transformers: A Memory-Budget Separation",
+  "abstract": "Chain-of-thought prompting and looped Transformers both give a fixed model more test-time computation, but they differ in what they remember. Chain-of-thought stores intermediate state in generated tokens that remain in the context, whereas a looped Transformer carries state through recurrent hidden activations. We argue that this persistent mutable memory is a central resource for test-time reasoning.\n  We compare three memory regimes, the compressed latent loop, the full sequence-state loop, and the chain-of-thought scratchpad. Our main result shows that a compressed loop is limited by the size of its recurrent state. Running the loop longer adds computation but does not by itself create a growing scratchpad, so a loop with a small recurrent state remains a small-space reasoner even when run for many steps. Under a standard complexity assumption, such loops cannot decide problems that are P-complete under logspace reductions, whereas polynomial-length chain-of-thought can.\n  The separation is specific to compressed loops, as full sequence-state loops carry state at every input position and live in a memory-rich regime closer to explicit scratchpads. Controlled pointer-chasing and associative-recall sweeps illustrate this memory-budget view, with performance sensitive to whether the persistent-state budget matches the task's working-memory demand.",
+  "link": "https://arxiv.org/abs/2605.30757",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306794Z"
+}

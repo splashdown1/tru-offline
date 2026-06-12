@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05274",
+  "title": "Anomaly Detection for Electro-Hydrostatic Actuators using LSTM Autoencoder",
+  "abstract": "Electro-Hydrostatic Actuators (EHAs) are widely used in aerospace and industrial systems, where timely detection of sensor anomalies is essential to ensure safe and reliable operation. However, the large volume and high sampling frequency of EHA sensor data pose challenges for accurate and efficient anomaly detection. Conventional statistical and classical machine-learning methods such as Z-score, Interquartile Range (IQR), Median Absolute Deviation (MAD), Isolation Forest, Gaussian Mixture, and k-means often fail to capture the temporal dependencies inherent in EHA signals, resulting in limited detection accuracy and elevated false-alarm rates. Furthermore, systematic evaluations of data-driven anomaly detection approaches for EHA systems remain scarce, particularly under varying operational conditions. This study presents an offline anomaly-detection framework for univariate EHA sensor signals, focusing on temperature and pressure data collected from a controlled test bench. The method employs a reconstruction-based Long Short-Term Memory (LSTM) autoencoder, calibrated and evaluated using validation-set reconstruction-error distributions. Performance is assessed across multiple fault-injection scenarios using accuracy, precision, recall, and F1-score, complemented by sensitivity analyses under varying operating conditions. The LSTM autoencoder achieved an average accuracy of 99.0\\%, precision up to 100\\%, recall between 90.2\\% and 99.6\\%, and F1-scores from 93.1\\% to 99.8\\%, demonstrating high detection sensitivity and a very low false-alarm rate across all evaluated sensors. These results highlight the feasibility of data-driven offline anomaly detection for EHAs. Future work will focus on adapting the developed framework for an online (real-time) environment.",
+  "link": "https://arxiv.org/abs/2606.05274",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.881949+00:00"
+}

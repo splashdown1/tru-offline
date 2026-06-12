@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.13727",
+  "title": "Data-driven Progressive Discovery of Physical Laws",
+  "abstract": "Symbolic regression is a powerful tool for knowledge discovery, enabling the extraction of interpretable mathematical expressions directly from data. However, conventional symbolic discovery typically follows an end-to-end, \"one-step\" process, which often generates lengthy and physically meaningless expressions when dealing with real physical systems, leading to poor model generalization. This limitation fundamentally stems from its deviation from the basic path of scientific discovery: physical laws do not exist in a single form but follow a hierarchical and progressive pattern from simplicity to complexity. Motivated by this principle, we propose Chain of Symbolic Regression (CoSR), a novel framework that models the discovery of physical laws as a chain of symbolic knowledge. This knowledge chain is formed by progressively combining multiple knowledge units with clear physical meanings along a specific logic, ultimately enabling the precise discovery of the underlying physical laws from data. CoSR fully recapitulates the progressive discovery path from Kepler's third law to the law of universal gravitation in classical mechanics, and is applied to three types of problems: turbulent Rayleigh-Benard convection, viscous flows in a circular pipe, and laser-metal interaction, demonstrating its ability to improve classical scaling theories. Finally, CoSR showcases its capability to discover new knowledge in the complex engineering problem of aerodynamic coefficients scaling for different aircraft.",
+  "link": "https://arxiv.org/abs/2603.13727",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "physics.data-an"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307985Z"
+}

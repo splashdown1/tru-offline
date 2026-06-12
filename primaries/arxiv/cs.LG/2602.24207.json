@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2602.24207",
+  "title": "The Stability of Online Algorithms in Performative Prediction",
+  "abstract": "The use of algorithmic predictions in decision-making leads to a feedback loop where the models we deploy actively influence the data distributions we see, and later use to retrain on. This dynamic was formalized by Perdomo et al. 2020 in their work on performative prediction. Our main result is an unconditional reduction showing that any no-regret algorithm deployed in performative settings converges to a (mixed) performatively stable equilibrium: a solution in which models actively shape data distributions in ways that their own predictions look optimal in hindsight. Prior to our work, all positive results in this area imposed strong restrictions on how models influenced distributions. By using a martingale argument and allowing randomization, we avoid any assumption on how populations respond to predictions and sidestep recent hardness results showing that deterministic stable models are in general PPAD-hard to compute. Lastly, on a more conceptual note, our connection sheds light on why common algorithms, like gradient descent, are naturally stabilizing and prevent runaway feedback loops. We hope our work enables future technical transfer of ideas between online optimization and performativity.",
+  "link": "https://arxiv.org/abs/2602.24207",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CY",
+    "cs.GT",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884087+00:00"
+}

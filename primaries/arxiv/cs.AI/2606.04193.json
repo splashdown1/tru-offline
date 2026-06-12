@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04193",
+  "title": "Notarized Agents: Receiver-Attested Confidential Receipts for AI Agent Actions",
+  "abstract": "Current AI agent observability is structurally compromised: the entity producing the activity log is the same entity whose activity is being logged. A compromised or buggy agent can omit, alter, or fabricate its own traces, and the operator running the agent has no independent way to detect tampering. We propose a class of protocols that resolves this by inverting the trust boundary: the service that receives an agent's call signs a receipt of what it observed using its own key, encrypts the receipt to the agent's owner, and publishes it to a public transparency log. The owner reconstructs a tamper-evident trail without trusting the agent or its operator. We instantiate the class as Sello, a protocol combining four properties absent in any current system: (P1) receiver-side signing, (P2) HPKE encryption to an owner public key bound to the authorization token via JWS, (P3) publication to a witness-cosigned Merkle log, and (P4) owner-side discovery by token reference. We describe the protocol, analyze its security under an adversary that controls the agent and its operator, present microbenchmarks of the cryptographic operations, and situate Sello among adjacent receipt-protocol work (Signet, AgentROA, Agent Passport System, draft-farley-acta, SCITT). We discuss known limitations including the suppression attack, service collusion, and the adoption-incentive problem.",
+  "link": "https://arxiv.org/abs/2606.04193",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CR",
+    "cs.AI",
+    "cs.DC"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098024+00:00"
+}

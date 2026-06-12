@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.07096",
+  "title": "Query-efficient model evaluation using cached responses",
+  "abstract": "Evaluating a new model on an existing benchmark is often necessary to understand its behavior before deployment. For modern evaluation frameworks, generating and evaluating a response for all queries can be prohibitively expensive. In practice, responses from previously-evaluated models are often cached -- creating a potential opportunity to use this additional information to decrease the number of queries required to accurately evaluate a new model. In this paper, we introduce an approach for predicting benchmark performance that leverages cached model responses based on the Data Kernel Perspective Space (DKPS), a method for quantifying the relationship between models in the black-box setting. Theoretically, we show that DKPS-based methods are query-efficient under certain conditions. Empirically, we demonstrate that DKPS-based methods achieve the same mean absolute error as baselines with a substantially decreased query budget. We conclude by proposing an offline method for selecting a set of queries that maximizes the goodness-of-fit on reference models, improving prediction accuracy over random query selection.",
+  "link": "https://arxiv.org/abs/2605.07096",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ME"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884223+00:00"
+}

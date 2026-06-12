@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30812",
+  "title": "Learning Permutation-invariant Macroscopic Dynamics",
+  "abstract": "Accurately modeling the macroscopic dynamics of high-dimensional microscopic systems is of broad interest across the sciences. Many data-driven approaches learn a low-dimensional latent state through an autoencoder trained for pointwise input reconstruction. These methods typically assume a fixed ordering of microscopic degrees of freedom in the input. However, in many settings, such as particle systems, the microscopic state is inherently unordered. This motivates an autoencoder framework that learns permutation-invariant latent representations. To this end, we adopt a permutation-invariant encoder and design the decoder to reconstruct the mass distribution centered at the observed points rather than per-sample reconstruction. We then jointly learn the macroscopic dynamics of the observables together with the latent states. We demonstrate the effectiveness and robustness of the proposed method across a range of microscopic settings, including learning the energy dynamics in interacting particle systems, predicting mixing dynamics in Lennard-Jones fluids, and modeling the stretching dynamics from video data of polymers moving in an elongational force field.",
+  "link": "https://arxiv.org/abs/2605.30812",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "physics.comp-ph"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306817Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2412.04605",
+  "title": "Semiparametric Bayesian Difference-in-Differences",
+  "abstract": "This paper studies semiparametric Bayesian inference for the average treatment effect on the treated (ATT) within the difference-in-differences (DiD) research design. We propose two new Bayesian methods with frequentist validity. The first one is the semiparametric Bayesian outcome regression, where we place a Gaussian process prior on the conditional mean function of the control group. The second method is a doubly robust Bayesian procedure that adjusts the prior distribution of the conditional mean function and subsequently corrects the posterior distribution of the resulting ATT. We prove new semiparametric Bernstein-von Mises (BvM) theorems for both proposals. Monte Carlo simulations and an empirical application demonstrate that the proposed Bayesian DiD methods exhibit strong finite-sample performance. We also present extensions of the canonical DiD approach, incorporating clustered data and staggered entry with multiple periods.",
+  "link": "https://arxiv.org/abs/2412.04605",
+  "category": "stat.ML",
+  "categories": [
+    "econ.EM",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.729026+00:00"
+}

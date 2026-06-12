@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.03070",
+  "title": "ASymPO: Asymmetric-Scale Policy Optimization for Asynchronous LLM Post-Training Without Behavior Information",
+  "abstract": "Asynchronous reinforcement learning can improve language-model post-training throughput by decoupling response generation from policy optimization, but stale responses introduce distribution drift. Standard behavior-corrected methods control this drift with behavior-policy probabilities, importance ratios, or clipping, which requires token-aligned, versioned, and numerically consistent behavior log-probabilities across rollout and learner systems. We ask whether asynchronous group-relative RL can instead be stabilized using only current-policy probabilities. We identify a scale-imbalance failure mode: when stale responses are evaluated under the current policy, positive and negative loss terms can appear at different negative log-probability scales, so zero-sum advantages no longer imply balanced loss contributions. We propose Asymmetric-Scale Policy Optimization (ASymPO), which normalizes each response's token loss by its current average token negative log-probability. ASymPO requires no behavior-policy probabilities, restores response-level zero-sum balance, and preserves a nonzero learning signal. We also introduce Scaled Policy Optimization (SPO), a fixed negative-scaling baseline, and evaluate both current-policy-only objectives in asynchronous mathematical reasoning post-training.",
+  "link": "https://arxiv.org/abs/2606.03070",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884315+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30596",
+  "title": "Improving Relative Representations with Learned Anchors and Whitened Inner Products",
+  "abstract": "Independently trained neural models typically converge to incompatible latent representations, creating a fundamental barrier to highly modular AI systems. While Relative Representations (RR) address this by mapping absolute coordinates to a shared space defined by similarities to common anchor points, traditional implementations rely on randomly sampled anchors and cosine similarity, which frequently fail to capture the anisotropic geometries of modern architectures like Transformers. In this work, we propose a robust framework for cross-model communication based on two improvements. We learn anchors as robust semantic prototypes and utilize a geometry-aware similarity metric which preserves discriminative magnitude information and is invariant to affine shifts. Our approach demonstrates significant gains in performance and consistency across vision and language tasks. Notably, it enables nearly lossless information transfer and stable zero-shot communication even between highly heterogeneous architectures, such as small language models of varying scales.",
+  "link": "https://arxiv.org/abs/2605.30596",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306692Z"
+}

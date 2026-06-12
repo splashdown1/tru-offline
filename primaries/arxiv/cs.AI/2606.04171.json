@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04171",
+  "title": "MimeLens: Position-Agnostic Content-Type Detection for Binary Fragments",
+  "abstract": "File-type classification underlies many workflows like malware triage, forensic carving, packet inspection, and storage indexing. Learned systems such as Google's Magika assume whole-file access at a known offset, so they break on the inputs many of these tasks actually produce, like a single packet payload, a header-less carved fragment, a random disk block, or a chunked upload. We introduce MimeLens, a family of small BERT-style encoders pretrained on binary content from windows sampled at a uniformly random offset within each file, with no privileged head-of-file position, in standard- and short-context variants. A byte chunk goes in from anywhere in a file, no header needed and no fixed size; out comes one of libmagic's 125 MIME labels. On the clean head of complete files, MimeLens beats Magika v1.1 by +10.7 pp top-1 on libmagic-labeled data, and it keeps classifying where Magika cannot: from a single mid-stream UDP packet, and more than twice as accurately as libmagic and Magika on random mid-file disk blocks. The cost is latency: MimeLens runs roughly one to two orders of magnitude slower per sample on CPU than Magika, though it matches on consumer GPUs or in batch. All trained checkpoints are released on Hugging Face (mjbommar/mimelens-001-*).",
+  "link": "https://arxiv.org/abs/2606.04171",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098000+00:00"
+}

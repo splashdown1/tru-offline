@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.00068",
+  "title": "The Global Landscape of Environmental AI Regulation: From the Cost of Reasoning to a Right to Green AI",
+  "abstract": "Artificial intelligence (AI) systems impose substantial and growing environmental costs, yet transparency about these impacts has declined even as their deployment has accelerated. This paper makes three contributions. First, we collate empirical evidence that generative Web search and reasoning models - which have proliferated in 2025 - come with much higher cumulative environmental impacts than previous generations of AI approaches. Second, we map the global regulatory landscape across eleven jurisdictions and find that the manner in which environmental governance operates (predominantly at the facility-level rather than the model-level, with a focus on training rather than inference, with limited AI-specific energy disclosure requirements outside the EU) limits its applicability. Third, to address this, we propose a three-pronged policy response: mandatory model-level transparency that covers inference consumption, benchmarks, and compute locations; user rights to opt out of unnecessary generative AI integration and to select environmentally optimized models; and international coordination to prevent regulatory arbitrage. We conclude with concrete legislative proposals - including amendments to the EU AI Act, Consumer Rights Directive, and Digital Services Act - that could serve as templates for other jurisdictions.",
+  "link": "https://arxiv.org/abs/2603.00068",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CY",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358853Z"
+}

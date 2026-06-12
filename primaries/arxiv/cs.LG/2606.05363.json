@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.05363",
+  "title": "Should Demand Models Incorporate Competitor Prices? Oblivious Learning and Algorithmic Collusion",
+  "abstract": "On a platform with many sellers, should a pricing algorithm explicitly model competitors' prices when learning demand? Classical learning arguments suggest an affirmative answer: ignoring competitors induces model misspecification and inefficiency. In contrast, recent work on algorithmic collusion suggests that strategic obliviousness -- deliberately ignoring competitor prices -- may facilitate collusive outcomes and improve profits. We study this modeling choice in a stylized competitive market with unknown noisy demand, in which multiple sellers repeatedly set prices and estimate demand via iterated least squares, and either incorporate competitors' prices into their demand models (informed) or ignore them (oblivious). We first show that, relative to a monopolist, an oblivious seller in a competitive market must explore more aggressively to compensate for the loss of dynamic competitor information. Building on this insight, we characterize market dynamics when all sellers are oblivious and show that prices converge to the competitive outcome under sufficient exploration, while a continuum of pseudo-equilibria arises when exploration decays. Analyzing the resulting price trajectories, we uncover an excursion phenomenon that gives rise to transient collusive patterns that dissipate as learning progresses. In markets with both oblivious and informed sellers, the informed strictly out-earn the oblivious. Read as a strategy game, the modeling choice has a unique Nash equilibrium: the all-informed market, in which prices converge to the competitive outcome efficiently. Overall, our results indicate that collusive patterns are not robust and are not sustained by oblivious modeling; therefore, incorporating competitor information, together with sufficient price exploration, remains a reliable strategy for sellers in competitive markets.",
+  "link": "https://arxiv.org/abs/2606.05363",
+  "category": "cs.LG",
+  "categories": [
+    "cs.GT",
+    "cs.LG",
+    "econ.TH",
+    "math.OC"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883009+00:00"
+}

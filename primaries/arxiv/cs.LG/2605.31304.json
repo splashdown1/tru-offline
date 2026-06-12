@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31304",
+  "title": "Interpretability Without Tradeoffs: Disentangling Polysemanticity At Equal Predictive Performance",
+  "abstract": "Deep neural networks (DNNs) are widely used, but interpreting what they actually learn remains difficult. A major obstacle is that individual neurons often encode multiple unrelated concepts, obscuring the decision process of the network. While prior work, such as sparse autoencoders, can separate these mixed signals into more meaningful, \"monosemantic\" features, this typically requires altering the model in ways that can degrade downstream performance. To overcome this, we introduce ELUDe (explicit, lossless, unsupervised disentanglement), a method for improving the interpretability of DNNs while preserving their functional equivalence. ELUDe breaks latent representations into clear, inspectable sub-units that behave like interpretable features, while guaranteeing that the model's outputs remain exactly the same. It requires no explicit training, no labels, and can be applied to pretrained models. ELUDe works by reorganizing how information flows between layers, re-routing concept-specific contributions while preserving the original computation by construction. Across several vision models, including DINOv2 and supervised ViT-B/16, ELUDe improves interpretability, keeps downstream accuracy unchanged, runs efficiently, and supports practical uses such as steering model representations. In short, ELUDe offers interpretability (almost) without a tradeoff: clearer, scalable, and actionable model insights with no loss in performance.",
+  "link": "https://arxiv.org/abs/2605.31304",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307064Z"
+}

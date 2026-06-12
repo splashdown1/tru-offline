@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2509.25289",
+  "title": "ClustRecNet: A Novel End-to-End Deep Learning Framework for Clustering Algorithm Recommendation",
+  "abstract": "Identifying an effective clustering algorithm for a given dataset remains a fundamental unsupervised learning issue. We introduce ClustRecNet, a novel end-to-end deep learning framework that recommends suitable clustering algorithm(s) by directly learning high-order representations of raw tabular data. To facilitate robust meta-learning, we first construct a comprehensive repository of 34,000 synthetic datasets encompassing a large variety of clustering scenarios, run 10 popular clustering algorithms, and use Adjusted Rand Index (ARI) to establish ground-truth labels. ClustRecNet's architecture incorporates a convolution block, two residual blocks, and an attention block to capture local and global structural patterns, effectively bypassing the knowledge bottleneck associated with manual feature engineering. Extensive evaluation on both synthetic and real-world benchmarks demonstrates that ClustRecNet consistently outperforms traditional internal cluster validity indices such as Silhouette, Calinski-Harabasz, Davies-Bouldin, and Dunn as well as state-of-the-art Automated Machine Learning (AutoML) approaches such as ML2DAC, AutoCluster, and AutoML4Clust. For example, our framework achieves an average 0.497 ARI gain over the Calinski-Harabasz cluster validity index on synthetic data and an average 44.16% ARI improvement over the leading AutoML approach (ML2DAC) on real-world benchmarks. Code and data are available at: https://github.com/mrbakhtyari/ClustRecNet",
+  "link": "https://arxiv.org/abs/2509.25289",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098864+00:00"
+}

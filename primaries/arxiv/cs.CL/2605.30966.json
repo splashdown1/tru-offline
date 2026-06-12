@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30966",
+  "title": "Reading Between the Citations: A Typed Claim Network for Scientific Literature",
+  "abstract": "Knowledge graphs over corpora of inter-referencing documents - scholarly papers, legal opinions, policy briefs - encode the topology of reference but not its stance. The standard representation collapses a rich evaluative relation into an untyped edge, losing the very content that supports community-level queries about how one document is received by another. We propose the claim network: a representational pattern in which each cross-document reference is reified as a typed claim, carrying source, target, claim text, and a four-class stance label grounded in the citation-intent literature. We give a construction pipeline applicable to any corpus of scholarly inter-referencing documents and instantiate it on a corpus of 127 papers in 3D point cloud semantic segmentation, producing a network of 8,260 typed claims. Three downstream task families demonstrate what the network enables: retrieval signal augmentation, aggregated-stance summarisation, and topological analytics. Head-to-head evaluation against standard Retrieval-Augmented Generation (RAG) baselines shows that the gain over flat retrieval is the gain from the right intermediate representation rather than the wrong one.",
+  "link": "https://arxiv.org/abs/2605.30966",
+  "category": "cs.CL",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406026Z"
+}

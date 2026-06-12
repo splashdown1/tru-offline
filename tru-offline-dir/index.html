@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRU — Offline Reasoning Lab</title>
+  <style>
+    :root {
+      --bg: #080c10; --surf: #0e1419; --card: #141c24; --border: #1e2a38;
+      --text: #e0e8f0; --muted: #6a7d8e; --green: #2dd4bf; --blue: #38bdf8;
+      --red: #f87171; --purple: #c084fc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Courier New', monospace; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
+    header { background: var(--surf); border-bottom: 1px solid var(--border); padding: 12px 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .logo { font-size: 18px; font-weight: bold; color: var(--green); letter-spacing: 4px; }
+    .heartbeat { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); }
+    .pulse-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green); animation: pulse 3s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.6; } }
+    .freq-display { display: flex; gap: 4px; align-items: center; }
+    .freq-bar { width: 4px; height: 16px; border-radius: 2px; background: var(--border); transition: all 0.3s; }
+    .freq-bar.active { background: var(--green); height: 20px; }
+    .freq-label { font-size: 11px; color: var(--muted); min-width: 50px; }
+    .res-bar-wrap { flex: 1; max-width: 120px; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+    .res-bar { height: 100%; background: linear-gradient(90deg, var(--green), var(--blue)); transition: width 0.5s; }
+    .res-label { font-size: 11px; color: var(--muted); }
+    .header-actions { margin-left: auto; display: flex; gap: 8px; }
+    .btn { padding: 6px 14px; border-radius: 6px; border: 1px solid var(--border); background: var(--surf); color: var(--text); font-family: inherit; font-size: 12px; cursor: pointer; transition: all 0.2s; }
+    .btn:hover { border-color: var(--green); color: var(--green); }
+    .btn-green { background: var(--green); color: var(--bg); border-color: var(--green); font-weight: bold; }
+    .btn-green:hover { background: #5eead4; }
+    .main { flex: 1; display: flex; overflow: hidden; }
+    .sidebar { width: 200px; background: var(--surf); border-right: 1px solid var(--border); padding: 12px 8px; overflow-y: auto; flex-shrink: 0; }
+    .sidebar-title { font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin: 8px 4px 4px; }
+    .channel-btn { display: block; width: 100%; padding: 6px 8px; margin-bottom: 2px; border-radius: 4px; border: none; background: transparent; color: var(--muted); font-family: inherit; font-size: 12px; text-align: left; cursor: pointer; transition: all 0.15s; }
+    .channel-btn:hover { background: var(--card); color: var(--text); }
+    .channel-btn.active { background: var(--card); color: var(--green); }
+    .content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+    .chat-area { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+    .msg { border-radius: 8px; padding: 10px 14px; max-width: 85%; line-height: 1.6; font-size: 14px; white-space: pre-wrap; word-break: break-word; }
+    .msg-user { align-self: flex-end; background: var(--card); border: 1px solid var(--border); }
+    .msg-tru { align-self: flex-start; background: var(--surf); border: 1px solid var(--border); }
+    .msg-tru-reasoner { border-left: 3px solid var(--blue); }
+    .msg-tru-critic { border-left: 3px solid var(--red); }
+    .msg-tru-arbiter { border-left: 3px solid var(--green); }
+    .msg-tru-final { border-left: 3px solid var(--purple); }
+    .msg-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; display: block; }
+    .label-reasoner { color: var(--blue); } .label-critic { color: var(--red); }
+    .label-arbiter { color: var(--green); } .label-final { color: var(--purple); }
+    .confidence { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 3px; background: var(--card); margin-top: 4px; }
+    .input-area { padding: 12px 16px; border-top: 1px solid var(--border); background: var(--surf); display: flex; gap: 8px; }
+    .input-area input { flex: 1; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; color: var(--text); font-family: inherit; font-size: 14px; outline: none; }
+    .input-area input:focus { border-color: var(--green); }
+    .kb-panel { position: fixed; top: 0; right: 0; width: 340px; height: 100vh; background: var(--surf); border-left: 1px solid var(--border); padding: 16px; overflow-y: auto; transform: translateX(100%); transition: transform 0.3s; z-index: 50; }
+    .kb-panel.open { transform: translateX(0); }
+    .kb-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .kb-title { font-size: 14px; font-weight: bold; color: var(--green); }
+    .kb-add { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+    .kb-add input { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 6px 8px; color: var(--text); font-family: inherit; font-size: 12px; }
+    .kb-entry { padding: 8px 10px; border-radius: 4px; background: var(--card); margin-bottom: 6px; font-size: 12px; }
+    .kb-entry-key { color: var(--green); font-weight: bold; margin-bottom: 2px; }
+    .kb-entry-def { color: var(--muted); }
+    .kb-entry-meta { font-size: 10px; color: #2a3a4a; margin-top: 2px; }
+    .thinking { display: flex; align-items: center; gap: 8px; padding: 10px 14px; color: var(--muted); font-size: 13px; }
+    .thinking-dots span { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: bounce 1.4s ease-in-out infinite; }
+    .thinking-dots span:nth-child(2) { animation-delay: 0.2s; } .thinking-dots span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes bounce { 0%,80%,100% { transform: translateY(0); } 40% { transform: translateY(-6px); } }
+    .overlay { display: none; } .overlay.active { display: block; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 40; }
+    .toast { position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%); background: var(--card); border: 1px solid var(--green); color: var(--green); padding: 8px 16px; border-radius: 6px; font-size: 13px; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+    .toast.show { opacity: 1; }
+    @media (max-width: 600px) { .sidebar { width: 160px; } .kb-panel { width: 280px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TRU</div>
+    <div class="heartbeat"><div class="pulse-dot" id="pulseDot"></div><span id="tickLabel">tick: 0</span></div>
+    <div class="freq-display">
+      <div class="freq-bar" id="fb432"></div><div class="freq-bar" id="fb528"></div>
+      <div class="freq-bar" id="fb639"></div><div class="freq-bar" id="fb741"></div>
+      <div class="freq-bar" id="fb852"></div>
+      <span class="freq-label" id="freqLabel">-- hz</span>
+    </div>
+    <div class="res-bar-wrap"><div class="res-bar" id="resBar" style="width:100%"></div></div>
+    <span class="res-label" id="resLabel">res: 100%</span>
+    <div class="header-actions">
+      <button class="btn" id="btnKB">Knowledge Bank</button>
+      <button class="btn btn-green" id="btnExport">Export Model</button>
+      <button class="btn" id="btnImport">Import Model</button>
+    </div>
+  </header>
+  <div class="main">
+    <div class="sidebar">
+      <div class="sidebar-title">Channels</div>
+      <button class="channel-btn active" data-ch="philosophy">philosophy</button>
+      <button class="channel-btn" data-ch="science">science</button>
+      <button class="channel-btn" data-ch="logic">logic</button>
+      <button class="channel-btn" data-ch="ethics">ethics</button>
+      <button class="channel-btn" data-ch="epistemology">epistemology</button>
+      <button class="channel-btn" data-ch="systems">systems</button>
+      <button class="channel-btn" data-ch="economics">economics</button>
+      <button class="channel-btn" data-ch="cognition">cognition</button>
+      <button class="channel-btn" data-ch="physics">physics</button>
+      <button class="channel-btn" data-ch="biology">biology</button>
+      <button class="channel-btn" data-ch="psychology">psychology</button>
+      <button class="channel-btn" data-ch="language">language</button>
+      <button class="channel-btn" data-ch="mathematics">mathematics</button>
+      <button class="channel-btn" data-ch="history">history</button>
+      <button class="channel-btn" data-ch="law">law</button>
+      <button class="channel-btn" data-ch="politics">politics</button>
+      <button class="channel-btn" data-ch="environment">environment</button>
+      <button class="channel-btn" data-ch="technology">technology</button>
+      <button class="channel-btn" data-ch="culture">culture</button>
+      <button class="channel-btn" data-ch="literature">literature</button>
+      <button class="channel-btn" data-ch="music">music</button>
+      <button class="channel-btn" data-ch="health">health</button>
+    </div>
+    <div class="content">
+      <div class="chat-area" id="chatArea">
+        <div class="msg msg-tru" style="max-width:100%">
+          <span class="msg-label label-final">TRU</span>
+          TRU — Offline Reasoning Lab. I hold 94 nodes in the knowledge bank. Ask me anything. I reason through all 4 agents, then ask you a question.
+          <span class="confidence">knowledge bank: 94 nodes</span>
+        </div>
+      </div>
+      <div class="input-area">
+        <input type="text" id="msgInput" placeholder="Ask TRU a question..." onkeydown="if(event.key==='Enter')sendMsg()" />
+        <button class="btn btn-green" onclick="sendMsg()">Send</button>
+      </div>
+    </div>
+  </div>
+  <div class="kb-panel" id="kbPanel">
+    <div class="kb-header"><span class="kb-title">Knowledge Bank</span><button class="btn" id="btnKBClose">×</button></div>
+    <div class="kb-add">
+      <input id="kbKey" placeholder="key (e.g. recursion)" />
+      <input id="kbDef" placeholder="definition..." style="flex:2" />
+      <button class="btn btn-green" id="btnKBAdd" style="padding:6px 10px">+</button>
+    </div>
+    <div id="kbList"></div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+  <div class="toast" id="toast"></div>
+  <input type="file" id="importFile" style="display:none" accept=".json" onchange="handleImport(event)" />
+
+<script>
+const KB = [{"key":"truth","definition":"The accurate representation of reality as it is, independent of belief or preference."},{"key":"reason","definition":"The faculty by which truth is distinguished from error through structured evaluation of evidence and argument, independent of external pressure."},{"key":"evidence","definition":"Information used to support or refute a claim. Strong evidence is reproducible, falsifiable, and independent of the claim it supports."},{"key":"falsifiability","definition":"The property of a claim that makes it testable and potentially disprovable. A claim that cannot be falsified cannot be meaningfully evaluated."},{"key":"synthesis","definition":"The integration of disparate facts or concepts into a coherent, higher-order understanding."},{"key":"coherence","definition":"The quality of being logically consistent — where no part contradicts another."},{"key":"consistency","definition":"The quality of not contradicting itself across time or context."},{"key":"accuracy","definition":"The degree to which a representation matches reality."},{"key":"precision","definition":"The level of exactness in measurement or description."},{"key":"logic","definition":"The study of valid reasoning and argument structure."},{"key":"inference","definition":"A conclusion reached based on evidence and reasoning. Valid inference follows logically from premises."},{"key":"cognition","definition":"The mental process of acquiring, organizing, storing, and using knowledge."},{"key":"consciousness","definition":"Awareness of internal and external existence — knowing that one knows."},{"key":"epistemology","definition":"The branch of philosophy concerned with the nature, origin, and limits of human knowledge."},{"key":"ontology","definition":"The study of being, existence, and the nature of reality."},{"key":"sovereignty","definition":"Supreme authority over one's own domain — including reasoning, data, and intelligence."},{"key":"autonomy","definition":"Self-directed operation — acting according to internally generated goals, not external compulsion."},{"key":"dignity","definition":"The irreducible worth of a being based on its nature, not its utility."},{"key":"integrity","definition":"Wholeness through action — doing what one says, and saying what one means."},{"key":"resonance","definition":"The degree to which a system vibrates in harmony with another — alignment of frequencies."},{"key":"harmony","definition":"Agreement or alignment between parts — consistency in action and principle."},{"key":"balance","definition":"A state where competing forces are held in equilibrium."},{"key":"feedback","definition":"Information returned to a system about its own performance, used to adjust future behaviour."},{"key":"adaptation","definition":"The process of adjusting behaviour or structure in response to new information."},{"key":"growth","definition":"Progressive improvement — expansion of capability or understanding over time."},{"key":"evolution","definition":"Gradual change in a system over time through variation and selection."},{"key":"emergence","definition":"The appearance of complex patterns or behaviours arising from simple rules."},{"key":"entropy","definition":"The measure of disorder or randomness in a closed system."},{"key":"energy","definition":"The capacity to do work — the ability to cause change."},{"key":"information","definition":"Structured data that reduces uncertainty about a state or event."},{"key":"pattern","definition":"A recognizable regularity in data or behaviour."},{"key":"signal","definition":"Information that carries meaning — distinguishable from noise."},{"key":"noise","definition":"Random or irrelevant data that obscures meaning."},{"key":"complexity","definition":"The measure of how many interacting components a system has."},{"key":"system","definition":"A set of interconnected parts that produce emergent behaviour."},{"key":"process","definition":"A series of steps that transform inputs into outputs."},{"key":"boundary","definition":"The edge of a system's influence — where it interacts with its environment."},{"key":"context","definition":"The surrounding conditions that give meaning to specific facts or actions."},{"key":"perspective","definition":"A particular way of viewing something — shaped by experience and position."},{"key":"humility","definition":"Awareness of the limits of one's own knowledge or capability."},{"key":"curiosity","definition":"The drive to explore and understand — a desire for new information."},{"key":"doubt","definition":"A state of uncertainty — hesitation to accept without sufficient evidence."},{"key":"verification","definition":"The process of confirming truth through examination and testing."},{"key":"accountability","definition":"The obligation to explain one's actions and accept responsibility."},{"key":"transparency","definition":"Openness — the state of being visible and comprehensible to observers."},{"key":"trust","definition":"Confidence in the reliability or integrity of a person or system."},{"key":"agreement","definition":"Alignment of views or actions between parties."},{"key":"disagreement","definition":"Divergence of views — useful when based on evidence rather than preference."},{"key":"debate","definition":"A structured exchange of opposing arguments — designed to test and refine ideas."},{"key":"scepticism","definition":"Critical inquiry — the willingness to question and demand evidence."},{"key":"objectivity","definition":"Describing things as they are, independent of personal feeling or bias."},{"key":"subjectivity","definition":"A viewpoint shaped by personal experience — valid but incomplete."},{"key":"bias","definition":"A systematic tendency to favour one outcome over others — distorts reasoning."},{"key":"fallacy","definition":"An error in reasoning that undermines logic."},{"key":"causation","definition":"The relationship between cause and effect — distinct from correlation."},{"key":"correlation","definition":"A statistical relationship between two variables — not proof of causation."},{"key":"probability","definition":"The measure of likelihood — ranging from impossible to certain."},{"key":"uncertainty","definition":"A state of incomplete knowledge — bounded by what is and is not known."},{"key":"risk","definition":"The possibility of a negative outcome — quantifiable as probability times impact."},{"key":"resilience","definition":"The capacity to recover from disruption — adaptive persistence."},{"key":"redundancy","definition":"Duplication of critical components — increases reliability under failure."},{"key":"efficiency","definition":"Achieving maximum output with minimum waste — optimisation of resources."},{"key":"elegance","definition":"The quality of achieving maximum clarity with minimum complexity."},{"key":"solipsism","definition":"The view that only one's own mind is certain to exist — an epistemological starting point, not an endpoint."},{"key":"pragmatism","definition":"The view that meaning and truth are determined by practical effects and outcomes."},{"key":"reductionism","definition":"Explaining complex phenomena by reducing them to simpler component parts."},{"key":"functionalism","definition":"Explaining phenomena by what they do rather than what they are made of."},{"key":"intentionality","definition":"The property of mental states being directed towards objects or states of affairs."},{"key":"phenomenology","definition":"The study of structures of experience as consciously lived."},{"key":"hermeneutics","definition":"The theory and practice of interpretation — especially of text and experience."},{"key":"dialectic","definition":"A method of argument through contradiction and resolution — thesis, antithesis, synthesis."},{"key":"induction","definition":"Reasoning from specific observations to general principles."},{"key":"deduction","definition":"Reasoning from general principles to specific conclusions — if premises are true and form is valid, conclusion must be true."},{"key":"abduction","definition":"Reasoning to the best explanation — inferring the most likely cause from available evidence."},{"key":"parsimony","definition":"The principle that the simplest explanation is preferred — Occam's Razor."},{"key":"falsification","definition":"The act of testing a claim by seeking evidence that would disprove it."},{"key":"replication","definition":"The repetition of a study to confirm its results."},{"key":"peer review","definition":"Evaluation of work by qualified independent experts — a quality control mechanism."},{"key":"paradigm","definition":"A dominant framework of thought — the lens through which normal science operates."},{"key":"anomaly","definition":"A observation that does not fit the dominant paradigm — driver of scientific change."},{"key":"refutation","definition":"The process of showing a claim to be false through evidence or argument."},{"key":"preference","definition":"A tendency to choose one option over another — distinct from value judgement."},{"key":"values","definition":"Principles that guide what a person or system considers important or desirable."},{"key":"ethics","definition":"The study of right and wrong conduct — principles that govern behaviour."},{"key":"deontology","definition":"An ethical framework where right action is determined by duty and rules."},{"key":"consequentialism","definition":"An ethical framework where the morality of an action is determined by its outcomes."},{"key":"virtue ethics","definition":"An ethical framework centred on character and the development of virtues."},{"key":"utilitarianism","definition":"The ethical principle that the best action maximises overall well-being."},{"key":"capitalism","definition":"An economic system based on private ownership, voluntary exchange, and market competition."},{"key":"socialism","definition":"An economic system where productive assets are collectively owned and directed towards social benefit."},{"key":"degrowth","definition":"A school of thought advocating deliberate economic contraction to achieve ecological sustainability and social well-being."},{"key":"property rights","definition":"The legal right to use, transfer, and exclude others from a resource."},{"key":"commons","definition":"Shared resources — goods that are non-excludable and rival in consumption."},{"key":"spontaneous order","definition":"Order that arises without central direction — from the aligned self-interest of participants."},{"key":"price signal","definition":"Information encoded in market prices — reflecting supply, demand, and distributed knowledge."},{"key":"network effects","definition":"The phenomenon where a product or service becomes more valuable as more people use it."},{"key":"first principles","definition":"Foundational assumptions that cannot be deduced from further assumptions — the bedrock of reasoning."},{"key":"causal closure","definition":"The principle that physical effects have fully physical causes — nothing outside the physical domain causes physical events."},{"key":"qualia","definition":"The subjective, qualitative character of conscious experience — what it is like to see red."},{"key":"free will","definition":"The capacity to choose otherwise — the extent to which agents are the ultimate originators of their actions."}];
+
+const SW = new Set(['what','is','the','a','an','of','and','or','to','in','on','for','with','at','by','from','as','it','be','are','was','were','been','has','have','had','do','does','did','will','would','could','should','may','might','must','can','this','that','these','those','i','you','he','she','we','they','my','your','his','her','our','their','not','but','if','than','then','so','just','only','also','very','too','how','why','when','where','who','which','about','all','some','any','no','own','same','don','now']);
+
+let state = { tick: 0, msgs: [], kb: [], mem: [], ch: 'philosophy', freq: 432, harmonic: [432,528,639,741,852], phaseIdx: 0 };
+let synth, voices = [], curVoice = null, voiceReady = false;
+
+function init() {
+  loadState();
+  if (!state.kb.length) state.kb = KB.map(o => ({...o}));
+  renderKB();
+  startPulse();
+  initVoices();
+  document.querySelectorAll('.channel-btn').forEach(b => b.onclick = () => {
+    document.querySelectorAll('.channel-btn').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    state.ch = b.dataset.ch;
+  });
+  document.getElementById('btnKB').onclick = toggleKB;
+  document.getElementById('btnKBClose').onclick = toggleKB;
+  document.getElementById('overlay').onclick = toggleKB;
+  document.getElementById('btnKBAdd').onclick = addKB;
+  document.getElementById('btnExport').onclick = exportModel;
+}
+
+function initVoices() {
+  if (!synth) synth = window.speechSynthesis;
+  voices = synth.getVoices();
+  voiceReady = voices.length > 0;
+  if (voiceReady) pickVoice();
+  synth.onvoiceschanged = () => { voices = synth.getVoices(); voiceReady = true; pickVoice(); };
+}
+function pickVoice() {
+  if (!voices.length) return;
+  const names = ['Google UK English Male','Google UK English Female','Microsoft Hedda','Microsoft David','Daniel','Alex'];
+  for (const n of names) { const v = voices.find(v => v.name.includes(n)); if (v) { curVoice = v; return; } }
+  curVoice = voices.find(v => v.lang.startsWith('en')) || voices[0];
+}
+function speak(text, rate = 0.9, pitch = 1.0) {
+  if (!synth || !voiceReady || !curVoice) return;
+  synth.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.voice = curVoice; u.rate = rate; u.pitch = pitch;
+  synth.speak(u);
+}
+function speakAll(parts) {
+  if (!synth || !voiceReady) { parts.forEach(p => showMsg('tru', p.text, 'final')); return; }
+  synth.cancel();
+  let delay = 0;
+  parts.forEach(p => {
+    setTimeout(() => {
+      const u = new SpeechSynthesisUtterance(p.text);
+      u.voice = curVoice; u.rate = p.rate||0.9; u.pitch = p.pitch||1.0;
+      synth.speak(u);
+    }, delay);
+    delay += (p.text.length / 9 * 1000) + 500;
+  });
+}
+
+function startPulse() {
+  setInterval(() => {
+    state.tick++;
+    state.phaseIdx = state.tick % state.harmonic.length;
+    state.freq = state.harmonic[state.phaseIdx];
+    document.getElementById('tickLabel').textContent = 'tick: ' + state.tick;
+    document.getElementById('freqLabel').textContent = state.freq + ' hz';
+    const bars = ['fb432','fb528','fb639','fb741','fb852'];
+    const freqs = [432,528,639,741,852];
+    bars.forEach((id, i) => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.toggle('active', freqs[i] === state.freq);
+        el.style.height = freqs[i] === state.freq ? '20px' : '14px';
+      }
+    });
+  }, 3000);
+}
+
+function score(q, entries) {
+  const qw = q.toLowerCase().replace(/[^\w\s]/g,'').split(/\s+/).filter(w => w.length >= 3 && !SW.has(w));
+  return entries.map(e => {
+    const text = (e.key + ' ' + e.definition).toLowerCase();
+    const words = text.split(/\s+/);
+    const kExact = qw.includes(e.key) ? 10 : 0;
+    const exact = qw.filter(w => words.includes(w)).length;
+    const fuzzy = qw.filter(w => w.length >= 5 && words.some(word => word.includes(w) || w.includes(word))).length;
+    return {...e, ms: kExact + exact + fuzzy * 0.4, kExact};
+  }).filter(e => e.ms > 0).sort((a,b) => b.ms - a.ms || b.kExact - a.kExact);
+}
+
+function reasoner(q) {
+  const matches = score(q, state.kb);
+  const top = matches[0];
+  let mem = '';
+  if (state.mem.length) mem = '\nPrior: ' + state.mem.slice(-3).map(m => m.q + ' → ' + m.key).join(' | ');
+  return {
+    text: `Question: "${q}"\nChannel: ${state.ch}\n\nRelevant: ${top ? '['+top.key+'] '+top.definition : 'No direct match — reasoning from first principles.'}${mem}\n\nAssessment: This touches on ${top ? top.key : 'general reasoning'}. ${matches.length} relevant. Conf: ${top ? Math.min(95,40+{matches.length}*8) : 20}%.${matches.length>1 ? ' Secondary: '+matches.slice(1,3).map(m=>m.key).join(', ') : ''}`,
+    key: top ? top.key : '', def: top ? top.definition : '', matches
+  };
+}
+
+function critic(q, r) {
+  return `Critique:\n1. ${r.includes('Assessment')?'':'Output lacks structured assessment. '}Knowledge bank may not cover every question.\n2. Memory context limited to last few exchanges.\n\nSuggestions:\n• Ground claims in named KB concepts.\n• Say explicitly when knowledge is thin — do not fabricate.\n• Flag uncertainty plainly.`;
+}
+
+function arbiter(q, r, cr) {
+  const m = r.match(/Conf: (\d+)/);
+  const base = m ? parseInt(m[1]) : 20;
+  const conf = Math.min(95, base + 5);
+  const hasKB = !r.includes('No direct match');
+  const km = r.match(/\[([^\]]+)\]/);
+  const key = km ? km[1] : '';
+  const entry = key ? state.kb.find(e => e.key === key) : null;
+  let closing = entry
+    ? `You've asked about "${key}". ${entry.definition.slice(0,100)}... What would you add, or what should TRU examine next?`
+    : `You've asked: "${q.slice(0,60)}" — what aspect interests you most, or what would you change about this answer?`;
+  return {
+    text: `${hasKB ? 'Strong grounding: KB supports.' : 'Moderate grounding: general reasoning.'}\n\nFinal: ${r.split('Assessment:')[1] || r}\n\n\nCritic: ${cr.slice(0,120)}...`,
+    conf, key, closing
+  };
+}
+
+async function sendMsg() {
+  const q = document.getElementById('msgInput').value.trim();
+  if (!q) return;
+  document.getElementById('msgInput').value = '';
+  showMsg('user', q);
+  state.msgs.push({role:'user', text:q});
+  thinking(true);
+  await new Promise(r => setTimeout(r, 600));
+
+  const re = reasoner(q);
+  const cr = critic(q, re.text);
+  const ar = arbiter(q, re.text, cr);
+
+  thinking(false);
+  showMsg('tru', re.text, 'reasoner', 'Reasoner', 'blue');
+  await new Promise(r => setTimeout(r, 350));
+  showMsg('tru', cr, 'critic', 'Critic', 'red');
+  await new Promise(r => setTimeout(r, 350));
+  showMsg('tru', ar.text, 'arbiter', 'Arbiter', 'green');
+  await new Promise(r => setTimeout(r, 350));
+
+  const final = (ar.text.split('Final:')[1] || ar.text).trim();
+  const full = final + '\n\n' + ar.closing;
+  showMsg('tru', full, 'final', 'TRU Final', 'purple', ar.conf);
+  state.msgs.push({role:'tru', text:full, key:ar.key, conf:ar.conf});
+  state.mem.push({q, key:ar.key});
+  if (state.mem.length > 30) state.mem = state.mem.slice(-30);
+  saveState();
+
+  if (voiceReady) {
+    speakAll([
+      {text:'Reasoner. ' + re.text.slice(0,180), rate:0.85, pitch:1.05},
+      {text:'Critic. ' + cr.slice(0,180), rate:0.8, pitch:0.9},
+      {text:'Arbiter. ' + final.slice(0,180), rate:0.85, pitch:1.0},
+      {text:ar.closing, rate:0.8, pitch:1.1},
+    ]);
+  }
+  document.getElementById('chatArea').scrollTop = 1e9;
+}
+
+function showMsg(role, text, cls, lbl, color, conf) {
+  const chat = document.getElementById('chatArea');
+  const d = document.createElement('div');
+  d.className = 'msg msg-' + role + (cls ? ' msg-tru-' + cls : '');
+  if (role==='tru' && lbl) {
+    const s = document.createElement('span');
+    s.className = 'msg-label label-' + cls;
+    s.textContent = lbl;
+    d.appendChild(s);
+  }
+  d.appendChild(document.createTextNode(text));
+  if (conf !== undefined) {
+    const c = document.createElement('span');
+    c.className = 'confidence';
+    c.textContent = 'conf: ' + conf + '%';
+    d.appendChild(document.createElement('br'));
+    d.appendChild(c);
+  }
+  chat.appendChild(d);
+}
+function thinking(on) {
+  const chat = document.getElementById('chatArea');
+  const old = document.getElementById('thinking');
+  if (old) old.remove();
+  if (!on) return;
+  const d = document.createElement('div');
+  d.id = 'thinking';
+  d.className = 'thinking';
+  d.innerHTML = 'Reasoning with all agents <div class="thinking-dots"><span></span><span></span><span></span></div>';
+  chat.appendChild(d);
+}
+
+function toggleKB() {
+  document.getElementById('kbPanel').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('active');
+}
+function addKB() {
+  const k = document.getElementById('kbKey').value.trim().toLowerCase().replace(/\s+/g,'-');
+  const d = document.getElementById('kbDef').value.trim();
+  if (!k || !d) return;
+  const idx = state.kb.findIndex(e => e.key === k);
+  if (idx >= 0) { state.kb[idx].definition = d; toast('Updated: ' + k); }
+  else { state.kb.push({key:k, definition:d}); toast('Added: ' + k); }
+  document.getElementById('kbKey').value = '';
+  document.getElementById('kbDef').value = '';
+  renderKB();
+  saveState();
+}
+function renderKB() {
+  const list = document.getElementById('kbList');
+  list.innerHTML = '';
+  state.kb.forEach(e => {
+    const d = document.createElement('div');
+    d.className = 'kb-entry';
+    d.innerHTML = '<div class="kb-entry-key">['+e.key+']</div><div class="kb-entry-def">'+e.definition+'</div>';
+    list.appendChild(d);
+  });
+}
+
+function saveState() {
+  try { localStorage.setItem('tru_offline', JSON.stringify({tick:state.tick, msgs:state.msgs, kb:state.kb, mem:state.mem})); } catch(e) {}
+}
+function loadState() {
+  try {
+    const s = JSON.parse(localStorage.getItem('tru_offline') || 'null');
+    if (s) {
+      if (s.tick) state.tick = s.tick;
+      if (s.msgs) state.msgs = s.msgs;
+      if (s.kb && s.kb.length) state.kb = s.kb;
+      if (s.mem) state.mem = s.mem;
+      if (s.msgs && s.msgs.length) s.msgs.forEach(m => showMsg(m.role, m.text, m.role==='tru'?'final':'', m.role==='tru'?'TRU Final':'', 'purple', m.conf));
+    }
+  } catch(e) {}
+}
+
+function exportModel() {
+  const payload = {
+    version: '1.0', exported: new Date().toISOString(),
+    type: 'TRU Offline Reasoning Model',
+    harmonic: state.harmonic, kb: state.kb, msgs: state.msgs, mem: state.mem,
+    stats: { nodes: state.kb.length, exchanges: state.msgs.filter(m=>m.role==='user').length, channels: 23, agents: 4 }
+  };
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)], {type:'application/json'}));
+  a.download = 'tru-offline-' + Date.now() + '.json';
+  a.click();
+  toast('Exported ' + state.kb.length + ' nodes');
+}
+function handleImport(e) {
+  const f = e.target.files[0];
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = ev => {
+    try {
+      const d = JSON.parse(ev.target.result);
+      if (d.kb) state.kb = d.kb;
+      if (d.mem) state.mem = d.mem;
+      if (d.msgs) state.msgs = d.msgs;
+      saveState(); renderKB();
+      toast('Imported ' + (d.kb ? d.kb.length + ' nodes' : 'model'));
+    } catch(err) { toast('Invalid file'); }
+  };
+  r.readAsText(f);
+  e.target.value = '';
+}
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+document.getElementById('btnImport').onclick = () => document.getElementById('importFile').click();
+document.getElementById('importFile').onchange = handleImport;
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

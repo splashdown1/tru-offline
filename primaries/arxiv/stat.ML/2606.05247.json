@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05247",
+  "title": "DiffSlack: Learning under Nonlinear Inequality Constraints via Learnable Slack Variables",
+  "abstract": "Enforcing nonlinear inequality constraints in neural networks remains challenging, especially when the output is subject to many coupled constraints. Existing hard constraint methods often impose structural restrictions on the constraint set or introduce substantial computational overhead for large-scale nonlinear problems. Here, we propose DiffSlack, a differentiable projection layer for nonlinear inequality-constrained neural prediction. DiffSlack reformulates inequalities as equalities with learnable slack variables, which are predicted as part of the augmented network output and provide a data-driven warm start for damped Gauss-Newton projection. The projection layer maps raw predictions onto the augmented feasible manifold while preserving end-to-end differentiability. A two-stage curriculum further stabilizes training and improves constraint satisfaction. We evaluate DiffSlack on vehicle path planning with 200 nonlinear inequality constraints from collision avoidance, curvature limits, and waypoint spacing. Compared with existing learning-based baselines, DiffSlack achieves a higher planning success rate and stronger geometric constraint satisfaction under a comparable inference budget. Ablation studies further show that the hard projection layer reduces sensitivity to supervision quality. Closed-loop tracking in CARLA and real-world vehicle experiments confirms the executability of the generated trajectories. These results demonstrate that DiffSlack provides a practical and scalable approach to embedding hard inequality constraints into neural networks for engineering applications.",
+  "link": "https://arxiv.org/abs/2606.05247",
+  "category": "stat.ML",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728647+00:00"
+}

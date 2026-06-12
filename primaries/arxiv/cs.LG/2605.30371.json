@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30371",
+  "title": "From Mean-Field Limits to Semiclassical Concentration: Global Convergence of the Canonical Evolutionary Strategy",
+  "abstract": "We address the issue of global convergence in stochastic continuous optimization. For that purpose, we formulate the Canonical Evolutionary Strategy (CES) as a controlled mathematical framework to analyze global convergence in evolutionary algorithms via the semiclassical limit of a Schr{\\\"o}dinger-type replicator-mutator equation. We provide a rigorous hierarchy from a discrete individual-based dynamics to a deterministic mean-field limit, demonstrating that global convergence is governed by the principal eigenfunction of the underlying operator. This property, defined as Geometric Selection, naturally prioritizes robust, flat optima over narrow local traps, offering a mathematical justification for the ''survival of the flattest'' phenomenon. Moreover, unlike consensus-driven methods that are prone to premature variance collapse when the global minimizer resides outside the initial support, the replicator-mutator dynamics of CES facilitate intrinsic mass transport. High-dimensional benchmarks (d = 30) confirm this advantage, showing that CES achieves lower residual errors in shifted initialization scenarios where standard consensus-driven and gradient-based methods fail to migrate effectively. By shifting the focus from point-wise consensus to spectral concentration, our framework provides a robust theoretical foundation for global convergence in Evolution Strategies (ES) without the need for additional numerical heuristics.",
+  "link": "https://arxiv.org/abs/2605.30371",
+  "category": "cs.LG",
+  "categories": [
+    "cs.NE",
+    "cs.LG",
+    "math.DS"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307228Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06168",
+  "title": "ProSarc: Prosody-Aware Sarcasm Recognition Framework via Temporal Prosodic Incongruity",
+  "abstract": "We present ProSarc, an audio-only framework that detects sarcasm by modelling temporal prosodic incongruity, that is, the mismatch between local prosodic dynamics and the utterance-level emotional baseline. Dual encoding paths, a Global Emotion Encoder and a Temporal Prosody Encoder (BiLSTM + multi-head attention), feed a Prosodic Incongruity Analyzer that produces a scalar incongruity score for classification. Monte Carlo dropout provides uncertainty estimates, and an attention-based mechanism localises sarcastic onset without frame-level labels. ProSarc outperforms prior audio-only methods on MUStARD++ (F1=75.3) and generalises to spontaneous (PodSarc, F1=62.9) and cross-lingual speech (MuSaG, F1=65.6). Ten-run validation confirms the contribution of incongruity modelling (Wilcoxon p=0.002, Cohen's d=1.51). Human evaluation shows that model uncertainty tracks perceptual ambiguity and predicted onsets align with human-annotated temporal windows.",
+  "link": "https://arxiv.org/abs/2606.06168",
+  "category": "cs.CL",
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498288+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30873",
+  "title": "Federated Variational Preference Alignment with Gumbel-Softmax Prior for Personalized User Preferences",
+  "abstract": "Federated Learning (FL) offers a privacy-preserving pathway for aligning Large Language Models (LLMs); however, existing frameworks typically enforce a monolithic reward model, inevitably averaging out inherently conflicting user preferences (e.g., helpfulness vs. harmlessness). While Variational Preference Learning (VPL) offers a pathway to personalization, adapting it to decentralized settings presents a fundamental challenge: posterior collapse driven by severe local data scarcity and heterogeneity. In this paper, we propose Federated Variational Preference Alignment with Gumbel-Softmax Prior (FedVPA-GP), a framework designed to disentangle diverse preferences without compromising privacy. To stabilize variational inference, we introduce a Federated Mixture Prior that enables clients to leverage the aggregate population distribution as a dynamic prior. Furthermore, we incorporate an Orthogonal Loss that explicitly enforces the separation of preference prototypes in the latent space. Experiments on the HH-RLHF dataset demonstrate that FedVPA-GP significantly outperforms monolithic baselines, successfully disentangling conflicting user intents and enabling dynamic preference switching.",
+  "link": "https://arxiv.org/abs/2605.30873",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.DC"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358165Z"
+}

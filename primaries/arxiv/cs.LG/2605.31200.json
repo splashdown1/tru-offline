@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31200",
+  "title": "Beyond Additive Decompositions: Interpretability Through Separability",
+  "abstract": "Interpretable machine learning requires models that are accurate and structurally faithful to the data.Existing explainability methods rely heavily on additive representations (e.g., Generalized Additive Models (GAMs), SHapley Additive exPlanations (SHAP), functional ANOVA), which can suffer from signal cancellation and off-support extrapolation in the presence of strong interactions. We propose Tensor Separation Learning (TSL), a regression model that learns a sum of rank-1 products of univariate per-feature functions via a stagewise greedy procedure with orthogonal refitting. By enforcing separability, TSL avoids the information loss inherent in additive projections caused by marginalizing higher-order interactions. The learned TSL model can be fully reconstructed from first-order partial dependence functions, up to constant factors. This stage-wise correspondence ensures that the resulting visualizations are faithful to the fitted components. We establish approximation-rate guarantees for functions with bounded mixed $p$-th order partial derivatives and demonstrate that TSL competes with black-box models on regression benchmarks.",
+  "link": "https://arxiv.org/abs/2605.31200",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307010Z"
+}

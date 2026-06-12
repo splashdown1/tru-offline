@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05639",
+  "title": "Q-GNN: Query-Conditioned Graph Neural Networks with Type Awareness for Knowledge Graph Completion",
+  "abstract": "Knowledge Graph Completion (KGC) aims at predicting missing triplets from incomplete knowledge graphs, which is crucial for downstream applications. Recently, Graph Neural Network (GNN)-based methods have achieved remarkable success by performing message passing over query-centered local subgraphs. However, in practice, a query is jointly defined by both the entity and the relation, with both carrying information indispensable for reasoning, yet these methods rely solely on the query relation as the guiding signal, while the information inherent in the query entity is not leveraged to guide inference - the entity serves merely as a structural anchor for subgraph extraction. To this end, we incorporate query entity information into the reasoning process from two perspectives: the first is structural context, i.e., the neighboring structure and relation patterns around the entity, which is encoded by a dedicated context encoder and used to modulate messages; the second is semantic type of the entity, inferred by a large language model, which is incorporated into attention computation and final scoring to provide type-level prior constraints. Together, these two sources of information enable the reasoning process to be guided by both the query relation and the query entity. Experimental results on standard benchmarks demonstrate the effectiveness of the proposed Q-GNN.",
+  "link": "https://arxiv.org/abs/2606.05639",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882152+00:00"
+}

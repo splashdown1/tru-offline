@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31346",
+  "title": "Wall-Clock Complexity for Zeroth-Order Optimization with Tunable Oracle Fidelity",
+  "abstract": "Zeroth-order (black-box) optimization is applied when gradients are unavailable and objective evaluations rely on expensive simulations. In many such applications, the oracle fidelity is tunable: higher-accuracy queries reduce noise but incur higher computational costs. To capture this trade-off, we study an accuracy-aware wall-clock model where each query with fidelity $\\delta$ has a cost $c(\\delta)$, and we minimize the total time $T_{\\mathrm{total}} = \\sum_{k=1}^{N} c(\\delta_k)$, subject to a target accuracy constraint. We show how the choice of oracle type, noise model, and optimization scheme induces explicit wall-clock-optimal choices for the algorithmic parameters. For instance, we demonstrate that accelerated methods can be wall-clock inferior to non-accelerated schemes. Furthermore, we characterize the conditions under which a constant fidelity strategy is optimal in the Big-O sense. Our framework provides a unified methodology to translate convergence guarantees into practical fidelity and batching recommendations.",
+  "link": "https://arxiv.org/abs/2605.31346",
+  "category": "cs.LG",
+  "categories": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307508Z"
+}

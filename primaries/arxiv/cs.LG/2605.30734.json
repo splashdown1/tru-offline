@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30734",
+  "title": "Beyond Accuracy: Evaluating Efficiency, Robustness and Explainability in Deep Learning for Malaria Diagnosis",
+  "abstract": "Malaria remains a leading cause of mortality in sub-Saharan Africa, where scarce diagnostic infrastructure makes timely, accurate diagnosis particularly challenging. While deep learning offers a compelling path toward automated malaria screening, clinical adoption is hindered by computational cost and opacity in decision-making. This work benchmarks four deep learning models spanning a wide range of designed design architectures and model capacities on the NLM-Malaria dataset, jointly evaluating predictive performance, robustness, and post-hoc explainability. We find that lightweight, efficient-by-design models match their heavier counterparts in predictive performance, and the Friedman test confirms no statistically significant performance differences. CAM-based XAI methods consistently localize diagnostically relevant regions, while fine-grained attribution methods produce less targeted explanations, particularly with heavier backbones. Robustness evaluation under three types of image corruption further reveals that model confidence degrades faster than accuracy, providing a practical signal for human review. However, no XAI method is robust to corruption, with explanation reliability degrading at noise levels plausible in clinical practice, even when predictions remain accurate. These findings support the deployment of lightweight architectures for malaria diagnosis in resource-constrained settings, while highlighting the vulnerability of post-hoc explanations as an important consideration for responsible clinical deployment.",
+  "link": "https://arxiv.org/abs/2605.30734",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306783Z"
+}

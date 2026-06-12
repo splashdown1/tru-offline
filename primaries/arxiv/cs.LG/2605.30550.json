@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30550",
+  "title": "Early Prediction of Future Behavioral Strategy from Process Traces",
+  "abstract": "Adaptive systems often need to make task-specific decisions about people from limited evidence: a tutor may need to anticipate how a learner will approach a new problem, a game may need to adapt when a player enters a new level, and a human-AI system may need to infer whether a partner will persist with a plan or switch goals. These decisions depend on person-level tendencies that shape how people solve related tasks, but such tendencies are difficult to infer from standard behavioral evidence. One approach is to use aggregate outcome summaries, such as scores, completion rates, or productivity; these summaries are compact and available across tasks, but can collapse distinct behavioral processes into similar outcomes. Another approach is to use process-level traces, which record how behavior unfolds; however, process modeling within one task can entangle stable person-level tendencies with task-specific layout and affordances. In this work, we study early cross-task behavioral inference: whether partial source-task process traces can reveal transferable person-level structure that predicts strategy in a held-out target task. We introduce a Process-Level Latent Variable Model (PLVM), which encodes task-specific traces and fuses them into a shared person-level latent representation for cross-task prediction. In PowerWash Simulator, a naturalistic telemetry dataset of human gameplay, PLVM uses partial traces from two cleaning tasks to predict locally persistent Zone Planner behavior versus frequent Zone Hopper behavior in the held-out Fire Station level. Controlled simulations with known latent types show that cross-task fusion helps when source tasks reveal complementary dimensions of a shared latent process. These results suggest that process-level cross-task modeling can support early prediction of target-task strategy when observing sufficient target-task behavior is impractical.",
+  "link": "https://arxiv.org/abs/2605.30550",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306665Z"
+}

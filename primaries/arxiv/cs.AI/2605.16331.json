@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.16331",
+  "title": "Retrieval and competition: how a protein foundation model starts a protein",
+  "abstract": "Protein language models are increasingly used to guide experimental and clinical decisions, yet it is often unclear whether a confident prediction reflects recognition of biological evidence or retrieval of a statistical default. We examine this distinction for a near-universal biological rule, that proteins begin with methionine, by tracing the computational pathway through which ESM2-8M produces this prediction. The model does not detect methionine at the masked position. Instead, it retrieves a methionine-favouring signal from a reference representation at the beginning-of-sequence token via a position-specific query assembled across layers, with the final output emerging through competition with context-dependent circuits. To understand how positional information reaches the readout, we introduce a norm-direction decomposition of attention scores within rotary frequency bands. Positional encoding operates through coupled changes in query norm and angular alignment distributed across these bands. On sequences whose true N-terminus is not methionine, where the biological question matters, the model predicts methionine anyway. This is not a correct prediction produced by an unexpected mechanism, but the output of a positional-prior retrieval circuit that matches the statistical average and fails where biology diverges from it. Distinguishing the two requires resolution at the level of individual circuits, frequency bands, and query composition, suggesting that mechanistic verification will be necessary, and challenging, for predictions where the biological stakes are higher. Even for the simplest biological rule, the model's prediction is mediated by a distributed computational circuit rather than direct recognition, suggesting that increasing task complexity will further obscure the relationship between model confidence and underlying biological evidence.",
+  "link": "https://arxiv.org/abs/2605.16331",
+  "category": "cs.AI",
+  "categories": [
+    "q-bio.BM",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099281+00:00"
+}

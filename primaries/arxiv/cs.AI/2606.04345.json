@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04345",
+  "title": "HYolo: An Intelligent IoT-Based Object Detection System Using Hypergraph Learning",
+  "abstract": "This paper presents HYolo, an intelligent IoT-based object detection framework that integrates hypergraph learning into the YOLO architecture. Traditional YOLO-based object detection models primarily capture pairwise feature interactions and may fail to model complex high-order relationships among objects and contextual features. To address this limitation, HYolo incorporates hypergraph learning to capture richer contextual dependencies and improve object representation. Experimental evaluation on the COCO dataset demonstrates significant performance improvements over baseline YOLO models. The proposed approach achieves approximately 12% improvement in mAP@50 while enhancing overall detection accuracy and robustness. By modeling high-order feature relationships, HYolo provides improved contextual understanding and more reliable object detection performance in IoT-based environments. The results indicate that integrating hypergraph learning into object detection pipelines offers a promising direction for intelligent and context-aware IoT vision systems.",
+  "link": "https://arxiv.org/abs/2606.04345",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098137+00:00"
+}

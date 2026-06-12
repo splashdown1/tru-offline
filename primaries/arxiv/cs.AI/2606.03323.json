@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.03323",
+  "title": "Implement Kubernetes Pod-Level Remote Attestation for Confidential Workloads on dstack",
+  "abstract": "The rise of LLM-as-a-Service and other confidential cloud workloads demands cryptographic proof that user data is processed in a trusted, untampered environment. Existing solutions, notably Confidential Containers (CoCo), enforce a strict \"one Pod per VM\" model that attests only the Guest OS stack, leaving container-level identity unverified and incurring prohibitive per-VM resource overhead. We present dstack-capsule, a Kubernetes platform that enables Pod-level remote attestation on Intel TDX by allowing multiple Pods to share a single Confidential VM while each retains independent, hardware-backed proof of identity. Our key insight is a two-layer attestation architecture: static platform measurements are frozen in RTMR[3] via an irreversible privilege fuse, while dynamic Pod identities (pod_uid, pod_spec_hash, workload_id) are embedded in the TDX Quote's report_data field and signed by hardware on every request. dstack-capsule introduces (1) a Pod-level attestation protocol binding Pod spec digests to hardware-signed Quotes; (2) a privilege fuse mechanism that atomically transitions a node from setup mode to secure mode; (3) a multi-layer sandbox spanning storage, runtime, admission, API, and network isolation layers; and (4) a complete open-source implementation based on Kubernetes 1.32, Intel TDX, and Sysbox. We evaluate the security properties, attestation correctness, and performance characteristics of dstack-capsule, demonstrating that it achieves Pod-granularity verification without the resource overhead of per-VM isolation.",
+  "link": "https://arxiv.org/abs/2606.03323",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CR",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099444+00:00"
+}

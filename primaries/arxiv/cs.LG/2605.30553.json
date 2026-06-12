@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30553",
+  "title": "Destruction is a General Strategy to Learn Generation; Diffusion's Strength is to Take it Seriously; Exploration is the Future",
+  "abstract": "I present diffusion models as part of a family of machine learning techniques that withhold information from a model's input and train it to guess the withheld information. I argue that diffusion's destroying approach to withholding is more flexible than typical hand-crafted information withholding techniques, providing a rich training playground that could be advantageous in some settings, notably data-scarce ones. I then address subtle issues that may arise when porting reinforcement learning techniques to the diffusion context, and wonder how such exploration problems could be addressed in more diffusion-native ways. I do not have definitive answers, but I do point my fingers in directions I deem interesting. A tutorial follows this thesis, expanding on the destroy-then-generate perspective. A novel kind of probabilistic graphical models is introduced to facilitate the tutorial's exposition.",
+  "link": "https://arxiv.org/abs/2605.30553",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.IT",
+    "math.IT"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306668Z"
+}

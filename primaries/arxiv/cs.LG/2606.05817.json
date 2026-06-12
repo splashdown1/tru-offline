@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05817",
+  "title": "Consistency Training Along the Transformer Stack",
+  "abstract": "Consistency training encourages models to behave similarly across different contexts, and has shown promise for reducing misalignment. We broaden the scope of consistency training in two ways. First, we introduce two new internal consistency targets: MLP Consistency Training (MLPCT), which matches post-activation MLP states, and Attention Consistency Training (AttCT), which matches per-head attention distributions. Second, we apply consistency training to four additional safety threats: persona in-context learning attacks, adversarial frustration, prefill attacks, and conditional misalignment. Across several models and threat settings, we find that consistency training reduces misalignment well beyond the sycophancy and jailbreak settings studied in prior work. We also find cases of cross-threat generalization, where training against one failure mode improves robustness to another, and identify a shared residual-stream mechanism underlying ACT, MLPCT, and AttCT, while distinguishing BCT as mechanistically distinct. Our results suggest that consistency training is a flexible and extensible framework for alignment, capable of unifying defenses against a broader class of model pathologies.",
+  "link": "https://arxiv.org/abs/2606.05817",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882367+00:00"
+}

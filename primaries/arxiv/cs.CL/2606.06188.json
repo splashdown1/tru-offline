@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06188",
+  "title": "The Tell-Tale Norm: $\\ell_2$ Magnitude as a Signal for Reasoning Dynamics in Large Language Models",
+  "abstract": "Recent work has sought to understand Large Language Models (LLMs) reasoning, yet a principled, model-intrinsic signal that captures its layer-wise reasoning dynamics remains underexplored. We bridge this gap by demonstrating that the l2 norm of hidden states serves as an endogenous signal of the model's reasoning intensity. Using Sparse Autoencoders (SAEs) as a diagnostic probe, we observe that LLMs' internal reasoning is marked by a sharp increase in reasoning feature activations concentrated in late layers. Motivated by this pattern, we establish a formal link between reasoning intensity and the model's latent geometry and theoretically prove that the l2 norm of hidden states bounds the activation strength of SAE reasoning features. Empirical correlation analysis and causal interventions further validate the l2 norm as a faithful indicator, where heightened norms consistently correspond to critical reasoning steps. We then introduce three test-time scaling techniques guided by l2 norms: (i) Adaptive Layer-wise Reasoning Recursion, (ii) Endogenous Reasoning State Steering, and (iii) l2-guided Response Selection, which requires no additional training or data and is compatible with advanced inference engines. Experiments across model architectures and benchmarks show that l2-norm-based techniques significantly improve reasoning performance, offering a principled yet simple lens to perceive and control LLM latent reasoning dynamics. Our code is available at https://github.com/zjy1298/The-Tell-Tale-Norm.",
+  "link": "https://arxiv.org/abs/2606.06188",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498018+00:00"
+}

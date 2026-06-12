@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31287",
+  "title": "Neither Replacement nor Panacea: Comparing LLM-Based Conversational and Graphical Decision Support in Industrial Tasks",
+  "abstract": "Managers in manufacturing settings rely on digital interfaces to interpret operational data for decision-making, but growing data volume and complexity can make relevant insights difficult to identify efficiently. While dashboards remain dominant in industrial contexts, Large Language Model (LLM)-based conversational agents (CAs), accessed through conversational user interfaces (CUIs), may provide more direct access to such data. However, their effectiveness may depend on the information-processing demands of the task. This study compares an LLM-based CA delivered through a CUI with a dashboard in a manufacturing decision-support scenario. In a mixed factorial experiment with a 2x3 design, 134 industrial decision-makers were assigned to one interface condition and completed three tasks of increasing complexity. We examined perceived Mental Workload (MWL), decision accuracy, completion time, and intended reliance, and tested self-reported data literacy as a moderator. Results showed that the CUI reduced perceived MWL overall and supported faster completion in less demanding tasks, but both advantages diminished as task complexity increased. Neither interface produced a consistent overall advantage in decision accuracy, and the CUI was not preferred as a sole basis for subsequent decisions. Furthermore, data literacy did not reliably moderate interface effects. These findings indicate that conversational interaction offers conditional rather than universal benefits for industrial decision support. LLM-based CAs may reduce information-access effort, whereas complex decisions continue to benefit from persistent, inspectable visual representations.",
+  "link": "https://arxiv.org/abs/2605.31287",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CY",
+    "cs.AI",
+    "cs.HC"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358376Z"
+}

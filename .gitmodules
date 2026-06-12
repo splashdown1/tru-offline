@@ -1,0 +1,9 @@
+[submodule "Projects/TRU/omega"]
+	path = Projects/TRU/omega
+	url = https://github.com/splashdown1/tru-omega.git
+[submodule "tru-site"]
+	path = tru-site
+	url = https://github.com/splashdown1/tru-site.git
+[submodule "tru-repo"]
+	path = tru-repo
+	url = https://github.com/splashdown1/tru-primaries.git

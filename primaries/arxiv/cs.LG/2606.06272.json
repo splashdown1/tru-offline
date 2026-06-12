@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06272",
+  "title": "Your GFlowNet Secretly Learns an Optimal Transport Plan",
+  "abstract": "Generative Flow Networks (GFlowNets) are a framework for sampling structured objects via stochastic trajectories in a directed graph. In this work, we establish a theoretical connection between non-acyclic GFlowNets and optimal transport (OT). We show that fixing the initial flow distribution in a minimum-flow GFlowNet reduces its objective to a Kantorovich OT problem with graph-induced shortest path costs. At the optimum, the learned GFlowNet policy therefore encodes an optimal transport plan from the source distribution to the target distribution: we show that sampling trajectories from the minimum-flow GFlowNet recovers the corresponding optimal coupling. Our formulation enables applying the GFlowNet learning framework to OT problems on large graphs via edge flows and neural parameterization. Experiments confirm agreement with exact OT solvers and demonstrate that GFlowNets can learn high-quality transport plans.",
+  "link": "https://arxiv.org/abs/2606.06272",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882626+00:00"
+}

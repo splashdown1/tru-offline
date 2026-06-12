@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30568",
+  "title": "Generating and Refining Dynamic Evaluation Rubrics for LLM-as-a-Judge",
+  "abstract": "LLM-as-a-Judge is a scalable alternative to human evaluation, yet existing rubric-based methods rely on human-annotated data such as reference answers or expert-crafted rubrics. We propose to automatically generate fine-grained evaluation rubrics without any human annotation. Our training-free method generates rubrics at dataset-specific and instance-specific granularities, achieving performance competitive with existing methods across four benchmarks. We further present a method that iteratively fine-tunes a rubric generator model via meta-judge reward signals. The fine-tuned generator outperforms all existing baselines in both pairwise and pointwise evaluation. Notably, a fine-tuned 14B rubric generator outperforms a much larger proprietary model at rubric generation, showing the effectiveness of our fine-tuning strategy.",
+  "link": "https://arxiv.org/abs/2605.30568",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405654Z"
+}

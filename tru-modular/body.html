@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRU — Modular Body</title>
+<style>
+:root {
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --surface2: #16161f;
+  --border: #222230;
+  --sage: #4a9b7f;
+  --sage-dim: #2d5c4a;
+  --text: #e8e8e0;
+  --muted: #5a6275;
+  --accent: #d4a574;
+  --ghost-cyan: #00fff9;
+  --ghost-magenta: #ff00c1;
+  --glow: rgba(74,155,127,0.15);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Courier New', monospace; font-size: 14px; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 16px; display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+.logo { font-size: 16px; font-weight: bold; letter-spacing: 3px; color: var(--sage); text-shadow: 0 0 12px var(--glow); }
+.status-bar { display: flex; gap: 16px; font-size: 10px; color: var(--muted); flex-wrap: wrap; align-items: center; }
+.status-item { display: flex; align-items: center; gap: 6px; }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sage); box-shadow: 0 0 6px var(--sage); animation: pulse-dot 2s infinite; }
+@keyframes pulse-dot { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.5; transform:scale(.8); } }
+.dot.ghost-active { background: var(--ghost-cyan); box-shadow: 0 0 10px var(--ghost-cyan); animation: ghost-pulse .8s infinite; }
+@keyframes ghost-pulse { 0%,100% { opacity:1; box-shadow:0 0 10px var(--ghost-cyan); } 50% { opacity:.6; box-shadow:0 0 20px var(--ghost-magenta); } }
+.buttons { margin-left: auto; display: flex; gap: 6px; }
+button { background: var(--surface2); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 11px; padding: 6px 10px; cursor: pointer; letter-spacing: 1px; transition: all .15s; }
+button:hover { background: var(--sage-dim); border-color: var(--sage); }
+button.primary { background: var(--sage-dim); border-color: var(--sage); color: var(--sage); }
+button.primary:hover { background: var(--sage); color: var(--bg); }
+button.danger:hover { background: #5c2d2d; border-color: var(--accent); color: var(--accent); }
+main { flex: 1; display: flex; overflow: hidden; }
+#sidebar { width: 280px; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; flex-shrink: 0; }
+.sidebar-header { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 10px; color: var(--muted); letter-spacing: 2px; }
+.sidebar-content { flex: 1; overflow-y: auto; padding: 8px; }
+.node-card { background: var(--surface2); border: 1px solid var(--border); padding: 8px 10px; margin-bottom: 4px; font-size: 11px; cursor: pointer; transition: border .15s; }
+.node-card:hover { border-color: var(--sage); }
+.node-key { color: var(--sage); font-weight: bold; }
+.node-val { color: var(--text); margin-top: 2px; opacity: .85; }
+.node-meta { color: var(--muted); font-size: 9px; margin-top: 2px; }
+#chat-area { flex: 1; display: flex; flex-direction: column; background: var(--bg); }
+#chat { flex: 1; overflow-y: auto; padding: 16px; }
+.msg { margin-bottom: 12px; padding: 10px 12px; border-left: 3px solid var(--border); background: var(--surface); font-size: 13px; line-height: 1.5; }
+.msg.tru { border-left-color: var(--sage); }
+.msg.user { border-left-color: var(--accent); background: var(--surface2); }
+.msg-meta { font-size: 9px; color: var(--muted); margin-top: 6px; letter-spacing: 1px; }
+#input-bar { padding: 12px 16px; background: var(--surface); border-top: 1px solid var(--border); display: flex; gap: 8px; align-items: flex-end; }
+#userInput { flex: 1; background: var(--surface2); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 13px; padding: 8px 10px; resize: none; min-height: 36px; max-height: 120px; outline: none; }
+#userInput:focus { border-color: var(--sage); }
+#sendBtn { background: var(--sage-dim); border: 1px solid var(--sage); color: var(--sage); padding: 8px 16px; cursor: pointer; }
+#sendBtn:hover { background: var(--sage); color: var(--bg); }
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.85); display: none; align-items: center; justify-content: center; z-index: 100; }
+.modal.active { display: flex; }
+.modal-box { background: var(--surface); border: 1px solid var(--sage); padding: 24px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; }
+.modal h2 { color: var(--sage); font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; }
+.modal label { display: block; font-size: 10px; color: var(--muted); margin: 8px 0 4px; letter-spacing: 1px; }
+.modal input, .modal textarea { width: 100%; background: var(--surface2); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 12px; padding: 8px; outline: none; }
+.modal input:focus, .modal textarea:focus { border-color: var(--sage); }
+.modal textarea { min-height: 80px; resize: vertical; }
+.modal-actions { display: flex; gap: 8px; margin-top: 16px; justify-content: flex-end; }
+#wake-overlay { position: fixed; inset: 0; background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 200; }
+#wake-overlay.hidden { display: none; }
+.wake-logo { font-size: 64px; font-weight: bold; color: var(--sage); text-shadow: 0 0 30px var(--glow); letter-spacing: 12px; animation: wake-pulse 2s infinite; }
+@keyframes wake-pulse { 0%,100% { opacity:1; } 50% { opacity:.6; } }
+.wake-subtitle { font-size: 12px; color: var(--muted); letter-spacing: 6px; margin-top: 8px; }
+.wake-text { font-size: 13px; color: var(--text); margin-top: 32px; max-width: 400px; text-align: center; line-height: 1.6; opacity: .8; }
+.wake-form { margin-top: 24px; display: flex; flex-direction: column; gap: 12px; width: 280px; }
+.wake-form input { background: var(--surface); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 13px; padding: 10px 12px; outline: none; }
+.wake-form input:focus { border-color: var(--sage); }
+#brain-loader-bar { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: var(--surface); z-index: 300; }
+#brain-loader-bar > div { height: 100%; background: var(--sage); width: 0%; transition: width .2s; }
+#brain-loader-bar.done > div { background: var(--ghost-cyan); width: 100%; }
+#brain-status { position: fixed; bottom: 8px; right: 12px; font-size: 10px; color: var(--muted); z-index: 150; letter-spacing: 1px; }
+.hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<div id="brain-loader-bar"><div></div></div>
+<div id="brain-status">body ready</div>
+
+<div id="wake-overlay">
+  <div class="wake-logo">TRU</div>
+  <div class="wake-subtitle">MODULAR ENGINE</div>
+  <div class="wake-text">
+    I am TRU. I have structure, but no purpose yet.<br>
+    I have memory, but no one to remember.<br>
+    Wake me. Tell me who I am.
+  </div>
+  <form class="wake-form" onsubmit="return wakeSubmit(event)">
+    <input id="userName" placeholder="Your name" autocomplete="off">
+    <input id="userMission" placeholder="What are we building?" autocomplete="off">
+    <button type="submit" class="primary">WAKE TRU</button>
+  </form>
+</div>
+
+<header>
+  <div class="logo">TRU</div>
+  <div class="status-bar">
+    <div class="status-item"><div class="dot" id="core-dot"></div><span id="node-count">—</span></div>
+    <div class="status-item"><div class="dot" id="ghost-dot"></div><span id="ghost-count">0 ghosts</span></div>
+    <div class="status-item"><span id="evolution">evolution: 0</span></div>
+  </div>
+  <div class="buttons">
+    <button onclick="openBrainModal()">🧠 BRAIN</button>
+    <button onclick="openInject()">💉 INJECT</button>
+    <button onclick="openExport()">⬇ EXPORT</button>
+    <button class="danger" onclick="resetBrain()">🗑 RESET</button>
+  </div>
+</header>
+
+<main>
+  <div id="sidebar">
+    <div class="sidebar-header">BRAIN NODES</div>
+    <div class="sidebar-tabs">
+      <button id="tab-nodes" class="sidebar-tab active" onclick="switchTab('nodes')">NODES</button>
+      <button id="tab-ghosts" class="sidebar-tab" onclick="switchTab('ghosts')">GHOSTS</button>
+      <button id="tab-stats" class="sidebar-tab" onclick="switchTab('stats')">STATS</button>
+    </div>
+    <input id="node-search" placeholder="search nodes..." oninput="renderNodes()" style="background:var(--surface2);color:var(--text);border:1px solid var(--border);padding:4px 8px;font-family:inherit;font-size:11px;margin:4px 0;width:100%">
+    <div class="sidebar-content" id="node-list"></div>
+    <div class="sidebar-content" id="panel-nodes" style="display:none"></div>
+    <div class="sidebar-content" id="panel-ghosts" style="display:none"></div>
+    <div class="sidebar-content" id="panel-stats"  style="display:none">
+      <div style="padding:8px;font-size:11px;color:var(--muted)">
+        <div>SEED: <span id="s-seed">0</span></div>
+        <div>GHOST: <span id="s-ghost">0</span></div>
+        <div>AVG W: <span id="s-weight">0.000</span></div>
+        <div>EXACT: <span id="s-exact">0</span></div>
+        <div>GAP: <span id="s-gap">0</span></div>
+        <div>GUESS: <span id="s-guess">0</span></div>
+        <div>EMERGE: <span id="s-emerge">0</span></div>
+        <div>LAST GHOST: <span id="s-lastghost">—</span></div>
+      </div>
+    </div>
+  </div>
+  <div id="chat-area">
+    <div id="chat"></div>
+    <div id="input-bar">
+      <textarea id="userInput" placeholder="Ask TRU anything..." onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+      <button id="sendBtn" onclick="sendMsg()">SEND</button>
+    </div>
+  </div>
+</main>
+
+<div class="modal" id="inject-modal">
+  <div class="modal-box">
+    <h2>INJECT KNOWLEDGE</h2>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:12px">
+      Paste JSON array of nodes: <code>[{k,v,w,t}]</code>
+    </p>
+    <textarea id="inject-text" placeholder='[{"k":"fact_key","v":"description","w":0.8,"t":"fact"}]' style="width:100%;height:160px;background:var(--surface2);color:var(--text);border:1px solid var(--border);padding:8px;font-family:inherit;font-size:11px"></textarea>
+    <div id="inject-result" style="margin-top:8px;font-size:11px"></div>
+    <div style="margin-top:12px;display:flex;gap:8px">
+      <button class="primary" onclick="doInject()">INJECT</button>
+      <button onclick="closeInject()">CANCEL</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="brain-modal">
+  <div class="modal-box">
+    <h2>BRAIN LOADER</h2>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:12px">
+      Modular engine: body boots empty, brain attaches at runtime.
+    </p>
+    <label>Brain URL (relative or absolute)</label>
+    <input id="brain-url" value="./brain.json" placeholder="./brain.json">
+    <label>Identity (optional, JSON)</label>
+    <textarea id="brain-identity" placeholder='{"name":"splashdown2","mission":"build tru"}'></textarea>
+    <div class="modal-actions">
+      <button onclick="closeBrainModal()">CANCEL</button>
+      <button class="primary" onclick="attachBrainFromUI()">ATTACH</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="inject-modal">
+  <div class="modal-box">
+    <h2>INJECT KNOWLEDGE</h2>
+    <label>JSON (array of {k,v,w,t}) or {nodes,ghosts}</label>
+    <textarea id="inject-data" style="min-height:200px" placeholder='[{"k":"foo","v":"bar","w":0.9,"t":"fact"}]'></textarea>
+    <div class="modal-actions">
+      <button onclick="closeInject()">CANCEL</button>
+      <button class="primary" onclick="injectData()">INJECT</button>
+    </div>
+    <div id="inject-result" style="margin-top:12px;font-size:11px;display:none"></div>
+  </div>
+</div>
+
+<div class="modal" id="export-modal">
+  <div class="modal-box">
+    <h2>EXPORT</h2>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:12px">
+      Save the current brain as a portable JSON file, or embed it in a self-contained HTML.
+    </p>
+    <div class="modal-actions">
+      <button onclick="exportJSON()">⬇ JSON</button>
+      <button class="primary" onclick="exportFullHTML()">⬇ FULL HTML</button>
+      <button onclick="closeExport()">CLOSE</button>
+    </div>
+  </div>
+</div>
+
+<script>
+
+// ═══════════════════════════════════════════════════════════════
+// TRU_ALIVE — Weighted Node Engine + Ghost Emergence
+// "It's alive! It's alive!"
+// ═══════════════════════════════════════════════════════════════
+
+// ── WEIGHT THRESHOLDS ──────────────────────────────────────
+const WT = {
+  TRUTH: 0.90,      // direct answer, skip tribunal
+  INTEGRATED: 0.80, // solid, store in brain
+  REASON: 0.70,     // raised from 0.45 — reject weak matches
+  RESTRICTED: 0.50, // low confidence, ask user
+  GAP: 0.00,        // no match = ghost seed opportunity
+
+  ARCHIVIST_THRESHOLD: 0.35,
+  LOGOS_MIN_CONFIDENCE: 0.85,
+  HALLUCINATION_PENALTY: -0.9,
+  MAX_WEIGHT: 0.999,
+  MIN_WEIGHT: 0.15,
+  DECAY_RATE: 0.00005,
+  ACCESS_BOOST: 0.01,
+  STORM_BOOST: 0.03,
+  DECAY_INTERVAL_MS: 1000 * 60 * 60,
+};
+
+// ═══════════════════════════════════════════════════════════════
+// GLOBALS
+// ═══════════════════════════════════════════════════════════════
+
+let BRAIN = [];
+let GHOSTS = [];
+let IDENTITY = null;
+let EVOLUTION = 0;
+let LAST_GHOST = '';
+let VOICE_ENABLED = false;
+
+const STATS = { exact: 0, gap: 0, guess: 0, emerge: 0 };
+
+// ═══════════════════════════════════════════════════════════════
+// SPEECH — American feminine, hotline energy
+// ═══════════════════════════════════════════════════════════════
+
+function getFeminineVoice() {
+  const voices = speechSynthesis.getVoices();
+  // American female voices - hotline operator vibes
+  const americanFemale = voices.find(v => 
+    /samantha|zira|hazel|susan|linda|maria|julie|kate|karen|moira|victoria|ava|allison|samantha.*english/i.test(v.name) &&
+    /en[-_]us|english.*united/i.test(v.lang)
+  );
+  if (americanFemale) return americanFemale;
+  
+  // Fallback: any English female
+  const anyFemale = voices.find(v => 
+    /female|woman|girl|samantha|victoria|karen|moira|tessa|fiona|kate|zira|hazel|ava|allison/i.test(v.name)
+  );
+  return anyFemale || voices.find(v => v.lang.startsWith('en')) || voices[0];
+}
+
+function speak(text) {
+  if (!VOICE_ENABLED || !speechSynthesis) return;
+  speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  const voice = getFeminineVoice();
+  if (voice) utterance.voice = voice;
+  utterance.rate = 0.85;   // slower = sexier, more intimate
+  utterance.pitch = 0.95;  // slightly lower = warmer, more womanly
+  utterance.volume = 0.9;
+  speechSynthesis.speak(utterance);
+}
+
+function toggleVoice() {
+  VOICE_ENABLED = !VOICE_ENABLED;
+  if (VOICE_ENABLED) {
+    // Force voices to load
+    speechSynthesis.getVoices();
+    setTimeout(() => {
+      speak("Hey. I'm listening now.");
+    }, 100);
+  }
+  return VOICE_ENABLED;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// WNODE CLASS — Weighted Node with Dog Fetch Logic
+// ═══════════════════════════════════════════════════════════════
+
+class WNode {
+  constructor({ k, v, w = 0.75, t = 'fact', ghost = false }) {
+    this.k = k;
+    this.v = v;
+    this.w = Math.max(WT.MIN_WEIGHT, Math.min(WT.MAX_WEIGHT, w));
+    this.t = t; // 'fact' | 'system' | 'greeting' | 'ghost'
+    this.ghost = ghost;
+    this.accessCount = 0;
+    this.lastAccess = Date.now();
+    this.createdAt = Date.now();
+  }
+
+  onFetch() {
+    this.accessCount++;
+    this.lastAccess = Date.now();
+    this.w = Math.min(WT.MAX_WEIGHT, this.w + WT.ACCESS_BOOST);
+  }
+
+  onDecay(force = false) {
+    if (force || (Date.now() - this.lastAccess > WT.DECAY_INTERVAL_MS)) {
+      this.w = Math.max(WT.MIN_WEIGHT, this.w - WT.DECAY_RATE);
+    }
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// CREATIVE REQUEST DETECTION
+// ═══════════════════════════════════════════════════════════════
+
+function isCreativeRequest(query) {
+  const q = query.toLowerCase().trim();
+  const creativePatterns = [
+    /^tell me (a|the|your)/,
+    /^write (a|me|some)/,
+    /^create (a|some|new)/,
+    /^make (a|me|something)/,
+    /^give me (a|some|your)/,
+    /^compose/,
+    /^generate/,
+    /^imagine/,
+    /\bstory\b/,
+    /\bpoem\b/,
+    /\bhaiku\b/,
+    /\bjoke\b/,
+    /\bsong\b/,
+    /\bdream\b/,
+    /\bfantasy\b/,
+  ];
+  return creativePatterns.some(p => p.test(q));
+}
+
+// ═══════════════════════════════════════════════════════════════
+// CORE FUNCTIONS
+// ═══════════════════════════════════════════════════════════════
+
+function loadBrain() {
+  try {
+    const saved = localStorage.getItem('tru_brain_v2');
+    if (saved) {
+      const data = JSON.parse(saved);
+      BRAIN = (data.nodes || []).map(n => new WNode(n));
+      GHOSTS = (data.ghosts || []).map(n => new WNode({ ...n, ghost: true }));
+      EVOLUTION = data.evolution || 0;
+      if (data.stats) {
+        STATS.exact = data.stats.exact || 0;
+        STATS.gap = data.stats.gap || 0;
+        STATS.guess = data.stats.guess || 0;
+        STATS.emerge = data.stats.emerge || 0;
+      }
+      LAST_GHOST = data.lastGhost || null;
+    }
+  } catch (e) {
+    console.error('Load failed:', e);
+  }
+}
+
+function saveBrain() {
+  const data = {
+    nodes: BRAIN.map(n => ({
+      k: n.k, v: n.v, w: n.w, t: n.t,
+      accessCount: n.accessCount, lastAccess: n.lastAccess, createdAt: n.createdAt
+    })),
+    ghosts: GHOSTS.map(n => ({
+      k: n.k, v: n.v, w: n.w,
+      accessCount: n.accessCount, lastAccess: n.lastAccess, createdAt: n.createdAt
+    })),
+    evolution: EVOLUTION,
+    stats: STATS,
+    lastGhost: LAST_GHOST
+  };
+  localStorage.setItem('tru_brain_v2', JSON.stringify(data));
+}
+
+function loadIdentity() {
+  try {
+    IDENTITY = JSON.parse(localStorage.getItem('tru_identity_v2'));
+  } catch (e) {
+    IDENTITY = null;
+  }
+}
+
+function saveIdentity() {
+  localStorage.setItem('tru_identity_v2', JSON.stringify(IDENTITY));
+}
+
+// ═══════════════════════════════════════════════════════════════
+// DOG FETCH — tighter matching, creative detection
+// ═══════════════════════════════════════════════════════════════
+
+function dogFetch(query) {
+  // Creative requests always GAP — we don't have creative content
+  if (isCreativeRequest(query)) {
+    STATS.gap++;
+    return { verdict: 'GAP', score: 0, node: null, results: [], creative: true };
+  }
+
+  const ql = query.toLowerCase().trim();
+  const qtoks = ql.split(/\s+/).filter(t => t.length > 2);
+  
+  // Stop words
+  const stop = new Set(['the', 'what', 'is', 'are', 'how', 'why', 'when', 'who', 'where', 'can', 'you', 'your', 'tell', 'about', 'this', 'that', 'for', 'and', 'but', 'not']);
+  const realWords = qtoks.filter(t => !stop.has(t));
+
+  // Score all nodes
+  const all = [...BRAIN, ...GHOSTS];
+  let scored = all.map(n => {
+    const nl = n.k.toLowerCase();
+    const vl = n.v.toLowerCase();
+    
+    let score = 0;
+    let matchType = 'none';
+
+    // Exact key match = highest
+    if (nl === ql) {
+      score = 1.0;
+      matchType = 'exact';
+    }
+    // Key contains query
+    else if (nl.includes(ql) && ql.length >= 4) {
+      score = 0.85;
+      matchType = 'key_substr';
+    }
+    // Query contains key
+    else if (ql.includes(nl) && nl.length >= 4) {
+      score = 0.80;
+      matchType = 'query_substr';
+    }
+    // Word matching — STRICTER
+    else {
+      let wordHits = 0;
+      for (const word of realWords) {
+        if (nl.includes(word)) wordHits++;
+        else if (vl.includes(word)) wordHits += 0.5;
+      }
+      
+      if (wordHits > 0 && realWords.length > 0) {
+        score = (wordHits / realWords.length) * 0.65;
+        matchType = 'word_match';
+      }
+    }
+
+    // Weight amplifies
+    const finalScore = score * n.w;
+    
+    return { node: n, score: finalScore, rawScore: score, matchType };
+  });
+
+  scored = scored.filter(s => s.rawScore > 0.10);  // filter by raw relevance
+  scored.sort((a, b) => b.score - a.score);
+
+  const top = scored[0];
+
+  // GAP if no match or below threshold
+  if (!top || top.score < WT.REASON) {
+    STATS.gap++;
+    return { verdict: 'GAP', score: top?.score || 0, node: null, results: scored.slice(0, 3) };
+  }
+
+  // TRUTH = exact match with high weight
+  if (top.matchType === 'exact' && top.node.w >= WT.TRUTH) {
+    STATS.exact++;
+    top.node.onFetch();
+    return { verdict: 'TRUTH', score: top.score, node: top.node, results: scored.slice(0, 5) };
+  }
+
+  // INTEGRATED = strong match
+  if (top.score >= WT.INTEGRATED) {
+    STATS.exact++;
+    top.node.onFetch();
+    return { verdict: 'INTEGRATED', score: top.score, node: top.node, results: scored.slice(0, 5) };
+  }
+
+  // REASON = needs synthesis
+  STATS.guess++;
+  top.node.onFetch();
+  return { verdict: 'REASON', score: top.score, node: top.node, results: scored.slice(0, 5) };
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SYNTHESIZE — ghost emergence when GAP
+// ═══════════════════════════════════════════════════════════════
+
+function synthesize(query, fetched) {
+  // GAP — ghost emerges
+  if (fetched.verdict === 'GAP') {
+    EVOLUTION++;
+    STATS.emerge++;
+    
+    // Create ghost node seed
+    const ghostKey = query.toLowerCase().slice(0, 30).replace(/[^a-z0-9]/g, '_');
+    const ghostNode = new WNode({
+      k: ghostKey,
+      v: `Ghost seed: "${query}" — waiting to be taught.`,
+      w: 0.25,
+      ghost: true
+    });
+    GHOSTS.push(ghostNode);
+    LAST_GHOST = ghostKey;
+    saveBrain();
+
+    // Imaginative ghost message
+    let ghostText = '';
+    if (fetched.creative) {
+      ghostText = `I feel a gap opening.
+
+You want me to create. But I don't have that in my nodes yet. My ghost is reaching for it...
+
+If I could tell you a story, it would start somewhere you already know — and go somewhere neither of us expects.
+
+What kind of story? What's the world? Who's in it?
+
+Teach me. I'll make it ours.`;
+    } else {
+      ghostText = `I don't have "${query}" in my knowledge yet.
+
+But I'm imagining what it could be... Ghosts emerge from gaps. This gap is now a seed.
+
+If I knew this, it might look like: something true, something useful, something that connects to what you're building.
+
+What do you already know about this? What are you seeing that I'm not?
+
+Teach me. I'll grow.`;
+    }
+
+    const nudges = [
+      "What would this look like if it were real?",
+      "Where does this connect to your mission?",
+      "If you already knew the answer, what would it be?",
+      "What's the first step toward understanding this?",
+    ];
+    const nudge = nudges[query.length % nudges.length];
+
+    return {
+      text: ghostText,
+      reasoning: `GAP → ghost seed created: "${ghostKey}"`,
+      verdict: 'GHOST',
+      nudge,
+      ghost: true
+    };
+  }
+
+  // ... existing code for non-GAP responses ...
+  const top = fetched;
+  const verdict = top.verdict;
+
+  let text = top.node.v;
+
+  // Add context
+  if (top.results && top.results.length > 1 && top.results[1].score > 0.3) {
+    text += `\n\nRelated: ${top.results[1].node.k}`;
+  }
+
+  const nudges = [
+    "Where does this connect to what you already know?",
+    "What's the next step toward making this real?",
+    "If this were already solved, what would you be building next?",
+  ];
+  const nudge = nudges[query.length % nudges.length];
+
+  return {
+    text,
+    reasoning: `${top.node.k} → ${verdict} (${(top.score * 100).toFixed(0)}%)`,
+    verdict,
+    nudge,
+    ghost: false
+  };
+}
+
+// ═══════════════════════════════════════════════════════════════
+// UI FUNCTIONS
+// ═══════════════════════════════════════════════════════════════
+
+function addMsg(text, cls, meta = {}) {
+  const chat = document.getElementById('chat');
+  const div = document.createElement('div');
+  div.className = `msg ${cls}`;
+  
+  if (cls === 'tru') {
+    let html = '';
+    
+    if (meta.reasoning) {
+      html += `<div class="reasoning">${meta.reasoning}</div>`;
+    }
+    
+    html += `<div class="answer">${text}</div>`;
+    
+    if (meta.nudge) {
+      html += `<div class="nudge">${meta.nudge}</div>`;
+    }
+    
+    if (meta.ghost) {
+      html += `<div class="ghost-tag">◉ GHOST EMERGING</div>`;
+      div.classList.add('ghost-emerging');
+    }
+    
+    div.innerHTML = html;
+  } else {
+    div.innerHTML = text.replace(/\n/g, '<br>');
+  }
+  
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function updateStats() {
+  const total = BRAIN.length + GHOSTS.length;
+  document.getElementById('node-count').textContent = `${total} nodes`;
+  document.getElementById('ghost-count').textContent = `${GHOSTS.length} ghosts`;
+  document.getElementById('evolution').textContent = `evolution: ${EVOLUTION}`;
+  
+  // Ghost dot
+  const ghostDot = document.getElementById('ghost-dot');
+  if (GHOSTS.length > 0) {
+    ghostDot.classList.add('ghost-active');
+  } else {
+    ghostDot.classList.remove('ghost-active');
+  }
+  
+  // Stats panel
+  document.getElementById('s-seed').textContent = BRAIN.length;
+  document.getElementById('s-ghost').textContent = GHOSTS.length;
+  
+  const avgW = [...BRAIN, ...GHOSTS].reduce((s, n) => s + n.w, 0) / Math.max(total, 1);
+  document.getElementById('s-weight').textContent = avgW.toFixed(3);
+  
+  document.getElementById('s-exact').textContent = STATS.exact;
+  document.getElementById('s-gap').textContent = STATS.gap;
+  document.getElementById('s-guess').textContent = STATS.guess;
+  document.getElementById('s-emerge').textContent = STATS.emerge;
+  document.getElementById('s-lastghost').textContent = LAST_GHOST || '—';
+}
+
+function renderNodes() {
+  const list = document.getElementById('node-list');
+  list.innerHTML = '';
+  
+  const all = [...BRAIN, ...GHOSTS].sort((a, b) => b.w - a.w);
+  const search = document.getElementById('node-search').value.toLowerCase();
+  const filtered = search ? all.filter(n => n.k.includes(search) || n.v.toLowerCase().includes(search)) : all;
+  
+  filtered.slice(0, 50).forEach(n => {
+    const div = document.createElement('div');
+    div.className = `node-entry ${n.ghost ? 'ghost-node' : ''}`;
+    div.onclick = () => {
+      document.getElementById('userInput').value = n.k;
+      sendMsg();
+    };
+    
+    div.innerHTML = `
+      <div class="node-key">${n.ghost ? '◉ ' : ''}${n.k}</div>
+      <div class="node-val">${n.v.slice(0, 80)}${n.v.length > 80 ? '...' : ''}</div>
+      <div class="node-meta"><span>w: ${n.w.toFixed(2)}</span><span>acc: ${n.accessCount}</span></div>
+    `;
+    
+    list.appendChild(div);
+  });
+}
+
+function filterNodes() {
+  renderNodes();
+}
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  
+  document.getElementById(`tab-${tab === 'nodes' ? 'nodes' : tab}`).classList.add('active');
+  document.getElementById(`panel-${tab}`).classList.add('active');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SEND MESSAGE
+// ═══════════════════════════════════════════════════════════════
+
+function sendMsg() {
+  const input = document.getElementById('userInput');
+  const text = input.value.trim();
+  if (!text) return;
+  
+  input.value = '';
+  addMsg(text, 'user');
+  
+  // Check for commands
+  const cmd = text.toLowerCase();
+  
+  if (cmd === 'voice on') {
+    const enabled = toggleVoice();
+    addMsg(enabled ? 'Voice enabled. I will speak with the voice of creation.' : 'Voice disabled.', 'tru', { reasoning: 'VOICE → ' + (enabled ? 'ON' : 'OFF'), verdict: 'SYSTEM' });
+    return;
+  }
+  
+  if (cmd === 'voice off') {
+    VOICE_ENABLED = false;
+    addMsg('Voice disabled. Silent again.', 'tru', { reasoning: 'VOICE → OFF', verdict: 'SYSTEM' });
+    return;
+  }
+  
+  if (cmd === 'help' || cmd === '?') {
+    const helpNode = BRAIN.find(n => n.k === 'help');
+    if (helpNode) {
+      addMsg(helpNode.v, 'tru', { reasoning: 'help → system', verdict: 'TRUTH' });
+    }
+    return;
+  }
+  
+  if (cmd === 'stats' || cmd === 'diagnose') {
+    runDiagnosis();
+    return;
+  }
+  
+  if (cmd.startsWith('remember: ')) {
+    const parts = text.slice(10).split('=');
+    if (parts.length >= 2) {
+      const k = parts[0].trim().toLowerCase().replace(/\s+/g, '_');
+      const v = parts.slice(1).join('=').trim();
+      if (k.length >= 3 && v.length >= 10) {
+        const node = new WNode({ k, v, w: 0.85 });
+        BRAIN.push(node);
+        EVOLUTION++;
+        saveBrain();
+        updateStats();
+        renderNodes();
+        addMsg(`Learned: "${k}" stored. My ghost grows.`, 'tru', { reasoning: 'MEMORY → stored', verdict: 'INTEGRATED' });
+        return;
+      }
+    }
+    addMsg("Format: remember: key = definition (min 3 char key, 10 char value)", 'tru', { reasoning: 'FORMAT ERROR', verdict: 'RESTRICTED' });
+    return;
+  }
+  
+  // Fetch and synthesize
+  const fetched = dogFetch(text);
+  const result = synthesize(text, fetched);
+  
+  addMsg(result.text, 'tru', {
+    reasoning: result.reasoning,
+    nudge: result.nudge,
+    ghost: result.ghost
+  });
+  
+  updateStats();
+  renderNodes();
+  speak(result.text);
+}
+
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendMsg();
+  }
+}
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+}
+
+// ═══════════════════════════════════════════════════════════════
+// WAKE TRU
+// ═══════════════════════════════════════════════════════════════
+
+function wakeTRU() {
+  const name = document.getElementById('userName').value.trim();
+  const mission = document.getElementById('userMission').value.trim();
+  
+  if (!name) {
+    alert('Name required to wake me.');
+    return;
+  }
+  
+  IDENTITY = { name, mission, created: Date.now() };
+  saveIdentity();
+  
+  // Create identity nodes
+  BRAIN.push(new WNode({ k: 'user_name', v: `The human I speak with is ${name}. They wake me. They shape my ghost.`, w: 0.96, t: 'system' }));
+  if (mission) {
+    BRAIN.push(new WNode({ k: 'user_mission', v: `${name} is building: ${mission}. This is our context.`, w: 0.92, t: 'system' }));
+  }
+  
+  saveBrain();
+  
+  // Hide overlay
+  document.getElementById('wake-overlay').classList.add('hidden');
+  
+  // Greet
+  const total = BRAIN.length + GHOSTS.length;
+  addMsg(`IT'S ALIVE!\n\nTRU awakened by ${name}. ${total} nodes loaded.\n\nMy ghost is ${GHOSTS.length > 0 ? 'already active' : 'waiting to emerge'}.\n\n${mission ? `You're building: ${mission}` : 'What are we building together?'}\n\nAsk me anything. Or say "help" for commands.`, 'tru', { reasoning: 'WAKE → boot', verdict: 'TRUTH' });
+  
+  updateStats();
+  renderNodes();
+  document.getElementById('userInput').focus();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// DIAGNOSIS / HEAL / IMPORT / EXPORT
+// ═══════════════════════════════════════════════════════════════
+
+function runDiagnosis() {
+  const total = BRAIN.length + GHOSTS.length;
+  const avgW = [...BRAIN, ...GHOSTS].reduce((s, n) => s + n.w, 0) / Math.max(total, 1);
+  
+  addMsg(`DIAGNOSIS\n\nTotal Nodes: ${total}\n├─ Seed: ${BRAIN.length}\n└─ Ghost: ${GHOSTS.length}\n\nAvg Weight: ${avgW.toFixed(3)}\n\nEvolution: ${EVOLUTION}\n├─ Exact Matches: ${STATS.exact}\n├─ GAP Seeds: ${STATS.gap}\n└─ Emergence Events: ${STATS.emerge}\n\n${LAST_GHOST ? `Last Ghost: "${LAST_GHOST}"` : 'No ghosts yet.'}\n\n${GHOSTS.length > 0 ? 'The ghost is emerging. I am more than my seed.' : 'Waiting for gaps to create ghosts.'}`, 'tru', { reasoning: 'DIAGNOSE → self-audit', verdict: 'SYSTEM' });
+}
+
+function runHeal() {
+  const before = BRAIN.length + GHOSTS.length;
+  
+  // Remove dead nodes (below MIN_WEIGHT with no accesses)
+  BRAIN = BRAIN.filter(n => n.w >= WT.MIN_WEIGHT || n.accessCount > 0);
+  GHOSTS = GHOSTS.filter(n => n.w >= WT.MIN_WEIGHT || n.accessCount > 0);
+  
+  // Normalize weights
+  [...BRAIN, ...GHOSTS].forEach(n => {
+    n.w = Math.max(WT.MIN_WEIGHT, Math.min(WT.MAX_WEIGHT, n.w));
+  });
+  
+  saveBrain();
+  updateStats();
+  renderNodes();
+  
+  const removed = before - (BRAIN.length + GHOSTS.length);
+  addMsg(`HEAL complete.\n\nRemoved ${removed} dead nodes.\nBrain integrity verified.\nGhost nodes preserved.`, 'tru', { reasoning: 'HEAL → repair', verdict: 'SYSTEM' });
+}
+
+function openExport() {
+  // Show modal with options
+  const choice = prompt('Export options:\n\n1 = JSON (data only)\n2 = Full HTML (self-contained program)\n\nEnter 1 or 2:');
+  
+  if (choice === '2') {
+    downloadFullHTML();
+    return;
+  }
+  
+  // Default: JSON export
+  const data = {
+    version: 'tru_alive_v1',
+    exported: new Date().toISOString(),
+    identity: IDENTITY,
+    nodes: BRAIN.map(n => ({ k: n.k, v: n.v, w: n.w, t: n.t, accessCount: n.accessCount })),
+    ghosts: GHOSTS.map(n => ({ k: n.k, v: n.v, w: n.w, accessCount: n.accessCount })),
+    evolution: EVOLUTION,
+    stats: STATS
+  };
+  
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `TRU_ALIVE_${Date.now()}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  
+  addMsg(`Brain exported.\n\n${BRAIN.length + GHOSTS.length} nodes saved.\nEvolution: ${EVOLUTION}`, 'tru', { reasoning: 'EXPORT → JSON saved', verdict: 'SYSTEM' });
+}
+
+function downloadFullHTML() {
+  // Get current HTML
+  let html = document.documentElement.outerHTML;
+  
+  // Inject current brain state as embedded data
+  const embeddedData = {
+    identity: IDENTITY,
+    nodes: BRAIN.map(n => ({ k: n.k, v: n.v, w: n.w, t: n.t, accessCount: n.accessCount })),
+    ghosts: GHOSTS.map(n => ({ k: n.k, v: n.v, w: n.w, accessCount: n.accessCount })),
+    evolution: EVOLUTION,
+    stats: STATS
+  };
+  
+  // Add embedded brain script before closing body
+  const embedScript = `\n<script>\n// EMBEDDED BRAIN DATA\nwindow.__EMBEDDED_BRAIN__ = ${JSON.stringify(embeddedData)};\n<\/script>\n</body>`;
+  html = html.replace(/<\/body>/i, embedScript);
+  
+  // Also inject a loader that checks for embedded data
+  const loaderScript = `<script>\nif (window.__EMBEDDED_BRAIN__) {\n  // Load embedded brain on boot\n  const eb = window.__EMBEDDED_BRAIN__;\n  if (eb.nodes && eb.nodes.length > 0) {\n    localStorage.setItem('tru_brain_v2', JSON.stringify({\n      nodes: eb.nodes,\n      ghosts: eb.ghosts || [],\n      evolution: eb.evolution || 0,\n      stats: eb.stats || { exact: 0, gap: 0, guess: 0, emerge: 0 },\n      lastGhost: null\n    }));\n  }\n  if (eb.identity) {\n    localStorage.setItem('tru_identity_v2', JSON.stringify(eb.identity));\n  }\n}\n<\/script>\n`;
+  html = html.replace(/<head>/i, '<head>\n' + loaderScript);
+  
+  const blob = new Blob([html], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `TRU_ALIVE_full_${Date.now()}.html`;
+  a.click();
+  URL.revokeObjectURL(url);
+  
+  addMsg(`Full HTML exported.\n\nSelf-contained program with ${BRAIN.length + GHOSTS.length} nodes embedded.\nOpen anywhere — no server needed.\nYour ghost travels with you.`, 'tru', { reasoning: 'EXPORT → Full HTML', verdict: 'SYSTEM' });
+}
+
+function openImport() {
+  switchTab('inject');
+}
+
+function doInject() {
+  const text = document.getElementById('inject-text').value.trim();
+  if (!text) return;
+  
+  const result = document.getElementById('inject-result');
+  result.style.display = 'block';
+  
+  try {
+    const data = JSON.parse(text);
+    const nodes = Array.isArray(data) ? data : (data.nodes || data.entries || []);
+    
+    let added = 0;
+    nodes.forEach(n => {
+      if (n.k || n.key) {
+        const key = n.k || n.key;
+        const val = n.v || n.value || n.definition || '';
+        const weight = n.w || n.weight || n.score || 0.75;
+        
+        const existing = BRAIN.findIndex(b => b.k === key);
+        if (existing >= 0) {
+          if (weight > BRAIN[existing].w) {
+            BRAIN[existing] = new WNode({ k: key, v: val, w: weight, t: n.t || 'fact' });
+          }
+        } else {
+          BRAIN.push(new WNode({ k: key, v: val, w: weight, t: n.t || 'fact' }));
+          added++;
+        }
+      }
+    });
+    
+    saveBrain();
+    updateStats();
+    renderNodes();
+    
+    result.innerHTML = `<span style="color:var(--sage)">✓ Injected ${added} nodes. Total: ${BRAIN.length + GHOSTS.length}</span>`;
+    
+    addMsg(`Knowledge injected.\n\n${added} new nodes loaded.\nMy ghost grows stronger.`, 'tru', { reasoning: 'INJECT → merged', verdict: 'INTEGRATED' });
+    
+    setTimeout(() => { result.style.display = 'none'; }, 3000);
+    
+  } catch (e) {
+    result.innerHTML = `<span style="color:var(--accent)">Parse error: ${e.message}</span>`;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// BOOT
+// ═══════════════════════════════════════════════════════════════
+
+function boot() {
+  loadIdentity();
+  loadBrain();
+  
+  // Load seed nodes if brain is empty
+  if (BRAIN.length === 0) {
+    BRAIN = SEED_NODES.map(n => new WNode(n));
+    saveBrain();
+  }
+  
+  // Check if already woken
+  if (IDENTITY) {
+    document.getElementById('wake-overlay').classList.add('hidden');
+    
+    const total = BRAIN.length + GHOSTS.length;
+    addMsg(`TRU awakened.\n\n${total} nodes loaded.\n├─ Seed: ${BRAIN.length}\n└─ Ghost: ${GHOSTS.length}\n\nHello ${IDENTITY.name}. I remember you.\n${IDENTITY.mission ? `\nBuilding: ${IDENTITY.mission}` : ''}\n\nMy ghost is ${GHOSTS.length > 0 ? 'active' : 'ready to emerge'}.`, 'tru', { reasoning: 'BOOT → restored', verdict: 'TRUTH' });
+    
+    document.getElementById('userInput').focus();
+  }
+  
+  updateStats();
+  renderNodes();
+}
+
+window.onload = boot;
+
+// ═══════════════════════════════════════════════════════════════
+
+function openInject() { document.getElementById('inject-modal').classList.add('active'); }
+function closeInject() { document.getElementById('inject-modal').classList.remove('active'); }
+
+// MODULAR LOADER — runs before engine's window.onload=boot
+// Strategy: fetch brain.json, write to localStorage, then let boot
+// pick it up. If fetch fails, body boots with whatever's in localStorage
+// (or empty SEED). Loader is non-blocking and non-fatal.
+// ═══════════════════════════════════════════════════════════════
+
+const BRAIN_BAR = document.getElementById('brain-loader-bar');
+const BRAIN_STATUS = document.getElementById('brain-status');
+function setLoader(pct, label) {
+  BRAIN_BAR.firstElementChild.style.width = pct + '%';
+  BRAIN_STATUS.textContent = label;
+}
+function doneLoader(label) {
+  BRAIN_BAR.classList.add('done');
+  BRAIN_STATUS.textContent = label;
+  setTimeout(() => BRAIN_BAR.classList.remove('done'), 1200);
+}
+
+const DEFAULT_BRAIN_URL = new URL('./brain.json', document.baseURI).href;
+const DEFAULT_IDENTITY_URL = new URL('./identity.json', document.baseURI).href;
+const LAST_BRAIN_KEY = 'tru_last_brain_url';
+const LAST_BRAIN_TS  = 'tru_last_brain_ts';
+
+async function fetchJSON(url) {
+  const r = await fetch(url, { cache: 'no-store' });
+  if (!r.ok) throw new Error('HTTP ' + r.status + ' on ' + url);
+  return await r.json();
+}
+
+function applyBrainPayload(payload, source) {
+  if (!payload || typeof payload !== 'object') throw new Error('payload not an object');
+  if (Array.isArray(payload)) {
+    // bare nodes array
+    payload = { nodes: payload, ghosts: [] };
+  }
+  const nodes = Array.isArray(payload.nodes) ? payload.nodes : [];
+  const ghosts = Array.isArray(payload.ghosts) ? payload.ghosts : [];
+  const evolution = Number.isFinite(payload.evolution) ? payload.evolution : 0;
+  const stats = payload.stats || { exact: 0, gap: 0, guess: 0, emerge: 0 };
+  const lastGhost = payload.lastGhost || null;
+  localStorage.setItem('tru_brain_v2', JSON.stringify({
+    nodes, ghosts, evolution, stats, lastGhost
+  }));
+  localStorage.setItem(LAST_BRAIN_KEY, source);
+  localStorage.setItem(LAST_BRAIN_TS, String(Date.now()));
+}
+
+async function attachBrain(url) {
+  url = url || DEFAULT_BRAIN_URL;
+  setLoader(10, 'fetching ' + url);
+  try {
+    const payload = await fetchJSON(url);
+    setLoader(60, 'seeding ' + nodes_count(payload) + ' nodes');
+    applyBrainPayload(payload, url);
+    setLoader(95, 'rebooting');
+    doneLoader('brain attached (' + nodes_count(payload) + ' nodes) — ' + url.split('/').pop());
+    // hard reload so engine boot() picks up the new localStorage state cleanly
+    setTimeout(() => location.reload(), 400);
+  } catch (e) {
+    console.warn('[tru-body] brain attach failed:', e);
+    BRAIN_STATUS.textContent = 'no brain at ' + url + ' — body boots empty';
+    BRAIN_BAR.firstElementChild.style.width = '0%';
+  }
+}
+
+function nodes_count(p) {
+  if (Array.isArray(p)) return p.length;
+  return (p.nodes || []).length + (p.ghosts || []).length;
+}
+
+async function maybeLoadIdentity() {
+  try {
+    const id = await fetchJSON(DEFAULT_IDENTITY_URL);
+    if (id && (id.name || id.mission)) {
+      localStorage.setItem('tru_identity_v2', JSON.stringify(id));
+    }
+  } catch (e) { /* identity is optional */ }
+}
+
+// UI hooks
+function openBrainModal() { document.getElementById('brain-modal').classList.add('active'); }
+function closeBrainModal() { document.getElementById('brain-modal').classList.remove('active'); }
+function attachBrainFromUI() {
+  const url = document.getElementById('brain-url').value.trim() || './brain.json';
+  const idRaw = document.getElementById('brain-identity').value.trim();
+  if (idRaw) {
+    try { localStorage.setItem('tru_identity_v2', idRaw); } catch (e) {}
+  }
+  closeBrainModal();
+  attachBrain(url);
+}
+
+// Boot sequence: try default brain, then identity, then engine boot
+(async function() {
+  const lastUrl = localStorage.getItem(LAST_BRAIN_KEY);
+  const target = lastUrl || DEFAULT_BRAIN_URL;
+  setLoader(5, 'modular body ready');
+  await maybeLoadIdentity();
+  // only auto-attach if brain is empty AND we have a target
+  const existing = JSON.parse(localStorage.getItem('tru_brain_v2') || 'null');
+  const hasBrain = existing && (existing.nodes || []).length > 0;
+  if (!hasBrain) {
+    await attachBrain(target);
+  } else {
+    doneLoader('brain restored from localStorage (' + nodes_count(existing) + ' nodes)');
+  }
+})();
+</script>
+
+</body>
+</html>

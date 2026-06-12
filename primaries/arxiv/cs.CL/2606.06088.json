@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06088",
+  "title": "CHALIS: A Challenge Dataset for Language Identification in Difficult Scenarios",
+  "abstract": "We present CHALIS (Challenging Language Identification Samples), a new benchmark dataset explicitly designed to address difficult cases in language identification: cousin languages and orthographic noise. Our dataset has two parts: First, we collected sentences shared across mutually intelligible language pairs (Czech/Slovak, Spanish/Catalan, Portuguese/Galician, Danish/Norwegian). The second part tests for orthography noise: we transliterate text across multiple scripts, remove diacritics, simulate homoglyph attacks, and use Internet slang. We evaluate four widely used language identification systems on CHALIS and demonstrate that all struggle substantially in these scenarios, especially on lower-resource languages within cousin pairs and on transliterated input. The resource is publicly available at https://huggingface.co/datasets/michal-tichy/CHALIS.",
+  "link": "https://arxiv.org/abs/2606.06088",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498000+00:00"
+}

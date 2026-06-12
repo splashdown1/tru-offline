@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2502.15224",
+  "title": "Auto-Discovery-Bench: Diagnosing Structured State Tracking in Oracle-Guided Discovery",
+  "abstract": "Interactive discovery requires agents to maintain and update structured beliefs over many rounds of feedback. Before evaluating agents in noisy, open-ended scientific environments, it is useful to isolate this prerequisite capability under controlled conditions. We introduce Auto-Discovery-Bench, a deterministic oracle-guided diagnostic benchmark in which agents recover hidden structures through repeated hypothesis--intervention--feedback cycles. The benchmark instantiates three controlled discovery abstractions: directed graph discovery, undirected relational discovery, and symbolic equation discovery. Across models, performance degrades as the number of variables, trajectory length, and distractors increase. A separate trajectory-tracking diagnostic shows that many failures persist even when intervention selection and hypothesis generation are removed, suggesting that limitations in maintaining and integrating long-range structured information are an important bottleneck for oracle-guided discovery. Auto-Discovery-Bench is not intended to replace realistic discovery environments; rather, it provides a reproducible, low-confound diagnostic testbed for isolating a prerequisite capability for interactive scientific agents.",
+  "link": "https://arxiv.org/abs/2502.15224",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307590Z"
+}

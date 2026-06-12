@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30749",
+  "title": "FLAG: Flow Policy MaxEnt-RL by Latent Augmented Guidance",
+  "abstract": "Maximum entropy reinforcement learning (MaxEnt-RL) enables robust exploration, yet practical implementations often restrict policies to simple Gaussians.\n  While recent approaches incorporate expressive generative policies via importance-weighted supervised learning, they are prone to importance weight collapse, which limits their scalability in high-dimensional action spaces.\n  Our key insight is to mitigate this limitation by localizing the sampling region, avoiding the weight degeneracy induced by importance sampling over the entire action space.\n  To instantiate this insight, we introduce \\textbf{FLAG} (\\textbf{F}low policy with \\textbf{L}atent-\\textbf{A}ugmented \\textbf{G}uidance).\n  FLAG augments the state space with a flow latent variable and optimizes a provably consistent proxy MaxEnt-RL objective.\n  We empirically demonstrate that FLAG enables expressive policy optimization with limited importance samples and scales to high-dimensional control tasks.\n  Furthermore, FLAG achieves state-of-the-art performance across challenging benchmarks. Our project webpage: https://flag-rl.github.io/",
+  "link": "https://arxiv.org/abs/2605.30749",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.RO"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306791Z"
+}

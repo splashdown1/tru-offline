@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31146",
+  "title": "From Evidence to Design: Developing an AI-Augmented UX Research Point of View for Digital Wellbeing in Emergency and Public Safety Contexts",
+  "abstract": "This paper investigates how User Experience Research (UXR) methods can be combined with AI-supported analysis to develop clearer design direction for digital wellbeing interventions targeting Emergency and Public Safety Personnel (EPSP). EPSP work in high-stress, shift-based environments where cognitive fatigue and unpredictable schedules reduce engagement with conventional wellbeing tools. Using the UXR Point-of-View (PoV) framework, this study applied an AI-supported literature analysis process to identify recurring psychological, behavioural, and design patterns. Behaviour Change Techniques and Persuasive Technology principles were integrated throughout interpretation to connect evidence with practical design reasoning. The process resulted in a UXR PoV Pyramid, nine UXR Play Cards, and stakeholder focused PoV narratives. Findings show that effective wellbeing systems for EPSP must minimise cognitive effort, adapt to operational context, and prioritise psychological safety. The work demonstrates how AI can assist large-scale evidence interpretation while human researchers maintain responsibility for contextual judgement and design direction.",
+  "link": "https://arxiv.org/abs/2605.31146",
+  "category": "cs.AI",
+  "categories": [
+    "cs.HC",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358284Z"
+}

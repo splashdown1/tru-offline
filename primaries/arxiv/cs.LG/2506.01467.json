@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2506.01467",
+  "title": "Feature-Aware (Hyper)graph Generation via Next-Scale Prediction",
+  "abstract": "Graph generative models perform well on small structured data but struggle to scale to large, complex structures. Hierarchical approaches improve scalability but often ignore node and edge features, which are critical in real-world applications, particularly for hypergraphs that model higher-order relationships. In this paper, we propose FAHNES (feature-aware (hyper)graph generation via next-scale prediction), a hierarchical framework that jointly generates topology and features for graphs and hypergraphs. FAHNES builds multi-scale representations through node coarsening and localized expansion, guided by a novel hierarchical scale encoding that controls granularity and ensures cross-scale consistency. Experiments on synthetic, 3D mesh, and graph point cloud datasets demonstrate competitive or state-of-the-art performance while uniquely scaling to featured large-scale graphs and hypergraphs. Our code is open source",
+  "link": "https://arxiv.org/abs/2506.01467",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.DM"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307611Z"
+}

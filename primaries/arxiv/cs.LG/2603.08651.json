@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2603.08651",
+  "title": "Group Entropies and Mirror Duality: A Class of Flexible Mirror Descent Updates for Machine Learning",
+  "abstract": "We introduce a comprehensive theoretical and algorithmic framework that bridges formal group theory and group entropies with modern machine learning, paving the way for an infinite, flexible family of Mirror Descent (MD) optimization algorithms. Our approach exploits the rich structure of group entropies, which are generalized entropic functionals governed by group composition laws, encompassing and significantly extending all trace-form entropies such as the Shannon, Tsallis, and Kaniadakis families. By leveraging group-theoretical mirror maps (or link functions) in MD, expressed via multi-parametric generalized logarithms and their inverses (group exponentials), we achieve highly flexible and adaptable MD updates that can be tailored to diverse data geometries and statistical distributions. To this end, we introduce the notion of \\textit{mirror duality}, which allows us to seamlessly switch or interchange group-theoretical link functions with their inverses, subject to specific learning rate constraints. By tuning or learning the hyperparameters of the group logarithms enables us to adapt the model to the statistical properties of the training distribution, while simultaneously ensuring desirable convergence characteristics via fine-tuning. This generality not only provides greater flexibility and improved convergence properties, but also opens new perspectives for applications in machine learning and deep learning by expanding the design of regularizers and natural gradient algorithms. We extensively evaluate the validity, robustness, and performance of the proposed updates on large-scale, simplex-constrained quadratic programming problems.",
+  "link": "https://arxiv.org/abs/2603.08651",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "hep-th",
+    "math-ph",
+    "math.MP"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307965Z"
+}

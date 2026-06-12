@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.11319",
+  "title": "On the Robustness of Langevin Dynamics to Score Function Error",
+  "abstract": "We consider the robustness of score-based generative modeling to errors in the estimate of the score function. In particular, we show that Langevin dynamics is not robust to the $L^2$ errors (more generally $L^p$ errors) in the estimate of the score function. It is well-established that with small $L^2$ errors in the estimate of the score function, diffusion models can sample faithfully from the target distribution under fairly mild regularity assumptions in a polynomial time horizon. In contrast, our work shows that even for simple distributions in high dimensions, Langevin dynamics run for any polynomial time horizon will produce a distribution far from the target distribution in Total Variation (TV) distance, even when the $L^2$ error (more generally $L^p$) of the estimate of the score function is arbitrarily small. Considering such an error in the estimate of the score function is unavoidable in practice when learning the score function from data, our results provide further justification for diffusion models over Langevin dynamics and serve to caution against the use of Langevin dynamics with estimated scores.",
+  "link": "https://arxiv.org/abs/2603.11319",
+  "category": "stat.ML",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.729098+00:00"
+}

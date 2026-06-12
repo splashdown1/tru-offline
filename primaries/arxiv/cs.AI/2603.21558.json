@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2603.21558",
+  "title": "Reliable Self-Improvement Training by Verifying Reasoning, Not Just Answers",
+  "abstract": "Self-improvement training, where models learn from self-generated solutions, promises sustained capability gains but suffers from a pervasive failure mode: across multiple rounds, compounding reasoning errors cause accuracy to stall or degrade. We trace this drift to standard filtering criteria that retain solutions based solely on final answer correctness, which lets lucky guesses (correct answers with flawed reasoning) contaminate the training data. We propose Verified Self-Improvement (VSI), a framework that conditions data retention on step-level structural integrity rather than just the final output. VSI validates solutions by recomputing arithmetic steps via a computer-algebra library (sympy), checking intermediate consistency, and enforcing domain constraints. Evaluating VSI on GSM8K with Qwen3-4B-Thinking across 5 rounds of self-improvement against four baselines (no verification, outcome verification, majority voting, and VSI with DPO) shows that VSI rejects approximately 34% of correct-answer solutions, successfully isolating lucky guesses. This cleaner training signal drives sustained accuracy gains across all rounds (80.5% to 91.0%), whereas outcome verification plateaus and unverified training collapses. Finally, converting VSI checks into DPO preference pairs trains the model to distinguish sound reasoning from lucky answers, boosting reward accuracy from 46% to 63%. VSI offers a simple, reproducible recipe for robust self-improvement whenever automated reasoning checks are available.",
+  "link": "https://arxiv.org/abs/2603.21558",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358562Z"
+}

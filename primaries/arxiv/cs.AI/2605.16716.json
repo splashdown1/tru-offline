@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.16716",
+  "title": "MAVEN A Multi-Agent Framework for Multicultural Text-to-Video Generation",
+  "abstract": "Text-to-video (T2V) generation has rapidly progressed in visual fidelity, yet its ability to faithfully represent multiple cultures within a single prompt remains underexplored. We introduce MAVEN, a multi-agent prompt refinement framework designed to improve cultural fidelity in both mono-cultural and cross-cultural T2V generation. MAVEN decomposes prompts into person, action, and location dimensions, handled by specialized agents operating in parallel or sequentially. To support systematic evaluation, we contribute a new benchmark of 243 culturally grounded prompts and 972 corresponding videos, spanning three cultures (Chinese, American, Romanian), three action categories, and both mono-cultural and cross-cultural scenarios. Evaluations combining CLIP-based metrics, VLM-as-judge assessments, and videoquality measures show that multi-agent refinement, particularly parallel specialization, significantly improves cultural relevance while preserving visual quality and temporal consistency. The dataset and code are available at https://github.com/AIM-SCU/MAVEN",
+  "link": "https://arxiv.org/abs/2605.16716",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358953Z"
+}

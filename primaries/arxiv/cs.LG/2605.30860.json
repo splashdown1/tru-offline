@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2605.30860",
+  "title": "Bayesian Inference with Shaped Deep Non-linear MLPs",
+  "abstract": "A central aim of deep learning theory is to characterize how neural networks make predictions in the regime of simultaneously large model and training set size. Since the limits of diverging number of model parameters and dataset size do not commute it is not clear a priori what limits exist. In this work, we shed new light on these questions by studying Bayesian inference in deep non-linear MLPs in the regime where the number of training samples ($P$), the input dimension ($N_0$), the hidden layer width ($N$), and the number of hidden layers ($L$) can all be large. We build on the Neural Covariance SDE (Li et al., 2022) to analyze predictive posteriors in the regime where $LP/N\\in\\Theta(1)$, playing the role of an effective network depth. Our framework covers both smooth and ReLU activation functions and applies to arbitrary temperature. We find to first order in $LP/N$ a simple criterion for which data generating processes benefit from depth in the sense that larger $LP/N$ increases the Bayesian model evidence. We also give a novel derivation of a prior result from the physics literature that at least to first order in $LP/N$, the Bayesian predictive posterior is remarkably simple and is simply equivalent to that of a data-dependent kernel method.",
+  "link": "https://arxiv.org/abs/2605.30860",
+  "category": "cs.LG",
+  "categories": [
+    "math.ST",
+    "cs.LG",
+    "math.PR",
+    "stat.TH"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307367Z"
+}

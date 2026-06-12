@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.03554",
+  "title": "Constraint-Enhanced Physical Search through Correlation Matching",
+  "abstract": "Physical systems do not merely add noise to search processes; they impose constraints that generate structured correlations. We propose a principle of constraint-enhanced physical search in which temporal correlations in exploration are matched to constraint-induced spatial correlations in the update dynamics. Using a minimal tug-of-war bandit model (TOW), we show that a conservation law converts local observations into differential evidence across alternatives, while a temporally correlated drive controls the order of exploration. Search efficiency is improved not by stronger randomness or by maximal anti-correlation, but by matching the temporal correlation to the physical update scale that converts feedback into evidence. A scaling estimate identifies the update-noise-to-contrast ratio as the leading parameter that limits how strongly temporal anti-correlation can be used. The results suggest a general organizing principle for physical search: constraints and fluctuations can generate structured spatiotemporal correlations, and efficient exploration emerges when these correlations are matched to the update dynamics.",
+  "link": "https://arxiv.org/abs/2606.03554",
+  "category": "cs.AI",
+  "categories": [
+    "cond-mat.stat-mech",
+    "cs.AI",
+    "nlin.AO",
+    "physics.comp-ph"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097753+00:00"
+}

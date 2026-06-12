@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30537",
+  "title": "The Long-Term Effects of Data Selection in LLM Fine-Tuning",
+  "abstract": "Data selection is increasingly used to reduce the cost of large language model (LLM) fine-tuning, with recent methods prioritizing samples by current utility, diversity, quality, or influence. This paper studies a different question: when fine-tuning occurs over multiple stages, can selection strategies that look optimal now make the model less adaptable later? We introduce a long-horizon view of LLM data selection in which a selector is evaluated not only by immediate task performance, but also by future adaptation speed, forgetting, capability imbalance, and out-of-distribution robustness. We compare representative random, loss-based, gradient-based, diversity-based, quality-based, and utility-diversity selection families under a unified multi-stage protocol. Through controlled experiments designed to instantiate this protocol, we show how short-term selectors can exhibit rank reversal: they improve the current stage while slowing subsequent learning and increasing forgetting. We formalize this behavior as \\emph{myopic selection}, provide a simple local analysis of why it can occur, and propose a diagnostic Long-Horizon Aware Selection (LHAS) objective that augments immediate utility with coverage, future-proxy transfer, and anti-concentration terms. The study argues that data selection should be evaluated as a training intervention that shapes the model's learning trajectory, rather than only as a local data-efficiency mechanism.",
+  "link": "https://arxiv.org/abs/2605.30537",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306653Z"
+}

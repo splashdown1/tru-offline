@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.07551",
+  "title": "Targeted Speaker Poisoning Framework in Zero-Shot Text-to-Speech",
+  "abstract": "Zero-shot Text-to-Speech (TTS) voice cloning poses severe privacy risks, demanding the removal of specific speaker identities from trained TTS models. Conventional machine unlearning is insufficient in this context, as zero-shot TTS can dynamically reconstruct voices from just reference prompts. We formalize this task as Speech Generation Speaker Poisoning (SGSP), in which we modify trained models to prevent the generation of specific identities while preserving utility for other speakers. We evaluate inference-time filtering and parameter-modification baselines across 1, 15, and 100 forgotten speakers. Performance is assessed through the trade-off between utility (WER) and privacy, quantified using AUC and Forget Speaker Similarity (FSSIM). We achieve strong privacy for up to 15 speakers but reveal scalability limits at 100 speakers due to increased identity overlap. Our study thus introduces a novel problem and evaluation framework toward further advances in generative voice privacy.",
+  "link": "https://arxiv.org/abs/2603.07551",
+  "category": "cs.AI",
+  "categories": [
+    "cs.SD",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358865Z"
+}

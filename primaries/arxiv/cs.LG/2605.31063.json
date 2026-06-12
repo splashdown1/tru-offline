@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2605.31063",
+  "title": "Free energy Estimation on Any State Space",
+  "abstract": "Free energy estimation is a fundamental yet challenging problem, from physics to statistics. Classical approaches rely on thermodynamic transformations, ranging from direct estimation, quasistatic integration, to finite-time averaging. Recent work [He and Du et al., 2025] learns neural transports to significantly accelerate the efficiency in the finite-time regime. In this paper, we generalize this framework to arbitrary state spaces. Building on this view, we develop a generalized neural transport learning approach for efficient estimation. Experiments validate the effectiveness and efficiency of the proposed method beyond continuous settings, extending to discrete and multimodal spaces as well as autoregressive settings. Beyond free energy estimation, we establish algebraic identities and reveal a group-theoretic structure linking infinitesimal time reversal and generalized Doob's $h$-transforms, showing that their compositions form a generalized dihedral group.",
+  "link": "https://arxiv.org/abs/2605.31063",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "physics.chem-ph",
+    "physics.comp-ph"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307416Z"
+}

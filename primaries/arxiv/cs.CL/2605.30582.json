@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30582",
+  "title": "AI for Monitoring and Classifying Data Used in Research Literature",
+  "abstract": "While platforms like Google Scholar and Semantic Scholar track citations for academic papers, no comparable infrastructure exists for monitoring dataset usage in research literature, leaving the landscape of data use largely opaque. Addressing this gap is critical for transparency, reproducibility, and monitoring of impact, yet progress is hindered by inconsistent citation practices, scarce labeled data, and ambiguous references to datasets in the wild. Traditional NLP approaches struggle with these challenges, motivating the shift toward more adaptive, semantically rich models. Building on prior work using LLMs for data mention detection and synthetic data for bootstrapping training, this paper presents an updated methodology for scalable dataset monitoring. We introduce a multitask GLiNER-based framework that jointly performs dataset mention extraction, relation identification, and usage-context classification. To address label scarcity, the pipeline leverages synthetic data generation to produce training examples and LLM-based revalidation to filter incorrect mentions and enforce labeling consistency, together improving reliability, coverage, and output consistency across the training pipeline. This work advances the development of open-source tools for monitoring data use in research literature, contributing to the broader goal of generalizable, unconstrained dataset citation tracking.",
+  "link": "https://arxiv.org/abs/2605.30582",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405663Z"
+}

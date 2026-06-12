@@ -1,0 +1,32 @@
+{
+  "pulled_at": "2026-06-05T08:32:24.277671+00:00",
+  "count": 1,
+  "min_corroboration": 2,
+  "expiry_days": 7,
+  "items": [
+    {
+      "id": "a0e48aab46da",
+      "title": "Our views on AI policy and political advocacy",
+      "link": "https://openai.com/index/our-views-on-ai-policy-and-political-advocacy",
+      "description": "Our approach to AI policy and political advocacy, transparency, support for thoughtful regulation and AI safety, and that no outside political group speaks on the company\u2019s behalf.",
+      "pubdate": "Mon, 01 Jun 2026 17:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793474+00:00",
+      "corroboration_count": 2,
+      "corroboration_sources": [
+        "ai_news",
+        "openai_blog"
+      ],
+      "corroboration_ids": [
+        "a0e48aab46da",
+        "4dce0849c381",
+        "36fece9a90cd"
+      ],
+      "matched_entities": [
+        "ai"
+      ],
+      "channel": "CURRENT_EVENTS",
+      "verified": true
+    }
+  ]
+}

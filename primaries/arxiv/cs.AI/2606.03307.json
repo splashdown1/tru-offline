@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.03307",
+  "title": "Generalizing Graph Foundation Models via Hyperbolic Retrieval-Augmented Generation",
+  "abstract": "Graph foundation models (GFMs) emerged as a dominant paradigm in graph representation learning by leveraging large-scale pre-training for cross-domain inference. However, the parameterized knowledge encoded within these models is insufficient to cope with distribution shifts, limiting their generalization ability. To mitigate this issue, retrieval-augmented generation (RAG) has been introduced to incorporate external knowledge at inference time. Nevertheless, existing RAG frameworks operating in Euclidean space suffer from a fundamental geometric limitation: the polynomial volume growth of Euclidean space is inherently mismatched with the tree-structured external knowledge bases. This mismatch leads to the loss of semantic granularity in retrieval and gives rise to the hubness phenomenon.To address this limitation, we propose a Hyperbolic Retrieval-Augmented Generation (HyRAG) framework designed to enhance the generalization capabilities of GFMs. Specifically, the introduced Hyperbolic Knowledge Indexing module retains the tree-like hierarchies of the external knowledge base by modeling them within hyperbolic space. The Multi-granularity Retrieval module then provides GFMs with the global semantic anchors and local semantic nuances through coarse-grained and fine-grained knowledge retrieval, respectively. Finally, the Dual-path Fusion module achieves effective knowledge integration for graph tasks at both the feature and structural levels. Experiments on multiple graph benchmarks demonstrate significant improvements in the zero-shot setting, highlighting the generalization of our method for robust GFMs inference.",
+  "link": "https://arxiv.org/abs/2606.03307",
+  "category": "cs.AI",
+  "categories": [
+    "cs.IR",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099440+00:00"
+}

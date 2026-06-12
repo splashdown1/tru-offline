@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2511.08972",
+  "title": "Selective Sinkhorn Routing for Improved Sparse Mixture of Experts",
+  "abstract": "Sparse Mixture-of-Experts (SMoE) models are scalable and computationally efficient, enabling large increases in model capacity with limited inference overhead. Existing SMoE methods often depend on auxiliary objectives, such as load-balancing loss and z-loss, or additional trainable components such as noisy gating. While these techniques encourage expert diversity, they can introduce objective misalignment, increase model complexity, or incur substantial training overhead, especially in Sinkhorn-based routing methods. In this paper, we revisit the token-to-expert assignment as an optimal transport problem. We add constraints to ensure balanced expert utilization. We show that even minimal optimal transport-based routing improves SMoE performance without requiring auxiliary balancing losses. Unlike prior approaches, our method derives gating scores directly from the transport map, leading to more balanced and effective token-to-expert assignments. Building on this insight, we introduce Selective Sinkhorn Routing (SSR), a lightweight routing mechanism that replaces complex auxiliary losses with efficient Sinkhorn-based routing while preserving flexible expert selection. Experiments on language modeling and image classification show that SSR improves training efficiency, accuracy, and robustness to input corruption.",
+  "link": "https://arxiv.org/abs/2511.08972",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883964+00:00"
+}

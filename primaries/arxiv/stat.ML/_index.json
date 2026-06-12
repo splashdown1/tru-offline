@@ -1,0 +1,388 @@
+{
+  "category": "stat.ML",
+  "pulled_at": "2026-06-05T08:23:15.752605+00:00",
+  "count": 76,
+  "cutoff_days": 30,
+  "papers": [
+    {
+      "arxiv_id": "2606.05230",
+      "title": "Central Description Length (CDL) Clustering Validation Index",
+      "link": "https://arxiv.org/abs/2606.05230"
+    },
+    {
+      "arxiv_id": "2606.05239",
+      "title": "HyFAD: Hybrid Time-Frequency Diffusion with Frequency-Aware Embedding for Time Series Imputation",
+      "link": "https://arxiv.org/abs/2606.05239"
+    },
+    {
+      "arxiv_id": "2606.05242",
+      "title": "Deterministic Envelopes for Tamed SGLD: Decoupling Stochastic-Gradient Noise and Localizing Taming",
+      "link": "https://arxiv.org/abs/2606.05242"
+    },
+    {
+      "arxiv_id": "2606.05258",
+      "title": "Harnessing Source Heterogeneity for Cluster-Structured Transfer Learning",
+      "link": "https://arxiv.org/abs/2606.05258"
+    },
+    {
+      "arxiv_id": "2606.05361",
+      "title": "TabSODA: Tabular Diffusion based Imputation with Skip Pattern Detection and Ordinal Awareness",
+      "link": "https://arxiv.org/abs/2606.05361"
+    },
+    {
+      "arxiv_id": "2606.05365",
+      "title": "Environment-Robust Representation Learning with Empirical Bayes",
+      "link": "https://arxiv.org/abs/2606.05365"
+    },
+    {
+      "arxiv_id": "2606.05488",
+      "title": "Sparse Functional Singular Value Decomposition for Biclustering and Triclustering Longitudinal Data",
+      "link": "https://arxiv.org/abs/2606.05488"
+    },
+    {
+      "arxiv_id": "2606.05551",
+      "title": "Conformal Risk-Averse Decision Making with Action Conditional Guarantee",
+      "link": "https://arxiv.org/abs/2606.05551"
+    },
+    {
+      "arxiv_id": "2606.05919",
+      "title": "Finding Most Influential Sets",
+      "link": "https://arxiv.org/abs/2606.05919"
+    },
+    {
+      "arxiv_id": "2606.05942",
+      "title": "EML-CD: Causal Mechanism Recovery via EML Symbolic Trees in Structure Learning",
+      "link": "https://arxiv.org/abs/2606.05942"
+    },
+    {
+      "arxiv_id": "2606.05967",
+      "title": "Fast and Robust Convergence Rate for TD(0) with Linear Function Approximation, Universal Learning Steps and I.I.D. Samples",
+      "link": "https://arxiv.org/abs/2606.05967"
+    },
+    {
+      "arxiv_id": "2606.06043",
+      "title": "Adaptive Learning Rates with Surrogate Probability for Follow-the-Perturbed-Leader",
+      "link": "https://arxiv.org/abs/2606.06043"
+    },
+    {
+      "arxiv_id": "2606.06171",
+      "title": "Effective Dimensionality as an Operator Invariant for Physics-Preserving Constraint Adaptation in Physics-Informed Neural Networks",
+      "link": "https://arxiv.org/abs/2606.06171"
+    },
+    {
+      "arxiv_id": "2606.06179",
+      "title": "Diffusion Models Observe Only Gradients: A Geometric Perspective on Score Matching Errors",
+      "link": "https://arxiv.org/abs/2606.06179"
+    },
+    {
+      "arxiv_id": "2606.06233",
+      "title": "Anchor PCA",
+      "link": "https://arxiv.org/abs/2606.06233"
+    },
+    {
+      "arxiv_id": "2606.06288",
+      "title": "Discrete Causal Representations from Heterogeneous Domains: A Bayesian Approach with Social Survey Applications",
+      "link": "https://arxiv.org/abs/2606.06288"
+    },
+    {
+      "arxiv_id": "2606.06342",
+      "title": "Symmetric Divergence and Normalized Similarity: A Unified Topological Framework for Representation Analysis",
+      "link": "https://arxiv.org/abs/2606.06342"
+    },
+    {
+      "arxiv_id": "2606.06351",
+      "title": "Function-Space Priors for Bayesian Neural ODEs with Application to Vessel Trajectory Prediction",
+      "link": "https://arxiv.org/abs/2606.06351"
+    },
+    {
+      "arxiv_id": "2606.06391",
+      "title": "Conformal Risk Sharing: Certified Cost Allocation with Participation Guarantees",
+      "link": "https://arxiv.org/abs/2606.06391"
+    },
+    {
+      "arxiv_id": "2606.05247",
+      "title": "DiffSlack: Learning under Nonlinear Inequality Constraints via Learnable Slack Variables",
+      "link": "https://arxiv.org/abs/2606.05247"
+    },
+    {
+      "arxiv_id": "2606.05327",
+      "title": "Multimarginal flow matching with optimal transport potentials",
+      "link": "https://arxiv.org/abs/2606.05327"
+    },
+    {
+      "arxiv_id": "2606.05335",
+      "title": "A prism hierarchy of learning regimes in large linear autoencoders",
+      "link": "https://arxiv.org/abs/2606.05335"
+    },
+    {
+      "arxiv_id": "2606.05371",
+      "title": "Mamba-Assisted Non-Markovian Closure for Reduced-Order Modeling",
+      "link": "https://arxiv.org/abs/2606.05371"
+    },
+    {
+      "arxiv_id": "2606.05441",
+      "title": "GOTabPFN: From Feature Ordering to Compact Tokenization for Tabular Foundation Models on High-Dimensional Data",
+      "link": "https://arxiv.org/abs/2606.05441"
+    },
+    {
+      "arxiv_id": "2606.05462",
+      "title": "A Two-Channel F-Transform Representation for Early Trajectory Characterization in Iterated Correlation Dynamics",
+      "link": "https://arxiv.org/abs/2606.05462"
+    },
+    {
+      "arxiv_id": "2606.05560",
+      "title": "Wasserstein Exponential Smoothing",
+      "link": "https://arxiv.org/abs/2606.05560"
+    },
+    {
+      "arxiv_id": "2606.05599",
+      "title": "Mitigating the Curse of Dimensionality in Uniform Convergence of Deep Neural Networks via Smooth Activations",
+      "link": "https://arxiv.org/abs/2606.05599"
+    },
+    {
+      "arxiv_id": "2606.05733",
+      "title": "Zero-Copy Semantic Contagion: An In-Memory Streaming Architecture for Evolving Attention Graphs",
+      "link": "https://arxiv.org/abs/2606.05733"
+    },
+    {
+      "arxiv_id": "2606.05779",
+      "title": "TinyML-Driven Cybersecurity for Autonomous Spacecraft: Latency-Accuracy Analysis for SPARTA RF and Cyber Threat Detection",
+      "link": "https://arxiv.org/abs/2606.05779"
+    },
+    {
+      "arxiv_id": "2606.05797",
+      "title": "Causal Longitudinal Prior-Fitted Networks for Counterfactual Outcome Prediction",
+      "link": "https://arxiv.org/abs/2606.05797"
+    },
+    {
+      "arxiv_id": "2606.05957",
+      "title": "Dead Directions: Geometric Singular Learning",
+      "link": "https://arxiv.org/abs/2606.05957"
+    },
+    {
+      "arxiv_id": "2606.06123",
+      "title": "Adaptive state-action abstractions via rate-distortion",
+      "link": "https://arxiv.org/abs/2606.06123"
+    },
+    {
+      "arxiv_id": "2606.06293",
+      "title": "PAC-Bayesian Adversarially Robust Generalization for Message Passing Graph Neural Networks: A Sensitivity Analysis",
+      "link": "https://arxiv.org/abs/2606.06293"
+    },
+    {
+      "arxiv_id": "2606.06314",
+      "title": "DAS-PINNs for high-dimensional partial differential equations: extending deep adaptive sampling to spacetime domains",
+      "link": "https://arxiv.org/abs/2606.06314"
+    },
+    {
+      "arxiv_id": "2606.06329",
+      "title": "Efficient Mean Curvature Computation on High-Dimensional Data Manifolds",
+      "link": "https://arxiv.org/abs/2606.06329"
+    },
+    {
+      "arxiv_id": "2606.06332",
+      "title": "Bentkus-type asymptotic e-values",
+      "link": "https://arxiv.org/abs/2606.06332"
+    },
+    {
+      "arxiv_id": "2606.06364",
+      "title": "End-to-End Subgraph Detection with GraphDETR",
+      "link": "https://arxiv.org/abs/2606.06364"
+    },
+    {
+      "arxiv_id": "2606.06368",
+      "title": "Optimally taming biases in black-box models for efficient semiparametric estimation",
+      "link": "https://arxiv.org/abs/2606.06368"
+    },
+    {
+      "arxiv_id": "2606.06384",
+      "title": "Estimation of the sub-Gaussian parameter",
+      "link": "https://arxiv.org/abs/2606.06384"
+    },
+    {
+      "arxiv_id": "2606.06412",
+      "title": "Nonreversible Gauge Fields in Fokker--Planck Dynamics: Supersymmetric Hamiltonians and Learned Finite Forces",
+      "link": "https://arxiv.org/abs/2606.06412"
+    },
+    {
+      "arxiv_id": "2606.06440",
+      "title": "Causal Atlases from Entropic Inference: Bayesian Networks beyond Optimal DAGs",
+      "link": "https://arxiv.org/abs/2606.06440"
+    },
+    {
+      "arxiv_id": "2508.04409",
+      "title": "The Relative Instability of Model Comparison with Cross-validation",
+      "link": "https://arxiv.org/abs/2508.04409"
+    },
+    {
+      "arxiv_id": "2509.02971",
+      "title": "Scale-Adaptive Generative Flows for Multiscale Scientific Data",
+      "link": "https://arxiv.org/abs/2509.02971"
+    },
+    {
+      "arxiv_id": "2510.15814",
+      "title": "On Universality of Deep Equivariant Networks",
+      "link": "https://arxiv.org/abs/2510.15814"
+    },
+    {
+      "arxiv_id": "2511.16111",
+      "title": "Rotation-Parameterized Graph Fractional Fourier Transform: Definition, Properties, and Optimal Filtering",
+      "link": "https://arxiv.org/abs/2511.16111"
+    },
+    {
+      "arxiv_id": "2601.21817",
+      "title": "A Judge-Aware Ranking Framework for Evaluating Large Language Models without Ground Truth",
+      "link": "https://arxiv.org/abs/2601.21817"
+    },
+    {
+      "arxiv_id": "2602.00797",
+      "title": "Zero-Flow Encoders",
+      "link": "https://arxiv.org/abs/2602.00797"
+    },
+    {
+      "arxiv_id": "2605.12951",
+      "title": "Coreset-Induced Conditional Velocity Flow Matching",
+      "link": "https://arxiv.org/abs/2605.12951"
+    },
+    {
+      "arxiv_id": "2605.13587",
+      "title": "Reframing preprocessing selection as model-internal calibration in near-infrared spectroscopy: A large-scale benchmark of operator-adaptive PLS and Ridge models",
+      "link": "https://arxiv.org/abs/2605.13587"
+    },
+    {
+      "arxiv_id": "2605.21557",
+      "title": "Scalable Reinforcement Learning via Adaptive Batch Scaling",
+      "link": "https://arxiv.org/abs/2605.21557"
+    },
+    {
+      "arxiv_id": "2605.22346",
+      "title": "The ASE-LSE Disagreement Landscape: An End-to-End Characterisation of Extremes and Structural Drivers",
+      "link": "https://arxiv.org/abs/2605.22346"
+    },
+    {
+      "arxiv_id": "2605.27991",
+      "title": "Gradient-Flow Optimization as Dynamic Random-Effects Inference: Testing and Early Stopping with Applications to Deep Learning",
+      "link": "https://arxiv.org/abs/2605.27991"
+    },
+    {
+      "arxiv_id": "2606.03067",
+      "title": "Trajectory-Aware Node Contributions and the Limits of Static Controllability",
+      "link": "https://arxiv.org/abs/2606.03067"
+    },
+    {
+      "arxiv_id": "2311.07565",
+      "title": "Exploration via linearly perturbed loss minimisation",
+      "link": "https://arxiv.org/abs/2311.07565"
+    },
+    {
+      "arxiv_id": "2410.06326",
+      "title": "Convex Estimation of Gaussian Graphical Regression Models with Covariates",
+      "link": "https://arxiv.org/abs/2410.06326"
+    },
+    {
+      "arxiv_id": "2412.04605",
+      "title": "Semiparametric Bayesian Difference-in-Differences",
+      "link": "https://arxiv.org/abs/2412.04605"
+    },
+    {
+      "arxiv_id": "2412.11800",
+      "title": "Scalable Temporal Anomaly Causality Discovery in Large Systems: Achieving Computational Efficiency with Binary Anomaly Flag Data",
+      "link": "https://arxiv.org/abs/2412.11800"
+    },
+    {
+      "arxiv_id": "2501.14291",
+      "title": "Advances in Temporal Point Processes: Bayesian, Neural, and LLM Approaches",
+      "link": "https://arxiv.org/abs/2501.14291"
+    },
+    {
+      "arxiv_id": "2506.00188",
+      "title": "Cluster-Aware Causal Mixer for Online Anomaly Detection in Multivariate Time Series",
+      "link": "https://arxiv.org/abs/2506.00188"
+    },
+    {
+      "arxiv_id": "2507.12257",
+      "title": "Robust Causal Discovery in Real-World Time Series with Power-Laws",
+      "link": "https://arxiv.org/abs/2507.12257"
+    },
+    {
+      "arxiv_id": "2509.11381",
+      "title": "Accuracy Limits of Causal Trees for Individualized Treatment Effects",
+      "link": "https://arxiv.org/abs/2509.11381"
+    },
+    {
+      "arxiv_id": "2509.20345",
+      "title": "General Synthetic-Powered Inference",
+      "link": "https://arxiv.org/abs/2509.20345"
+    },
+    {
+      "arxiv_id": "2509.24882",
+      "title": "Scaling Laws and Spectra of Shallow Neural Networks in the Feature Learning Regime",
+      "link": "https://arxiv.org/abs/2509.24882"
+    },
+    {
+      "arxiv_id": "2510.10968",
+      "title": "Blade: A Derivative-free Bayesian Inversion Method using Diffusion Priors",
+      "link": "https://arxiv.org/abs/2510.10968"
+    },
+    {
+      "arxiv_id": "2512.19510",
+      "title": "Toward Scalable and Valid Conditional Independence Testing with Spectral Representations",
+      "link": "https://arxiv.org/abs/2512.19510"
+    },
+    {
+      "arxiv_id": "2601.06655",
+      "title": "Physics-constrained Gaussian Processes for Predicting Shockwave Hugoniot Curves",
+      "link": "https://arxiv.org/abs/2601.06655"
+    },
+    {
+      "arxiv_id": "2601.16195",
+      "title": "Pushing the limits of unconstrained machine-learned interatomic potentials",
+      "link": "https://arxiv.org/abs/2601.16195"
+    },
+    {
+      "arxiv_id": "2602.01607",
+      "title": "Minimax optimal differentially private synthetic data for smooth queries",
+      "link": "https://arxiv.org/abs/2602.01607"
+    },
+    {
+      "arxiv_id": "2602.06773",
+      "title": "On the Convergence of Multicalibration Gradient Boosting",
+      "link": "https://arxiv.org/abs/2602.06773"
+    },
+    {
+      "arxiv_id": "2602.24207",
+      "title": "The Stability of Online Algorithms in Performative Prediction",
+      "link": "https://arxiv.org/abs/2602.24207"
+    },
+    {
+      "arxiv_id": "2603.11319",
+      "title": "On the Robustness of Langevin Dynamics to Score Function Error",
+      "link": "https://arxiv.org/abs/2603.11319"
+    },
+    {
+      "arxiv_id": "2603.20980",
+      "title": "From Causal Discovery to Dynamic Causal Inference in Neural Time Series",
+      "link": "https://arxiv.org/abs/2603.20980"
+    },
+    {
+      "arxiv_id": "2603.25157",
+      "title": "Vision Hopfield Memory Networks",
+      "link": "https://arxiv.org/abs/2603.25157"
+    },
+    {
+      "arxiv_id": "2605.08318",
+      "title": "When Attention Beats Fourier: Multi-Scale Transformers for PDE Solving on Irregular Domains",
+      "link": "https://arxiv.org/abs/2605.08318"
+    },
+    {
+      "arxiv_id": "2605.15454",
+      "title": "Reasoning Models Don't Just Think Longer, They Move Differently",
+      "link": "https://arxiv.org/abs/2605.15454"
+    },
+    {
+      "arxiv_id": "2605.27292",
+      "title": "Detectability in Diversity: Improved Canary Crafting for Privacy Auditing in One Run",
+      "link": "https://arxiv.org/abs/2605.27292"
+    }
+  ]
+}

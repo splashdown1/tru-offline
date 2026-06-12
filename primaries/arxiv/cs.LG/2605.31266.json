@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31266",
+  "title": "Envisioning Beyond the Few: Disentangled Semantics and Primitives for Few-Shot Atypical Layout-to-Image Generation",
+  "abstract": "The layout-to-image (L2I) task enables fine-grained control over image generation via object categories and spatial layouts. However, existing L2I methods yield fragmented and distorted generations under few-shot atypical settings. We term this failure as representation fragmentation, arising from a granularity mismatch that entangles semantic identity with visual details. To address this issue, we propose a representation-driven framework that disentangles semantics from primitives for robust few-shot adaptation. Specifically, Semantic Anchoring aggregates categorical semantics into anchors for stable identity, while Primitive Imbuing models recomposable primitives for robust local detail modeling. Conceptual Steering further regulates optimization with a saliency-aware objective to preserve foreground semantic consistency. Extensive experiments demonstrate consistent improvements in the 5-shot regime over state-of-the-art L2I methods in both visual fidelity and alignment across diverse atypical domains. The source code is publicly available at https://github.com/iCVTEAM/DSP.",
+  "link": "https://arxiv.org/abs/2605.31266",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307481Z"
+}

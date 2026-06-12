@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.04877",
+  "title": "Abduction Prover in Isabelle/HOL",
+  "abstract": "Proof assistants based on expressive logics suffer limited automation for proof search, raising the cost of formal verification based on proof assistants. We address this problem by introducing the Abduction Prover for Isabelle/HOL. Given a challenging proof goal, the Abduction Prover constructs a proof script for the goal by identifying useful conjectures using abductive reasoning.",
+  "link": "https://arxiv.org/abs/2606.04877",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LO",
+    "cs.AI",
+    "cs.PL",
+    "cs.SE"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098456+00:00"
+}

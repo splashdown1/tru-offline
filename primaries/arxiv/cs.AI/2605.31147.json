@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31147",
+  "title": "Developing a Culturally Grounded, AI-Augmented UX Research Point of View (POV): An Exemplar Case Study from Telemedicine Dementia Care",
+  "abstract": "User Experience Research (UXR) Points of View (POVs) distil complex and often fragmented research evidence into actionable perspectives that guide how teams interpret user needs, frame design decisions, and align stakeholders. Although POVs are widely used in industry practice, there are few published examples that explicitly document how POVs are constructed, particularly in culturally sensitive and low-resource contexts. This paper presents an exemplar case study demonstrating how a culturally grounded, AI-augmented UXR POV was developed to inform TeleDeCa, a telemedicine dementia care framework for family caregivers in Nigeria. Building on the UXR POV Playbook and pyramid framework, we illustrate how mixed-methods research, hypothesis generation, and ontology-based modelling can be combined to form a defensible POV without requiring a fully finalised system or validated outcomes. Generative AI (GenAI) is integrated across the UXR POV framework as a bounded research collaborator, supporting synthesis, hypothesis exploration, and narrative construction while preserving human judgment, ethical accountability, and cultural sensitivity. The contribution of this paper lies in the extraction of reusable Play Cards and a Play that extend the UXR POV Playbook and serve as exemplar material for the CHI 2026 workshop on developing AI-powered UXR POVs.",
+  "link": "https://arxiv.org/abs/2605.31147",
+  "category": "cs.AI",
+  "categories": [
+    "cs.HC",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358287Z"
+}

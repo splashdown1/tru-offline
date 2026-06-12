@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2604.22583",
+  "title": "Adaptive Head Budgeting for Efficient Multi-Head Attention",
+  "abstract": "Multi-head attention enables Transformers to capture diverse representations, but all attention heads are typically activated for every input, regardless of task complexity. For coarse-grained tasks such as text classification, where relevant information is often global, this fixed allocation can introduce unnecessary computation. We propose BudgetFormer, a Transformer architecture that dynamically allocates attention heads on a per-input basis. The model learns both a head budget and a relevance distribution to select the most informative heads. To support effective head selection, we introduce a training strategy that balances exploration and exploitation. Experiments on text classification tasks show that BudgetFormer reduces FLOPs and memory usage while matching or surpassing the performance of standard multi-head attention. These results highlight adaptive head allocation as an effective approach to improving Transformer efficiency and performance.",
+  "link": "https://arxiv.org/abs/2604.22583",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884178+00:00"
+}

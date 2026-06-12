@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05588",
+  "title": "Auditing Demonstration Curation Metrics: Action-Only Scorers Fail on the Structural Defects That Degrade Imitation Policies",
+  "abstract": "Imitation-learning policies inherit the quality of the demonstrations they are trained on, and a growing set of curation metrics promise to score and filter low-quality demonstrations automatically. These metrics are each validated on different data with different protocols, so it is unclear which of them actually identify the demonstrations that harm a policy. We build a controlled testbed in which demonstration defects are injected with known type, and audit seven curation metrics along two axes: how well each separates defective from clean demonstrations, and whether training a behavior-cloning policy on each metric's curated subset improves task success. We study two defect regimes. Subtle perturbations (correlated action noise, tremor, truncation) are detectable by multivariate outlier scoring and, once removed, recover the full downstream gap. Structural errors, where the demonstration executes a wrong action at a key moment, are invisible to every action-only metric we test, and two of them are inverted: they score defective demonstrations as higher quality and, used for curation, tend to leave the policy at or below the uncurated baseline rather than above it. Only metrics that examine the state trajectory detect structural errors, and even the best of them recovers just a third of the downstream gap. High detection accuracy does not guarantee downstream improvement. We release the testbed and all curation implementations.",
+  "link": "https://arxiv.org/abs/2606.05588",
+  "category": "cs.LG",
+  "categories": [
+    "cs.RO",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883112+00:00"
+}

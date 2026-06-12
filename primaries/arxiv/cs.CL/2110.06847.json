@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2110.06847",
+  "title": "Ousiometrics: The essence of meaning aligns with a power-danger-structure framework instead of valence-arousal-dominance",
+  "abstract": "From work emerging through the middle of the 20th century, the essence of meaning has become widely accepted as being described by the three orthogonal dimensions of valence, arousal, and dominance (VAD). These essential dimensions have become the cornerstone of sentiment analysis across many fields. By re-examining first types and then tokens for the English language, and through the use of automatically annotated histograms -- `ousiograms' -- we find here that: The essence of meaning conveyed by words is instead best described by a goodness-power-aggression-danger-structure circumplex framework (GPADS); that large-scale English language corpora reveal a systematic bias toward safe, low-danger words; and that the power-danger-structure (PDS) framework is the minimal framework that represents essential meaning. We find remarkable congruences between the GPADS framework and other spaces including mental states and fictional archetypes, and we construct and demonstrate a prototype ousiometer.",
+  "link": "https://arxiv.org/abs/2110.06847",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.CY",
+    "cs.SI",
+    "physics.soc-ph"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498336+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04516",
+  "title": "GeoMin: Data-Efficient Semi-Supervised RLVR via Geometric Distribution Modeling",
+  "abstract": "Reinforcement learning with verifiable rewards (RLVR) significantly advances LLM reasoning, yet it faces a dilemma: standard supervised scaling is throttled by high annotation costs, while unsupervised alternatives suffer from severe model collapse. Recent semi-supervised RLVR methods address this by using a small labeled set to guide unlabeled data, achieving a promising trade-off between training efficacy and annotation cost. However, they suffer from a severe data-efficiency bottleneck due to the reliance on coarse performance heuristics, leaving a vast majority of valuable instances underutilized. To this end, we propose GeoMin, which models global feature distributions on labeled data to decode the structural discrepancy between correct and incorrect rollouts, thereby establishing a robust prior to assess the reliability of self-reward signals and fully unleash the potential of unlabeled data. Empirically, GeoMin outperforms the strongest baselines by +4.1% and even surpasses fully supervised models with only 10% of the annotations, demonstrating remarkable data efficiency.",
+  "link": "https://arxiv.org/abs/2606.04516",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098275+00:00"
+}

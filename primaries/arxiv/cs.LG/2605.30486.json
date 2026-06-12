@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30486",
+  "title": "Graph-Conditioned Mixture of Graph Neural Network Experts for Traffic Forecasting",
+  "abstract": "Spatio-temporal forecasting on sensor graphs is commonly tackled with a single backbone architecture applied uniformly across all nodes, although graph regions can exhibit different dynamics. Road segments differ in functional class, structure, and traffic behavior, suggesting that node-wise expert specialization can be useful. We propose GC-MoE, a graph-conditioned mixture of experts framework that assigns each node a personalized combination of frozen forecasting experts based on graph topology and the recent traffic input window. GC-MoE combines frozen pretrained spatio-temporal GNN experts with an input-aware, spatially contextualized router while training only a lightweight routing module. We also study a bounded graph-conditioned output refinement layer as an optional extension and include node-adaptive ST-LoRA adapters only as an ablation diagnostic. Across four standard benchmarks (PEMS04, PEMS07, METR-LA, and PEMS-BAY), GC-MoE improves MAE over a zero-parameter ensemble baseline, with competitive RMSE and MAPE, while training only ~17K parameters on top of 1.5M frozen expert weights. The implementation is available at https://github.com/Ahghaffari/gc_moe.",
+  "link": "https://arxiv.org/abs/2605.30486",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306636Z"
+}

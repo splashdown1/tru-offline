@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2602.04107",
+  "title": "Supervised Learning as Lossy Compression: Characterizing Generalization and Sample Complexity via Finite Blocklength Analysis",
+  "abstract": "This paper presents a novel information-theoretic perspective on generalization in machine learning by framing the learning problem within the context of lossy compression and applying finite blocklength analysis. In our approach, the sampling of training data formally corresponds to an encoding process, and the model construction to a decoding process. By leveraging finite blocklength analysis, we derive lower bounds on sample complexity and generalization error for a fixed randomized learning algorithm and its associated optimal sampling strategy. Our bounds explicitly characterize the degree of overfitting of the learning algorithm and the mismatch between its inductive bias and the task as distinct terms. This separation provides a significant advantage over existing frameworks. Additionally, we decompose the overfitting term to show its theoretical connection to existing metrics found in information-theoretic bounds and stability theory, unifying these perspectives under our proposed framework.",
+  "link": "https://arxiv.org/abs/2602.04107",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.IT",
+    "math.IT"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307869Z"
+}

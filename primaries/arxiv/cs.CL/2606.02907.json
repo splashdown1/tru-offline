@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.02907",
+  "title": "Linear Probes Detect Task Format, Not Reasoning Mode in Language Model Hidden States",
+  "abstract": "Linear probing of large language model (LLM) hidden states is widely used to claim that models learn distinct representations for different reasoning types. We test this by probing Qwen3-14B on three benchmarks spanning the classical trichotomy: LogiQA 2.0 (deductive), ARC-Challenge (inductive), and $\\alpha$NLI (abductive). At layer 32 of 40, linear probes achieve 100\\% cross-validated accuracy with well-separated geometry (intrinsic dimensionalities: 20.6, 28.5, 33.6; convex hull contamination $\\leq$1.5\\%). However, this separation is entirely driven by format confounds. Residualizing source identity, option count, and response length reduces accuracy to chance. Trace-anchor similarity indicates largely shared reasoning across tasks (42.5\\% agreement vs.\\ 33.3\\% chance), and causal steering with random controls ($n=20$) shows no functional link between geometry and reasoning mode ($p=0.286$). Thus, high probe accuracy reflects task format rather than computational structure, motivating routine format deconfounding in mechanistic interpretability.",
+  "link": "https://arxiv.org/abs/2606.02907",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498539+00:00"
+}

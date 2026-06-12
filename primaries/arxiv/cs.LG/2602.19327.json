@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.19327",
+  "title": "Soft Sequence Policy Optimization",
+  "abstract": "A significant portion of recent research on Large Language Model (LLM) alignment focuses on developing new policy optimization methods based on Group Relative Policy Optimization (GRPO). Two prominent directions have emerged: (i) a shift toward sequence-level importance sampling weights that better align with the sequence-level rewards used in many tasks, and (ii) alternatives to the PPO-style clipping that aim to avoid the associated loss of training signal and entropy collapse. We introduce Soft Sequence Policy Optimization, an off-policy reinforcement learning objective that incorporates soft gating functions over token-level probability ratios within sequence-level importance weights. We provide theoretical motivation for SSPO and investigate practical modifications to improve optimization behavior. Empirically, we demonstrate that SSPO improves training stability and performance both in mathematical reasoning and coding tasks.",
+  "link": "https://arxiv.org/abs/2602.19327",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884076+00:00"
+}

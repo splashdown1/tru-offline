@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.17907",
+  "title": "DSL-Topic: Improving Topic Modeling by Distilling Soft Labelsfrom Language Models",
+  "abstract": "Traditional neural topic models are typically optimized by reconstructing the document's Bag-of-Words (BoW) representations, overlooking contextual information and struggling with data sparsity. In this work, we introduce a novel topic model training framework by Distilling Soft Labels (DSL) from Language Models (LMs). To construct the contextually enriched reconstruction signals, we project the next token probabilities, conditioned on a specialized prompt, onto a pre-defined vocabulary, and train the topic models to reconstruct the soft labels using the LM hidden states. This produces higher-quality topics that are more closely aligned with the underlying thematic structure of the corpus. Extensive experiments demonstrate that DSL achieves substantial improvements in topic coherence and assignment accuracy over existing baselines. Additionally, we also introduce a retrieval-based metric, which shows that our approach significantly outperforms existing methods in identifying semantically similar documents, highlighting its effectiveness for retrieval-oriented applications.",
+  "link": "https://arxiv.org/abs/2602.17907",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099088+00:00"
+}

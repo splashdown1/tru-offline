@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.29280",
+  "title": "LoopFM: Learning frOm HistOrical RePresentations of Foundation Model for Recommendation",
+  "abstract": "Knowledge distillation (KD) transfers a single scalar prediction from a large foundation model (FM) to compact vertical models (VMs), suffering from diminishing transfer ratio -- the fraction of FM improvement captured by the VM -- as a single scalar cannot convey the rich intermediate knowledge that larger FMs learn. To address this bottleneck, we propose LoopFM (Learning frOm HistOrical RePresentations of FM), a framework that opens a high-bandwidth transfer channel by structuring FM intermediate embeddings as input features (e.g., user history sequence) for downstream VMs, without requiring real-time FM inference at serving and architectural coupling between FM and VM. We provide a theoretical framework for LoopFM with a gain decomposition and transfer-ratio analysis. On three public benchmarks, LoopFM demonstrates strong AUC improvements (e.g., 6%+ on TaobaoAd) and complementary knowledge transfer capability with KD. On industrial-scale systems (billions of examples, trillion-parameter FMs), LoopFM approximately doubles the knowledge transfer ratio on top of KD, delivering a +0.5% conversion improvement in the first half after its initial launch, and +1.03% and +1.22% conversion improvement from two individual launches in the subsequent half.",
+  "link": "https://arxiv.org/abs/2605.29280",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.IR"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099353+00:00"
+}

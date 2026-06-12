@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2604.17616",
+  "title": "Conditional Attribution for Root Cause Analysis in Time-Series Anomaly Detection",
+  "abstract": "Root cause analysis (RCA) for time-series anomaly detection is critical for the reliable operation of complex real-world systems. Existing explanation methods often rely on unrealistic feature perturbations and ignore temporal and cross-feature dependencies, leading to unreliable attributions. We propose a conditional attribution framework that explains anomalies relative to contextually similar normal system states. Instead of using marginal or randomly sampled baselines, our method retrieves representative normal instances conditioned on the anomalous observation, enabling dependency-preserving and operationally meaningful explanations. To support high-dimensional time-series data, contextual retrieval is performed in learned low-dimensional representations using both variational autoencoder latent spaces and UMAP manifold embeddings. By grounding the retrieval process in the system's learned manifold, this strategy avoids out-of-distribution artifacts and ensures attribution fidelity while maintaining computational efficiency. We further introduce confidence-aware and temporal evaluation metrics for assessing explanation reliability and responsiveness. Experiments on the SWaT and MSDS benchmarks demonstrate that the proposed approach consistently improves root-cause identification accuracy, temporal localization, and robustness across multiple anomaly detection models. These results highlight the practical utility of conditional attribution for explainable anomaly diagnosis in complex time-series systems. Code and models will be publicly released.",
+  "link": "https://arxiv.org/abs/2604.17616",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308053Z"
+}

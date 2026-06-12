@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2605.30372",
+  "title": "Evolutionary Algorithm for Reservoir Learning and Yielding",
+  "abstract": "Reservoir computing, a type of recurrent neural network, is a promising approach for temporal learning as it separates dynamic processing from the trained readout layer. However, classical Echo State Networks (ESNs) often require task-specific tuning of their architecture and hyperparameters to achieve good performance. This paper introduces EARLY (Evolutionary Algorithm for Reservoir Learning and Yielding), a framework designed to evolve both the topology and hyperparameters of multi-reservoir ESNs. Inspired by the modular organisation of the brain, EARLY encodes architectures as graph-based genomes and applies crossover, mutation, and selection to discover effective configurations. Our goal is to create both generic architectures and tasks inducing generalization. The method is evaluated on temporal learning tasks from the CogScale dataset. Results show that evolved architectures outperform those obtained with random search on several tasks and exhibit structural differences depending on task difficulty: simpler tasks yield lightweight architectures, while more complex tasks favour richer modular organisations. These findings suggest that evolutionary search can help identify reusable reservoir structures for a broader range of temporal problems. The evolved architectures are further evaluated on a cross-situational learning dataset to assess their ability to adapt to new environments.",
+  "link": "https://arxiv.org/abs/2605.30372",
+  "category": "cs.LG",
+  "categories": [
+    "cs.NE",
+    "cs.AI",
+    "cs.LG",
+    "q-bio.NC"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307231Z"
+}

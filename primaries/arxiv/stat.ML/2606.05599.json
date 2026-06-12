@@ -1,0 +1,15 @@
+{
+  "arxiv_id": "2606.05599",
+  "title": "Mitigating the Curse of Dimensionality in Uniform Convergence of Deep Neural Networks via Smooth Activations",
+  "abstract": "This paper establishes a theoretical framework for the uniform convergence of smoothly activated deep neural network (DNN) estimators. While standard ReLU networks achieve minimax-optimal rates in the $L^2(P)$ norm for various nonparametric regression tasks, we establish a theoretical lower bound demonstrating that least-squares ReLU estimators can suffer from the curse of dimensionality in their uniform convergence behavior. Motivated by the need for reliable uniform guarantees in downstream tasks requiring worst-case reliability, we address this limitation by analyzing smoothly activated DNNs (smooth DNNs), encompassing both feedforward and residual structures. We establish novel pseudo-dimension bounds, non-asymptotic approximation guarantees, and H\\\"older-norm bounds for the approximators of these models. Leveraging these results, we derive non-asymptotic uniform convergence rates for smooth DNN estimators across multiple statistical contexts, including Huber, least-squares, quantile, and logistic regression. We prove that smooth DNNs can mitigate the {curse of dimensionality} in uniform convergence by adaptively exploiting the low-dimensional hierarchical composition structure of the target function. Supported by both simulation studies and a real-world application, our results position smooth DNNs as a theoretically grounded and practically viable alternative to ReLU networks for statistical learning tasks requiring uniform guarantees.",
+  "link": "https://arxiv.org/abs/2606.05599",
+  "category": "stat.ML",
+  "categories": [
+    "cs.LG",
+    "math.ST",
+    "stat.ME",
+    "stat.ML",
+    "stat.TH"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728681+00:00"
+}

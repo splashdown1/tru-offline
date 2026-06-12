@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30406",
+  "title": "AI Loss of Control Incident Management: Response & Resilience",
+  "abstract": "Recent research demonstrating AI systems exhibiting deception and shutdown resistance suggests that AI loss of control (LOC) is an urgent policy concern , yet current literature focuses almost exclusively on alignment and prevention. To address this gap, this paper introduces a foundational framework and taxonomy for managing catastrophic AI LOC incidents. The taxonomy's first level distinguishes between scenarios where regaining control is 'extremely costly' versus 'impossible'. While impossible scenarios demand immediate resilience investments to fundamentally restrict an AI's attack surface , extremely costly scenarios require active incident management via Containment and Threat Neutralization. The framework further categorizes these manageable events into accidental LOC (requiring automated circuit-breaker responses) and adversarial LOC (requiring graduated escalatory measures). By mapping three severity classes to specific scenario matrices, this paper provides a concrete, proportional guide for managing unprecedented AI risks.",
+  "link": "https://arxiv.org/abs/2605.30406",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CY",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.357958Z"
+}

@@ -1,0 +1,15 @@
+{
+  "arxiv_id": "2509.11381",
+  "title": "Accuracy Limits of Causal Trees for Individualized Treatment Effects",
+  "abstract": "Recursive decision trees are widely used to estimate heterogeneous causal treatment effects in experimental and observational studies. These methods are typically implemented using CART-type recursive partitioning, with splitting criteria designed to identify variation in treatment effects across covariate-defined subgroups. We study causal tree estimators based on adaptive recursive partitioning and establish lower bounds on their estimation accuracy. The class we analyze includes versions with and without sample splitting, based on common treatment effect and squared-error splitting criteria. Even in a constant-effect benchmark with randomized treatment assignment, causal trees constructed via standard CART-type splitting rules can have uniform-norm errors that decrease more slowly than any power of the sample size. The underlying mechanism is that greedy recursive partitioning selects highly imbalanced splits with nonvanishing probability, producing terminal nodes containing very few observations and leading to large estimation variance. We further show that sample splitting, often called ``honesty,'' does not remove this limitation. As a consequence, causal tree estimators may converge arbitrarily slowly uniformly over the covariate space. At the same time, these estimators can have small integrated mean squared error, showing that average accuracy can mask local inaccuracy. Our results also clarify the role of balanced partition assumptions in existing theoretical guarantees for causal forests and related ensemble methods.",
+  "link": "https://arxiv.org/abs/2509.11381",
+  "category": "stat.ML",
+  "categories": [
+    "math.ST",
+    "econ.EM",
+    "stat.ME",
+    "stat.ML",
+    "stat.TH"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.729049+00:00"
+}

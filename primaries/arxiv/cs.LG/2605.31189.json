@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31189",
+  "title": "FlagGAM: Rule-Based Generalized Additive Modeling for Explainable Tabular Prediction",
+  "abstract": "Tabular prediction in high-stakes domains requires models that are accurate, transparent, and robust to imperfect inputs. We propose FlagGAM, a rule-defined basis framework that separates feature-level rule construction from prediction. A Flag Core Module converts numerical and categorical variables into sparse, human-readable univariate bases, including threshold flags, category-level flags, tail-deviation bases, and categorical step functions; a default additive head then combines these bases as a restricted GAM-style predictor. Rather than reducing triggered rules to compact count summaries, FlagGAM retains a sparse rule-basis matrix that supports mixed-type classification and regression, feature-specific weighting, and optional flexible prediction heads. Across tabular benchmarks, default FlagGAM remains close to EBM in transparent additive mode, improves substantially over ridge regression on mixed-type regression, and shows smaller AUROC degradation than common baselines under missing and noisy perturbations. Flexible heads further improve accuracy and approach strong tree-based baselines, with the caveat that the resulting model should be interpreted as a rule-basis representation followed by a nonlinear predictor rather than as a fully additive GAM. Overall, FlagGAM provides a practical middle ground for tabular settings that require competitive accuracy, communicable rules, and robustness to imperfect inputs.",
+  "link": "https://arxiv.org/abs/2605.31189",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306999Z"
+}

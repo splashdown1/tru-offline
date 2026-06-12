@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2511.16111",
+  "title": "Rotation-Parameterized Graph Fractional Fourier Transform: Definition, Properties, and Optimal Filtering",
+  "abstract": "Graph spectral representations are fundamental in graph signal processing, providing a rigorous frameworkforanalyzing graph-structured data. The graph fractional Fourier transform (GFRFT) extends the graph Fourier transform (GFT) through a fractional-order parameter, enabling flexible spectral analysis with mathematical consistency. The angular graph Fourier transform (AGFT) further introduces angular control by rotating GFT eigenvectors; however, existing constructions may fail to reduce exactly to the GFT at zero angle, weakening theoretical consistency and interpretability. To address these complementary limitations, namely the lack of rotation-based basis control in GFRFT and the defective zero-angle degeneracy of AGFT, this paper proposes the rotation-parameterized graph fractional Fourier transform (RP-GFRFT), which unifies fractional order and rotation-parameterized spectral analysis. A degeneracy preserving rotation matrix family is constructed to guarantee exact GFT reduction at zero angle. TwoRP-GFRFTvariants,I-RP-GFRFTandII-RP-GFRFT,arethenformulated, with theoretical analyses confirming their unitarity, invertibility, reduction behavior, and smooth parameter dependence. The fractional order and rotation angle are jointly optimized for adaptive graph spectral filtering. Experiments on real-world signals, images, and point clouds demonstrate that RP-GFRFT improves denoising accuracy, reconstruction quality, and feature preservation over GFRFT, AGFT, and representative filtering baselines.",
+  "link": "https://arxiv.org/abs/2511.16111",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "math.SP"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884542+00:00"
+}

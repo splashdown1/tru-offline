@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05415",
+  "title": "Executable Schema Contracts: From Automatic Ingestion to Multi-Source Retrieval",
+  "abstract": "Real-world data spans tables, documents, and semi-structured files with implicit semantics. Querying this data requires integrating evidence across inconsistent schemas and formats, yet existing approaches either demand costly manual engineering or bypass structure entirely. We present a system that automatically discovers an executable schema from raw multi-source data and uses it as a shared contract for knowledge graph construction and query-time retrieval. A closed-world field catalog constrains LLM-based schema discovery to attested fields; deterministic structural analysis infers identity keys, foreign keys, and source hierarchy; and the resulting schema drives extraction, deduplication, and cross-source linking into a provenance-aware knowledge graph. At query time the schema -- optionally extended via a monotonic protocol -- conditions a multi-tool agent routing retrieval across structured lookup, graph traversal, and vector search, returning grounded answers with traceable citations. In controlled zero-shot comparisons using the same LLM, data, and evaluation harness, the system improves over retrieval-only and decomposition-based baselines across four QA benchmarks, with ablations showing that schema-conditioned routing, structural intelligence, and schema-guided construction each contribute to the gains.",
+  "link": "https://arxiv.org/abs/2606.05415",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883053+00:00"
+}

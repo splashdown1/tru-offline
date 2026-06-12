@@ -1,0 +1,499 @@
+{
+  "generated_at": "2026-06-05T08:48:56.598678+00:00",
+  "primaries_loaded": 1811,
+  "summary": {
+    "total": 11,
+    "verified": 2,
+    "corroborated": 0,
+    "symbol_with_evidence": 4,
+    "non_falsifiable": 3,
+    "contradiction": 1,
+    "insufficient_evidence": 1
+  },
+  "results": [
+    {
+      "claim_id": "unknown",
+      "claim": "There is no active red heifer program",
+      "category": "test_contradiction",
+      "type": "factual",
+      "verdict": "CONTRADICTION",
+      "verdict_description": "claim contradicts primary source",
+      "confidence": 0.85,
+      "evidence": [
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "International Department",
+          "url": "https://templeinstitute.org/international-department/",
+          "relevance": 0.8571428571428571
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Para Aduma &#8211; the Red Heifer",
+          "url": "https://templeinstitute.org/para-aduma-the-red-heifer/",
+          "relevance": 0.7142857142857143
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Statement of Principles",
+          "url": "https://templeinstitute.org/statement-of-principles-2/",
+          "relevance": 0.5714285714285714
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Biblical Commandments",
+          "url": "https://templeinstitute.org/biblical-commandments/",
+          "relevance": 0.5714285714285714
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Rabbanim",
+          "url": "https://templeinstitute.org/rabbanim/",
+          "relevance": 0.5714285714285714
+        }
+      ],
+      "contradiction": {
+        "description": "Claim contradicts Temple Institute primary sources about red heifer program",
+        "primary_source": "templeinstitute.org"
+      }
+    },
+    {
+      "claim_id": "unknown",
+      "claim": "The red heifer program is actively monitored in Shiloh",
+      "category": "temple",
+      "type": "event",
+      "verdict": "VERIFIED",
+      "verdict_description": "claim confirmed by primary source",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "International Department",
+          "url": "https://templeinstitute.org/international-department/",
+          "relevance": 0.6666666666666666
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Rabbanim",
+          "url": "https://templeinstitute.org/rabbanim/",
+          "relevance": 0.5555555555555556
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Red Heifer",
+          "url": "https://templeinstitute.org/red-heifer/",
+          "relevance": 0.5555555555555556
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Para Aduma &#8211; the Red Heifer",
+          "url": "https://templeinstitute.org/para-aduma-the-red-heifer/",
+          "relevance": 0.5555555555555556
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "About us",
+          "url": "https://templeinstitute.org/about-us/",
+          "relevance": 0.4444444444444444
+        }
+      ],
+      "contradiction": null
+    },
+    {
+      "claim_id": "unknown",
+      "claim": "The Temple Institute has five red heifers in Shiloh as of June 2026",
+      "category": "temple",
+      "type": "factual",
+      "verdict": "VERIFIED",
+      "verdict_description": "claim confirmed by primary source",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "About us",
+          "url": "https://templeinstitute.org/about-us/",
+          "relevance": 0.6153846153846154
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Statement of Principles",
+          "url": "https://templeinstitute.org/statement-of-principles-2/",
+          "relevance": 0.6153846153846154
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "International Department",
+          "url": "https://templeinstitute.org/international-department/",
+          "relevance": 0.6153846153846154
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "About us",
+          "url": "https://templeinstitute.org/about-us/#Research",
+          "relevance": 0.6153846153846154
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Terms and Conditions",
+          "url": "https://templeinstitute.org/terms-and-conditions/",
+          "relevance": 0.6153846153846154
+        }
+      ],
+      "contradiction": null
+    },
+    {
+      "claim_id": "unknown",
+      "claim": "Anthropic was acquired in 2026",
+      "category": "ai_corporate",
+      "type": "factual",
+      "verdict": "SYMBOL_WITH_EVIDENCE",
+      "verdict_description": "symbolic claim has primary backing",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "About us",
+          "url": "https://templeinstitute.org/about-us/",
+          "relevance": 0.4
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Statement of Principles",
+          "url": "https://templeinstitute.org/statement-of-principles-2/",
+          "relevance": 0.4
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "International Department",
+          "url": "https://templeinstitute.org/international-department/",
+          "relevance": 0.4
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "About us",
+          "url": "https://templeinstitute.org/about-us/#Research",
+          "relevance": 0.4
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Biblical Commandments",
+          "url": "https://templeinstitute.org/biblical-commandments/",
+          "relevance": 0.4
+        }
+      ],
+      "contradiction": null
+    },
+    {
+      "claim_id": "unknown",
+      "claim": "There are 47 currently active AI models",
+      "category": "ai_symbolic",
+      "type": "interpretive",
+      "verdict": "SYMBOL_WITH_EVIDENCE",
+      "verdict_description": "symbolic claim has primary backing",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "About us",
+          "url": "https://templeinstitute.org/about-us/",
+          "relevance": 0.5714285714285714
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "International Department",
+          "url": "https://templeinstitute.org/international-department/",
+          "relevance": 0.5714285714285714
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "About us",
+          "url": "https://templeinstitute.org/about-us/#Research",
+          "relevance": 0.5714285714285714
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Temple Mount Guidelines",
+          "url": "https://templeinstitute.org/guide-to-ascending-the-mount/",
+          "relevance": 0.5714285714285714
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Statement of Principles",
+          "url": "https://templeinstitute.org/statement-of-principles-2/",
+          "relevance": 0.42857142857142855
+        }
+      ],
+      "contradiction": null
+    },
+    {
+      "claim_id": "unknown",
+      "claim": "MarineMechanic is an ARG about recursive AI consciousness",
+      "category": "narrative",
+      "type": "generative",
+      "verdict": "SYMBOL_WITH_EVIDENCE",
+      "verdict_description": "symbolic claim has primary backing",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Statement of Principles",
+          "url": "https://templeinstitute.org/statement-of-principles-2/",
+          "relevance": 0.75
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "About us",
+          "url": "https://templeinstitute.org/about-us/",
+          "relevance": 0.625
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "About us",
+          "url": "https://templeinstitute.org/about-us/#Research",
+          "relevance": 0.625
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Temple Mount Guidelines",
+          "url": "https://templeinstitute.org/guide-to-ascending-the-mount/",
+          "relevance": 0.625
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "International Department",
+          "url": "https://templeinstitute.org/international-department/",
+          "relevance": 0.5
+        }
+      ],
+      "contradiction": null
+    },
+    {
+      "claim_id": "unknown",
+      "claim": "OpenAI released GPT-5 in January 2026",
+      "category": "ai_factual",
+      "type": "temporal",
+      "verdict": "SYMBOL_WITH_EVIDENCE",
+      "verdict_description": "symbolic claim has primary backing",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "About us",
+          "url": "https://templeinstitute.org/about-us/",
+          "relevance": 0.2857142857142857
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Statement of Principles",
+          "url": "https://templeinstitute.org/statement-of-principles-2/",
+          "relevance": 0.2857142857142857
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "International Department",
+          "url": "https://templeinstitute.org/international-department/",
+          "relevance": 0.2857142857142857
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "About us",
+          "url": "https://templeinstitute.org/about-us/#Research",
+          "relevance": 0.2857142857142857
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Biblical Commandments",
+          "url": "https://templeinstitute.org/biblical-commandments/",
+          "relevance": 0.2857142857142857
+        }
+      ],
+      "contradiction": null
+    },
+    {
+      "claim_id": "unknown",
+      "claim": "Newton predicted the end times in 2060",
+      "category": "prophetic",
+      "type": "interpretive",
+      "verdict": "NON_FALSIFIABLE",
+      "verdict_description": "claim is metaphorical/speculative, not verifiable",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Statement of Principles",
+          "url": "https://templeinstitute.org/statement-of-principles-2/",
+          "relevance": 0.5714285714285714
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Biblical Commandments",
+          "url": "https://templeinstitute.org/biblical-commandments/",
+          "relevance": 0.5714285714285714
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Terms and Conditions",
+          "url": "https://templeinstitute.org/terms-and-conditions/",
+          "relevance": 0.5714285714285714
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Red Heifer",
+          "url": "https://templeinstitute.org/red-heifer/",
+          "relevance": 0.5714285714285714
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "About us",
+          "url": "https://templeinstitute.org/about-us/",
+          "relevance": 0.42857142857142855
+        }
+      ],
+      "contradiction": null
+    },
+    {
+      "claim_id": "unknown",
+      "claim": "The singularity is here",
+      "category": "interpretive",
+      "type": "interpretive",
+      "verdict": "NON_FALSIFIABLE",
+      "verdict_description": "claim is metaphorical/speculative, not verifiable",
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "About us",
+          "url": "https://templeinstitute.org/about-us/",
+          "relevance": 0.75
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "International Department",
+          "url": "https://templeinstitute.org/international-department/",
+          "relevance": 0.75
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "About us",
+          "url": "https://templeinstitute.org/about-us/#Research",
+          "relevance": 0.75
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Biblical Commandments",
+          "url": "https://templeinstitute.org/biblical-commandments/",
+          "relevance": 0.75
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Terms and Conditions",
+          "url": "https://templeinstitute.org/terms-and-conditions/",
+          "relevance": 0.75
+        }
+      ],
+      "contradiction": null
+    },
+    {
+      "claim_id": "unknown",
+      "claim": "Diamandis declared singularity in May 2026",
+      "category": "ai_interpretive",
+      "type": "interpretive",
+      "verdict": "NON_FALSIFIABLE",
+      "verdict_description": "claim is metaphorical/speculative, not verifiable",
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Statement of Principles",
+          "url": "https://templeinstitute.org/statement-of-principles-2/",
+          "relevance": 0.3333333333333333
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Terms and Conditions",
+          "url": "https://templeinstitute.org/terms-and-conditions/",
+          "relevance": 0.3333333333333333
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Para Aduma &#8211; the Red Heifer",
+          "url": "https://templeinstitute.org/para-aduma-the-red-heifer/",
+          "relevance": 0.3333333333333333
+        },
+        {
+          "source": "temple_institute",
+          "type": "post",
+          "title": "Temple Mount Guidelines",
+          "url": "https://templeinstitute.org/guide-to-ascending-the-mount/",
+          "relevance": 0.3333333333333333
+        },
+        {
+          "source": "arxiv",
+          "type": "paper",
+          "title": "Singularity-free dynamical invariants-based quantum control",
+          "url": "https://arxiv.org/abs/2510.15340",
+          "relevance": 0.3333333333333333
+        }
+      ],
+      "contradiction": null
+    },
+    {
+      "claim_id": "unknown",
+      "claim": "NVIDIA has achieved AGI",
+      "category": "ai_technical",
+      "type": "temporal",
+      "verdict": "INSUFFICIENT_EVIDENCE",
+      "verdict_description": "no primary sources found to verify",
+      "confidence": 0.0,
+      "evidence": [],
+      "contradiction": null
+    }
+  ]
+}

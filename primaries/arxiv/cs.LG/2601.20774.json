@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2601.20774",
+  "title": "When More Data Doesn't Help: Limits of Adaptation in Multitask Learning",
+  "abstract": "Multitask learning and related frameworks have achieved tremendous success in modern applications. In multitask learning problem, we are given a set of heterogeneous datasets collected from related source tasks and hope to enhance the performance above what we could hope to achieve by solving each of them individually. The recent work of arXiv:2006.15785 has showed that, without access to distributional information, no algorithm based on aggregating samples alone can guarantee optimal risk as long as the sample size per task is bounded.\n  In this paper, we focus on understanding the statistical limits of multitask learning. We go beyond the no-free-lunch theorem in arXiv:2006.15785 by establishing a stronger impossibility result of adaptation that holds for arbitrarily large sample size per task. This improvement conveys an important message that the hardness of multitask learning cannot be overcame by having abundant data per task. We also discuss the notion of optimal adaptivity that may be of future interests.",
+  "link": "https://arxiv.org/abs/2601.20774",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307791Z"
+}

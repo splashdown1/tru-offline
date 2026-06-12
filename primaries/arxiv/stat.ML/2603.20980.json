@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2603.20980",
+  "title": "From Causal Discovery to Dynamic Causal Inference in Neural Time Series",
+  "abstract": "Time-varying causal models provide a powerful framework for studying dynamic scientific systems, yet most existing approaches assume that the underlying causal network is known a priori - an assumption rarely satisfied in real-world domains where causal structure is uncertain, evolving, or only indirectly observable. This limits the applicability of dynamic causal inference in many scientific settings. We propose Dynamic Causal Network Autoregression (DCNAR), a two-stage neural causal modeling framework that integrates data-driven causal discovery with time-varying causal inference. In the first stage, a neural autoregressive causal discovery model learns a sparse directed causal network from multivariate time series. In the second stage, this learned structure is used as a structural prior for a time-varying neural network autoregression, enabling dynamic estimation of causal influence without requiring pre-specified network structure. We evaluate the scientific validity of DCNAR using behavioral diagnostics that assess causal necessity, temporal stability, and sensitivity to structural change, rather than predictive accuracy alone. Experiments on multi-country panel time-series data demonstrate that learned causal networks yield more stable and behaviorally meaningful dynamic causal inferences than coefficient-based or structure-free alternatives, even when forecasting performance is comparable. These results position DCNAR as a general framework for using AI as a scientific instrument for dynamic causal reasoning under structural uncertainty.",
+  "link": "https://arxiv.org/abs/2603.20980",
+  "category": "stat.ML",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.AP",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.729103+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2507.17026",
+  "title": "Conformal C2ST: Turning weak classifiers into strong two-sample tests",
+  "abstract": "The two-sample testing problem, a fundamental task in statistics and machine learning, seeks to determine whether two sets of samples, drawn from underlying distributions $p$ and $q$, are in fact identically distributed (i.e. whether $p=q$). A popular and intuitive approach is the classifier two-sample test (C2ST), where a classifier is trained to distinguish between samples from $p$ and $q$. Yet despite simplicity of the C2ST, its reliability hinges on access to a near-Bayes-optimal classifier, a requirement that is rarely met and difficult to verify. This raises a major open question: can a weak classifier still be useful for two-sample testing? We show that the answer is a definitive yes. Building on the work of Hu and Lei (2024), we analyze two conformal variants of the C2ST that convert the scores from any trained classifier -- even if weak, biased, or overfit -- into exact, finite-sample p-values. We establish two key theoretical properties of the conformal C2ST: (i) finite-sample Type-I error control, and (ii) non-trivial power that degrades gently in tandem with the error of the trained classifier. The upshot is that even poorly performing classifiers can yield powerful and reliable two-sample tests. This general framework finds a powerful application in Bayesian inference, particularly for validating Neural Posterior Estimation (NPE) models, where the task of comparing a learned posterior approximation $q(\\theta \\mid y)$ to the true posterior $p(\\theta \\mid y)$ can be framed as a two-sample test. Empirically, the Conformal C2ST outperforms classical discriminative tests across a wide range of benchmarks for this task. Our results establish the conformal C2ST as a practical, theoretically grounded diagnostic tool.",
+  "link": "https://arxiv.org/abs/2507.17026",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308201Z"
+}

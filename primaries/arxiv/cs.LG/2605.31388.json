@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31388",
+  "title": "Constrained Multi-Objective Reinforcement Learning with Max-Min Criterion",
+  "abstract": "Multi-Objective Reinforcement Learning (MORL) extends standard RL by optimizing policies with respect to multiple, often conflicting, objectives. While max-min MORL has emerged as an effective approach for promoting fairness, its applicability remains limited, particularly when constraints must be incorporated. In this paper, we propose a MORL framework that integrates the max-min criterion with explicit constraint satisfaction. We establish a theoretical foundation for the proposed framework and validate the resulting algorithm through convergence analysis and experiments in tabular settings. We further demonstrate the practical relevance of our approach in simulated building thermal control, multi-objective locomotion control, and greenhouse-gas-emission-aware traffic management. Across these domains, our method effectively balances fairness and constraint satisfaction in multi-objective decision-making.",
+  "link": "https://arxiv.org/abs/2605.31388",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307131Z"
+}

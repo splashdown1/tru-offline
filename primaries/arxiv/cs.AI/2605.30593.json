@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30593",
+  "title": "Scientific Machine Learning for Engine Health Management and Remaining Useful Life Prediction",
+  "abstract": "Engine Health Management (EHM) depends on reliable forecasting of Remaining Useful Life (RUL) and on tracking thermal indicators such as turbine gas temperature (TGT). In practice, real-world fleet data are heterogeneous and non-stationary, and point predictions alone are insufficient for risk-aware maintenance decisions. This paper presents a multi-task scientific machine learning framework for turbine prognostics that jointly predicts turbine gas temperature untrimmed (TGTU), Delta Turbine Gas Temperature (DTGT), and RUL, with quantified uncertainty in the form of prediction intervals whose empirical coverage is evaluated. A shared sequence encoder (convolutional front-end with residual bidirectional LSTM layers and attention pooling) feeds task-specific heads, including mean--variance estimation for probabilistic regression and, optionally, a survival head for threshold-based event modeling. The framework is designed to be tunable via a small set of practitioner-facing parameters (e.g., DTGT thresholding rules and RUL target construction) so that deployment can align with in-house policies and proprietary criteria. The predictive performance of the proposed framework is evaluated using both point and interval metrics, including mean absolute error (MAE), prediction interval coverage probability (PICP), mean prediction interval width (MPIW), and the coverage--width criterion (CWC). Results are reported both in aggregate and stratified by flight phase and maintenance segment to highlight operational-context effects and to support uncertainty-aware monitoring.",
+  "link": "https://arxiv.org/abs/2605.30593",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CE"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358028Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2511.18760",
+  "title": "HERMES: Towards Efficient and Verifiable Mathematical Reasoning in LLMs",
+  "abstract": "Informal mathematics has been central to modern large language model (LLM) reasoning, offering flexibility and efficient construction of arguments. However, purely informal reasoning is prone to logical gaps and subtle errors that are difficult to detect and correct. In contrast, formal theorem proving provides rigorous, verifiable mathematical reasoning, where each inference step is checked by a trusted compiler, but lacks the exploratory freedom of informal problem-solving. This mismatch leaves current LLM-based math agents without a principled way to combine the strengths of both paradigms. In this work, we introduce Hermes, the first tool-assisted agent that explicitly interleaves informal reasoning with formally verified proofs in Lean. The framework performs intermediate formal checking to prevent reasoning drift and a memory module for proof continuity across multi-step reasoning chains, enabling both exploration and verification. We evaluate Hermes on four challenging mathematical reasoning benchmarks using LLMs of varying parameter scales, from small models to state-of-the-art systems. Across all settings, Hermes reliably improves the reasoning accuracy of base models while substantially reducing reasoning token usage and computational cost compared to reward-based approaches. On difficult datasets such as AIME and HARDMath2, Hermes@1 achieves up to a 40% accuracy improvement while using 80% fewer total inference FLOPs. When scaled at test time, Hermes@5 boosts accuracy further by 20%. The implementation and codebase are publicly available at https://github.com/aziksh-ospanov/HERMES.",
+  "link": "https://arxiv.org/abs/2511.18760",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.FL"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358519Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06306",
+  "title": "Decomposing Factual Sycophancy in Language Models: How Size and Instruction Tuning Shape Robustness",
+  "abstract": "Factual sycophancy occurs when a language model abandons a correct, verifiable answer under social pressure. Because a flip occurs only when pressure toward a false answer exceeds the model's neutral preference for the truth, flip rates conflate two mechanisms: the strength of that baseline preference (truth margin), and how far pressure shifts it (manipulation sensitivity). We decompose factual sycophancy into these channels and use them to separate the effects of size and instruction tuning across 56 open-weight models spanning 0.3B-32B parameters and 13 manipulation types. We find that vulnerability is governed mainly by size, but instruction tuning changes how size acts: small instruction-tuned models can become less robust, whereas large instruction-tuned models usually become more robust. Instruction tuning primarily increases truth margin, but its behavioral effect depends on manipulation type. Scaling also changes the two channels differently: base models gain margin but become mildly more manipulation-sensitive, whereas instruction-tuned models gain margin faster and become less sensitive. Factual sycophancy is therefore not a single scalar property. Evaluations should report channel-specific, manipulation-specific, and size-conditioned robustness rather than flip rates alone.",
+  "link": "https://arxiv.org/abs/2606.06306",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498056+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30652",
+  "title": "Bridging the Gap Between Natural Language and Market Dynamics via High-Dimensional Representation Learning",
+  "abstract": "Traditional multi-modal financial forecasting often relies on scalar sentiment scores, which fail to capture the nuances of financial news. To address this information loss, this paper explores high-dimensional representation learning by replacing discrete polarity ratings with dense FinBERT embeddings within a Transformer-based forecasting architecture. We benchmarked various embedding strategies on the FNSPID dataset, including raw embeddings, attention-weighted aggregation, and a custom Siamese network. While the attention-based mechanism struggled with the low signal-to-noise ratio typical of financial data, the integration of Siamese-optimized embeddings outperformed both the scalar baseline and raw embedding approaches, demonstrating that preserving high-dimensional narrative context yields improved predictive accuracy for short-term stock price movements.",
+  "link": "https://arxiv.org/abs/2605.30652",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306741Z"
+}

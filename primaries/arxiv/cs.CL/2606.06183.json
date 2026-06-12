@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06183",
+  "title": "Revisiting Lexicon Evaluation in Unsupervised Word Discovery",
+  "abstract": "Building a lexicon from discovered word-like units is a central goal in zero-resource speech processing. But do our evaluations provide a trustworthy indication of lexicon quality? A common metric, normalized edit distance, averages the phoneme edit distances between discovered units in each cluster. We show that this metric has an inherent bias toward the quality of large clusters, inhibiting fair evaluation. Moreover, it ignores how well true classes are distributed across clusters. Based on established theory in clustering literature, we propose two metrics that address these shortcomings: a modified metric that weighs cluster size when assessing within-cluster consistency, and an inverse metric that assesses how true words are spread across clusters. Through experiments on synthetic and real-world lexicons, we demonstrate that combined, these metrics are: (1) more closely correlated with how similar a lexicon is to the ground-truth distribution, and (2) more robust to biases that skew lexicon evaluations.",
+  "link": "https://arxiv.org/abs/2606.06183",
+  "category": "cs.CL",
+  "categories": [
+    "eess.AS",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498297+00:00"
+}

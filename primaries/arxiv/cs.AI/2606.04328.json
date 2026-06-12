@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04328",
+  "title": "Generalizable Multi-Task Learning for Wireless Networks Using Prompt Decision Transformers",
+  "abstract": "Future wireless networks demand rapid adaptation to highly heterogeneous environments and dynamic task configurations, necessitating a shift from conventional rule-based and optimization-driven radio resource management (RRM) toward artificial intelligence (AI)-driven RRM. AI-driven approaches can learn complex nonlinear relationships, generalize across diverse network conditions and enable real-time, scalable and autonomous decision-making. Among RRM techniques, coordinated multipoint (CoMP) transmission is pivotal for mitigating inter-cell interference and enhancing cell-edge performance, thereby improving quality of experience (QoE) in dense deployments. However, optimal multi-cell selection remains a complex combinatorial challenge as it requires jointly optimizing over many possible serving-cell combinations under dynamic traffic and channel conditions. Despite their success, conventional deep reinforcement learning (DRL) methods such as proximal policy optimization (PPO) suffer from poor sample efficiency, limited generalization, and costly retraining when state and action spaces change. To address these bottlenecks, we propose a Prompt Decision Transformer (PromptDT) based multi-task learning framework capable of learning across diverse network configurations and reformulating multi-cell selection as a sequence modeling problem. By leveraging offline trajectories and task-specific prompts, PromptDT enables scalable learning across diverse network configurations, including varying base stations and user equipment counts, and scheduler policies. Experimental results demonstrate that PromptDT improves QoE by up to 49% in multi-task settings compared to baselines, with performance scaling positively alongside model capacity. Moreover, PromptDT generalizes effectively to unseen tasks, achieving robust few-shot adaptation to new network configurations without retraining or fine-tuning.",
+  "link": "https://arxiv.org/abs/2606.04328",
+  "category": "cs.AI",
+  "categories": [
+    "cs.NI",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098122+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2410.19153",
+  "title": "Learning Coupled Subspaces for Multi-Condition Spike Data",
+  "abstract": "In neuroscience, numerous studies conduct sensory or behavioral experiments under multiple conditions to acquire neural responses in the form of high-dimensional spike train datasets. Analyzing high-dimensional spike data is a challenging statistical problem. To this end, Gaussian process factor analysis (GPFA), a popular class of latent variable models, has been proposed for data collected under a single experimental condition. GPFA extracts smooth, low-dimensional latent trajectories that summarize highdimensional spike datasets. However, standard GPFA infers these trajectories independently for each experimental condition, not accounting for how the underlying activity varies across the condition space. This poses limitations on both accuracy and the interpretability of the latent representation. To address these limitations, we propose Coupled Subspaces GPFA (CS-GPFA), a Bayesian model that jointly learns latent representations, characterizing how the neural activity varies over the condition space. Building on this, we further develop an active-learning algorithm for adaptively selecting conditions. Experiments on both synthetic and real neural datasets demonstrate that CS-GPFA achieves superior performance compared to existing approaches. Moreover, our active learning results show that CS-GPFA can efficiently guide experiment design in practical settings.",
+  "link": "https://arxiv.org/abs/2410.19153",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307573Z"
+}

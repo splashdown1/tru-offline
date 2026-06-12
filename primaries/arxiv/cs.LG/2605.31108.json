@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31108",
+  "title": "Remembering by Reconstructing: Domain Incremental Learning With Test-Time Training on Video Streams",
+  "abstract": "In this work we introduce a novel approach to domain incremental learning, adapting models over time to evolving, non-stationary data. In contrast to other works, we do not attempt to avoid catastrophic forgetting, but rather allow it and exploit it. Our model combines a main task head with a self-supervised masked autoencoder (MAE) head. We then learn domain-specific LoRA adapters during incremental training. Each adapter specializes to its domain, naturally inducing forgetting on other domains in both heads. At inference, we perform online test-time training on the self-supervised MAE head to identify which LoRAs best matches the current input, so the model can `remember' the domain again. Our scheme is especially well-suited to real-world streaming data, such as video, where consecutive samples are highly correlated and domain shifts are gradual. We demonstrate our method on domain-incremental action recognition and semantic segmentation tasks.",
+  "link": "https://arxiv.org/abs/2605.31108",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307420Z"
+}

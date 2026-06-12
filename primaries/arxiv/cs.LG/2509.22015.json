@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2509.22015",
+  "title": "Concept-SAE: A Controllable and Invertible Concept Interface for Sparse Autoencoders",
+  "abstract": "Standard Sparse Autoencoders (SAEs) excel at discovering a dictionary of a model's learned features, providing a powerful lens for passive feature discovery. However, this passive nature makes it difficult to systematically evaluate or analyze concepts that users explicitly care about. We introduce Concept-SAE, a framework that augments SAEs with a structured and controllable interface for probing user-defined concepts. Concept-SAE decomposes an activation subspace into two orthogonal components: Concept Tokens, which are aligned to externally specified semantics through dual supervision on both concept existence and spatial localization, and Free Tokens, which operate like standard SAEs to capture all remaining information. This hybrid disentanglement strategy ensures that Concept Tokens are faithful, spatially grounded, and cleanly separated from the residual subspace while preserving the ability of SAEs for open-ended concept discovery. We conduct extensive experiments demonstrating that Concept-SAE yields high-fidelity, well-localized, and strongly disentangled concept representations, outperforming alternatives in interface quality. Finally, we validate the utility of this conceptual interface through three diagnostic evaluations: a detection test on classifying adversarial image samples, a controllability test focusing on controlled counterfactual editing and a stability test using adversarial perturbations. Together, these results show that Concept-SAE equips SAEs with a reliable mechanism for evaluating, probing, and diagnosing user-defined concepts.",
+  "link": "https://arxiv.org/abs/2509.22015",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883937+00:00"
+}

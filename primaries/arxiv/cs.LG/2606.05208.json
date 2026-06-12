@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05208",
+  "title": "Transformer-Enhanced Reinforcement Learning: Fundamentals and Applications in Communication Networks",
+  "abstract": "Reinforcement Learning (RL) has long been a powerful solution to various problems in communication networks. However, traditional RL models still face with several limitations. Not only do they rely on large numbers of interactions with the environment, but they are also limited in terms of modeling long-term relationships and tackling partial observability. In recent years, the Transformer model has demonstrated the ability to enhance RL models, allowing them to overcome these issues. Particularly, the self-attention mechanism within the Transformer enables efficient modeling of long-range dependencies and global correlations, as well as accelerates training processes and handles heterogeneous data modalities. In this paper, we present a comprehensive survey of Transformer-based RL algorithms and their applications in communication networks. Specifically, the paper provides the mathematical background of RL and Transformer architectures, along with insights into key issues such as resource allocation, computation offloading, routing, and trajectory control, and network security. We conclude the paper by discussing challenges, open issues, and notable future research directions, including Transformer-enhanced DRL algorithms for semantic communication and network optimization.",
+  "link": "https://arxiv.org/abs/2606.05208",
+  "category": "cs.LG",
+  "categories": [
+    "eess.SP",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882832+00:00"
+}

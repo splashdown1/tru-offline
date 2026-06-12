@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05175",
+  "title": "Generic Triple-Latent Compression with Gated Associative Retrieval",
+  "abstract": "We study generic triple-latent sequence models that maintain a running token state and compressed pair-memory pathway to capture higher-order token interactions without benchmark-specific parsing. The triple-latent family improves a small Transformer baseline on byte-level WikiText-2 and on a tokenizer-based MiniMind language-model benchmark, while a recall-focused gated key-value retrieval extension improves associative recall but remains seed-sensitive and much slower in the current reference implementation.",
+  "link": "https://arxiv.org/abs/2606.05175",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497647+00:00"
+}

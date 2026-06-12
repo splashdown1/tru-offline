@@ -1,0 +1,917 @@
+{
+  "pulled_at": "2026-06-05T08:32:24.275986+00:00",
+  "total_items": 97,
+  "feeds": [
+    {
+      "name": "techcrunch_ai",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/"
+    },
+    {
+      "name": "wired_ai",
+      "url": "https://www.wired.com/feed/tag/ai/latest/rss"
+    },
+    {
+      "name": "arstechnica_ai",
+      "url": "https://feeds.arstechnica.com/arstechnica/technology-lab"
+    },
+    {
+      "name": "openai_blog",
+      "url": "https://openai.com/blog/rss.xml"
+    },
+    {
+      "name": "google_ai_blog",
+      "url": "https://blog.google/technology/ai/rss/"
+    },
+    {
+      "name": "deepmind_blog",
+      "url": "https://deepmind.com/blog/rss.xml"
+    },
+    {
+      "name": "mit_tech_review",
+      "url": "https://www.technologyreview.com/feed/"
+    },
+    {
+      "name": "hacker_news",
+      "url": "https://hnrss.org/frontpage"
+    },
+    {
+      "name": "ai_news",
+      "url": "https://artificialintelligence-news.com/feed/"
+    }
+  ],
+  "items": [
+    {
+      "id": "faa1d4cc54ee",
+      "title": "Mira Murati steps back into the spotlight, carefully",
+      "link": "https://techcrunch.com/2026/06/04/mira-murati-steps-back-into-the-spotlight-carefully/",
+      "description": "In the current environment, remaining heads down has diminishing returns; at some point, you have to make some noise just to remind the market you exist.",
+      "pubdate": "Fri, 05 Jun 2026 05:06:37 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189535+00:00"
+    },
+    {
+      "id": "2d5f87797f20",
+      "title": "Ahead of its IPO, Anthropic\u2019s Daniela Amodei shrugs off doubts about AI\u2019s returns",
+      "link": "https://techcrunch.com/2026/06/04/ahead-of-its-ipo-anthropics-daniela-amodei-shrugs-off-doubts-about-ais-returns/",
+      "description": "Anthropic has been growing at a breakneck pace. The company announced that annualized revenue crossed $47 billion in May, up dramatically from roughly $9 billion at the end of 2025. That trajectory faces a real test, though. ",
+      "pubdate": "Thu, 04 Jun 2026 22:43:26 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189561+00:00"
+    },
+    {
+      "id": "4204b26ece60",
+      "title": "Airbnb\u2019s Brian Chesky plans to launch a new AI lab",
+      "link": "https://techcrunch.com/2026/06/04/airbnbs-brian-chesky-plans-to-launch-a-new-ai-lab/",
+      "description": "The Airbnb CEO said last year it hasn't struck an LLM partnership because existing products weren't quite ready.",
+      "pubdate": "Thu, 04 Jun 2026 22:29:50 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189567+00:00"
+    },
+    {
+      "id": "c3cd6fb4b92c",
+      "title": "Defense tech, AI, and fundraising take center stage at StrictlyVC Los Angeles on June 18",
+      "link": "https://techcrunch.com/2026/06/04/defense-tech-ai-and-fundraising-take-center-stage-at-strictlyvc-los-angeles-on-june-18/",
+      "description": "On Thursday, June 18, at The Aerospace Corporation Campus, investors, founders, and tech leaders will gather for an evening of conversation exploring some of the most consequential shifts taking place across venture capital, defense technology, artificial intelligence, and advanced industry.\u00a0Secure your spot today.",
+      "pubdate": "Thu, 04 Jun 2026 21:30:00 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189572+00:00"
+    },
+    {
+      "id": "d1e2098badca",
+      "title": "Meta steals a tactic from Tesla and builds data centers in tents",
+      "link": "https://techcrunch.com/2026/06/04/meta-steals-a-tactic-from-tesla-and-builds-data-centers-in-tents/",
+      "description": "Meta may have found one way to slash its massive data center bill: tents.",
+      "pubdate": "Thu, 04 Jun 2026 19:33:09 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189577+00:00"
+    },
+    {
+      "id": "50464dcd5ddd",
+      "title": "Apple approves Poke as the first AI agent on its Messages for Business platform",
+      "link": "https://techcrunch.com/2026/06/04/apple-approves-poke-as-the-first-ai-agent-on-its-messages-for-business-platform/",
+      "description": "Poke, the startup that lets people use AI agents through simple text messages, has become the first AI agent approved for Apple\u2019s Messages for Business platform. ",
+      "pubdate": "Thu, 04 Jun 2026 19:20:58 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189589+00:00"
+    },
+    {
+      "id": "b3c2ce36466a",
+      "title": "Meta rolls out a new AI creator assistant on Facebook",
+      "link": "https://techcrunch.com/2026/06/04/meta-rolls-out-a-new-ai-creator-assistant-on-facebook/",
+      "description": "Creators often have to parse through charts and dashboards to understand their performance, but with the new AI assistant, they can get quick answers to questions like \"When should I post?\" and \"What are people saying in my comments?\" ",
+      "pubdate": "Thu, 04 Jun 2026 16:32:48 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189594+00:00"
+    },
+    {
+      "id": "ee3c77915d7d",
+      "title": "What to expect from WWDC 2026: Siri\u2019s highly anticipated revamp and Apple Intelligence updates",
+      "link": "https://techcrunch.com/2026/06/04/what-to-expect-from-wwdc-2026-siris-highly-anticipated-revamp-and-apple-intelligence-updates/",
+      "description": "Apple's WWDC nears: Here's what you can look forward to.",
+      "pubdate": "Thu, 04 Jun 2026 16:31:12 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189598+00:00"
+    },
+    {
+      "id": "10dbcf477da3",
+      "title": "Is Silicon Valley ready to put robots in people\u2019s homes? Hello Robot is.",
+      "link": "https://techcrunch.com/2026/06/04/is-silicon-valley-ready-to-put-robots-in-peoples-homes-hello-robot-is/",
+      "description": "The California startup released the fourth-generation of its home assistance robot, Stretch. ",
+      "pubdate": "Thu, 04 Jun 2026 15:05:00 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189602+00:00"
+    },
+    {
+      "id": "7d99cef7bed2",
+      "title": "Apple touts $1.4 trillion in App Store billings and sales, 90% without a commission",
+      "link": "https://techcrunch.com/2026/06/04/apple-touts-1-4-trillion-in-app-store-billings-and-sales-90-without-a-commission/",
+      "description": "Apple's App Store generated $1.4 trillion in sales, up from $1.3 trillion last year, with $149 billion in sales for digital goods.",
+      "pubdate": "Thu, 04 Jun 2026 14:05:58 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189606+00:00"
+    },
+    {
+      "id": "f6b2b5480228",
+      "title": "Lovable signs multiyear deal with Google Cloud to up usage 5x, source says",
+      "link": "https://techcrunch.com/2026/06/03/lovable-signs-multi-year-deal-with-google-cloud-to-up-usage-5x-source-says/",
+      "description": "Lovable and Google signed an expanded multiyear deal that involves a 5x expansion of Lovable's footprint on Google Cloud, and expanded access to Anthropic Claude.",
+      "pubdate": "Wed, 03 Jun 2026 22:56:51 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189610+00:00"
+    },
+    {
+      "id": "50e78f39db0d",
+      "title": "Alphabet\u2019s record-breaking $85B raise for Google\u2019s AI business is a helluva good signal",
+      "link": "https://techcrunch.com/2026/06/03/alphabets-record-breaking-85b-raise-for-googles-ai-business-is-a-helluva-good-signal/",
+      "description": "If Alphabet's record-breaking $85 billion stock sale signals investor appetite for AI-related offerings, we can see that investors are ready to chow. ",
+      "pubdate": "Wed, 03 Jun 2026 19:38:32 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189614+00:00"
+    },
+    {
+      "id": "3a949c75e5ad",
+      "title": "Google\u2019s Dreambeans, its weirdest-named AI tool to date, will turn your life into a cartoon",
+      "link": "https://techcrunch.com/2026/06/03/googles-dreambeans-its-weirdest-named-ai-tool-to-date-will-turn-your-life-into-a-cartoon/",
+      "description": "Dreambeans is a curated list of AI-illustrated \"stories\" culled from the personal data in your Google account.",
+      "pubdate": "Wed, 03 Jun 2026 19:07:42 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189618+00:00"
+    },
+    {
+      "id": "58c26ac01c66",
+      "title": "Amazon will show AI product images when you search for some reason",
+      "link": "https://techcrunch.com/2026/06/03/amazon-will-show-ai-product-images-when-you-search-for-some-reason/",
+      "description": "Amazon will use visual search and AI to show AI-generated product images that match your search queries. The retailer says it will help guide users to products.",
+      "pubdate": "Wed, 03 Jun 2026 15:50:26 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189622+00:00"
+    },
+    {
+      "id": "e9416aba4885",
+      "title": "These two founders left Goldman and Meta to build voice AI for markets everyone else overlooked",
+      "link": "https://techcrunch.com/2026/06/03/these-two-founders-left-goldman-and-meta-to-build-voice-ai-for-markets-everyone-else-overlooked/",
+      "description": "The startup's own stack for Africa and Middle East is now handling more than 17,000 calls per day.",
+      "pubdate": "Wed, 03 Jun 2026 15:00:00 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189626+00:00"
+    },
+    {
+      "id": "6dfa1236c598",
+      "title": "Publishers will be able to opt out of AI Search, thanks to new regulation",
+      "link": "https://techcrunch.com/2026/06/03/publishers-will-be-able-to-opt-out-of-ai-search-thanks-to-new-regulation/",
+      "description": "U.K. regulators are requiring Google offer a tool allowing website publishers to opt-out of generative AI search features. The option will be tested in the U.K. then rolled out globally. ",
+      "pubdate": "Wed, 03 Jun 2026 14:58:33 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189629+00:00"
+    },
+    {
+      "id": "97f774547a18",
+      "title": "Meta\u2019s AI agent for WhatsApp Business is now available globally",
+      "link": "https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/",
+      "description": "WhatsApp will charge businesses for using its AI agent based on token usage.",
+      "pubdate": "Wed, 03 Jun 2026 13:40:00 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189633+00:00"
+    },
+    {
+      "id": "2c9d125ec878",
+      "title": "Coralogix raises $200M on bet that someone needs to watch the AI agents",
+      "link": "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+      "description": "Coralogix is among a growing number of infrastructure firms betting that as AI systems move into production, demand will rise for tools that can monitor their behavior, troubleshoot failures, and provide the operational data needed to keep them running reliably.",
+      "pubdate": "Wed, 03 Jun 2026 13:02:51 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189637+00:00"
+    },
+    {
+      "id": "27e627d2125f",
+      "title": "Cyera eyes $12B valuation at 80x ARR multiple despite operating losses",
+      "link": "https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/",
+      "description": "The cybersecurity company is nearing a $300 million round led by Evolution Equity Partners.",
+      "pubdate": "Tue, 02 Jun 2026 22:50:56 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189641+00:00"
+    },
+    {
+      "id": "efa098b4805b",
+      "title": "Uber caps employee AI spending after blowing through budget in 4 months",
+      "link": "https://techcrunch.com/2026/06/02/uber-caps-employee-ai-spending-after-blowing-through-budget-in-four-months/",
+      "description": "Uber's cutback has occurred after the company had reportedly encouraged staff to use AI as much as possible. ",
+      "pubdate": "Tue, 02 Jun 2026 19:11:48 +0000",
+      "source": "techcrunch_ai",
+      "pulled_at": "2026-06-05T08:32:15.189644+00:00"
+    },
+    {
+      "id": "de09f15fd843",
+      "title": "The AI IPO Race Heats Up, DOGE Whistleblower Sues Elon Musk, and Instagram Gets Hacked",
+      "link": "https://www.wired.com/story/uncanny-valley-podcast-ai-ipo-race-elon-musk-doge-whistleblower-instagram-hacking-incident/",
+      "description": "On Uncanny Valley, we dive into the IPO bonanza that the top AI companies are embarking on to the point where some real estate listings are looking for not just regular old cash, but Anthropic stock.",
+      "pubdate": "Thu, 04 Jun 2026 18:44:49 +0000",
+      "source": "wired_ai",
+      "pulled_at": "2026-06-05T08:32:15.216277+00:00"
+    },
+    {
+      "id": "0d10a7c7f27c",
+      "title": "Jeff Bezos Is Funding a Wild Hunt for the Brain\u2019s \u2018Core Algorithm\u2019",
+      "link": "https://www.wired.com/story/jeff-bezos-is-funding-a-wild-hunt-for-the-brains-core-algorithm/",
+      "description": "With $500 million in funding and a reported $2.5 billion valuation, Flourish wants to reinvent AI by putting real neurons under the microscope.",
+      "pubdate": "Thu, 04 Jun 2026 10:30:00 +0000",
+      "source": "wired_ai",
+      "pulled_at": "2026-06-05T08:32:15.216296+00:00"
+    },
+    {
+      "id": "702e511c1ab7",
+      "title": "Alpha School\u2019s Ritzy New York City Campus Costs $65,000 a Year\u2014but Isn\u2019t Actually a School",
+      "link": "https://www.wired.com/story/alpha-schools-new-york-city-campus-isnt-actually-a-school/",
+      "description": "A homeschooling center in Manhattan is part of the company\u2019s nationwide expansion. Internal documents reveal its strategy: \u201cOpening date > safety.\u201d",
+      "pubdate": "Thu, 04 Jun 2026 10:00:00 +0000",
+      "source": "wired_ai",
+      "pulled_at": "2026-06-05T08:32:15.216303+00:00"
+    },
+    {
+      "id": "387c76ed7aa6",
+      "title": "Quantum Computing Is Having Its Public Market Moment",
+      "link": "https://www.wired.com/story/quantum-computing-is-having-its-public-market-moment-quantinuum/",
+      "description": "Quantinuum, a quantum computing startup, is losing millions. Investors want in anyway.",
+      "pubdate": "Thu, 04 Jun 2026 09:34:23 +0000",
+      "source": "wired_ai",
+      "pulled_at": "2026-06-05T08:32:15.216307+00:00"
+    },
+    {
+      "id": "578000cda14c",
+      "title": "OpenAI and Anthropic Sign Letter to Prevent AI-Developed Biological Weapons",
+      "link": "https://www.wired.com/story/openai-anthropic-letter-ai-biological-weapons/",
+      "description": "Leading AI labs, executives, and scientists are sending a letter to lawmakers urging them to improve tracking of synthetic DNA sequences that could be used for bioweapons.",
+      "pubdate": "Thu, 04 Jun 2026 01:01:00 +0000",
+      "source": "wired_ai",
+      "pulled_at": "2026-06-05T08:32:15.216311+00:00"
+    },
+    {
+      "id": "ab54839e3734",
+      "title": "xAI Asks Court to Strip Alleged Grok Deepfake Nudes Victims of Anonymity",
+      "link": "https://www.wired.com/story/xai-asks-court-to-strip-alleged-grok-deepfake-nudes-victims-of-anonymity/",
+      "description": "Four people suing Elon Musk's AI firm under pseudonyms due to the risks of being identified may face a difficult choice: Reveal your real names, or drop the lawsuit.",
+      "pubdate": "Wed, 03 Jun 2026 18:49:32 +0000",
+      "source": "wired_ai",
+      "pulled_at": "2026-06-05T08:32:15.216314+00:00"
+    },
+    {
+      "id": "1c3aee4a5bb9",
+      "title": "The Humanoid Robot of the Future Is a 6-Foot-Tall Beefcake With a Chinese Body and an American Brain",
+      "link": "https://www.wired.com/story/nvidia-unitree-humanoid-robot-h2-plus/",
+      "description": "Spencer Huang, Nvidia\u2019s robotics lead, tells WIRED that the new bot combines the best of both worlds.",
+      "pubdate": "Wed, 03 Jun 2026 18:00:00 +0000",
+      "source": "wired_ai",
+      "pulled_at": "2026-06-05T08:32:15.216319+00:00"
+    },
+    {
+      "id": "2ddf1e455cc5",
+      "title": "This Is How Trump Finally Signed the AI Executive Order",
+      "link": "https://www.wired.com/story/this-is-how-trump-finally-signed-the-ai-executive-order/",
+      "description": "After shelving the original executive order last month, Donald Trump finally got on board Monday night.",
+      "pubdate": "Wed, 03 Jun 2026 15:46:52 +0000",
+      "source": "wired_ai",
+      "pulled_at": "2026-06-05T08:32:15.216322+00:00"
+    },
+    {
+      "id": "4efd9a61784a",
+      "title": "Nvidia\u2019s RTX Spark Laptops Look Hell-Bent on Disruption",
+      "link": "https://www.wired.com/story/nvidia-rtx-spark-laptop-disruption/",
+      "description": "The company\u2019s RTX Spark chips might finally turn the \u201cAI PC\u201d into reality.",
+      "pubdate": "Wed, 03 Jun 2026 11:00:00 +0000",
+      "source": "wired_ai",
+      "pulled_at": "2026-06-05T08:32:15.216326+00:00"
+    },
+    {
+      "id": "d760676c010e",
+      "title": "What\u2019s Worth More Than Cash in San Francisco Real Estate? Anthropic Stock",
+      "link": "https://www.wired.com/story/whats-worth-more-than-san-francisco-real-estate-anthropic-stock/",
+      "description": "Several real estate listings in the San Francisco Bay Area are offering to exchange a home for a piece of the AI startup.",
+      "pubdate": "Wed, 03 Jun 2026 10:00:00 +0000",
+      "source": "wired_ai",
+      "pulled_at": "2026-06-05T08:32:15.216330+00:00"
+    },
+    {
+      "id": "6fa783e02a9b",
+      "title": "Dashlane explains how attackers managed to download encrypted password vaults",
+      "link": "https://arstechnica.com/security/2026/06/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/",
+      "description": "\n                        By targeting large numbers of users, attackers increased their chances of success.\n                    ",
+      "pubdate": "Thu, 04 Jun 2026 20:02:04 +0000",
+      "source": "arstechnica_ai",
+      "pulled_at": "2026-06-05T08:32:15.251658+00:00"
+    },
+    {
+      "id": "68ef71fa4075",
+      "title": "Can't make sense of Dashlane's vault theft notification? You're not alone.",
+      "link": "https://arstechnica.com/security/2026/06/dashlane-issues-opaque-advisory-warning-20-encrypted-vaults-were-stolen/",
+      "description": "\n                        Security advisory leaves out key details. Dashlane maintains complete silence.\n                    ",
+      "pubdate": "Wed, 03 Jun 2026 19:53:14 +0000",
+      "source": "arstechnica_ai",
+      "pulled_at": "2026-06-05T08:32:15.251679+00:00"
+    },
+    {
+      "id": "843de837f778",
+      "title": "Dozens of Red Hat packages backdoored through its official NPM channel",
+      "link": "https://arstechnica.com/security/2026/06/dozens-of-red-hat-packages-backdoored-through-its-offical-npm-channel/",
+      "description": "\n                        Anyone who has downloaded affected Red Hat packages should investigate immediately.\n                    ",
+      "pubdate": "Mon, 01 Jun 2026 19:49:09 +0000",
+      "source": "arstechnica_ai",
+      "pulled_at": "2026-06-05T08:32:15.251693+00:00"
+    },
+    {
+      "id": "5d82e073bbff",
+      "title": "Botnet of more than 17 million devices dismantled",
+      "link": "https://arstechnica.com/security/2026/05/botnet-of-more-than-17-million-devices-dismantled/",
+      "description": "\n                        The botnet was reportedly tied to a Russia-based residential proxy network.\n                    ",
+      "pubdate": "Fri, 29 May 2026 18:46:33 +0000",
+      "source": "arstechnica_ai",
+      "pulled_at": "2026-06-05T08:32:15.251698+00:00"
+    },
+    {
+      "id": "b837ea53d06a",
+      "title": "How Endava is redesigning software delivery around AI agents",
+      "link": "https://openai.com/index/endava-frontiers",
+      "description": "Learn how Endava is using AI agents, ChatGPT Enterprise, and Codex to accelerate software delivery, automate workflows, and build an AI-native culture across the enterprise.",
+      "pubdate": "Thu, 04 Jun 2026 12:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793409+00:00"
+    },
+    {
+      "id": "6b9104a1b802",
+      "title": "Dreaming: Better memory for a more helpful ChatGPT",
+      "link": "https://openai.com/index/chatgpt-memory-dreaming",
+      "description": "ChatGPT introduces a new memory system to better remember preferences, keeping context fresh and relevant across conversations.",
+      "pubdate": "Thu, 04 Jun 2026 09:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793432+00:00"
+    },
+    {
+      "id": "06552dbe520e",
+      "title": "Biodefense in the Intelligence Age",
+      "link": "https://openai.com/index/biodefense-in-the-intelligence-age",
+      "description": "An action plan for AI-powered biological resilience",
+      "pubdate": "Thu, 04 Jun 2026 00:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793437+00:00"
+    },
+    {
+      "id": "aa3793825450",
+      "title": "Introducing new capabilities to GPT-Rosalind",
+      "link": "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind",
+      "description": "GPT-Rosalind advances life sciences research with enhanced biological reasoning, medicinal chemistry expertise, genomics analysis, and experimental workflow capabilities.",
+      "pubdate": "Wed, 03 Jun 2026 13:15:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793441+00:00"
+    },
+    {
+      "id": "97f9fa4cc8d9",
+      "title": "How Wasmer used Codex to build a Node.js runtime for the edge",
+      "link": "https://openai.com/index/wasmer",
+      "description": "See how Wasmer used Codex with GPT-5.5 to build a Node.js runtime for the edge, accelerating development 10x to 20x and shipping in weeks instead of months.",
+      "pubdate": "Wed, 03 Jun 2026 12:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793445+00:00"
+    },
+    {
+      "id": "77e51c607ecd",
+      "title": "A blueprint for democratic governance of frontier AI",
+      "link": "https://openai.com/index/frontier-safety-blueprint",
+      "description": "OpenAI outlines a blueprint for U.S. governance of frontier AI, proposing a federal framework for safety, resilience, and national security.",
+      "pubdate": "Wed, 03 Jun 2026 10:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793449+00:00"
+    },
+    {
+      "id": "4d34dfc2732e",
+      "title": "OpenAI public policy agenda",
+      "link": "https://openai.com/index/public-policy-agenda",
+      "description": "OpenAI outlines its public policy agenda for AI, including safety, youth protection, workforce transition, and global standards to ensure AI benefits society.",
+      "pubdate": "Wed, 03 Jun 2026 10:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793453+00:00"
+    },
+    {
+      "id": "4593145b649a",
+      "title": "Travelers deploys AI-powered claims countrywide with OpenAI",
+      "link": "https://openai.com/index/travelers",
+      "description": "Travelers built an AI-powered Claim Assistant with OpenAI to guide customers through filing claims, provide 24/7 support, and scale operations during peak demand.",
+      "pubdate": "Tue, 02 Jun 2026 12:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793458+00:00"
+    },
+    {
+      "id": "5bad27849712",
+      "title": "Codex for every role, tool, and workflow",
+      "link": "https://openai.com/index/codex-for-every-role-tool-workflow",
+      "description": "Discover new Codex plugins, sites, and annotations that help analysts, marketers, designers, investors, and other teams get more done with AI.",
+      "pubdate": "Tue, 02 Jun 2026 09:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793462+00:00"
+    },
+    {
+      "id": "1ce9a4ba823d",
+      "title": "Advancing youth safety and opportunity through global leadership",
+      "link": "https://openai.com/index/advancing-youth-safety-and-opportunity-through-global-leadership",
+      "description": "OpenAI calls for global action on youth AI safety, proposing an international institute to strengthen safeguards, standards, and opportunities for young people.",
+      "pubdate": "Tue, 02 Jun 2026 07:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793466+00:00"
+    },
+    {
+      "id": "c1a1de1ffc5b",
+      "title": "Codex is becoming a productivity tool for everyone",
+      "link": "https://openai.com/index/codex-for-knowledge-work",
+      "description": "The Next Era of Knowledge Work report explores how Codex is transforming productivity through AI-powered research, data analysis, workflow automation, and content creation.",
+      "pubdate": "Tue, 02 Jun 2026 02:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793470+00:00"
+    },
+    {
+      "id": "a0e48aab46da",
+      "title": "Our views on AI policy and political advocacy",
+      "link": "https://openai.com/index/our-views-on-ai-policy-and-political-advocacy",
+      "description": "Our approach to AI policy and political advocacy, transparency, support for thoughtful regulation and AI safety, and that no outside political group speaks on the company\u2019s behalf.",
+      "pubdate": "Mon, 01 Jun 2026 17:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793474+00:00"
+    },
+    {
+      "id": "ab637be9be15",
+      "title": "Building the infrastructure for the Intelligence Age in Michigan",
+      "link": "https://openai.com/index/stargate-michigan-data-center",
+      "description": "OpenAI breaks ground on a 1GW data center project in Michigan as part of Stargate, building AI infrastructure to expand access, create jobs, and support communities.",
+      "pubdate": "Mon, 01 Jun 2026 12:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793477+00:00"
+    },
+    {
+      "id": "2b75ff6c9c01",
+      "title": "OpenAI frontier models and Codex are now available on AWS",
+      "link": "https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws",
+      "description": "OpenAI frontier models and Codex are now generally available on AWS, giving enterprises a new path to build with OpenAI through the AWS environments, controls, and procurement workflows they already use. Customers can get started with OpenAI on AWS and move faster from evaluation to production.",
+      "pubdate": "Mon, 01 Jun 2026 10:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793489+00:00"
+    },
+    {
+      "id": "5b74bdf4e901",
+      "title": "Boston Children\u2019s uses AI to unlock new diagnoses",
+      "link": "https://openai.com/index/boston-childrens-hospital",
+      "description": "Boston Children\u2019s Hospital uses OpenAI technology to improve patient care, reduce operational burden, and help diagnose more than 40 rare disease cases.",
+      "pubdate": "Fri, 29 May 2026 12:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793494+00:00"
+    },
+    {
+      "id": "c2e6caabf03e",
+      "title": "How Braintrust turns customer requests into code with Codex",
+      "link": "https://openai.com/index/braintrust",
+      "description": "How Braintrust engineers use Codex with GPT-5.5 to run experiments and code faster.",
+      "pubdate": "Fri, 29 May 2026 12:00:00 GMT",
+      "source": "openai_blog",
+      "pulled_at": "2026-06-05T08:32:15.793498+00:00"
+    },
+    {
+      "id": "73a92eb2292f",
+      "title": "5 ways Google Search can level up your thrift and vintage shopping",
+      "link": "https://blog.google/products-and-platforms/products/search/thrifting-tips/",
+      "description": "Uncover second-hand scores with AI tools in Google Search and Shopping.",
+      "pubdate": "Wed, 03 Jun 2026 13:00:00 +0000",
+      "source": "google_ai_blog",
+      "pulled_at": "2026-06-05T08:32:15.982952+00:00"
+    },
+    {
+      "id": "20f2f619f11e",
+      "title": "How we used Gemini to build Google I/O 2026",
+      "link": "https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/",
+      "description": "Learn how Googlers used AI to produce Google I/O 2026.",
+      "pubdate": "Mon, 01 Jun 2026 16:00:00 +0000",
+      "source": "google_ai_blog",
+      "pulled_at": "2026-06-05T08:32:15.982973+00:00"
+    },
+    {
+      "id": "1117642ccab7",
+      "title": "Take our I/O 2026 quiz, vibe coded in Google AI Studio.",
+      "link": "https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/",
+      "description": "We used Google AI Studio to vibe code a quiz about our top I/O 2026 announcements.",
+      "pubdate": "Fri, 29 May 2026 19:00:00 +0000",
+      "source": "google_ai_blog",
+      "pulled_at": "2026-06-05T08:32:15.982979+00:00"
+    },
+    {
+      "id": "3f0a24eb97e1",
+      "title": "9 demos of Gemini Omni and Gemini 3.5 in action",
+      "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/",
+      "description": "Watch 9 videos showing the capabilities of Gemini Omni and Gemini 3.5, announced at Google I/O 2026.",
+      "pubdate": "Fri, 29 May 2026 17:30:00 +0000",
+      "source": "google_ai_blog",
+      "pulled_at": "2026-06-05T08:32:15.982984+00:00"
+    },
+    {
+      "id": "86739dfa2796",
+      "title": "Check out real-life AI prototypes from the Futures Lab.",
+      "link": "https://blog.google/innovation-and-ai/technology/ai/university-waterloo-labs/",
+      "description": "University of Waterloo students develop AI prototypes like sign language tutors to reshape the future of education and work.",
+      "pubdate": "Fri, 29 May 2026 12:00:00 +0000",
+      "source": "google_ai_blog",
+      "pulled_at": "2026-06-05T08:32:15.982989+00:00"
+    },
+    {
+      "id": "c4b3e58f3861",
+      "title": "The Download: AI-generated lawsuits and virtual power plants for data centers",
+      "link": "https://www.technologyreview.com/2026/06/04/1138408/the-download-ai-lawsuits-virtual-power-plants-data-centers/",
+      "description": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. How courts are coping with a flood of AI-generated lawsuits Most days in her chambers, Judge Maritza Braswell, a federal magistrate judge in Colorado, sifts through stacks of documents written by&#8230;",
+      "pubdate": "Thu, 04 Jun 2026 12:10:00 +0000",
+      "source": "mit_tech_review",
+      "pulled_at": "2026-06-05T08:32:16.302321+00:00"
+    },
+    {
+      "id": "91dca43fda1d",
+      "title": "How courts are coping with a flood of AI-generated lawsuits",
+      "link": "https://www.technologyreview.com/2026/06/04/1138391/courts-coping-ai-lawsuits/",
+      "description": "Most days in her chambers, Judge Maritza Braswell, a federal magistrate judge in Colorado, sifts through stacks of documents written by people without a lawyer. Many of them can\u2019t afford to hire a lawyer, and others have cases too weak or too small to interest one. She reads each one carefully, mindful of how daunting&#8230;",
+      "pubdate": "Thu, 04 Jun 2026 10:50:18 +0000",
+      "source": "mit_tech_review",
+      "pulled_at": "2026-06-05T08:32:16.302344+00:00"
+    },
+    {
+      "id": "8e2d4bffceb3",
+      "title": "How virtual power plants could provide energy for data centers",
+      "link": "https://www.technologyreview.com/2026/06/03/1138350/virtual-power-plants-data-centers/",
+      "description": "Would you take a payment to ramp down your electricity use? Would it change anything if you were doing so to help power a local data center? Google just signed a new deal to help pay for a virtual power plant (VPP) in the largest power grid in the US. The agreement is with Voltus,&#8230;",
+      "pubdate": "Wed, 03 Jun 2026 16:51:38 +0000",
+      "source": "mit_tech_review",
+      "pulled_at": "2026-06-05T08:32:16.302349+00:00"
+    },
+    {
+      "id": "a880cb1d66d2",
+      "title": "The Download: Trump\u2019s new AI order, and smart glasses for warfare",
+      "link": "https://www.technologyreview.com/2026/06/03/1138322/the-download-trump-ai-order-smart-glasses-warfare/",
+      "description": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. 5 key points in Trump&#8217;s new AI order Less than two weeks after scrapping an executive order on AI, President Donald Trump signed a new one on Tuesday. Promising to promote&#8230;",
+      "pubdate": "Wed, 03 Jun 2026 12:10:00 +0000",
+      "source": "mit_tech_review",
+      "pulled_at": "2026-06-05T08:32:16.302355+00:00"
+    },
+    {
+      "id": "a06f01fadcde",
+      "title": "The Download: AI can run your admin department now",
+      "link": "https://www.technologyreview.com/2026/06/02/1138277/the-download-ai-tips-small-businesses-admin/",
+      "description": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. How small businesses can leverage AI From accounting to design to market research and product development, there\u2019s a staggering breadth of skills needed to run a business. Large companies can hire&#8230;",
+      "pubdate": "Tue, 02 Jun 2026 12:10:00 +0000",
+      "source": "mit_tech_review",
+      "pulled_at": "2026-06-05T08:32:16.302359+00:00"
+    },
+    {
+      "id": "428553671249",
+      "title": "Rehumanizing global health care with agentic AI",
+      "link": "https://www.technologyreview.com/2026/06/02/1137827/rehumanizing-global-health-care-with-agentic-ai/",
+      "description": "The global health care sector is under increasing strain.&#160; Decades of chronic underinvestment and constraints in recruitment have coincided with a surge in demand for services for aging populations. Gaps in provision are already taking a toll, with fragmented access to care and high rates of stress and burnout among staff. And it\u2019s getting worse.&#8230;",
+      "pubdate": "Tue, 02 Jun 2026 11:23:34 +0000",
+      "source": "mit_tech_review",
+      "pulled_at": "2026-06-05T08:32:16.302363+00:00"
+    },
+    {
+      "id": "514deb9580b2",
+      "title": "How small businesses can leverage AI",
+      "link": "https://www.technologyreview.com/2026/06/02/1138227/how-small-businesses-can-leverage-ai/",
+      "description": "This article is from Making AI Work, MIT Technology Review\u2019s limited-run newsletter examining how to apply LLMs across industries. To receive it in your inbox,sign up here. From accounting to design to market research and product development, there\u2019s a staggering breadth of skills needed to run a business. A large company can hire experts to&#8230;",
+      "pubdate": "Tue, 02 Jun 2026 09:00:00 +0000",
+      "source": "mit_tech_review",
+      "pulled_at": "2026-06-05T08:32:16.302367+00:00"
+    },
+    {
+      "id": "f41ee266d1b6",
+      "title": "The Download: China\u2019s brain implant ambitions",
+      "link": "https://www.technologyreview.com/2026/06/01/1138207/the-download-china-bci-brain-implant-nvidia-ai-chips-laptops/",
+      "description": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. China has approved the world\u2019s first invasive brain-computer chip\u2014here\u2019s what\u2019s next Sitting in the courtyard of his house in China\u2019s Henan province last October, Dong Hui decided to try holding a&#8230;",
+      "pubdate": "Mon, 01 Jun 2026 12:10:00 +0000",
+      "source": "mit_tech_review",
+      "pulled_at": "2026-06-05T08:32:16.302372+00:00"
+    },
+    {
+      "id": "26a44aa86134",
+      "title": "China has approved the world\u2019s first invasive brain-computer chip\u2014here\u2019s what\u2019s next",
+      "link": "https://www.technologyreview.com/2026/06/01/1138133/china-world-first-brain-chip/",
+      "description": "One day last October, sitting in the courtyard of his house in China\u2019s Henan province, Dong Hui decided to see if he could hold a pen to write.&#160; Dong, 39, had sustained spinal cord injuries in a car accident six years earlier that left him paralyzed from the neck down. Slowly but determinedly, he wrote&#8230;",
+      "pubdate": "Mon, 01 Jun 2026 09:09:00 +0000",
+      "source": "mit_tech_review",
+      "pulled_at": "2026-06-05T08:32:16.302377+00:00"
+    },
+    {
+      "id": "0ef4bec2fc68",
+      "title": "The Download: unlocking lithium and controlling Ebola",
+      "link": "https://www.technologyreview.com/2026/05/29/1138110/the-download-lithium-extraction-ebola-ai-pope/",
+      "description": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. How a new extraction process could unlock the world\u2019s lithium A new method for extracting lithium could cut costs and emissions from one of the world\u2019s most important materials for EVs&#8230;",
+      "pubdate": "Fri, 29 May 2026 12:10:00 +0000",
+      "source": "mit_tech_review",
+      "pulled_at": "2026-06-05T08:32:16.302381+00:00"
+    },
+    {
+      "id": "318e2cf29478",
+      "title": "ESP32 Bit Pirate, a Hardware Hacking Tool with WebCLI That Speaks Every Protocol",
+      "link": "https://github.com/geo-tp/ESP32-Bit-Pirate",
+      "description": "\nArticle URL: https://github.com/geo-tp/ESP32-Bit-Pirate\nComments URL: https://news.ycombinator.com/item?id=48409306\nPoints: 3\n# Comments: 1\n",
+      "pubdate": "Fri, 05 Jun 2026 07:40:04 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364682+00:00"
+    },
+    {
+      "id": "beb4b0bd5a2e",
+      "title": "Changing How We Develop Ladybird",
+      "link": "https://ladybird.org/posts/changing-how-we-develop-ladybird/",
+      "description": "\nArticle URL: https://ladybird.org/posts/changing-how-we-develop-ladybird/\nComments URL: https://news.ycombinator.com/item?id=48409191\nPoints: 28\n# Comments: 10\n",
+      "pubdate": "Fri, 05 Jun 2026 07:26:33 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364717+00:00"
+    },
+    {
+      "id": "d813377abb79",
+      "title": "There's no escaping it: an exploration of ANSI codes",
+      "link": "https://blog.safia.rocks/2025/12/22/ansi-codes/",
+      "description": "\nArticle URL: https://blog.safia.rocks/2025/12/22/ansi-codes/\nComments URL: https://news.ycombinator.com/item?id=48408995\nPoints: 3\n# Comments: 0\n",
+      "pubdate": "Fri, 05 Jun 2026 07:02:14 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364724+00:00"
+    },
+    {
+      "id": "ebc07b9992f0",
+      "title": "Fine-tuning an LLM to write docs like it's 1995",
+      "link": "https://passo.uno/fine-tuning-docs-llm/",
+      "description": "\nArticle URL: https://passo.uno/fine-tuning-docs-llm/\nComments URL: https://news.ycombinator.com/item?id=48408442\nPoints: 45\n# Comments: 12\n",
+      "pubdate": "Fri, 05 Jun 2026 05:46:06 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364731+00:00"
+    },
+    {
+      "id": "4ddaaa5753b7",
+      "title": "The IsUpMap lets you check the status of over 100 major sites at once",
+      "link": "https://isupmap.com/",
+      "description": "\nArticle URL: https://isupmap.com/\nComments URL: https://news.ycombinator.com/item?id=48408067\nPoints: 34\n# Comments: 16\n",
+      "pubdate": "Fri, 05 Jun 2026 04:44:48 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364737+00:00"
+    },
+    {
+      "id": "e76f886f0320",
+      "title": "C++: The Documentary",
+      "link": "https://herbsutter.com/2026/06/04/c-the-documentary-released-today/",
+      "description": "\nArticle URL: https://herbsutter.com/2026/06/04/c-the-documentary-released-today/\nComments URL: https://news.ycombinator.com/item?id=48408016\nPoints: 118\n# Comments: 41\n",
+      "pubdate": "Fri, 05 Jun 2026 04:37:01 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364743+00:00"
+    },
+    {
+      "id": "410088459899",
+      "title": "Magenta RealTime 2: Open and Local Live Music Models",
+      "link": "https://magenta.withgoogle.com/magenta-realtime-2",
+      "description": "\nArticle URL: https://magenta.withgoogle.com/magenta-realtime-2\nComments URL: https://news.ycombinator.com/item?id=48407815\nPoints: 32\n# Comments: 5\n",
+      "pubdate": "Fri, 05 Jun 2026 04:09:53 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364748+00:00"
+    },
+    {
+      "id": "e7b8e22ccfb7",
+      "title": "Linear Cosine Palettes(2025)",
+      "link": "https://blog.djnavarro.net/posts/2025-09-14_cosine-palettes/",
+      "description": "\nArticle URL: https://blog.djnavarro.net/posts/2025-09-14_cosine-palettes/\nComments URL: https://news.ycombinator.com/item?id=48407653\nPoints: 16\n# Comments: 0\n",
+      "pubdate": "Fri, 05 Jun 2026 03:40:02 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364754+00:00"
+    },
+    {
+      "id": "e2ebc7f4dbea",
+      "title": "Azure Linux 4.0 is Microsoft's first general-purpose Linux",
+      "link": "https://www.boxofcables.dev/azure-linux-4-0-is-microsofts-first-general-purpose-linux/",
+      "description": "\nArticle URL: https://www.boxofcables.dev/azure-linux-4-0-is-microsofts-first-general-purpose-linux/\nComments URL: https://news.ycombinator.com/item?id=48407499\nPoints: 106\n# Comments: 76\n",
+      "pubdate": "Fri, 05 Jun 2026 03:14:28 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364760+00:00"
+    },
+    {
+      "id": "36c77b41efd4",
+      "title": "Delacroix's Entry of the Crusaders into Constantinople Restored",
+      "link": "https://www.louvre.fr/en/explore/life-at-the-museum/delacroix-s-entry-of-the-crusaders-into-constantinople-restored-to-its-original-glory",
+      "description": "\nArticle URL: https://www.louvre.fr/en/explore/life-at-the-museum/delacroix-s-entry-of-the-crusaders-into-constantinople-restored-to-its-original-glory\nComments URL: https://news.ycombinator.com/item?id=48407368\nPoints: 28\n# Comments: 9\n",
+      "pubdate": "Fri, 05 Jun 2026 02:48:44 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364766+00:00"
+    },
+    {
+      "id": "fad40d95baec",
+      "title": "Meta enables ADB on deprecated Portal devices [video]",
+      "link": "https://fb.watch/HxPu0fSyeH/",
+      "description": "\nhttps://developers.meta.com/horizon/blog/build-apps-for-port...\n\nComments URL: https://news.ycombinator.com/item?id=48406640\nPoints: 209\n# Comments: 70\n",
+      "pubdate": "Fri, 05 Jun 2026 00:44:38 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364772+00:00"
+    },
+    {
+      "id": "1332edee5493",
+      "title": "Open Code Review \u2013 An AI-powered code review CLI tool",
+      "link": "https://github.com/alibaba/open-code-review",
+      "description": "\nArticle URL: https://github.com/alibaba/open-code-review\nComments URL: https://news.ycombinator.com/item?id=48406358\nPoints: 167\n# Comments: 42\n",
+      "pubdate": "Fri, 05 Jun 2026 00:04:29 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364778+00:00"
+    },
+    {
+      "id": "abeec586dfc3",
+      "title": "Do transformers need three projections? Systematic study of QKV variants",
+      "link": "https://arxiv.org/abs/2606.04032",
+      "description": "\nArticle URL: https://arxiv.org/abs/2606.04032\nComments URL: https://news.ycombinator.com/item?id=48405931\nPoints: 158\n# Comments: 32\n",
+      "pubdate": "Thu, 04 Jun 2026 23:11:56 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364784+00:00"
+    },
+    {
+      "id": "6e74ecb544e2",
+      "title": "SpaceX, Other Mega IPOs Denied Fast Index Entry by S&P",
+      "link": "https://www.bloomberg.com/news/articles/2026-06-04/s-p-dow-jones-keeps-megacap-ipo-rules-as-is-after-consultation",
+      "description": "\nArticle URL: https://www.bloomberg.com/news/articles/2026-06-04/s-p-dow-jones-keeps-megacap-ipo-rules-as-is-after-consultation\nComments URL: https://news.ycombinator.com/item?id=48405718\nPoints: 515\n# Comments: 254\n",
+      "pubdate": "Thu, 04 Jun 2026 22:48:19 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364790+00:00"
+    },
+    {
+      "id": "f48cb54d059a",
+      "title": "Queen bees emerge from special wax chambers",
+      "link": "https://cen.acs.org/materials/biobased-materials/queen-bees-special-wax/104/web/2026/06",
+      "description": "\nArticle URL: https://cen.acs.org/materials/biobased-materials/queen-bees-special-wax/104/web/2026/06\nComments URL: https://news.ycombinator.com/item?id=48404905\nPoints: 76\n# Comments: 11\n",
+      "pubdate": "Thu, 04 Jun 2026 21:31:31 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364796+00:00"
+    },
+    {
+      "id": "5a00cf140340",
+      "title": "Anthropic's open-source framework for AI-powered vulnerability discovery",
+      "link": "https://github.com/anthropics/defending-code-reference-harness",
+      "description": "\nArticle URL: https://github.com/anthropics/defending-code-reference-harness\nComments URL: https://news.ycombinator.com/item?id=48403980\nPoints: 402\n# Comments: 116\n",
+      "pubdate": "Thu, 04 Jun 2026 20:11:20 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364803+00:00"
+    },
+    {
+      "id": "b5bbfc4f8591",
+      "title": "Castor: CERN Advanced STORage Manager",
+      "link": "https://castor.web.cern.ch/content/home.html",
+      "description": "\nArticle URL: https://castor.web.cern.ch/content/home.html\nComments URL: https://news.ycombinator.com/item?id=48403753\nPoints: 57\n# Comments: 24\n",
+      "pubdate": "Thu, 04 Jun 2026 19:52:02 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364808+00:00"
+    },
+    {
+      "id": "9a462a2fdac6",
+      "title": "WSL 2 is getting faster Windows file system access",
+      "link": "https://www.boxofcables.dev/wsl2-per-device-swiotlb-pools-for-virtiofs-and-virtioproxy/",
+      "description": "\nArticle URL: https://www.boxofcables.dev/wsl2-per-device-swiotlb-pools-for-virtiofs-and-virtioproxy/\nComments URL: https://news.ycombinator.com/item?id=48403377\nPoints: 129\n# Comments: 97\n",
+      "pubdate": "Thu, 04 Jun 2026 19:21:18 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364814+00:00"
+    },
+    {
+      "id": "ac68d717e00a",
+      "title": "Leap in DNA synthesis slashes time to build new genetic sequences",
+      "link": "https://spectrum.ieee.org/faster-dna-synthesis-sidewinder",
+      "description": "\nArticle URL: https://spectrum.ieee.org/faster-dna-synthesis-sidewinder\nComments URL: https://news.ycombinator.com/item?id=48402116\nPoints: 12\n# Comments: 1\n",
+      "pubdate": "Thu, 04 Jun 2026 17:51:10 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364821+00:00"
+    },
+    {
+      "id": "570c1e17e8af",
+      "title": "When AI Builds Itself: Our progress toward recursive self-improvement",
+      "link": "https://www.anthropic.com/institute/recursive-self-improvement",
+      "description": "\nArticle URL: https://www.anthropic.com/institute/recursive-self-improvement\nComments URL: https://news.ycombinator.com/item?id=48400842\nPoints: 447\n# Comments: 594\n",
+      "pubdate": "Thu, 04 Jun 2026 16:20:17 +0000",
+      "source": "hacker_news",
+      "pulled_at": "2026-06-05T08:32:23.364827+00:00"
+    },
+    {
+      "id": "4959f1c984a7",
+      "title": "Meta Business Agent drives AI-powered conversational commerce",
+      "link": "https://www.artificialintelligence-news.com/news/meta-business-agent-ai-powered-conversational-commerce/",
+      "description": "Meta has launched Business Agent to automate conversational commerce workflows directly inside its messaging applications. The software allows global retail brands to execute transactions and field support tickets without human intervention. Deploying this architecture places agentic AI directly at the core of social commerce. Meta integrated these workflows natively into Instagram, Messenger, and soon WhatsApp. [&#8230;]\nThe post Meta Business Agent drives AI-powered conversational commerce appeared first on AI News.\n",
+      "pubdate": "Thu, 04 Jun 2026 17:17:40 +0000",
+      "source": "ai_news",
+      "pulled_at": "2026-06-05T08:32:24.260421+00:00"
+    },
+    {
+      "id": "4a69f4655f66",
+      "title": "Scout from M\u2019Soft is the agentic Autopilot that works across M365",
+      "link": "https://www.artificialintelligence-news.com/news/microsofts-autopilot-scout-is-the-agentic-autopilot-that-works-across-m365/",
+      "description": "Microsoft has announced the wider testing of its new Autopilot feature at the Microsoft Build event this week, backed by a post on the company&#8217;s&#8217; website. Autopilots are described as a new category of agents that can work autonomously on a user&#8217;s behalf. Microsoft says each Autopilot has its own identity, and so multiple agents [&#8230;]\nThe post Scout from M&#8217;Soft is the agentic Autopilot that works across M365 appeared first on AI News.\n",
+      "pubdate": "Thu, 04 Jun 2026 11:41:00 +0000",
+      "source": "ai_news",
+      "pulled_at": "2026-06-05T08:32:24.260443+00:00"
+    },
+    {
+      "id": "35d41c17b840",
+      "title": "Amazon brings AI shopping assistant to retailers with Kate Spade",
+      "link": "https://www.artificialintelligence-news.com/news/amazon-ai-shopping-assistant-kate-spade-retailers/",
+      "description": "Amazon is offering its AI shopping technology to other retailers through a new Agentic Shopping Assistant built on AWS, with Kate Spade among the first brands to use it. The service allows retailers to build AI shopping assistants for their own websites and apps. Amazon said each deployment can be customised to a retailer&#8217;s catalogue, [&#8230;]\nThe post Amazon brings AI shopping assistant to retailers with Kate Spade appeared first on AI News.\n",
+      "pubdate": "Thu, 04 Jun 2026 10:00:00 +0000",
+      "source": "ai_news",
+      "pulled_at": "2026-06-05T08:32:24.260450+00:00"
+    },
+    {
+      "id": "4dce0849c381",
+      "title": "How E.ON uses SAP S/4HANA to modernise the grid with AI",
+      "link": "https://www.artificialintelligence-news.com/news/how-e-on-uses-sap-s-4hana-to-modernise-the-grid-with-ai/",
+      "description": "Standardising grid data through SAP S/4HANA allows E.ON to modernise infrastructure and execute AI deployments. The utility giant manages infrastructure across three distinct domains: energy grids, customer solutions, and energy infrastructure solutions. Maintaining operations across this scope requires continuous capital expenditure on IT hardware and software maintenance. Leadership initially questioned the business case supporting large-scale [&#8230;]\nThe post How E.ON uses SAP S/4HANA to modernise the grid with AI appeared first on AI News.\n",
+      "pubdate": "Wed, 03 Jun 2026 12:29:42 +0000",
+      "source": "ai_news",
+      "pulled_at": "2026-06-05T08:32:24.260457+00:00"
+    },
+    {
+      "id": "74fd6fb6cb03",
+      "title": "Walmart\u2019s AI workflows meet the realities of the balance sheet",
+      "link": "https://www.artificialintelligence-news.com/news/walmart-limits-ai-use-as-workflows-meet-the-realities-of-the-balance-sheet/",
+      "description": "Walmart has reportedly begun limiting employees&#8217; use of an internal AI assistant called Code Puppy after demands placed on the LLM backing the tool were higher than expected. Employees of Walmart were encouraged to use Code Puppy without any stricture or stipulations as to the limits of use, but Walmart is now assigning employees a [&#8230;]\nThe post Walmart&#8217;s AI workflows meet the realities of the balance sheet appeared first on AI News.\n",
+      "pubdate": "Wed, 03 Jun 2026 09:33:00 +0000",
+      "source": "ai_news",
+      "pulled_at": "2026-06-05T08:32:24.260463+00:00"
+    },
+    {
+      "id": "eae4078a008e",
+      "title": "Microsoft\u2019s Majorana 2 quantum chip is also a case study for agentic AI in R&D",
+      "link": "https://www.artificialintelligence-news.com/news/microsoft-discovery-agentic-ai-majorana-2/",
+      "description": "Microsoft&#8217;s Majorana 2 quantum chiparrived this week, with numbers that are genuinely difficult to contextualise: qubits 1,000 times more reliable than those of the first generation models, a mean qubit lifetime of 20 seconds against an industry norm measured in microseconds, and a revised roadmap targeting a commercially scalable quantum computer by 2029. Behind those [&#8230;]\nThe post Microsoft&#8217;s Majorana 2 quantum chip is also a case study for agentic AI in R&#038;D appeared first on AI News.\n",
+      "pubdate": "Wed, 03 Jun 2026 09:00:00 +0000",
+      "source": "ai_news",
+      "pulled_at": "2026-06-05T08:32:24.260470+00:00"
+    },
+    {
+      "id": "55c5e7629074",
+      "title": "Anthropic IPO filing marks AI maturing into enterprise utility",
+      "link": "https://www.artificialintelligence-news.com/news/anthropic-ipo-filing-marks-ai-maturing-enterprise-utility/",
+      "description": "Anthropic&#8217;s IPO filing marks the maturation of generative AI from a research-heavy venture phase into a stabilised enterprise utility. Model developers operating in private markets have prioritised rapid iteration and maximum compute performance over predictable billing cycles. Taking a foundational provider public aligns those engineering goals with standard corporate procurement, introducing structured release schedules and [&#8230;]\nThe post Anthropic IPO filing marks AI maturing into enterprise utility appeared first on AI News.\n",
+      "pubdate": "Tue, 02 Jun 2026 18:04:03 +0000",
+      "source": "ai_news",
+      "pulled_at": "2026-06-05T08:32:24.260476+00:00"
+    },
+    {
+      "id": "14a9c596449e",
+      "title": "GitHub Copilot users see token-based price hikes",
+      "link": "https://www.artificialintelligence-news.com/news/github-copilots-billing-changes-users-see-use-based-price-hikes/",
+      "description": "Since its announcement in April this year, the proposed changes to billing methods on GitHub Copilot were a source of much speculation: how much more or less would a pay-a-you-use AI cost an organisation or individual compared to a flat-rate, monthly subscription? Just a day into the changeover to token-based billing for the LLM-based service, [&#8230;]\nThe post GitHub Copilot users see token-based price hikes appeared first on AI News.\n",
+      "pubdate": "Tue, 02 Jun 2026 11:09:00 +0000",
+      "source": "ai_news",
+      "pulled_at": "2026-06-05T08:32:24.260481+00:00"
+    },
+    {
+      "id": "36fece9a90cd",
+      "title": "The future of automated trading with the best forex robot reviews",
+      "link": "https://www.artificialintelligence-news.com/news/the-future-of-automated-trading-with-the-best-forex-robot-reviews/",
+      "description": "Automation is becoming a bigger part of how financial markets are approached, and forex trading is one area where this is becoming easier to notice. As the tech world improves, more traders are looking for ways to stay involved in the market without the need to sit in front of charts for hours at a [&#8230;]\nThe post The future of automated trading with the best forex robot reviews appeared first on AI News.\n",
+      "pubdate": "Mon, 01 Jun 2026 08:51:42 +0000",
+      "source": "ai_news",
+      "pulled_at": "2026-06-05T08:32:24.260487+00:00"
+    },
+    {
+      "id": "5fe41146b549",
+      "title": "AI in video game development: How artificial intelligence is reshaping the industry",
+      "link": "https://www.artificialintelligence-news.com/news/ai-in-video-game-development/",
+      "description": "A Google Cloud survey found that 90% of developers are already integrating AI into their daily work, and on Steam, 7,818 titles disclosed AI use in 2025 alone, a 681% increase over the previous year. AI in video game development is not a side experiment. It is restructuring the pipeline from concept through launch, and [&#8230;]\nThe post AI in video game development: How artificial intelligence is reshaping the industry appeared first on AI News.\n",
+      "pubdate": "Mon, 01 Jun 2026 08:46:19 +0000",
+      "source": "ai_news",
+      "pulled_at": "2026-06-05T08:32:24.260493+00:00"
+    },
+    {
+      "id": "c271420ccf6b",
+      "title": "Scaling safe enterprise AI with OpenAI governance frameworks",
+      "link": "https://www.artificialintelligence-news.com/news/scaling-safe-enterprise-ai-openai-governance-frameworks/",
+      "description": "OpenAI\u2019s latest governance frameworks offer enterprise leaders a structured blueprint for scaling safe and compliant AI deployments globally. The adoption of large language models has steadily progressed towards requiring sustainable, commercial-grade architecture. OpenAI has released its Frontier Governance Framework (FGF), documenting how the organisation addresses systemic risk assessment and mitigation. The framework maps directly to [&#8230;]\nThe post Scaling safe enterprise AI with OpenAI governance frameworks appeared first on AI News.\n",
+      "pubdate": "Fri, 29 May 2026 16:24:58 +0000",
+      "source": "ai_news",
+      "pulled_at": "2026-06-05T08:32:24.260503+00:00"
+    },
+    {
+      "id": "b24f5e9a24eb",
+      "title": "Anthropic releases Claude Opus 4.8",
+      "link": "https://www.artificialintelligence-news.com/news/anthropic-releases-claude-opus-4-8-news/",
+      "description": "Anthropic has released Claude Opus 4.8, an upgrade to Claude Opus 4.7 that the company says brings improved results for coding, agent work, reasoning, and knowledge work. The platform can be used through claude.ai, Claude Code and the Claude API, with the API name claude-opus-4-8. The company has also altered some of the details of [&#8230;]\nThe post Anthropic releases Claude Opus 4.8 appeared first on AI News.\n",
+      "pubdate": "Fri, 29 May 2026 10:44:00 +0000",
+      "source": "ai_news",
+      "pulled_at": "2026-06-05T08:32:24.260508+00:00"
+    }
+  ]
+}

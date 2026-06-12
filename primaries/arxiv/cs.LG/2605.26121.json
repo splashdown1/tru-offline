@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.26121",
+  "title": "GEM: Geometric Entropy Mixing for Optimal LLM Data Curation",
+  "abstract": "LLM pre-training efficacy increasingly depends on data composition rather than sheer volume. Yet, optimal mixing is hindered by categorization flaws: human taxonomies suffer from ontological misalignment, and Euclidean clustering fails to address embedding anisotropy. We introduce GEM (Geometric Entropy Mixing), a framework reformulating data curation as a variational problem on the hypersphere augmented with a mixing-balance regularizer. By decoupling the generative prior and optimizing the objective via a provable MM (Minorize-Maximize) algorithm, GEM effectively counteracts the cluster collapse to discover balanced semantic structures invisible to Euclidean heuristics. We employ teacher-student distillation to scale this geometric fidelity to web-scale corpora and introduce the Geometric Influence Score (GIS) for interpretable taxonomy generation. Experiments with 1.1B-parameter models demonstrate that GEM establishes a new state-of-the-art when integrated into mixing strategies like DoReMi and RegMix, improving average downstream accuracy by up to 1.2% and offering a robust coordinate system for predictable data mixing.",
+  "link": "https://arxiv.org/abs/2605.26121",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308135Z"
+}

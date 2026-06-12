@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2405.07836",
+  "title": "Forecasting with Hyper-Trees",
+  "abstract": "We introduce Hyper-Trees as a novel framework for modeling time series data using gradient boosted trees. Unlike conventional tree-based approaches that forecast time series directly, Hyper-Trees learn the parameters of a target time series model, such as ARIMA or Exponential Smoothing, as functions of features. These parameters are then used by the target model to generate the final forecasts. Our framework combines the effectiveness of decision trees on tabular data with classical forecasting models, thereby inducing a time series inductive bias into tree-based models. To resolve the scaling limitations of boosted trees when estimating a high-dimensional set of target model parameters, we combine decision trees and neural networks within a unified framework. In this hybrid approach, the trees generate informative representations from the input features, which a shallow network then uses as input to learn the parameters of a time series model. With our research, we explore the effectiveness of Hyper-Trees across a range of forecasting tasks and extend tree-based modeling beyond its conventional use in time series analysis.",
+  "link": "https://arxiv.org/abs/2405.07836",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ME"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307565Z"
+}

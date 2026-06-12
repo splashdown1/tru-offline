@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05174",
+  "title": "Improving Heart-Focused Medical Question Answering in LLMs via Variance-Aware Rubric Rewards with GRPO",
+  "abstract": "Large Language Models (LLMs) have shown strong promise in healthcare applications. Yet deploying general-purpose models in real-world settings remains difficult due to data privacy constraints, inference costs, and limited suitability for edge or on-device use. These challenges motivate the development of smaller, more efficient models that require robust post-training strategies to ensure reliable medical reasoning. In this work, we investigate Group Relative Policy Optimization (GRPO) for post-training LLMs on heart-focused medical question answering with rubric-based supervision derived from RaR-Medicine. We propose a Variance-Aware Reward Framework that extends the Explicit Aggregation and Implicit Aggregation strategies of Rubrics as Rewards by replacing weighted binary criterion aggregation and single overall Likert-style scoring with continuous analytical reward functions derived from criterion-level rubric outcomes. This formulation provides richer optimization signals for feedback that is sparse, multi-criteria, and difficult to verify automatically, and enables more stable on-policy reinforcement learning. On a held-out heart-related subset of HealthBench, our best GRPO variant improves accuracy from 0.362 to 0.502 and F1 from 0.532 to 0.668 relative to the Qwen3-14B base model, while remaining competitive with GPT-OSS-120B (0.508 accuracy, 0.674 F1). Our findings show that carefully designed rubric-based rewards provide a practical strategy for improving heart-focused medical question answering in LLMs, with potential to extend to other rubric-based tasks.",
+  "link": "https://arxiv.org/abs/2606.05174",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497642+00:00"
+}

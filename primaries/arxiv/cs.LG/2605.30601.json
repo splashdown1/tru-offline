@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30601",
+  "title": "TASER: Task-Aware Stein Regularisation for Geometry-Driven Robustness",
+  "abstract": "Modern deep networks remain fragile under distribution shift and adversarial perturbations, often due to excessive or poorly structured input sensitivity. We introduce TASER (Task-Aware Stein Regularisation), a training-time regularisation framework derived from Langevin Stein operators. By penalising pointwise Stein residuals under the training distribution, TASER encourages geometric compatibility between predictors and data density, inducing anisotropic, data-aware smoothness. We provide theoretical links between Stein regularisation and reduced first-order shift sensitivity, develop scalable implementation variants compatible with modern architectures, and demonstrate improved robustness and stability across regression and vision benchmarks. Across CIFAR-10 experiments, TASER consistently improves the adversarial robustness of established training methods without incurring statistically significant clean-accuracy degradation.",
+  "link": "https://arxiv.org/abs/2605.30601",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306707Z"
+}

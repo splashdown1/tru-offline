@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.28420",
+  "title": "Conveyance: A Versatile Framework for Learning in Structured Class Spaces",
+  "abstract": "While machine learning (ML) architectures have evolved rapidly to account for complex data, loss functions like cross-entropy remain mostly structure-agnostic in many real-world applications. However, the \"class-symmetric\" nature of these standard losses fundamentally limits the ability of ML models to exploit structural relationships between classes, particularly when facing structured noise. We propose Conveyance, a new classification approach and associated loss function tailored to structured class spaces. It allows users to encode graph-like relations between classes without having to define complex joint distributions or manually tune utility matrices. Technically, our loss function operates by maximizing two separate margins over distinct class partitions, while preserving formal properties such as monotonicity and partial convexity. We demonstrate the versatility and effectiveness of our method by applying it to hierarchical classification, ordinal regression, and multiple instance learning. Across these tasks, Conveyance either matches or exceeds the performance of specialized baselines, thereby offering a unified solution for structured class spaces.",
+  "link": "https://arxiv.org/abs/2605.28420",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308152Z"
+}

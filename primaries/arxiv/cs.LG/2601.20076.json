@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2601.20076",
+  "title": "Randomized Feasibility Methods for Constrained Optimization with Adaptive Step Sizes",
+  "abstract": "We consider minimizing an objective function subject to constraints defined by the intersection of lower-level sets of convex functions. We study two cases: (i) strongly convex and Lipschitz-smooth objective function and (ii) convex but possibly nonsmooth objective function. To deal with the constraints that are not easy to project on, we use a randomized feasibility algorithm with Polyak steps and a random number of sampled constraints per iteration, while taking (sub)gradient steps to minimize the objective function. For case (i), we prove linear convergence in expectation of the objective function values to any prescribed tolerance using an adaptive stepsize. For case (ii), we develop a fully problem parameter-free and adaptive stepsize scheme that yields an $O(1/\\sqrt{T})$ worst-case rate in expectation. The infeasibility of the iterates decreases geometrically with the number of feasibility updates almost surely, while for the averaged iterates, we establish an expected lower bound on the function values relative to the optimal value that depends on the distribution for the random number of sampled constraints. For certain choices of sample-size growth, optimal rates are achieved. Finally, simulations on a Quadratically Constrained Quadratic Programming (QCQP) problem, Support Vector Machines (SVM), and logistic regression with group fairness constraints demonstrate the computational efficiency of our algorithm compared to other state-of-the-art methods.",
+  "link": "https://arxiv.org/abs/2601.20076",
+  "category": "cs.LG",
+  "categories": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308349Z"
+}

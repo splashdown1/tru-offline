@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2603.23160",
+  "title": "UniDial-EvalKit: A Unified Toolkit for Evaluating Multi-Faceted Conversational Abilities",
+  "abstract": "Benchmarking large language models (LLMs) and agents in multi-turn interactive scenarios is essential for understanding their practical capabilities. However, existing evaluation protocols are highly heterogeneous, differing significantly in dataset formats, model interfaces, and evaluation pipelines, which severely impedes systematic comparison. In this work, we present UniDial-EvalKit (UDE), a unified evaluation toolkit for assessing interactive AI systems. The core contribution of UDE lies in its holistic unification: it standardizes heterogeneous data formats into a universal schema, streamlines complex evaluation pipelines through a modular architecture, and aligns metric calculations under a hierarchical scoring aggregation. It also supports efficient large-scale evaluation through parallel generation and scoring, as well as checkpoint resume to eliminate redundant computation. Leveraging UDE, we conduct an extensive evaluation across diverse multi-dimensional benchmarks. Our empirical analysis shows that no single system consistently outperforms others across all benchmarks, while current memory agents often fail to surpass full-context baselines. Further analyses highlight several future directions, including benchmark deduplication and more adaptive memory architectures.",
+  "link": "https://arxiv.org/abs/2603.23160",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406207Z"
+}

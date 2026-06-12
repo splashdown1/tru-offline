@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2603.04946",
+  "title": "LocalSUG: City-Preference-Enhanced LLM for Query Suggestion in Local-Life Services",
+  "abstract": "In local-life service platforms, query suggestion reduces user effort by generating candidate queries from input prefixes. Traditional multi-stage systems rely heavily on historical popular queries, limiting their ability to capture long-tail and emerging demand. Although LLMs provide strong semantic generalization, their deployment in local-life services faces three challenges: insufficient city-preference awareness, exposure bias in preference optimization, and strict online latency constraints. We propose LocalSUG, an LLM-based query suggestion framework for local-life services. LocalSUG mines city-preference-enhanced candidates from term co-occurrence and injects them into prompts as dynamic references rather than fusing them into model parameters. This allows the model to adapt to changing city preferences, such as merchant openings or closures, while reducing stale or locally invalid suggestions. We further introduce a beam-search-driven GRPO algorithm to align training with inference-time decoding and optimize relevance together with business-oriented rewards. Finally, quality-aware beam acceleration and vocabulary pruning reduce online latency while preserving generation quality. Offline evaluations and large-scale online A/B testing show that LocalSUG improves CTR by +0.35% and reduces the low/no-result rate by 3.98%, demonstrating its effectiveness in real-world deployment.",
+  "link": "https://arxiv.org/abs/2603.04946",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406191Z"
+}

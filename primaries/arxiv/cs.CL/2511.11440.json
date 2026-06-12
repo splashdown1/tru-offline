@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2511.11440",
+  "title": "Synthetic Stimuli, Real Gains: Rethinking VLM Fine-Tuning Through Fully Controlled Data Generation",
+  "abstract": "Performance gains of Vision Language Models (VLMs) obtained by fine-tuning are generally based on ad hoc data collection and annotation of real-world scenes. Despite the improvements, this process is often prone to biases, errors, and distribution imbalance, resulting in overfitting and imbalanced performance. Although a few studies have explored synthetic data generation, they typically lack control over data distribution and annotation quality. In this work, we re-evaluate the potential of model fine-tuning by exploring a fully controlled data generation and annotation pipeline, obtaining bias-free data with balanced distribution and clean annotations. Using the spatial reasoning task of identifying the absolute position of an object as a use case, we fine-tune state-of-the-art VLMs and conduct exhaustive evaluations on both synthetic and real-world benchmarks, including transferability to real-world scenes. Our experiments reveal two key findings: 1) fine-tuning on balanced data yields uniform performance across the visual scene and mitigates common biases with as few as 130 samples; and 2) fine-tuning on synthetic stimuli improves performance by 13% on real-world data (COCO), outperforming models fine-tuned on the full COCO train set.",
+  "link": "https://arxiv.org/abs/2511.11440",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CV",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406304Z"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.06080",
+  "title": "On Advantage Estimates for Max@K Policy Gradients",
+  "abstract": "Reinforcement learning with verifiable rewards is widely used for post-training reasoning models, but sparse outcome rewards make exploration difficult. A complementary approach is to optimize inference-time objectives such as pass@K and max@K directly, yet existing policy-gradient estimators for these objectives use different signals, baselines, and normalizations, making their relationships unclear. We study this issue through baseline design and advantage centering. Starting from the advantage estimator of a leading method in the field, we show that it is policy-gradient unbiased but yields a non-centered advantage. We then introduce a Leave-Two-Out baseline that preserves policy-gradient unbiasedness while making realized batch advantages exactly centered. The resulting method, MaxPO, has an efficient quadratic-time implementation and integrates naturally into group-based RL for LLM post-training. We further derive the canonical finite-batch advantage for max@K, providing a unified view of existing advantage estimators. Empirically, we verify that the L2O baseline reduces gradient variance and outperforms non-centered alternatives.",
+  "link": "https://arxiv.org/abs/2606.06080",
+  "category": "cs.CL",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498275+00:00"
+}

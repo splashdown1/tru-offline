@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31518",
+  "title": "On the Relationship Between Activation Outliers and Feature Death in Sparse Autoencoders",
+  "abstract": "Sparse autoencoders (SAEs) decompose neural network activations into interpretable features, but many learned features never activate, a problem called feature death that wastes dictionary capacity and can reintroduce superposition. Death rates vary dramatically between models: near-zero on GPT-2, over 70% on AlphaFold3 with identical configurations. We find that dimension-level activation outliers (dimensions whose mean magnitude is large relative to per-token variation) cause this by shifting pre-activations at initialization based on each feature's alignment with the activation mean. Features anti-aligned with the mean receive permanently negative pre-activations and never fire. We formalize outlier severity as $\\gamma = \\|\\mu\\|/\\|\\sigma\\|$; it predicts initial death rates (Spearman $\\rho = 0.89$ for dead-by-TopK, $0.82$ for dead-by-ReLU) across 454 model-layer combinations spanning language, vision, protein, and genomic models. Dead features can revive during training, but recovery requires the SAE bias to learn the activation mean, a process that is prohibitively slow at high $\\gamma$. Mean-centering (subtracting the activation mean) sidesteps this and eliminates outlier-induced death across all tested models, confirming the mechanism and providing a principled basis for when and why this preprocessing step is necessary.",
+  "link": "https://arxiv.org/abs/2605.31518",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307178Z"
+}

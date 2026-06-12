@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05874",
+  "title": "Evaluating Stochastic Collapse and Implicit Bias in Multimodal Large Language Models",
+  "abstract": "Current evaluations for Multimodal Large Language Models (MLLMs) overwhelmingly focus on utility-driven objectives, leaving model behavior under logic-neutral scenarios largely underexplored. Stochasticity is essential in scenarios where multiple actions are equally valid, such as recommending travel itineraries or daily schedules where multiple options have similar utility. In such settings, deterministic policies may lead to repetitive behaviors and reduced coverage of valid alternatives. To bridge this gap, we propose RandomBench, a benchmark designed to evaluate whether MLLMs can maintain distributionally neutral behavior when selecting among equivalent options. We further introduce three metrics, including RI, BCI, BII, to quantify entropy and distributional bias. Experiments reveal a pervasive phenomenon termed Stochastic Collapse, where MLLMs fail to maintain uniform randomness under explicit random instructions, with top-1 probabilities reaching 97% from the ideal one quarter baseline and RI dropping to 0.068 in Claude Sonnet 4.6. Extensive ablation studies further demonstrate that these deviations persist across languages and representation formats, highlighting the robustness of distributional collapse in logic-neutral decision settings.",
+  "link": "https://arxiv.org/abs/2606.05874",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497885+00:00"
+}

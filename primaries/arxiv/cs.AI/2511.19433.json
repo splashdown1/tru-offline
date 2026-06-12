@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2511.19433",
+  "title": "Mixture of Horizons in Action Chunking",
+  "abstract": "Vision-language-action (VLA) models have shown remarkable capabilities in robotic manipulation, but their performance is sensitive to the $\\textbf{action chunk length}$ used during training, termed $\\textbf{horizon}$. Our empirical study reveals an inherent trade-off: longer horizons provide stronger global foresight but degrade fine-grained accuracy, while shorter ones sharpen local control yet struggle on long-term tasks, implying fixed choice of single horizons being suboptimal. To mitigate the trade-off, we propose a $\\textbf{mixture of horizons (MoH)}$ strategy. MoH rearranges the action chunk into several segments with different horizons, processes them in parallel with a shared action transformer, and fuses outputs with a light linear gate. It has three appealing benefits. 1) MoH exploits long-term foresight and short-term precision jointly within a single model, improving both performance and generalizability to complex tasks. 2) MoH is plug-and-play for full-attention action modules with minimal training or inference overhead. 3) MoH enables dynamic inference with adaptive horizons, which selects stable actions through cross-horizon consensus, achieving 2.5$\\times$ higher throughput than baselines while preserving superior performance. Extensive experiments over flow-based policies $\\pi_0$, $\\pi_{0.5}$, and one-step regression policy $\\pi_{\\text{reg}}$ demonstrate that MoH yields consistent and significant gains on both simulations and real-world tasks. Notably, under mixed-task setting, $\\pi_{0.5}$ with MoH reaches a new state-of-the-art with 99$\\%$ average success rate on LIBERO after only $30k$ training iterations. Project page: https://timsty1.github.io/moh/",
+  "link": "https://arxiv.org/abs/2511.19433",
+  "category": "cs.AI",
+  "categories": [
+    "cs.RO",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358744Z"
+}

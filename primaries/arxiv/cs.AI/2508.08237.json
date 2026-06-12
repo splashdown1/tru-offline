@@ -1,0 +1,15 @@
+{
+  "arxiv_id": "2508.08237",
+  "title": "VGGSounder: Audio-Visual Evaluations for Foundation Models",
+  "abstract": "The emergence of audio-visual foundation models underscores the importance of reliably assessing their multi-modal understanding. The VGGSound dataset is commonly used as a benchmark for evaluation audio-visual classification. However, our analysis identifies several limitations of VGGSound, including incomplete labelling, partially overlapping classes, and misaligned modalities. These lead to distorted evaluations of auditory and visual capabilities. To address these limitations, we introduce VGGSounder, a comprehensively re-annotated, multi-label test set that extends VGGSound and is specifically designed to evaluate audio-visual foundation models. VGGSounder features detailed modality annotations, enabling precise analyses of modality-specific performance. Furthermore, we reveal model limitations by analysing performance degradation when adding another input modality with our new modality confusion metric.",
+  "link": "https://arxiv.org/abs/2508.08237",
+  "category": "cs.AI",
+  "categories": [
+    "cs.MM",
+    "cs.AI",
+    "cs.CV",
+    "cs.SD",
+    "eess.AS"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098841+00:00"
+}

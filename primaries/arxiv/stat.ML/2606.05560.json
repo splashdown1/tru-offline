@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.05560",
+  "title": "Wasserstein Exponential Smoothing",
+  "abstract": "Exponential smoothing (ES) often outperforms other techniques in time series forecasting across a wide range of data-generating processes. While ES has traditionally been applied to time series in $\\mathbb{R}$, this paper extends the methodology to distributional time series, where each observation is a probability distribution on $\\mathbb{R}$. The primary contribution of this work is twofold. First, we propose a principled and intuitive generalization of ES within the Wasserstein space, which retains the exceptional parsimony of classical ES. Second, we theoretically and empirically demonstrate that the smoothing parameter can be consistently estimated by minimizing a Wasserstein distance. Applications to distributional time series of high-frequency financial returns and household electricity demands confirm the practical effectiveness of our Wasserstein ES model.",
+  "link": "https://arxiv.org/abs/2606.05560",
+  "category": "stat.ML",
+  "categories": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML",
+    "stat.TH"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728676+00:00"
+}

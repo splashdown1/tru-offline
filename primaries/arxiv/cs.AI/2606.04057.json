@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04057",
+  "title": "The Invisible Lottery: How Subtle Cues Steer Algorithm Choice in LLM Code Generation",
+  "abstract": "Large language models (LLMs) now generate substantial production code, often for tasks with multiple valid algorithmic solutions. Incidental prompt cues, meaning contextual words or metadata outside the task specification, can steer which algorithm the model selects, even when all outputs pass the same tests. Prompt sensitivity is well studied as a tool to improve output quality. Here, output policy means algorithm choice under fixed correctness. We define algorithm steering as cue-induced shifts in algorithm-family distributions and run 46,535 controlled experiments across 11 tasks, 19 cue types (18 channels plus a memoization semantic-vs-surface ablation that preserves meaning while changing typography and punctuation), and 15 model configurations. We find large, systematic shifts in algorithm-family distributions (up to 100 pp), largely consistent with cue semantics, including in applied tasks such as rate limiting. Direct algorithm naming is the most reliable mitigation we tested. Accidental context therefore creates an \"invisible lottery\" over performance, security, and maintainability.",
+  "link": "https://arxiv.org/abs/2606.04057",
+  "category": "cs.AI",
+  "categories": [
+    "cs.SE",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097858+00:00"
+}

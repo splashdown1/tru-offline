@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.03564",
+  "title": "CR-Seg: Attention-Guided and CoT-Enhanced Coarse-to-Refined Reasoning Segmentation",
+  "abstract": "Reasoning segmentation aims to segment target objects described by complex language through joint visual-textual reasoning. Existing methods typically rely on either learned semantic tokens to bridge Multimodal Large Language Models (MLLMs) and segmentation models, suffering from difficult cross-modal alignment, or explicit spatial prompts such as bounding boxes, which may lose holistic response semantics. To address these limitations, we propose Attention-Guided and CoT-Enhanced Coarse-to-Refined Reasoning Segmentation, termed CR-Seg, a two-stage framework for coarse-to-refined reasoning segmentation. Specifically, we design an Extract Attention Maps and Points (EAP) module to extract attention maps for coarse target localization and select informative points, both of which are fed into SAM for mask refinement. To alleviate reasoning--answer inconsistency, we further introduce Global-to-Local Chain-of-Thought (GLCoT), which guides the model to reason progressively from global scene context to local target details. Extensive experiments on reasoning segmentation benchmarks demonstrate the effectiveness of CR-Seg.",
+  "link": "https://arxiv.org/abs/2606.03564",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099458+00:00"
+}

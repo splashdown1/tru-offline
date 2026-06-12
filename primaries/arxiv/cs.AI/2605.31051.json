@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31051",
+  "title": "Linear Ordering Problem: Time for a Change",
+  "abstract": "The Linear Ordering Problem (LOP) is a fundamental combinatorial optimization problem with important applications in areas such as economics, social choice, and machine learning. Its most prominent use is the triangulation of economic input-output tables, which helps identify critical industries in an economy. Most existing algorithms have been evaluated on benchmarks derived from outdated macroeconomic data, which no longer reflect the structure of contemporary economies. Furthermore, LOP instances often exhibit many distinct global optima that can differ substantially from one another, creating challenges for applications that rely on a single solution. To address these limitations, we introduce a novel benchmark suite derived from up-to-date real-world economic data and an algorithmic scheme that leverages state-of-the-art LOP metaheuristics to generate diverse sets of high-quality solutions, together with metrics for assessing both quality and diversity. Experiments were conducted to report results on the proposed benchmark suite under both the traditional single-solution setting and the newly introduced multi-solution scenario",
+  "link": "https://arxiv.org/abs/2605.31051",
+  "category": "cs.AI",
+  "categories": [
+    "cs.NE",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358229Z"
+}

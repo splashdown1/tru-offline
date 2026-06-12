@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.29299",
+  "title": "Pocket-Dentist: On-Device Dental Image Understanding via Efficient Multimodal Large Language Models",
+  "abstract": "Evaluations of dental vision-language models remain fragmented across datasets, task definitions and metrics, and often ignore their computational cost. This limits their widespread deployment for dental screening outside specialist centres, where timely inference, limited hardware, and local handling of patient images are vital for practical, privacy-preserving clinical prescreening. Here we present Pocket-Dentist, an efficiency-aware benchmark for dental multimodal question answering that brings together three datasets spanning approximately 1,159 patients, five task types and seven metrics. Across typical 14 VLMs, our results reveals an interesting observation: compact VLMs (e.g., 2B-parameter models) outperform larger VLMs in accuracy while requiring substantially lower computational costs in dental image understanding. Deployed locally on an iPhone 17 Pro, our finetuned compact VLM Pocket-Dentist-2B processed each sample in 4.31 s, reducing latency by 4.9-fold and memory use by 2.3-fold compared with a 7B baseline.",
+  "link": "https://arxiv.org/abs/2605.29299",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.359010Z"
+}

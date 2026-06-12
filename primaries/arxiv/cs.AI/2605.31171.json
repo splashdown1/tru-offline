@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31171",
+  "title": "MIMO: Multilingual Information Retrieval via Monolingual Objectives",
+  "abstract": "Multilingual Information Retrieval (MLIR) reflects real-world search environments in which queries and relevant documents may appear in different languages within a mixed-language corpus. However, existing embedding models are primarily optimized for Multi-Monolingual retrieval and their performance often degrades in MLIR settings. Moreover, directly applying conventional contrastive learning to MLIR can exacerbate language clustering and expose a trade-off between cross-lingual alignment and embedding uniformity. To address these limitations, we propose MIMO: Multilingual Information Retrieval via Monolingual Objectives, a two-stage framework that uses a stable English semantic space from a high-performing teacher model as an anchor. MIMO first initializes the student model's cross-lingual alignment through knowledge distillation, and then jointly optimizes distillation and cross-lingual contrastive learning to improve retrieval discrimination while preserving alignment. Extensive experiments show that MIMO consistently outperforms existing cross-lingual training baselines across various MLIR and Multi-Monolingual benchmarks. MIMO also remains competitive with off-the-shelf models of similar or larger parameter scales. Furthermore, our cross-lingual Alignment-Uniformity analysis clarifies the distinct roles of the two loss components and shows that their combination yields a favorable trade-off between alignment and uniformity.",
+  "link": "https://arxiv.org/abs/2605.31171",
+  "category": "cs.AI",
+  "categories": [
+    "cs.IR",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358305Z"
+}

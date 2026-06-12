@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.00242",
+  "title": "MAEPose: Self-Supervised Spatiotemporal Learning for Human Pose Estimation on mmWave Video",
+  "abstract": "Millimetre-wave (mmWave) radar offers a more privacy-preserving alternative to RGB-based human pose estimation. However, existing methods typically rely on pre-extracted intermediate representations such as sparse point clouds or spectrogram images, where the rich spatiotemporal information naturally present in radar video streams is discarded for model learning, while such signal processing adds system complexity. In addition, existing solutions are mainly conducted in an end-to-end supervised manner without leveraging unlabelled raw video streams to learn generalized representations. In this study, we present MAEPose, a masked autoencoding-based human pose estimation approach that operates directly on mmWave spectrogram videos. MAEPose learns spatiotemporal motion-aware generalized representations from unlabelled radar video, and leverages its heatmap decoder for multi-frame pose estimation predictions. We evaluate it across three datasets based on leave-one-person-out cross-validation with rigorous statistical testing. MAEPose consistently outperforms state-of-the-art baselines by up to 22.1% in MPJPE p<0.05, and maintains robust accuracy under zero-shot bystander interference with only a 6.5% error increase. Ablation studies confirm that both the pre-training and the heatmap decoder contribute substantially, while modality analysis indicates that leveraging Range-Doppler video as input achieves better pose estimation performance than Range-Azimuth or their fusion, with lower computational cost.",
+  "link": "https://arxiv.org/abs/2605.00242",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099230+00:00"
+}

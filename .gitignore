@@ -1,0 +1,31 @@
+# packages
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pnpm-store/
+.yarn/
+
+# build outputs (regenerate from sources)
+**/ghost/*.html
+**/*_PHASE*.html
+**/TRU_UNIFIED*.html
+**/TRU_Phase*_Offline.html
+**/TRU_PHASE28.html
+**/scripture-offline/index.html
+**/dist/
+**/build/
+**/.next/
+**/.vite/
+**/.cache/
+**/.parcel-cache/
+**/omega-v*
+
+# data blobs (regenerate from sources)
+**/data/*.b64
+**/data/tru_offline.zip
+**/data/*.gz
+
+# edgar primaries (rebuild with pull scripts)
+primaries/sec/

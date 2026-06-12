@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.07834",
+  "title": "Interpretable Analytic Calabi-Yau Metrics via Symbolic Distillation",
+  "abstract": "The pointwise determinant ratio \\[ R_\\psi(z)\\equiv \\log\\!\\left(\\frac{\\det g_{\\mathrm{RF}}(z;\\psi)}{\\det g_{\\mathrm{FS}}(z)}\\right) \\] measures how the Ricci-flat metric on the Dwork quintic departs from the Fubini--Study baseline. We ask whether this scalar observable can be described compactly in terms of a small number of projective invariants, and whether the same scaffold remains usable across complex-structure moduli. Using Donaldson's $k=10$ balanced metric as an algebraic teacher and symbolic regression on sampled points, we find that, within the restricted moduli-only feature class studied here, two low-order symmetric features, the power sum $p_2=\\sum_i |z_i|^4$ and the cubic elementary symmetric polynomial $\\sigma_3=e_3$, already capture most of the teacher variation. A degree-3 polynomial in $(p_2,\\sigma_3)$ achieves held-out test $R^2=0.946$, while adding the remaining low-order symmetric generators changes this by less than $10^{-3}$. Within the same two-feature space, symbolic regression identifies a five-term rational-polynomial expression that matches the $k=10$ teacher with $R^2=0.9994$. Refitting the same functional scaffold across $\\psi\\in[0,0.8]$ keeps the mean determinant-ratio proxy $\\langle R_\\psi\\rangle$ within $0.01\\%$ of the local teachers on the sampled point clouds and yields smoothly varying fitted coefficients over the studied range. The holomorphic Yukawa coupling $\\kappa_{111}=5$ is reproduced as a normalization check only. Taken together, these results provide a compact symbolic description of one metric-derived scalar observable on the Dwork family, while remaining bounded by the finite-$k$ teacher used for distillation rather than establishing a closed-form Ricci-flat metric.",
+  "link": "https://arxiv.org/abs/2602.07834",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "math.DG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884044+00:00"
+}

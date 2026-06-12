@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05346",
+  "title": "Trajectory Dynamics in Language Model Hidden States Predict Human Processing Costs Beyond Surprisal",
+  "abstract": "Human language comprehension unfolds sequentially: each word is processed in the context of those that came before, and the interpretation builds incrementally over time. Surprisal, the negative log probability of a word given its context, has been the dominant predictor of incremental processing cost. But surprisal reduces rich sequential representations to a single scalar at each word, discarding information about the direction in which the interpretation has been evolving. Dynamical-systems approaches suggest that the trajectory of the evolving interpretive state, not just its position at each moment,should shape processing, and language itself may have local momentum, since speakers plan utterances a few words at a time. We introduce trajectory extrapolation error: at each word, we fit a linear trajectory to the preceding hidden states of a transformer language model and measure deviation from the extrapolated path. On the Natural Stories corpus, this measure is nearly orthogonal to surprisal (r = .044) and independently predicts self-paced reading times. The effect is especially pronounced in garden-path sentences, strengthens with model scale (GPT-2 Small to Large), and replicates across architectures with different positional encoding schemes (GPT-2 vs. Pythia/RoPE). A displacement control shows the effect is not reducible to representational change magnitude: displacement and extrapolation error predict in opposite directions. These findings reveal two dissociable components of processing cost: word-level prediction error (surprisal) and sensitivity to the local momentum of the unfolding interpretation (trajectory extrapolation error).",
+  "link": "https://arxiv.org/abs/2606.05346",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497701+00:00"
+}

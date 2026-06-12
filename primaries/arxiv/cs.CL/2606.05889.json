@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05889",
+  "title": "GLASS: GRPO-Trained LoRA for Acoustic Style Steering in Zero-Shot Text-to-Speech",
+  "abstract": "We propose GLASS, a framework for composable acoustic style control in zero-shot autoregressive text-to-speech (TTS) that learns controls from post-generation rewards rather than style labels. In zero-shot TTS, a speaker prompt often entangles speaker identity with prosodic attributes such as speaking rate and pitch, making it difficult to change style without changing the prompt itself. GLASS instead treats each acoustic attribute as a reward-defined control direction. For each control axis, GLASS freezes the TTS backbone and trains one lightweight LoRA adapter with Group Relative Policy Optimization (GRPO), using speech-token length and mean F0 as style rewards and WER as an intelligibility anchor. Because each control is represented as a LoRA weight update, independently trained adapters can be swapped, interpolated, and composed through linear LoRA arithmetic without retraining the backbone. Experiments on speaking rate and pitch control show targeted style shifts while preserving naturalness, speaker similarity, and intelligibility, and demonstrate smooth interpolation and multi-axis composition across independently trained adapters.",
+  "link": "https://arxiv.org/abs/2606.05889",
+  "category": "cs.CL",
+  "categories": [
+    "cs.SD",
+    "cs.CL",
+    "eess.AS"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498233+00:00"
+}

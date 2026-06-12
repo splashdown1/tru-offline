@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05236",
+  "title": "A New Quaternion-Joint Cable-Driven Redundant Manipulator Configuration and its Control Through FABRIK and Residual Reinforcement Learning",
+  "abstract": "Robotic arms capable of traversing arbitrary spatial paths, especially in highly obstructed workspaces, are highly desired across several industries. Quaternion-joints have recently empowered a specific class of robotic arms -- cable-driven redundant manipulators -- beyond its prior capabilities. Specifically, quaternion-joints reduce the number of required motors per degree of freedom, paving the way for more compact solutions.An ongoing challenge is that the complexity of the kinematic model of quaternion joints challenges a priori decisions on manipulator configurations and imposes higher computational demands on the control system and its non-linearities amplify all discrepancies between design and physical artifact arising from fabrication imprecision. Here we show a that a 4-segment, 8-joint manipulator can achieve a broader workspace than extant configurations, at lower hardware cost, and that Residual Reinforcement Learning outperforms extant state-of-the-art methods -- specifically, the FABRIK algorithm -- on the control of such manipulator. Our results show that this configuration is more workspace-effective than prior designs, and that Residual Reinforcement Learning outperforms FABRIK by three orders of magnitude on positional and orientational accuracy, effecting precise control of the novel 4-segment, 8-joint manipulator. Additionally, the control implementation is simpler: we describe the complete FABRIK process for control and corresponding learning implementation. Our methodology is applicable to the design of new systems, providing designers with further tools for the development of this class of manipulators and corresponding control systems for novel configurations.",
+  "link": "https://arxiv.org/abs/2606.05236",
+  "category": "cs.LG",
+  "categories": [
+    "cs.RO",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882865+00:00"
+}

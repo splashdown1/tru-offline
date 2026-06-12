@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.21108",
+  "title": "Efficient Learning of Deep State Space Models via Importance Smoothing",
+  "abstract": "Latent state space systems are ubiquitous in statistical modelling, arising naturally when time series are observed through noisy measurements. However, training deep state space models (DSSMs) at scale remains difficult. Two largely distinct strategies have emerged for training DSSMs. The first, auto-encoding DSSMs, trains generative models by optimising a variational lower bound. The second backpropagates through the outputs of classical sequential Monte Carlo (SMC) algorithms. Such approaches can train DSSMs for both discriminative and generative tasks, but their inherently sequential forward passes scale poorly on modern hardware. We propose \\emph{parallel variational Monte Carlo} (PVMC), a new training method that bridges these paradigms and robustly trains DSSMs for both discriminative and generative tasks. Across a set of benchmark experiments, PVMC matches or exceeds state-of-the-art performance while training $10\\times$ faster than the fastest competing SMC-based approach.",
+  "link": "https://arxiv.org/abs/2605.21108",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358974Z"
+}

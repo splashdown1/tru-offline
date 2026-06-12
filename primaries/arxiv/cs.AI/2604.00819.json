@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2604.00819",
+  "title": "Emotion Entanglement and Bayesian Inference for Multi-Dimensional Emotion Understanding",
+  "abstract": "Understanding emotions in natural language is inherently a multi-dimensional reasoning problem, where multiple affective signals interact through context, interpersonal relations, and situational cues. However, most existing emotion understanding benchmarks rely on short texts and predefined emotion labels, reducing this process to independent label prediction and ignoring the structured dependencies among emotions. To address this limitation, we introduce Emotional Scenarios (EmoScene), a theory-grounded benchmark of 4,731 contextrich scenarios annotated with an 8-dimensional emotion vector derived from Plutchik's basic emotions. Motivated by the observation that emotions rarely occur independently, we further propose an entanglement-aware Bayesian inference framework that incorporates emotion co-occurrence statistics to perform joint posterior inference over the emotion vector. This lightweight post-processing does not require any parameter updates and improves the structural consistency of predictions, and yields overall gains of 2.24% Lexical Accuracy without any additional cost. EmoScene therefore provides a challenging benchmark for studying multi-dimensional emotion understanding and the limitations of current language models.",
+  "link": "https://arxiv.org/abs/2604.00819",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099191+00:00"
+}

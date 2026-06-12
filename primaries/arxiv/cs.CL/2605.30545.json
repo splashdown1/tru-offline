@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30545",
+  "title": "Refining Word-Based Grammatical Error Annotation for L2 Korean",
+  "abstract": "Korean grammatical error correction (K-GEC) presents a structural mismatch between word-based evaluation and the morpheme-level locus of many learner errors. Postpositions and verbal endings are bound to lexical hosts, but they encode grammatical relations that must be represented in correction and evaluation. This paper refines word-based grammatical error annotation for L2 Korean by addressing three connected problems in existing resources: surface target realization, Korean-specific edit annotation, and single-reference evaluation. We reconstruct target sentences from the National Institute of Korean Language (NIKL) L2 corpus under morphologically constrained realization rules and convert its morpheme-level annotations into word-level \\texttt{m2} edits. We then define a Korean ERRANT-style annotation scheme that preserves the MRU core while distinguishing functional morpheme errors, spelling errors, word boundary errors, and word order errors. We also augment the KoLLA corpus with an additional reference correction, yielding a multi-reference evaluation setting for Korean GEC. Empirical validation shows that the refined NIKL targets yield lower perplexity, the converted \\texttt{m2} files achieve higher agreement with source-target edit representations, and the refined resources improve KoBART-based correction under the same model setting. Multi-reference KoLLA evaluation further reduces the penalty imposed on valid corrections that diverge from a single reference, especially for neural and prompted GEC systems. These results show that Korean GEC evaluation depends not only on correction models, but also on reference data and edit annotations that reflect Korean morphology, spacing, and correction variability.",
+  "link": "https://arxiv.org/abs/2605.30545",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405651Z"
+}

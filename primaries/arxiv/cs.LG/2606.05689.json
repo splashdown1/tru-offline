@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05689",
+  "title": "Causal Modeling of Selection in Evolution",
+  "abstract": "Understanding potential selection in data is crucial for causal discovery; we argue that \"selection\" in common narratives takes two forms, which we term static and evolutionary selection, respectively. Static selection refers to a one-shot filtering process where observed data consist of a subset of the population of interest, as in survey volunteer bias. Evolutionary selection, in contrast, operates through repeated rounds of differential fitness in reproduction, where observed data constitute the latest generation shaped by a historical trajectory, as in immune adaptation, antibiotic resistance, and social norm emergence. Existing methods largely conflate these two forms and rely on an identical graphical model of selection. We show that this model is valid for static settings but fails to characterize data under evolution, yielding false discovery results. To address this, we introduce a new model that specifically characterizes evolutionary selection, and develop a sound and complete procedure for identifying such models from data across one or multiple environments or generations. Experimental results validate the method's ability to uncover the relevant mechanisms underlying evolution from data.",
+  "link": "https://arxiv.org/abs/2606.05689",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882164+00:00"
+}

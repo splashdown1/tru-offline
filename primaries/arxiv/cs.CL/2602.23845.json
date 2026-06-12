@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.23845",
+  "title": "CLFEC: A New Task for Unified Linguistic and Factual Error Correction in paragraph-level Chinese Professional Writing",
+  "abstract": "Chinese text correction has traditionally focused on spelling and grammar, while factual error correction is usually treated separately. However, in paragraph-level Chinese professional writing, linguistic (word/grammar/punctuation) and factual errors frequently co-occur and interact, while many draft-level errors are sparsely observable in published texts after editorial review, making unified correction both necessary and controlled benchmark construction essential. This paper introduces CLFEC (Chinese Linguistic \\& Factual Error Correction), a new task for joint linguistic and factual correction. We construct a mixed, multi-domain Chinese professional writing dataset spanning current affairs, finance, law, and medicine. We then conduct a systematic study of LLM-based correction paradigms, from prompting to retrieval-augmented generation (RAG) and agentic workflows. The analysis reveals practical challenges, including limited generalization of specialized correction models, the need for evidence grounding for factual repair, the difficulty of mixed-error paragraphs, and over-correction on clean inputs. Results further show that handling linguistic and factual errors within the same context outperforms decoupled pipelines, and that agentic workflows can be effective with suitable backbone models. Overall, CLFEC provides a new benchmark for Chinese text correction research and practical guidance for proofreading systems.",
+  "link": "https://arxiv.org/abs/2602.23845",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498433+00:00"
+}

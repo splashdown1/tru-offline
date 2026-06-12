@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2603.16123",
+  "title": "Functorial Neural Architectures from Higher Inductive Types",
+  "abstract": "Neural networks often learn the parts of a task but fail on novel combinations of those parts. We argue that this failure is architectural: a decoder generalizes compositionally only when it respects the algebraic laws of the task, i.e. when it descends from freely generated sequences to the quotient determined by those laws. We make this principle constructive by compiling Higher Inductive Type (HIT) specifications into neural architectures. Basepoints, path constructors, and 2-cells are mapped to base constraints, generator networks, structural concatenation, and learned homotopies. The resulting transport decoders are strict monoidal functors by construction: decoding a concatenated word is concatenation of independently generated loop segments. In contrast, we prove that softmax self-attention cannot simultaneously satisfy strict monoidal composition and descent to any non-trivial compositional quotient. Experiments on the torus, wedge of circles, and Klein bottle validate the predicted hierarchy: functorial decoders outperform non-functorial alternatives by $2$--$10\\times$, and a learned 2-cell closes a $46\\%$ error gap precisely on words exercising the Klein-bottle relation. These results suggest that compositional generalization should be enforced as functorial structure in the architecture, rather than learned from examples alone.",
+  "link": "https://arxiv.org/abs/2603.16123",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "math.AT",
+    "math.CT"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358881Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30385",
+  "title": "LLMs Without Deep Neural Networks: New Architecture, Benefits and Case Study",
+  "abstract": "The purpose of this article is to provide validation to my deep neural network alternative in the context of LLMs. Very recently, there has been a significant interest by Chinese researchers in a model called RBF network, as a substitute to standard DNNs, with increased explainability and higher accuracy. It turns out that my new model, discovered independently, is based on the exact same machinery. But with a major twist: it does not need DNN as it finds the global optimum of the loss function in closed form, in one iteration, thus eliminating the tedious training step. Here I provide a high-level overview of my technology, with case study and comparison to similar methods.",
+  "link": "https://arxiv.org/abs/2605.30385",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306555Z"
+}

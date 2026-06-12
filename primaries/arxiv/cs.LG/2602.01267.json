@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.01267",
+  "title": "Diving into Kronecker Adapters: Component Design Matters",
+  "abstract": "Kronecker adapters have emerged as a promising approach for fine-tuning large-scale models, enabling high-rank updates through tunable component structures. However, existing work largely treats the component structure as a fixed or heuristic design choice, leaving the dimensions and number of Kronecker components underexplored. In this paper, we identify component structure as a key factor governing the capacity of Kronecker adapters. We perform a fine-grained analysis of both the dimensions and number of Kronecker components. In particular, we show that the alignment between Kronecker adapters and full fine-tuning depends on component configurations. Guided by these insights, we propose Component Designed Kronecker Adapters (CDKA). We further provide parameter-budget-aware configuration guidelines and a tailored training stabilization strategy for practical deployment. Experiments across various architectures and modalities demonstrate the effectiveness of CDKA. Code is available at https://github.com/rainstonee/CDKA.",
+  "link": "https://arxiv.org/abs/2602.01267",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307839Z"
+}

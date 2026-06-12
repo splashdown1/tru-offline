@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30844",
+  "title": "Fine-Tuning Improves Information Conveyance in Language Models",
+  "abstract": "Fine-tuning is often believed to reduce uncertainty and diversity in large language models, but existing analyses overlook output length, a key confounder, and therefore fail to capture how uncertainty is distributed across an entire generation rollout. To address this, we propose Canopy Entropy ($\\mathrm{CE}^\\star$), a measure that views language generation from a tree perspective, where ``canopy'' represents the space of all possible rollouts, making $\\mathrm{CE}^\\star$ naturally quantify the effective size of the generation space. $\\mathrm{CE}^\\star$ jointly captures uncertainty in both the output length $N$ and the generated sequence $Y_{1:N}$ -- indeed, we show that it equals to total Shannon entropy $H(N, Y_{1:N}\\mid X)$, where $X$ denotes the prompt. This formulation yields interpretable metrics, including a length-entropy correlation term $\\rho(N, r_N)$, where $r_N$ is the entropy rate, quantifying information conveyance efficiency by indicating whether longer outputs are more or less informative per token. Empirically, across tasks and model families, we find that fine-tuned models consistently exhibit stronger positive correlation $\\rho(N, r_N)$, even when total entropy decreases. Furthermore, after controlling for model family, task, prompt, and output-length effects, we find that fine-tuning nearly triples the correlation strength between entropy rate and semantic diversity, suggesting that aligned models convert token uncertainty into semantic diversity more efficiently. Overall, these results demonstrate that fine-tuning does not simply reduce uncertainty, but fundamentally reorganizes it into more informative and semantically meaningful generations. Our code is available at https://github.com/WeiyiTian/canopy-entropy.",
+  "link": "https://arxiv.org/abs/2605.30844",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405741Z"
+}

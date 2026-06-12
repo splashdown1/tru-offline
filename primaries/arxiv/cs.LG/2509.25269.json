@@ -1,0 +1,16 @@
+{
+  "arxiv_id": "2509.25269",
+  "title": "Position-Blind Ptychography: Viability of image reconstruction via data-driven variational inference",
+  "abstract": "In this work, we present and investigate the novel blind inverse problem of position-blind ptychography, i.e., ptychographic phase retrieval without any knowledge of scan positions, which then must be recovered jointly with the image. The motivation for this problem comes from single-particle diffractive X-ray imaging, where particles in random orientations are illuminated and a set of diffraction patterns is collected. If one uses a highly focused X-ray beam, the measurements would also become sensitive to the beam positions relative to each particle and therefore ptychographic, but these positions are also unknown. We investigate the viability of image reconstruction in a simulated, simplified 2-D variant of this difficult problem, using variational inference with modern data-driven image priors in the form of score-based diffusion models. We find that, with the right illumination structure and a strong prior, one can achieve reliable and successful image reconstructions even under measurement noise, in all except the most difficult evaluated imaging scenario.",
+  "link": "https://arxiv.org/abs/2509.25269",
+  "category": "cs.LG",
+  "categories": [
+    "eess.IV",
+    "cs.CV",
+    "cs.LG",
+    "cs.NA",
+    "math.NA",
+    "physics.optics"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308297Z"
+}

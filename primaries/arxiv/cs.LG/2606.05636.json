@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05636",
+  "title": "StableRCA: Robust Graph-Agnostic Mechanism-Level Root Cause Analysis",
+  "abstract": "Root-Cause Analysis (RCA) seeks to identify the variables responsible for abnormal system behavior in complex domains such as manufacturing, cloud computing, and healthcare. Existing approaches face a critical bottleneck: graph-based causal methods can identify intervention targets but typically require a known or accurately estimated causal graph, while graph-free statistical methods either localize marginal anomalies rather than structural causes, or rely on restrictive assumptions about graph structure or functional form. We propose StableRCA, a local mechanism-level RCA framework that avoids global graph discovery by estimating local Markov boundaries and detecting conditional distribution shifts within them. Leveraging the Independent Causal Mechanism principle, we show that intervention targets can be identified with probability converging exponentially in sample size under faithful Markov boundary recovery and non-degenerate mechanism shifts. Experiments on synthetic benchmarks and five real-world datasets demonstrate that StableRCA is robust to graph misspecification, effective under multiple intervention targets, scalable to large systems, and reliable across diverse application domains. Code is available at: https://anonymous.4open.science/r/StableRCA-E362",
+  "link": "https://arxiv.org/abs/2606.05636",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882148+00:00"
+}

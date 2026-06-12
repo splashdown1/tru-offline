@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31027",
+  "title": "Multi-Scale Separable Fourier Neural Networks for Solving High-Frequency PDEs",
+  "abstract": "We propose a novel neural network architecture, termed Multi-Scale Separable Fourier Neural Networks (MS-SFNN), for the accurate and efficient solution of linear and nonlinear high-frequency partial differential equations (PDEs). MS-SFNN exploits a separable representation: given a $d$-dimensional input, it employs $d$ independent subnetworks -- each acting on a single coordinate -- and constructs basis functions via element-wise multiplication of their outputs. The PDE solution is approximated as a linear combination of these basis functions, with coefficients determined by least squares. Critically, all network weights and biases are randomly initialized once, from a uniform distribution with unit variance, and remain fixed thereafter. To enhance expressivity, a tunable scaling factor is introduced in each subnetwork to modulate the frequency content of the resulting basis functions. Fourier features are explicitly embedded through cosine activations, endowing the method with strong spectral approximation capabilities. To mitigate the memory bottleneck associated with dense collocation in high-frequency or three-dimensional problems, we replace automatic differentiation with analytically derived basis function derivatives and develop a memory-efficient batched QR decomposition algorithm for solving large-scale least-squares systems. Numerical experiments demonstrate that MS-SFNN achieves unprecedented accuracy across a range of challenging PDEs, significantly outperforming state-of-the-art methods such as Physics-Informed Neural Networks (PINN) and Separated-Variable Spectral Neural Networks (SV-SNN).",
+  "link": "https://arxiv.org/abs/2605.31027",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306915Z"
+}

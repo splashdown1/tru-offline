@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2604.03634",
+  "title": "Algebraic Diversity: Group-Theoretic Spectral Estimation from Single Observations",
+  "abstract": "We establish that temporal averaging over multiple observations is the degenerate case of algebraic group action with the trivial group $G=\\{e\\}$. A General Replacement Theorem proves that a group-averaged estimator from one snapshot achieves equivalent subspace decomposition to multi-snapshot covariance estimation. The Trivial Group Embedding Theorem proves that the sample covariance is the accumulation of trivial-group estimates, with variance governed by a $(G,L)$ continuum as $1/(|G|\\cdot L)$. The processing gain $10\\log_{10}(M)$ dB equals the classical beamforming gain, establishing that this gain is a property of group order, not sensor count. The DFT, DCT, and KLT are unified as group-matched special cases. We conjecture a General Algebraic Averaging Theorem extending these results to arbitrary statistics, with variance governed by the effective group order $d_{\\mathrm{eff}}$. Monte Carlo experiments on the first four sample moments across five group types confirm the conjecture to four-digit precision. The framework exploits the $structure$ of information (representation-theoretic symmetry of the data object) rather than the content, complementing Shannon's theory. Five applications are demonstrated: single-snapshot MUSIC, massive MIMO, single-pulse waveform classification, graph signal processing, and analysis of transformer LLMs. Techniques for blind group matching are described.",
+  "link": "https://arxiv.org/abs/2604.03634",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.IT",
+    "eess.SP",
+    "math.IT"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884155+00:00"
+}

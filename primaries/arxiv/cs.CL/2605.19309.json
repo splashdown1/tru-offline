@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.19309",
+  "title": "How Do Document Parsers Break? Auditing Structural Vulnerability in Document Intelligence",
+  "abstract": "Document Layout Analysis (DLA) pipelines provide structured page representations for retrieval-augmented generation, long-document question answering, and other document intelligence systems, yet their robustness evaluation remains largely area-centric. We identify this Footprint Bias and propose ProSA, a lightweight output-level auditing framework that decouples controlled probing, policy-driven targeting, and structure-aware diagnosis. ProSA combines Block-level Structural Loss Rate (B-SLR), granularity-aware exposure descriptors, and pathway attribution to analyze where structural identity is lost, at what exposure granularity failures emerge, and how failures propagate. Across MinerU and PP-StructureV3 on 1,000 pages, affected area weakly tracks perturbation-induced OCR instability (R^2=0.384/0.110), whereas B-SLR aligns much more closely with it (R^2=0.727/0.916). Exposure descriptors further separate occlusion- and topology-dominant pathways, while matched-footprint structural probes cause much larger downstream QA/retrieval degradation compared to area-matched erasure. These results shift DLA robustness evaluation from footprint-based stress testing toward structure-aware vulnerability auditing.",
+  "link": "https://arxiv.org/abs/2605.19309",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498495+00:00"
+}

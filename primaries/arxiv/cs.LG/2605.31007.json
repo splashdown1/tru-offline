@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31007",
+  "title": "DEM: A Distilled Explanation Model for Interpretable Anomaly Detection in Physiological Sensor Networks",
+  "abstract": "Anomaly detection in physiological sensor data from Wireless Body Area Networks (WBANs) can be caused by sensor faults, network disruptions, or missing data, leading to false alarms. Hence, it demands both high predictive accuracy and clinically interpretable explanations. Existing approaches rely either on black-box models that achieve strong performance but offer no transparency, or on post-prediction explanation methods such as SHAP and LIME. In this paper, we propose the Distilled Explanation Model (DEM), a three-stage glass-box framework that distills the non-linear knowledge of a gradient boosting expert into an interpretable decision tree operating on residuals relative to a linear baseline, so that the explanation is not an approximation but the prediction itself. DEM introduces a novel distillation fidelity metric that quantifies how faithfully the explanation tree captures the expert model's non-linear contribution, providing a principled measure of explanation trustworthiness absent from prior interpretable models. Evaluated across four physiological datasets, including MIMIC-IV, WESAD, eICU, and an in-house SmartNet WBAN corpus, DEM achieves an AUC of 0.9964 on clinical contextual anomaly detection and 0.9047 on wearable stress detection while producing human-readable if-then rules at a controllable depth. Inference requires 0.17ms per 1000 samples, rendering DEM 1235x faster than SHAP-based post-hoc explanation and suitable for real-time physiological monitoring. Ablation studies confirm that the XGBoost distillation step provides measurable gains over naive residual fitting, and depth-sensitivity analysis demonstrates an explicit, user-controlled accuracy-interpretability trade-off unique to DEM among existing intrinsically interpretable models.",
+  "link": "https://arxiv.org/abs/2605.31007",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306898Z"
+}

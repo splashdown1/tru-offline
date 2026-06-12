@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2603.20253",
+  "title": "SimulCost: A Cost-Aware Benchmark and Toolkit for Automating Physics Simulations with LLMs",
+  "abstract": "Evaluating LLM agents for scientific tasks has focused on token costs while ignoring tool-use costs like simulation time and experimental resources. As a result, metrics like pass@k become impractical under realistic budget constraints. To address this gap, we introduce SimulCost, the first benchmark targeting cost-sensitive parameter tuning in physics simulations. SimulCost compares LLM tuning cost-sensitive parameters against traditional scanning approach in both accuracy and computational cost, spanning 2,947 single-round (initial guess) and 1,931 multi-round (adjustment by trial-and-error) tasks across 13 simulators from fluid dynamics, solid mechanics, and plasma physics. Each simulator's cost is analytically defined and platform-independent. Frontier LLMs achieve 46-65% success rates in single-round mode, dropping to 35-55% under high accuracy requirements, rendering their initial guesses unreliable especially for high accuracy tasks. Multi-round mode improves rates to 72-81%, but LLMs are 1.5-2.5x slower than traditional scanning, making them uneconomical choices. We also investigate parameter group correlations for knowledge transfer potential, and the impact of in-context examples and reasoning effort, providing practical implications for deployment and fine-tuning. We open-source SimulCost as a static benchmark and extensible toolkit to facilitate research on improving cost-aware agentic designs for physics simulations, and for expanding new simulation environments. Code and data are available at https://github.com/Rose-STL-Lab/SimulCost-Bench.",
+  "link": "https://arxiv.org/abs/2603.20253",
+  "category": "cs.LG",
+  "categories": [
+    "physics.comp-ph",
+    "cs.AI",
+    "cs.DC",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308420Z"
+}

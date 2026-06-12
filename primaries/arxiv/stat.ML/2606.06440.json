@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06440",
+  "title": "Causal Atlases from Entropic Inference: Bayesian Networks beyond Optimal DAGs",
+  "abstract": "Data-driven causal relationship identification is pertinent to advancing understanding of complex systems both within and beyond science. Bayesian networks offer a probabilistic method for modelling generic causal relationships via directed acyclic graphs (DAGs). However, typical techniques for constructing Bayesian networks rely on optimization, which can be ill-suited for learning causal relationships because the underlying data may admit multiple chains of causation. More data-faithful representations of causal relationships would provide frameworks for constructing multiple causal maps that are consistent with the variability that is inherent in underlying data. Here, we show that entropy-based inference generates atlases of plausible causal relationships that are consistent with underlying data. On simulated noisy data of 2- and 20-node linear structural equation models, we sample a maximum-entropy ensemble of graphs that allow us to quantify the inherent structural ambiguity in underlying causal relationships. Our method shows that \"optimized\" DAGs can contain causal artifacts are not consistent across equivalently accurate topologies.",
+  "link": "https://arxiv.org/abs/2606.06440",
+  "category": "stat.ML",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728910+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04335",
+  "title": "Policy Gradient for Continuous-Time Robust Markov Decision Processes",
+  "abstract": "The framework of robust Markov decision processes (RMDPs) allows the design of reinforcement learning agents that satisfy performance guarantees under worst-case transition dynamics. Traditional RMDPs consider discrete-time dynamics and recently, sample-efficient policy gradient algorithms have been considered in this context. This paper investigates policy gradient algorithms within a continuous-time RMDP framework. Policy gradients and adversarial gradients are derived using pathwise and adjoint-based formulas for stochastic and ordinary differential equations. We propose double-loop optimisers to obtain linear convergence in the oracle-based setting and an $\\tilde{\\mathcal{O}}(\\frac{1}{\\epsilon^2})$ sample complexity in the sample-based setting in an analysis which also derives novel tools for the framework of undiscounted total cost MDPs. Additionally, we propose mean-field optimisers as distributional optimisers with an $\\tilde{\\mathcal{O}}(\\frac{1}{K})$ oracle-based convergence rate and an $\\tilde{\\mathcal{O}}(\\frac{N^2}{\\epsilon})$ sample complexity under $N$-particle approximation. The effectiveness of continuous-time policy gradient algorithms is confirmed for both optimisers on continuous-time RMDPs with neural ordinary differential equation dynamics.",
+  "link": "https://arxiv.org/abs/2606.04335",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.SY",
+    "eess.SY"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884324+00:00"
+}

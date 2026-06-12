@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.06159",
+  "title": "ITP-STDP: An Intrinsic-Timing Power-of-Two Learning Engine for On-Chip SNN Training",
+  "abstract": "Spiking neural networks (SNNs) have the potential to emerge as the third generation of neural networks and have attracted increasing attention across a wide range of applications. However, the large number of synaptic connections in SNNs leads to intensive weight-update computation by on-chip learning algorithms during training, resulting in substantial hardware resource utilization and energy consumption. Among existing SNN learning algorithms, spike-timing-dependent plasticity (STDP) is one of the most extensively studied and widely adopted, serving as a fundamental learning component in SNNs. To address the hardware and energy overheads associated with SNN training, this paper presents intrinsic-timing power-of-two STDP (ITP-STDP) and its corresponding prototype learning engine hardware architecture. The proposed design is evaluated through a dedicated mean-field synaptic drift model for dynamical analysis and further validated across SNN networks of different scales and datasets. It is further implemented on both ASIC and FPGA platforms and compared with state-of-the-art approaches, including the original STDP and more complex STDP variants. The results demonstrate superior energy efficiency, higher operating speed, and substantially lower hardware resource utilization, as the proposed design eliminates most of the computational overhead of STDP through both algorithmic and hardware-level optimizations. On the FPGA platform, the proposed design improves energy efficiency by 4.5$\\times$ to 219.8$\\times$ over the compared designs. On the ASIC platform, the proposed design achieves a 4.8$\\times$ to 22.01$\\times$ speedup while consuming only 1.2% to 3.3% of the area required by prior works.",
+  "link": "https://arxiv.org/abs/2606.06159",
+  "category": "cs.NE",
+  "categories": [
+    "cs.AR",
+    "cs.AI",
+    "cs.NE"
+  ],
+  "pulled_at": "2026-06-05T08:23:14.697876+00:00"
+}

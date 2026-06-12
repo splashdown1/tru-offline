@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2601.22943",
+  "title": "Scalable Topology-Preserving Graph Coarsening: Concepts and Algorithms",
+  "abstract": "Graph coarsening reduces the size of a graph while preserving certain properties. Most existing methods preserve either spectral or spatial characteristics. Recent research shows that topology-preserving coarsening methods maintain GNN performance on coarsened graphs but suffer from exponential time complexity. To address these problems, we propose Scalable Topology-Preserving Graph Coarsening (STPGC) by introducing the concepts of graph strong collapse and graph edge collapse extended from algebraic topology. STPGC comprises three new algorithms, GStrongCollapse, GEdgeCollapse, and NeighborhoodConing based on these two concepts, which eliminate dominated nodes and edges while rigorously preserving topological features. We further prove that STPGC preserves the GNN receptive field and develop approximate algorithms to accelerate GNN training. Experiments on node classification with GNNs demonstrate the efficiency and effectiveness of STPGC.",
+  "link": "https://arxiv.org/abs/2601.22943",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307827Z"
+}

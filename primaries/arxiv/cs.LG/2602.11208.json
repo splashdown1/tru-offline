@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.11208",
+  "title": "Adaptive Physics Transformer with Fused Global-Local Attention for Subsurface Energy Systems",
+  "abstract": "The Earth's subsurface is a cornerstone of modern society, providing essential energy resources like hydrocarbons, geothermal, and minerals while serving as the primary reservoir for $CO_2$ sequestration. However, full physics numerical simulations of these systems are notoriously computationally expensive due to geological heterogeneity, high resolution requirements, and the tight coupling of physical processes with distinct propagation time scales. Here we propose the $\\textbf{Adaptive Physics Transformer}$ (APT), a geometry-, mesh-, and physics-agnostic neural operator that explicitly addresses these challenges. APT fuses a graph-based encoder to extract high-resolution local heterogeneous features with a global attention mechanism to resolve long-range physical impacts. Our results demonstrate that APT outperforms state-of-the-art architectures in subsurface tasks across both regular and irregular grids with robust super-resolution capabilities. Notably, APT is the first architecture that learns directly from HR-adaptive mesh refinement simulations. We also demonstrate APT's favorable scaling behavior and cross-dataset learning capability, positioning it as a robust and scalable backbone for large-scale subsurface foundation model development.",
+  "link": "https://arxiv.org/abs/2602.11208",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307917Z"
+}

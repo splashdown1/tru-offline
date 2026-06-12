@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31351",
+  "title": "A Visually Impaired Assistance Benchmark for VLM-as-a-Judge Evaluation",
+  "abstract": "AI-based Visually Impaired Assistance (VIA) remains challenging, largely due to the high cost of human evaluation. The VLM-as-a-Judge paradigm may offer a promising alternative, although it has mostly been studied in general domains. We therefore ask whether such judges can be trusted for VIA tasks. To investigate this question, we introduce VIABLE (Visually Impaired Assistance Benchmark for VLM-as-a-Judge Evaluation), the first benchmark for VLM-as-a-Judge evaluation in VIA. VIABLE contains over 300K judgment samples across three scenarios and introduces an Effectiveness--Impartiality--Stability framework with a 12-mode failure taxonomy. Based on VIABLE, our systematic study of seven judges across different model scales shows that existing models are largely unreliable across all evaluation axes. The strongest judge, GPT-5.4, achieves only 52.6% single-failure diagnostic accuracy, yet exhibits the highest self-preference rate at 94.2%; while open-source judges are strongly biased and adversarially fragile. To address these issues, we propose VIA-Judge-Agent, a model-agnostic inference-time harness that augments judges with visual evidence extraction and a taxonomy-guided workflow. It enables positive improvements in diagnostic accuracy and downstream VIA responses more preferred by BLV users. Data and code are available at: https://github.com/YiyiyiZhao/VIABLE",
+  "link": "https://arxiv.org/abs/2605.31351",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.CV"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405859Z"
+}

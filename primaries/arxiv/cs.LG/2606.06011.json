@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.06011",
+  "title": "Merging model-based control with multi-agent reinforcement learning for multi-agent cooperative teaming strategies",
+  "abstract": "In this work, we propose a framework that combines multi-agent reinforcement learning (MARL) with model-based control to achieve safe, dynamically feasible actions in cooperative multi-agent tasks. Multi-agent reinforcement learning provides the advantage of learning cooperative policies for multi-agent teams from discrete non-differentiable rewards in a long planning horizon. Model-predictive control is robust and offers safe, dynamically feasible actions in a fast replanning framework for short horizons. We propose an algorithm that extends actor-critic model predictive control for MARL which we refer to as multi-agent actor-critic model predictive control (MA-AC-MPC). We demonstrate the capabilities of this algorithm by applying it to a multi-agent pursuit-evasion scenario. Specifically, we compare the evader team's strategy using the MA-AC-MPC model and a multi-layer perceptron model (MA-AC-MLP). The pursuer team uses augmented proportional navigation as it is accepted as an advanced adversarial control law. We also provide an example with a heterogeneous environment where a drone and omni-wheeled rover cooperate to achieve repeatable and successful landing with 100% success rate in hardware for MA-AC-MPC compared to 60% for MA-AC-MLP. We demonstrate the robustness of the proposed MA-AC-MPC algorithm in hardware for both environments.",
+  "link": "https://arxiv.org/abs/2606.06011",
+  "category": "cs.LG",
+  "categories": [
+    "cs.RO",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883474+00:00"
+}

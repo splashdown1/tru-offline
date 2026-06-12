@@ -1,0 +1,16 @@
+{
+  "arxiv_id": "2606.05326",
+  "title": "Gradient descent at the Edge of Stability: free energy model and kinetic description of the two-layer network",
+  "abstract": "We study the dynamics of gradient descent in the Edge of Stability regime, where the learning rate is large enough to induce persistent oscillations in the loss and the sharpness. We propose a continuous-time effective model that tracks the evolution of the average trajectory coupled with the time-averaged covariance of its fast oscillations. Our analysis reveals that the natural quantity to monitor in such unstable regimes is an effective free energy, which combines the original risk functional with a curvature-related \"entropic\" term. Our model allows us to track the envelope of the oscillations even in situations where its dynamics evolve on similar timescales as the averaged weights. Otherwise stated, we can track the spikes that occur during the training of some neural network architectures. For wide two-layer neural networks optimized under stable non-vanishing oscillations, we derive a mean-field limit that results in a novel kinetic equation describing the joint distribution of weights and their fluctuations. We show that this equation can be interpreted as a Wasserstein-2 gradient flow of a macroscopic free energy. Finally, we provide numerical evidence on matrix factorization and deep learning tasks (CIFAR-10) to demonstrate the model's accuracy in capturing the envelope of the oscillations and the predictive power of the effective free energy.",
+  "link": "https://arxiv.org/abs/2606.05326",
+  "category": "cs.LG",
+  "categories": [
+    "math.OC",
+    "cs.AI",
+    "cs.LG",
+    "math-ph",
+    "math.AP",
+    "math.MP"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882918+00:00"
+}

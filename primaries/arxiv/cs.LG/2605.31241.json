@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31241",
+  "title": "Bifurcated Remaining Useful Life Prediction: A Hybrid Approach for Realistic Uncertainty Characterization",
+  "abstract": "This study presents a novel hybrid prognostic framework for uncertainty-aware Remaining Useful Life (RUL) estimation in turbofan engines using the NASA C-MAPSS dataset. The framework employs a state-aware strategy that bifurcates the engines operational lifespan into \"healthy\" and \"degraded\" regimes. An LSTM-based autoencoder, trained strictly on nominal data (RUL > 150 cycles), monitors reconstruction error to act as a robust state classifier. For the healthy regime, a Conditional Weibull Survival Analysis is used for Mean Residual Life estimation. For the degraded regime, a Probabilistic Neural Network with Monte Carlo Dropout captures both aleatoric and epistemic uncertainties. Rather than using rigid binary labels, a calibrated sigmoid function converts the autoencoders output into continuous state probabilities, dynamically weighting the final ensemble prediction. The primary strength of this framework is its generation of physically consistent uncertainty bands, yielding high-confidence predictions near end-of-life while accurately reflecting the inherent variance of early operation, providing a robust tool for risk-informed maintenance.",
+  "link": "https://arxiv.org/abs/2605.31241",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307027Z"
+}

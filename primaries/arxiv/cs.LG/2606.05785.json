@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05785",
+  "title": "Next-Generation Parallel Decoder for LPDR: Architectural Optimization and Class-Balanced GAN-Augmentation",
+  "abstract": "Real-Time License Plate Detection and Recognition (LPDR) forms the backbone of modern smart cities. Although the YOLOV5-PDLPR model substantially improved system efficiency through a parallel decoder approach, its performance is still affected by spatial character mismatches and data imbalance within the training set. This paper addresses these limitations by introducing Cross-Spatial Hybrid Attention (CSHA) and Class-Balanced Synthetic Augmentation (CBSA). An extensive study involving 75,000 synthetic samples is conducted and evaluated on four benchmarks: CCPD, CLPD, PKU, and an application-specific dataset. Experimental results demonstrate a substantial improvement in the recognition rate of minority provincial license plates from 78.2% to 91.5% while maintaining real-time processing performance of 152 FPS. The results indicate that spatially-aware parallel decoding combined with class-balanced augmentation provides an effective solution for high-speed license plate recognition systems.",
+  "link": "https://arxiv.org/abs/2606.05785",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883287+00:00"
+}

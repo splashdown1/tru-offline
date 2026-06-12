@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05863",
+  "title": "Deciphering Two Training Clocks in Grokking via Deep Linear Network Theory with Conditional ReLU Reduction",
+  "abstract": "Grokking suggests that fitting the training data and learning a simple underlying rule may occur on different time scales. We formalize this phenomenon by separating the fast decay of the classification loss from the slower simplification of the learned representation, and we call the resulting pair of stopping times two training clocks. For deep linear networks, we show that a post-margin gap-growth or one-step tail-contraction condition reduces the cross-entropy loss to level epsilon on a logarithmic time scale. In contrast, when layerwise weight decay is present, the induced regularization on the end-to-end map can be expressed as a Schatten-type penalty; under a sharp late-time Kurdyka-Lojasiewicz tail, this structural energy closes on a polynomial time scale. The two clocks, therefore, separate fitting from representation simplification. We then explain how the same mechanism can appear in ReLU MLPs. In regions where the activation patterns on the training set remain fixed, the network reduces to a linear model in the active coordinates. In a two-layer ReLU embedding model, chain-rule estimates further show that the classifier head can receive larger effective gradients than the embedding block under controlled downstream norms. This supports a two-stage mechanism in which the classifier fits first, while the representation continues to simplify later. We use modular addition as the main experimental setting. The deep linear theory provides the rigorous core of the analysis. But the ReLU results are formulated as conditional reductions that account for empirical behavior without claiming a global proof for nonlinear training dynamics.",
+  "link": "https://arxiv.org/abs/2606.05863",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882385+00:00"
+}

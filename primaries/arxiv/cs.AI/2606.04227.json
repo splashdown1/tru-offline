@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04227",
+  "title": "Incremental Sheaf Cohomology on Cellular Complexes: O(1)-in-n Lazy Edit Processing under Bounded Local Geometry",
+  "abstract": "We present an algorithmic framework for incremental maintenance of first sheaf cohomology $H^1(X; \\mathcal{F})$ on dynamically evolving 1-dimensional cellular complexes equipped with finite-dimensional cellular sheaves. The classical computation of $H^1$ via factorization of the coboundary matrix requires $O(n^3)$ time; when the complex evolves with a stream of $m$ edits, full recomputation after each edit costs $O(mn^3)$.\n  Under a bounded local geometry assumption -- bounded cell size $v_{\\max}$, bounded stalk dimension $d$, and bounded nerve degree $D$ -- each edit (vertex insertion, edge insertion, restriction map update) affects only a bounded set of local coboundary blocks. The algorithm therefore processes lazy streaming edits in $O(1)$ time with respect to the total complex size $n$ (with cost polynomial in the local geometry parameters $v_{\\max}$, $d$, and $D$, which are treated as constants independent of $n$), deferring local eigensolves and Mayer-Vietoris global assembly to synchronization points (Flush). At synchronization, the maintained state agrees with the corresponding batch assembly of the partitioned sheaf model; we observe zero measured drift in all batch-verified runs (through $V = 10^6$). We also give an amortized $O(|E|)$ streaming construction for the cellular decomposition and discuss an adversarial algebraic-RAM barrier arguing that unpartitioned non-trivial sheaves ($d \\geq 2$, non-identity restriction maps) do not admit the same locality. Experiments on Barabasi-Albert graphs with up to $5 \\times 10^6$ vertices and $1.7 \\times 10^7$ streaming edits show 35 $\\mu$s median lazy per-edit update latency (excluding flush); query time (global assembly at synchronization) is $O(n)$ per flush in the implemented full-traversal path. Exact synchronization costs are reported separately.",
+  "link": "https://arxiv.org/abs/2606.04227",
+  "category": "cs.AI",
+  "categories": [
+    "cs.DS",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098039+00:00"
+}

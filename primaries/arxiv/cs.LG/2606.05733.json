@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.05733",
+  "title": "Zero-Copy Semantic Contagion: An In-Memory Streaming Architecture for Evolving Attention Graphs",
+  "abstract": "Per-ticker forecasting models dominate financial time-series work yet remain blind to cross-company propagation: a foundry disruption in Taiwan does not register in a single-asset model until Apple's own price has already moved. To address this limitation, we introduce a heterogeneous Rust-Python streaming architecture that maps cross-company attention as a continuous-time graph driven directly from text. We show that on the ingestion side, a zero-copy Rust edge parses news records in $\\sim$100 ns and scans the target equity universe in $\\sim$1.2 $\\mu$s. On the inference end, a multivariate Neural Hawkes Process featuring per-node continuous-time LSTM states and a bilinear latent projection propagates directed excitation, while an adaptive pruning rule bounds the computational cost of dynamic neighborhood updates. Combining these stages, we demonstrate an end-to-end processing latency of $\\sim$13 ms per incoming news record on a single commodity CPU. Evaluated on a one-month temporal holdout of the FNSPID corpus (638 articles across 47 tickers), the system delivers a $1.70\\times$ precision lift over random at the 90th-percentile next-day return threshold, and $3.36\\times$ over a same-sector baseline. Crucially, removing the graph topology collapses precision to zero, confirming that the dynamic attention network is the sole driver of cross-company signal in this architecture.",
+  "link": "https://arxiv.org/abs/2606.05733",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CE",
+    "q-fin.CP",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882257+00:00"
+}

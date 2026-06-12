@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05497",
+  "title": "LEVANTE-bench: Multi-Scale Comparison of VLMs to Children Using Cognitive Tasks (or, \"Is Your VLM Smarter Than a 5th Grader?\")",
+  "abstract": "Given the inherently multimodal nature of human experience, vision-language models (VLMs) hold substantial promise for modeling human cognition as it grows and develops with experience. Realizing their potential requires tools for comparing VLMs with human cognitive development across tasks, ages, and populations. We present LEVANTE-bench, a benchmark based on tasks and data from the Learning Variability Network (LEVANTE), which distributes open-source tasks and data measuring children's cognition across languages and cultures. In LEVANTE-bench, we systematically assess VLMs on six tasks, comparing their alignment with children aged 5-12 ($N$ = 1547) across three countries. We compare models at multiple scales, assessing their overall accuracy, their task- and item-level alignment with children, and how well they match children's trial-level error distributions. Alignment was heterogeneous across scales: at the level of tasks and items, more capable models aligned better with humans. However, match to human error distributions varied widely across tasks, and for several tasks, smaller models matched younger children's errors better. In addition, even the best-performing VLMs struggled on matrix reasoning and mental rotation tasks. Thus, current VLM architectures align only partially with the cognitive abilities of children.",
+  "link": "https://arxiv.org/abs/2606.05497",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882071+00:00"
+}

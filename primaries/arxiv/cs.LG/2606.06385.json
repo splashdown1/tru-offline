@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.06385",
+  "title": "Learned Response-Field Inertia Operator for HEC-RAS 2D Water-Surface Elevation Prediction",
+  "abstract": "This article presents a cross-dataset evaluation of learned native-cell surrogate models for solver-consistent water-surface elevation (WSE) prediction in HEC-RAS 2D. To avoid raster remapping error and information-access confounding, surrogates are evaluated directly on the original nonuniform computational cells under an explicit policy that separates static project inputs, current hydraulic state, project-input forcing, calibration-derived quantities, and future solver-output targets. We introduce the Learned Response-Field Inertia Operator (LRFIO), a no-forcing, increment-based learned surrogate that calibrates an inertial response operator from solved HEC-RAS trajectories and deploys the retained operator through closed-form native-cell rollout. LRFIO evaluates a base-case-first response hierarchy consisting of persistence, global calibrated inertia, and segmented response-field inertia. Segmentation, residual correction, and neuralized inertia are treated as learnable modeling choices, with added complexity retained only when validation evidence justifies its cost. Evaluated across four diverse HEC-RAS 2D benchmarks, LRFIO retains different response structures for different domains, demonstrating adaptive learned complexity. The selector audit shows controlled complexity with a maximum validation regret of 4.30%. During deployment, retained rollout times range from 0.003 s to 0.242 s, and the Beaver Bayou measured-solve comparison gives an estimated 2.75 x 10^4 horizon-normalized speedup over HEC-RAS. These results indicate that the current native-cell increment is a strong solver-conditioned predictive scaffold and that added response-field, neural, or spatial complexity should be retained only when empirically justified.",
+  "link": "https://arxiv.org/abs/2606.06385",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882718+00:00"
+}

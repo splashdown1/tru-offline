@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05776",
+  "title": "An Improved CNN-LSTM Based Intrusion Detection System for IoT Networks",
+  "abstract": "With the rapid proliferation of IoT devices, security concerns have dramatically escalated and intrusion detection systems have become critical for protecting networked environments. This paper presents an improved CNN-LSTM based intrusion detection model that combines multi-class classification, dataset integration, and temporal feature learning to enhance detection performance in IoT networks. Using network traffic data, the proposed approach is evaluated on intrusion detection tasks and achieves an accuracy of approximately 97%. Experimental results demonstrate that the model effectively detects multiple attack categories while maintaining stable training and validation performance. The integration of convolutional and recurrent neural network components enables the framework to capture both spatial and temporal characteristics of network traffic, improving overall intrusion detection capability in IoT environments.",
+  "link": "https://arxiv.org/abs/2606.05776",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883279+00:00"
+}

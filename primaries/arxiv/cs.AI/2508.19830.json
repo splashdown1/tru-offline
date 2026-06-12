@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2508.19830",
+  "title": "Target-Agnostic Calibration under Distribution Shift with Frequency-Aware Gradient Rectification",
+  "abstract": "Real-world model deployments inevitably encounter distribution shifts, rendering the confidence estimates of deep neural networks highly unreliable, posing severe risks in safety-critical applications. Existing methods improve calibration via training-time regularization or post-hoc adjustment, but often rely on access to (or simulation of) target domains, limiting practicality. We propose Frequency-aware Gradient Rectification (FGR), a target-agnostic training framework for robust calibration. From a frequency perspective, FGR applies low-pass filtering to a subset of training images to diminish spurious high-frequency cues and encourage the learning of domain-invariant features. However, the associated information loss can degrade In-Distribution (ID) calibration. To resolve this trade-off, FGR treats ID calibration as a hard constraint and rectifies conflicting parameter updates via geometric projection. This ensures a first-order non-increase in the ID calibration objective without introducing an additional loss-balancing coefficient. Extensive experiments on synthetic, real-world, and semantic shift datasets demonstrate that FGR significantly improves calibration under diverse shifts while preserving ID performance, and it remains compatible with post-hoc calibration methods. Our code is available at https://github.com/YilinZhang107/FGR-Calib.",
+  "link": "https://arxiv.org/abs/2508.19830",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358690Z"
+}

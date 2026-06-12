@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06174",
+  "title": "Learning to model pediatric asthma exacerbation from multiple risk factors: a case study in coastal Virginia",
+  "abstract": "Childhood asthma is a common illness exacerbated by air pollution as well as meteorological and neighborhood-level socioeconomic factors. Modeling asthma exacerbation (AE) in large spatiotemporal datasets requires disentangling impacts from multiple contributors. In this case study, we compared three techniques that balance predictive power with interpretability to predict AE in Hampton Roads, a coastal Virginia region comprising 7 cities and over 1.5 million people. After collating ambient air pollution measurements, weather data, and measures of neighborhood opportunity, we modeled zip code-level acute AE visits to a regional children's hospital and affiliated providers from 2018-2023. Generalized linear models (GLM) provided a baseline while neural networks (NN) served as a maximally predictive target. To bridge between statistical models and deep learning, we developed a framework based on sparse dictionary learning to identify and interpret parsimonious nonlinear interacting equations. After comparing each model's predictive performance, we estimated relative risks for AE due to input exposure variables and found consensus across frameworks. Our work links statistical and interpretable machine learning models to highlight possible synergistic interactions influencing AE, and may enable future studies to guide public health interventions in coastal Virginia.",
+  "link": "https://arxiv.org/abs/2606.06174",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.AP"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882580+00:00"
+}

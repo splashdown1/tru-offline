@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05545",
+  "title": "Multilingual Detection of Alzheimer's Disease from Speech: A Cross-Linguistic Transfer Learning Approach",
+  "abstract": "The development of multilingual Alzheimer's Disease Dementia (AD) detection models presents significant challenges due to the resource-intensive and time-consuming nature of language-specific model training. We propose a novel solution using cross-language training to detect AD in languages beyond those used for model training. This study investigates multilingual deep learning models for detecting AD across different languages and cognitive impairment levels. Using datasets in English, Chinese, Arabic, and Hindi, we developed transformer-based models for binary AD classification. Our approach achieved F1 scores of 82\\% across all languages, demonstrating strong cross-linguistic generalization. The rapid inference time (0.5 seconds) supports potential real-time screening applications, while consistent performance across languages indicates feasibility for global deployment.",
+  "link": "https://arxiv.org/abs/2606.05545",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497742+00:00"
+}

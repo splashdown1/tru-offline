@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05378",
+  "title": "Pattern Selectivity is Not Task-Causal Structure: A Cross-Architecture Mechanistic Study of Composed-Task Circuits in 1B-Class Language Models",
+  "abstract": "We test whether a single screen-and-ablate recipe -- identify attention-head circuits by task-pattern selectivity, then verify by causal ablation against a matched-random null -- produces consistent mechanistic claims across model families. The recipe ports across pipelines; the specific circuit it identifies does not. Across four composed tasks (indirect-object identification, greater-than, successor sequences, variable binding) and three 1B-class language models from distinct training pipelines (Pythia 1B / Pile / dense; OLMo 1B / DCLM / dense; OLMoE 1B-7B / DCLM / mixture-of-experts), we run a unified protocol with the matched-random null sampled across ten seeds per cell. The resulting 12 (task, model) cells contain no two that share the same primary causal screen at comparable effect size: the same task, with the same behavioral capability, is implemented through different attention-pattern types across models.\n  We introduce a five-category screen-outcome taxonomy -- primary cause, secondary cause, correlate, interferer, null -- with quantitative thresholds, and show that all five outcomes appear in the panel. We propose a falsifiable hypothesis: the MoE model in our panel builds composed-task circuits on top of a foundational previous-token positional substrate (the prev-token-circuit ablation is the strongest causal screen on 3 of 4 tasks for OLMoE 1B-7B), with the IOI exception consistent with IOI being a final-position name-copying task whose structure directly probes a different pattern. The hypothesis comes with explicit predictions for other MoE language models.\n  We frame the methodology honestly: the spectral participation-ratio signal from the companion methodology paper is a general indicator of specialized computation; what makes a finding task-specific is the task-pattern screen plus a per-model causal verification.",
+  "link": "https://arxiv.org/abs/2606.05378",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882008+00:00"
+}

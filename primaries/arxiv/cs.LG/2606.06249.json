@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06249",
+  "title": "GRAMformer: Any-Order Modality Interactions via Volumetric Multimodal Cross-Attention",
+  "abstract": "Transformer-based multimodal models rely on attention mechanisms to integrate information across heterogeneous modalities. Despite their success, existing multimodal attention formulations compute their scores through collections of pairwise dot-product interactions or by concatenating all the modalities into the keys, even when multiple modalities should be jointly involved. As a consequence, current approaches either incur quadratic complexity in the number of modalities or fail to explicitly model interactions that depend on the joint configuration of multiple representations. In this work, we introduce the Volumetric Multimodal cross-Attention (VMA), a novel cross-attention mechanism in which attention scores are defined as a function of the joint geometry of a query and multiple modality-specific keys. VMA computes the volume spanned by query and key vectors across multiple modalities, capturing joint multimodal dependencies beyond pairwise similarity, enabling native modeling of any-order modality interactions. We integrate VMA into our novel multimodal transformer architecture, named GRAMformer, explicitly designed to integrate any number of modalities. We evaluate the proposed model on multimodal learning tasks, demonstrating improved effectiveness and efficiency.",
+  "link": "https://arxiv.org/abs/2606.06249",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883577+00:00"
+}

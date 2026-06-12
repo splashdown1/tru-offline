@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.23415",
+  "title": "Reflex: Reinforcement Learning with Reflection Symmetry Exploitation in State-Based Continuous Control",
+  "abstract": "Reinforcement learning has long struggled with poor sample efficiency. One promising approach to mitigate this problem is leveraging group-invariant Markov Decision Processes ($G$-invariant MDPs). Existing works in this direction have primarily focused on image-based RL and rotational symmetry such as $\\mathrm{SO(2)}$, leaving state-based RL and reflection symmetry largely underexplored. In this work, we focus on state-based continuous control tasks and exploit reflection symmetry by introducing Reflex, a paradigm that seamlessly integrates with both on-policy and off-policy RL algorithms. We formalize two types of reflection-axial reflection and bilateral reflection, and characterize their corresponding transformations. Building on a theoretical analysis of symmetry-preserving optimal value functions and policies, Reflex integrates reflection symmetry into policy learning through principled symmetry regularization mechanisms. We integrate Reflex with PPO and SAC, and evaluate it on a suite of OpenAI Gym and DeepMind Control benchmarks, demonstrating superior performance over standard baselines while improving sample efficiency. Our code is available at https://github.com/TonyStark042/Reflex.",
+  "link": "https://arxiv.org/abs/2605.23415",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884271+00:00"
+}

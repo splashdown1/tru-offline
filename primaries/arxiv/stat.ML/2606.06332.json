@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2606.06332",
+  "title": "Bentkus-type asymptotic e-values",
+  "abstract": "Asymptotic e-values are emerging as a powerful alternative to asymptotic p-values, particularly in post-hoc inference and multiple testing, where significance levels may be data-dependent. Existing asymptotic e-values, however, suffer from the ``missing factor,'' a scaling inefficiency resulting in overly conservative inference. Drawing on the framework of near-optimal concentration inequalities developed by Bentkus in the 2000s, we introduce Bentkus-type asymptotic e-values and prove that they successfully eliminate the missing factor. We also demonstrate both theoretically and empirically that Bentkus-type e-values consistently deliver sharper inference than existing alternatives, leading to tighter post-hoc confidence intervals and higher rejection rates in multiple testing procedures.",
+  "link": "https://arxiv.org/abs/2606.06332",
+  "category": "stat.ML",
+  "categories": [
+    "math.ST",
+    "stat.ME",
+    "stat.ML",
+    "stat.TH"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728742+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31172",
+  "title": "Convergence of Two-Timescale Markovian Stochastic Approximations with Applications in Reinforcement Learning",
+  "abstract": "This work studies the convergence of two-timescale stochastic approximations (SA), a class of iterative algorithms that update two sets of parameters in fast and slow timescales respectively. Notable examples of two-timescale SA in reinforcement learning (RL) include temporal difference learning with gradient correction (TDC) and actor-critic methods. Previously, the stability (i.e., boundedness) and convergence of two-timescale SA were only established under i.i.d. noise. This work instead establishes the stability and convergence of two-timescale SA under Markovian noise, a setup that is more realistic in RL. Notably, we do not need to use any projection operator and the noise does not need to live in a compact space. Our key technical novelty is to control the fast timescale parameter with the running max of the slow timescale parameter, instead of with the current slow timescale parameter, as most prior works do. As a key application, we establish the first almost sure convergence of TDC with eligibility traces under off-policy learning with linear function approximation.",
+  "link": "https://arxiv.org/abs/2605.31172",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306989Z"
+}

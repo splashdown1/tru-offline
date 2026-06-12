@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05435",
+  "title": "DP-MacAdam: Differentially Private Mechanism with Adaptive Clipping and Adaptive Momentum",
+  "abstract": "Differentially private stochastic gradient descent (DP-SGD) has become the standard framework for privacy-preserving machine learning, yet its reliance on a fixed gradient clipping threshold to limit sensitivity remains a significant practical limitation. Adaptive clipping algorithms such as AdaClip shift and scale the gradient prior to clipping and adding noise so that the clipped gradient yields a more informative descent direction. The shift and scaling parameters are selected adaptively based on the empirical mean and variance. However, in existing adaptive clipping algorithms, these empirical estimates have not been also used for momentum to accelerate training itself. On the other hand, DP-Adam is an algorithm that exploits Adam-like momentum updates based on the gradient mean and variance to accelerate training, but does not exploit these estimates for adaptive clipping. In this work, we propose Differentially Private Mechanism with Adaptive Clipping and Adaptive Momentum (DP-MacAdam), a novel algorithm that combines these two approaches so as to use the same mean and variance estimates for both clipping and momentum. We perform an analysis showing that DP-MacAdam estimates the gradient variances in a bias-free manner. In addition, we empirically evaluate the privacy and accuracy of DP-MacAdam, demonstrating that it achieves improved model utility compared to DP-SGD, AdaClip, and DP-Adam baselines, without requiring manual tuning of the clipping threshold.",
+  "link": "https://arxiv.org/abs/2606.05435",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CR"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882041+00:00"
+}

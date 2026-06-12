@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31069",
+  "title": "Towards Effective Long-Video Event Prediction via Multi-Level Event Semantics Mining",
+  "abstract": "Accurately predicting future events is fundamental to content understanding and decision-making across various domains. While prior research has primarily focused on text or short-video scenarios, long-video event prediction, characterized by vast multimodal context and more complex narratives, remains underexplored. Meanwhile, although recent Long-Video Language Models (LVLMs), built on Large Language Models (LLMs) and Vision-Language Models (VLMs), have shown promise in long-video question answering and summarization, they struggle to generalize to event prediction, as they can neither precisely extract event-related details nor perform fine-grained analysis of event development. To address this gap, we propose VISTA, a multi-level event semantics mining framework for long-video event prediction. Initially, VISTA applies a character-centric visual prompt to precisely extract event-related visual details, enhancing detail-level semantics; subsequently, it employs a knowledge-enhanced iterative retrieval strategy, guiding the LLM to progressively construct logically coherent event chains, thereby improving event-level narratives; ultimately, VISTA adopts a human-like propose-then-retrieve strategy to generate diverse future-oriented proposals and integrate multi-level clues, producing robust and accurate predictions. Extensive experiments on real-world datasets validate the effectiveness of VISTA for long-video event prediction.",
+  "link": "https://arxiv.org/abs/2605.31069",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CV",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406041Z"
+}

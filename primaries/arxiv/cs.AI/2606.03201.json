@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.03201",
+  "title": "Reinforcement Learning from Cross-domain Videos with Video Prediction Model",
+  "abstract": "Reinforcement learning from expert videos across visually distinct domains is challenging due to the absence of reward signals and the presence of domain gaps. We introduce XIPER (Cross-domain Video Prediction Reward), a reward model for learning from expert videos collected in a visually different domain, where the agent's appearance differs due to factors such as color, morphology, or the sim-to-real gap. More specifically, XIPER trains a cross-domain video prediction model that maps agent observations into the expert domain and uses the prediction likelihood as a reward signal. Experiments on the DMC Color Suite (8 tasks) and DMC Body Suite (3 tasks) show that XIPER consistently outperforms baselines despite domain gaps such as differences in agent color and morphology. We further analyze XIPER on a sim-to-real transfer dataset, demonstrating that it produces meaningful reward signals for real-robot observations given only simulated expert videos. Code, pretrained models, datasets and video demonstrations can be found on our project webpage: https://sites.google.com/view/xiper",
+  "link": "https://arxiv.org/abs/2606.03201",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099436+00:00"
+}

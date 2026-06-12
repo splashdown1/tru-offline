@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2603.21563",
+  "title": "Counterfactual Credit Policy Optimization for Multi-Agent Collaboration",
+  "abstract": "Collaborative multi-agent large language models (LLMs) can solve complex reasoning tasks by decomposing roles, but reinforcement learning for such systems is limited by credit assignment: shared terminal rewards obscure individual contributions and can encourage free-riding. We introduce Collaborative Credit Policy Optimization (CCPO), an optimizer-agnostic credit assignment layer that converts team-level outcomes into agent-specific learning signals. CCPO provides two complementary allocators. Counterfactual credit estimates an agent's marginal contribution by comparing the realized team outcome with a counterfactual outcome where that agent is removed. Verifier-anchored LLM self-evaluation is an exploratory allocator that uses constrained self- and peer-evaluations to redistribute credit while keeping the external verifier outcome dominant. The resulting role-specific rewards can be consumed by GRPO-style updates or other policy-gradient optimizers such as GSPO and REINFORCE++. We instantiate CCPO in a sequential Think--Solve setting and evaluate it on mathematical reasoning benchmarks. Results show that explicit credit assignment often improves dual-agent reasoning, especially on MATH500 and several out-of-distribution settings, while gains vary across models and datasets.",
+  "link": "https://arxiv.org/abs/2603.21563",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358565Z"
+}

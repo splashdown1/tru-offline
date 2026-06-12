@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2310.04649",
+  "title": "Uncovering Model Processing Strategies with Non-Negative Per-Example Fisher Factorization",
+  "abstract": "We introduce NPEFF (Non-Negative Per-Example Fisher Factorization), an interpretability method that aims to uncover strategies used by a model to generate its predictions. NPEFF decomposes per-example Fisher matrices using a novel decomposition algorithm that learns a set of components represented by learned rank-1 positive semi-definite matrices. Through a combination of human evaluation and automated analysis, we demonstrate that these NPEFF components correspond to model processing strategies for a variety of language models and text processing tasks. We further show how to construct parameter perturbations from NPEFF components to selectively disrupt a given component's role in the model's processing. Along with conducting extensive ablation studies, we include experiments to show how NPEFF can be used to analyze and mitigate collateral effects of unlearning and use NPEFF to study in-context learning. Furthermore, we demonstrate the advantages of NPEFF over baselines such as gradient clustering and using sparse autoencoders for dictionary learning over model activations. We release the code used in this work.",
+  "link": "https://arxiv.org/abs/2310.04649",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883753+00:00"
+}

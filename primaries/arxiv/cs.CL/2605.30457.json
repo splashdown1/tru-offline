@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30457",
+  "title": "Extracting accent features in spoken Brazilian Portuguese without sociolinguistic labels",
+  "abstract": "Regional accent classification in Brazilian Portuguese (pt-BR) suffers from the need for reliable labeling. While large self-supervised learning (SSL) speech models are powerful, their training pipelines dilute sociophonetic information, since accent labels are generally not reliable or are not used in training objectives. This work introduces a novel workflow for feature extraction using only acoustic labels. By isolating explicit regional accent landmarks and using a phoneme-based forced aligner (ZIPA), our targeted feature set captures dialectal variance more effectively than utterance embeddings, demonstrating that localized features can outperform general-purpose architectures on accent-related tasks using minimal and objective data labels.",
+  "link": "https://arxiv.org/abs/2605.30457",
+  "category": "cs.CL",
+  "categories": [
+    "eess.AS",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405959Z"
+}

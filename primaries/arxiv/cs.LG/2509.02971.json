@@ -1,0 +1,15 @@
+{
+  "arxiv_id": "2509.02971",
+  "title": "Scale-Adaptive Generative Flows for Multiscale Scientific Data",
+  "abstract": "Flow-based generative models can face numerical challenges on scientific data with multiscale Fourier spectra, often producing large errors at fine scales. We approach this problem within the flow matching and stochastic interpolants framework, through the principled design of noise distributions and interpolation schedules. Working in function space ensures that the generative model remains well defined as the resolution is refined; the Lipschitz regularity of the drift is important to both this function-space well-posedness and the integration cost at fixed resolution. The central observation is that the noise should be at least as rough as the target distribution -- measured by Fourier-spectrum decay -- in order to keep the Lipschitz constant finite. For Gaussian and near-Gaussian targets whose fine-scale structure is known, matched-spectrum noise improves numerical efficiency over standard white-noise choices. For more complex non-Gaussian targets, matched-spectrum noise may not be sufficient, and we propose scale-adaptive interpolation schedules to mitigate the terminal-time stiffness that arises when the noise is rougher than the data. Numerical experiments on synthetic Gaussian random fields and on invariant measures of the stochastic Allen--Cahn and Navier--Stokes equations illustrate the approach and demonstrate its ability to generate high-fidelity samples at lower computational cost than traditional approaches.",
+  "link": "https://arxiv.org/abs/2509.02971",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "cs.NA",
+    "math.NA",
+    "math.PR"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884505+00:00"
+}

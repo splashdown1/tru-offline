@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2501.02672",
+  "title": "Re-examining Granger Causality with Causal Bayesian Networks and Reichenbachs Principles",
+  "abstract": "Characterising cause-effect relationships in complex systems is fundamental to understanding their underlying mechanisms. Granger causality (GC) remains a widely used computational tool for identifying causal relationships in time series data. However, like other causal discovery methods, GC has limitations and has been criticised for lacking a rigorous causal foundation. In this work, we present a fix to this criticism by reinterpreting GC through the lenses of Reichenbach's principles and causal Bayesian networks. This reinterpretation was implemented as an algorithm we call causalized Granger causality (c-GC). We demonstrate, both theoretically and graphically, that this reformulation endows GC with a robust causal interpretation under specific assumptions. c-GC yields satisfactory results on synthetic data, offering a more principled framework for causal discovery in observational datasets.",
+  "link": "https://arxiv.org/abs/2501.02672",
+  "category": "cs.LG",
+  "categories": [
+    "stat.ML",
+    "cs.LG",
+    "econ.EM",
+    "stat.ME"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308171Z"
+}

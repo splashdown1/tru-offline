@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2510.10544",
+  "title": "PAC-Bayesian Reinforcement Learning Trains Generalizable Policies",
+  "abstract": "We derive a novel PAC-Bayesian generalization bound for reinforcement learning that explicitly accounts for Markov dependencies in the data, through the chain's mixing time. This contributes to overcoming challenges in obtaining generalization guarantees for reinforcement learning, where the sequential nature of data breaks the independence assumptions underlying classical bounds. The new bound provides non-vacuous certificates for modern off-policy algorithms such as Soft Actor-Critic. We demonstrate the practical utility of the bound through PB-SAC, a novel algorithm that optimizes the bound during training to guide exploration. Experiments across several continuous control tasks show that the proposed approach provides meaningful confidence certificates while maintaining competitive performance.",
+  "link": "https://arxiv.org/abs/2510.10544",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307713Z"
+}

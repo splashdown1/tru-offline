@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05957",
+  "title": "Dead Directions: Geometric Singular Learning",
+  "abstract": "Singular learning theory and information geometry have studied the same parameter spaces in mostly separate vocabularies: the former computes Bayesian invariants in resolved coordinates, the latter works in original coordinates under a non-degeneracy assumption that overparameterised models routinely violate. We bridge them through one primitive, the dead direction: a unit vector along which the Fisher metric degenerates, equivalently a tangent to the analytic singular set with a definite KL order, set by how fast the KL divergence vanishes. The two readings name the same vector; our central move shows its KL order is recoverable as the decay rate of the directional Fisher curvature approaching the singularity, in original parameter coordinates and without a Hironaka resolution. A selection rule on smooth fibres translates this rate into Watanabe's single-direction contribution to the real log canonical threshold, and we extend the recovery to multi-component crossings, multiplicity $m$, the singular fluctuation $\\nu$ (universal in the KL order for 1D directions), prior-RLCT shifts, and tempered posteriors. We then lift this rate to a deep network: a multi-layer K-FAC factorisation writes each Fisher block as a product of activation- and gradient-side rates with a duality between them, instantiated at modern-network primitives (residual streams, layer normalisation, attention). A quotient theorem carries the rate to the gauge quotient $\\Theta/G$ under gradient flow on a $G$-invariant metric; SGD qualifies, standard Adam does not, and we construct a $G$-equivariant Adam-family preconditioner (DDCAdam) that does. The bridge yields a parameter-coordinate handle on singular geometry, closed-form per-architecture predictions, and a trajectory-rate readout of Watanabe's triple $(\\lambda, m, \\nu)$ from one checkpoint's forward and backward passes, without posterior sampling.",
+  "link": "https://arxiv.org/abs/2606.05957",
+  "category": "stat.ML",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:15.728717+00:00"
+}

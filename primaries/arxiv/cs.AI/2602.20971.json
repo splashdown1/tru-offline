@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.20971",
+  "title": "Does Order Matter : Connecting The Law of Robustness to Robust Generalization",
+  "abstract": "Bubeck and Selke (2021) propose the connection between the Law of Robustness and robust generalization error as an open problem. The Law of Robustness states that overparameterization is necessary for models to interpolate robustly, i.e., the interpolating function is required to be Lipschitz. Wu et al. (2023) extend this law to arbitrary data distributions, proving that the Lipschitz constant satisfies $L = \\Omega(n^{1/d})$. Robust generalization, on the other hand, asks whether small robust training loss implies small robust test loss. This can be studied using statistical learning techniques such as Rademacher complexities, where a bound on the Rademacher complexity of the robust loss class implies a bound on the Lipschitzness of the function class. We use this connection to explicitly link the two for arbitrary data distributions. (i) We prove that the order of the Lipschitz bound remains the same when considering the global Rademacher complexity of robust loss classes. (ii) At the local scale, i.e., for subsets of functions with small empirical error, the order of the Lipschitz bound changes with the perturbation radius $\\rho$ and the localized concentration term $\\sqrt{r/n}$.",
+  "link": "https://arxiv.org/abs/2602.20971",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099096+00:00"
+}

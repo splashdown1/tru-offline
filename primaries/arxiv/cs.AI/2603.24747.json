@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.24747",
+  "title": "Formal Semantics for Agentic Tool Protocols: A Process Calculus Approach",
+  "abstract": "The emergence of large language model agents capable of invoking external tools has created urgent need for formal verification of agent protocols. Two paradigms dominate this space: Schema-Guided Dialogue (SGD), a research framework for zero-shot API generalization, and the Model Context Protocol (MCP), an industry standard for agent-tool integration. While both enable dynamic service discovery through schema descriptions, their formal relationship remains unexplored. Building on prior work establishing the conceptual convergence of these paradigms, we present the first process calculus formalization of SGD and MCP, proving they are structurally bisimilar under a well-defined mapping Phi. However, we demonstrate that the reverse mapping Phi^{-1} is partial and lossy, revealing critical gaps in MCP's expressivity. Through bidirectional analysis, we identify five principles -- semantic completeness, explicit action boundaries, failure mode documentation, progressive disclosure compatibility, and inter-tool relationship declaration -- as necessary and sufficient conditions for full behavioral equivalence. We formalize these principles as type-system extensions MCP+, proving MCP+ is isomorphic to SGD. Our work provides the first formal foundation for verified agent systems and establishes schema quality as a provable safety property.",
+  "link": "https://arxiv.org/abs/2603.24747",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.MA"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098684+00:00"
+}

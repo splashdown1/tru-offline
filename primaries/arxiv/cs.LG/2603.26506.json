@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.26506",
+  "title": "Identifying Connectivity Distributions from Neural Dynamics Using Flows",
+  "abstract": "Connectivity structure shapes neural computation, but inferring this structure from population recordings is degenerate: multiple connectivity structures can generate identical dynamics. Recent work uses low-rank recurrent neural networks (lrRNNs) to infer low-dimensional latent dynamics and connectivity from observed activity, enabling a mechanistic interpretation of the dynamics. However, standard approaches for training lrRNNs can recover spurious structures irrelevant to the underlying dynamics. We first characterize the identifiability of connectivity structures in lrRNNs and determine conditions under which a unique solution exists. To find such solutions, we develop an inference framework based on maximum entropy and continuous normalizing flows (CNFs), trained via flow matching. Instead of estimating a single connectivity matrix, our method learns a distribution over connection weights that is maximally unbiased over unidentifiable components while matching the observed dynamics. This approach captures complex yet necessary distributions such as heavy-tailed connectivity found in empirical data. We validate our method on synthetic datasets with connectivity structures that generate multistable attractors, limit cycles, and ring attractors, and demonstrate its applicability in recordings from rat frontal cortex during decision-making. Our framework shifts circuit inference from recovering connectivity to identifying which connectivity structures are computationally required, and which are artifacts of underconstrained inference.",
+  "link": "https://arxiv.org/abs/2603.26506",
+  "category": "cs.LG",
+  "categories": [
+    "q-bio.NC",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308448Z"
+}

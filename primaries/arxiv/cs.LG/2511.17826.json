@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2511.17826",
+  "title": "Deterministic Inference across Tensor Parallel Sizes That Eliminates Training-Inference Mismatch",
+  "abstract": "Deterministic inference is increasingly critical for large language model (LLM) applications such as LLM-as-a-judge evaluation, multi-agent systems, and Reinforcement Learning (RL). However, existing LLM serving frameworks exhibit non-deterministic behavior: identical inputs can yield different outputs when system configurations (e.g., tensor parallel (TP) size, batch size) vary, even under greedy decoding. This arises from the non-associativity of floating-point arithmetic and inconsistent reduction orders across GPUs. While prior work has addressed batch-size-related nondeterminism through batch-invariant kernels, determinism across different TP sizes remains an open problem, particularly in RL settings, where the training engine typically uses Fully Sharded Data Parallel (i.e., TP = 1) while the rollout engine relies on multi-GPU TP to maximize the inference throughput, creating a natural mismatch between the two. This precision mismatch problem may lead to suboptimal performance or even collapse for RL training. We identify and analyze the root causes of TP-induced inconsistency and propose Tree-Based Invariant Kernels (TBIK), a set of TP-invariant matrix multiplication and reduction primitives that guarantee bit-wise identical results regardless of TP size. Our key insight is to align intra- and inter-GPU reduction orders through a unified hierarchical binary tree structure. We implement these kernels in Triton and integrate them into vLLM and FSDP. Experiments confirm zero probability divergence and bit-wise reproducibility for deterministic inference across different TP sizes. Also, we achieve bit-wise identical results between vLLM and FSDP in RL training pipelines with different parallel strategy. Code is available at https://github.com/nanomaoli/llm_reproducibility.",
+  "link": "https://arxiv.org/abs/2511.17826",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CL",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307734Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30642",
+  "title": "Diffusion Models Preferentially Memorize Prototypical Examples or: Why Does My Diffusion Model Love Slop?",
+  "abstract": "Generative models have a persistent limitation: their tendency to memorize training data can create legal liabilities and erode creative diversity. Understanding which samples are memorized in whole or in part, and under what conditions, therefore remains an important open problem. Here we answer the question \"Are atypical or rare samples memorized first?\" in the negative. We train diffusion models on strings generated according to the production rules of the Random Hierarchy Model (RHM), and find that samples composed of common substrings are preferentially memorized. This holds true even if the training data consists of entirely unique samples, indicating that deduplication at the data point level does not provide a meaningful privacy guarantee. Correspondingly we predict, then observe, delayed memorization for fat-tailed datasets (i.e., those with more atypical samples). This effect is amplified when fat-tails are introduced into high-level production rules. These together suggest that dataset diversity, particularly at higher levels of abstraction, plays an important role in staving off memorization. Finally, we identify an intermediate regime of partial memorization in which common substrings are learned first and subsequently overproduced during generation. If training is stopped in this regime, models will exhibit the reversion-to-the-mean blandness often derided as \"slop\".",
+  "link": "https://arxiv.org/abs/2605.30642",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306730Z"
+}

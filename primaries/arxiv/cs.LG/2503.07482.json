@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2503.07482",
+  "title": "How does Bayesian Sampling help Membership Inference Attacks?",
+  "abstract": "Membership Inference Attacks (MIAs) aim to estimate whether a specific data point was used in the training of a given model. Existing state-of-the-art attacks typically rely on training multiple reference models to approximate the conditional score distribution for individual data points, which leads to significant computational overhead and limits their practical applicability. In this work, we propose a novel approach -- Bayesian Membership Inference Attack (BMIA), which performs conditional attack through Bayesian sampling. Specifically, we apply Laplace approximation to a single reference model to obtain a posterior over model parameters, enabling direct estimation of the conditional score distribution. Theoretically, we demonstrate that Bayesian sampling reduces intra-model variance, thereby improving attack power. This insight naturally motivates the multi-reference variant that further enhances performance when additional reference models are available. Extensive experiments across image, text, and tabular datasets indicate that our method achieves state-of-the-art performance in both effectiveness and efficiency.",
+  "link": "https://arxiv.org/abs/2503.07482",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307592Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30892",
+  "title": "Bandwidth Allocation with Device Partitioning for Federated Learning over Industrial IoT networks",
+  "abstract": "We consider a federated learning (FL) system in which Industrial Internet-of-Things (IIoT) devices collaboratively train a global model over wireless channels without sharing local data. In such systems, communication time is a primary bottleneck that constrains overall training efficiency. Unlike conventional networks that prioritize individual quality-of-service requirements, FL systems collectively aim to converge to an optimal global model as efficiently as possible, which calls for a fundamentally different approach to bandwidth allocation. In this paper, we propose a novel bandwidth allocation policy that exploits the heterogeneity of device computing capabilities to minimize total training time. Rather than distributing bandwidth among all selected devices simultaneously, the proposed policy partitions the participating devices into ordered subsets and sequentially grants each subset exclusive access to the full bandwidth. We formally prove that this partitioning-based policy achieves a strictly lower training time than any bandwidth allocation scheme without partitioning, irrespective of the underlying scheduling algorithm. Furthermore, by reducing per-device transmission duration, the proposed policy also minimizes uplink energy consumption, which is particularly beneficial for battery-constrained IIoT devices. Extensive experiments on real-world datasets - including GC10-Det, an industrial surface defect benchmark, and CIFAR-10, a standard image classification benchmark - demonstrate that the proposed policy consistently reduces training time and energy consumption compared to existing bandwidth allocation schemes, approaching the theoretical lower bound on round time.",
+  "link": "https://arxiv.org/abs/2605.30892",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306848Z"
+}

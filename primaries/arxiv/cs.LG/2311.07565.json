@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2311.07565",
+  "title": "Exploration via linearly perturbed loss minimisation",
+  "abstract": "We introduce exploration via linear loss perturbations (EVILL), a randomised exploration method for structured stochastic bandit problems that works by solving for the minimiser of a linearly perturbed regularised negative log-likelihood function. We show that, for the case of generalised linear bandits, EVILL reduces to perturbed history exploration (PHE), a method where exploration is done by training on randomly perturbed rewards. In doing so, we provide a simple and clean explanation of when and why random reward perturbations give rise to good bandit algorithms. We propose data-dependent perturbations not present in previous PHE-type methods that allow EVILL to match the performance of Thompson-sampling-style parameter-perturbation methods, both in theory and in practice. Moreover, we show an example outside generalised linear bandits where PHE leads to inconsistent estimates, and thus linear regret, while EVILL remains performant. Like PHE, EVILL can be implemented in just a few lines of code.",
+  "link": "https://arxiv.org/abs/2311.07565",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883822+00:00"
+}

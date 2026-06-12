@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2509.16187",
+  "title": "MatchFixAgent: Language-Agnostic Autonomous Repository-Level Code Translation Validation and Repair",
+  "abstract": "Code translation transforms source code from one programming language (PL) to another. Validating the functional equivalence of translation and repairing, if necessary, are critical steps in code translation. Existing automated validation and repair approaches struggle to generalize to many PLs due to high engineering overhead, and they rely on existing and often inadequate test suites, which results in false claims of equivalence and ineffective translation repair. To bridge this gap, we develop MatchFixAgent, a large language model (LLM)-based, PL-agnostic framework for equivalence validation and repair of translations. MatchFixAgent features a multi-agent architecture that divides equivalence validation into several sub-tasks to ensure thorough and consistent semantic analysis of the translation. We compare MatchFixAgent's validation and repair results with four repository-level code translation techniques. Our results demonstrate that MatchFixAgent produces (in)equivalence verdicts for 99.2% of translation pairs, with the same equivalence validation result as prior work on 72.8% of them. When MatchFixAgent's result disagrees with prior work, we find that 60.7% of the time MatchFixAgent's result is actually correct. In addition, we show that MatchFixAgent can repair 50.6% of inequivalent translation, compared to prior work's 18.5%.",
+  "link": "https://arxiv.org/abs/2509.16187",
+  "category": "cs.LG",
+  "categories": [
+    "cs.SE",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308288Z"
+}

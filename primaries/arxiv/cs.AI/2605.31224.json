@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31224",
+  "title": "Comparing LLM-Based Conversational and Graphical Interfaces for Industrial Decision Tasks: An Exploratory Mixed-Methods Study",
+  "abstract": "The use of Generative AI Conversational User Interfaces (CUI) as a new way to access and analyze data is growing in all sectors, and the industrial one is no exception. There, large amounts of data produced by IoT devices are flowing through user interfaces and may require them a new adaptation to the new analyses needs of decision-makers. LLM-based CUIs are promising a new way to directly interact with those data through the directness of natural language and without the learning costs that every GUI design has. Moreover, the capabilities of LLMs and their agency open up the possibility to automate some tasks and help with the reasoning during decision-making activities. But are this promises well founded? We try to scope this general question with a mixed-approach study comparing a state-of-the-art dashboard with a conversational agent. A total of 20 participants used both interfaces to complete four simulated industrial decision tasks of varying complexity. We combined measures of mental workload, completion time, and decision accuracy with a post-study questionnaire and semi-structured interviews analyzed through thematic analysis. The findings suggest that the conversational agent can reduce interactional effort by supporting more direct access to information, while the dashboard remains valuable for overview and verification. However, these benefits may vary across tasks and require validation through larger-scale studies.",
+  "link": "https://arxiv.org/abs/2605.31224",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CY",
+    "cs.AI",
+    "cs.HC"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358329Z"
+}

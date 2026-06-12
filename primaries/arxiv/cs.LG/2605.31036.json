@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31036",
+  "title": "Model Monotonicity in Autobidding Auctions: When Do Better Predictions Lead to Better Outcomes?",
+  "abstract": "Online advertising platforms rely on machine learning models to predict click-through rates (pCTR) and conversion rates (pCVR) for auction mechanisms. We introduce a novel framework to study the interaction between recommender system model quality, auction format, and autobidder behavior. We formalize when model improvements -- defined via a refinement relation inspired by filtrations in probability theory -- lead to improvements in platform-level Evaluation Criteria Metrics (ECM) such as revenue, welfare, or liquid welfare. Our main contributions are: (1) a formal definition of model improvement based on cluster refinement, and (2) a systematic characterization of ECM monotonicity across different combinations of bidder types (tCPA, max-CPA), auction formats (first-price, second-price, VCG), and budget constraints. We show that first-price auctions with uniform bidding guarantee revenue monotonicity for tCPA bidders without budgets (via Jensen's inequality), while second-price auctions and budget constraints can break this property. We provide full numerical constructions for the non-monotonicity results. Our findings have practical implications for advertising platforms seeking to align model improvements with business outcomes.",
+  "link": "https://arxiv.org/abs/2605.31036",
+  "category": "cs.LG",
+  "categories": [
+    "cs.GT",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307406Z"
+}

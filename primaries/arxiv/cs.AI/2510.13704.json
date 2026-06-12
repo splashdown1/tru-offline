@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2510.13704",
+  "title": "Simplicial Embeddings Improve Sample Efficiency in Actor-Critic Agents",
+  "abstract": "Recent works have proposed accelerating the wall-clock training time of actor-critic methods via the use of large-scale environment parallelization; unfortunately, these can sometimes still require large number of environment interactions to achieve a desired level of performance. Noting that well-structured representations can improve the generalization and sample efficiency of deep reinforcement learning (RL) agents, we propose the use of simplicial embeddings: lightweight representation layers that constrain embeddings to simplicial structures. This geometric inductive bias results in sparse and discrete features that stabilize critic bootstrapping and strengthen policy gradients. When applied to FastTD3, FastSAC, and PPO, simplicial embeddings consistently improve sample efficiency and final performance across a variety of continuous- and discrete-control environments, without any loss in runtime speed.",
+  "link": "https://arxiv.org/abs/2510.13704",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.RO"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098878+00:00"
+}

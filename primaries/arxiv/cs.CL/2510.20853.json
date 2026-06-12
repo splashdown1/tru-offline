@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2510.20853",
+  "title": "Beyond Hearing: Learning Task-Agnostic ExG Representations from Earphones via Physiology-Informed Tokenization",
+  "abstract": "Electrophysiological (ExG) signals offer valuable insights into human physiology, yet building foundation models that generalize across everyday tasks remains challenging due to two key limitations: (i)~insufficient data diversity, as most ExG recordings are collected in controlled labs with bulky, expensive devices; and (ii)~task-specific model designs that require tailored processing (i.e., targeted frequency filters) and architectures, which limit generalization across tasks. To address these challenges, we introduce an approach for scalable, task-agnostic ExG monitoring in the wild. We collected 50 hours of unobtrusive free-living ExG data with an earphone-based hardware prototype to narrow the data diversity gap. At the core of our approach is Physiology-informed Multi-band Tokenization (PiMT), which decomposes ExG signals into 12 physiology-informed tokens, followed by a reconstruction task to learn robust representations. This enables adaptive feature recognition across the full frequency spectrum while capturing task-relevant information. Experiments on our new DailySense dataset, the first to enable ExG-based analysis across five human senses, together with four public ExG benchmarks, demonstrate that PiMT consistently outperforms state-of-the-art methods across diverse tasks.",
+  "link": "https://arxiv.org/abs/2510.20853",
+  "category": "cs.CL",
+  "categories": [
+    "eess.AS",
+    "cs.CL",
+    "cs.SD"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406301Z"
+}

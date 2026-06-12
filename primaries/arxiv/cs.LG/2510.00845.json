@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2510.00845",
+  "title": "Mechanistic Interpretability as Statistical Estimation: A Variance Analysis",
+  "abstract": "Mechanistic Interpretability (MI) aims to reverse-engineer model behaviors by identifying functional sub-networks. Yet, the scientific validity of these findings depends on their stability. In this work, we argue that circuit discovery is not a standalone task but a statistical estimation problem built upon causal mediation analysis (CMA). We uncover a fundamental instability at this base layer: exact, single-input CMA scores exhibit high intrinsic variance, implying that the causal effect of a component is a volatile random variable rather than a fixed property. We then demonstrate that circuit discovery pipelines inherit this variance and further amplify it. Fast approximation methods, such as Edge Attribution Patching and its successors, introduce additional estimation noise, while aggregating these noisy scores over datasets leads to fragile structural estimates. Consequently, small perturbations in input data or hyperparameters yield vastly different circuits. We systematically decompose these sources of variance and advocate for more rigorous MI practices, prioritizing statistical robustness and routine reporting of stability metrics.",
+  "link": "https://arxiv.org/abs/2510.00845",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307694Z"
+}

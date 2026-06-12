@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2601.21778",
+  "title": "Error Amplification Limits ANN-to-SNN Conversion in Continuous Control",
+  "abstract": "Spiking Neural Networks (SNNs) can achieve competitive performance by converting already existing well-trained Artificial Neural Networks (ANNs), avoiding further costly training. This property is particularly attractive in Reinforcement Learning (RL), where training through environment interaction is expensive and potentially unsafe. However, existing conversion methods perform poorly in continuous control, where suitable baselines are largely absent. We identify error amplification as the key cause: small action approximation errors become temporally correlated across decision steps, inducing cumulative state distribution shift and severe performance degradation. To address this issue, we propose Cross-Step Residual Potential Initialization (CRPI), a lightweight gradient-free mechanism that carries over residual membrane potentials across decision steps to suppress temporally correlated errors. Experiments on continuous control benchmarks with both vector and visual observations demonstrate that CRPI can be integrated into existing conversion pipelines and substantially recovers lost performance. Our results highlight continuous control as a critical and challenging benchmark for ANN-to-SNN conversion, where small errors can be strongly amplified and impact performance. Code is available at https://github.com/xuzijie32/ANN2SNN-CRPI.",
+  "link": "https://arxiv.org/abs/2601.21778",
+  "category": "cs.LG",
+  "categories": [
+    "cs.NE",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308359Z"
+}

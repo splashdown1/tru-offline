@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30722",
+  "title": "Self-Certifying Transport MCMC via Dual Spectral-Gap Certificates",
+  "abstract": "We propose CerT-MCMC, a framework that equips learned-transport Markov chain Monte Carlo with automatic, rigorous convergence certificates. A normalising flow maps a Gaussian reference to an approximation of the target posterior; the same flow then serves as both the independence Metropolis-Hastings proposal and the basis for a computable spectral-gap bound. We develop two complementary certificates. The covering certificate bounds the weight-ratio oscillation over the full proposal support via finite-sample covering arguments, yielding full-support spectral-gap bounds when a conservative gradient bound is available; its correction term scales as O(n^{-1/D}), making it rapidly weak and eventually vacuous as dimension increases. We prove a matching Omega(n^{-1/D}) lower bound, establishing that this barrier is intrinsic to pointwise Lipschitz certification. The quantile-core certificate restricts attention to a high-probability residual core on which the oscillation is controlled by one-dimensional empirical quantiles, with a finite-sample probability slack of O(n^{-1/2}), independent of the ambient dimension. On synthetic targets (D=2-20), structural-engineering posteriors (D=6,8), real-data logistic regression on the Heart Disease data set (D=13), and synthetic Bayesian logistic regression (D=20), the quantile-core certificate delivers non-vacuous spectral-gap bounds where the covering certificate is vacuous, and its spectral-gap proxy tracks empirical effective sample sizes within 7%. A negative control experiment confirms that the certificate discriminates flow quality by a factor exceeding 10x, whereas acceptance rates differ by only 1.15x. To our knowledge, the dual-certificate framework is the first to provide automatic, dimension-aware convergence certificates for learned-transport MCMC, distinguishing genuine transport failure from proof-technique limitations.",
+  "link": "https://arxiv.org/abs/2605.30722",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.CO",
+    "stat.ME"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306774Z"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30698",
+  "title": "Seeing Before Agreeing: Aligning Multi-Agent Consensus with Visual Evidence",
+  "abstract": "Vision-language models (VLMs) have achieved strong performance on visual question answering (VQA). To mitigate individual hallucinations and blind spots, aggregating diverse perspectives via multi-agent collaboration has emerged as a promising paradigm. While this approach has shown great success in textual QA, its potential in the multimodal domain remains under-explored. Existing multi-agent VQA methods predominantly adapt text-centric protocols, focusing on textual discussions while ignoring the alignment of visual information. In this work, we reveal a key insight: answer-level agreement is insufficient for reliable multi-agent VQA; \\textit{aligned visual evidence} -- shared support from the image regions agents rely on -- is essential for trustworthy consensus. To leverage this insight, we propose EAGLE (\\textbf{E}vidence-\\textbf{A}ligned \\textbf{G}rounded mu\\textbf{L}ti-agent r\\textbf{E}asoning), a training-free evidence-centered framework for coordinating multiple VLM agents. EAGLE explicitly exposes each agent's grounding regions as visual evidence, enables mutual verification over the evidence, and uses evidence consistency to guide final decision-making. Experiments on six VQA benchmarks show that EAGLE achieves best average performance across domains while remaining lightweight, interpretable, and practical for deployment.",
+  "link": "https://arxiv.org/abs/2605.30698",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.MA"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358093Z"
+}

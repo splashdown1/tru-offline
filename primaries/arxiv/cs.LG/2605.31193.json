@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31193",
+  "title": "Geometry-based Schr\\\"odinger Bridges for Trustworthy Multimodal Fusion",
+  "abstract": "Real-world multimodal systems must be robust against low-quality data, such as sensor noise, incomplete multimodal data and conflicting inputs. However, existing trustworthy fusion methods rely on the model's own prediction confidence to judge data quality. This creates a circular dependency: when a model is confident but wrong, these methods fail to detect the error. To break this loop, we propose Geometry-based Multimodal Fusion (GMF). Instead of relying on predictions, we evaluate reliability by measuring how much transport correction the input needs in latent space. We implement Diffusion Schr\\\"odinger Bridge transport with Rectified Flow, where the squared initial velocity gives an efficient learned correction score. Valid data has low squared velocity magnitude, while noisy, incomplete data or conflicting data requires stronger transport correction. This geometry-based reliability signal acts as an independent judge, effectively flagging unreliable inputs even when the classifier is fooled. Extensive experiments demonstrate that GMF significantly improves robustness against severe sensor noise and semantic conflicts compared to confidence-based baselines.",
+  "link": "https://arxiv.org/abs/2605.31193",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307007Z"
+}

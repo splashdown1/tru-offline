@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.00265",
+  "title": "Polaris: Coupled Orbital Polar Embeddings for Hierarchical Concept Learning",
+  "abstract": "Real-world knowledge is often organized as hierarchies such as product taxonomies, medical ontologies, and label trees, yet learning hierarchical representations is challenging due to asymmetric structure and noisy semantics. We introduce Polaris, a polar hyperspherical embedding framework that separates semanticity from hierarchy using angular geometry and radius, enabling the learning of meaning and structure without interference. To map latent representation onto the sphere, we project it to the tangent space at the north pole, apply the exponential map, and learn unit-norm representations using spherical linear layers. Polaris then combines robust local constraints, global regularization that prevents geometric collapse, and uncertainty-aware asymmetric objectives that encourage directional containment. At inference time, Polaris uses structure-guided retrieval to efficiently narrow down candidate parents before final ranking. We evaluate Polaris on different settings of taxonomy expansion - spanning trees, multi-parent DAGs, and multimodal hierarchies, showing consistent improvements of up to ~19 points in top-K retrieval and up to ~60% reduction in mean rank over fourteen strong baselines.",
+  "link": "https://arxiv.org/abs/2605.00265",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308061Z"
+}

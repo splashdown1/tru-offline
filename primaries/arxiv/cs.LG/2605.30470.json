@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30470",
+  "title": "Can Subgraph Explanations Be Weaponized to Steal Graph Neural Networks?",
+  "abstract": "Graph Machine Learning as a Service (GMLaaS) platforms increasingly implement explainability interfaces to meet regulatory transparency requirements. However, this transparency creates exploitable vulnerabilities for model extraction attacks. We present the first model extraction attack specifically designed for graph classification under strict black-box constraints where the attacker observes only discrete class labels and binary explanation masks (no probability scores, gradients, or confidence values). Our method (1) uses model explanation outputs to guide Monte Carlo edge sensitivity estimation toward decision boundaries, with Hoeffding concentration guarantees on estimation accuracy and (2) exploits explanation subgraphs to efficiently narrow the boundary search space. Extensive experiments on benchmark graph datasets across multiple domains demonstrate our method's superiority over comparable baselines. These findings demonstrate that such explainability interfaces create exploitable attack surfaces, informing both defensive mechanisms and policy frameworks for explainable AI mandates. The implementation code is provided in https://github.com/LabRAI/XSTEAL/.",
+  "link": "https://arxiv.org/abs/2605.30470",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306598Z"
+}

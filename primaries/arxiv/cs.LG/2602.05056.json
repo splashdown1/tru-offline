@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2602.05056",
+  "title": "Grounded but Misleading: Evaluating Semantic Alignment in AI-Generated Security Explanations",
+  "abstract": "Online scams increasingly leverage fluent and context-aware social engineering strategies, creating growing demand for AI systems that explain why a message may be risky. However, explanations that cite detector-derived evidence may still semantically weaken or redirect the intended risk interpretation. We introduce VEXA: Verifying Semantic Explanation Alignment, a controlled testbed for studying the gap between lexical grounding and semantic risk alignment in AI-generated scam-risk explanations. VEXA generates ungrounded, risk-aligned, and risk-diluting explanations by independently controlling evidence grounding and semantic framing. Through LLM-as-a-judge and human evaluations, we show that explanations may continue to appear comparatively grounded even when their semantic interpretation weakens the detector's intended risk assessment. In human evaluation, risk-diluting XAI-grounded explanations retained comparatively elevated Perceived Evidence Grounding scores (3.66) despite lower Helpfulness (3.00) and Reasoning Support (3.14) scores. These findings provide controlled evidence of grounding illusion effects in AI-generated security explanations and suggest that trustworthy explanation evaluation must verify not only whether evidence is cited, but also how that evidence is interpreted.",
+  "link": "https://arxiv.org/abs/2602.05056",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CR",
+    "cs.CL",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884596+00:00"
+}

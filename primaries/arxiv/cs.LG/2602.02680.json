@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.02680",
+  "title": "FlexRank: Nested Low-Rank Knowledge Decomposition for Adaptive Model Deployment",
+  "abstract": "The growing scale of deep neural networks, encompassing large language models (LLMs) and vision transformers (ViTs), has made training from scratch prohibitively expensive and deployment increasingly costly. These models are often used as computational monoliths with fixed cost, hindering adaptive deployment across different cost budgets. We argue that nested components, ordered by importance, can be extracted from pretrained models and selectively activated within the available computational budget. To this end, our proposed FlexRank method leverages low-rank weight decomposition with nested, importance-based consolidation to extract submodels of increasing capabilities. Our approach enables a \"train-once, deploy-everywhere\" paradigm offering a graceful trade-off between cost and performance without training from scratch for each budget - advancing practical deployment of large models.",
+  "link": "https://arxiv.org/abs/2602.02680",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884029+00:00"
+}

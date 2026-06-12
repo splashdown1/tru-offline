@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31446",
+  "title": "Fine-grained Verification via Diagnostic Reasoning Supervision for Aspect Sentiment Triplet Extraction",
+  "abstract": "Aspect Sentiment Triplet Extraction (ASTE) aims to identify aspect terms, opinion terms, and sentiment polarities as structured triplets, providing essential inputs for downstream information system applications such as opinion mining, explainable recommendations, and review summarization. Prior work mainly focuses on end-to-end extraction, while post hoc verification of extracted triplets remains comparatively underexplored. This gap limits the reliability of ASTE systems, since predicted triplets may be locally plausible while being globally invalid. Moreover, candidate invalidity is multi-faceted and candidate usability is inherently graded, motivating a fine-grained verification mechanism that can filter or re-rank outputs from diverse extractors. In this paper, we propose FiVeD, a framework for Fine-grained Verification with Diagnostic reasoning supervision. Specifically, the verifier is trained with multiple complementary objectives, including validity classification and quality score estimation as primary tasks, with error type classification and rationale generation as auxiliary tasks. We define hierarchical error categories and construct plausible incorrect triplets under semantic and syntactic constraints, and leverage an off-the-shelf LLM with task-specific rubrics to produce quality scores and diagnostic rationales. During inference, the resulting quality scores are used to filter candidate outputs, supporting adjustable precision-recall tradeoffs. Experiments across multiple ASTE baselines demonstrate that FiVeD consistently improves extraction performance by up to 3.53 F1 points as a plug-and-play verification module.",
+  "link": "https://arxiv.org/abs/2605.31446",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.405897Z"
+}

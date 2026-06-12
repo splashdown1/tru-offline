@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06109",
+  "title": "Harnessing Structural Context for Entity Alignment Foundation Models",
+  "abstract": "Entity alignment (EA) aims to identify equivalent entities across heterogeneous knowledge graphs (KGs) and is a key component of knowledge fusion and cross-KG reasoning. The recent EA foundation model demonstrates that alignment knowledge, once pretrained, can be directly applied to diverse previously unseen KG pairs. However, it still underuses structural context in two places: cross-KG interaction is weak during encoding, and final candidate ranking still relies too heavily on coarse similarity. We address these limitations with ContextEA, an enhanced encoder-decoder framework for transferable EA. On the encoder side, we introduce a cross-KG interaction encoder that unifies the two KGs with anchor bridges and performs earlier relation-aware cross-graph propagation. On the decoder side, we introduce a structural calibration decoder that calibrates alignment scores with entity-level, neighborhood-level, relation-level, and anchor-aware structural evidence. This design strengthens both structural context construction and structural context exploitation while remaining lightweight. Experiments on 29 EA datasets in OpenEA, SRPRS, and DBP show consistent gains over strong transferable baselines. Notably, the pretrained ContextEA already surpasses the finetuned baselines on all three benchmark groups, demonstrating substantially stronger transfer to unseen KGs. These results suggest that explicitly harnessing structural context is an effective direction for improving EA foundation models.",
+  "link": "https://arxiv.org/abs/2606.06109",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498009+00:00"
+}

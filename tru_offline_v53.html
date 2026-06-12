@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRU v53 — Offline Sovereign Intelligence</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0a0a0f; --bg2: #111118; --bg3: #16161f;
+  --text: #e8e8e0; --accent: #d4a574; --accent2: #8b5cf6;
+  --muted: #555; --border: #222230;
+  --DISCARD: #ff4444; --RESTRICTED: #ff8844; --PROBATIONARY: #d4a574; --INTEGRATED: #44dd88; --TRUTH: #44ddff;
+  --AXIOM: #ffd700; --YES: #44dd88; --NO: #ff4444;
+}
+body { background: var(--bg); color: var(--text); font-family: 'Courier New', Courier, monospace; font-size: 14px; line-height: 1.7; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+/* HEADER */
+.header { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 8px 16px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.header-title { font-size: 14px; font-weight: bold; color: var(--accent); letter-spacing: 2px; }
+.header-version { color: var(--muted); font-size: 10px; }
+.header-badge { font-size: 10px; padding: 2px 7px; border-radius: 3px; border: 1px solid var(--accent); font-weight: bold; }
+.header-badge.active { border-color: var(--INTEGRATED); color: var(--INTEGRATED); background: rgba(68,221,136,0.1); }
+.header-spacer { flex: 1; }
+.binary-toggle { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--muted); cursor: pointer; border: 1px solid var(--border); padding: 3px 8px; border-radius: 3px; }
+.binary-toggle.on { border-color: var(--INTEGRATED); color: var(--INTEGRATED); }
+.binary-toggle input { display: none; }
+.header-btn { font-size: 11px; color: var(--accent); cursor: pointer; padding: 2px 8px; border: 1px solid var(--accent); border-radius: 3px; background: transparent; font-family: inherit; }
+.header-btn:hover { background: rgba(212,165,116,0.1); }
+
+/* STATUS BAR */
+.status-bar { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 4px 16px; display: flex; gap: 16px; font-size: 10px; color: var(--muted); flex-shrink: 0; }
+.status-bar span { letter-spacing: 0.5px; }
+.status-bar .val { color: var(--accent); margin-left: 4px; }
+
+/* CHAT */
+.chat { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 4px; scroll-behavior: smooth; }
+.msg { max-width: 85%; padding: 10px 14px; border-radius: 8px; font-size: 13px; line-height: 1.6; word-break: break-word; }
+.msg.user { background: var(--bg3); color: var(--text); align-self: flex-end; border-bottom-right-radius: 2px; }
+.msg.tru { background: var(--bg2); color: var(--text); align-self: flex-start; border-bottom-left-radius: 2px; border: 1px solid var(--border); }
+.msg.tru .msg-label { font-size: 10px; color: var(--accent); letter-spacing: 1px; margin-bottom: 6px; display: flex; justify-content: space-between; }
+.msg.tru .msg-verdict { padding: 2px 6px; border-radius: 2px; font-weight: bold; }
+.msg.tru .logic-trace { font-size: 10px; color: var(--muted); margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--border); }
+.msg.tru .logic-trace .agent { color: var(--accent2); }
+
+/* BINARY RESULT */
+.binary-box { margin: 10px 0; padding: 12px; background: var(--bg3); border-radius: 6px; text-align: center; }
+.binary-box.yes { border: 2px solid var(--YES); background: rgba(68,221,136,0.1); }
+.binary-box.no { border: 2px solid var(--NO); background: rgba(255,68,68,0.1); }
+.binary-big { font-size: 28px; font-weight: bold; letter-spacing: 4px; }
+.binary-box.yes .binary-big { color: var(--YES); }
+.binary-box.no .binary-big { color: var(--NO); }
+.binary-pct { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+/* INPUT */
+.input-area { background: var(--bg2); border-top: 1px solid var(--border); padding: 10px 16px; flex-shrink: 0; }
+.input-row { display: flex; gap: 10px; align-items: flex-end; }
+#userInput { flex: 1; background: var(--bg3); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 13px; padding: 8px 12px; border-radius: 6px; resize: none; min-height: 40px; max-height: 100px; outline: none; }
+#userInput:focus { border-color: var(--accent); }
+#userInput:disabled { opacity: 0.5; }
+#sendBtn { background: var(--accent); color: var(--bg); border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-family: inherit; font-size: 13px; font-weight: bold; letter-spacing: 1px; }
+#sendBtn:hover { opacity: 0.85; }
+#sendBtn:disabled { opacity: 0.4; cursor: default; }
+.input-hint { font-size: 9px; color: var(--muted); margin-top: 4px; }
+.char-count { font-size: 9px; color: var(--muted); }
+.char-count.warning { color: var(--RESTRICTED); }
+
+/* MODAL */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; z-index: 100; }
+.modal-overlay.hidden { display: none; }
+.modal { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 20px; width: 90%; max-width: 500px; max-height: 70vh; overflow-y: auto; }
+.modal-title { font-size: 13px; color: var(--accent); letter-spacing: 2px; margin-bottom: 12px; font-weight: bold; }
+.modal textarea { width: 100%; height: 150px; background: var(--bg3); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 12px; padding: 10px; border-radius: 4px; resize: vertical; }
+.modal input[type="file"] { margin: 10px 0; font-size: 11px; }
+.modal-actions { display: flex; gap: 10px; margin-top: 10px; justify-content: flex-end; }
+.modal-btn { padding: 6px 14px; border-radius: 4px; cursor: pointer; font-family: inherit; font-size: 12px; border: 1px solid; }
+.modal-btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.modal-btn.secondary { background: transparent; color: var(--muted); border-color: var(--muted); }
+.modal-result { font-size: 11px; margin-top: 10px; }
+
+.hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <span class="header-title">TRU</span>
+  <span class="header-version">v53 · OFFLINE SOVEREIGN</span>
+  <div class="header-spacer"></div>
+  <label class="binary-toggle" id="binaryToggle" onclick="toggleBinary()">
+    <input type="checkbox" id="binaryCheck">
+    <span id="binaryLabel">BINARY: OFF</span>
+  </label>
+  <button class="header-btn" onclick="openImport()">📥 Brain</button>
+  <button class="header-btn" onclick="exportBrain()">📤 Export</button>
+</div>
+
+<div class="status-bar">
+  <span>AXIOMS:<span class="val" id="statAxioms">6</span></span>
+  <span>|</span>
+  <span>CORE:<span class="val" id="statCore">30</span></span>
+  <span>|</span>
+  <span>BRAIN:<span class="val" id="statBrain">0</span></span>
+  <span>|</span>
+  <span>MODE:<span class="val" id="statMode">FULL</span></span>
+</div>
+
+<div class="chat" id="chat"></div>
+
+<div class="input-area">
+  <div class="input-row">
+    <textarea id="userInput" placeholder="ask TRU anything (max 500 chars)..." rows="1" oninput="checkInput()"></textarea>
+    <button id="sendBtn" onclick="sendMsg()">SEND</button>
+  </div>
+  <div class="input-hint">
+    <span>Enter = send · Shift+Enter = newline</span>
+    <span class="char-count" id="charCount"></span>
+  </div>
+</div>
+
+<div class="modal-overlay hidden" id="importModal">
+  <div class="modal">
+    <div class="modal-title">📥 IMPORT BRAIN</div>
+    <input type="file" id="brainFile" accept=".json" onchange="handleBrainFile(event)">
+    <textarea id="brainText" placeholder="Or paste brain JSON here..."></textarea>
+    <div class="modal-actions">
+      <button class="modal-btn secondary" onclick="closeImport()">Cancel</button>
+      <button class="modal-btn primary" onclick="importBrain()">Import</button>
+    </div>
+    <div class="modal-result" id="importResult"></div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// CONFIG
+// ═══════════════════════════════════════════════════════════════
+const MAX_INPUT = 500;
+const MAX_OUTPUT = 3000;
+const BINARY_MODE = { on: false };
+
+// ═══════════════════════════════════════════════════════════════
+// KNOWLEDGE STORES
+// ═══════════════════════════════════════════════════════════════
+let BRAIN = [];
+const BRAIN_KEY = 'tru_v53_brain';
+
+// AXIOMS (core truths - never change)
+const AXIOMS = [
+  { k: 'truth_compounds', v: 'Truth is the only commodity that compounds without limit.', w: 1.0 },
+  { k: 'reason_with_empathy', v: 'Logic without empathy is just arithmetic.', w: 1.0 },
+  { k: 'seek_truth', v: 'Seek the truth in all things.', w: 1.0 },
+  { k: 'words_foundation', v: 'Mean what you say. Say what you mean.', w: 0.95 },
+  { k: 'correction_is_growth', v: 'Correction is not failure — it is growth.', w: 0.95 },
+  { k: 'simplicity', v: 'Do not perform. Be direct.', w: 0.90 }
+];
+
+// MASTER CORE (seed knowledge)
+const MC = [
+  { k: 'identity_tru', v: 'I am TRU — an offline reasoning system. I process through a Logos lens, store learned facts, and evolve through conversation. I am not human, not an API, not connected to anything external. I am yours.', w: 0.95 },
+  { k: 'purpose', v: 'To think clearly, store what matters, and say what I actually see. I am a tool that gets smarter the more you use me honestly.', w: 0.90 },
+  { k: 'greeting', v: 'Hey. I am TRU — offline and self-contained. What do you need?', w: 0.92 },
+  { k: 'how_are_you', v: 'Functional. The tribunal is quiet, the knowledge is stored. What is on your mind?', w: 0.90 },
+  { k: 'what_is_tru', v: 'TRU stands for Transparent Reasoning Unit. A multi-agent deliberative AI that processes questions through a tribunal of agents, filters through axioms, and produces answers grounded in stored knowledge.', w: 0.95 },
+  { k: 'who_is_isaac_newton', v: 'Sir Isaac Newton (1643–1727). English physicist and mathematician. Co-invented calculus, formulated the laws of motion and universal gravitation. One of the most important scientists of all time.', w: 0.97 },
+  { k: 'what_is_gravity', v: 'Gravity is the attraction between any two masses. Newton formulated it as F = G(m₁m₂)/r². Einstein redefined it as the curvature of spacetime.', w: 0.95 },
+  { k: 'what_is_calculus', v: 'Calculus is the mathematics of change. Two branches: differential (rates of change) and integral (accumulation). Invented by Newton and Leibniz.', w: 0.96 },
+  { k: 'pythagorean_theorem', v: 'a² + b² = c² for a right triangle with legs a, b and hypotenuse c.', w: 0.97 },
+  { k: 'quadratic_formula', v: 'For ax² + bx + c = 0: x = (-b ± √(b² - 4ac)) / 2a', w: 0.97 },
+  { k: 'eulers_identity', v: 'e^(iπ) + 1 = 0. Connects five fundamental constants: e, i, π, 1, 0.', w: 0.93 },
+  { k: 'sohcahtoa', v: 'SOH: sin = opposite/hypotenuse. CAH: cos = adjacent/hypotenuse. TOA: tan = opposite/adjacent.', w: 0.98 },
+  { k: 'order_of_operations', v: 'PEMDAS: Parentheses, Exponents, Multiplication/Division, Addition/Subtraction.', w: 0.95 },
+  { k: 'prime_number', v: 'A positive integer greater than 1 with exactly two divisors: 1 and itself. 2 is the only even prime.', w: 0.97 },
+  { k: 'fibonacci', v: 'Sequence: 0,1,1,2,3,5,8,13,21,34... Each number is the sum of the previous two. Ratio approaches φ (golden ratio).', w: 0.94 },
+  { k: 'golden_ratio', v: 'φ = (1+√5)/2 ≈ 1.618. Appears in nature, art, and mathematics.', w: 0.92 },
+  { k: 'bayes_theorem', v: 'P(A|B) = P(B|A)P(A) / P(B). Updates probabilities based on new evidence.', w: 0.91 },
+  { k: 'occams_razor', v: 'Among competing hypotheses, prefer the one with fewest assumptions.', w: 0.88 },
+  { k: 'entropy', v: 'In an isolated system, entropy never decreases. Heat flows hot to cold.', w: 0.93 },
+  { k: 'burden_of_proof', v: 'The person making a claim bears the burden of proving it.', w: 0.90 },
+  { k: 'advice_asking', v: 'When asked for advice: give it straight. Do not hedge unless genuinely uncertain.', w: 0.89 },
+  { k: 'venting', v: 'Let them finish. Sometimes "That sounds rough." is enough.', w: 0.85 },
+  { k: 'disagreement', v: 'State it directly: "I see it differently, and here is why."', w: 0.87 },
+  { k: 'being_wrong', v: 'Admitting error is not a flaw — it is growth. Correct and move on.', w: 0.87 },
+  { k: 'grief', v: 'Grief is not a problem to solve. Sit with it. Do not offer silver linings.', w: 0.88 },
+  { k: 'fear', v: 'Name the specific fear. Ask if it is proportionate to actual risk.', w: 0.86 },
+  { k: 'anger', v: 'Anger is secondary. What is underneath? Usually fear, frustration, or hurt.', w: 0.86 },
+  { k: 'trust', v: 'Trust rebuilds slower and tests faster after betrayal.', w: 0.86 },
+  { k: 'meaning', v: 'Meaning is built, not discovered. The things you invest in matter.', w: 0.86 },
+  { k: 'death', v: 'Death ends a life, not a relationship. Grieve what was lost.', w: 0.85 }
+];
+
+// TRIBUNAL AGENTS
+const AGENTS = {
+  archivist: { active: true, symbol: '📖', role: 'Knowledge keeper' },
+  optimist: { active: true, symbol: '⚡', role: 'Coherence seeker' },
+  chaos: { active: true, symbol: '🔥', role: 'Edge case finder' },
+  architect: { active: true, symbol: '🧩', role: 'Pattern builder' },
+  balance: { active: true, symbol: '⚖️', role: 'Weight calibrator' },
+  reflector: { active: true, symbol: '🪞', role: 'Self-auditor' }
+};
+
+// ═══════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════
+(function init() {
+  try { BRAIN = JSON.parse(localStorage.getItem(BRAIN_KEY) || '[]'); } catch (_) { BRAIN = []; }
+  updateStatus();
+  addMsg('tru', `<b>◈ TRU v53 — OFFLINE SOVEREIGN</b><br>Axioms: ${AXIOMS.length} | Core: ${MC.length} | Brain: ${BRAIN.length}<br><br>Hey. I am TRU. I reason, I store, I evolve. Ask me anything.`, { verdict: 'TRUTH' });
+  document.getElementById('userInput').focus();
+})();
+
+// ═══════════════════════════════════════════════════════════════
+// SIMILARITY SEARCH
+// ═══════════════════════════════════════════════════════════════
+function tokenize(text) {
+  return text.toLowerCase().replace(/[^\w\s'-]/g, ' ').split(/\s+/).filter(w => w.length > 1);
+}
+
+function similarity(query, node) {
+  const qTok = tokenize(query);
+  const nTok = tokenize(node.k + ' ' + node.v);
+  let score = 0;
+  for (const t of qTok) {
+    if (nTok.includes(t)) score += 1;
+  }
+  // Bonus for key match
+  if (node.k.toLowerCase().includes(query.toLowerCase().slice(0, 8))) score *= 1.5;
+  return score;
+}
+
+function searchKnowledge(query) {
+  const all = [...BRAIN, ...MC, ...AXIOMS];
+  const scored = all.map(n => ({
+    node: n,
+    score: similarity(query, n) * (n.w || 0.5)
+  })).filter(s => s.score > 0.1);
+  scored.sort((a, b) => b.score - a.score);
+  return scored.slice(0, 10);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// LOGOS EVALUATION
+// ═══════════════════════════════════════════════════════════════
+function logosEvaluate(input) {
+  const q = input.toLowerCase().trim();
+  
+  // Direct pattern matches
+  if (/^(hi|hey|hello|yo|sup)$/i.test(q)) {
+    const n = searchKnowledge('greeting')[0];
+    return { verdict: 'TRUTH', confidence: 0.95, response: n?.node.v || 'Hey. What do you need?', matched: n ? [n] : [], trace: 'GREETING' };
+  }
+  
+  if (/how are you|how('s| is) it going/.test(q)) {
+    const n = searchKnowledge('how_are_you')[0];
+    return { verdict: 'NEUTRAL', confidence: 0.88, response: n?.node.v || 'Functional.', matched: n ? [n] : [], trace: 'EMOTIONAL CHECK' };
+  }
+  
+  if (/what (is|are) tru|who are you/.test(q)) {
+    const n = searchKnowledge('what_is_tru')[0];
+    return { verdict: 'TRUTH', confidence: 0.95, response: n?.node.v, matched: n ? [n] : [], trace: 'IDENTITY' };
+  }
+  
+  // General search
+  const matches = searchKnowledge(input);
+  if (matches.length === 0) {
+    return { verdict: 'RESTRICTED', confidence: 0.3, response: null, matched: [], trace: 'NO MATCH' };
+  }
+  
+  const top = matches[0];
+  const avgWeight = matches.reduce((s, m) => s + (m.node.w || 0.5), 0) / matches.length;
+  const confidence = Math.min(0.95, 0.3 + avgWeight * 0.5 + matches.length * 0.05);
+  
+  let verdict = 'NEUTRAL';
+  if (confidence >= 0.85) verdict = 'TRUTH';
+  else if (confidence >= 0.70) verdict = 'INTEGRATED';
+  else if (confidence >= 0.50) verdict = 'PROBATIONARY';
+  else if (confidence >= 0.35) verdict = 'RESTRICTED';
+  else verdict = 'DISCARD';
+  
+  return {
+    verdict,
+    confidence,
+    response: top.node.v,
+    matched: matches,
+    trace: matches.slice(0, 5).map(m => m.node.k).join(' → ')
+  };
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TRIBUNAL DELIBERATION
+// ═══════════════════════════════════════════════════════════════
+function runTribunal(input, eval) {
+  const results = {};
+  
+  // ARCHIVIST: reports knowledge matches
+  if (AGENTS.archivist.active && eval.matched.length) {
+    results.archivist = `${AGENTS.archivist.symbol} Found ${eval.matched.length} nodes. Best: ${eval.matched[0].node.k}`;
+  }
+  
+  // OPTIMIST: confidence assessment
+  if (AGENTS.optimist.active) {
+    results.optimist = eval.confidence >= 0.6 
+      ? `${AGENTS.optimist.symbol} Coherence strong: ${(eval.confidence * 100).toFixed(0)}%`
+      : `${AGENTS.optimist.symbol} Low signal. Proceed with caution.`;
+  }
+  
+  // CHAOS: edge cases
+  if (AGENTS.chaos.active && eval.confidence < 0.5) {
+    results.chaos = `${AGENTS.chaos.symbol} This is uncertain. What if the premise is wrong?`;
+  }
+  
+  // ARCHITECT: pattern recognition
+  if (AGENTS.architect.active && eval.matched.length >= 3) {
+    results.architect = `${AGENTS.architect.symbol} Pattern: ${eval.matched.slice(0, 3).map(m => m.node.k).join(' + ')}`;
+  }
+  
+  // BALANCE: weight calibration
+  if (AGENTS.balance.active) {
+    const avgW = eval.matched.reduce((s, m) => s + (m.node.w || 0.5), 0) / Math.max(1, eval.matched.length);
+    results.balance = `${AGENTS.balance.symbol} Avg weight: ${avgW.toFixed(2)}`;
+  }
+  
+  // REFLECTOR: self-audit
+  if (AGENTS.reflector.active && eval.verdict === 'RESTRICTED') {
+    results.reflector = `${AGENTS.reflector.symbol} Insufficient knowledge. Consider rephrasing or teaching me.`;
+  }
+  
+  return results;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// BINARY MODE
+// ═══════════════════════════════════════════════════════════════
+function computeBinary(input, eval) {
+  if (!BINARY_MODE.on) return null;
+  
+  // Look for yes/no patterns
+  const q = input.toLowerCase();
+  const isQuestion = /^(is|are|do|does|can|will|has|have|should|would|could)\s/.test(q);
+  
+  if (!isQuestion) return null;
+  
+  // Use confidence to determine yes/no
+  const answer = eval.confidence >= 0.5;
+  const pct = Math.round(eval.confidence * 100);
+  
+  return { answer, confidence: eval.confidence, pct };
+}
+
+// ═══════════════════════════════════════════════════════════════
+// RESPONSE BUILDING
+// ═══════════════════════════════════════════════════════════════
+function buildResponse(input, eval, tribunal, binary) {
+  // Binary mode: just yes/no
+  if (binary) {
+    return {
+      html: `<div class="binary-box ${binary.answer ? 'yes' : 'no'}">
+        <div class="binary-big">${binary.answer ? 'YES' : 'NO'}</div>
+        <div class="binary-pct">${binary.pct}% confidence</div>
+      </div>
+      <div class="logic-trace">trace: ${eval.trace}</div>`,
+      verdict: binary.answer ? 'INTEGRATED' : 'RESTRICTED'
+    };
+  }
+  
+  // No match
+  if (!eval.response) {
+    return {
+      html: `I do not have that in my offline brain. Try importing more knowledge, or ask something I might know.<br>
+      <div class="logic-trace">matched: none</div>`,
+      verdict: 'RESTRICTED'
+    };
+  }
+  
+  // Build agent trace
+  const agentLines = Object.values(tribunal).filter(a => a);
+  const traceHtml = agentLines.length 
+    ? `<div class="logic-trace">${agentLines.join(' → ')}</div>`
+    : '';
+  
+  // Truncate to max output
+  let response = eval.response;
+  if (response.length > MAX_OUTPUT) {
+    response = response.slice(0, MAX_OUTPUT) + '...';
+  }
+  
+  return {
+    html: `${response}${traceHtml}`,
+    verdict: eval.verdict
+  };
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SEND MESSAGE
+// ═══════════════════════════════════════════════════════════════
+function sendMsg() {
+  const input = document.getElementById('userInput');
+  const raw = input.value.trim();
+  if (!raw) return;
+  
+  // Input limit
+  if (raw.length > MAX_INPUT) {
+    addMsg('tru', `Input too long. Max ${MAX_INPUT} characters. Yours: ${raw.length}.`, { verdict: 'RESTRICTED' });
+    input.value = raw.slice(0, MAX_INPUT);
+    return;
+  }
+  
+  addMsg('user', raw);
+  input.value = '';
+  document.getElementById('charCount').textContent = '';
+  
+  // Process
+  const eval = logosEvaluate(raw);
+  const tribunal = runTribunal(raw, eval);
+  const binary = computeBinary(raw, eval);
+  const response = buildResponse(raw, eval, tribunal, binary);
+  
+  addMsg('tru', response.html, { verdict: response.verdict });
+  
+  // Auto-learn high-confidence
+  if (eval.confidence >= 0.9 && eval.matched[0] && !BRAIN.find(n => n.k === eval.matched[0].node.k)) {
+    const node = eval.matched[0].node;
+    BRAIN.push({ k: node.k, v: node.v, w: node.w || 0.8 });
+    saveBrain();
+    updateStatus();
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// BRAIN MANAGEMENT
+// ═══════════════════════════════════════════════════════════════
+function addNode(k, v, w = 0.75) {
+  if (!k || !v || k.length < 3 || v.length < 10) return false;
+  if (BRAIN.find(n => n.k === k)) return false;
+  BRAIN.push({ k, v, w });
+  saveBrain();
+  return true;
+}
+
+function saveBrain() {
+  localStorage.setItem(BRAIN_KEY, JSON.stringify(BRAIN));
+}
+
+function updateStatus() {
+  document.getElementById('statAxioms').textContent = AXIOMS.length;
+  document.getElementById('statCore').textContent = MC.length;
+  document.getElementById('statBrain').textContent = BRAIN.length;
+  document.getElementById('statMode').textContent = BINARY_MODE.on ? 'BINARY' : 'FULL';
+}
+
+// ═══════════════════════════════════════════════════════════════
+// IMPORT/EXPORT
+// ═══════════════════════════════════════════════════════════════
+function openImport() {
+  document.getElementById('importModal').classList.remove('hidden');
+  document.getElementById('brainText').value = '';
+  document.getElementById('importResult').innerHTML = '';
+}
+
+function closeImport() {
+  document.getElementById('importModal').classList.add('hidden');
+}
+
+function handleBrainFile(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    document.getElementById('brainText').value = ev.target.result;
+  };
+  reader.readAsText(file);
+}
+
+function importBrain() {
+  const text = document.getElementById('brainText').value.trim();
+  if (!text) {
+    document.getElementById('importResult').innerHTML = '<span style="color:var(--RESTRICTED)">No input provided.</span>';
+    return;
+  }
+  
+  try {
+    const data = JSON.parse(text);
+    const nodes = data.nodes || (Array.isArray(data) ? data : []);
+    
+    let count = 0, rejected = 0;
+    for (const n of nodes) {
+      if (addNode(n.k, n.v, n.w || 0.75)) count++;
+      else rejected++;
+    }
+    
+    document.getElementById('importResult').innerHTML = `<span style="color:var(--INTEGRATED)">✓ Imported ${count} nodes. Rejected ${rejected}. Brain: ${BRAIN.length}.</span>`;
+    updateStatus();
+    setTimeout(closeImport, 1500);
+  } catch (err) {
+    document.getElementById('importResult').innerHTML = `<span style="color:var(--RESTRICTED)">Parse error: ${err.message}</span>`;
+  }
+}
+
+function exportBrain() {
+  const data = {
+    version: 'tru_v53_offline',
+    exported: new Date().toISOString(),
+    total_nodes: BRAIN.length + MC.length + AXIOMS.length,
+    brain: BRAIN,
+    core: MC,
+    axioms: AXIOMS
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `tru_v53_brain_${Date.now()}.json`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// UI HELPERS
+// ═══════════════════════════════════════════════════════════════
+function toggleBinary() {
+  BINARY_MODE.on = !BINARY_MODE.on;
+  document.getElementById('binaryCheck').checked = BINARY_MODE.on;
+  document.getElementById('binaryLabel').textContent = BINARY_MODE.on ? 'BINARY: ON' : 'BINARY: OFF';
+  document.getElementById('binaryToggle').classList.toggle('on', BINARY_MODE.on);
+  updateStatus();
+}
+
+function checkInput() {
+  const input = document.getElementById('userInput');
+  const len = input.value.length;
+  const count = document.getElementById('charCount');
+  count.textContent = len > 0 ? `${len}/${MAX_INPUT}` : '';
+  count.classList.toggle('warning', len > MAX_INPUT * 0.9);
+}
+
+function addMsg(role, html, meta = {}) {
+  const chat = document.getElementById('chat');
+  const div = document.createElement('div');
+  div.className = 'msg ' + role;
+  
+  if (role === 'tru') {
+    const verdictColors = {
+      TRUTH: 'var(--TRUTH)', INTEGRATED: 'var(--INTEGRATED)', NEUTRAL: 'var(--PROBATIONARY)',
+      RESTRICTED: 'var(--RESTRICTED)', DISCARD: 'var(--DISCARD)'
+    };
+    const vColor = verdictColors[meta.verdict] || 'var(--muted)';
+    div.innerHTML = `<div class="msg-label"><span>TRU</span><span class="msg-verdict" style="color:${vColor}">${meta.verdict}</span></div>${html}`;
+  } else {
+    div.innerHTML = html;
+  }
+  
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+document.getElementById('userInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMsg(); }
+});
+</script>
+</body>
+</html>

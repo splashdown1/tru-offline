@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.19171",
+  "title": "HistCAD: A Constraint-Aware Parametric History-Based CAD Representation, Dataset, and Benchmark with Industrial Complexity",
+  "abstract": "Parametric CAD sequences are reusable because dimensional and geometric constraints govern how parameter changes propagate. Existing CAD generation datasets and benchmarks emphasize reconstruction fidelity, execution validity, or static shape similarity, leaving preservation of design intent under edits largely unmeasured. We introduce HistCAD, a representation standard, dataset, and benchmark for executable parametric CAD with explicit constraints. HistCAD defines an intermediate language independent of CAD software, recording sketch primitives, constraints, feature operations, and 3D point boundary references for operations such as fillet and chamfer. The dataset contains 170,236 executable sequences aligned with native CAD models, STEP files, rendered views, and text annotations, combining academic scale with professionally authored industrial complexity. Building on this representation, the Constraint-Aware Editability Benchmark applies parameter edits and reports Edit Reachability, conditional preserved constraint satisfaction, and Overall Editable Success, abbreviated ER, cPCSR, and OES; these metrics separate failures to reach a valid edited state from failures to preserve required constraints. Experiments show that explicit constraints are essential for preserving design intent after edits, and that HistCAD supports supervised CAD generation from text and direct LLM workflows. We argue that HistCAD reframes CAD generation from static shape imitation to the synthesis of reusable parametric sequences with explicit constraints.",
+  "link": "https://arxiv.org/abs/2602.19171",
+  "category": "cs.AI",
+  "categories": [
+    "cs.GR",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358847Z"
+}

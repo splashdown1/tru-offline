@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2510.04500",
+  "title": "Expand Neurons, Not Parameters",
+  "abstract": "This work demonstrates how increasing the number of neurons in a network without increasing its total number of non-zero parameters improves performance. We show that this gain corresponds with a decrease in interference between multiple features that would otherwise share the same neurons. On symbolic Boolean tasks, splitting each neuron into sparser sub-neurons with knowledge of the clauses systematically reduces polysemanticity metrics and yields higher task accuracy. Notably, even random splits of neuron weights approximate these gains, indicating that reduced collisions, not precise assignment, are a primary driver. Consistent with the superposition hypothesis, the benefits of this framework grow with increasing interference: when polysemantic load is high, accuracy improvements are the largest. Transferring these insights to more realistic models, including classifiers over CLIP embeddings, convolutional neural networks, and deeper multilayer networks, we find that widening networks while maintaining a constant non-zero parameter count consistently increases accuracy. These results identify an interpretability-grounded mechanism to leverage width against superposition, improving performance without increasing the number of non-zero parameters. Such a direction is well matched to modern accelerators, where memory movement of non-zero parameters, rather than raw compute, is often a dominant bottleneck.",
+  "link": "https://arxiv.org/abs/2510.04500",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883948+00:00"
+}

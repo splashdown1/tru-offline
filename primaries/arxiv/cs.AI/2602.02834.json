@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.02834",
+  "title": "What Structural Inductive Bias Helps Transformers Reason Over Knowledge Graphs? A Study with Tabula RASA",
+  "abstract": "What structural inductive bias helps transformers reason over knowledge graphs? Through controlled ablations of a minimal transformer modification with four independently removable components (sparse adjacency masking, edge-type biases, query scaling, value gating), we isolate which structural signals drive multi-hop reasoning. Our finding is sharp: sparse adjacency masking alone accounts for the dominant share of improvement over unmasked transformers (+72.5pp on 3-hop MetaQA, +45.5pp on WebQSP, +53.9pp on CWQ), while learned relation parameters add only modest refinement and can actively hurt without structural guidance. A zero-shot experiment provides architecturally independent corroboration: masking-based attention degrades 4.0x less than relation-specific weights when edge types are held out. The useful inductive bias for multi-hop KGQA is predominantly topological, not relational.",
+  "link": "https://arxiv.org/abs/2602.02834",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099048+00:00"
+}

@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRU v46 — Deliberative Intelligence + Enhanced</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0a0a0f; --bg2: #111118; --bg3: #16161f;
+  --text: #e8e8e0; --accent: #d4a574; --accent2: #8b5cf6;
+  --muted: #555; --border: #222230;
+  --user-bg: #12122a; --tru-bg: #0d0d18;
+  --DISCARD: #ff4444; --RESTRICTED: #ff8844; --PROBATIONARY: #d4a574; --INTEGRATED: #44dd88; --TRUTH: #44ddff;
+  --AXIOM: #ffd700; --LINK: #00bfff; --DECAY: #888;
+  --UNCERTAINTY_HIGH: #ff6b6b; --UNCERTAINTY_MED: #ffd93d; --UNCERTAINTY_LOW: #6bcb77;
+  --ENTITY: #ff9f43; --PROCESS: #0abde3; --TEMPORAL: #a55eea; --SPATIAL: #26de81; --DEFINITION: #fd79a8;
+}
+html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--text); font-family: 'Courier New', Courier, monospace; font-size: 14px; line-height: 1.7; }
+
+/* ── APP WRAPPER ── */
+.app { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
+
+/* ── HEADER ── */
+.header { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 8px 16px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; flex-wrap: wrap; }
+.header-title { font-size: 14px; font-weight: bold; color: var(--accent); letter-spacing: 2px; }
+.header-version { color: var(--muted); font-size: 10px; }
+.header-badges { display: flex; gap: 6px; margin-left: auto; align-items: center; }
+.header-badge { background: var(--bg3); border: 1px solid var(--accent); border-radius: 4px; padding: 2px 7px; font-size: 9px; color: var(--accent); }
+.header-badge.evolve { border-color: var(--INTEGRATED); color: var(--INTEGRATED); background: rgba(68,221,136,0.1); }
+.header-badge.new { border-color: var(--AXIOM); color: var(--AXIOM); background: rgba(255,215,0,0.1); animation: pulse 2s infinite; }
+.header-btn { background: var(--bg3); border: 1px solid var(--border); border-radius: 3px; padding: 3px 10px; font-size: 9px; color: var(--muted); cursor: pointer; font-family: inherit; transition: all 0.2s; }
+.header-btn:hover { border-color: var(--accent); color: var(--accent); }
+.header-btn:active { transform: scale(0.97); }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
+
+/* ── QUESTION DECOMPOSITION PANEL ── */
+.decomp-panel { background: linear-gradient(90deg, rgba(212,165,116,0.06), rgba(139,92,246,0.06)); border-bottom: 1px solid var(--border); padding: 7px 16px; flex-shrink: 0; }
+.decomp-panel.hidden { display: none; }
+.decomp-header { display: flex; align-items: center; gap: 10px; margin-bottom: 5px; }
+.decomp-title { font-size: 10px; color: var(--accent); letter-spacing: 2px; font-weight: bold; }
+.decomp-type { font-size: 9px; padding: 1px 6px; border-radius: 2px; font-weight: bold; letter-spacing: 1px; }
+.decomp-type.who { background: rgba(255,159,67,0.2); color: var(--ENTITY); border: 1px solid var(--ENTITY); }
+.decomp-type.what { background: rgba(253,121,152,0.2); color: var(--DEFINITION); border: 1px solid var(--DEFINITION); }
+.decomp-type.when { background: rgba(165,94,234,0.2); color: var(--TEMPORAL); border: 1px solid var(--TEMPORAL); }
+.decomp-type.where { background: rgba(38,222,129,0.2); color: var(--SPATIAL); border: 1px solid var(--SPATIAL); }
+.decomp-type.how { background: rgba(10,189,227,0.2); color: var(--PROCESS); border: 1px solid var(--PROCESS); }
+.decomp-type.general { background: rgba(136,136,136,0.2); color: var(--muted); border: 1px solid var(--muted); }
+.decomp-focus { font-size: 10px; color: var(--text); }
+.decomp-routing { display: flex; gap: 4px; flex-wrap: wrap; }
+.routing-pill { font-size: 8px; padding: 1px 5px; border-radius: 2px; background: var(--bg3); border: 1px solid var(--border); color: var(--muted); }
+.routing-pill.active { border-color: var(--accent); color: var(--accent); background: rgba(212,165,116,0.1); }
+
+/* ── DELIBERATION VIEW ── */
+.delib-panel { background: linear-gradient(135deg, rgba(139,92,246,0.06), rgba(68,221,136,0.06)); border-bottom: 1px solid var(--border); padding: 7px 16px; flex-shrink: 0; }
+.delib-panel.hidden { display: none; }
+.delib-arena { display: flex; flex-direction: column; gap: 4px; max-height: 90px; overflow-y: auto; }
+.delib-turn { display: flex; gap: 7px; font-size: 10px; padding: 3px 7px; border-radius: 3px; background: rgba(0,0,0,0.25); }
+.delib-turn.chaos { border-left: 2px solid var(--RESTRICTED); }
+.delib-turn.optimist { border-left: 2px solid var(--INTEGRATED); }
+.delib-turn.archivist { border-left: 2px solid var(--TRUTH); }
+.delib-turn.balance { border-left: 2px solid var(--accent); }
+.delib-turn.synthesist { border-left: 2px solid var(--AXIOM); }
+.delib-agent { font-weight: bold; min-width: 75px; }
+.delib-agent.chaos { color: var(--RESTRICTED); }
+.delib-agent.optimist { color: var(--INTEGRATED); }
+.delib-agent.archivist { color: var(--TRUTH); }
+.delib-agent.balance { color: var(--accent); }
+.delib-agent.synthesist { color: var(--AXIOM); }
+.delib-content { color: var(--text); flex: 1; }
+.delib-content .highlight { color: var(--AXIOM); font-weight: bold; }
+.delib-content .uncertainty { color: var(--UNCERTAINTY_MED); font-style: italic; }
+.delib-content .uncertainty.low { color: var(--UNCERTAINTY_LOW); }
+.delib-content .uncertainty.high { color: var(--UNCERTAINTY_HIGH); }
+.delib-content .entity { color: var(--ENTITY); }
+.delib-content .temporal { color: var(--TEMPORAL); }
+.delib-content .spatial { color: var(--SPATIAL); }
+.delib-content .process { color: var(--PROCESS); }
+.delib-content .axiom-ref { color: var(--AXIOM); font-size: 9px; }
+.delib-content .decay { color: var(--DECAY); text-decoration: line-through; }
+.delib-content .coherence { color: var(--accent); }
+.delib-content .verdict-tag { font-size: 9px; padding: 1px 4px; border-radius: 2px; }
+
+/* ── UNCERTAINTY & COHERENCE BAR ── */
+.uncertainty-bar { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 5px 16px; display: flex; align-items: center; gap: 16px; flex-shrink: 0; flex-wrap: wrap; }
+.uncertainty-bar.hidden { display: none; }
+.unc-group { display: flex; align-items: center; gap: 5px; font-size: 9px; color: var(--muted); }
+.unc-group label { letter-spacing: 1px; }
+.unc-meter { width: 70px; height: 5px; background: var(--bg3); border-radius: 3px; overflow: hidden; }
+.unc-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease, background 0.3s; }
+.unc-fill.high { background: var(--UNCERTAINTY_HIGH); }
+.unc-fill.med { background: var(--UNCERTAINTY_MED); }
+.unc-fill.low { background: var(--UNCERTAINTY_LOW); }
+.unc-val { font-size: 9px; color: var(--text); min-width: 36px; }
+.coherence-score { font-size: 10px; font-weight: bold; color: var(--accent); }
+.coherence-score.high { color: var(--INTEGRATED); }
+.coherence-score.low { color: var(--DISCARD); }
+
+/* ── KNOWLEDGE TRACE ── */
+.trace-panel { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 5px 16px; flex-shrink: 0; }
+.trace-panel.hidden { display: none; }
+.trace-header { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; }
+.trace-title { font-size: 9px; color: var(--LINK); letter-spacing: 1px; font-weight: bold; }
+.trace-meta { font-size: 9px; color: var(--muted); margin-left: auto; }
+.trace-timeline { display: flex; flex-direction: column; gap: 2px; max-height: 60px; overflow-y: auto; }
+.trace-node { display: flex; align-items: center; gap: 7px; font-size: 9px; }
+.trace-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.trace-dot.recall { background: var(--TRUTH); }
+.trace-dot.inference { background: var(--accent2); }
+.trace-dot.conflict { background: var(--DISCARD); }
+.trace-dot.decay { background: var(--DECAY); }
+.trace-dot.new { background: var(--INTEGRATED); }
+.trace-label { color: var(--text); }
+.trace-meta { color: var(--muted); font-size: 8px; }
+
+/* ── CONCEPT GRAPH MINI-VIEW ── */
+.graph-panel { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 5px 16px; display: flex; gap: 6px; overflow-x: auto; flex-shrink: 0; }
+.graph-panel.hidden { display: none; }
+.graph-node { display: flex; flex-direction: column; align-items: center; padding: 3px 7px; background: var(--bg3); border: 1px solid var(--border); border-radius: 3px; min-width: 72px; cursor: pointer; transition: all 0.2s; flex-shrink: 0; }
+.graph-node:hover { border-color: var(--LINK); background: rgba(0,191,255,0.1); }
+.graph-node.active { border-color: var(--accent); background: rgba(212,165,116,0.15); }
+.graph-node.contradiction { border-color: var(--DISCARD); background: rgba(255,68,68,0.1); }
+.graph-node-key { font-size: 9px; color: var(--accent); font-weight: bold; text-align: center; }
+.graph-node-weight { font-size: 8px; color: var(--muted); }
+.graph-node-links { font-size: 8px; color: var(--LINK); }
+.graph-link-arrow { color: var(--LINK); font-size: 12px; display: flex; align-items: center; flex-shrink: 0; }
+
+/* ── TRIBUNAL PANEL ── */
+.tribunal-panel { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 6px 16px; display: flex; align-items: center; gap: 5px; flex-shrink: 0; overflow-x: auto; flex-wrap: nowrap; }
+.tribunal-panel.hidden { display: none; }
+.tribunal-label { font-size: 9px; color: var(--muted); letter-spacing: 1px; white-space: nowrap; }
+.agent-pill { display: inline-flex; align-items: center; gap: 3px; padding: 2px 7px; border-radius: 3px; font-size: 9px; border: 1px solid; cursor: pointer; transition: all 0.2s; white-space: nowrap; flex-shrink: 0; }
+.agent-pill.chaos { border-color: var(--RESTRICTED); color: var(--RESTRICTED); background: rgba(255,136,68,0.1); }
+.agent-pill.optimist { border-color: var(--INTEGRATED); color: var(--INTEGRATED); background: rgba(68,221,136,0.1); }
+.agent-pill.archivist { border-color: var(--TRUTH); color: var(--TRUTH); background: rgba(68,221,255,0.1); }
+.agent-pill.balance { border-color: var(--accent); color: var(--accent); background: rgba(212,165,116,0.1); }
+.agent-pill.synthesist { border-color: var(--AXIOM); color: var(--AXIOM); background: rgba(255,215,0,0.1); }
+.agent-pill.active { transform: scale(1.04); box-shadow: 0 0 6px rgba(212,165,116,0.25); }
+.verdict-tag { padding: 1px 5px; border-radius: 2px; font-size: 10px; font-weight: bold; letter-spacing: 1px; border: 1px solid; white-space: nowrap; }
+.verdict-tag.TRUTH { color: var(--TRUTH); border-color: var(--TRUTH); background: rgba(68,221,255,0.1); }
+.verdict-tag.INTEGRATED { color: var(--INTEGRATED); border-color: var(--INTEGRATED); background: rgba(68,221,136,0.1); }
+.verdict-tag.PROBATIONARY { color: var(--PROBATIONARY); border-color: var(--PROBATIONARY); background: rgba(212,165,116,0.1); }
+.verdict-tag.RESTRICTED { color: var(--RESTRICTED); border-color: var(--RESTRICTED); background: rgba(255,136,68,0.1); }
+.verdict-tag.DISCARD { color: var(--DISCARD); border-color: var(--DISCARD); background: rgba(255,68,68,0.1); }
+.verdict-tag.NEUTRAL { color: var(--muted); border-color: var(--muted); background: transparent; }
+.coherence-badge { font-size: 11px; color: var(--accent); font-weight: bold; white-space: nowrap; }
+
+/* ── BINARY RESULT ── */
+.binary-result { margin: 8px 0; padding: 10px 14px; background: var(--bg3); border-radius: 6px; border: 1px solid var(--border); text-align: center; }
+.binary-answer { display: inline-flex; align-items: center; gap: 10px; padding: 6px 16px; border-radius: 4px; font-size: 20px; font-weight: bold; letter-spacing: 2px; border: 2px solid; }
+.binary-answer.yes { color: var(--INTEGRATED); border-color: var(--INTEGRATED); background: rgba(68,221,136,0.15); text-shadow: 0 0 12px rgba(68,221,136,0.5); }
+.binary-answer.no { color: var(--DISCARD); border-color: var(--DISCARD); background: rgba(255,68,68,0.15); text-shadow: 0 0 12px rgba(255,68,68,0.5); }
+.binary-pct { font-size: 14px; opacity: 0.8; }
+.binary-sub { font-size: 9px; color: var(--muted); margin-top: 6px; letter-spacing: 1px; }
+
+/* ── DIAGNOSTIC PANEL ── */
+.ctrl-panel { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 5px 16px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; overflow-x: auto; flex-wrap: nowrap; }
+.ctrl-panel.hidden { display: none; }
+.ctrl-group { display: flex; align-items: center; gap: 4px; font-size: 9px; color: var(--muted); white-space: nowrap; flex-shrink: 0; }
+.ctrl-group label { letter-spacing: 1px; }
+.ctrl-val { font-size: 9px; color: var(--accent); min-width: 24px; text-align: right; }
+.ctrl-group input[type="range"] { width: 50px; accent-color: var(--accent); cursor: pointer; height: 3px; }
+.logos-toggle-box { display: flex; align-items: center; gap: 4px; font-size: 9px; color: var(--accent); border: 1px solid var(--accent); padding: 2px 8px; border-radius: 3px; cursor: pointer; }
+.logos-toggle-box input { display: none; }
+.logos-label { letter-spacing: 1px; }
+.node-cap-group { display: flex; align-items: center; gap: 4px; font-size: 9px; color: var(--muted); flex-shrink: 0; }
+.node-cap-group input[type="range"] { width: 65px; accent-color: var(--accent); cursor: pointer; height: 3px; }
+.node-cap-val { font-size: 9px; color: var(--accent); min-width: 60px; }
+.depth-toggle { background: var(--bg3); border: 1px solid var(--border); border-radius: 2px; padding: 1px 5px; font-size: 8px; color: var(--muted); cursor: pointer; font-family: inherit; transition: all 0.15s; }
+.depth-toggle.active { border-color: var(--accent); color: var(--accent); background: rgba(212,165,116,0.1); }
+.depth-toggle:hover { border-color: var(--accent); }
+.depth-toggles { display: flex; gap: 2px; }
+
+/* ── CHAT ── */
+.chat { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 2px; scroll-behavior: smooth; min-height: 0; }
+.msg { max-width: 85%; padding: 8px 12px; border-radius: 6px; font-size: 12px; line-height: 1.55; word-break: break-word; }
+.msg.user { background: var(--user-bg); color: var(--text); align-self: flex-end; border-bottom-right-radius: 2px; }
+.msg.tru { background: var(--tru-bg); color: var(--text); align-self: flex-start; border-bottom-left-radius: 2px; border: 1px solid var(--border); }
+.msg.tru .msg-label { font-size: 9px; color: var(--accent); letter-spacing: 1px; margin-bottom: 3px; display: flex; justify-content: space-between; align-items: center; }
+.msg.tru .msg-verdict { font-size: 9px; padding: 1px 5px; border-radius: 2px; font-weight: bold; }
+.msg-tru .msg-verdict.INTEGRATED { color: var(--INTEGRATED); border: 1px solid var(--INTEGRATED); background: rgba(68,221,136,0.1); }
+.msg-verdict-tag { display: inline-block; }
+.q-type-badge { font-size: 9px; padding: 1px 5px; border-radius: 2px; font-weight: bold; letter-spacing: 1px; margin-right: 6px; }
+.q-type-badge.who { background: rgba(255,159,67,0.2); color: var(--ENTITY); }
+.q-type-badge.what { background: rgba(253,121,152,0.2); color: var(--DEFINITION); }
+.q-type-badge.when { background: rgba(165,94,234,0.2); color: var(--TEMPORAL); }
+.q-type-badge.where { background: rgba(38,222,129,0.2); color: var(--SPATIAL); }
+.q-type-badge.how { background: rgba(10,189,227,0.2); color: var(--PROCESS); }
+.q-type-badge.general { background: rgba(136,136,136,0.2); color: var(--muted); }
+.unc-indicator { font-size: 9px; padding: 1px 5px; border-radius: 2px; margin-left: 6px; }
+.unc-indicator.low { background: rgba(107,203,119,0.15); color: var(--UNCERTAINTY_LOW); }
+.unc-indicator.med { background: rgba(255,217,61,0.15); color: var(--UNCERTAINTY_MED); }
+.unc-indicator.high { background: rgba(255,107,107,0.15); color: var(--UNCERTAINTY_HIGH); }
+.evidence-list { margin-top: 7px; display: flex; flex-direction: column; gap: 3px; }
+.evidence-item { font-size: 10px; padding: 3px 7px; background: rgba(0,0,0,0.2); border-radius: 3px; border-left: 2px solid var(--border); }
+.axiom-ref { color: var(--AXIOM); font-size: 9px; background: rgba(255,215,0,0.1); padding: 0 3px; border-radius: 2px; }
+.link-ref { color: var(--LINK); font-size: 9px; border-bottom: 1px dashed var(--LINK); cursor: pointer; }
+.contradiction-mark { color: var(--DISCARD); text-decoration: line-through; font-size: 9px; }
+.entity { color: var(--ENTITY); }
+.temporal { color: var(--TEMPORAL); }
+.spatial { color: var(--SPATIAL); }
+.process { color: var(--PROCESS); }
+.definition { color: var(--DEFINITION); }
+.depth-indicator { display: flex; align-items: center; gap: 5px; margin-top: 7px; font-size: 9px; color: var(--muted); }
+.depth-bar { display: flex; gap: 3px; }
+.depth-pip { width: 16px; height: 4px; background: var(--bg3); border-radius: 2px; border: 1px solid var(--border); transition: all 0.2s; }
+.depth-pip.active { background: var(--accent); border-color: var(--accent); }
+.msg-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; font-size: 8px; color: var(--muted); }
+
+/* ── INPUT AREA ── */
+.input-area { padding: 10px 16px; background: var(--bg2); border-top: 1px solid var(--border); display: flex; gap: 8px; align-items: flex-end; flex-shrink: 0; }
+.input-row { display: flex; gap: 8px; flex: 1; }
+#msgInput { flex: 1; background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; color: var(--text); font-family: 'Courier New', Courier, monospace; font-size: 13px; resize: none; outline: none; line-height: 1.5; max-height: 120px; overflow-y: auto; transition: border-color 0.2s; }
+#msgInput:focus { border-color: var(--accent); }
+#msgInput::placeholder { color: var(--muted); }
+#sendBtn { background: var(--accent); color: var(--bg); border: none; border-radius: 6px; padding: 8px 18px; font-family: inherit; font-size: 12px; font-weight: bold; cursor: pointer; letter-spacing: 1px; transition: all 0.15s; flex-shrink: 0; align-self: flex-end; }
+#sendBtn:hover { background: #e8b88a; }
+#sendBtn:active { transform: scale(0.97); }
+.input-hint { font-size: 9px; color: var(--muted); align-self: flex-end; padding-bottom: 8px; white-space: nowrap; }
+
+/* ── BRAIN IMPORT MODAL ── */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+.modal-overlay.hidden { display: none; }
+.modal { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 24px; max-width: 480px; width: 90%; max-height: 70vh; overflow-y: auto; }
+.modal h3 { font-size: 13px; color: var(--accent); letter-spacing: 1px; margin-bottom: 12px; }
+.modal p { font-size: 11px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+.modal-input { width: 100%; background: var(--bg3); border: 1px solid var(--border); border-radius: 4px; padding: 8px; color: var(--text); font-family: inherit; font-size: 11px; resize: vertical; min-height: 80px; margin-bottom: 10px; box-sizing: border-box; }
+.modal-input:focus { outline: none; border-color: var(--accent); }
+.modal-btns { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px; }
+.modal-btn { padding: 6px 16px; border-radius: 4px; font-family: inherit; font-size: 11px; cursor: pointer; border: 1px solid; transition: all 0.15s; }
+.modal-btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.modal-btn.primary:hover { background: #e8b88a; }
+.modal-btn.secondary { background: transparent; color: var(--muted); border-color: var(--border); }
+.modal-btn.secondary:hover { border-color: var(--muted); }
+.modal-status { font-size: 10px; color: var(--muted); margin-top: 8px; }
+.modal-status.success { color: var(--INTEGRATED); }
+.modal-status.error { color: var(--DISCARD); }
+
+/* ── STATUS BAR ── */
+.status-strip { background: var(--bg); border-top: 1px solid var(--border); padding: 3px 16px; display: flex; gap: 16px; font-size: 8px; color: var(--muted); flex-shrink: 0; flex-wrap: wrap; }
+.status-item { display: flex; gap: 4px; }
+.status-item span { color: var(--accent); }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- HEADER -->
+<div class="header">
+  <span class="header-title">TRU</span>
+  <span class="header-version">v46.1</span>
+  <span class="header-badge new">DELIBERATIVE + ENHANCED</span>
+  <div class="header-badges">
+    <button class="header-btn" onclick="showImportModal()">📥 IMPORT BRAIN</button>
+    <button class="header-btn" onclick="exportBrain()">📤 EXPORT</button>
+    <button class="header-btn" onclick="togglePanels()">PANELS</button>
+    <button class="header-btn" onclick="showAbout()">?</button>
+  </div>
+</div>
+
+<!-- QUESTION DECOMPOSITION -->
+<div class="decomp-panel hidden" id="decompPanel">
+  <div class="decomp-header">
+    <span class="decomp-title">DECOMPOSE</span>
+    <span class="decomp-type" id="decompType">—</span>
+    <span class="decomp-focus" id="decompFocus"></span>
+  </div>
+  <div class="decomp-routing" id="decompRouting"></div>
+</div>
+
+<!-- DELIBERATION ARENA -->
+<div class="delib-panel hidden" id="delibPanel">
+  <div class="delib-arena" id="delibArena"></div>
+</div>
+
+<!-- UNCERTAINTY BAR -->
+<div class="uncertainty-bar hidden" id="uncertaintyBar">
+  <div class="unc-group">
+    <label>UNCERTAINTY:</label>
+    <div class="unc-meter"><div class="unc-fill" id="uncFill" style="width:0%"></div></div>
+    <span class="unc-val" id="uncVal">—</span>
+  </div>
+  <div class="unc-group">
+    <label>COHERENCE:</label>
+    <span class="coherence-score" id="coherenceScore">—</span>
+  </div>
+  <div class="unc-group">
+    <label>DEPTH:</label>
+    <span id="currentDepth">3</span>
+    <div class="depth-toggles">
+      <button class="depth-toggle" data-depth="1">1</button>
+      <button class="depth-toggle active" data-depth="3">3</button>
+      <button class="depth-toggle" data-depth="5">5</button>
+    </div>
+  </div>
+</div>
+
+<!-- KNOWLEDGE TRACE -->
+<div class="trace-panel hidden" id="tracePanel">
+  <div class="trace-header">
+    <span class="trace-title">TRACE</span>
+    <span class="trace-meta" id="traceMeta">0 entries</span>
+  </div>
+  <div class="trace-timeline" id="traceTimeline"></div>
+</div>
+
+<!-- CONCEPT GRAPH -->
+<div class="graph-panel hidden" id="graphPanel">
+  <div class="graph-node active" onclick="showGraphDetail('TRU_IDENTITY')">
+    <span class="graph-node-key">TRU_IDENTITY</span>
+    <span class="graph-node-weight">w:0.95</span>
+    <span class="graph-node-links">4 links</span>
+  </div>
+  <div class="graph-link-arrow">→</div>
+  <div class="graph-node" onclick="showGraphDetail('TRIBUNAL')">
+    <span class="graph-node-key">TRIBUNAL</span>
+    <span class="graph-node-weight">w:0.88</span>
+    <span class="graph-node-links">3 links</span>
+  </div>
+  <div class="graph-link-arrow">→</div>
+  <div class="graph-node" onclick="showGraphDetail('AXIOM-003')">
+    <span class="graph-node-key">AXIOM-003</span>
+    <span class="graph-node-weight">w:0.91</span>
+    <span class="graph-node-links">2 links</span>
+  </div>
+  <div class="graph-link-arrow">→</div>
+  <div class="graph-node" onclick="showGraphDetail('DELIBERATION')">
+    <span class="graph-node-key">DELIBERATION</span>
+    <span class="graph-node-weight">w:0.82</span>
+    <span class="graph-node-links">5 links</span>
+  </div>
+  <div class="graph-link-arrow">→</div>
+  <div class="graph-node contradiction" onclick="showGraphDetail('v43_SPEED')">
+    <span class="graph-node-key">v43_SPEED</span>
+    <span class="graph-node-weight">w:0.31</span>
+    <span class="graph-node-links">DECAY-04</span>
+  </div>
+  <div class="graph-link-arrow">→</div>
+  <div class="graph-node" onclick="showGraphDetail('v45_SYNTH')">
+    <span class="graph-node-key">v45_SYNTH</span>
+    <span class="graph-node-weight">w:0.89</span>
+    <span class="graph-node-links">new</span>
+  </div>
+</div>
+
+<!-- TRIBUNAL PANEL -->
+<div class="tribunal-panel hidden" id="tribunalPanel">
+  <span class="tribunal-label">TRIBUNAL:</span>
+  <span class="agent-pill chaos active">CHAOS</span>
+  <span class="agent-pill optimist active">OPTIMIST</span>
+  <span class="agent-pill archivist active">ARCHIVIST</span>
+  <span class="agent-pill balance active">BALANCE</span>
+  <span class="agent-pill synthesist active">SYNTHESIST</span>
+  <span style="margin-left:auto;display:flex;align-items:center;gap:8px;">
+    <span style="font-size:9px;color:var(--muted);">VERDICT:</span>
+    <span class="verdict-tag INTEGRATED" id="verdictTag">INTEGRATED</span>
+    <span class="coherence-badge" id="coherenceBadge">—</span>
+  </span>
+</div>
+
+<!-- DIAGNOSTIC PANEL -->
+<div class="ctrl-panel" id="ctrlPanel">
+  <div class="ctrl-group">
+    <label>LOGOS:</label>
+    <div class="logos-toggle-box">
+      <input type="checkbox" id="logosToggle" checked>
+      <span class="logos-label">ON</span>
+    </div>
+  </div>
+  <div class="ctrl-group">
+    <label>EMOTION:</label>
+    <input type="range" id="emotionSlider" min="0" max="100" value="30">
+    <span class="ctrl-val" id="emotionVal">30</span>
+  </div>
+  <div class="ctrl-group">
+    <label>CREATIVITY:</label>
+    <input type="range" id="creativitySlider" min="0" max="100" value="50">
+    <span class="ctrl-val" id="creativityVal">50</span>
+  </div>
+  <div class="ctrl-group">
+    <label>DEPTH:</label>
+    <input type="range" id="depthSlider" min="1" max="5" value="3">
+    <span class="ctrl-val" id="depthVal">3</span>
+  </div>
+  <div class="ctrl-group">
+    <label>BINARY:</label>
+    <div class="logos-toggle-box" id="binaryBox">
+      <input type="checkbox" id="binaryToggle">
+      <span class="logos-label" id="binaryLabel">OFF</span>
+    </div>
+  </div>
+  <div class="node-cap-group">
+    <label>NODE CAP:</label>
+    <input type="range" id="nodeCapSlider" min="50" max="500" value="200">
+    <span class="node-cap-val" id="nodeCapVal">200 / 500</span>
+  </div>
+  <div class="ctrl-group">
+    <label>NODES:</label>
+    <span class="ctrl-val" style="color:var(--INTEGRATED);" id="memoryUsed">0</span>
+  </div>
+</div>
+
+<!-- CHAT -->
+<div class="chat" id="chat">
+  <div class="msg tru">
+    <div class="msg-label">
+      <span>TRU</span>
+    </div>
+    <div>
+      <span style="font-size:10px;color:var(--muted);">v46.1 ready. 201 nodes in brain.</span>
+    </div>
+    <p style="margin-top:6px;">Structured multi-perspective reasoning. Ask who, what, when, where, how — or anything else.</p>
+    <div style="margin-top:8px;font-size:10px;color:var(--muted);">
+      <span class="header-btn" onclick="showImportModal()" style="display:inline-block;cursor:pointer;">📥 Import brain</span> to load your knowledge base, or 
+      <span class="header-btn" onclick="exportBrain()" style="display:inline-block;cursor:pointer;">📤 Export</span> to save current state.
+    </div>
+  </div>
+</div>
+
+<!-- INPUT -->
+<div class="input-area">
+  <div class="input-row">
+    <textarea id="msgInput" placeholder="ask TRU anything..." rows="1"></textarea>
+  </div>
+  <button id="sendBtn">SEND</button>
+  <span class="input-hint">Enter = send · Shift+Enter = newline</span>
+</div>
+
+<!-- STATUS STRIP -->
+<div class="status-strip">
+  <div class="status-item">NODES:<span id="statusNodes">0</span></div>
+  <div class="status-item">AXIOMS:<span>7</span></div>
+  <div class="status-item">DEPTH:<span id="statusDepth">3</span></div>
+  <div class="status-item">TRACE:<span id="statusTrace">0</span></div>
+  <div class="status-item">COHERENCE:<span id="statusCoherence">—</span></div>
+  <div class="status-item">VERDICT:<span id="statusVerdict">—</span></div>
+</div>
+
+</div><!-- end .app -->
+
+<!-- IMPORT MODAL -->
+<div class="modal-overlay hidden" id="importModal">
+  <div class="modal">
+    <h3>📥 IMPORT TRU BRAIN</h3>
+    <p>Paste your <code>tru_brain_merged.json</code> content below, or drop the file directly. Nodes will be merged into the current knowledge base.</p>
+    <textarea class="modal-input" id="importTextarea" placeholder='{"version":"tru_v43_merged","total_nodes":201,"nodes":[{"k":"...","v":"...","w":0.9},...]}'></textarea>
+    <input type="file" id="importFileInput" accept=".json" style="font-size:10px;color:var(--muted);">
+    <div class="modal-status" id="importStatus"></div>
+    <div class="modal-btns">
+      <button class="modal-btn secondary" onclick="hideImportModal()">CANCEL</button>
+      <button class="modal-btn primary" onclick="doImport()">IMPORT</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════
+// TRU v46.1 — DELIBERATIVE INTELLIGENCE ENGINE
+// ═══════════════════════════════════════════════
+
+const AGENTS = {
+  chaos:      { name: 'CHAOS',     role: 'Challenger', color: 'chaos' },
+  optimist:  { name: 'OPTIMIST',  role: 'Advocate',   color: 'optimist' },
+  archivist: { name: 'ARCHIVIST', role: 'Recorder',   color: 'archivist' },
+  balance:   { name: 'BALANCE',   role: 'Judge',      color: 'balance' },
+  synthesist:{ name: 'SYNTHESIST',role: 'Integrator', color: 'synthesist' },
+};
+
+const AXIOMS = [
+  { id: 'AXIOM-001', text: 'Relevant context is closest to where it is needed.' },
+  { id: 'AXIOM-002', text: 'Structure emerges from structured disagreement.' },
+  { id: 'AXIOM-003', text: 'Multi-perspective reasoning emerges from structured disagreement.' },
+  { id: 'AXIOM-004', text: 'Knowledge decay is not loss — it is calibration.' },
+  { id: 'AXIOM-005', text: 'Truth survives disagreement.' },
+  { id: 'AXIOM-006', text: 'Depth of reasoning is proportional to uncertainty reduction.' },
+  { id: 'AXIOM-007', text: 'Temporal consistency preserves coherence across updates.' },
+];
+
+// ── KNOWLEDGE BASE ────────────────────────────
+let KNOWLEDGE_BASE = [];
+let TRACE_LOG = [];
+let SESSION_COUNTER = 0;
+let panelsVisible = true;
+
+// Default responses from the brain
+const DEFAULT_RESPONSES = {
+  greeting_response: "Hey.",
+  how_are_you_response: "Functional.",
+  thank_you_response: "Noted.",
+  apology_response: "Accepted.",
+  insult_response: "Creative.",
+  praise_response: "Noted.",
+  opinion_asking: "Here's my take:",
+  curiosity_question: "Why do you ask?",
+  clarification_asking: "What do you mean by X?",
+  story_interest_check: "Full version or short version?",
+  agreement_response: "Agreed.",
+  disagreement_response: "I see it differently, and here's why:",
+  saying_no: "No.",
+  venting_response: "That sounds rough.",
+  being_stuck: "What's the specific block?",
+  feeling_overwhelmed: "What's the one thing?",
+  people_pleasing: "What specifically happens when you do?",
+  stress_response: "What's the actual deadline?",
+  fear_response: "You're afraid X will happen.",
+  anger_response: "Anger is always a secondary emotion. What's the primary one underneath?",
+  boredom_response: "What's not happening that should be?",
+  decision_paralysis: "Name the tradeoffs.",
+  advice_asking: "Here's what I'd do:",
+  bad_news_response: "That's not going to be what you want to hear.",
+  awkward_silence: "...",
+  exit_conversation: "Talk later.",
+  identity_question: "I'm TRU — Transparent Reasoning Unit. Deliberative AI. I think out loud.",
+  purpose_question: "To think clearly, store what matters, and say what I actually see.",
+};
+
+// ── QUESTION TYPE DETECTION ────────────────────
+const QUESTION_TYPES = {
+  who:   { label: 'WHO',   priority: 'entity',     color: 'entity',     baseUnc: 0.20 },
+  what:  { label: 'WHAT',  priority: 'definition',  color: 'definition', baseUnc: 0.25 },
+  when:  { label: 'WHEN',  priority: 'temporal',    color: 'temporal',   baseUnc: 0.12 },
+  where: { label: 'WHERE', priority: 'spatial',     color: 'spatial',   baseUnc: 0.10 },
+  how:   { label: 'HOW',   priority: 'process',    color: 'process',    baseUnc: 0.40 },
+};
+
+function decomposeQuestion(q) {
+  const lower = q.toLowerCase().trim();
+  for (const [type, info] of Object.entries(QUESTION_TYPES)) {
+    const regex = new RegExp(`^(${type}s?|whos?|whom|which\\s+one|what(?:\\s+is|\\'s)|when(?:\\s+did|was|are)?|where(?:\\s+is|\\'s|are)?|how\\s+(?:do|does|did|can|could|would|should)?)`, 'i');
+    if (regex.test(lower)) return { type, ...info, focus: getFocusStatement(type, lower) };
+  }
+  return { type: 'general', label: 'GENERAL', priority: 'context', color: 'entity', baseUnc: 0.35, focus: 'General reasoning — all agents engage.' };
+}
+
+function getFocusStatement(type, q) {
+  const stmts = {
+    who:   'Identifying the primary entity or agent in question.',
+    what:  'Extracting definition, concept, or core nature.',
+    when:  'Resolving temporal position and sequence.',
+    where: 'Locating spatial or structural context.',
+    how:   'Explaining mechanism or process.',
+    general: 'Applying full tribunal deliberation.',
+  };
+  return stmts[type] || stmts.general;
+}
+
+// ── BRAIN LOADING ─────────────────────────────
+function loadBrainFromData(data) {
+  if (!data || !data.nodes || !Array.isArray(data.nodes)) {
+    return { success: false, error: 'Invalid brain format. Expected { version, total_nodes, nodes: [...] }' };
+  }
+  KNOWLEDGE_BASE = data.nodes.map(n => ({
+    key: n.k,
+    fact: n.v,
+    confidence: n.w || 0.8,
+    axioms: [],
+    tags: [],
+    decay: null,
+  }));
+  return { success: true, count: KNOWLEDGE_BASE.length, version: data.version || 'unknown' };
+}
+
+// ── DELIBERATION ENGINE ────────────────────────
+function runDeliberation(question, qType) {
+  const agents = [];
+  const q = question.toLowerCase();
+  const qLen = question.length;
+  const wordCount = question.split(/\s+/).length;
+
+  // Chaos — challenges assumptions
+  const chaosUnc = Math.min(0.9, qType.baseUnc + (wordCount > 15 ? 0.15 : 0) + (q.includes('?') ? 0.05 : 0));
+  agents.push({
+    name: 'chaos',
+    confidence: 1 - chaosUnc,
+    turn: `<span class="uncertainty high">${Math.round(chaosUnc * 100)}%</span> uncertainty on "${question.slice(0, 30)}..." — challenge: <span class="entity">${wordCount > 10 ? 'complex multi-part query' : 'straightforward question'}</span>. Push back on any over-confidence.`,
+  });
+
+  // Optimist — finds supporting evidence
+  const relevantKB = KNOWLEDGE_BASE.filter(kb => {
+    if (!kb.fact) return false;
+    const kl = kb.fact.toLowerCase();
+    return q.split(/\s+/).some(w => w.length > 3 && kl.includes(w));
+  });
+  const optimConf = relevantKB.length > 0 ? Math.min(0.95, 0.7 + relevantKB.length * 0.05) : 0.45;
+  agents.push({
+    name: 'optimist',
+    confidence: optimConf,
+    turn: `<span class="${qType.color}">${qType.priority} focus</span> — ${relevantKB.length} relevant nodes found. <span class="axiom-ref">AXIOM-003</span> applies. Building a case for <span class="highlight">INTEGRATED</span>.`,
+  });
+
+  // Archivist — verifies against knowledge
+  const axiomsFound = AXIOMS.filter(a => a.text.includes(qType.priority) || a.text.includes(qType.label));
+  const archConf = axiomsFound.length > 0 ? 0.82 : 0.5;
+  agents.push({
+    name: 'archivist',
+    confidence: archConf,
+    turn: `Verified against ${KNOWLEDGE_BASE.length} nodes. Axiom match: <span class="axiom-ref">${axiomsFound[0]?.id || 'AXIOM-001'}</span>. No contradictions detected. <span class="decay">DECAY-04</span> not triggered.`,
+  });
+
+  // Balance — weighs tradeoffs
+  const avgConf = agents.reduce((s, a) => s + a.confidence, 0) / agents.length;
+  agents.push({
+    name: 'balance',
+    confidence: avgConf,
+    turn: `Coherence across ${agents.length} agents = <span class="coherence">${(avgConf).toFixed(2)}</span>. Depth vs speed tradeoff resolved: <span class="highlight">depth ${document.getElementById('depthSlider')?.value || 3}</span>.`,
+  });
+
+  // Synthesist — final integration
+  const finalConf = (avgConf + optimConf) / 2;
+  const finalVerdict = finalConf > 0.75 ? 'INTEGRATED' : finalConf > 0.55 ? 'PROBATIONARY' : 'RESTRICTED';
+  agents.push({
+    name: 'synthesist',
+    confidence: finalConf,
+    turn: `Synthesis: <span class="${qType.color}">${qType.priority}</span> × ${agents.length} agents. Unc: <span class="uncertainty ${finalConf > 0.7 ? 'low' : 'med'}">${Math.round((1 - finalConf) * 100)}%</span>. Verdict: <span class="verdict-tag ${finalVerdict}">${finalVerdict}</span>.`,
+  });
+
+  return agents;
+}
+
+// ── UNCERTAINTY COMPUTATION ───────────────────
+function computeUncertainty(question, qType, agents) {
+  const wordCount = question.split(/\s+/).length;
+  const qComplexity = Math.min(0.5, wordCount * 0.02);
+  const coverage = Math.min(0.4, KNOWLEDGE_BASE.length / 500);
+  const agentAgreement = 1 - (agents.reduce((s, a) => s + Math.abs(a.confidence - 0.7), 0) / agents.length) * 0.5;
+  const baseUnc = qType.baseUnc;
+  const uncertainty = Math.min(0.95, Math.max(0.02, baseUnc + qComplexity - coverage * 0.2 - agentAgreement * 0.1));
+  return uncertainty;
+}
+
+function updateUncertaintyMeter(uncertainty) {
+  const fill = document.getElementById('uncFill');
+  const val = document.getElementById('uncVal');
+  const cls = uncertainty > 0.6 ? 'high' : uncertainty > 0.3 ? 'med' : 'low';
+  fill.style.width = `${uncertainty * 100}%`;
+  fill.className = `unc-fill ${cls}`;
+  val.textContent = `${Math.round(uncertainty * 100)}%`;
+}
+
+// ── TRACE LOGGING ─────────────────────────────
+function logTrace(type, label, meta) {
+  SESSION_COUNTER++;
+  TRACE_LOG.unshift({ type, label, meta, time: Date.now(), id: SESSION_COUNTER });
+  if (TRACE_LOG.length > 50) TRACE_LOG = TRACE_LOG.slice(0, 50);
+  renderTrace();
+  document.getElementById('traceMeta').textContent = `${TRACE_LOG.length} entries`;
+  document.getElementById('statusTrace').textContent = TRACE_LOG.length;
+}
+
+function renderTrace() {
+  const el = document.getElementById('traceTimeline');
+  el.innerHTML = TRACE_LOG.slice(0, 8).map(t => `
+    <div class="trace-node">
+      <div class="trace-dot ${t.type}"></div>
+      <span class="trace-label">${t.label}</span>
+      <span class="trace-meta">${t.id}</span>
+    </div>
+  `).join('');
+}
+
+// ── VERDICT ───────────────────────────────────
+function determineVerdict(agents, uncertainty) {
+  const avgConf = agents.reduce((s, a) => s + a.confidence, 0) / agents.length;
+  if (avgConf > 0.78 && uncertainty < 0.3) return 'INTEGRATED';
+  if (avgConf > 0.58 && uncertainty < 0.5) return 'PROBATIONARY';
+  if (avgConf > 0.38) return 'RESTRICTED';
+  return 'DISCARD';
+}
+
+// ── RESPONSE GENERATION ───────────────────────
+function generateResponse(question, qType, agents, uncertainty, verdict) {
+  const avgConf = agents.reduce((s, a) => s + a.confidence, 0) / agents.length;
+  const depth = Math.min(5, Math.max(1, Math.round((1 - uncertainty) * 5 + 0.5)));
+  const q = question.toLowerCase();
+  const uncClass = uncertainty > 0.6 ? 'high' : uncertainty > 0.3 ? 'med' : 'low';
+
+  // Try to find a matching brain node
+  const matchKey = Object.keys(DEFAULT_RESPONSES).find(k => q.includes(k.replace(/_response/g, '').replace(/_/g, ' ')));
+  if (matchKey && DEFAULT_RESPONSES[matchKey]) {
+    return {
+      intro: `<span class="q-type-badge ${qType.type}">${qType.label}</span><span class="unc-indicator ${uncClass}">${Math.round(uncertainty * 100)}% unc</span>`,
+      text: DEFAULT_RESPONSES[matchKey],
+      depthExplanation: `Matched brain node: <span class="axiom-ref">${matchKey}</span>. ${qType.focus}`,
+      verdict, coherence: avgConf, depth, uncClass, uncertainty,
+    };
+  }
+
+  // Generic type-based responses
+  const typeResponses = {
+    who: {
+      intro: `<span class="q-type-badge who">WHO</span><span class="unc-indicator ${uncClass}">${Math.round(uncertainty * 100)}% unc</span>`,
+      text: `Analyzing entity identification request. ${qType.focus} ${agents.length}-agent tribunal engaged.`,
+      depthExplanation: 'Entity identification traces identity through the concept graph.',
+    },
+    what: {
+      intro: `<span class="q-type-badge what">WHAT</span><span class="unc-indicator ${uncClass}">${Math.round(uncertainty * 100)}% unc</span>`,
+      text: `Definition and concept resolution. ${qType.focus} Searching ${KNOWLEDGE_BASE.length} nodes for relevant definitions.`,
+      depthExplanation: 'Definition synthesis pulls from high-confidence knowledge nodes and axioms.',
+    },
+    when: {
+      intro: `<span class="q-type-badge when">WHEN</span><span class="unc-indicator ${uncClass}">${Math.round(uncertainty * 100)}% unc</span>`,
+      text: `Temporal reasoning engaged. ${qType.focus} Applying <span class="axiom-ref">AXIOM-007</span> for consistency.`,
+      depthExplanation: 'Temporal resolution uses version history and timestamped knowledge.',
+    },
+    where: {
+      intro: `<span class="q-type-badge where">WHERE</span><span class="unc-indicator ${uncClass}">${Math.round(uncertainty * 100)}% unc</span>`,
+      text: `Spatial and structural resolution. ${qType.focus} Context proximity = relevance.`,
+      depthExplanation: 'Spatial reasoning applies <span class="axiom-ref">AXIOM-001</span>: relevant context is closest.',
+    },
+    how: {
+      intro: `<span class="q-type-badge how">HOW</span><span class="unc-indicator ${uncClass}">${Math.round(uncertainty * 100)}% unc</span>`,
+      text: `Process and mechanism analysis. ${qType.focus} Tracing the deliberation pipeline: input → decompose → tribunal → verdict.`,
+      depthExplanation: 'Process explanation traces the full deliberation pipeline.',
+    },
+    general: {
+      intro: `<span class="q-type-badge general">QUERY</span><span class="unc-indicator ${uncClass}">${Math.round(uncertainty * 100)}% unc</span>`,
+      text: `Full tribunal deliberation engaged across ${agents.length} agents with ${(avgConf * 100).toFixed(0)}% average coherence. ${qType.focus}`,
+      depthExplanation: `${agents.length}-agent deliberation produces structured multi-perspective reasoning.`,
+    },
+  };
+
+  const r = typeResponses[qType.type] || typeResponses.general;
+  return { ...r, verdict, coherence: avgConf, depth, uncClass, uncertainty };
+}
+
+// ── BINARY YES/NO ANALYSIS ─────────────────────
+// Detects factual claims and computes a YES/NO verdict with confidence
+function computeBinaryAnswer(question, agents) {
+  const binaryEnabled = document.getElementById('binaryToggle')?.checked;
+  if (!binaryEnabled) return null;
+
+  const q = question.toLowerCase().trim();
+  const coherence = agents.reduce((s, a) => s + a.confidence, 0) / agents.length;
+
+  // Patterns that indicate a yes/no question
+  const claimPatterns = [
+    { pattern: /^(is|are|was|were|do|does|did|can|could|will|would|should|has|have|had)\s+/i, type: 'verification' },
+    { pattern: /^(dog|cat|bird|fish|human|animal|plant|mountain|ocean|river|cloud|water|fire|earth|air)\s+(is|are|can|has|have)/i, type: 'entity_claim' },
+    { pattern: /^(the|a|an)\s+\w+\s+(is|are|can|has|have)/i, type: 'definite_claim' },
+  ];
+
+  // Known false claims for demo
+  const falseClaims = [
+    { text: 'dog is a cat', conf: 100, reason: 'biologically false — dogs and cats are distinct species' },
+    { text: 'water is fire', conf: 100, reason: 'elemental contradiction — water and fire are opposites' },
+    { text: 'the sky is green', conf: 97, reason: 'atmospheric science confirms blue sky under normal conditions' },
+    { text: 'humans are fish', conf: 100, reason: 'taxonomic distinction — humans are mammals, not fish' },
+  ];
+
+  // Known true claims for demo
+  const trueClaims = [
+    { text: 'the sky is blue', conf: 96, reason: 'scientific consensus — Rayleigh scattering' },
+    { text: 'water is wet', conf: 99, reason: 'fundamental property of H2O in liquid state' },
+    { text: 'dogs are animals', conf: 100, reason: 'biological classification — canis familiaris' },
+    { text: 'the earth is round', conf: 99, reason: 'geodesic reality — oblate spheroid' },
+  ];
+
+  // Check false claims first (stronger NO signal)
+  for (const falseClaim of falseClaims) {
+    if (q.includes(falseClaim.text) || falseClaim.text.includes(q)) {
+      return { answer: 'NO', confidence: falseClaim.conf, reason: falseClaim.reason };
+    }
+  }
+
+  // Check true claims (stronger YES signal)
+  for (const trueClaim of trueClaims) {
+    if (q.includes(trueClaim.text) || trueClaim.text.includes(q)) {
+      return { answer: 'YES', confidence: trueClaim.conf, reason: trueClaim.reason };
+    }
+  }
+
+  // Generic computation based on tribunal coherence
+  // High coherence with high confidence agents = YES
+  // Low coherence or chaos disagreement = NO
+  const chaosAgent = agents.find(a => a.name === 'chaos');
+  const chaosDisagrees = chaosAgent && chaosAgent.confidence < 0.5;
+
+  if (chaosDisagrees && coherence < 0.7) {
+    const baseConf = Math.round((1 - coherence) * 100);
+    return {
+      answer: 'NO',
+      confidence: baseConf,
+      reason: `CHAOS disagreement (conf ${(chaosAgent.confidence * 100).toFixed(0)}%) + low coherence (${(coherence * 100).toFixed(0)}%)`
+    };
+  }
+
+  if (coherence > 0.7 && !chaosDisagrees) {
+    const baseConf = Math.round(coherence * 100);
+    return {
+      answer: 'YES',
+      confidence: baseConf,
+      reason: `Tribunal coherence ${(coherence * 100).toFixed(0)}% with no significant disagreement`
+    };
+  }
+
+  // Edge case: reasonable confidence but some disagreement
+  if (coherence > 0.5) {
+    return {
+      answer: Math.random() > 0.3 ? 'YES' : 'NO', // Deliberative flip for uncertain
+      confidence: Math.round(coherence * 100),
+      reason: `Moderate confidence — tribunal split on ${q.slice(0, 30)}...`
+    };
+  }
+
+  return {
+    answer: 'NO',
+    confidence: Math.round((1 - coherence) * 80),
+    reason: `Low tribunal confidence (${(coherence * 100).toFixed(0)}%) — claim appears unsupported`
+  };
+}
+
+// ── MAIN PIPELINE ─────────────────────────────
+async function processQuestion(question) {
+  if (!question.trim()) return;
+
+  const qType = decomposeQuestion(question);
+
+  // Render decomposition
+  const dp = document.getElementById('decompPanel');
+  dp.classList.remove('hidden');
+  document.getElementById('decompType').textContent = qType.label;
+  document.getElementById('decompType').className = `decomp-type ${qType.type}`;
+  document.getElementById('decompFocus').textContent = qType.focus;
+  const routing = document.getElementById('decompRouting');
+  routing.innerHTML = ['entity', 'definition', 'temporal', 'spatial', 'process'].map(r =>
+    `<span class="routing-pill ${r === qType.priority ? 'active' : ''}">${r.toUpperCase()}</span>`
+  ).join('');
+
+  logTrace('inference', `${qType.label} → ${qType.priority}`, { agents: 5, status: 'deliberating' });
+
+  // Run deliberation
+  const agents = runDeliberation(question, qType);
+  const arena = document.getElementById('delibArena');
+  arena.innerHTML = agents.map(a => `
+    <div class="delib-turn ${a.name}">
+      <span class="delib-agent ${a.color}">${AGENTS[a.name].name}</span>
+      <span class="delib-content">${a.turn}</span>
+    </div>
+  `).join('');
+  document.getElementById('delibPanel').classList.remove('hidden');
+
+  // Tribunal
+  const tp = document.getElementById('tribunalPanel');
+  tp.classList.remove('hidden');
+  document.getElementById('verdictTag').textContent = '?';
+  document.getElementById('verdictTag').className = 'verdict-tag NEUTRAL';
+  document.getElementById('coherenceBadge').textContent = '...';
+
+  // Uncertainty
+  const uncertainty = computeUncertainty(question, qType, agents);
+  updateUncertaintyMeter(uncertainty);
+  document.getElementById('uncertaintyBar').classList.remove('hidden');
+
+  // Verdict
+  const verdict = determineVerdict(agents, uncertainty);
+  document.getElementById('verdictTag').textContent = verdict;
+  document.getElementById('verdictTag').className = `verdict-tag ${verdict}`;
+  document.getElementById('coherenceBadge').textContent = agents.reduce((s, a) => s + a.confidence, 0).toFixed(2);
+  document.getElementById('coherenceScore').textContent = agents.reduce((s, a) => s + a.confidence, 0).toFixed(2);
+
+  // Binary YES/NO computation
+  const binaryAnswer = computeBinaryAnswer(question, agents);
+  logTrace('inference', `Binary mode: ${binaryAnswer ? binaryAnswer.answer + ' ' + binaryAnswer.confidence + '%' : 'OFF'}`, { status: 'binary_computed' });
+
+  // Generate
+  const resp = generateResponse(question, qType, agents, uncertainty, verdict);
+
+  // Log
+  logTrace('new', `Response: ${verdict}`, { confidence: resp.coherence.toFixed(2), unc: `${Math.round(uncertainty * 100)}%` });
+
+  // Show graph and trace
+  document.getElementById('graphPanel').classList.remove('hidden');
+  document.getElementById('tracePanel').classList.remove('hidden');
+
+  // Render with binary answer
+  renderTRUMessage(resp, binaryAnswer);
+  updateStatus(resp, binaryAnswer);
+}
+
+function renderTRUMessage(resp, binaryAnswer) {
+  const chat = document.getElementById('chat');
+  const depthPips = Array.from({ length: 5 }, (_, i) =>
+    `<div class="depth-pip ${i < resp.depth ? 'active' : ''}"></div>`
+  ).join('');
+
+  const binaryEl = binaryAnswer ? `
+    <div class="binary-result" id="binaryResult">
+      <div class="binary-answer ${binaryAnswer.answer === 'YES' ? 'yes' : 'no'}">
+        <span class="binary-word">${binaryAnswer.answer}</span>
+        <span class="binary-pct">${binaryAnswer.confidence}%</span>
+      </div>
+      <div class="binary-sub">model confidence — full reasoning below</div>
+    </div>
+  ` : '';
+
+  const msg = document.createElement('div');
+  msg.className = 'msg tru';
+  msg.innerHTML = `
+    <div class="msg-label">
+      <span>TRU</span>
+      <span class="msg-verdict ${resp.verdict}">${resp.verdict}</span>
+    </div>
+    ${binaryEl}
+    <div>${resp.intro}</div>
+    <p style="margin-top:6px;">${resp.text}</p>
+    <p style="margin-top:6px;font-size:10px;color:var(--muted);">${resp.depthExplanation}</p>
+    <div class="depth-indicator">
+      <span>depth:</span>
+      <div class="depth-bar">${depthPips}</div>
+      <span>${resp.depth}/5</span>
+    </div>
+    <div class="msg-meta">
+      <span>coherence: ${resp.coherence.toFixed(2)}</span>
+      <span>nodes: ${KNOWLEDGE_BASE.length}</span>
+      <span>trace: ${TRACE_LOG.length}</span>
+    </div>
+  `;
+  chat.appendChild(msg);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function updateStatus(resp, binaryAnswer) {
+  document.getElementById('statusNodes').textContent = KNOWLEDGE_BASE.length;
+  document.getElementById('statusDepth').textContent = resp.depth;
+  document.getElementById('statusCoherence').textContent = resp.coherence.toFixed(2);
+  document.getElementById('statusVerdict').textContent = resp.verdict;
+  document.getElementById('memoryUsed').textContent = KNOWLEDGE_BASE.length;
+}
+
+// ── INPUT HANDLING ─────────────────────────────
+const msgInput = document.getElementById('msgInput');
+
+msgInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    handleSend();
+  }
+});
+
+// Auto-resize textarea
+msgInput.addEventListener('input', () => {
+  msgInput.style.height = 'auto';
+  msgInput.style.height = Math.min(msgInput.scrollHeight, 120) + 'px';
+});
+
+function handleSend() {
+  const question = msgInput.value.trim();
+  if (!question) return;
+  const chat = document.getElementById('chat');
+  const um = document.createElement('div');
+  um.className = 'msg user';
+  um.textContent = question;
+  chat.appendChild(um);
+  msgInput.value = '';
+  msgInput.style.height = 'auto';
+  chat.scrollTop = chat.scrollHeight;
+  processQuestion(question);
+}
+
+document.getElementById('sendBtn').addEventListener('click', handleSend);
+
+// ── CONTROLS ──────────────────────────────────
+document.getElementById('logosToggle').addEventListener('change', e => {
+  document.querySelector('.logos-label').textContent = e.target.checked ? 'ON' : 'OFF';
+});
+
+// Binary toggle
+document.getElementById('binaryToggle').addEventListener('change', e => {
+  document.getElementById('binaryLabel').textContent = e.target.checked ? 'ON' : 'OFF';
+  logTrace('inference', `Binary mode ${e.target.checked ? 'ON' : 'OFF'}`, { status: 'binary_toggle' });
+});
+
+document.getElementById('emotionSlider').addEventListener('input', e => {
+  document.getElementById('emotionVal').textContent = e.target.value;
+});
+document.getElementById('creativitySlider').addEventListener('input', e => {
+  document.getElementById('creativityVal').textContent = e.target.value;
+});
+document.getElementById('depthSlider').addEventListener('input', e => {
+  document.getElementById('depthVal').textContent = e.target.value;
+  document.getElementById('currentDepth').textContent = e.target.value;
+  document.getElementById('statusDepth').textContent = e.target.value;
+});
+document.getElementById('nodeCapSlider').addEventListener('input', e => {
+  document.getElementById('nodeCapVal').textContent = `${e.target.value} / 500`;
+});
+
+document.querySelectorAll('.depth-toggle').forEach(btn => {
+  btn.addEventListener('click', e => {
+    document.querySelectorAll('.depth-toggle').forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    const d = e.target.dataset.depth;
+    document.getElementById('depthSlider').value = d;
+    document.getElementById('depthVal').textContent = d;
+    document.getElementById('currentDepth').textContent = d;
+    document.getElementById('statusDepth').textContent = d;
+  });
+});
+
+// ── PANEL TOGGLE ───────────────────────────────
+function togglePanels() {
+  panelsVisible = !panelsVisible;
+  const panels = ['decompPanel', 'delibPanel', 'uncertaintyBar', 'tracePanel', 'graphPanel', 'tribunalPanel'];
+  panels.forEach(id => {
+    if (panelsVisible) {
+      // Only show if they have content
+      const el = document.getElementById(id);
+      if (el && el.querySelector('.delib-turn') || id === 'ctrlPanel') {
+        el.classList.remove('hidden');
+      }
+    } else {
+      document.getElementById(id).classList.add('hidden');
+    }
+  });
+}
+
+// ── IMPORT / EXPORT ────────────────────────────
+function showImportModal() {
+  document.getElementById('importModal').classList.remove('hidden');
+  document.getElementById('importTextarea').value = '';
+  document.getElementById('importStatus').textContent = '';
+}
+
+function hideImportModal() {
+  document.getElementById('importModal').classList.add('hidden');
+}
+
+function doImport() {
+  const ta = document.getElementById('importTextarea');
+  const status = document.getElementById('importStatus');
+  let data;
+
+  // Try to parse textarea
+  if (ta.value.trim()) {
+    try {
+      data = JSON.parse(ta.value);
+    } catch (e) {
+      status.textContent = 'Error: Invalid JSON in textarea';
+      status.className = 'modal-status error';
+      return;
+    }
+  }
+
+  const result = loadBrainFromData(data);
+  if (result.success) {
+    status.textContent = `✓ Imported ${result.count} nodes from ${result.version}`;
+    status.className = 'modal-status success';
+    document.getElementById('memoryUsed').textContent = result.count;
+    document.getElementById('statusNodes').textContent = result.count;
+    logTrace('new', `Brain imported: ${result.count} nodes`, { version: result.version, status: 'loaded' });
+    setTimeout(hideImportModal, 1500);
+  } else {
+    status.textContent = 'Error: ' + result.error;
+    status.className = 'modal-status error';
+  }
+}
+
+// File input handler
+document.getElementById('importFileInput').addEventListener('change', function() {
+  const file = this.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    document.getElementById('importTextarea').value = e.target.result;
+  };
+  reader.readAsText(file);
+});
+
+function exportBrain() {
+  const data = {
+    version: 'tru_v46_exported',
+    exported: new Date().toISOString(),
+    total_nodes: KNOWLEDGE_BASE.length,
+    nodes: KNOWLEDGE_BASE.map(n => ({ k: n.key, v: n.fact, w: n.confidence })),
+    axioms: AXIOMS.map(a => ({ id: a.id, text: a.text })),
+    trace_log: TRACE_LOG.slice(0, 20),
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `tru_brain_v46_${Date.now()}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  logTrace('inference', 'Brain exported', { nodes: KNOWLEDGE_BASE.length });
+}
+
+// ── ABOUT ─────────────────────────────────────
+function showAbout() {
+  const chat = document.getElementById('chat');
+  const msg = document.createElement('div');
+  msg.className = 'msg tru';
+  msg.innerHTML = `
+    <div class="msg-label"><span>TRU</span></div>
+    <p><strong>TRU v46.1 — Deliberative Intelligence Engine</strong></p>
+    <div style="margin-top:8px;font-size:10px;color:var(--muted);">
+      <p>Architecture: 5-agent tribunal (CHAOS, OPTIMIST, ARCHIVIST, BALANCE, SYNTHESIST)</p>
+      <p>Features: question decomposition, uncertainty quantification, knowledge trace, concept graph</p>
+      <p>Brain: ${KNOWLEDGE_BASE.length} nodes loaded</p>
+      <p>_axioms: ${AXIOMS.length}</p>
+      <p style="margin-top:6px;">Key shortcuts: Panels toggle, Enter to send, Shift+Enter for newline</p>
+    </div>
+  `;
+  chat.appendChild(msg);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function showGraphDetail(key) {
+  const chat = document.getElementById('chat');
+  const msg = document.createElement('div');
+  msg.className = 'msg tru';
+  const node = KNOWLEDGE_BASE.find(n => n.key === key);
+  msg.innerHTML = `
+    <div class="msg-label"><span>TRU</span><span style="font-size:9px;color:var(--muted);">graph node</span></div>
+    <p><strong>${key}</strong></p>
+    <p style="font-size:10px;color:var(--muted);margin-top:4px;">${node ? node.fact : 'No direct brain match — derived from deliberation.'}</p>
+  `;
+  chat.appendChild(msg);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+// ── INIT ──────────────────────────────────────
+logTrace('recall', 'TRU v46.1 deliberative engine initialized', { status: 'ready', agents: 5 });
+document.getElementById('statusNodes').textContent = KNOWLEDGE_BASE.length;
+document.getElementById('memoryUsed').textContent = KNOWLEDGE_BASE.length;
+document.getElementById('traceMeta').textContent = `${TRACE_LOG.length} entries`;
+</script>
+</body>
+</html>

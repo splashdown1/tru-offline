@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.25134",
+  "title": "Theoretical Analysis of Sparse Optimization with Reparameterization, Weight Decay, and Adaptive Learning Rate",
+  "abstract": "Sparse optimization is a fundamental challenge in various practical applications. A popular approach to sparse optimization is $\\ell_p$ regularization. However, it may encounter optimization instability due to the unbounded gradients when $0<p<1$. In this paper, we introduce a novel approach to sparse optimization termed ReWA, based on Reparameterization, Weight decay, and Adaptive learning rate. ReWA is closely connected to $\\ell_p$-regularization, yet it unveils a distinct optimization landscape that helps mitigate instability issues. Experiments on CIFAR-10 and ImageNet with ResNets demonstrate that ReWA leads to significant sparsity improvements over the $\\ell_1$-regularization approach while preserving test accuracy.",
+  "link": "https://arxiv.org/abs/2605.25134",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358986Z"
+}

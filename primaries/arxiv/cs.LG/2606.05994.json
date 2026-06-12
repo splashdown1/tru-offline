@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05994",
+  "title": "HoT-SSM:Higher-order Temporal Knowledge Graph Reasoning with State Space Models for Health Care",
+  "abstract": "Medical knowledge graphs (MKGs) infused with clinical knowledge have been increasingly used to model electronic health records (EHRs) to support interpretable predictions in healthcare domain. However, existing MKG-based approaches are limited in capturing pairwise relations between clinical concepts (e.g., conditions, procedures, and medications), and restricts their ability to model higher-order interactions among co-occurring or semantically related concepts. In addition, most representation learning methods that leverage MKGs either collapse temporal information across visits or lack an explicit mechanism for modeling long-range temporal dependencies, which is critical for clinical tasks such as mortality prediction. To mitigate these limitations, we propose HoT-SSM, a parameter efficient and higher-order temporal graph reasoning with state space models. For each visit, HoT-SSM constructs hypergraphs by grouping semantically related clinical concepts into hyperedges using domain knowledge, thereby preserving visit-level clinical context. Further, to model the temporal dynamics while learning the representations, we introduce a novel dynamic hypergraph-based state space model that explicitly captures patients latent state evolution over time while preserving long-range information. The learned representations are used for downstream clinical prediction and reasoning. Experiments on MIMIC-III and MIMIC-IV datasets shows significant performance improvement over the current state-of-the-art models, demonstrating the effectiveness of jointly modeling higher-order clinical interactions and long-range temporal dependencies.",
+  "link": "https://arxiv.org/abs/2606.05994",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "eess.SP"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882442+00:00"
+}

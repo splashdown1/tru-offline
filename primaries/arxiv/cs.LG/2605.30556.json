@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30556",
+  "title": "Supervised Training Rapidly Degrades Early Visual Cortex Alignment Across Biologically Plausible Learning Rules",
+  "abstract": "Random, untrained neural networks consistently match or exceed trained networks in representational similarity to early visual cortex. This puzzling finding challenges the assumption that learning improves brain alignment. We investigate it by tracking representational similarity analysis (RSA) alignment to human fMRI data across training for four learning rules: backpropagation (BP), feedback alignment (FA), predictive coding (PC), and spike-timing-dependent plasticity (STDP). Using 720 object images from the THINGS database and fMRI data from three subjects across six visual ROIs, we measure Spearman correlations between model and brain representational dissimilarity matrices at eight training checkpoints (epochs 0-40). We find that (1) a single epoch of training reduces V1 alignment by 25-90%, depending on the learning rule; (2) backpropagation reduces V1 alignment most severely (delta r = -0.080), while predictive coding and STDP preserve substantially more (delta r ~ -0.04); and (3) a weaker, opposite tendency appears in object-selective cortex (LOC), where BP shows the largest increase in alignment during training, although the absolute change is small. These results suggest that untrained architectures capture low-level visual statistics through inductive biases alone, and that global error signals (BP) reshape early representations more aggressively than local learning rules (PC, STDP), which better preserve brain-like structure.",
+  "link": "https://arxiv.org/abs/2605.30556",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "q-bio.NC"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306671Z"
+}

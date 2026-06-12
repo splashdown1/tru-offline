@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04930",
+  "title": "AdaKoop: Efficient Modeling of Nonlinear Dynamics from Nonstationary Data Streams with Koopman Operator Regression",
+  "abstract": "Real-time data analysis requires the ability to accurately and adaptively address nonlinear dynamics in a nonstationary data stream while preserving computational efficiency. However, nonlinear dynamics are so complex that capturing dynamically changing nonlinear patterns and utilizing them for downstream tasks under strict time constraints is nontrivial. To bridge the gap between nonlinear complexity and computational tractability, this study applies Koopman operator theory, which states that nonlinear dynamics can be represented as linear transitions in an infinite-dimensional space. Building upon finite-dimensional approximations of this operator, we present AdaKoop, an efficient streaming algorithm for modeling nonlinear dynamics over nonstationary data streams. Our approach utilizes a probabilistic framework grounded in Koopman operator theory, treating both raw observations and reproducing kernel Hilbert space (RKHS) features as emissions from latent vectors. This dual-view formulation allows nonlinear dynamics to be expressed as a tractable linear system. Therefore, AdaKoop enables the efficient and stable modeling of nonlinear dynamics in a streaming fashion, avoiding the prohibitive computational costs of iterative nonlinear optimization. Furthermore, to address nonstationarity in data streams, AdaKoop adaptively detects the switching of patterns via statistical hypothesis testing for abrupt pattern shifts and incrementally updates model parameters to handle continuous changes. Extensive experiments on a total of 71 practical benchmark datasets across various domains demonstrate that AdaKoop outperforms state-of-the-art methods in terms of real-time forecasting accuracy and computational efficiency.",
+  "link": "https://arxiv.org/abs/2606.04930",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098500+00:00"
+}

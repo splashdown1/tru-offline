@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2506.01318",
+  "title": "Unlearning's Blind Spots: Over-Unlearning and Prototypical Relearning Attack",
+  "abstract": "Machine unlearning (MU) aims to expunge a designated forget set from a trained model without costly retraining, yet the existing techniques overlook two critical blind spots: \"over-unlearning\" that deteriorates retained data near the forget set, and post-hoc \"relearning\" attacks that aim to resurrect the forgotten knowledge. Focusing on class-level unlearning, we first derive an over-unlearning metric, OU@epsilon, which quantifies collateral damage in regions proximal to the forget set, where over-unlearning mainly occurs. Next, we expose an unforeseen relearning threat on MU, i.e., the Prototypical Relearning Attack, which exploits the per-class prototype of the forget class with just a few samples, and easily restores the pre-unlearning performance. To counter both blind spots in class-level unlearning, we introduce Spotter, a plug-and-play objective that combines (i) a masked knowledge-distillation penalty on the nearby region of forget classes to suppress OU@epsilon, and (ii) an intra-class dispersion loss that scatters forget-class embeddings, neutralizing Prototypical Relearning Attacks. Spotter achieves state-of-the-art results across CIFAR, TinyImageNet, and CASIA-WebFace datasets, offering a practical remedy to unlearning's blind spots.",
+  "link": "https://arxiv.org/abs/2506.01318",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358666Z"
+}

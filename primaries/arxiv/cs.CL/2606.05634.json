@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05634",
+  "title": "Bootstrapping Semantic Layer from Execution for Text-to-SQL",
+  "abstract": "Real-world text-to-SQL is often under-specified until user phrases are grounded in how the database stores values. Prior work attempts to address this by requiring a semantic layer to specify groundings in advance, but such specifications are often incomplete, especially in expert domains where domain-specific conventions are under-documented. As this leaves multiple grounding hypotheses open for the same SQL part, we introduce GATE (Grouding After Test from Execution), which bootstraps missing groundings from execution feedback. GATE keeps grounding hypotheses open while executing the already grounded parts to obtain observations. Then, only the hypothesis supported by that observation is grounded and stored as a memory entry, recording what was tested and how the open part should be written in SQL. These entries accumulate into execution-grounded memory, allowing later steps to reuse supported groundings. Across real-world and controlled benchmarks, GATE consistently improves over strong baselines, demonstrating that execution can serve not only as validation but also as a bootstrapping mechanism for reusable memory in text-to-SQL.",
+  "link": "https://arxiv.org/abs/2606.05634",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497797+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2606.05381",
+  "title": "Generalized TV--$\\ell_p$ Structured Priors for Bayesian $T_1$ Mapping",
+  "abstract": "We propose an extended family of structured spatial priors that incorporates the total variation (TV) function with $\\ell_p$ norms. The prior is proven to be proper and incorporated into a Bayesian regression framework to enable uncertainty quantification in $T_1$ mapping, with posterior inference performed using the No-U-Turn Sampler (NUTS). This TV--$\\ell_p$ construction is proven to constitute a well-defined family of prior distributions, and it naturally enforces spatial consistency and smooth variations in the estimated parameter maps. The method was evaluated in comparison to maximum-likelihood estimation and several Bayesian alternative priors based on the uniform, Gamma, and bounded TV priors. The evaluation includes experiments on synthetic brain and cardiac $T_1$ mapping datasets, as well as a real in-vivo breast $T_1$ mapping dataset. The results show that the TV--$\\ell_p$ prior yields more concentrated posterior densities, indicating reduced uncertainty. It also consistently achieves lower variance and smaller (negative) bias, leading to more reliable estimates. Overall, embedding a TV-based structured penalty along with $\\ell_p$ norms in a prior in a Bayesian model improves spatial coherence in $T_1$ maps and enhances uncertainty quantification, offering a robust approach for $T_1$ mapping with uncertainties.",
+  "link": "https://arxiv.org/abs/2606.05381",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882012+00:00"
+}

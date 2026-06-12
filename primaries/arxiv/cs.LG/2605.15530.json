@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.15530",
+  "title": "Rethinking Neural Network Learning Rates: A Stackelberg Perspective",
+  "abstract": "Neural networks are typically trained with a single learning rate across all layers. While recent empirical evidence suggests that assigning layer-specific learning rates can accelerate training, a principled understanding of the conditions and mechanisms under which non-uniform learning rates are beneficial remains limited. In this work, we investigate non-uniform learning rates through the lens of Stackelberg optimization. Specifically, we demonstrate that training neural networks with a smaller learning rate for the body layers and a larger learning rate for the final layer can be interpreted as a two-time-scale alternating gradient descent algorithm applied to a Stackelberg reformulation of the original objective. We establish finite-time convergence guarantees for the algorithm under broad conditions that accommodate constraint sets and non-smooth activation functions. Beyond convergence, we identify two mechanisms by which non-uniform learning rates can outperform uniform learning rates: (i) we show that certain problem instances induce a Stackelberg objective with stronger optimization structure than the original objective, yielding faster convergence to globally optimal solutions, (ii) our numerical analysis reveals that the Stackelberg objective can exhibit substantially sharper local curvature, especially in early training, which leads to more informative gradients and learning acceleration. Experiments in supervised learning and reinforcement learning support our findings.",
+  "link": "https://arxiv.org/abs/2605.15530",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308078Z"
+}

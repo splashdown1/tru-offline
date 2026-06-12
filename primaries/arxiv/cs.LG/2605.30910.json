@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.30910",
+  "title": "PINNs Failure Modes are Overfitting",
+  "abstract": "Physics-Informed Neural Networks (PINNs) are a common class of machine learning-based partial differential equation (PDE) solvers which train a network to represent a solution by minimizing a residual loss that encodes the PDE. Despite their successes, they are known to fail on certain simple equations, converging to an incorrect solution despite low loss. These failure modes have garnered significant attention in the literature over the past several years, motivating both architectural and optimization based solutions. By directly visualizing the residual, we show that failure modes are the result of overfitting: the loss is minimized on the collocation points, but not elsewhere. Applying regularization causes the failure modes to vanish. Finally, we extend double backpropagation over the full set of residuals, and use it to achieve state-of-the-art performance on four standard failure mode equations with up to $23\\times$ fewer collocation points and a vanilla architecture.",
+  "link": "https://arxiv.org/abs/2605.30910",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306861Z"
+}

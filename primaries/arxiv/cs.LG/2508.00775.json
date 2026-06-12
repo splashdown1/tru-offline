@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2508.00775",
+  "title": "Learning to optimize with guarantees: a complete characterization of linearly convergent algorithms",
+  "abstract": "The design of many classical optimization algorithms is driven by the certification of linear convergence rates over classes of optimization problems. In this paper, we consider the problem of improving the average-case performance of an algorithm over a specific distribution of problem instances. While this task can be tackled by embedding trainable components into the algorithm updates, a key challenge is to preserve worst-case guarantees across the entire problem class. For classes of composite optimization problems, we show that all linearly convergent algorithms can be parametrized in terms of a baseline linearly convergent algorithm, and a set of trainable, exponentially-decaying modifications to its update rule; crucially, this parametrization excludes all-and only-the algorithms that do not converge linearly. Our results apply to improving the average-case performance of classical algorithms such as gradient descent for nonconvex, gradient-dominated functions; Nesterov's accelerated method for smooth, strongly convex functions; and projected gradient methods for optimization over polyhedral feasible sets. We illustrate how our characterization can be used for learning to optimize with linear convergence and feasibility guarantees. Numerical results showcase benefits over classical optimizers when solving ill-conditioned systems of linear equations and running a model predictive control scheme on a linear dynamical system.",
+  "link": "https://arxiv.org/abs/2508.00775",
+  "category": "cs.LG",
+  "categories": [
+    "eess.SY",
+    "cs.LG",
+    "cs.SY",
+    "math.OC"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884476+00:00"
+}

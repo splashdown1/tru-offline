@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.25582",
+  "title": "Extreme Region Policy Distillation",
+  "abstract": "Reinforcement learning for large language models faces a fundamental trade-off between sample efficiency and asymptotic performance: strictly on-policy methods discard trajectories after a single update, while off-policy reuse introduces distribution mismatch that existing trust-region techniques mitigate primarily by enforcing conservative optimization, often leaving rich training signals underutilized. To investigate this, we perform extensive off-policy updates on fixed data. Our experiments reveal that aggressive multi-step optimization brings rapid initial gains, but excessive updates cause trajectory probabilities to deviate and entropy to collapse, with performance plateauing early. Tightening KL constraints merely lowers the ceiling without resolving the degradation. This motivates Extreme Region Policy Distillation (ERPD), a two-stage framework that decouples sample efficiency from KL efficiency. The first stage performs weakly constrained off-policy optimization on fixed data to maximally extract training signals. The resulting policy provides token-level supervision. In the second stage, we distill these signals into the base policy under trust-region constraints, filtering harmful drift while preserving useful signals. The distilled policy achieves comparable or better performance with substantially smaller KL divergence, indicating that much of the first-stage divergence was spent on unnecessary drift rather than genuine improvement. Crucially, ERPD accommodates both strong and weak teachers: when aggressive optimization yields no stronger policy, even degenerate teachers provide effective supervision via alternative signal construction strategies. We validate ERPD on mathematical reasoning, showing gains for strong base models where on-policy training plateaus, and reliable improvements with weak teachers.",
+  "link": "https://arxiv.org/abs/2605.25582",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884291+00:00"
+}

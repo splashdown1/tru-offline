@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2509.14221",
+  "title": "GEM-Bench: A Benchmark for Ad-Injected Response Generation within Generative Engine Marketing",
+  "abstract": "Generative Engine Marketing (GEM) is an emerging ecosystem for monetizing generative engines, such as LLM-based chatbots, by seamlessly integrating relevant advertisements into their responses. At the core of GEM lies the generation and evaluation of ad-injected responses. However, existing benchmarks are not specifically designed for this purpose, which limits future research. To address this gap, we propose GEM-Bench, the first comprehensive benchmark for ad-injected response generation in GEM. GEM-Bench includes three curated datasets covering both chatbot and search scenarios, a metric ontology that captures multiple dimensions of user satisfaction and engagement, and several baseline solutions implemented within an extensible multi-agent framework. Our preliminary results indicate that, while simple prompt-based methods achieve reasonable engagement such as click-through rate, they often reduce user satisfaction. In contrast, approaches that insert ads based on pre-generated ad-free responses help mitigate this issue but introduce additional overhead. These findings highlight the need for future research on designing more effective and efficient solutions for generating ad-injected responses in GEM. The benchmark and all related resources are publicly available at https://gem-bench.org/.",
+  "link": "https://arxiv.org/abs/2509.14221",
+  "category": "cs.CL",
+  "categories": [
+    "cs.IR",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406286Z"
+}

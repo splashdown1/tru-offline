@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2501.01926",
+  "title": "Cross-Modal Attention Calibration for LVLM Hallucination Mitigation",
+  "abstract": "Large vision-language models (LVLMs) have shown remarkable capabilities in visual-language understanding. Despite their success, LVLMs still suffer from generating hallucinations in complex generation tasks, leading to inconsistencies between visual inputs and generated content. To address this issue, some approaches have introduced inference-time interventions, such as contrastive decoding, to reduce overreliance on language priors. However, these approaches overlook hallucinations stemming from position bias and spurious inter-modality correlations. In this paper, we propose a Cross-Modal Attention Calibration (CMAC) method to mitigate hallucinations in LVLMs in a training-free manner. In this method, we design an Inter-Modality Decoding (IMD) module to alleviate hallucination by a novel contrastive decoding mechanism. IMD masks the value vectors associated with significant cross-modal attention weights as distortion, which addresses both uni-modality overreliance and misleading inter-modality correlations. Additionally, a Cross-Modal Position Calibration (CMPC) module shrinks the position gap of image tokens, alleviating the position bias in cross-modal attention. Experimental results on diverse hallucination benchmarks validate the superiority of our method over existing state-of-the-art techniques in reducing hallucinations for LVLM. Our code will be available at https://github.com/lijm48/IMCCD.",
+  "link": "https://arxiv.org/abs/2501.01926",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358642Z"
+}

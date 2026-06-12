@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.04023",
+  "title": "CodegenBench: Can LLMs Write Efficient Code Across Architectures?",
+  "abstract": "While large language models (LLMs) have been extensively evaluated on code generation tasks for general-purpose programming and GPU-accelerated environments (e.g., PyTorch, CUDA), their capabilities in CPU-oriented high-performance computing (HPC) across diverse architectures remain underexplored. To bridge this gap, we introduce CodegenBench, a comprehensive benchmark suite designed to evaluate the generation of efficient parallel code across three distinct hardware platforms: x86_64, Sunway, and Kunpeng. Our benchmark comprises 106 standard Basic Linear Algebra Subprograms (BLAS) routines establishing a fundamental baseline, alongside 20 specialized computational kernels adapted for each of the unique supercomputing architectures (LeetSunway and LeetKunpeng). Our extensive evaluation reveals that while state-of-the-art LLMs can generate optimized code for ubiquitous architectures like x86_64, they exhibit significant performance degradation on domain-specific architectures with limited public documentation and training data, highlighting critical limitations in cross-platform generalization. Furthermore, our analysis of factors influencing code quality such as implementation length and task complexity indicates that current LLMs are most effective for moderately difficult problems requiring concise code snippets. We open-source our dataset and automated evaluation infrastructure to facilitate future research in LLM-driven high-performance code generation. The resources are available at https://anonymous.4open.science/r/CodegenBench-EDE1/ and https://anonymous.4open.science/r/CodegenBenchDataset-2551.",
+  "link": "https://arxiv.org/abs/2606.04023",
+  "category": "cs.AI",
+  "categories": [
+    "cs.SE",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097792+00:00"
+}

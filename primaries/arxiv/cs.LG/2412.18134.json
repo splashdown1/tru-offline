@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2412.18134",
+  "title": "Learning Randomized Reductions",
+  "abstract": "Randomized self-reductions (RSRs) express $f(x)$ using $f$ evaluated at random correlated points, enabling self-correcting programs, instance-hiding protocols, and applications in complexity theory and cryptography. Yet discovering RSRs has required manual expert derivation for over 40 years, limiting their practical use. We present Bitween for automated RSR learning. First, we formalize RSR learning with sample complexity analysis under correlated sampling. Second, we develop Vanilla Bitween, which integrates multiple backends (linear regression, genetic programming, symbolic regression, and mixed-integer programming). The linear regression backend outperforms the others, discovering RSRs for 43 of 80 functions (54%) in RSR-Bench, our benchmark suite, including the first known reduction for sigmoid. Third, we introduce Agentic Bitween, a neuro-symbolic approach where LLM agents propose novel query functions beyond the fixed set ($x+r$, $x-r$, $x \\cdot r$, $x$, $r$) in prior work. Agentic Bitween discovers RSRs for 64 of 80 functions (80%), outperforming pure neural baselines in both RSR discovery and verification accuracy.",
+  "link": "https://arxiv.org/abs/2412.18134",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CC",
+    "cs.PL",
+    "cs.SE"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307583Z"
+}

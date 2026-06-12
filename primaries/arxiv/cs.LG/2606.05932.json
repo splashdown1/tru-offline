@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05932",
+  "title": "A Pre-Registered Causal Partition of Self-Consistency Elicitation and Reward Design in RLVR",
+  "abstract": "Reinforcement learning from verifiable rewards (RLVR) improves reasoning even when the reward signal is spurious -- assigning credit to the group-plurality answer rather than a ground-truth verifier. Practitioners commonly interpret naive = acc(TRUE) - acc(RANDOM) as the reward-design effect. We prove this estimand is systematically biased: it conflates self-consistency elicitation (sharpening the policy toward its modal answer via majority pseudo-reward) with genuine reward-design signal. Using a controlled tabular-GRPO simulator we derive an exact telescoping decomposition total = null + elicit + rd and measure each term across five prior-strength levels. The reward-design fraction of the naive estimator ranges from 0.139 at weak prior (ps=0.20) to 0.05 at strong prior (ps=0.80), with the elicitation term flipping sign at the self-consistency crossover. A pre-registered 2x2x2 factorial confirms non-additivity (interaction ratio 0.385; AxC effect -0.089). A points-vs-bounds pilot gate shows strong-prior regimes are point-identified while near-crossover regimes are only bounded. Re-audits of two named published results yield ELICITATION DOMINATED (elicitation share 0.98) and REWARD DESIGN DOMINATED (rd share 1.18) verdicts respectively, demonstrating the diagnostic value of the partition. We pre-commit to submit regardless of flip outcome; a non-flip is a finding of equal standing. We release a reusable one-command harness for any alignment paper to run the same audit.",
+  "link": "https://arxiv.org/abs/2606.05932",
+  "category": "cs.LG",
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883438+00:00"
+}

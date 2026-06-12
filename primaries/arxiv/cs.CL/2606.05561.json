@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05561",
+  "title": "InfoShield: Privacy-Preserving Speech Representations for Mental Health Screening via Information-Theoretic Optimization",
+  "abstract": "Speech-based mental health screening offers scalable depression detection, yet clinical deployment faces a significant barrier: users' privacy concerns about demographic information exposure. Current techniques struggle to resolve this conflict. Adversarial training often fails against unseen threats, whereas Differential Privacy tends to compromise diagnostic performance by injecting noise across all features. This paper presents InfoShield, which minimizes mutual information between speech representations and sensitive attributes while preserving depression classification accuracy. We identify that standard MINE estimators struggle with sequential speech due to temporal-static misalignment, and introduce TimeAwareMINE with cross-modal attention to align acoustic frames with attribute embeddings. Experiments on the Androids Corpus show InfoShield reduces gender inference from 92.6\\% to 55.5\\% and age inference from 55.7\\% to 30.3\\% with limited utility loss (6\\% F1 reduction), achieving F1=0.784 compared to prior SOTA's 0.723.",
+  "link": "https://arxiv.org/abs/2606.05561",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.497756+00:00"
+}

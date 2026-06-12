@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2604.12579",
+  "title": "EEG-Based Multimodal Learning via Hyperbolic Mixture-of-Curvature Experts",
+  "abstract": "Electroencephalography (EEG)-based multimodal learning integrates brain signals with complementary modalities to improve mental state assessment, providing great clinical potential. The effectiveness of such paradigms largely depends on the representation learning on heterogeneous modalities. For EEG-based paradigms, one promising approach is to leverage their hierarchical structures, as recent studies have shown that both EEG and associated modalities (e.g., facial expressions) exhibit hierarchical structures reflecting complex cognitive processes. However, Euclidean embeddings struggle to represent these hierarchical structures due to their flat geometry, while hyperbolic spaces, with their exponential growth property, are naturally suited for them. In this work, we propose EEG-MoCE, a novel hyperbolic mixture-of-curvature experts framework designed for multimodal neurotechnology. EEG-MoCE assigns each modality to an expert in a learnable-curvature hyperbolic space, enabling adaptive modeling of its intrinsic geometry. A curvature-aware fusion strategy then dynamically weights experts, emphasizing modalities with richer hierarchical information. Extensive experiments on benchmark datasets demonstrate that EEG-MoCE achieves state-of-the-art performance, including emotion recognition, sleep staging, and cognitive assessment. Code is available at https://github.com/zhourunhe/EEG-MoCE.",
+  "link": "https://arxiv.org/abs/2604.12579",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308043Z"
+}

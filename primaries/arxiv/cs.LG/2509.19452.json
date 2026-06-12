@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2509.19452",
+  "title": "HUNT: High-Speed UAV Navigation and Tracking in Unstructured Environments via Instantaneous Relative Frames",
+  "abstract": "Search and rescue operations require unmanned aerial vehicles to both traverse unknown unstructured environments at high speed and track targets once detected. Achieving both capabilities under degraded sensing and without global localization remains an open challenge. Recent works on relative navigation have shown robust tracking by anchoring planning and control to a visible detected object, but cannot address navigation when no target is in the field of view. We present HUNT (High-speed UAV Navigation and Tracking), a real-time framework that unifies traversal, acquisition, and tracking within a single relative formulation. HUNT defines navigation objectives directly from onboard instantaneous observables such as attitude, altitude, and velocity, enabling reactive high-speed flight during search. Once a target is detected, the same perception-control pipeline transitions seamlessly to tracking. Outdoor experiments in dense forests, container compounds, and search-and-rescue operations with vehicles and mannequins demonstrate robust autonomy where global methods fail.",
+  "link": "https://arxiv.org/abs/2509.19452",
+  "category": "cs.LG",
+  "categories": [
+    "cs.RO",
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308291Z"
+}

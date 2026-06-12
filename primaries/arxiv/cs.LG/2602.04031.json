@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.04031",
+  "title": "The Illusion of Generalization in Tabular Language Models",
+  "abstract": "Tabular Language Models (TLMs) have been claimed to achieve strong generalization for tabular prediction. We conduct a systematic re-evaluation of Tabula-8B as a representative TLM, utilizing 165 datasets from the UniPredict benchmark. Our investigation reveals three findings. First, binary and categorical classification achieve near-zero median lift over majority-class baselines and strong aggregate performance is driven entirely by quartile classification tasks. Second, top-performing datasets exhibit pervasive contamination, including complete train-test overlap and task-level leakage that evades standard deduplication. Third, instruction-tuning without tabular exposure recovers 92.2% of standard classification performance and on quartile classification, format familiarity closes 71.3% of the gap with the residual attributable to contaminated datasets. These findings suggest claimed generalization likely reflects evaluation artifacts rather than learned tabular reasoning. We conclude with recommendations for strengthening TLM evaluation.",
+  "link": "https://arxiv.org/abs/2602.04031",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307864Z"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.05797",
+  "title": "Causal Longitudinal Prior-Fitted Networks for Counterfactual Outcome Prediction",
+  "abstract": "Longitudinal treatment decisions require predicting potential outcomes under future treatment sequences in the presence of time-varying confounding, heterogeneous patient dynamics, and limited domain-specific data. Existing longitudinal causal estimators typically train a new model for each cohort or simulator. We introduce Causal Longitudinal Prior-Fitted Networks (CausalLongPFN), a prior-fitted in-context predictor for longitudinal causal prediction. The model is pretrained entirely on synthetic episodes sampled from a broad prior over temporal structural causal models, exposing it to treatment-confounder feedback, latent heterogeneity, nonlinear state evolution, delayed effects, and cumulative treatment responses. At test time, CausalLongPFN is frozen: it conditions on support trajectories, a query history, and a proposed future treatment sequence, and returns a predictive distribution over future outcomes without gradient updates or propensity-model fitting. Multi-step predictions are obtained by recursively applying the one-step predictor under the specified treatment sequence. We evaluate on branchable cancer, HIV, and warfarin benchmarks with ground-truth counterfactual labels, and on factual-only rolling-origin prediction in MIMIC-III ICU trajectories. CausalLongPFN is competitive with domain-trained longitudinal baselines on counterfactual benchmarks and performs strongly on factual MIMIC-III prediction, suggesting that broad synthetic causal pretraining can provide a useful frozen alternative when repeated domain-specific training is costly or impractical.",
+  "link": "https://arxiv.org/abs/2606.05797",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882338+00:00"
+}

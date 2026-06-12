@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2507.11075",
+  "title": "Joint angle based learning to refine kinematic human pose estimation",
+  "abstract": "Marker-free human pose estimation (HPE) has found increasing applications in various fields. Current HPE suffers from occasional errors in keypoint recognition and random fluctuation in keypoint trajectories when analyzing kinematic human poses. The performance of existing deep learning-based models for HPE refinement is considerably limited by inaccurate training datasets in which the keypoints are manually annotated. This paper proposed a novel method to overcome the difficulty, in which the key techniques include: (i) A robust joint angle-based description of kinematic human poses; (ii) Approximating temporal variation of joint angles using high order Fourier series to get reliable \"ground truth\"; (iii) A bidirectional recurrent network is designed as a post-processing module to refine the estimation of single image-based HPE models. Trained with the high-quality dataset constructed using our method, the network demonstrates outstanding performance to correct wrongly recognized joints and smooth their spatiotemporal trajectories. Tests show that joint angle-based refinement (JAR) outperforms the state-of-the-art HPE refinement network in challenging cases like figure skating and breaking. JAR also demonstrates great potential to rectify existing datasets.",
+  "link": "https://arxiv.org/abs/2507.11075",
+  "category": "cs.AI",
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358682Z"
+}

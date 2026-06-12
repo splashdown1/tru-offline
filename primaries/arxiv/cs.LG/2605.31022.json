@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2605.31022",
+  "title": "Augmented Lagrangian Predictive Coding",
+  "abstract": "Predictive coding (PC) is a local-learning alternative to backpropagation (BP), training deep networks via local energy-minimization dynamics rather than a global backward pass. We introduce Augmented Lagrangian Predictive Coding (PC-ALM), which maintains PC's inference budget but aligns each weight update toward BP by accumulating per-layer constraint errors into a layer-local Lagrange multiplier. In linear PC networks, PC-ALM converges to an equilibrium with exact BP gradients distributed across the network via only layer-local updates. We analyze PC-ALM in nonlinear PC networks up to depth 128 and show that it matches BP performance across all width-depth regimes, notably in deep narrow networks where PC underperforms. PC-ALM introduces recurrent dynamics in each layer's activations. Compared to PC's heat flow on a scalar energy, PC-ALM dynamics are driven by dual ascent on the augmented Lagrangian. We observe \"ballistic\" credit propagation across very deep networks, with credit signals evenly distributed across layers, compared to PC's slow, diffusive credit propagation. Beyond the algorithm itself, the augmented Lagrangian framework offers a generalization of PC, and may yield insights into how distributed systems could compute and propagate BP-like credit signals through purely local dynamics.",
+  "link": "https://arxiv.org/abs/2605.31022",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306912Z"
+}

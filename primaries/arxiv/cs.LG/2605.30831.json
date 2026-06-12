@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.30831",
+  "title": "The Geometry of Activity Cliffs: Representation Dependence and Multi-Scale Characterization of Activity Landscapes",
+  "abstract": "Activity cliffs, structurally similar compounds with large potency differences, are widely treated as intrinsic features of chemical datasets. We argue that apart from target biology, much of our cliff understanding is a consequence of the geometry induced by the chosen molecular representation, not a property of a molecule pair itself.\n  We designed a six-step pipeline to systematically test this hypothesis. The pipeline consists of: assessing pairwise distance geometry, cliff enrichment, activity gradient distribution, persistent homology of the cliff subspace, predictive benchmarking for a chosen pair of an embedding and a metric, and eventually, analysis of the matched molecular pairs and stereoisomers. We applied the pipeline to fifteen configurations of embeddings and metrics to build a benchmark across three distinctive datasets known of activity cliffs challenges.\n  No representation excels on all criteria: Morgan Tanimoto provides the strongest cliff enrichment and cross-scaffold generalization; MolFormer cosine provides the only meaningful stereochemical sensitivity; MACCS and RDKit Dice fingerprints are most sensitive to matched-molecular-pair transformations; ChemBERTa fails uniformly due to embedding collapse.\n  These findings are not a ranking. They reflect the fact that different representations encode different aspects of molecular recognition, and that choosing one implicitly defines what an activity cliff actually is.",
+  "link": "https://arxiv.org/abs/2605.30831",
+  "category": "cs.LG",
+  "categories": [
+    "q-bio.QM",
+    "cs.LG",
+    "physics.chem-ph"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307351Z"
+}

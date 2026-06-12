@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06224",
+  "title": "Symb-xMIL: Symbolic Explanations for Multiple Instance Learning in Digital Pathology",
+  "abstract": "Explanations of multiple instance learning (MIL) models are widely used for validation and discovery in digital histopathology. Existing methods primarily rely on heatmaps that highlight influential regions but do not explain how evidence from different tissue regions is combined to produce a prediction. This limits interpretability, especially when decisions depend on interactions between tissue features. We introduce Symbolic explainable MIL (Symb-xMIL), a post-hoc explanation framework that quantifies how a MIL model's behavior aligns with human-readable decision rules, expressed as logical relationships (e.g., AND, OR, NOT) between input features. These alignment scores reveal semantic patterns underlying the model's predictions. We evaluate Symb-xMIL on synthetic and real-world histopathology datasets. On synthetic MIL data, Symb-xMIL reliably recovers ground-truth logical rules. In a clinical tumor detection task, the best-aligned rules uncover heterogeneous decision patterns and expose hidden model errors. On an HPV-prediction task on TCGA-HNSCC, a cohort of head and neck cancer, our framework refines patient survival stratification beyond HPV status with potential clinical relevance. Overall, Symb-xMIL extends MIL explainability beyond visual attribution toward structured, rule-based reasoning, enabling more transparent and semantically grounded interpretation of model predictions.",
+  "link": "https://arxiv.org/abs/2606.06224",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.883556+00:00"
+}

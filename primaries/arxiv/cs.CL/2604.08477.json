@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2604.08477",
+  "title": "SUPERNOVA: Eliciting General Reasoning in LLMs with Reinforcement Learning on Natural Instructions",
+  "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has substantially improved reasoning in formal domains such as mathematics and code, but extending these gains beyond STEM remains challenging. Extending RLVR beyond STEM is fundamentally constrained by the lack of high-quality verifiable training data. In this work, we introduce SUPERNOVA, a framework for curating RLVR data from natural instruction datasets, which are a rich source of expert-annotated data but are underexplored for RLVR training. Through 100+ controlled RL experiments, we systematically study how to utilize these dataset for RLVR and how data curation decisions affect downstream reasoning performance . In particular, we investigate three data designs: (a) source task selection, (b) task mixing, and (c) synthetic interventions. Our analysis reveals that source task selection has a significant impact on downstream reasoning performance. Moreover, selecting tasks based on their performance for individual target tasks outperforms strategies based on overall average performance and synthetic interventions do not improve reasoning. Guided by these insights, we construct SUPERNOVA, a high-quality RLVR dataset of 25K instances curated from natural instruction datasets. We show that training Qwen3-0.6B on SUPERNOVA outperforms the base Qwen3-0.6B, yielding a relative gain of 64.4pp on BigBench Extra Hard (BBEH), a challenging benchmark comprising 23 complex reasoning tasks. Importantly, we find that gains from SUPERNOVA generalize to unseen benchmarks, larger model scales, and newer model families. Overall, our findings provide practical insights for curating human-annotated resources to extend RLVR to general reasoning. Models, Data, Code at https://github.com/asuvarna31/supernova.",
+  "link": "https://arxiv.org/abs/2604.08477",
+  "category": "cs.CL",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498643+00:00"
+}

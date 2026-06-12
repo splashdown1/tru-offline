@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2604.26269",
+  "title": "Calibrated Surprise: An Information-Theoretic Account of Creative Quality",
+  "abstract": "In the era of large language models, creative writing quality lacks a computable theoretical anchor. The dominant approaches are rubric scoring -- decomposing holistic aesthetic judgment into sub-scores -- and RLHF preference signals -- replacing quality with group votes. Both bypass the statistical structure of the text itself. This paper provides an information-theoretic foundation to fill this gap.\n  We propose 'calibrated surprise' as the information-theoretic essence of excellent creative writing. This judgment matches reading intuition and covers its opposite.\n  This literary judgment admits a precise mathematical formulation. Under full-dimensional constraints Y, feasible writing choices are forced into an extremely narrow space. The rare survivors are, from the unconstrained perspective, exactly the least predictable choices. Both are measured precisely by Shannon mutual information I(X;Y) = H(X) - H(X|Y) -- 'calibrated' corresponds to H(X|Y) approaching 0; 'surprising' corresponds to H(X) going high. The subtraction structure of the formula naturally separates 'well-grounded surprise' from 'pure noise'.\n  We use token-level logprobs from Qwen1.5-7B as an operational proxy for the ideal reader's probability distribution. Across 20 pairs (12 Chinese / 8 English) of high-quality vs. systematically degraded literary passages, 20/20 pairs support the core prediction: high-quality passages have systematically higher I(X;Y) than their degraded versions.",
+  "link": "https://arxiv.org/abs/2604.26269",
+  "category": "cs.LG",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884666+00:00"
+}

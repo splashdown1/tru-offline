@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2506.03779",
+  "title": "Position: Quantum Kernel Machines Should Move Beyond Scalar-Valued Kernels to Realize Their Potential",
+  "abstract": "Quantum kernel functions built using quantum-mechanical principles and have emerged as a centerpiece of quantum machine learning. The initial enthusiasm for quantum kernel machines has been tempered by recent studies suggesting that quantum kernels could not offer significant computational or statistical advantages when learning from classical data. However, most of the research in this area has been devoted to scalar-valued kernels in standard classification or regression settings for which classical kernel methods are efficient and effective, leaving very little room for improvement with quantum kernels. In this position paper, we argue that progress in this field requires moving beyond scalar-valued kernels toward more expressive kernel frameworks. Scalar-valued kernels lack the degrees of freedom necessary to fully exploit intrinsically quantum resources such as entanglement and are not rich enough to deal with complex learning tasks where classical learning methods struggle. Building on recent advances in operator-valued kernel learning and $C^*$-algebraic kernel representations, we propose a roadmap for designing quantum kernels capable of leveraging entanglement and non-commutative structures to tackle complex structured prediction problems. To support this viewpoint, we present an initial proof-of-concept illustrating how quantum operator-valued kernel formulations can reveal structural dependencies that remain difficult to access for scalar-valued kernel methods. This shift in focus could open a pathway toward a new generation of quantum kernel machines and a more faithful exploration of their potential advantages.",
+  "link": "https://arxiv.org/abs/2506.03779",
+  "category": "cs.LG",
+  "categories": [
+    "quant-ph",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.308195Z"
+}

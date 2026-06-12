@@ -1,0 +1,16 @@
+{
+  "arxiv_id": "2602.15202",
+  "title": "Tomography by Design: An Algebraic Approach to Low-Rank Quantum States",
+  "abstract": "We present an algebraic algorithm for quantum state tomography that leverages measurements of certain observables to estimate structured entries of the underlying density matrix. Under low-rank assumptions, the remaining entries can be obtained solely using standard numerical linear algebra operations. The proposed algebraic matrix completion framework applies to a broad class of generic, low-rank mixed quantum states and, compared with state-of-the-art methods, is computationally efficient while providing deterministic recovery guarantees.",
+  "link": "https://arxiv.org/abs/2602.15202",
+  "category": "cs.AI",
+  "categories": [
+    "quant-ph",
+    "cs.AI",
+    "cs.NA",
+    "eess.SP",
+    "math.NA",
+    "stat.CO"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.099079+00:00"
+}

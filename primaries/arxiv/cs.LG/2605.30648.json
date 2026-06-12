@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.30648",
+  "title": "Convergence of Steepest Descent and Adam under Non-Uniform Smoothness",
+  "abstract": "Recent work has analyzed the convergence of first-order methods under non-uniform smoothness assumptions that better model the loss landscape in machine learning tasks. We generalize this assumption to objectives whose curvature is an affine function of the objective value. This property is satisfied by a broad class of problems, including logistic regression, generalized linear models with a logistic link function, softmax policy gradient in reinforcement learning, and a class of neural networks. Under this assumption and gradient domination conditions, we establish a general convergence rate for the steepest descent method, and deterministic, diagonal variants of RMSProp and Adam. Our results imply that for logistic regression on separable data and the softmax policy gradient objective, sign GD converges linearly and is provably faster than GD. Furthermore, we show that for a class of two-layer neural networks on separable data, RMSProp and Adam can converge at a linear rate with a constant step-size and momentum parameter. Finally, we present a lower bound demonstrating that, under our assumption, RMSProp and Adam are provably faster than AdaGrad, AMSGrad, gradient descent, and heavy-ball momentum.",
+  "link": "https://arxiv.org/abs/2605.30648",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.306734Z"
+}

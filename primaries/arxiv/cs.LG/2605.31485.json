@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.31485",
+  "title": "Graphical einops: bridging tensor networks and computation graphs",
+  "abstract": "Architecture diagrams are ubiquitous in deep learning, but they are usually only representational: the tensor-program identities they suggest are still proved by prose and tensor-axis manipulation. We introduce a formal graphical calculus for the structural fragment of tensor programming underlying einops, making such diagrams proof-enabling. Our calculus represents tensor axes as nested graded tubes around a base type. The tube boundary recovers the undirected tensor-network view of axes, while the directed interior retains the operational reading of computation graphs. The key rewrite is grade-naturality: sliding spectacles over tubes. Standard equivariance proofs become short diagrammatic derivations. We additionally demonstrate how our rewrite system may be applied to convert attention masks into pre-processing operations, recovering efficient implementations of sparse attention blocks.",
+  "link": "https://arxiv.org/abs/2605.31485",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "math.CT"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307159Z"
+}

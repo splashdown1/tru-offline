@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.04101",
+  "title": "Interfaze: The Future of AI is built on Task-Specific Small Models",
+  "abstract": "We present Interfaze, a native hybrid model that fuses task-specific deep neural networks (CNNs and DNNs) directly into a transformer decoder through a shared embedding space. Specialized perceptual encoders handle optical character recognition (OCR) over complex multilingual PDFs, open-vocabulary object and graphical user interface (GUI) detection, and multilingual speech recognition with diarization. Each is exposed through a task-specific adapter and can be activated on its own, so a query touches only the parameters it needs. A built-in action foundation supplies a grounded external state: a proxied headless browser and scraper, a code sandbox, a multi-domain web index, and a scalable vector store. The decoder filters and merges these signals, reasons over them when a task requires it, and emits deterministic outputs built on confidence. The raw specialist metadata (bounding boxes, confidence scores, timestamps) is preserved and returned alongside the answer as precontext.\n  On this architecture, Interfaze-Beta leads a suite of deterministic developer-task benchmarks. It reaches 70.7% on OCRBench v2, 85.7% on olmOCR, 82.1% on RefCOCO, a 2.4% word error rate on VoxPopuli, 52.9% on Spider-2.0-Lite, 92.4% on GPQA-Diamond, 90.9% on MMMLU, 71.1% on MMMU-Pro, and 80.5% value accuracy on the Structured Output Benchmark (SOB), ahead of comparably priced generalist models (Gemini- 3-Flash, Gemini-3.5-Flash, Claude-Sonnet-4.6, GPT-5.4-Mini, and Grok-4.3) on every task. Because fused specialist encoders resolve perception in a single pass instead of through repeated tool calls into a large model, Interfaze reaches high accuracy with verifiable metadata on deterministic tasks while running at flash-tier cost.",
+  "link": "https://arxiv.org/abs/2602.04101",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098661+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2605.31231",
+  "title": "A holomorphic neural network framework for 3D boundary value problems governed by harmonic potentials",
+  "abstract": "We present a neural-network-based framework for the solution of three-dimensional boundary value problems where the solution is expressible in terms of harmonic potentials. The approach leverages the Whittaker integral formula, which allows representing the solution through functions that are holomorphic with respect to a suitable complex variable. These functions are subsequently approximated using holomorphic neural networks, which guaranty fulfillment of the holomorphicity requirement. A key feature of the proposed formulation is that the governing partial differential equations (PDEs) are satisfied exactly by construction. Therefore, in contrast to standard physics-informed neural networks, no residual minimization of PDEs is required in the interior of the domain, and training is based exclusively on boundary collocation points. The method is validated against three-dimensional Laplace and linear elasticity problems, where, in the latter case, displacement and stress fields are expressed via the Papkovich-Neuber potentials. The numerical results show an accurate approximation of both scalar and vector fields, with errors remaining controlled throughout the domain. Overall, the work demonstrates that the incorporation of analytical structures into neural network architectures provides a natural and effective framework for the meshless approximation of three-dimensional boundary value problems while preserving the underlying properties of the governing equations.",
+  "link": "https://arxiv.org/abs/2605.31231",
+  "category": "cs.LG",
+  "categories": [
+    "math.NA",
+    "cs.LG",
+    "cs.NA"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307466Z"
+}

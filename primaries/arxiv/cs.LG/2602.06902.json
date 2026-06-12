@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2602.06902",
+  "title": "Parameter-free Dynamic Regret: Time-varying Movement Costs, Delayed Feedback, and Memory",
+  "abstract": "In this paper, we study dynamic regret in unconstrained online convex optimization (OCO) with movement costs. Specifically, we generalize the standard setting by allowing the movement cost coefficients $\\lambda_t$ to vary arbitrarily over time. Our main contribution is a novel algorithm that establishes the first comparator-adaptive dynamic regret bound for this setting, guaranteeing $\\widetilde{\\mathcal{O}}(\\sqrt{(M^2+MP_T)(T+\\sum_t \\lambda_t)})$ regret, where $P_T$ is the path length of the comparator sequence over $T$ rounds and $M$ is the maximal comparator norm. Our result recovers the optimal adaptive rates for both static and dynamic regret in OCO as the special case where $\\lambda_t=0$ for all rounds. To demonstrate the versatility of our results, we consider two applications: OCO with delayed feedback and OCO with time-varying memory. We show that both problems can be translated into time-varying movement costs, establishing a novel reduction specifically for the delayed feedback setting that is of independent interest. A crucial observation is that the first-order dependence on movement costs in our regret bound plays a key role in enabling optimal comparator-adaptive dynamic regret guarantees in both settings.",
+  "link": "https://arxiv.org/abs/2602.06902",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307879Z"
+}

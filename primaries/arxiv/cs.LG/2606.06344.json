@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06344",
+  "title": "Equivariant Neural Belief Propagation",
+  "abstract": "Probabilistic inference over spatially embedded variables requires beliefs that respect $SE(3)$ symmetry, yet existing equivariant networks produce only scalars and vectors -- not the rank-2 precision tensors needed for anisotropic uncertainty, and single-component messages collapse multi-modal energy landscapes to physically meaningless averages. We introduce Equivariant Neural Belief Propagation (ENBP), a factor-graph framework whose messages are equivariant Gaussian mixture models with sufficient statistics that transform exactly under $SE(3)$. Rank-2 precision matrices are synthesised via equivariant outer products, ingested through differentiable spectral decomposition, and kept tractable by a greedy KL-based mixture reduction that provably commutes with $SE(3)$. On GEOM-QM9 and GEOM-Drugs, ENBP achieves 98.9% conformational coverage at 0.090 $\\mathring{A}$ error with sub-second latency -- over $100\\times$ faster than diffusion baselines at higher accuracy. On multi-body robotic inference, vanilla loopy BP diverges at 15+ agents while ENBP converges with near-zero collision rates and machine-precision equivariance error (${\\sim}10^{-7}$ vs.\\ $10^{-1}$ for augmented baselines).",
+  "link": "https://arxiv.org/abs/2606.06344",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.SC"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882694+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2602.07285",
+  "title": "Fair Decisions from Calibrated Scores: Achieving Optimal Classification While Satisfying Sufficiency",
+  "abstract": "Binary classification based on predicted probabilities (scores) is a fundamental task in supervised machine learning. While thresholding scores is Bayes-optimal in the unconstrained setting, using a single threshold generally violates statistical group fairness constraints. Under independence (statistical parity) and separation (equalized odds), such thresholding suffices when the scores already satisfy the corresponding criterion. However, this does not extend to sufficiency: even perfectly group-calibrated scores -- including true class probabilities -- violate predictive parity after thresholding. In this work, we present an exact solution for optimal binary (randomized) classification under sufficiency, assuming finite sets of group-calibrated scores. We provide a geometric characterization of the feasible pairs of positive predictive value (PPV) and false omission rate (FOR) achievable by such classifiers, and use it to derive a simple post-processing algorithm that attains the optimal classifier using only group-calibrated scores and group membership. Finally, since sufficiency and separation are generally incompatible, we identify the classifier that minimizes deviation from separation subject to sufficiency, and show that it can also be obtained by our algorithm, often achieving performance comparable to the optimum.",
+  "link": "https://arxiv.org/abs/2602.07285",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307882Z"
+}

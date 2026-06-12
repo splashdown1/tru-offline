@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2507.00460",
+  "title": "Pitfalls of Evaluating Language Models with Open Benchmarks",
+  "abstract": "Open Large Language Model (LLM) benchmarks, such as HELM and BIG-Bench, provide standardized and transparent evaluation protocols that support comparative analysis, reproducibility, and systematic progress tracking in Language Model (LM) research. Yet, this openness also creates substantial risks of data leakage during LM testing--deliberate or inadvertent, thereby undermining the fairness and reliability of leaderboard rankings and leaving them vulnerable to manipulation by unscrupulous actors. We illustrate the severity of this issue by intentionally constructing cheating models: smaller variants of BART, T5, and GPT-2, fine-tuned directly on publicly available test-sets. As expected, these models excel on the target benchmarks but fail terribly to generalize to comparable unseen testing sets. We then examine task specific simple paraphrase-based safeguarding strategies to mitigate the impact of data leakage and evaluate their effectiveness and limitations. Our findings underscore three key points: (i) high leaderboard performance on limited open, static benchmarks may not reflect real-world utility; (ii) private or dynamically generated benchmarks should complement open benchmarks to maintain evaluation integrity; and (iii) a reexamination of current benchmarking practices is essential for reliable and trustworthy LM assessment.",
+  "link": "https://arxiv.org/abs/2507.00460",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498367+00:00"
+}

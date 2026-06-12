@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.29054",
+  "title": "Converted, Not Equivalent: Benchmarking Codebase Conversion via Observational Equivalence",
+  "abstract": "Coding agents increasingly act as codebase-scale collaborators that can assist with codebase conversion, but this progress has exposed a critical weakness: agents often over-trust their own local validation routines and declare success on artifacts that satisfy surface checks while violating the semantic contracts users actually care about. This problem is especially acute in codebase conversion, where prior evaluation is largely outcome-driven and therefore unstable: two implementations can match on a shallow outcome, such as a single forward loss, while diverging in gradients, optimizer behavior, or short-horizon training dynamics. We introduce T2J-Bench, a benchmark for codebase conversion that reformulates conversion as transfer under a fixed equivalence contract. A fixed verifier then compares source and converted codebases through three ordered stages: Spec (interface admissibility), Numeric (forward outputs, losses, gradients, and objective-specific tensors), and Behavioral (short training dynamics under fixed seeds). Across 355 blind conversion attempts, the best system reaches only 26.7--28.9% overall pass rate despite Spec pass rates up to 91.1%; a 4.7x token-budget spread yields only a 2.2x pass-rate spread; and all systems overestimate success by 66.6--97.8 points relative to the fixed evaluator. This suggests that failures stem more from contract-misaligned self-validation than from limited budget or backbone strength.",
+  "link": "https://arxiv.org/abs/2605.29054",
+  "category": "cs.CL",
+  "categories": [
+    "cs.SE",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:13.498663+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2505.18069",
+  "title": "Ubiquity of Emergent Hebbian Dynamics in Regularized Learning",
+  "abstract": "Hebbian and anti-Hebbian plasticity are widely observed in the brain and are classically modeled as mechanistic, local homosynaptic rules stabilized by homeostatic constraints. This raises an identifiability question: does observing Hebbian/anti-Hebbian structure in synaptic updates uniquely imply an underlying Hebbian computation? We identify an alternative, emergent route. We show that near stationarity, L2 weight decay generically drives the \\emph{learning-signal} component of many update rules to align with a Hebbian direction, with alignment increasing monotonically with decay strength. This Hebbian-like signature is not specific to SGD and can arise even for non-learning or random update rules long before learning has ceased. We further show that stochastic noise in the learning signal can induce anti-Hebbian alignment, yielding a simple tradeoff with weight decay and a phase boundary in regression settings. These mechanisms do not replace standard Hebbian theory; they can coexist with genuine Hebbian plasticity and complicate the interpretation of synaptic measurements, motivating experiments that distinguish mechanistic Hebbian computation from emergent Hebbian signatures.",
+  "link": "https://arxiv.org/abs/2505.18069",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "eess.SP"
+  ],
+  "pulled_at": "2026-06-01T19:47:28.307599Z"
+}

@@ -1,0 +1,11 @@
+{
+  "arxiv_id": "2502.04554",
+  "title": "Unifying and Optimizing Data Values for Selection via Sequential Decision-Making",
+  "abstract": "Data selection has emerged as a crucial downstream application of data valuation, yet the theoretical foundations for using data values in selection remain underexplored. We reformulate data selection as a sequential decision-making problem where the optimal selection sequence arises from dynamic programming, and data values can be understood as encodings of this optimal sequence. This framework unifies and reinterprets existing methods like Data Shapley through the lens of approximate dynamic programming, revealing them as myopic linear approximations to the sequential problem. We further analyze how selection optimality degrades with utility curvature under submodularity, explaining when and why these approximations fail. To bridge theory and practice, we propose an efficient bipartite graph-based surrogate that preserves submodular structure while enabling scalable greedy selection with provable guarantees. Experiments on classical ML benchmarks and large-scale LLM fine-tuning data selection demonstrate substantial improvements over existing methods. Code is publicly available at https://github.com/frankhlchi/SeqDataVal",
+  "link": "https://arxiv.org/abs/2502.04554",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358488Z"
+}

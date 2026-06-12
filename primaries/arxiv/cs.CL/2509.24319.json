@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2509.24319",
+  "title": "Dual Mechanisms of Value Expression: Intrinsic vs. Prompted Values in Large Language Models",
+  "abstract": "Large language models can express values in two main ways: (1) intrinsic expression, reflecting the model's inherent values learned during training, and (2) prompted expression, elicited by explicit prompts. Given their widespread use in value alignment, it is paramount to clearly understand their underlying mechanisms, particularly whether they mostly overlap (as one might expect) or rely on distinct mechanisms. We analyze this largely understudied problem at the mechanistic level using two approaches: (1) value vectors, feature directions representing value mechanisms extracted from the residual stream, and (2) value neurons, MLP neurons that contribute to value vectors. We demonstrate that intrinsic and prompted value mechanisms partly share common components crucial for inducing value expression, generalizing across languages and reconstructing theoretical inter-value correlations in the model's internal representations. Yet, each mechanism also possesses unique components that fulfill distinct roles. In particular, the intrinsic mechanism activates in more diverse value-related scenarios and promotes response diversity, whereas the prompted mechanism strengthens instruction compliance, taking effect even in distant tasks like jailbreaking.",
+  "link": "https://arxiv.org/abs/2509.24319",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406129Z"
+}

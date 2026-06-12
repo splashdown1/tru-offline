@@ -1,0 +1,14 @@
+{
+  "arxiv_id": "2602.15293",
+  "title": "The Information Geometry of Softmax: Probing and Steering",
+  "abstract": "This paper concerns the question of how AI systems encode semantic structure into the geometric structure of their representation spaces. The motivating observation is that the natural geometry of these representation spaces should reflect the way models use representations to produce behavior. We focus on the important special case of representations that define softmax distributions. In this case, we argue that the natural geometry is information geometry. Our focus is on the role of information geometry on semantic encoding and the linear representation hypothesis. As an illustrative application, we develop \"dual steering\", a method for robustly steering representations to exhibit a particular concept using linear probes. We prove that dual steering optimally modifies the target concept while minimizing changes to off-target concepts. Empirically, we find that dual steering enhances the controllability and stability of concept manipulation.",
+  "link": "https://arxiv.org/abs/2602.15293",
+  "category": "cs.AI",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-01T19:47:29.358838Z"
+}

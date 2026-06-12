@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.26711",
+  "title": "The Need for an External Observer Formalizing the Sufficiency Gap: A Mathematical Extension of Mixture Identifiability and Contextual Grounding in Sequence Models",
+  "abstract": "We construct a binary mixed-regime process with one deterministic textual regime and one random regime governed by an unobserved latent state. Even an ideal infinite-capacity sequence predictor that exactly recovers the text-only marginal law can become overconfident when the observed prefix is compatible with the wrong latent regime. The resulting entropy difference is not an ordinary optimization error; it is a sufficiency gap caused by marginalization over an unobserved state. We then formalize retrieval, tool use, and external grounding through an auxiliary binary signal with fidelity $\\gamma \\in [1/2,1]$. The resulting Bayesian update yields a contextual dominance threshold: a corrective signal reverses the posterior odds induced by the textual history exactly when its fidelity exceeds the text-only posterior weight assigned to the misleading regime. This threshold reduces, but does not generally eliminate, the sufficiency gap; complete closure requires perfect revelation of the relevant latent state or an equivalent verification mechanism. The analysis clarifies why temperature scaling cannot restore missing context, why grounding mechanisms must be both informative and learnably usable by the model, and why autonomous sequence models require structurally decoupled observers or verifiers in high-stakes domains.",
+  "link": "https://arxiv.org/abs/2605.26711",
+  "category": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.LG"
+  ],
+  "pulled_at": "2026-06-01T19:47:30.406231Z"
+}

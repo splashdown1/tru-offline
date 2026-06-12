@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.05606",
+  "title": "Cross-Epoch Adaptive Rollout Optimization for RL Post-Training",
+  "abstract": "LLM post-training often relies on reinforcement learning methods that sample multiple rollouts per prompt, yet most existing approaches use a fixed rollout budget for every prompt, despite large differences in the training signal different prompts provide. In this paper, we study adaptive rollout allocation under a fixed global budget and formulate the problem as online resource allocation with prompt-level diminishing returns. Our method, CERO, maintains a Beta posterior over each prompt's success probability and uses the posterior expected Bernoulli variance as a Bayesian estimate of the value of additional rollouts. We use this estimate to construct a concave, saturating utility over cumulative allocations, yielding an objective in which decisions across prompts and epochs are coupled by the global budget. Since the resulting objective is temporally nonseparable, we derive a Fenchel-dual reformulation and update both prompt-level and budget-level dual variables via projected online gradient descent. Under fixed prompt utilities, we prove an $O(\\sqrt{K})$ regret bound against the offline allocation benchmark. Experiments on mathematical-reasoning problems show that CERO consistently outperforms GRPO across multiple open-weight LLMs and benchmarks, demonstrating that adaptive rollout budgeting can improve sample efficiency.",
+  "link": "https://arxiv.org/abs/2606.05606",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882140+00:00"
+}

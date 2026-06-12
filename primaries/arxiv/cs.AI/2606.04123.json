@@ -1,0 +1,13 @@
+{
+  "arxiv_id": "2606.04123",
+  "title": "Semantic Constraint Synthesis for Adaptive Trajectory Optimization via Large Language Models",
+  "abstract": "Trajectory optimization is a critical component for enabling safe and reliable autonomous operations in space exploration. As space missions increase in frequency, complexity, and scope, there is a growing need to rapidly formulate mathematically sound trajectory optimization problems that accurately reflect mission objectives and operational constraints. However, translating mission intent into tractable analytical formulations for trajectory optimization requires substantial domain expertise. This paper presents a framework that leverages large language models (LLMs) to translate natural language descriptions of mission requirements and constraints into executable trajectory optimization code and corresponding mathematical formulations. Experiments in spacecraft rendezvous scenarios demonstrate a high success rate in reconditioning a convex trajectory optimization problem from semantic mission requirements. Ultimately, this work highlights the potential of LLMs to bridge high-level intent and formal optimization models, enabling more flexible and efficient trajectory design of spacecraft.",
+  "link": "https://arxiv.org/abs/2606.04123",
+  "category": "cs.AI",
+  "categories": [
+    "math.OC",
+    "cs.AI",
+    "cs.RO"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.097965+00:00"
+}

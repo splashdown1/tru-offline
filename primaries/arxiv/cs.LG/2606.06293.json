@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2606.06293",
+  "title": "PAC-Bayesian Adversarially Robust Generalization for Message Passing Graph Neural Networks: A Sensitivity Analysis",
+  "abstract": "Whilst the vulnerability of graph neural networks (GNNs) to adversarial attacks poses a critical threat to graph representation learning, the understanding of the robust generalization behavior remains a fundamental challenge in the adversarial setting. Recently, PAC-Bayesian margin-based generalization analysis substantially advances this line of research by providing a flexible and data-dependent analytical framework. However, existing robust analyses often rely on isotropic Gaussian posteriors and control weight perturbations in the full parameter space, which limits the ability to capture heterogeneous parameter sensitivity yet hinges on hidden-width-dependent complexity terms, resulting in not-tight-enough generalization bounds. In this paper, we extend a recently proposed sensitivity-aware PAC-Bayesian framework from deep neural networks to message passing GNNs (MPGNNs) and derive a tighter robust generalization bound in the adversarial setting. Specifically, we first quantify how sensitive the perturbations across different parameter blocks are to the network outputs by deriving the output Jacobians with respect to the weight parameters. Exploiting the fact that these Jacobian matrices have rank at most $K$ in $K$-class graph classification, we then construct Jacobian-aligned sensitivity matrices and use anisotropic Gaussian posteriors with optimized covariances to upper bound the KL divergence in a tight way. Notably, by refining the spectral-norm dependence on the learned weights and reducing the leading dimension factor from hidden-width-dependent terms to the number of classes $K$, our analysis yields much tighter robust generalization guarantees for MPGNNs, thereby guiding their designs to enhance adversarial robustness.",
+  "link": "https://arxiv.org/abs/2606.06293",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "stat.ML"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.882633+00:00"
+}

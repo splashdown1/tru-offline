@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2605.08253",
+  "title": "Path-Coupled Bellman Flows for Distributional Reinforcement Learning",
+  "abstract": "Distributional reinforcement learning (DRL) models the full return distribution, but existing finite-support or quantile-based methods rely on projections, while recent flow-based approaches can suffer from \\emph{boundary mismatch} at the flow source or from \\emph{high-variance} bootstrapping when current and successor noises are independent. We propose Path-Coupled Bellman Flows (PCBF), a continuous-time DRL method that learns return distributions with flow matching using \\textbf{source-consistent Bellman-coupled paths}: the current path starts from the required base prior at $t{=}0$, reaches the Bellman target at $t{=}1$, and maintains a pathwise affine relation to the successor flow at intermediate times (without requiring time-$t$ marginals to satisfy a distributional Bellman fixed point for all $t$). PCBF couples current and successor return flows through shared base noise and uses a $\\lambda$-parameterized control-variate target: $\\lambda{=}0$ recovers an unbiased sample Bellman target, while $\\lambda{>}0$ trades controlled bias for variance reduction. Experiments on analytically tractable MRPs, OGBench, and D4RL show improved distributional fidelity and training stability, and competitive offline RL performance.",
+  "link": "https://arxiv.org/abs/2605.08253",
+  "category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pulled_at": "2026-06-05T08:23:10.884235+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "arxiv_id": "2603.01421",
+  "title": "SciDER: Scientific Data-centric End-to-end Researcher",
+  "abstract": "While large language models accelerate scientific discovery, existing agents face severe limitations in adaptability, domain generalization, and multimodal scalability, often struggling to autonomously process raw, domain-specific experimental data. To overcome these barriers, we introduce SciDER, a multi-agent system designed to flexibly automate the entire research lifecycle. This framework employs a novel data-centric approach and integrates a dynamic multimodal skill system across four specialized sub-agents. Specifically, an ideation agent generates novel hypotheses via Evolutionary Idea Search, a data analysis agent systematically structures raw data, an experimentation agent synthesizes executable code grounded in dataset characteristics, and a critic agent drives iterative self-refinement. To democratize open-source scientific discovery, we release OpenSciDER-SFT-8K, a high-quality execution trajectory dataset, alongside the OpenSciDER-27B fine-tuned model. Across six benchmarks, SciDER and OpenSciDER obtain competitive or leading results, with especially strong gains on data-centric analysis, end-to-end research execution, and multimodal scientific visualization. By integrating data analysis with experimental execution, SciDER bridges the gap between abstract scientific reasoning and reproducible experimentation synthesis.",
+  "link": "https://arxiv.org/abs/2603.01421",
+  "category": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pulled_at": "2026-06-05T08:23:12.098670+00:00"
+}
