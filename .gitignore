@@ -36,3 +36,15 @@ Projects/TRU/state/tru_session.ndjson
 Projects/TRU/state/
 Projects/TRU/cache/
 Projects/TRU/memory/
+
+# nested git repos (not part of tru-offline)
+tru-site/
+tru-repo/
+TRU-release/
+repos/
+TRU/
+
+# screenshots/plates
+*.png
+tru-*-plate-*.jpg
+tru-x-post-*.jpg
