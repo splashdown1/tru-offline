@@ -61,10 +61,20 @@ html, _ = replace_block(html, "strongs-data", compact(strongs))
 # keep LOGOS original xref-data + strongs-idx (complete proven data; closes size gap to ~24.4MB)
 # html, _ = replace_block(html, "xref-data", compact(xref))
 # html, _ = replace_block(html, "strongs-idx", compact(sidx))
-# brain-data kept as-is
+
+# ---- brain: load deduped canonical brain.json, compact to [{k,v}], replace block ----
+print("loading deduped brain...")
+brain_full = load_json(f"{BASE}/current/brain.json")
+brain_nodes = brain_full.get("nodes", brain_full) if isinstance(brain_full, dict) else brain_full
+brain_compact = compact([{"k": n["k"], "v": n["v"]} for n in brain_nodes])
+html, _ = replace_block(html, "brain-data", brain_compact)
+print(f"  brain nodes embedded: {len(brain_nodes)}")
 
 # ---- update KJV_COUNT if present ----
 html = re.sub(r'const KJV_COUNT=\d+;', f'const KJV_COUNT={len(kjv)};', html)
+
+# ---- update BRAIN_COUNT if present ----
+html = re.sub(r'const BRAIN_COUNT=\d+;', f'const BRAIN_COUNT={len(brain_nodes)};', html)
 
 # ---- strip WebGPU/WebLLM (non-functional layer; user request to remove) ----
 print("stripping WebGPU/WebLLM layer...")
