@@ -42,7 +42,7 @@ tru-site/
 tru-repo/
 TRU-release/
 repos/
-TRU/
+/TRU/
 
 # screenshots/plates
 *.png
