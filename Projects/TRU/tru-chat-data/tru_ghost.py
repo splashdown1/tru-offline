@@ -33,11 +33,12 @@ BOOK_LONG = {
 }
 
 def parse_verse(q):
-    m = re.search(r"\b((?:[1-3]\s*)?[a-z]+)\s+(\d+):(\d+)\b", str(q or "").lower())
+    m = re.search(r"\b((?:[1-3]\s*)?[a-z]+)\s+(\d+)(?::(\d+))?\b", str(q or "").lower())
     if not m: return None
     long = BOOK_LONG.get(m.group(1).replace(" ",""))
     if not long: return None
-    return f"{long} {m.group(2)}:{m.group(3)}"
+    vs = m.group(3) or "1"  # default to verse 1 if not specified
+    return f"{long} {m.group(2)}:{vs}"
 
 def load_brain(cap=999999):
     try:
@@ -103,10 +104,37 @@ def build_html(brain, kjv, session, ts):
     bjson = json.dumps(brain)
     kjson = json.dumps(kjv, separators=(",", ":"))
     sjson = json.dumps(session)
+    # normalize history: convert {role,text} pairs into {q,a} pairs
+    raw_hist = session.get("history") or []
+    norm_hist = []
+    i = 0
+    while i < len(raw_hist):
+        item = raw_hist[i]
+        role = item.get("role") or ""
+        text = item.get("text") or item.get("q") or item.get("a") or ""
+        if role == "user":
+            q_text = text
+            a_text = ""
+            if i + 1 < len(raw_hist) and (raw_hist[i+1].get("role") or "") == "tru":
+                a_text = raw_hist[i+1].get("text") or raw_hist[i+1].get("a") or ""
+                i += 2
+            else:
+                i += 1
+            norm_hist.append({"q": q_text, "a": a_text})
+        elif role == "tru":
+            # orphan tru turn (no preceding user) — skip
+            i += 1
+        else:
+            # already {q,a} format
+            norm_hist.append({"q": item.get("q") or item.get("question") or "", "a": item.get("a") or item.get("answer") or ""})
+            i += 1
+    session = dict(session)
+    session["history"] = norm_hist
+    sjson = json.dumps(session)
     hitems = "".join(
-        '<div class="item"><div class="q">Q: '+esc(h.get("q") or h.get("question") or "")+
-        '</div><div class="a">A: '+esc(h.get("a") or h.get("answer") or "")+'</div></div>'
-        for h in (session.get("history") or [])[-12:]
+        '<div class="item"><div class="q">Q: '+esc(h.get("q") or "")+
+        '</div><div class="a">A: '+esc(h.get("a") or "")+'</div></div>'
+        for h in norm_hist[-12:]
     )
     last_q = esc(session.get("last_q") or "")
     return (
@@ -137,9 +165,9 @@ f'const BRAIN={bjson};const KJV={kjson};const SESSION={sjson};'
 'const STOP=new Set(["the","a","an","and","or","but","if","then","to","of","in","on","for","with","from","by","as","at","is","are","was","were","be","been","being","i","me","my","you","your","we","us","our","they","them","it","this","that","those","these","what","why","how","who","when","where","should","would","could","can","do","does","did","about","into","over","under","again"]);'
 'function tok(s){return String(s||"").toLowerCase().replace(/[^a-z0-9 ]/g," ").split(/\\s+/).filter(t=>t.length>2&&!STOP.has(t));}'
 'function esc2(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}'
-'function lookup(q){const ql=String(q||"").trim().toLowerCase();const m=ql.match(/\\b((?:[1-3]\\s*)?[a-z]+)\\s+(\\d+):(\\d+)\\b/);if(m){const map={genesis:"genesis",ps:"psalms",psalm:"psalms",psalms:"psalms",matthew:"matthew",mark:"mark",luke:"luke",john:"john",romans:"romans",revelation:"revelation",judges:"judges",ruth:"ruth","1 corinthians":"1 corinthians"};const long=map[m[1].replace(/\\s+/g,"")];if(long){const ref=(long+" "+m[2]+":"+m[3]).toLowerCase();if(KJV[ref])return{kind:"SCRIPTURE",text:ref+" — "+KJV[ref],score:100};}}'
+r'function lookup(q){const ql=String(q||"").trim().toLowerCase();const m=ql.match(/\b((?:[1-3]\s*)?[a-z]+)\s+(\d+)(?::(\d+))?\b/);if(m){const map={genesis:"genesis",ps:"psalms",psalm:"psalms",psalms:"psalms",matthew:"matthew",mark:"mark",luke:"luke",john:"john",romans:"romans",revelation:"revelation",judges:"judges",ruth:"ruth","1 corinthians":"1 corinthians"};const long=map[m[1].replace(/\s+/g,"")];if(long){const vs=m[3]||"1";const ref=(long+" "+m[2]+":"+vs).toLowerCase();if(KJV[ref])return{kind:"SCRIPTURE",text:ref+" — "+KJV[ref],score:100};}}'
 'const qw=tok(q);let best=null;for(const n of BRAIN){const nw=tok(n.k+" "+n.v);let hit=0;for(const t of qw)if(nw.includes(t))hit++;if(!hit)continue;const score=Math.round(Math.min(100,(hit/Math.max(qw.length,1))*100*(n.w||0.7)));if(!best||score>best.score)best={kind:(n.t||"TRUTH").toUpperCase(),text:n.v,score,source:n.source||"brain"};}'
-'if(best)return best;const hist=SESSION.history||[];if(hist.length){const last=hist[hist.length-1];return{kind:"MEMORY",text:String(last.a||last.answer||last.text||""),score:88,source:"session"};}return{kind:"GAP",text:"no match. ask differently.",score:0};}'
+'if(best)return best;const hist=SESSION.history||[];if(hist.length){const last=hist[hist.length-1];const t=last.a||last.answer||last.text||"";if(t)return{kind:"MEMORY",text:String(t),score:88,source:"session"};}return{kind:"GAP",text:"no match. ask differently.",score:0};}'
 'function render(){const q=document.getElementById("q").value.trim();const r=lookup(q);document.getElementById("out").innerHTML="<div class=\\"meta\\">"+r.kind+" · "+r.score+"%"+(r.source?" · "+r.source:"")+"</div><div>"+esc2(r.text)+"</div>";}'
 'function save(){const blob=new Blob([document.documentElement.outerHTML],{type:"text/html"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="tru-ghost.html";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}'
 f'document.getElementById("history").innerHTML={json.dumps(hitems)};'
