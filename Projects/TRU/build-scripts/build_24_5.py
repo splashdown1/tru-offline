@@ -108,6 +108,13 @@ for sym in ("TRU_WEBLLM", "webLLMCheck", "cmdWebLLM", "_wg", "navigator.gpu"):
     assert sym not in html, f"dangling ref remains: {sym}"
 print("  webgpu fully removed, no dangling refs")
 
+# ---- patch doctrineLookup: catch "why is there X" / "why is X" → exact-match concept node ----
+_old_re = r"|explain\s+)(.+?)[?\s]*$/i"
+_new_re = r"|explain\s+|why\s+(?:is\s+there\s+|are\s+there\s+|is\s+|are\s+|does\s+|do\s+))(.+?)[?\s]*$/i"
+assert _old_re in html, "doctrineLookup regex not found"
+html = html.replace(_old_re, _new_re, 1)
+print("  doctrineLookup extended for 'why' questions")
+
 # ---- write ----
 print("writing output...")
 with open(OUT_HTML, "w", encoding="utf-8") as f:
