@@ -29,3 +29,10 @@ __pycache__/
 
 # edgar primaries (rebuild with pull scripts)
 primaries/sec/
+
+# TRU runtime session state (not source)
+Projects/TRU/state/tru_session.json
+Projects/TRU/state/tru_session.ndjson
+Projects/TRU/state/
+Projects/TRU/cache/
+Projects/TRU/memory/
