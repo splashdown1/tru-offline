@@ -117,6 +117,19 @@ html = html.replace('if(low==="webllm"||low==="model"||low==="llm") return cmdWe
 for sym in ("TRU_WEBLLM","webLLMCheck","cmdWebLLM","_wg","navigator.gpu"):
     if sym in html: print(f"  !! dangling: {sym}")
 
+# ---- engine quality patches (retrieval + truncation) ----
+print("patching engine...")
+# extend stopword set with deictic/temporal/generic words so rare off-topic words
+# (e.g. "today") don't drive false BM25 matches (was returning zo node for "what should we do today")
+_stop_old = 'const STOP=new Set("the a an and or but if then to of in on for with from by as at is are was were be been being i me my you your we us our they them it this that those these what why how who when where should would could can do does did about into over under again give tell show explain define say said".split(" "))'
+_stop_new = 'const STOP=new Set("the a an and or but if then to of in on for with from by as at is are was were be been being i me my you your we us our they them it this that those these what why how who when where should would could can do does did about into over under again give tell show explain define say said today tomorrow now here there much many more most some any all every just only even also very such same other still yet ever never always often sometimes thing things".split(" "))'
+assert _stop_old in html, "STOP block not found"
+html = html.replace(_stop_old, _stop_new, 1)
+# finishThought: break at commas too (long unpunctuated nodes) + raise truncation cap
+html = html.replace("const m=s.match(/.*[.!?;]/);", "const m=s.match(/.*[.!?;,]/);", 1)
+html = html.replace("finishThought(t,900)", "finishThought(t,2000)", 1)
+print("  engine patched (stopwords + truncation)")
+
 # ---- write ----
 print("writing...")
 with open(OUT_HTML, "w", encoding="utf-8") as f:
