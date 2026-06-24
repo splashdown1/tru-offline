@@ -18,7 +18,7 @@ Seven standalone HTML engines at workspace root, each self-contained + offline. 
 | `TRU_COMPLETE.html` | 50.5 MB | 1,363 | SOVEREIGN + dictionary integrated. 5 routing paths: TRUTH/SCRIPTURE/DEFINE/STRONGS/GAP. |
 | `TRU_MAX.html` | 51.0 MB | 85,248 | Max brain: 7 merged brains incl. B41 archive + primaries. |
 | `TRU_100.html` | 99.9 MB | 85,354 | MAX + full SEC primary filings. Honest 100MB ceiling. |
-| `TRU_ENCYCLOPEDIA.html` | 99.5 MB | 1,363 | COMPLETE + 5,646 Simple-English Wikipedia articles. 6 routing paths incl. ENCYCLOPEDIA. |
+| `TRU_ENCYCLOPEDIA.html` | 99.5 MB | 1,363 | COMPLETE + 5,646 Simple-English Wikipedia articles. 6 routing paths incl. ENCYCLOPEDIA. || `TRU_APEX.html` | 99.3 MB | 83,892 | **Merged build.** TRU_100 max brain (85,354 raw) + LOGOS WordNet dict (147,982) + KJV + Strong's on 6-path routing. Omits encyclopedia/xref/strongs-idx (cannot coexist with 60MB brain under 100MB ceiling). getXref patched null-safe. |
 
 Build scripts (each rebuilds its file from `Projects/TRU/data/` + LOGOS shell):
 - `build_sovereign.py` → TRU_SOVEREIGN (purified brain; **canonical**)
@@ -27,7 +27,7 @@ Build scripts (each rebuilds its file from `Projects/TRU/data/` + LOGOS shell):
 - `build_complete.py` → TRU_COMPLETE (sovereign + dictionary)
 - `build_max.py` → TRU_MAX (7 merged brains)
 - `build_100.py` → TRU_100 (MAX + SEC primaries)
-- `build_encyclopedia.py` (in conversation workspace, not synced) → TRU_ENCYCLOPEDIA
+- `build_encyclopedia.py` (in conversation workspace, not synced) → TRU_ENCYCLOPEDIA- `build_apex.py` (in conversation workspace, not synced) → TRU_APEX (merge: 100 brain + LOGOS dict + LOGOS shell)
 - `add_existential.py` → adds 15 existential nodes to canonical `current/brain.json`
 
 ### Engine bug fixes applied (in SOVEREIGN + all builds after)
