@@ -78,6 +78,12 @@ the ghost html is a single file. brain + kjv inlined as JSON. no fetch, no xhr, 
 
 the source files in this repo are also self-contained. no api keys, no external services, no telemetry.
 
+## more
+
+- `Projects/TRU/README.md` — how to talk to TRU (engine interaction guide)
+- `Projects/TRU/README_NEXT.md` — the "play the game" spec for the next TRU
+- `Projects/TRU/SOUL.md` — TRU's voice + identity spec
+
 ## license
 
 private. do whatever. not for distribution without asking.
