@@ -1,20 +1,25 @@
 # Projects/TRU
 
-Canonical TRU builds, organised by phase.
+Canonical TRU builds and the modular source tree.
 
-`tru-offline/` is the full monorepo (brain + KJV + every phase + helper scripts). `Projects/TRU/` is the slim view of the currently-canonical build — what you point at when you want to run TRU without trawling the rest of the repo.
+`tru-offline/` is the full monorepo (brain + KJV + every phase + helper scripts). `Projects/TRU/` is the slim working view of the currently canonical build — what you point at when you want to run TRU without trawling the rest of the repo.
 
 ## Layout
 
-```
+```text
 Projects/TRU/
-├── README.md           ← you are here
-└── current/            ← latest canonical build (Phase 27)
-    ├── README.md
-    ├── index.html      ← open this
-    ├── brain.json
-    ├── build_phase27.py
-    └── smoke_phase27.py
+├── README.md
+├── README_NEXT.md
+├── current/
+│   ├── README.md
+│   ├── index.html
+│   ├── brain.json
+│   ├── build_phase27.py
+│   └── smoke_phase27.py
+├── build-scripts/
+├── data/
+├── drop/
+└── ship/
 ```
 
 ## Current canonical
@@ -29,9 +34,20 @@ Projects/TRU/
 - build: `python3 current/build_phase27.py`
 - smoke test: `python3 current/smoke_phase27.py`
 
-## Older phases
+## Larger merged builds
 
-Older phase builds live in `tru-offline/` directly (e.g. `TRU_PHASE26*.html`, `TRU_Greek_NT_Download-*.html`). When a new phase graduates, it gets copied into `current/` and the previous one stays where it is for reference.
+The current experimental large builds live at the repo root:
+
+- `TRU_INFINITE.html`
+- `TRU_INFINITE_PLUS.html`
+
+They are built from the modular merge pipeline in `build-scripts/` and expanded with drop data from `Projects/TRU/drop/`.
+
+## Modular build notes
+
+- `Projects/TRU/build-scripts/build_100_modular.py` is the ceiling-aware modular build.
+- `Projects/TRU/build-scripts/build_70.py` is the one-pass merged build that now emits `TRU_INFINITE.html` / `TRU_INFINITE_PLUS.html`.
+- `Projects/TRU/drop/brain/`, `scripture/`, `lexicon/`, `encyclopedia/`, and `filings/` are the merge inputs.
 
 ## Relationship to other repos
 
