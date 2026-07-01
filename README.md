@@ -8,11 +8,19 @@ zero network. zero telemetry. zero cloud.
 | path | what |
 |---|---|
 | `TRU_*.html`, `tru_v*.html`, `Scripture_Seeker.html` | legacy offline builds. self-contained. open in any browser. |
+| `TRU_INFINITE.html`, `TRU_INFINITE_PLUS.html` | newer merged offline builds with glossary/index and large knowledge packs. |
+| `Projects/TRU/build-scripts/build_70.py` | one-pass builder for the newer merged tru builds. |
 | `Projects/TRU/phase28/`, `current/`, `data/` | canonical build artifacts (brain, kjv, html) |
 | `Projects/TRU/tru-chat-data/tru_ghost.py` | ghost builder. CLI or stdin. |
 | `Projects/TRU/tru-chat-data/tests/` | smoke tests |
 | `Projects/TRU/omega/` | submodule: TRU OMEGA single-file engine |
 | `tru-site/` | submodule: zo.site bun+hono version with live ghost export |
+
+## merge notes
+
+- `TRU_INFINITE.html` and `TRU_INFINITE_PLUS.html` are the current big merged builds.
+- they keep `define x` style routing alive and expand the knowledge base with glossary/index layers.
+- the builder is one-pass and offline-first; no runtime network calls.
 
 ## clone
 
