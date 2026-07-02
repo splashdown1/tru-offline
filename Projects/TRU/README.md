@@ -46,7 +46,8 @@ They are built from the modular merge pipeline in `build-scripts/` and expanded 
 ## Modular build notes
 
 - `Projects/TRU/build-scripts/build_100_modular.py` is the ceiling-aware modular build.
-- `Projects/TRU/build-scripts/build_70.py` is the one-pass merged build that now emits `TRU_INFINITE.html` / `TRU_INFINITE_PLUS.html`.
+- `Projects/TRU/build-scripts/build_70.py` is the one-pass merged build that emits `TRU_INFINITE.html` / `TRU_INFINITE_PLUS.html`.
+- `Projects/TRU/build-scripts/build_giga.py` is the giant archive-payload build that emits `TRU_GIGA.html`.
 - `Projects/TRU/drop/brain/`, `scripture/`, `lexicon/`, `encyclopedia/`, and `filings/` are the merge inputs.
 
 ## Relationship to other repos
