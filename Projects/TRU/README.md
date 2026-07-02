@@ -10,6 +10,7 @@ Canonical TRU builds and the modular source tree.
 Projects/TRU/
 ├── README.md
 ├── README_NEXT.md
+├── BUILD_SOP.md
 ├── current/
 │   ├── README.md
 │   ├── index.html
@@ -40,14 +41,21 @@ The current experimental large builds live at the repo root:
 
 - `TRU_INFINITE.html`
 - `TRU_INFINITE_PLUS.html`
+- `TRU_GIGA.html`
+- `TRU_ALL_KNOWLEDGE.html`
 
 They are built from the modular merge pipeline in `build-scripts/` and expanded with drop data from `Projects/TRU/drop/`.
+
+## Bundled archive
+
+- `Projects/TRU/ship/TRU_GIGA_bundle.zip` — packaged bundle of the current large builds plus the merged builders and readme.
 
 ## Modular build notes
 
 - `Projects/TRU/build-scripts/build_100_modular.py` is the ceiling-aware modular build.
-- `Projects/TRU/build-scripts/build_70.py` is the one-pass merged build that emits `TRU_INFINITE.html` / `TRU_INFINITE_PLUS.html`.
-- `Projects/TRU/build-scripts/build_giga.py` is the giant archive-payload build that emits `TRU_GIGA.html`.
+- `Projects/TRU/build-scripts/build_70.py` is the one-pass merged build that emits the larger merged builds.
+- `Projects/TRU/build-scripts/build_giga.py` builds `TRU_GIGA.html` by merging the shell, data blocks, and archived lineage payloads.
+- `Projects/TRU/build-scripts/build_all_knowledge.py` builds `TRU_ALL_KNOWLEDGE.html` from the shell plus all knowledge layers.
 - `Projects/TRU/drop/brain/`, `scripture/`, `lexicon/`, `encyclopedia/`, and `filings/` are the merge inputs.
 
 ## Relationship to other repos
