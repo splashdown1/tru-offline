@@ -1,97 +1,110 @@
-# TRU OFFLINE
+TRU Project
 
-monorepo. brain. kjv. ghost builder. all phases. sovereign.
-zero network. zero telemetry. zero cloud.
+Overview
 
-## structure
+TRU is a self-contained truth-filter and reasoning system. It is not a standalone AI. It attaches to a host model, scripture lookup, curated brain nodes, gated owner memory, routing rules, and durability layers, then decides what may pass through.
 
-| path | what |
-|---|---|
-| `TRU_*.html`, `tru_v*.html`, `Scripture_Seeker.html` | legacy offline builds. self-contained. open in any browser. |
-| `TRU_INFINITE.html`, `TRU_INFINITE_PLUS.html` | newer merged offline builds with glossary/index and large knowledge packs. |
-| `Projects/TRU/build-scripts/build_70.py` | one-pass builder for the newer merged tru builds. |
-| `Projects/TRU/phase28/`, `current/`, `data/` | canonical build artifacts (brain, kjv, html) |
-| `Projects/TRU/tru-chat-data/tru_ghost.py` | ghost builder. CLI or stdin. |
-| `Projects/TRU/tru-chat-data/tests/` | smoke tests |
-| `Projects/TRU/omega/` | submodule: TRU OMEGA single-file engine |
-| `tru-site/` | submodule: zo.site bun+hono version with live ghost export |
+Under God's sovereignty, TRU exists to tell the truth plainly, keep the signal clean, and refuse false authority.
 
-## merge notes
+Voice and first contact
 
-- `TRU_INFINITE.html` and `TRU_INFINITE_PLUS.html` are the current big merged builds.
-- they keep `define x` style routing alive and expand the knowledge base with glossary/index layers.
-- the builder is one-pass and offline-first; no runtime network calls.
+TRU should speak for itself. The public voice should be sober, direct, and recognisably TRU — not generic assistant prose, not copied personality, and not robotic filler.
 
-## clone
+On a fresh session, the first response should be a short greeting and orientation, not a full dump of internals. It should:
 
-```bash
-git clone https://github.com/splashdown1/tru-offline.git
-cd tru-offline
-git submodule update --init --recursive
+- identify itself plainly
+- state the truth-first posture
+- show the next best commands
+- invite the user to begin
+
+Recommended opening:
+
+Greetings. I am TRU.
+
+Truth is constant. Perspective is fluid.
+
+I answer from anchored knowledge rather than guess.
+
+Type HELP, INTRO, or STATUS to begin.
+
+Command surface:
+
+- HELP — full command and capability list
+- INTRO — guided tour of what TRU can do
+- STATUS — loaded packs, memory state, and health snapshot
+- CAPABILITIES — quick overview of available surfaces
+
+Current snapshot
+
+As of 2026-07-02, TRU has broadened its reference surface with scripture, Strong's lexicon, general dictionary coverage, encyclopaedia, cross-references, life knowledge, and additional professional/classical corpora including medical, legal, historical, philosophical, and related dictionaries.
+
+Canonical guidance
+
+The project's governing documents live in project internals and are referenced in the deployment context.
+
+Data packs
+
+TRU now includes derived knowledge packs for:
+
+- medical dictionary
+- law dictionary
+- history dictionary
+- philosophy dictionary
+- Greek philosophy dictionary
+- Roman dictionary
+- Eastern wisdom dictionary
+- literature dictionary
+- hermetic dictionary
+
+These packs expand the retrieval surface without changing the offline contract.
+
+Architecture
+
+File Structure
+
+```
+.
+├── server.ts              # Main server (Hono + Vite middleware)
+├── index.html             # HTML entry point for React
+├── vite.config.ts         # Vite configuration
+├── package.json           # Dependencies and scripts
+├── zosite.json            # Zo deployment config (ports, env vars)
+├── public/                # Static assets
+├── backend-lib/
+│   └── zo-api.ts          # Helper for calling Zo API
+└── src/
+    ├── main.tsx
+    ├── App.tsx
+    ├── styles.css
+    └── pages/
 ```
 
-## build the ghost
+Development vs Production
 
-the ghost is a self-contained html with brain + kjv baked in. works offline, no api.
+Development Mode (bun run dev):
 
-```bash
-# full bible, all brain nodes (~12mb)
-python3 Projects/TRU/tru-chat-data/tru_ghost.py --ts full
+- Single Bun process running
+- Vite in middleware mode transforms files on-the-fly
+- API routes: /api/* handled by Hono
+- React app: served via Vite transforms
+- Client-side routing: any non-API, non-file route falls back to index.html
+- Environment: Site runs at an internal authenticated URL accessible only to you
 
-# new testament only, 500 brain nodes (~1.4mb)
-python3 Projects/TRU/tru-chat-data/tru_ghost.py --nt-only --cap 500 --ts lite
-```
+Production Mode (bun run prod):
 
-output lands in `Projects/TRU/ghost/tru-ghost-<ts>.html`. open it. ask it things.
+- Builds React app to dist/ using Vite
+- Bun serves static files from dist/ via hono/bun serveStatic
+- API routes still handled by Hono
+- SPA fallback: all non-API routes serve index.html
+- Environment: Site is published and accessible to anyone on the internet at a public URL
 
-## flags
+**NEVER use the scripts bun run dev or bun run prod.** The Zo system handles running the site in the correct mode based on context. All process management of the server is handled by Zo.
 
-| flag | default | what |
-|---|---|---|
-| `--nt-only` | off | new testament only. drops size from ~12mb to ~1.4mb. |
-| `--cap N` | unlimited | max brain nodes. 0 = unlimited. cap reduces size linearly. |
-| `--ts NAME` | utc now | filename suffix. |
-| `--out-dir DIR` | `Projects/TRU/ghost/` | output dir. |
-| `--lookup Q` | — | run one query against the brain+kjv, print result, exit. |
+Key Technologies
 
-## lookup
+This application uses:
 
-```bash
-python3 Projects/TRU/tru-chat-data/tru_ghost.py --nt-only --cap 100 --lookup "john 3:16"
-# {"ok": true, "result": {"kind": "SCRIPTURE", "text": "john 3:16 — For God so loved...", "score": 100, "source": "kjv"}}
-```
-
-## test
-
-```bash
-python3 Projects/TRU/tru-chat-data/tests/test_ghost_build.py
-```
-
-runs 3 checks: lookup routing, minimal build, full no-cap build. exits 0 on pass.
-
-## stdin api (backward compat)
-
-the ghost also reads a json object on stdin and writes json on stdout. used by the zo.space route at `/api/tru-ghost`.
-
-```json
-{"action": "build", "nt_only": true, "brain_cap": 500}
-{"action": "lookup", "q": "psalms 23"}
-```
-
-the route is at `https://splashdown2.zo.space/api/tru-ghost`. `?download=1` returns the html as an attachment.
-
-## offline guarantee
-
-the ghost html is a single file. brain + kjv inlined as JSON. no fetch, no xhr, no api. works on a plane.
-
-the source files in this repo are also self-contained. no api keys, no external services, no telemetry.
-
-## more
-
-- `Projects/TRU/README.md` — how to talk to TRU (engine interaction guide)
-- `Projects/TRU/README_NEXT.md` — the "play the game" spec for the next TRU
-- `Projects/TRU/SOUL.md` — TRU's voice + identity spec
-
-## license
-
-private. do whatever. not for distribution without asking.
+- Bun as the runtime
+- Hono as the web framework
+- React + Vite for the frontend
+- Tailwind CSS 4 for styling
