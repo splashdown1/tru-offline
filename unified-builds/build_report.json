@@ -1,0 +1,45 @@
+{
+  "build_started": "2026-07-03T09:42:21Z",
+  "base": "/home/workspace/TRU_ALL_KNOWLEDGE.html",
+  "engine_source": "/home/workspace/TRU_100.html",
+  "output": "/home/workspace/tru-unified-build/TRU_UNIFIED_ALL_KNOWLEDGE.html",
+  "output_size_mb": 114.86,
+  "injection": {
+    "base_bytes": 120362576,
+    "engine_js_bytes": 49167,
+    "engine_css_bytes": 4977,
+    "brain_json_bytes": 18293,
+    "output_bytes": 120435578,
+    "injected_css": true,
+    "injected_brain": true,
+    "injected_js": true
+  },
+  "sanity": {
+    "sha256": "5fd7ba491abac356348d94ed450a825052e51c28b415e08afb1d7a7000ff412d",
+    "size": 120435578,
+    "script_tags": 22,
+    "style_tags": 2,
+    "json_packs": [
+      "encyclopedia-data",
+      "dict-data",
+      "tru-unified-brain-links",
+      "brain-data",
+      "life-data",
+      "kjv-data",
+      "strongs-data",
+      "xref-data",
+      "strongs-idx",
+      "ancient-greek-philosophy",
+      "ancient-roman",
+      "ancient-eastern-wisdom",
+      "ancient-hermetic-neoplatonism",
+      "ancient-history",
+      "ancient-science-medicine",
+      "ancient-law-codes",
+      "ancient-literature-epic",
+      "ancient-proverbs-maxims",
+      "ancient-philosophy-glossary"
+    ]
+  },
+  "policy": "additive only; no source files modified; output is NEW file"
+}
