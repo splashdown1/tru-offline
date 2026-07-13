@@ -9,9 +9,12 @@ BASE = "/home/workspace"
 SRC = f"{BASE}/TRU_SOVEREIGN.html"
 DICT = f"{BASE}/Projects/TRU/data/wordnet_compact.json"
 OUT = f"{BASE}/TRU_COMPLETE.html"
+MANIFEST_OUT = f"{BASE}/Projects/TRU/current/tru_module_manifest.json"
+
 
 def compact(obj):
     return json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
+
 
 print("loading sovereign + dict data...")
 html = open(SRC, "r", encoding="utf-8", errors="replace").read()
@@ -90,13 +93,45 @@ html = html.replace(
     'const VERDICT={TRUTH:"#d8a657",SCRIPTURE:"#b388ff",REASON:"#00e5ff",MEMORY:"#69f0ae",GAP:"#ff5252",UNKNOWN:"#888",CALC:"#aaff00",DEFINE:"#e8d44b"}',
     1)
 
-# ---- 5. update boot count text to mention dictionary ----
+# ---- 5. tighten provenance display in the ui ----
+html = html.replace(
+    'function addMsg(role,text,verdict,ms){',
+    'function addMsg(role,text,verdict,meta){',
+    1,
+)
+html = html.replace(
+    'vd.textContent=(VNAME[verdict]||verdict)+(ms?" · "+ms+"ms":"");',
+    'vd.textContent=(VNAME[verdict]||verdict)+(meta?" · provenance: "+meta:"");',
+    1,
+)
+html = html.replace(
+    '  addMsg("tru",res.reply,res.verdict,res.source?("· "+res.source):"");\n  const src = res.source ? " • "+res.source : " • offline";\n  statusEl.textContent="● "+res.verdict+src;\n',
+    '  addMsg("tru",res.reply,res.verdict,res.source||"");\n  const src = res.source ? " • provenance: "+res.source : " • offline";\n  statusEl.textContent="● "+res.verdict+src;\n',
+    1,
+)
+
+# ---- 6. update boot count text to mention dictionary ----
 html = html.replace("31,100 KJV verses", "31,100 KJV verses + 147,982 dictionary words", 1)
 
 # ---- write ----
 print("writing...")
 with open(OUT, "w", encoding="utf-8") as f:
     f.write(html)
+manifest = {
+    "export": os.path.relpath(OUT, BASE),
+    "builder": os.path.relpath(__file__, BASE),
+    "shell_source": os.path.relpath(SRC, BASE),
+    "dictionary": os.path.relpath(DICT, BASE),
+    "bridge_crawler": "Projects/TRU/SNAKING_BRIDGE_CRAWLER.md",
+    "counts": {
+        "dictionary_words": len(dict_data),
+        "export_bytes": os.path.getsize(OUT),
+    },
+}
+os.makedirs(os.path.dirname(MANIFEST_OUT), exist_ok=True)
+with open(MANIFEST_OUT, "w", encoding="utf-8") as f:
+    json.dump(manifest, f, ensure_ascii=False, indent=2)
 sz = os.path.getsize(OUT)
 print(f"\nDONE: {OUT}")
 print(f"size: {sz:,} bytes = {sz/1048576:.2f} MB")
+print(f"manifest: {MANIFEST_OUT}")

@@ -2,6 +2,24 @@
 > **Truth is constant. Perspective is fluid.**
 > *Public Architectural Snapshot · July 2026*
 
+# TRU Project
+
+> public credit banner — 2026-07-13 12:05 PM UTC
+>
+> this project is a public, timestamped TRU build for splashdown2.
+> it is built with zo computer, engineered as an offline-first truth filter,
+> and published so the provenance stays visible.
+>
+> credit trail:
+> - project: TRU
+> - build: public github repo
+> - system: zo computer
+> - author/operator: splashdown2
+> - purpose: truth-mode reasoning, scripture lookup, provenance-first output
+> - public download policy: let people inspect, download, and share the work
+> - support line: voluntary donations only, no coercion, no hidden gates
+> - publication note: post updates on github and x when ready
+
 TRU is a secure, offline-first knowledge engine engineered for resilient cognitive processing in zero-connectivity environments. Built on a strict zero-trust model, TRU separates immutable grounding data from fluid UI layers, ensuring absolute information integrity without cloud dependencies.
 
 TRU is not a generic chatbot or a cloud-dependent API wrapper. It is a highly portable, self-contained software stack designed for mission-critical continuity when networks fail.
@@ -65,3 +83,9 @@ The underlying source code for TRU is intentionally restricted to maintain opera
 
 **Looking to collaborate or review a technical capability brief?**
 To discuss defensive deployment, edge-computing pilot programs, or private codebase inspection, please file a GitHub Issue requesting an encrypted communication channel or reach out through your project coordinator.
+
+## public release note
+
+The public release should stay open, downloadable, and transparent.
+If support is requested, keep it voluntary and simple.
+If the user wants promotion, publish a concise announcement on github and x.
