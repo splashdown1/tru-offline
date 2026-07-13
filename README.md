@@ -89,3 +89,9 @@ To discuss defensive deployment, edge-computing pilot programs, or private codeb
 The public release should stay open, downloadable, and transparent.
 If support is requested, keep it voluntary and simple.
 If the user wants promotion, publish a concise announcement on github and x.
+
+---
+
+## 📦 Sub-modules
+
+- [`coil/`](./coil/) — COIL chunked transfer protocol (active v2, legacy v1 under `v1-legacy/`)
