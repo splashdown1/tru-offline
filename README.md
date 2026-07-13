@@ -94,4 +94,4 @@ If the user wants promotion, publish a concise announcement on github and x.
 
 ## 📦 Sub-modules
 
-- [`coil/`](./coil/) — COIL chunked transfer protocol (active v2, legacy v1 under `v1-legacy/`)
+- [`coil/`](./coil/) — COIL chunked transfer protocol (v2.0.0, drift-loop tie-in in `logos-engine`; v1 frozen at `v1-legacy/`)
