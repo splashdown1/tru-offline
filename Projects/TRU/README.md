@@ -25,15 +25,21 @@ Projects/TRU/
 
 ## Current canonical
 
-**Phase 27.** See `current/README.md` for what shipped and which fixes landed.
+**APEX10 release candidate, verified 20 July 2026.** `TRU_APEX10_RELEASE.html` is the current release candidate: an 87 MB standalone offline build with the APEX9 polysemic engine, 63,337 embedded source brain nodes, 5 capability nodes, 31,100 KJV verses, WordNet definitions, Strong's, commentary, local teaching, persistence, and export.
+
+`TRU_APEX9.html` remains the prior polysemic baseline. `TRU_PHASE28.html` remains the smaller capability-layer baseline. Neither is overwritten.
+
+Build the release candidate with `python3 build-scripts/build_apex10_release_candidate.py` from the workspace root. The script refuses to overwrite an existing output; remove the output manually only when intentionally rebuilding.
 
 ## Status snapshot
 
 - mode: offline, no keys
+- release candidate: `TRU_APEX10_RELEASE.html`
 - brain: local JSON, no external fetch
 - scripture: KJV inlined
 - build: `python3 current/build_phase27.py`
 - smoke test: `python3 current/smoke_phase27.py`
+- apex 10 candidate build: `python3 build-scripts/build_apex10_release_candidate.py`
 
 ## Larger merged builds
 
