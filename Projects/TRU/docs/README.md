@@ -29,6 +29,13 @@ these documents extend the existing rules. they do not replace them and they do 
 | `TRU_MEMORY_STATE_SOP.md` | conversation memory, teachings, export/import, quotas, and recovery |
 | `TRU_BUILD_RELEASE_SOP.md` | reproducible builds, manifests, packaging, release channels, and rollback |
 
+## phase 0 locked documents
+
+- `TRU_MASTER_ROADMAP.md` — authoritative coordinating roadmap and execution phases.
+- `TRU_REQUIREMENTS_MATRIX.md` — requirement ids, owners, proof, and release consequences.
+
+these two documents coordinate the library but do not override the detailed sops below. the next implementation phase is observability and baseline measurement only. it must not change answer behaviour, routing, source data, pardes semantics, state semantics, or protected release artifacts.
+
 ## non-negotiable constraints
 
 1. the core remains usable without internet access, api keys, accounts, or external services.
