@@ -6,15 +6,15 @@
 
 > public credit banner — 2026-07-13 12:05 PM UTC
 >
-> this project is a public, timestamped TRU build for splashdown2.
-> it is built with zo computer, engineered as an offline-first truth filter,
+> this project is a public, timestamped TRU build.
+> it is built on zo computer, engineered as an offline-first truth filter,
 > and published so the provenance stays visible.
 >
 > credit trail:
 > - project: TRU
-> - build: public github repo
+> - build: public github repo (github.com/splashdown1/tru-offline)
 > - system: zo computer
-> - author/operator: splashdown2
+> - author/operator: splashdown1
 > - purpose: truth-mode reasoning, scripture lookup, provenance-first output
 > - public download policy: let people inspect, download, and share the work
 > - support line: voluntary donations only, no coercion, no hidden gates
@@ -95,3 +95,13 @@ If the user wants promotion, publish a concise announcement on github and x.
 ## 📦 Sub-modules
 
 - [`coil/`](./coil/) — COIL chunked transfer protocol (v2.0.0, drift-loop tie-in in `logos-engine`; v1 frozen at `v1-legacy/`)
+
+---
+
+## Sibling repos in the TRU family
+
+- [`splashdown1/tru-logos`](https://github.com/splashdown1/tru-logos) — the **modular LOGOS engine**: clean shell + data + manifest architecture, reproducible 104 MB single-file build, polysemic PaRDeS reasoning, 5-wall trust surface. **Use that repo** if you want the cleanest reproducible build of one specific 104 MB artifact. This repo (`tru-offline`) is the broader workspace + release matrix that the LOGOS build inherits from.
+
+- [`splashdown1/tru-ghost`](https://github.com/splashdown1/tru-ghost), [`splashdown1/tru-omega`](https://github.com/splashdown1/tru-omega), [`splashdown1/tru-holographic-sovereign`](https://github.com/splashdown1/tru-holographic-sovereign) — alternate single-file engine variants from the same lineage. See AGENTS.md for the full build matrix.
+
+- [`splashdown1/logos-engine`](https://github.com/splashdown1/logos-engine) — the LOGOS drift-detection loop, isolated from the main engine.
